@@ -1,35 +1,8 @@
-const axios = require('axios');
+
 const fs = require('fs');
 const _ = require('lodash');
-const KEY = process.env.NEXT_PUBLIC_DATO_API_TOKEN;
-const PROJECT_NAME = process.env.PROJECT_NAME;
-const ENV = process.env.NEXT_PUBLIC_DATO_ENV ?? '';
 
-const doQuery = async (q, v) => {
-  const url = `https://graphql.datocms.com${ENV ? '/environments/' + ENV : ''}`;
 
-  try {
-    const response = await axios({
-      url,
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        Accept: 'application/json',
-        Authorization: `Bearer ${KEY}`,
-      },
-      data: { query: q, variables: v },
-    });
-    console.log('status', response?.status);
-    if (response?.data?.errors) {
-      console.log('response ERROR', response?.data?.errors);
-      throw response.data.errors;
-    }
-    return response?.data?.data;
-  } catch (error) {
-    console.log('QUERY ERROR', error, 'on query', q);
-    throw error;
-  }
-};
 
 const getConfig = async () => {
   const q = `
