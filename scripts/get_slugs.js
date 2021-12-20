@@ -7,7 +7,6 @@ const axios = require('axios');
 const fs = require('fs');
 const _ = require('lodash');
 const KEY = process.env.NEXT_PUBLIC_DATO_API_TOKEN;
-const PROJECT_NAME = process.env.PROJECT_NAME;
 const ENV = process.env.NEXT_PUBLIC_DATO_ENV ?? '';
 
 const config = require('../data/config.json');

@@ -11,9 +11,13 @@ function Layout({ children }) {
 
   return (
     <div className="h-full">
-      <Nav />
-      <div className="container">{children}</div>
-      <Footer />
+      <header>
+        <Nav />
+      </header>
+      <main className="h-full container">{children}</main>
+      <footer>
+        <Footer />
+      </footer>
     </div>
   );
 }

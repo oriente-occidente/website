@@ -7,8 +7,13 @@ import fetchDato from 'lib/api/dato';
 function Home({ pages, preview, locale }) {
   return (
     <Layout>
-      <h1 className="text-xl mt-10 uppercase text-secondary ">Pages</h1>
-      {pages.map((item) => {
+      <h1>h1</h1>
+      <p>paragrafo</p>
+      <h2>h2</h2>
+      <p>paragrafo</p>
+      <h3>h3</h3>
+      <p>paragrafo</p>
+      {pages?.map((item) => {
         const { id, slug, title, pic } = item;
         return (
           <div key={id} className="my-2">
@@ -27,13 +32,11 @@ function Home({ pages, preview, locale }) {
 }
 
 export async function getStaticProps({ preview = false, locale }) {
-  console.log('LOCALE', locale);
-  const reponse = await fetchDato(queries.pages, { locale }, preview);
+  // const reponse = await fetchDato(queries.pages, { locale }, preview);
   // const home = await fetchDato(queries.home, { locale }, preview);
-  const pages = reponse?.pages;
   return {
     props: {
-      pages,
+      pages: [],
       preview,
       locale,
     },
