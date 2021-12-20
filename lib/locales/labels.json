@@ -1,0 +1,10 @@
+{
+  "it": {
+    "welcome": "Entra nel sito",
+    "goodby": "Addio"
+  },
+  "en":{
+    "welcome": "Enter the site",
+    "goodby": "Goodby"
+  }
+}
