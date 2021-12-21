@@ -100,10 +100,26 @@ fragment itemFrag on MenuItemRecord {
 `;
   return doQuery(q);
 };
-const getRecords = async (name) => {
+const getRecords = async (name, prefixes) => {
   const records = (await allRecords(name)).map((r) => {
-    const { id, slug, isIndex = false, indexType = '' } = r;
-    return { id, slugs: slug, isIndex, indexType };
+    const { id, slug: slugs, isIndex = false, indexType = '' } = r;
+    const locales = _.keys(slugs);
+
+    let paths = {};
+    if (prefixes) {
+      paths = locales.reduce((obj, l) => {
+        const prefix = prefixes[l] || [];
+        const path = [...prefix, slugs[l]];
+        return { ...obj, [l]: path };
+      }, {});
+    }
+    return {
+      id,
+      slugs: paths,
+      isIndex,
+      indexType,
+      __typename: name,
+    };
   });
   // console.log(name, records);
   return records;
@@ -139,11 +155,30 @@ function getMenupathByLocale(menu, locale) {
   return routes;
 }
 
-const outPath = 'data/routes.json';
+function getPrefix(menu, nameToMatch) {
+  const item = menu.find((r) => r.indexType === nameToMatch);
+  console.log(nameToMatch, item?.slugs);
+  return item?.slugs ?? null;
+}
+
+function withAlts(list) {
+  return list.map((route) => {
+    const { slugs } = route;
+    const paths = _.keys(slugs).map((locale) => {
+      return { locale, slugs: slugs[locale] };
+    });
+    const urls = _.keys(slugs).map((locale) => {
+      return { locale, url: slugs[locale].join('/') };
+    });
+    return { ...route, paths, urls };
+  });
+}
+
 const generateRoutes = async () => {
-  const menuTree = await getData();
   const locales = (await getLocales()).site.locales;
   console.log('locales', locales);
+
+  const menuTree = await getData();
   const menuVoices = menuTree.menu;
   const menuRoutes = locales.reduce((all, l) => {
     const menuByLocale = getMenupathByLocale(menuVoices, l);
@@ -153,27 +188,61 @@ const generateRoutes = async () => {
   // console.log(menuRoutes);
   const linkedPagesIds = menuRoutes.map((i) => i.link?.id).filter(Boolean);
   const ids = _.uniq(linkedPagesIds);
-  console.log(ids);
+  const menuList = menuRoutes.map((route) => {
+    const {
+      lang,
+      routes: slugs,
+      link: { id, indexType, isIndex },
+    } = route;
+
+    return { id, indexType, isIndex, lang, slugs };
+  });
+  let menuGrouped = _.groupBy(menuList, 'id');
+
+  const menu = _.values(menuGrouped).map((values) => {
+    const slugs = values.reduce((merged, current) => {
+      const { slugs, lang } = current;
+      return {
+        ...merged,
+        [lang]: slugs,
+      };
+    }, {});
+
+    const { id, isIndex, indexType } = values[0];
+    return { id, isIndex, indexType, slugs, __typename: 'page' };
+  });
 
   const pages = (await getRecords('page')).filter((r) => !ids.includes(r.id));
-  const events = await getRecords('event');
-  const courses = await getRecords('workshop');
-  const projects = await getRecords('project');
-  const artists = await getRecords('artist');
-  const news = await getRecords('news');
+  const events = await getRecords('event', getPrefix(menu, 'other-events'));
+  const courses = await getRecords('workshop', getPrefix(menu, 'workshops'));
+  const projects = await getRecords('project', getPrefix(menu, 'projects'));
+  const residences = await getRecords(
+    'artist',
+    getPrefix(menu, 'artistic-residences')
+  );
+  const artists = await getRecords(
+    'artist',
+    getPrefix(menu, 'associated-artists')
+  );
+  const news = await getRecords('news', getPrefix(menu, 'news'));
 
-  const data = {
-    menuRoutes,
-    pages,
-    courses,
-    projects,
-    artists,
-    events,
-    news,
-  };
+  const list = withAlts([
+    ...menu,
+    ...pages,
+    ...events,
+    ...courses,
+    ...projects,
+    ...artists,
+    ...residences,
+    ...news,
+  ]);
 
-  const json = JSON.stringify(data, null, 2);
-  fs.writeFileSync(outPath, json, 'utf8');
+  fs.writeFileSync(
+    'data/menu.json',
+    JSON.stringify(menuRoutes, null, 2),
+    'utf8'
+  );
+  fs.writeFileSync('data/routes.json', JSON.stringify(list, null, 2), 'utf8');
 };
 
 (async () => {

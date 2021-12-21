@@ -4,17 +4,17 @@ const withBundleAnalyzer = require('@next/bundle-analyzer')({
 
 module.exports = withBundleAnalyzer({
   i18n: {
-    locales: ['en', 'it'],
-    defaultLocale: 'en',
+    locales: ['it', 'en'],
+    defaultLocale: 'it',
   },
 
   reactStrictMode: true,
-  async rewrites() {
-    return [
-      {
-        source: '/(prodotti|products|ciccio)/:category',
-        destination: '/categories/:category',
-      },
-    ];
-  },
+  // async rewrites() {
+  //   return [
+  //     {
+  //       source: '/(prodotti|products|ciccio)/:category',
+  //       destination: '/categories/:category',
+  //     },
+  //   ];
+  // },
 });
