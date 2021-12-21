@@ -1,0 +1,634 @@
+{
+  "menuRoutes": [
+    {
+      "routes": [
+        "festival",
+        "programma"
+      ],
+      "link": {
+        "__typename": "PageRecord",
+        "id": "79074701",
+        "slug": "programma",
+        "slugs": [
+          {
+            "locale": "en",
+            "slug": "program"
+          },
+          {
+            "locale": "it",
+            "slug": "programma"
+          }
+        ],
+        "indexType": "festival-events",
+        "isIndex": true
+      },
+      "lang": "it"
+    },
+    {
+      "routes": [
+        "festival",
+        "biglietti"
+      ],
+      "link": {
+        "__typename": "PageRecord",
+        "id": "79196174",
+        "slug": "biglietti",
+        "slugs": [
+          {
+            "locale": "en",
+            "slug": "tickets"
+          },
+          {
+            "locale": "it",
+            "slug": "biglietti"
+          }
+        ],
+        "indexType": "",
+        "isIndex": false
+      },
+      "lang": "it"
+    },
+    {
+      "routes": [
+        "studio",
+        "residenze-artistiche"
+      ],
+      "link": {
+        "__typename": "PageRecord",
+        "id": "79182550",
+        "slug": "residenze-artistiche",
+        "slugs": [
+          {
+            "locale": "en",
+            "slug": "artistic-residences"
+          },
+          {
+            "locale": "it",
+            "slug": "residenze-artistiche"
+          }
+        ],
+        "indexType": "artistic-residences",
+        "isIndex": true
+      },
+      "lang": "it"
+    },
+    {
+      "routes": [
+        "studio",
+        "workshop"
+      ],
+      "link": {
+        "__typename": "PageRecord",
+        "id": "79196175",
+        "slug": "workshop",
+        "slugs": [
+          {
+            "locale": "en",
+            "slug": "workshop"
+          },
+          {
+            "locale": "it",
+            "slug": "workshop"
+          }
+        ],
+        "indexType": "workshops",
+        "isIndex": true
+      },
+      "lang": "it"
+    },
+    {
+      "routes": [
+        "studio",
+        "educazione"
+      ],
+      "link": {
+        "__typename": "PageRecord",
+        "id": "79196187",
+        "slug": "educazione",
+        "slugs": [
+          {
+            "locale": "en",
+            "slug": "education"
+          },
+          {
+            "locale": "it",
+            "slug": "educazione"
+          }
+        ],
+        "indexType": "",
+        "isIndex": false
+      },
+      "lang": "it"
+    },
+    {
+      "routes": [
+        "contaminazioni",
+        "eventi"
+      ],
+      "link": {
+        "__typename": "PageRecord",
+        "id": "79196189",
+        "slug": "eventi",
+        "slugs": [
+          {
+            "locale": "en",
+            "slug": "events"
+          },
+          {
+            "locale": "it",
+            "slug": "eventi"
+          }
+        ],
+        "indexType": "other-events",
+        "isIndex": true
+      },
+      "lang": "it"
+    },
+    {
+      "routes": [
+        "contaminazioni",
+        "progetti"
+      ],
+      "link": {
+        "__typename": "PageRecord",
+        "id": "79196191",
+        "slug": "progetti",
+        "slugs": [
+          {
+            "locale": "en",
+            "slug": "projects"
+          },
+          {
+            "locale": "it",
+            "slug": "progetti"
+          }
+        ],
+        "indexType": "projects",
+        "isIndex": true
+      },
+      "lang": "it"
+    },
+    {
+      "routes": [
+        "contaminazioni",
+        "eventi"
+      ],
+      "link": {
+        "__typename": "PageRecord",
+        "id": "89012994",
+        "slug": "artisti-associati",
+        "slugs": [
+          {
+            "locale": "en",
+            "slug": "associated-artists"
+          },
+          {
+            "locale": "it",
+            "slug": "artisti-associati"
+          }
+        ],
+        "indexType": "associated-artists",
+        "isIndex": true
+      },
+      "lang": "it"
+    },
+    {
+      "routes": [
+        "info",
+        "chi-siamo"
+      ],
+      "link": {
+        "__typename": "PageRecord",
+        "id": "79196196",
+        "slug": "chi-siamo",
+        "slugs": [
+          {
+            "locale": "en",
+            "slug": "about-us"
+          },
+          {
+            "locale": "it",
+            "slug": "chi-siamo"
+          }
+        ],
+        "indexType": "",
+        "isIndex": false
+      },
+      "lang": "it"
+    },
+    {
+      "routes": [
+        "info",
+        "report"
+      ],
+      "link": {
+        "__typename": "PageRecord",
+        "id": "79196203",
+        "slug": "report",
+        "slugs": [
+          {
+            "locale": "en",
+            "slug": "report"
+          },
+          {
+            "locale": "it",
+            "slug": "report"
+          }
+        ],
+        "indexType": "",
+        "isIndex": false
+      },
+      "lang": "it"
+    },
+    {
+      "routes": [
+        "info",
+        "partners"
+      ],
+      "link": {
+        "__typename": "PageRecord",
+        "id": "79207456",
+        "slug": "partners",
+        "slugs": [
+          {
+            "locale": "en",
+            "slug": "partners"
+          },
+          {
+            "locale": "it",
+            "slug": "partners"
+          }
+        ],
+        "indexType": "",
+        "isIndex": false
+      },
+      "lang": "it"
+    },
+    {
+      "routes": [
+        "news"
+      ],
+      "link": {
+        "__typename": "PageRecord",
+        "id": "79196192",
+        "slug": "news",
+        "slugs": [
+          {
+            "locale": "en",
+            "slug": "news"
+          },
+          {
+            "locale": "it",
+            "slug": "news"
+          }
+        ],
+        "indexType": "news",
+        "isIndex": true
+      },
+      "lang": "it"
+    },
+    {
+      "routes": [
+        "festival",
+        "program"
+      ],
+      "link": {
+        "__typename": "PageRecord",
+        "id": "79074701",
+        "slug": "programma",
+        "slugs": [
+          {
+            "locale": "en",
+            "slug": "program"
+          },
+          {
+            "locale": "it",
+            "slug": "programma"
+          }
+        ],
+        "indexType": "festival-events",
+        "isIndex": true
+      },
+      "lang": "en"
+    },
+    {
+      "routes": [
+        "festival",
+        "tickets"
+      ],
+      "link": {
+        "__typename": "PageRecord",
+        "id": "79196174",
+        "slug": "biglietti",
+        "slugs": [
+          {
+            "locale": "en",
+            "slug": "tickets"
+          },
+          {
+            "locale": "it",
+            "slug": "biglietti"
+          }
+        ],
+        "indexType": "",
+        "isIndex": false
+      },
+      "lang": "en"
+    },
+    {
+      "routes": [
+        "studio",
+        "artistic-residences"
+      ],
+      "link": {
+        "__typename": "PageRecord",
+        "id": "79182550",
+        "slug": "residenze-artistiche",
+        "slugs": [
+          {
+            "locale": "en",
+            "slug": "artistic-residences"
+          },
+          {
+            "locale": "it",
+            "slug": "residenze-artistiche"
+          }
+        ],
+        "indexType": "artistic-residences",
+        "isIndex": true
+      },
+      "lang": "en"
+    },
+    {
+      "routes": [
+        "studio",
+        "workshop"
+      ],
+      "link": {
+        "__typename": "PageRecord",
+        "id": "79196175",
+        "slug": "workshop",
+        "slugs": [
+          {
+            "locale": "en",
+            "slug": "workshop"
+          },
+          {
+            "locale": "it",
+            "slug": "workshop"
+          }
+        ],
+        "indexType": "workshops",
+        "isIndex": true
+      },
+      "lang": "en"
+    },
+    {
+      "routes": [
+        "studio",
+        "education"
+      ],
+      "link": {
+        "__typename": "PageRecord",
+        "id": "79196187",
+        "slug": "educazione",
+        "slugs": [
+          {
+            "locale": "en",
+            "slug": "education"
+          },
+          {
+            "locale": "it",
+            "slug": "educazione"
+          }
+        ],
+        "indexType": "",
+        "isIndex": false
+      },
+      "lang": "en"
+    },
+    {
+      "routes": [
+        "community",
+        "events"
+      ],
+      "link": {
+        "__typename": "PageRecord",
+        "id": "79196189",
+        "slug": "eventi",
+        "slugs": [
+          {
+            "locale": "en",
+            "slug": "events"
+          },
+          {
+            "locale": "it",
+            "slug": "eventi"
+          }
+        ],
+        "indexType": "other-events",
+        "isIndex": true
+      },
+      "lang": "en"
+    },
+    {
+      "routes": [
+        "community",
+        "projects"
+      ],
+      "link": {
+        "__typename": "PageRecord",
+        "id": "79196191",
+        "slug": "progetti",
+        "slugs": [
+          {
+            "locale": "en",
+            "slug": "projects"
+          },
+          {
+            "locale": "it",
+            "slug": "progetti"
+          }
+        ],
+        "indexType": "projects",
+        "isIndex": true
+      },
+      "lang": "en"
+    },
+    {
+      "routes": [
+        "community",
+        "events"
+      ],
+      "link": {
+        "__typename": "PageRecord",
+        "id": "89012994",
+        "slug": "artisti-associati",
+        "slugs": [
+          {
+            "locale": "en",
+            "slug": "associated-artists"
+          },
+          {
+            "locale": "it",
+            "slug": "artisti-associati"
+          }
+        ],
+        "indexType": "associated-artists",
+        "isIndex": true
+      },
+      "lang": "en"
+    },
+    {
+      "routes": [
+        "info",
+        "about-us"
+      ],
+      "link": {
+        "__typename": "PageRecord",
+        "id": "79196196",
+        "slug": "chi-siamo",
+        "slugs": [
+          {
+            "locale": "en",
+            "slug": "about-us"
+          },
+          {
+            "locale": "it",
+            "slug": "chi-siamo"
+          }
+        ],
+        "indexType": "",
+        "isIndex": false
+      },
+      "lang": "en"
+    },
+    {
+      "routes": [
+        "info",
+        "report"
+      ],
+      "link": {
+        "__typename": "PageRecord",
+        "id": "79196203",
+        "slug": "report",
+        "slugs": [
+          {
+            "locale": "en",
+            "slug": "report"
+          },
+          {
+            "locale": "it",
+            "slug": "report"
+          }
+        ],
+        "indexType": "",
+        "isIndex": false
+      },
+      "lang": "en"
+    },
+    {
+      "routes": [
+        "info",
+        "partners"
+      ],
+      "link": {
+        "__typename": "PageRecord",
+        "id": "79207456",
+        "slug": "partners",
+        "slugs": [
+          {
+            "locale": "en",
+            "slug": "partners"
+          },
+          {
+            "locale": "it",
+            "slug": "partners"
+          }
+        ],
+        "indexType": "",
+        "isIndex": false
+      },
+      "lang": "en"
+    },
+    {
+      "routes": [
+        "news"
+      ],
+      "link": {
+        "__typename": "PageRecord",
+        "id": "79196192",
+        "slug": "news",
+        "slugs": [
+          {
+            "locale": "en",
+            "slug": "news"
+          },
+          {
+            "locale": "it",
+            "slug": "news"
+          }
+        ],
+        "indexType": "news",
+        "isIndex": true
+      },
+      "lang": "en"
+    }
+  ],
+  "pages": [],
+  "courses": [
+    {
+      "id": "85752360",
+      "slugs": {
+        "en": "alessio-maria-romano",
+        "it": "alessio-maria-romano"
+      },
+      "isIndex": false,
+      "indexType": ""
+    }
+  ],
+  "projects": [
+    {
+      "id": "89226190",
+      "slugs": {
+        "en": "esempio-di-progetto",
+        "it": "esempio-di-progetto"
+      },
+      "isIndex": false,
+      "indexType": ""
+    }
+  ],
+  "artists": [
+    {
+      "id": "85765727",
+      "slugs": {
+        "en": "alessio-maria-romano",
+        "it": "alessio-maria-romano"
+      },
+      "isIndex": false,
+      "indexType": ""
+    }
+  ],
+  "events": [
+    {
+      "id": "89224754",
+      "slugs": {
+        "en": "festival-event",
+        "it": "evento-di-prova"
+      },
+      "isIndex": false,
+      "indexType": ""
+    }
+  ],
+  "news": [
+    {
+      "id": "89223999",
+      "slugs": {
+        "en": "sample-news",
+        "it": "notizia-di-esempio"
+      },
+      "isIndex": false,
+      "indexType": ""
+    }
+  ]
+}
