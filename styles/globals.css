@@ -5,7 +5,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
 
 @layer base {
-  h1 {
+  /* h1 {
     @apply text-4xl font-semibold px-2 py-3;
   }
   h2 {
@@ -13,14 +13,11 @@
   }
   h3 {
     @apply text-2xl font-semibold px-2 py-3;
-  }
-  p {
-    @apply px-2 pb-2;
-  }
+  } */
 }
 
 @layer components {
-  .btn {
+  /* .btn {
     @apply bg-gray-900 hover:bg-gray-800 text-white font-bold py-2 px-4 rounded;
-  }
+  } */
 }

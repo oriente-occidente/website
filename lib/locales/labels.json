@@ -1,10 +1,12 @@
 {
   "it": {
     "welcome": "Entra nel sito",
-    "goodby": "Addio"
+    "goodby": "Addio",
+    "patronage": "Con il patrocinio"
   },
   "en":{
     "welcome": "Enter the site",
-    "goodby": "Goodby"
+    "goodby": "Goodby",
+    "patronage": "With the patronage"
   }
 }

@@ -10,7 +10,7 @@ module.exports = {
           DEFAULT: '#000000',
           light: '#424242',
           medium: '#979797',
-          transparent: 'rgb(0 0 0 / 60%)',
+          transparent: 'rgb(0 0 0 / 80%)',
         },
         gray: {
           DEFAULT: '#E5E5E5',
@@ -18,6 +18,7 @@ module.exports = {
         }
       },
       fontSize: {
+        xxs: ['14px', '24px'],
         xs: ['16px', '20px'],
         sm: ['18px', '28px'],
         base: ['23px', '38px'],
