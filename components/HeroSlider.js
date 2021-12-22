@@ -1,5 +1,5 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Autoplay, EffectFade } from 'swiper';
+import { Autoplay } from 'swiper';
 import SwiperCore, {
   Pagination, Navigation
 } from 'swiper';
@@ -15,12 +15,12 @@ function HeroSlider({ slides }) {
   return (
     <header className="relative">
       <Swiper
-        modules={[Autoplay, EffectFade]}
+        modules={[Autoplay]}
         spaceBetween={0}
+        speed={900}
         loop={true}
         slidesPerView={1}
-        autoplay={false}
-        effect={'fade'}
+        autoplay={true}
         onSlideChange={() => console.log('slide change')}
         onSwiper={(swiper) => console.log(swiper)}
         pagination={true}

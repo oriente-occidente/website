@@ -31,7 +31,7 @@
     hidden md:flex w-14 h-14 top-auto bottom-12 2xl:bottom-24 left-16
     after:text-white after:bg-arrow-left after:w-3/5 after:h-full after:bg-no-repeat after:bg-center
     before:absolute before:inset-0 before:border before:border-white before:rounded-full before:scale-0 before:ease-in before:duration-300
-    hover:before:scale-100
+    hover:before:scale-100;
 }
 
 .swiper .swiper-button-next {
@@ -39,7 +39,7 @@
     hidden md:flex w-14 h-14 top-auto bottom-12 left-32 2xl:bottom-24
     after:text-white after:bg-arrow-right after:w-3/5 after:h-full after:bg-no-repeat after:bg-center
     before:absolute before:inset-0 before:border before:border-white before:rounded-full before:scale-0 before:ease-in before:duration-300
-    hover:before:scale-100
+    hover:before:scale-100;
 }
 
 @media (min-width: 1536px) {
