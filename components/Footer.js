@@ -72,11 +72,11 @@ export default function Example() {
   const router = useRouter();
   const { locale } = router;
   return (
-    <footer className="bg-white" aria-labelledby="footer-heading">
+    <footer className="bg-white container" aria-labelledby="footer-heading">
       <h2 id="footer-heading" className="sr-only">
         Footer
       </h2>
-      <div className="py-6 px-4 sm:px-6 lg:pt-16 lg:px-8">
+      <div className="py-6 px-4 sm:px-6 lg:pt-16 lg:px-8 xl:px-0">
         <div className="md:grid md:grid-cols-2 md:gap-8">
           <div className="space-y-4 xl:grid xl:grid-cols-2 xl:gap-8 xl:space-y-0">
             <div>

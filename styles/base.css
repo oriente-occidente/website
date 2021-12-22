@@ -39,3 +39,16 @@ a {
   text-decoration: none;
   -webkit-tap-highlight-color: var(--secondary);
 }
+
+.object-cover img {
+  object-fit: cover;
+}
+
+.swiper-slide img {
+  object-fit: cover;
+  /* object-position: 30%; */
+}
+
+.container {
+  @apply mx-auto my-0
+}

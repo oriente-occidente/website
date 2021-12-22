@@ -32,8 +32,19 @@ module.exports = {
         'serif': ['Poppins', 'sans-serif'],
         'sans': ['Poppins', 'sans-serif']
       },
+      height: {
+        '50vh': '50vh',
+        '80vh': '80vh',
+        '90vh': '90vh',
+      },
+      backgroundImage: {
+        'arrow-left': "url('/icone/arrow_long_left.svg')",
+        'arrow-right': "url('/icone/arrow_long_right.svg')",
+      }
     },
   },
+  variants: {},
+  plugins: [require('@tailwindcss/typography'), require('@tailwindcss/forms')],
   corePlugins: {
     container: false
   },
@@ -42,13 +53,23 @@ module.exports = {
       addComponents({
         '.container': {
           maxWidth: '100%',
+          '@screen sm': {
+            maxWidth: '640px',
+          },
+          '@screen md': {
+            maxWidth: '768px',
+          },
+          '@screen lg': {
+            maxWidth: '1024px',
+          },
+          '@screen xl': {
+            maxWidth: '1280px',
+          },
           '@screen 2xl': {
             maxWidth: '1380px',
           },
         }
       })
     }
-  ],
-  variants: {},
-  plugins: [require('@tailwindcss/typography'), require('@tailwindcss/forms')],
+  ]
 };

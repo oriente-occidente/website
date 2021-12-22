@@ -14,7 +14,7 @@ function Layout({ children }) {
       <header>
         <Nav />
       </header>
-      <main className="h-full container">{children}</main>
+      <main className="h-full">{children}</main>
       <footer>
         <Footer />
       </footer>

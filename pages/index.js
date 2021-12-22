@@ -4,11 +4,19 @@ import Layout from 'components/Layout';
 import * as queries from 'lib/queries';
 import fetchDato from 'lib/api/dato';
 import routes from 'data/routes.json';
+import HeroSlider from "components/HeroSlider";
 
-function Home({ routes, preview, locale }) {
+function Home({ routes, preview, locale, home }) {
+  const { homeSlideshow, slug, id } = home;
   return (
     <Layout>
-      <h1>h1</h1>
+      {/* {homeSlideshow.map((block) => {
+        const { title } = block;
+        return (
+          <h1>{title}</h1>
+        )
+      })} */}
+      {/* <h1>h1</h1>
       <p>paragrafo</p>
       <h2>h2</h2>
       <p>paragrafo</p>
@@ -30,18 +38,21 @@ function Home({ routes, preview, locale }) {
             );
           })}
         </ul>
-      </div>
+      </div> */}
+
+      <HeroSlider slides={homeSlideshow} />
     </Layout>
   );
 }
 
 export async function getStaticProps({ preview = false, locale }) {
-  // const home = await fetchDato(queries.home, { locale }, preview);
+  const response = await fetchDato(queries.getHomepage, { locale }, preview);
   return {
     props: {
       preview,
       locale,
       routes,
+      home: response.home
     },
     revalidate: 30,
   };
