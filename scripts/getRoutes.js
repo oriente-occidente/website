@@ -1,57 +1,13 @@
-const nodeEnv = process.env.NODE_ENV || 'develop';
-if (nodeEnv === 'develop') {
-  require('dotenv').config({ path: '.env.local' });
-}
+// const nodeEnv = process.env.NODE_ENV || 'develop';
+// if (nodeEnv === 'develop') {
+//   require('dotenv').config({ path: '.env.local' });
+// }
 const fs = require('fs');
 const _ = require('lodash');
 const { doQuery, allRecords } = require('./dato');
 
 const getLocales = async () => {
   return doQuery(`query locales { site:_site{ locales } }`);
-};
-
-const getDataByLocale = async (locale) => {
-  const q = `
-query menu($locale: SiteLocale) {
-  menu: allMenuItems(filter: {parent: {exists: "false"}},locale:$locale) {
-    ...itemFrag
-    children {
-      ...itemFrag
-      children {
-        ...itemFrag
-        children {
-          ...itemFrag
-          children {
-            ...itemFrag
-          }
-        }
-      }
-    }
-  }
-}
-fragment itemFrag on MenuItemRecord {
-  id
-  slug
-  slugs: _allSlugLocales {
-    locale
-    slug: value
-  }
-  link {
-    __typename
-    ... on HomeRecord {
-      id
-    }
-    ... on PageRecord {
-      id
-      slug
-      indexType
-      isIndex
-    }
-  }
-}
-`;
-  const v = { locale };
-  return doQuery(q, v);
 };
 
 const getData = async () => {
@@ -245,15 +201,15 @@ const generateRoutes = async () => {
   fs.writeFileSync('data/routes.json', JSON.stringify(list, null, 2), 'utf8');
 };
 
-(async () => {
-  try {
-    const start = Date.now();
-    await generateRoutes();
-    const elapsed = (Date.now() - start) / 1000;
-    console.log(`script done in ${elapsed.toFixed(2)} sec`);
-  } catch (error) {
-    console.error('ERROR', error);
-  }
-})();
+// (async () => {
+//   try {
+//     const start = Date.now();
+//     await generateRoutes();
+//     const elapsed = (Date.now() - start) / 1000;
+//     console.log(`script done in ${elapsed.toFixed(2)} sec`);
+//   } catch (error) {
+//     console.error('ERROR', error);
+//   }
+// })();
 
-// module.exports = generateRoutes;
+module.exports = generateRoutes;

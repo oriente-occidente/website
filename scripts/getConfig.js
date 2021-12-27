@@ -1,62 +1,92 @@
-
 const fs = require('fs');
-const _ = require('lodash');
 
-
+const { doQuery } = require('./dato');
 
 const getConfig = async () => {
   const q = `
   query config {
-    configuration {
-      theme
+    site: _site {
+      locales
+      faviconMetaTags {
+        tag
+        content
+        attributes
+      }
+    }
+    menu: allMenuItems(filter: {parent: {exists: "false"}}) {
+      ...menuItemFrag
+      parent {
+        ...menuItemFrag
+        parent {
+          ...menuItemFrag
+        }
+      }
+    }
+    footer {
+      info
       logo {
-        url
+        responsiveImage(imgixParams: {auto: format, maxW: "600"}) {
+          src
+        }
       }
-      country {
-        zoneCode
+      socials {
+        id
+        link
         title
+        image {
+          url(imgixParams: {auto: format, h: "80"})
+        }
       }
-      locale {
-        title
-        code
+      sections {
+        id
+        links {
+          slugs: _allSlugLocales {
+            locale
+            value
+          }
+          titles: _allTitleLocales {
+            locale
+            value
+          }
+        }
       }
-      availabilityShowThreshold
-      maxPromptDeliveryHours
-      showFees
-      cssOverrides
-      gtmCode
-    }
-    locales: allLocales {
-      code
-      title
-    }
-    snippets: allInjectSnippets{
-      id
-      friendlyName
-      snippetType
-      body
     }
   }
-    `;
+  fragment menuItemFrag on MenuItemRecord {
+    id
+    titles: _allTitleLocales {
+      locale
+      title: value
+    }
+    slugs: _allSlugLocales {
+      locale
+      slug: value
+    }
+    link {
+      __typename
+      ... on HomeRecord {
+        id
+      }
+      ... on PageRecord {
+        id
+        slug
+        title
+        indexType
+        isIndex
+      }
+    }
+  }
+`;
   return doQuery(q);
 };
 
-const stylePath = 'stylesheets/_style.sass';
 const outPath = 'data/config.json';
 const updateConfig = async () => {
   const data = await getConfig();
   // console.log(data);
   if (data) {
-    const json = JSON.stringify(
-      { projectName: PROJECT_NAME, ...data },
-      null,
-      2
-    );
+    const json = JSON.stringify(data, null, 2);
     fs.writeFileSync(outPath, json);
-    fs.writeFileSync(
-      stylePath,
-      `@import '${data.configuration.theme}/application'`
-    );
     console.log('Config Updated');
   }
 };

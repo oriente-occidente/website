@@ -281,7 +281,7 @@
           "slug": "news"
         }
       ],
-      "indexType": "news",
+      "indexType": "news-index",
       "isIndex": true
     },
     "lang": "it"
@@ -568,7 +568,7 @@
           "slug": "news"
         }
       ],
-      "indexType": "news",
+      "indexType": "news-index",
       "isIndex": true
     },
     "lang": "en"
