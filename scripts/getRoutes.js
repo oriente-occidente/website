@@ -89,12 +89,11 @@ function traverse(item, lang, parent = null) {
   if (parent?.routes?.length > 0) {
     routes = [...parent.routes];
   }
-
   routes.push(slug);
   const current = { routes, link, lang };
 
   if (item.children.length === 0) {
-    // console.log('isleaf');
+    // console.log('isleaf', current.routes);
     return current;
   } else {
     return item.children.map((c) => traverse(c, lang, current)).flat();
@@ -180,7 +179,7 @@ const generateRoutes = async () => {
     'artist',
     getPrefix(menu, 'associated-artists')
   );
-  const news = await getRecords('news', getPrefix(menu, 'news'));
+  const news = await getRecords('news', getPrefix(menu, 'news-index'));
 
   const list = withAlts([
     ...menu,

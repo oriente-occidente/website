@@ -731,11 +731,44 @@
   },
   {
     "id": "89223999",
-    "slugs": {},
+    "slugs": {
+      "en": [
+        "news",
+        "sample-news"
+      ],
+      "it": [
+        "news",
+        "notizia-di-esempio"
+      ]
+    },
     "isIndex": false,
     "indexType": "",
     "__typename": "news",
-    "paths": [],
-    "urls": []
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "news",
+          "sample-news"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "news",
+          "notizia-di-esempio"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "news/sample-news"
+      },
+      {
+        "locale": "it",
+        "url": "news/notizia-di-esempio"
+      }
+    ]
   }
 ]

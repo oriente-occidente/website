@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "description": "Fancy Next.js app",
   "scripts": {
+    "data":"node ./scripts/index.js",
     "dev": "next",
     "build": "next build",
     "start": "next start",
