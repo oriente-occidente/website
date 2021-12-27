@@ -10,15 +10,15 @@ function Layout({ children }) {
   const { locale } = router;
 
   return (
-    <div className="h-full">
+    <>
       <header>
         <Nav />
       </header>
-      <main className="h-full">{children}</main>
-      <footer>
-        <Footer />
-      </footer>
-    </div>
+      <main>
+        {children}
+      </main>
+      <Footer />
+    </>
   );
 }
 

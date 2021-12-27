@@ -76,7 +76,7 @@ export default function Example() {
       <h2 id="footer-heading" className="sr-only">
         Footer
       </h2>
-      <div className="py-6 px-4 sm:px-6 lg:pt-16 lg:px-8 xl:px-0">
+      <div className="py-6 lg:pt-16 xl:px-0">
         <div className="md:grid md:grid-cols-2 md:gap-8">
           <div className="space-y-4 xl:grid xl:grid-cols-2 xl:gap-8 xl:space-y-0">
             <div>

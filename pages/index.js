@@ -5,9 +5,10 @@ import * as queries from 'lib/queries';
 import fetchDato from 'lib/api/dato';
 import routes from 'data/routes.json';
 import HeroSlider from "components/HeroSlider";
+import GalleryPreview from "components/GalleryPreview";
 
 function Home({ routes, preview, locale, home }) {
-  const { homeSlideshow, slug, id } = home;
+  const { homeSlideshow, homeSections } = home;
   return (
     <Layout>
       {/* {homeSlideshow.map((block) => {
@@ -41,6 +42,26 @@ function Home({ routes, preview, locale, home }) {
       </div> */}
 
       <HeroSlider slides={homeSlideshow} />
+
+      {homeSections.map((block) => {
+        const { sectionLinkLabel, sectionLink, slides, id, title } = block;
+        return (
+          <>
+            <div className="container flex justify-between items-center" key={id}>
+              <h2 className="uppercase py-8 lg:py-12 text-xxs md:text-sm lg:text-base md:tracking-wide">{title}</h2>
+              <Link href={sectionLink.slug} key={sectionLink.slug}>
+                <a className="button--with-arrow">
+                  {sectionLinkLabel}
+                </a>
+              </Link>
+            </div>
+            <div>
+              <GalleryPreview slides={slides}/>
+            </div>
+          </>
+        );
+      })}
+
     </Layout>
   );
 }

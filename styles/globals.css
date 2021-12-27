@@ -17,9 +17,11 @@
 }
 
 @layer components {
-  /* .btn {
-    @apply bg-gray-900 hover:bg-gray-800 text-white font-bold py-2 px-4 rounded;
-  } */
+  .button--with-arrow {
+    @apply
+      text-black font-semibold tracking-wider flex items-center md:text-xs
+      after:w-8 after:h-8 md:after:w-10 md:after:h-10 after:inline-block after:bg-arrow-right-black after:ml-2
+  }
 }
 
 .swiper .swiper-pagination .swiper-pagination-bullet {

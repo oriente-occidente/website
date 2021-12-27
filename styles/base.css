@@ -46,9 +46,8 @@ a {
 
 .swiper-slide img {
   object-fit: cover;
-  /* object-position: 30%; */
 }
 
 .container {
-  @apply mx-auto my-0
+  @apply mx-auto my-0 px-4 md:px-6
 }

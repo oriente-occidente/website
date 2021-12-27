@@ -21,8 +21,6 @@ function HeroSlider({ slides }) {
         loop={true}
         slidesPerView={1}
         autoplay={true}
-        onSlideChange={() => console.log('slide change')}
-        onSwiper={(swiper) => console.log(swiper)}
         pagination={true}
         navigation={true}
         className="mySwiper"
@@ -31,12 +29,12 @@ function HeroSlider({ slides }) {
           const { image } = slide;
           const { responsiveImage, alt, title, id } = image;
           return (
-            <SwiperSlide hey={id}>
+            <SwiperSlide key={id}>
               <DatoImage className="h-80vh md:h-50vh xl:h-80vh object-cover" data={responsiveImage} alt={alt} title={title} />
                 <div className="container relative">
                   <h2 className="z-20 absolute bottom-16 md:bottom-12 2xl:bottom-24 font-normal w-4/5 md:w-2/3 xl:w-1/2 right-4 xl:right-0 text-base md:text-lg xl:text-2xl text-white text-right">{slide.title}</h2>
                 </div>
-                <div class="absolute -top-20 bottom-0 left-0 right-0 bg-gradient-to-t z-10 from-gray-800"></div>
+                <div class="absolute -top-20 bottom-0 left-0 right-0 bg-gradient-to-t z-10 from-black-transparent"></div>
             </SwiperSlide>
           );
         })}

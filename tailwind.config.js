@@ -1,7 +1,6 @@
 module.exports = {
   mode: 'jit',
-  purge: ['./pages/**/*.{js,ts,jsx,tsx}', './components/**/*.{js,ts,jsx,tsx}'],
-  darkMode: false, // or 'media' or 'class'
+  content: ['./pages/**/*.{js,ts,jsx,tsx}', './components/**/*.{js,ts,jsx,tsx}'],
   theme: {
     extend: {
       colors: {
@@ -10,7 +9,7 @@ module.exports = {
           DEFAULT: '#000000',
           light: '#424242',
           medium: '#979797',
-          transparent: 'rgb(0 0 0 / 80%)',
+          transparent: 'rgba(0,0,0,0.43)',
         },
         gray: {
           DEFAULT: '#E5E5E5',
@@ -38,8 +37,10 @@ module.exports = {
         '90vh': '90vh',
       },
       backgroundImage: {
-        'arrow-left': "url('/icone/arrow_long_left.svg')",
         'arrow-right': "url('/icone/arrow_long_right.svg')",
+        'arrow-right-black': "url('/icone/arrow_long_right_black.svg')",
+        'arrow-left': "url('/icone/arrow_long_left.svg')",
+        'arrow-left-black': "url('/icone/arrow_long_left_black.svg')",
       }
     },
   },
