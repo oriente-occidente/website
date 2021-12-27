@@ -18,8 +18,8 @@ function Print({ title, data }) {
 
 function Page({ data, locale }) {
   const { pageInfo, site, menu, footer, ...rest } = data;
-  console.dir(pageInfo);
-  console.dir(rest);
+  console.dir(menu);
+
   const { __typename: pageType } = pageInfo;
   const payload = rest[pageType];
   const isPage = pageType === 'page';
