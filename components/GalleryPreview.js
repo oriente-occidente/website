@@ -5,8 +5,9 @@ import 'swiper/css';
 import "swiper/css/navigation"
 import 'swiper/css/autoplay';
 import 'swiper/css/effect-fade';
-import { Image as DatoImage } from 'react-datocms';
 import Link from 'next/link';
+
+import StandardCard from './card/StandardCard';
 
 function GalleryPreview({ slides }) {
   return (
@@ -53,7 +54,9 @@ function GalleryPreview({ slides }) {
           return (
             <div className="relative">
               <SwiperSlide key={id}>
-                <Link href={slug}>
+                <StandardCard slug={slug} mainTitle={titleHero} image={imageHero} category={categoryTitle} date={dateEvent}>
+                </StandardCard>
+                {/* <Link href={slug}>
                   <a title={titleHero}>
                     <div className="flex space-x-4 absolute z-20 left-4 md:left-8 md:bottom-8 top-48 md:top-auto text-white uppercase text-xxs md:text-xs font-semibold ">
                       <span>{categoryTitle}</span>
@@ -67,7 +70,7 @@ function GalleryPreview({ slides }) {
                     </h2>
                     <h3 className="text-xxs md:hidden">{dateEvent}</h3>
                   </a>
-                </Link>
+                </Link> */}
               </SwiperSlide>
             </div>
           );
