@@ -6,7 +6,7 @@ import BlockQuote from 'components/BlockQuote';
 import Gallery from 'components/Gallery';
 // import VideoBlock from 'components/VideoBlock';
 
-import { resolveLinkById } from 'lib/api';
+import { resolveLinkById } from 'lib/utils';
 
 const StructuredContent = ({ locale, content }) => {
   const renderBlock = (record) => {
@@ -46,7 +46,7 @@ const StructuredContent = ({ locale, content }) => {
         }}
         renderLinkToRecord={({ record, children, transformedMeta }) => {
           // console.log('link', record.__typename);
-          const resolved = resolveLinkById(locale, record.id);
+          const resolved = resolveLinkById(record.id, locale);
           return (
             <Link
               {...transformedMeta}

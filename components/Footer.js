@@ -1,7 +1,6 @@
-import Image from "next/image";
-import { useRouter } from 'next/router';
+import Image from 'next/image';
 
-import translate from "lib/locales"
+import translate from 'lib/locales';
 
 /* This example requires Tailwind CSS v2.0+ */
 const navigation = {
@@ -68,9 +67,7 @@ const navigation = {
   ],
 };
 
-export default function Example() {
-  const router = useRouter();
-  const { locale } = router;
+export default function Footer({ locale, data }) {
   return (
     <footer className="bg-white container" aria-labelledby="footer-heading">
       <h2 id="footer-heading" className="sr-only">
@@ -95,9 +92,27 @@ export default function Example() {
               </p>
               <p className="text-black text-xxs pb-2">
                 <span className="block">Corso Rosmini 58</span>
-                <a title="Link to call +39 0464 431660" className="block" href="tel:+390464431660">tel +39 0464 431660</a>
-                <a title="Link to send email to festival@orienteoccidente.it" className="block" href="mailto:festival@orienteoccidente.it">festival@orienteoccidente.it</a>
-                <a title="Link to send email to cid@centrodelladanza.it" className="block" href="mailto:cid@centrodelladanza.it">cid@centrodelladanza.it</a>
+                <a
+                  title="Link to call +39 0464 431660"
+                  className="block"
+                  href="tel:+390464431660"
+                >
+                  tel +39 0464 431660
+                </a>
+                <a
+                  title="Link to send email to festival@orienteoccidente.it"
+                  className="block"
+                  href="mailto:festival@orienteoccidente.it"
+                >
+                  festival@orienteoccidente.it
+                </a>
+                <a
+                  title="Link to send email to cid@centrodelladanza.it"
+                  className="block"
+                  href="mailto:cid@centrodelladanza.it"
+                >
+                  cid@centrodelladanza.it
+                </a>
               </p>
               <div className="mb-8 pb-8 border-b border-gray-200 md:border-0">
                 <p className="text-black text-xxs mb-2 uppercase">

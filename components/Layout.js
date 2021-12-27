@@ -1,23 +1,17 @@
-import Link from 'next/link';
-import { useRouter } from 'next/router';
-
-import Nav from './Nav';
+// import Link from 'next/link';
+// import { useRouter } from 'next/router';
+// import translate from 'lib/locales';
+import Header from './Header';
 import Footer from './Footer';
-import translate from 'lib/locales';
 
-function Layout({ children }) {
-  const router = useRouter();
-  const { locale } = router;
-
+function Layout({ children, menu, footer, locale }) {
+  // const router = useRouter();
+  // const { locale } = router;
   return (
     <>
-      <header>
-        <Nav />
-      </header>
-      <main>
-        {children}
-      </main>
-      <Footer />
+      <Header locale={locale} data={menu} />
+      <main>{children}</main>
+      <Footer locale={locale} data={footer} />
     </>
   );
 }

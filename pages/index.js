@@ -4,13 +4,14 @@ import Layout from 'components/Layout';
 import * as queries from 'lib/queries';
 import fetchDato from 'lib/api/dato';
 import routes from 'data/routes.json';
-import HeroSlider from "components/HeroSlider";
-import GalleryPreview from "components/GalleryPreview";
+import HeroSlider from 'components/HeroSlider';
+import GalleryPreview from 'components/GalleryPreview';
 
-function Home({ routes, preview, locale, home }) {
+function Home({ routes, data, locale, home }) {
   const { homeSlideshow, homeSections } = home;
+  const { site, footer, menu } = data;
   return (
-    <Layout>
+    <Layout footer={footer} menu={menu} locale={locale}>
       {/* {homeSlideshow.map((block) => {
         const { title } = block;
         return (
@@ -47,33 +48,35 @@ function Home({ routes, preview, locale, home }) {
         const { sectionLinkLabel, sectionLink, slides, id, title } = block;
         return (
           <>
-            <div className="container flex justify-between items-center" key={id}>
-              <h2 className="uppercase py-8 lg:py-12 text-xxs md:text-sm lg:text-base md:tracking-wide">{title}</h2>
+            <div
+              className="container flex justify-between items-center"
+              key={id}
+            >
+              <h2 className="uppercase py-8 lg:py-12 text-xxs md:text-sm lg:text-base md:tracking-wide">
+                {title}
+              </h2>
               <Link href={sectionLink.slug} key={sectionLink.slug}>
-                <a className="button--with-arrow">
-                  {sectionLinkLabel}
-                </a>
+                <a className="button--with-arrow">{sectionLinkLabel}</a>
               </Link>
             </div>
             <div>
-              <GalleryPreview slides={slides}/>
+              <GalleryPreview slides={slides} />
             </div>
           </>
         );
       })}
-
     </Layout>
   );
 }
 
 export async function getStaticProps({ preview = false, locale }) {
   const response = await fetchDato(queries.getHomepage, { locale }, preview);
+  const data = await fetchDato(queries.site, { locale }, preview);
   return {
     props: {
-      preview,
       locale,
-      routes,
-      home: response.home
+      data,
+      home: response.home,
     },
     revalidate: 30,
   };
