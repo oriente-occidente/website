@@ -1,51 +1,23 @@
 import Link from 'next/link';
 
+import translate from "lib/locales"
 import Layout from 'components/Layout';
 import * as queries from 'lib/queries';
 import fetchDato from 'lib/api/dato';
 import routes from 'data/routes.json';
-import HeroSlider from 'components/HeroSlider';
-import GalleryPreview from 'components/GalleryPreview';
+import HeroSlider from "components/HeroSlider";
+import GalleryPreview from "components/galleries/GalleryPreview";
+import GalleryHome from "components/galleries/GalleryHome";
 
 function Home({ routes, data, locale, home }) {
   const { homeSlideshow, homeSections } = home;
   const { site, footer, menu } = data;
   return (
     <Layout footer={footer} menu={menu} locale={locale}>
-      {/* {homeSlideshow.map((block) => {
-        const { title } = block;
-        return (
-          <h1>{title}</h1>
-        )
-      })} */}
-      {/* <h1>h1</h1>
-      <p>paragrafo</p>
-      <h2>h2</h2>
-      <p>paragrafo</p>
-      <h3>h3</h3>
-      <p>paragrafo</p>
-      <div>
-        <ul>
-          {routes.map((r) => {
-            const data = r.urls.find((u) => u.locale === locale);
-            const { url } = data;
-            return (
-              <li key={url}>
-                <Link href={url} locale={locale}>
-                  <a>
-                    {url} - {r.id}
-                  </a>
-                </Link>
-              </li>
-            );
-          })}
-        </ul>
-      </div> */}
-
       <HeroSlider slides={homeSlideshow} />
 
       {homeSections.map((block) => {
-        const { sectionLinkLabel, sectionLink, slides, id, title } = block;
+        const { sectionLinkLabel, sectionLink, slides, id, title, layout } = block;
         return (
           <>
             <div
@@ -59,8 +31,20 @@ function Home({ routes, data, locale, home }) {
                 <a className="button--with-arrow">{sectionLinkLabel}</a>
               </Link>
             </div>
+            {
+              layout == 'Mission' ?
+                <div className="bg-gray container uppercase py-8 lg:py-12 text-xxs md:text-sm lg:text-base md:tracking-wide">
+                  {translate('discoverActivities', locale)}
+                </div>
+              : null
+            }
             <div>
-              <GalleryPreview slides={slides} />
+              {
+                layout == 'PrimoPiano' ?
+                  <GalleryPreview slides={slides}/>
+                :
+                  <GalleryHome slides={slides} background={"gray"}/>
+              }
             </div>
           </>
         );

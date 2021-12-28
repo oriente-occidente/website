@@ -12,7 +12,7 @@ module.exports = {
           transparent: 'rgba(0,0,0,0.43)',
         },
         gray: {
-          DEFAULT: '#E5E5E5',
+          DEFAULT: '#E2E2E2',
           light: '#F7F7F7',
         }
       },

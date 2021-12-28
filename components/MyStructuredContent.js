@@ -3,8 +3,9 @@ import { isBlockquote } from 'datocms-structured-text-utils';
 import Link from 'next/link';
 
 import BlockQuote from 'components/BlockQuote';
-import Gallery from 'components/Gallery';
-// import VideoBlock from 'components/VideoBlock';
+import CodeHilight from 'components/CodeHilight';
+import Cta from 'components/Cta';
+import Gallery from 'components/galleries/Gallery';
 
 import { resolveLinkById } from 'lib/utils';
 
