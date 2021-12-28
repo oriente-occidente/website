@@ -1,7 +1,6 @@
 import Link from 'next/link';
 import { Fragment } from 'react';
 import { Popover, Transition } from '@headlessui/react';
-import { MenuIcon, XIcon } from '@heroicons/react/outline';
 import { ChevronDownIcon } from '@heroicons/react/solid';
 
 import { resolveLinkById } from 'lib/utils';
@@ -15,16 +14,15 @@ function renderMobile(data, locale) {
     if (item.children && item.children.length > 0) {
       return (
         <div>
-          <div className="text-base font-medium">
+          <div className="text-sm font-semibold uppercase md:text-xl md:mb-4 md:mt-6">
             {item.title.toUpperCase()}
-            <hr />
           </div>
           {item.children?.map((child) => (
             <Link
-              key={child?.id}
-              href={resolveLinkById(child?.link?.id, locale)}
+            key={child?.id}
+            href={resolveLinkById(child?.link?.id, locale)}
             >
-              <a>{child.title}</a>
+              <a className="text-black-light text-sm block font-normal tracking-wider md:py-1 md:text-base">{child.title}</a>
             </Link>
           ))}
         </div>
@@ -33,7 +31,7 @@ function renderMobile(data, locale) {
       return (
         <div>
           <Link key={item.id} href={resolveLinkById(item.link?.id, locale)}>
-            <a>{item.title}</a>
+            <a className="md:mb-8 block md:mt-6 text-sm font-semibold uppercase md:text-xl">{item.title}</a>
           </Link>
         </div>
       );
@@ -51,22 +49,23 @@ function renderMobile(data, locale) {
     >
       <Popover.Panel
         focus
-        className="absolute top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden"
+        className="fixed z-50 inset-0 h-full transition transform origin-top-left lg:hidden"
       >
-        <div className="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 bg-white divide-y-2 divide-gray-50">
-          <div className="pt-5 pb-6 px-5">
+        <div className="h-full ring-1 ring-black ring-opacity-5 bg-white divide-y-2 divide-gray-50">
+          <div className="container py-2">
             <div className="flex items-center justify-between">
               <div>
                 <img
-                  className="h-10 w-auto sm:h-12"
+                  className="h-10 w-auto sm:h-12 lg:h-16"
                   src="/oo_logo.jpg"
                   alt="Oriente Occidente"
                 />
               </div>
               <div className="-mr-2">
-                <Popover.Button className="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:black">
-                  <span className="sr-only">Close menu</span>
-                  <XIcon className="h-6 w-6" aria-hidden="true" />
+                <Popover.Button className="rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:black">
+                  <span className="text-[12px] md:text-xs font-semibold uppercase tracking-widest text-black">Close</span>
+                  <div className="ml-2 h-6 w-6 md:h-8 md:w-8 md:ml-4 bg-close" aria-hidden="true" />
+
                 </Popover.Button>
               </div>
             </div>
@@ -75,7 +74,7 @@ function renderMobile(data, locale) {
             <div className="grid grid-cols-2 gap-4">
               {data?.map((item) => renderMobileLink(item))}
             </div>
-            <div className="mt-6">it / en</div>
+            <div className="uppercase text-xxs tracking-widest mt-6 md:text-base">it / en</div>
           </div>
         </div>
       </Popover.Panel>
@@ -93,15 +92,15 @@ function Header(props) {
             <Fragment>
               <Popover.Button
                 className={classNames(
-                  open ? 'text-gray-900' : 'text-gray-500',
-                  'group bg-white rounded-md inline-flex items-center font-medium hover:text-gray-900 focus:outline-none '
+                  open ? 'text-black' : 'text-black',
+                  'uppercase text-xxs tracking-widest group bg-white rounded-md inline-flex items-center font-semibold hover:text-gray-900 focus:outline-none '
                 )}
               >
                 <span>{item.title}</span>
                 <ChevronDownIcon
                   className={classNames(
-                    open ? 'text-gray-600' : 'text-gray-400',
-                    'ml-2 h-5 w-5 group-hover:text-gray-500'
+                    open ? 'text-black' : 'text-black',
+                    'ml-1 h-5 w-5 group-hover:text-gray-500'
                   )}
                   aria-hidden="true"
                 />
@@ -125,10 +124,10 @@ function Header(props) {
                           href={resolveLinkById(child.link?.id, locale)}
                         >
                           <a
-                            className="-m-3 p-3 block rounded-md hover:bg-gray-50"
+                            className="-m-3 p-1 block rounded-md hover:bg-gray-50"
                             onClick={() => close()}
                           >
-                            <p className="font-medium text-gray-900">
+                            <p className="font-medium tracking-wider normal-case text-black-light">
                               {child.title}
                             </p>
                           </a>
@@ -145,7 +144,7 @@ function Header(props) {
     } else {
       return (
         <Link key={item.id} href={resolveLinkById(item.link?.id, locale)}>
-          <a className="font-medium text-gray-500 hover:text-gray-900">
+          <a className="font-semibold text-black tracking-widest text-xxs hover:text-gray-900">
             {item.title}
           </a>
         </Link>
@@ -156,28 +155,28 @@ function Header(props) {
   return (
     <header>
       <Popover className="relative bg-white">
-        <div className="flex justify-between items-center px-4 py-6 sm:px-6 md:justify-start md:space-x-10">
+        <div className="container flex justify-between items-center py-2 lg:py-3 sm:px-6 lg:justify-start lg:space-x-10">
           <div>
             <a href="#" className="flex">
               <span className="sr-only">Workflow</span>
               <img
-                className="h-10 w-auto sm:h-12"
+                className="h-10 w-auto sm:h-12 lg:h-16"
                 src="/oo_logo.jpg"
                 alt="Oriente Occidente"
               />
             </a>
           </div>
-          <div className="-mr-2 -my-2 md:hidden">
+          <div className="-mr-2 -my-2 lg:hidden">
             <Popover.Button className="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:primary">
-              <span className="sr-only">Open menu</span>
-              <MenuIcon className="h-6 w-6" aria-hidden="true" />
+              <span className="text-[12px] md:text-xs font-semibold uppercase tracking-widest text-black">Menu</span>
+              <div className="ml-2 h-6 w-6 md:w-8 md:ml-4 bg-open" aria-hidden="true" />
             </Popover.Button>
           </div>
-          <div className="hidden md:flex-1 md:flex md:items-center md:justify-between">
-            <Popover.Group as="nav" className="flex space-x-10">
+          <div className="hidden lg:flex-1 lg:flex lg:items-center lg:justify-end">
+            <Popover.Group as="nav" className="flex space-x-10 uppercase">
               {data?.map((item) => renderLink(item))}
             </Popover.Group>
-            <div className="flex items-center md:ml-12">it / en</div>
+            <div className="ml-14 font-semibold uppercase text-black-light tracking-widest text-xxs hover:text-black-light">it / en</div>
           </div>
         </div>
         {renderMobile(data, locale)}
