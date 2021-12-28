@@ -84,7 +84,6 @@ function renderMobile(data, locale) {
 }
 
 function Header(props) {
-  console.log('HEADER', props);
   const { data, locale } = props;
   function renderLink(item) {
     if (item.children && item.children.length > 0) {

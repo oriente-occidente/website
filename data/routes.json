@@ -597,7 +597,7 @@
       "en": [
         "community",
         "projects",
-        "esempio-di-progetto"
+        "project-sample"
       ],
       "it": [
         "contaminazioni",
@@ -614,7 +614,7 @@
         "slugs": [
           "community",
           "projects",
-          "esempio-di-progetto"
+          "project-sample"
         ]
       },
       {
@@ -629,7 +629,7 @@
     "urls": [
       {
         "locale": "en",
-        "url": "community/projects/esempio-di-progetto"
+        "url": "community/projects/project-sample"
       },
       {
         "locale": "it",
