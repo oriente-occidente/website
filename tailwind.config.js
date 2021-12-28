@@ -41,6 +41,7 @@ module.exports = {
         'arrow-right-black': "url('/icone/arrow_long_right_black.svg')",
         'arrow-left': "url('/icone/arrow_long_left.svg')",
         'arrow-left-black': "url('/icone/arrow_long_left_black.svg')",
+        'arrow-small-right': "url('/icone/arrow_small_right.svg')",
       }
     },
   },

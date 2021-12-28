@@ -19,7 +19,7 @@ function GalleryPreview({ slides }) {
         loop={true}
         slidesPerView={1.3}
         centeredSlides={true}
-        autoplay={true}
+        // autoplay={true}
         className="mySwiper"
         breakpoints={{
           "1024": {

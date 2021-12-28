@@ -15,7 +15,7 @@ function StandardCard({ count, slug, mainTitle, image, locale }) {
               <div className="tracking-wider uppercase text-xxs md:text-sm lg:text-base md:tracking-wide relative after:h-px after:w-12 lg:after:w-40 after:bg-black after:absolute after:top-7 lg:after:top-12 after:left-0">
                 0{count + 1}/
               </div>
-              <div className="hidden md:block mt-4 mb-12 tracking-wider uppercase lg:py-12 text-xxs md:text-sm lg:text-base md:tracking-wide">
+              <div className="hidden md:block mt-4 mb-12 lg:py-16 title--small">
                 [placeholder]
               </div>
             </div>
@@ -35,7 +35,7 @@ function StandardCard({ count, slug, mainTitle, image, locale }) {
             </h2>
           </div>
         </div>
-        <div className="md:hidden ml-20 pl-1 mt-4 mb-12 tracking-wider uppercase lg:py-12 text-xxs md:text-sm lg:text-base md:tracking-wide relative after:h-px after:w-32 after:bg-black after:absolute after:-top-3 after:left-1">
+        <div className="md:hidden ml-20 pl-1 mt-4 mb-12 lg:py-16 title--small relative after:h-px after:w-32 after:bg-black after:absolute after:-top-3 after:left-1">
           [placeholder]
         </div>
       </a>

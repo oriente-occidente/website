@@ -14,6 +14,7 @@ function Home({ routes, data, locale, home }) {
   const { site, footer, menu } = data;
   return (
     <Layout footer={footer} menu={menu} locale={locale}>
+      <h1 className="sr-only">Oriente Occidente</h1>
       <HeroSlider slides={homeSlideshow} />
 
       {homeSections.map((block) => {
@@ -21,10 +22,10 @@ function Home({ routes, data, locale, home }) {
         return (
           <>
             <div
-              className="container flex justify-between items-center"
+              className="container flex justify-between items-center border-t border-gray"
               key={id}
             >
-              <h2 className="uppercase py-8 lg:py-16 text-xxs md:text-sm lg:text-base md:tracking-wide">
+              <h2 className="py-8 lg:py-16 title--small">
                 {title}
               </h2>
               <Link href={sectionLink.slug} key={sectionLink.slug}>
@@ -34,7 +35,7 @@ function Home({ routes, data, locale, home }) {
             {
               layout == 'Mission' ?
                 <div className="bg-gray">
-                  <div className="container uppercase py-8 lg:pb-12 lg:pt-16 text-xxs md:text-sm lg:text-base md:tracking-wide">
+                  <div className="container py-8 lg:pb-12 lg:pt-16 title--small">
                     {translate('discoverActivities', locale)}
                   </div>
                 </div>

@@ -1,3 +1,4 @@
+@import '../styles/form.css';
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -42,6 +43,10 @@
     after:text-white after:bg-arrow-right after:w-3/5 after:h-full after:bg-no-repeat after:bg-center
     before:absolute before:inset-0 before:border before:border-white before:rounded-full before:scale-0 before:ease-in before:duration-300
     hover:before:scale-100;
+}
+
+.title--small {
+  @apply uppercase text-xxs md:text-sm lg:text-base md:tracking-wide;
 }
 
 @media (min-width: 1536px) {

@@ -4,13 +4,15 @@
     "goodby": "Addio",
     "patronage": "Con il patrocinio",
     "discoverActivities": "Scopri tutte le attività",
-    "more": "Scopri"
+    "more": "Scopri",
+    "email": "Inserisci la mail"
   },
   "en":{
     "welcome": "Enter the site",
     "goodby": "Goodby",
     "patronage": "With the patronage",
     "discoverActivities": "Discover all activities",
-    "more": "More"
+    "more": "More",
+    "email": "insert email"
   }
 }
