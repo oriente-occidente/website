@@ -8,7 +8,7 @@ import 'swiper/css/effect-fade';
 
 import HomeCard from '../cards/HomeCard';
 
-function GalleryHome({ slides, background }) {
+function GalleryHome({ slides, background, locale }) {
   return (
     <header className={`relative bg-${background}`}>
       <Swiper
@@ -21,13 +21,8 @@ function GalleryHome({ slides, background }) {
         // autoplay={true}
         className="mySwiper"
         breakpoints={{
-          "1024": {
-            "slidesPerView": 2,
-            "spaceBetween": 40
-          },
           "1280": {
-            "slidesPerView": 2.5,
-            "spaceBetween": 10
+            "spaceBetween": 20
           }
         }}
       >
@@ -53,7 +48,7 @@ function GalleryHome({ slides, background }) {
           return (
             <div className="relative">
               <SwiperSlide key={slug}>
-                <HomeCard slug={slug} count={count} mainTitle={titleHero} image={imageHero}>
+                <HomeCard slug={slug} count={count} mainTitle={titleHero} image={imageHero} locale={locale}>
                 </HomeCard>
               </SwiperSlide>
             </div>

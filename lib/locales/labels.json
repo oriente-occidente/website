@@ -3,12 +3,14 @@
     "welcome": "Entra nel sito",
     "goodby": "Addio",
     "patronage": "Con il patrocinio",
-    "discoverActivities": "Scopri tutte le attività"
+    "discoverActivities": "Scopri tutte le attività",
+    "more": "Scopri"
   },
   "en":{
     "welcome": "Enter the site",
     "goodby": "Goodby",
     "patronage": "With the patronage",
-    "discoverActivities": "Discover all activities"
+    "discoverActivities": "Discover all activities",
+    "more": "More"
   }
 }

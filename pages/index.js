@@ -24,7 +24,7 @@ function Home({ routes, data, locale, home }) {
               className="container flex justify-between items-center"
               key={id}
             >
-              <h2 className="uppercase py-8 lg:py-12 text-xxs md:text-sm lg:text-base md:tracking-wide">
+              <h2 className="uppercase py-8 lg:py-16 text-xxs md:text-sm lg:text-base md:tracking-wide">
                 {title}
               </h2>
               <Link href={sectionLink.slug} key={sectionLink.slug}>
@@ -33,8 +33,10 @@ function Home({ routes, data, locale, home }) {
             </div>
             {
               layout == 'Mission' ?
-                <div className="bg-gray container uppercase py-8 lg:py-12 text-xxs md:text-sm lg:text-base md:tracking-wide">
-                  {translate('discoverActivities', locale)}
+                <div className="bg-gray">
+                  <div className="container uppercase py-8 lg:pb-12 lg:pt-16 text-xxs md:text-sm lg:text-base md:tracking-wide">
+                    {translate('discoverActivities', locale)}
+                  </div>
                 </div>
               : null
             }
@@ -43,7 +45,7 @@ function Home({ routes, data, locale, home }) {
                 layout == 'PrimoPiano' ?
                   <GalleryPreview slides={slides}/>
                 :
-                  <GalleryHome slides={slides} background={"gray"}/>
+                  <GalleryHome slides={slides} background={"gray"} locale={locale}/>
               }
             </div>
           </>
