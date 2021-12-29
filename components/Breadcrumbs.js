@@ -6,36 +6,27 @@ const pages = [
   { name: 'Project Nero', href: '#', current: true },
 ];
 
-export default function Example() {
+export default function Example({ background }) {
   return (
-    <nav className="flex" aria-label="Breadcrumb">
-      <ol role="list" className="flex items-center space-x-4">
-        <li>
-          <div>
-            <a href="#" className="text-gray-400 hover:text-gray-500">
-              <HomeIcon className="flex-shrink-0 h-5 w-5" aria-hidden="true" />
-              <span className="sr-only">Home</span>
-            </a>
-          </div>
-        </li>
-        {pages.map((page) => (
-          <li key={page.name}>
-            <div className="flex items-center">
-              <ChevronRightIcon
-                className="flex-shrink-0 h-5 w-5 text-gray-400"
-                aria-hidden="true"
-              />
-              <a
-                href={page.href}
-                className="ml-4 text-sm font-medium text-gray-500 hover:text-gray-700"
-                aria-current={page.current ? 'page' : undefined}
-              >
-                {page.name}
-              </a>
-            </div>
-          </li>
-        ))}
-      </ol>
+    <nav className={`hidden md:block bg-${background} border-y-gray border-y py-2 xl:py-5`} aria-label="Breadcrumb">
+      <div className="container flex">
+        <ol role="list" className="flex items-center space-x-4">
+          {pages.map((page) => (
+            <li key={page.name} className="group">
+              <div className="flex items-center">
+                <a
+                  href={page.href}
+                  className="text-[12px]"
+                  aria-current={page.current ? 'page' : undefined}
+                >
+                  {page.name}
+                </a>
+                <div className="group-last:hidden ml-4 bg-arrow-right-black w-5 h-5"></div>
+              </div>
+            </li>
+          ))}
+        </ol>
+      </div>
     </nav>
   );
 }

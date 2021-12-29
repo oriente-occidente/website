@@ -6,7 +6,7 @@ function Layout({ children, menu, footer, locale }) {
   return (
     <>
       <Header locale={locale} data={menu} />
-      <main>{children}</main>
+      <main className="overflow-scroll">{children}</main>
       <Newsletter locale={locale} />
       <Footer locale={locale} data={footer} />
     </>

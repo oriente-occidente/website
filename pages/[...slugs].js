@@ -5,6 +5,7 @@ import Layout from 'components/Layout';
 import Seo from 'components/Seo';
 import StructuredContent from 'components/MyStructuredContent';
 import { resolveLinkById, camelCase } from 'lib/utils';
+import Breadcrumbs from 'components/Breadcrumbs';
 
 function Print({ title, data }) {
   return (
@@ -48,6 +49,7 @@ function Page({ data, locale }) {
         tags={[...site.faviconMetaTags, ...payload.seo]}
         alt={pageInfo.urls}
       />
+      <Breadcrumbs/>
       <div>{payload?.title}</div>
       <div>
         <Print title={'HERO'} data={heroData} />
