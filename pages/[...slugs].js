@@ -49,7 +49,7 @@ function Page({ data, locale }) {
         tags={[...site.faviconMetaTags, ...payload.seo]}
         alt={pageInfo.urls}
       />
-      <Breadcrumbs/>
+      <Breadcrumbs />
       <div>{payload?.title}</div>
       <div>
         <Print title={'HERO'} data={heroData} />
@@ -60,9 +60,14 @@ function Page({ data, locale }) {
           <Print title="list" data={list} />
         </div>
       )}
+
+      <h1>MAIN CONTENT</h1>
       {payload.content && (
         <StructuredContent locale={locale} content={payload.content} />
       )}
+
+      <h1>SEZIONI PARAGRAFO TITOLO</h1>
+
       {payload.sections?.map((section) => {
         const { id, title, body } = section;
         return (

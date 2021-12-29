@@ -1,28 +1,11 @@
+import Link from 'next/link';
 import Image from 'next/image';
 
 import translate from 'lib/locales';
+import { resolveLinkById } from 'lib/utils';
 
 /* This example requires Tailwind CSS v2.0+ */
 const navigation = {
-  solutions: [
-    { name: 'Marketing', href: '#' },
-    { name: 'Analytics', href: '#' },
-    { name: 'Commerce', href: '#' },
-    { name: 'Insights', href: '#' },
-  ],
-  support: [
-    { name: 'Pricing', href: '#' },
-    { name: 'Documentation', href: '#' },
-    { name: 'Guides', href: '#' },
-    { name: 'API Status', href: '#' },
-  ],
-  company: [
-    { name: 'About', href: '#' },
-    { name: 'Blog', href: '#' },
-    { name: 'Jobs', href: '#' },
-    { name: 'Press', href: '#' },
-    { name: 'Partners', href: '#' },
-  ],
   legal: [
     { name: 'Claim', href: '#' },
     { name: 'Privacy', href: '#' },
@@ -68,6 +51,7 @@ const navigation = {
 };
 
 export default function Footer({ locale, data }) {
+  console.log('FOOTER', data);
   return (
     <footer className="bg-white container" aria-labelledby="footer-heading">
       <h2 id="footer-heading" className="sr-only">
@@ -135,80 +119,30 @@ export default function Footer({ locale, data }) {
           </div>
           <div className="mt-8 grid grid-cols-2 gap-8 md:mt-0 xl:mt-0 xl:grid-cols-4">
             <div className="xl:col-span-2 xl:grid xl:grid-cols-2">
-              <div>
-                <div className="text-xxs font-semibold text-black tracking-wider uppercase">
-                  Solutions
-                </div>
-                <ul role="list" className="mt-4 space-y-2">
-                  {navigation.solutions.map((item) => (
-                    <li key={item.name}>
-                      <a
-                        href={item.href}
-                        title={`Link to ${item.name}`}
-                        className="text-black-transparent text-xxs tracking-widest hover:text-black"
-                      >
-                        {item.name}
-                      </a>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-              <div className="mt-16 xl:mt-0">
-                <div className="text-xxs font-semibold text-black tracking-wider uppercase">
-                  Support
-                </div>
-                <ul role="list" className="mt-4 space-y-2">
-                  {navigation.support.map((item) => (
-                    <li key={item.name}>
-                      <a
-                        href={item.href}
-                        title={`Link to ${item.name}`}
-                        className="text-black-transparent text-xxs tracking-widest hover:text-black"
-                      >
-                        {item.name}
-                      </a>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </div>
-            <div className="xl:col-span-2 xl:grid xl:grid-cols-2">
-              <div>
-                <div className="text-xxs font-semibold text-black tracking-wider uppercase">
-                  Company
-                </div>
-                <ul role="list" className="mt-4 space-y-2">
-                  {navigation.company.map((item) => (
-                    <li key={item.name}>
-                      <a
-                        href={item.href}
-                        title={`Link to ${item.name}`}
-                        className="text-black-transparent text-xxs tracking-widest hover:text-black"
-                      >
-                        {item.name}
-                      </a>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-              <div className="mt-8 xl:mt-0">
-                <div className="text-xxs font-semibold text-black tracking-wider uppercase">
-                  Legal
-                </div>
-                <ul role="list" className="mt-4 space-y-2">
-                  {navigation.legal.map((item) => (
-                    <li key={item.name}>
-                      <a
-                        href={item.href}
-                        title={`Link to ${item.name}`}
-                        className="text-black-transparent text-xxs tracking-widest hover:text-black"
-                      >
-                        {item.name}
-                      </a>
-                    </li>
-                  ))}
-                </ul>
-              </div>
+              {data.sections.map((section) => {
+                const { title, links } = section;
+                return (
+                  <div className="mt-16 xl:mt-0">
+                    <div className="text-xxs font-semibold text-black tracking-wider uppercase">
+                      {title}
+                    </div>
+                    <ul role="list" className="mt-4 space-y-2">
+                      {links.map((item) => (
+                        <li key={item.id}>
+                          <Link href={`/${resolveLinkById(item.id, locale)}`}>
+                            <a
+                              title={`Link to ${item.title}`}
+                              className="text-black-transparent text-xxs tracking-widest hover:text-black"
+                            >
+                              {item.title}
+                            </a>
+                          </Link>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                );
+              })}
             </div>
           </div>
         </div>
