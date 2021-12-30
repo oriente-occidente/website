@@ -1,7 +1,17 @@
 import { Image as DatoImage } from 'react-datocms';
 
+import Gallery from 'components/galleries/Gallery';
+
 function HeroDetail({ data }) {
-  const { titleHero, descriptionHero, imageHero, isFestival, dateEvento, paymentSettings } = data
+  const {
+    titleHero,
+    descriptionHero,
+    imageHero,
+    isFestival,
+    dateEvento,
+    paymentSettings,
+    slideshowHero
+  } = data
 
   return (
     <header className="border-t md:border-none border-gray pb-10 md:py-0 md:grid md:grid-cols-4 md:gap-4 xl:container xl:mx-auto">
@@ -52,9 +62,12 @@ function HeroDetail({ data }) {
               : null
           }
           <div className="mt-6 md:mt-8 lg:mt-2 pl-4 md:pl-0 xl:w-[calc(100%+3rem)] 2xl:w-[calc((100vw-((100vw-1380px)/2))-333px-1rem)]">
-            { (imageHero)?
-              <DatoImage className="max-w-[1400px]" data={imageHero.responsiveImage} alt={imageHero.alt} title={imageHero.title} />
-            : null
+            {
+              slideshowHero != "" ?
+                <Gallery slides={slideshowHero} />
+              : (imageHero)?
+                <DatoImage className="max-w-[1400px]" data={imageHero.responsiveImage} alt={imageHero.alt} title={imageHero.title} />
+              : null
             }
           </div>
 

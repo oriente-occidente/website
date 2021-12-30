@@ -1,17 +1,43 @@
-import { Image } from 'react-datocms';
-function Gallery({ images }) {
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Autoplay } from 'swiper';
+import SwiperCore, {
+  Pagination, Navigation
+} from 'swiper';
+import 'swiper/css';
+import "swiper/css/pagination"
+import "swiper/css/navigation"
+import 'swiper/css/autoplay';
+import 'swiper/css/effect-fade';
+import { Image as DatoImage } from 'react-datocms';
+
+function Gallery({ slides }) {
+  SwiperCore.use([Pagination, Navigation]);
   return (
-    <div className="mt-6 grid grid-cols-2 gap-0.5 md:grid-cols-3 lg:mt-8">
-      {images.map((i) => (
-        <div
-          key={i.id}
-          className="col-span-1 flex justify-center py-2 px-2 bg-gray-50"
-        >
-          <Image data={i.responsiveImage} />
-        </div>
-      ))}
+    <div className="relative">
+      <Swiper
+        modules={[Autoplay]}
+        spaceBetween={0}
+        speed={900}
+        loop={true}
+        slidesPerView={1}
+        // autoplay={true}
+        pagination={true}
+        navigation={true}
+        className="SwiperGallery"
+      >
+        {slides.map((slide) => {
+          return (
+            <SwiperSlide key={slide.id}>
+              <div className="relative">
+                <DatoImage className="max-w-[1400px]" data={slide.responsiveImage} alt={slide.alt} title={slide.title} />
+                <div class="absolute inset-0 max-w-[1400px] bg-gradient-to-t z-10 from-black-transparent"></div>
+              </div>
+            </SwiperSlide>
+          );
+        })}
+      </Swiper>
     </div>
-  );
+  )
 }
 
 export default Gallery;

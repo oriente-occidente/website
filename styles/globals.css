@@ -45,6 +45,34 @@
     hover:before:scale-100;
 }
 
+.SwiperGallery.swiper {
+  @apply overflow-visible
+}
+
+.SwiperGallery.swiper .swiper-slide {
+  @apply opacity-0 transition-all
+}
+
+.SwiperGallery.swiper .swiper-slide-active {
+  @apply opacity-100
+}
+
+.SwiperGallery .swiper-button-prev {
+  @apply
+    left-[-33%] xl:left-[calc(-33%+1.5rem)] 2xl:-left-[333px]
+    bottom-0 xl:bottom-8
+    after:bg-arrow-left-black
+    before:border-black
+  }
+
+.SwiperGallery .swiper-button-next {
+    @apply
+    bottom-0 xl:bottom-8
+    left-[calc(-33%+3rem)] xl:left-[calc(-33%+4.5rem)] 2xl:-left-[calc(333px-3rem)]
+    after:bg-arrow-right-black
+    before:border-black
+}
+
 .title{
   @apply font-semibold uppercase text-base md:text-2xl
 }
@@ -59,10 +87,10 @@
 
 
 @media (min-width: 1536px) {
-  .swiper .swiper-button-prev {
+  .mySwiper .swiper-button-prev {
     left: calc((100vw - 1380px) / 2)
   }
-  .swiper .swiper-button-next {
+  .mySwiper .swiper-button-next {
     left: calc(((100vw - 1380px) / 2) + 60px )
   }
 }
