@@ -45,9 +45,18 @@
     hover:before:scale-100;
 }
 
+.title{
+  @apply font-semibold uppercase text-base md:text-2xl
+}
+
+.title--big{
+  @apply font-semibold uppercase text-lg md:text-2xl lg:text-3xl xl:text-4xl md:text-white md:absolute md:top-1/2 z-20 md:w-1/2 md:-translate-y-2/4
+}
+
 .title--small {
   @apply uppercase text-xxs md:text-sm lg:text-base md:tracking-wide;
 }
+
 
 @media (min-width: 1536px) {
   .swiper .swiper-button-prev {

@@ -5,7 +5,7 @@ import Layout from 'components/Layout';
 import * as queries from 'lib/queries';
 import fetchDato from 'lib/api/dato';
 import routes from 'data/routes.json';
-import HeroSlider from "components/HeroSlider";
+import HeroSlider from "components/hero/HeroSlider";
 import GalleryPreview from "components/galleries/GalleryPreview";
 import GalleryHome from "components/galleries/GalleryHome";
 

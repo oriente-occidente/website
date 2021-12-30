@@ -6,6 +6,9 @@ import Seo from 'components/Seo';
 import StructuredContent from 'components/MyStructuredContent';
 import { resolveLinkById, camelCase } from 'lib/utils';
 import Breadcrumbs from 'components/Breadcrumbs';
+import HeroDetail from 'components/hero/HeroDetail';
+import HeroEmpty from 'components/hero/HeroEmpty';
+import HeroIndex from 'components/hero/HeroIndex';
 
 function Print({ title, data }) {
   return (
@@ -34,6 +37,9 @@ function Page({ data, locale }) {
     descriptionHero,
     imageHero,
     slideshowHero,
+    isFestival,
+    dateEvento,
+    paymentSettings
   } = payload;
   const heroData = {
     layoutHero,
@@ -41,7 +47,17 @@ function Page({ data, locale }) {
     descriptionHero,
     imageHero,
     slideshowHero,
+    isFestival,
+    dateEvento,
+    paymentSettings
   };
+
+  let bgBreadcrumb;
+  if (heroData.layoutHero == 'index'){
+    bgBreadcrumb = "gray"
+  } else {
+    bgBreadcrumb = null
+  }
 
   return (
     <Layout footer={footer} menu={menu} locale={locale}>
@@ -49,7 +65,20 @@ function Page({ data, locale }) {
         tags={[...site.faviconMetaTags, ...payload.seo]}
         alt={pageInfo.urls}
       />
-      <Breadcrumbs />
+      <Breadcrumbs background={bgBreadcrumb} />
+      {
+        heroData.layoutHero == 'detail' ?
+          <HeroDetail data={heroData}/>
+        : heroData.layoutHero == 'index' ?
+          <HeroIndex data={heroData}/>
+        :
+          <HeroEmpty data={heroData}/>
+      }
+
+
+      <hr></hr>
+      <hr></hr>
+      <hr></hr>
       <div>{payload?.title}</div>
       <div>
         <Print title={'HERO'} data={heroData} />
