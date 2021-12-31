@@ -28,7 +28,7 @@ function GalleryHome({ slides, background, locale }) {
       >
         {slides.map((slide, count) => {
           count = count++;
-          const { imageHero, titleHero, category, dateEvento, slug } = slide;
+          const { imageHero, titleHero, category, dateEvento, slug, id } = slide;
           let categoryTitle;
           let dateEvent;
           if (category) {
@@ -48,7 +48,7 @@ function GalleryHome({ slides, background, locale }) {
           return (
             <div className="relative">
               <SwiperSlide key={slug}>
-                <HomeCard slug={slug} count={count} mainTitle={titleHero} image={imageHero} locale={locale}>
+                <HomeCard count={count} data={slide} dateEvent={dateEvent} categoryTitle={categoryTitle} locale={locale}>
                 </HomeCard>
               </SwiperSlide>
             </div>

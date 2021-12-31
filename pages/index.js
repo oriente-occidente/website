@@ -8,6 +8,7 @@ import routes from 'data/routes.json';
 import HeroSlider from "components/hero/HeroSlider";
 import GalleryPreview from "components/galleries/GalleryPreview";
 import GalleryHome from "components/galleries/GalleryHome";
+import { resolveLinkById } from 'lib/utils';
 
 function Home({ routes, data, locale, home }) {
   const { homeSlideshow, homeSections } = home;
@@ -18,22 +19,22 @@ function Home({ routes, data, locale, home }) {
       <HeroSlider slides={homeSlideshow} />
 
       {homeSections.map((block) => {
-        const { sectionLinkLabel, sectionLink, slides, id, title, layout } = block;
+        console.log('block:', block);
         return (
           <>
             <div
               className="container flex justify-between items-center border-t border-gray"
-              key={id}
+              key={block.id}
             >
               <h2 className="py-8 lg:py-16 title--small">
-                {title}
+                {block.title}
               </h2>
-              <Link href={sectionLink.slug} key={sectionLink.slug}>
-                <a className="button--with-arrow">{sectionLinkLabel}</a>
+              <Link href={`/${resolveLinkById(block.sectionLink.id, locale)}`}>
+                <a className="button--with-arrow">{block.sectionLinkLabel}</a>
               </Link>
             </div>
             {
-              layout == 'Mission' ?
+              block.layout == 'Mission' ?
                 <div className="bg-gray">
                   <div className="container py-8 lg:pb-12 lg:pt-16 title--small">
                     {translate('discoverActivities', locale)}
@@ -43,10 +44,10 @@ function Home({ routes, data, locale, home }) {
             }
             <div>
               {
-                layout == 'PrimoPiano' ?
-                  <GalleryPreview slides={slides}/>
+                block.layout == 'PrimoPiano' ?
+                  <GalleryPreview slides={block.slides}/>
                 :
-                  <GalleryHome slides={slides} background={"gray"} locale={locale}/>
+                  <GalleryHome slides={block.slides} background={"gray"} locale={locale}/>
               }
             </div>
           </>

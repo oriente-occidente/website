@@ -33,27 +33,26 @@ function GalleryPreview({ slides }) {
         }}
       >
         {slides.map((slide) => {
-          const { imageHero, titleHero, category, dateEvento, slug } = slide;
           let categoryTitle;
           let dateEvent;
-          if (category) {
-            if (Array.isArray(category)){
-              categoryTitle = category.map((cat) =>{
+          if (slide.category) {
+            if (Array.isArray(slide.category)){
+              categoryTitle = slide.category.map((cat) =>{
                 return cat.title
               }).join(', ');
             } else {
-              categoryTitle = category.title
+              categoryTitle = slide.category.title
             }
           }
-          if (dateEvento) {
-            dateEvent = dateEvento.map((event) => {
+          if (slide.dateEvento) {
+            dateEvent = slide.dateEvento.map((event) => {
               return event.startTime
             }).join(', ');
           }
           return (
             <div className="relative">
-              <SwiperSlide key={slug}>
-                <StandardCard slug={slug} mainTitle={titleHero} image={imageHero} category={categoryTitle} date={dateEvent}>
+              <SwiperSlide key={slide.id}>
+                <StandardCard data={slide} categoryTitle={categoryTitle} dateEvent={dateEvent}>
                 </StandardCard>
               </SwiperSlide>
             </div>

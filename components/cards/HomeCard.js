@@ -1,14 +1,15 @@
 import { Image as DatoImage } from 'react-datocms';
 import translate from 'lib/locales';
+import { resolveLinkById } from 'lib/utils';
 
 import Link from 'next/link';
 
-function StandardCard({ count, slug, mainTitle, image, locale }) {
-  const { responsiveImage, alt, title, id } = image;
+function HomeCard({ count, categoryTitle, dateEvent, data, locale }) {
+  const { responsiveImage, alt, title, id } = data.imageHero;
 
   return (
-    <Link href={slug}>
-      <a title={mainTitle}>
+    <Link href={`/${resolveLinkById(data.id, locale)}`}>
+      <a title={data.titleHero}>
         <div className="pb-8 md:pb-16 lg:pb-20 pl-4 md:pl-6 relative h-[240px] md:h-[640px] xl:h-[45vw]">
           <div className="relative flex h-full justify-between lg:pl-8 2xl:pl-[calc((100vw-1390px)/2)]">
             <div>
@@ -31,7 +32,7 @@ function StandardCard({ count, slug, mainTitle, image, locale }) {
               </div>
             </div>
             <h2 className="text-lg z-20 md:text-xl lg:text-2xl xl:text-3xl xl:w-2/3 uppercase text-white font-semibold absolute top-1/2 -translate-y-2/4">
-              {mainTitle}
+              {data.titleHero}
             </h2>
           </div>
         </div>
@@ -43,4 +44,4 @@ function StandardCard({ count, slug, mainTitle, image, locale }) {
   )
 }
 
-export default StandardCard;
+export default HomeCard;
