@@ -17,7 +17,8 @@ module.exports = {
         gray: {
           DEFAULT: '#E2E2E2',
           light: '#F7F7F7',
-        },
+          dark: '#332E2D'
+        }
       },
       fontSize: {
         xxs: ['14px', '24px'],

@@ -12,6 +12,7 @@ import HeroIndex from 'components/hero/HeroIndex';
 import GalleryPreview from 'components/galleries/GalleryPreview';
 import ResultsGrid from 'components/ResultsGrid';
 import Filters from 'components/Filters';
+import Tabs from 'components/Tabs';
 
 function Print({ title, data }) {
   return (
