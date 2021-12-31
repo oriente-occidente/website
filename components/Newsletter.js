@@ -14,7 +14,7 @@ export default function Newsletter({ locale }) {
           <div className="relative">
             <label className="sr-only" for="email">Enter your email: </label>
             <input className="form__input" placeholder={`${translate('email', locale)}`} type="email" id="email" name="email" />
-            <button className="absolute top-1/2 -translate-y-2/4 right-4 w-6 h-6 bg-arrow-small-right block"></button>
+            <button className="absolute top-4 right-4 w-6 h-6 bg-arrow-small-right block"></button>
           </div>
         </div>
       </div>

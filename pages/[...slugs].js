@@ -79,10 +79,7 @@ function Page({ data, locale }) {
       <hr></hr>
       <hr></hr>
       <hr></hr>
-      <div>{payload?.title}</div>
-      <div>
-        <Print title={'HERO'} data={heroData} />
-      </div>
+
       {isIndex && (
         <div>
           <Print title="RENDER LIST of" data={camelCase(indexType)} />

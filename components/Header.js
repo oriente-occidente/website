@@ -55,11 +55,15 @@ function renderMobile(data, locale) {
           <div className="container py-2">
             <div className="flex items-center justify-between">
               <div>
-                <img
-                  className="h-10 w-auto sm:h-12 lg:h-16"
-                  src="/oo_logo.jpg"
-                  alt="Oriente Occidente"
-                />
+                <Link locale={locale} href="/" passHref>
+                  <a title="homepage">
+                    <img
+                      className="h-10 w-auto sm:h-12 lg:h-16"
+                      src="/oo_logo.jpg"
+                      alt="Oriente Occidente"
+                    />
+                  </a>
+                </Link>
               </div>
               <div className="-mr-2">
                 <Popover.Button className="rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:black">
@@ -157,14 +161,16 @@ function Header(props) {
       <Popover className="relative bg-white">
         <div className="container flex justify-between items-center py-2 lg:py-3 sm:px-6 lg:justify-start lg:space-x-10">
           <div>
-            <a href="#" className="flex">
-              <span className="sr-only">Workflow</span>
-              <img
-                className="h-10 w-auto sm:h-12 lg:h-16"
-                src="/oo_logo.jpg"
-                alt="Oriente Occidente"
-              />
-            </a>
+            <Link locale={locale} href="/" passHref>
+              <a href="#" className="flex">
+                <span className="sr-only">Workflow</span>
+                <img
+                  className="h-10 w-auto sm:h-12 lg:h-16"
+                  src="/oo_logo.jpg"
+                  alt="Oriente Occidente"
+                />
+              </a>
+            </Link>
           </div>
           <div className="-mr-2 -my-2 lg:hidden">
             <Popover.Button className="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:primary">
