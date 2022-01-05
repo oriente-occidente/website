@@ -9,6 +9,8 @@ import Breadcrumbs from 'components/Breadcrumbs';
 import HeroDetail from 'components/hero/HeroDetail';
 import HeroEmpty from 'components/hero/HeroEmpty';
 import HeroIndex from 'components/hero/HeroIndex';
+import GalleryPreview from 'components/galleries/GalleryPreview';
+import PreviewCard from 'components/cards/PreviewCard';
 
 function Print({ title, data }) {
   return (
@@ -28,8 +30,9 @@ function Page({ data, locale }) {
   const isPage = pageType === 'page';
   const isIndex = isPage && payload.isIndex;
   const indexType = isIndex && payload.indexType;
-
   const list = isIndex && indexType ? rest[camelCase(indexType)] : [];
+
+  console.log('list', list);
 
   const {
     layoutHero,
@@ -75,15 +78,6 @@ function Page({ data, locale }) {
       )}
 
       <hr></hr>
-      <hr></hr>
-      <hr></hr>
-
-      {isIndex && (
-        <div>
-          <Print title="RENDER LIST of" data={camelCase(indexType)} />
-          <Print title="list" data={list} />
-        </div>
-      )}
 
       <h1>MAIN CONTENT</h1>
       {payload.content && (
@@ -102,24 +96,19 @@ function Page({ data, locale }) {
         );
       })}
       <hr />
+      {isIndex && (
+        <div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8">
+          {list.map((item) => (
+            <PreviewCard locale={locale} data={item} key={item.id} />
+          ))}
+        </div>
+      )}
+      <hr />
+
       <div>
-        <h1>LINKS</h1>
-        <ul className="px-10">
-          {payload.relatedContents?.map((related) => {
-            return (
-              <li key={related.id}>
-                <Link
-                  href={`${resolveLinkById(related.id, locale)}`}
-                  locale={locale}
-                >
-                  <a>{related.title}</a>
-                </Link>
-              </li>
-            );
-          })}
-        </ul>
-        <hr />
-        <Print title={'Related Contents'} data={payload.relatedContents} />
+        {payload.relatedContents?.length > 0 && (
+          <GalleryPreview slides={payload.relatedContents} locale={locale} />
+        )}
       </div>
     </Layout>
   );

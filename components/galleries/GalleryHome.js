@@ -6,7 +6,7 @@ import 'swiper/css/navigation';
 import 'swiper/css/autoplay';
 import 'swiper/css/effect-fade';
 
-import HomeCard from '../cards/HomeCard';
+import HomeCard from 'components/cards/HomeCard';
 
 function GalleryHome({ slides, background, locale }) {
   return (

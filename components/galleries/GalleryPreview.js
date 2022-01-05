@@ -6,7 +6,7 @@ import 'swiper/css/navigation';
 import 'swiper/css/autoplay';
 import 'swiper/css/effect-fade';
 
-import StandardCard from '../cards/StandardCard';
+import StandardCard from 'components/cards/StandardCard';
 
 function GalleryPreview({ slides, locale }) {
   return (
