@@ -8,7 +8,7 @@ function HomeCard({ count, categoryTitle, dateEvent, data, locale }) {
   const { responsiveImage, alt, title, id } = data.imageHero;
 
   return (
-    <Link href={resolveLinkById(data.id, locale)}>
+    <Link href={resolveLinkById(data.id, locale)} locale={locale}>
       <a title={data.titleHero}>
         <div className="pb-8 md:pb-16 lg:pb-20 pl-4 md:pl-6 relative h-[240px] md:h-[640px] xl:h-[45vw]">
           <div className="relative flex h-full justify-between lg:pl-8 2xl:pl-[calc((100vw-1390px)/2)]">

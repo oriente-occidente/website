@@ -8,7 +8,7 @@ import 'swiper/css/effect-fade';
 
 import StandardCard from '../cards/StandardCard';
 
-function GalleryPreview({ slides }) {
+function GalleryPreview({ slides, locale }) {
   return (
     <header className="relative">
       <Swiper
@@ -57,6 +57,7 @@ function GalleryPreview({ slides }) {
             <div className="relative" key={`gallery-preview-${id}`}>
               <SwiperSlide>
                 <StandardCard
+                  locale={locale}
                   data={slide}
                   categoryTitle={categoryTitle}
                   dateEvent={dateEvent}

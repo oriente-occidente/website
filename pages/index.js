@@ -27,7 +27,10 @@ function Home({ routes, data, locale, home }) {
               key={block.id}
             >
               <h2 className="py-8 lg:py-16 title--small">{block.title}</h2>
-              <Link href={resolveLinkById(block.sectionLink.id, locale)}>
+              <Link
+                href={resolveLinkById(block.sectionLink.id, locale)}
+                locale={locale}
+              >
                 <a className="button--with-arrow">{block.sectionLinkLabel}</a>
               </Link>
             </div>
@@ -40,7 +43,7 @@ function Home({ routes, data, locale, home }) {
             ) : null}
             <div>
               {block.layout == 'PrimoPiano' ? (
-                <GalleryPreview slides={block.slides} />
+                <GalleryPreview slides={block.slides} locale={locale} />
               ) : (
                 <GalleryHome
                   slides={block.slides}
