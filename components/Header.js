@@ -85,7 +85,9 @@ function renderMobile(data, locale, alts) {
           </div>
           <div className="py-6 px-5">
             <div className="grid grid-cols-2 gap-4">
-              {data?.map((item) => renderMobileLink(item))}
+              {data?.map((item) => (
+                <Fragment key={item.id}>{renderMobileLink(item)}</Fragment>
+              ))}
             </div>
             <div className="uppercase text-xxs tracking-widest mt-6 md:text-base">
               <LanguageSwitcher locale={locale} alts={alts} />
@@ -196,7 +198,9 @@ function Header(props) {
           </div>
           <div className="hidden lg:flex-1 lg:flex lg:items-center lg:justify-end">
             <Popover.Group as="nav" className="flex space-x-10 uppercase">
-              {data?.map((item) => renderLink(item))}
+              {data?.map((item) => (
+                <Fragment key={item.id}>{renderLink(item)}</Fragment>
+              ))}
             </Popover.Group>
             <div className="ml-14 font-semibold uppercase text-black-light tracking-widest text-xxs hover:text-black-light">
               <LanguageSwitcher locale={locale} alts={alts} />
