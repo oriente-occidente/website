@@ -5,7 +5,6 @@ import translate from 'lib/locales';
 import Layout from 'components/Layout';
 import * as queries from 'lib/queries';
 import fetchDato from 'lib/api/dato';
-import routes from 'data/routes.json';
 import HeroSlider from 'components/hero/HeroSlider';
 import GalleryPreview from 'components/galleries/GalleryPreview';
 import GalleryHome from 'components/galleries/GalleryHome';
@@ -28,7 +27,7 @@ function Home({ routes, data, locale, home }) {
               key={block.id}
             >
               <h2 className="py-8 lg:py-16 title--small">{block.title}</h2>
-              <Link href={`/${resolveLinkById(block.sectionLink.id, locale)}`}>
+              <Link href={resolveLinkById(block.sectionLink.id, locale)}>
                 <a className="button--with-arrow">{block.sectionLinkLabel}</a>
               </Link>
             </div>
