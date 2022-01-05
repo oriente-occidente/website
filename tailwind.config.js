@@ -1,6 +1,9 @@
 module.exports = {
   mode: 'jit',
-  content: ['./pages/**/*.{js,ts,jsx,tsx}', './components/**/*.{js,ts,jsx,tsx}'],
+  content: [
+    './pages/**/*.{js,ts,jsx,tsx}',
+    './components/**/*.{js,ts,jsx,tsx}',
+  ],
   theme: {
     extend: {
       colors: {
@@ -14,7 +17,7 @@ module.exports = {
         gray: {
           DEFAULT: '#E2E2E2',
           light: '#F7F7F7',
-        }
+        },
       },
       fontSize: {
         xxs: ['14px', '24px'],
@@ -28,8 +31,8 @@ module.exports = {
         '4xl': ['140px', '150px'],
       },
       fontFamily: {
-        'serif': ['Poppins', 'sans-serif'],
-        'sans': ['Poppins', 'sans-serif']
+        serif: ['Poppins', 'sans-serif'],
+        sans: ['Poppins', 'sans-serif'],
       },
       height: {
         '50vh': '50vh',
@@ -42,17 +45,18 @@ module.exports = {
         'arrow-left': "url('/icone/arrow_long_left.svg')",
         'arrow-left-black': "url('/icone/arrow_long_left_black.svg')",
         'arrow-small-right': "url('/icone/arrow_small_right.svg')",
-        'open': "url('/icone/open.svg')",
-        'close': "url('/icone/close.svg')",
-      }
+        open: "url('/icone/open.svg')",
+        close: "url('/icone/close.svg')",
+      },
     },
   },
   variants: {},
-  plugins: [require('@tailwindcss/typography'), require('@tailwindcss/forms')],
   corePlugins: {
-    container: false
+    container: false,
   },
   plugins: [
+    // require('@tailwindcss/typography'),
+    // require('@tailwindcss/forms'),
     function ({ addComponents }) {
       addComponents({
         '.container': {
@@ -72,8 +76,8 @@ module.exports = {
           '@screen 2xl': {
             maxWidth: '1380px',
           },
-        }
-      })
-    }
-  ]
+        },
+      });
+    },
+  ],
 };

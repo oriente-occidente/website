@@ -1,9 +1,9 @@
 import { Image as DatoImage } from 'react-datocms';
 import Link from 'next/link';
 
-import { resolveLinkById } from 'lib/utils';
+import { resolveLinkById, formatDate } from 'lib/utils';
 
-function StandardCard({ data, locale, categoryTitle, dateEvent }) {
+function StandardCard({ data, locale, categoryTitle, eventDate }) {
   const image = data.imageHero;
   return (
     <div className="pb-8 md:pb-0">
@@ -11,9 +11,11 @@ function StandardCard({ data, locale, categoryTitle, dateEvent }) {
         <a title={data.title}>
           <div className="flex space-x-4 absolute z-20 left-4 md:left-8 md:bottom-8 top-48 md:top-auto text-white uppercase text-xxs md:text-xs font-semibold ">
             <span>{categoryTitle}</span>
-            <span className="hidden md:block normal-case font-light">
-              {dateEvent}
-            </span>
+            {eventDate && (
+              <span className="hidden md:block normal-case font-light">
+                {formatDate(eventDate, locale)}
+              </span>
+            )}
           </div>
           <DatoImage
             className=""
@@ -26,7 +28,11 @@ function StandardCard({ data, locale, categoryTitle, dateEvent }) {
           <h2 className="text-sm z-20 md:text-lg uppercase text-black md:text-white font-semibold mt-2 md:absolute md:top-6 md:left-8 ">
             {data.title}
           </h2>
-          <h3 className="text-xxs md:hidden">{dateEvent}</h3>
+          {eventDate && (
+            <h3 className="text-xxs md:hidden">
+              {formatDate(eventDate, locale)}
+            </h3>
+          )}
         </a>
       </Link>
     </div>

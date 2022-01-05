@@ -7,6 +7,7 @@ import 'swiper/css/autoplay';
 import 'swiper/css/effect-fade';
 
 import StandardCard from 'components/cards/StandardCard';
+import { closestInterval } from 'lib/utils';
 
 function GalleryPreview({ slides, locale }) {
   return (
@@ -34,7 +35,7 @@ function GalleryPreview({ slides, locale }) {
         {slides.map((slide, i) => {
           const { id } = slide;
           let categoryTitle;
-          let dateEvent;
+
           if (slide.category) {
             if (Array.isArray(slide.category)) {
               categoryTitle = slide.category
@@ -46,12 +47,12 @@ function GalleryPreview({ slides, locale }) {
               categoryTitle = slide.category.title;
             }
           }
+
+          let eventDate = null;
           if (slide.dateEvento) {
-            dateEvent = slide.dateEvento
-              .map((event) => {
-                return event.startTime;
-              })
-              .join(', ');
+            eventDate = closestInterval(
+              slide.dateEvento.map((event) => event.startTime)
+            );
           }
           return (
             <div className="relative" key={`gallery-preview-${id}`}>
@@ -60,7 +61,7 @@ function GalleryPreview({ slides, locale }) {
                   locale={locale}
                   data={slide}
                   categoryTitle={categoryTitle}
-                  dateEvent={dateEvent}
+                  eventDate={eventDate}
                 />
               </SwiperSlide>
             </div>

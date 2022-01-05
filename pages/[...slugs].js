@@ -4,13 +4,14 @@ import { doQuery, getPaths } from 'lib/api';
 import Layout from 'components/Layout';
 import Seo from 'components/Seo';
 import StructuredContent from 'components/MyStructuredContent';
-import { resolveLinkById, camelCase } from 'lib/utils';
+import { camelCase } from 'lib/utils';
 import Breadcrumbs from 'components/Breadcrumbs';
 import HeroDetail from 'components/hero/HeroDetail';
 import HeroEmpty from 'components/hero/HeroEmpty';
 import HeroIndex from 'components/hero/HeroIndex';
 import GalleryPreview from 'components/galleries/GalleryPreview';
-import PreviewCard from 'components/cards/PreviewCard';
+import ResultsGrid from 'components/ResultsGrid';
+import Filters from 'components/Filters';
 
 function Print({ title, data }) {
   return (
@@ -31,8 +32,7 @@ function Page({ data, locale }) {
   const isIndex = isPage && payload.isIndex;
   const indexType = isIndex && payload.indexType;
   const list = isIndex && indexType ? rest[camelCase(indexType)] : [];
-
-  console.log('list', list);
+  const showFilters = indexType === 'festival-events';
 
   const {
     layoutHero,
@@ -77,15 +77,9 @@ function Page({ data, locale }) {
         <HeroEmpty data={heroData} />
       )}
 
-      <hr></hr>
-
-      <h1>MAIN CONTENT</h1>
       {payload.content && (
         <StructuredContent locale={locale} content={payload.content} />
       )}
-
-      <h1>SEZIONI PARAGRAFO TITOLO</h1>
-
       {payload.sections?.map((section) => {
         const { id, title, body } = section;
         return (
@@ -95,21 +89,15 @@ function Page({ data, locale }) {
           </div>
         );
       })}
-      <hr />
-      {isIndex && (
-        <div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8">
-          {list.map((item) => (
-            <PreviewCard locale={locale} data={item} key={item.id} />
-          ))}
+
+      {isIndex && !showFilters && <ResultsGrid list={list} locale={locale} />}
+      {isIndex && showFilters && <Filters list={list} locale={locale} />}
+
+      {payload.relatedContents?.length > 0 && (
+        <div className="mt-20">
+          <GalleryPreview slides={payload.relatedContents} locale={locale} />
         </div>
       )}
-      <hr />
-
-      <div>
-        {payload.relatedContents?.length > 0 && (
-          <GalleryPreview slides={payload.relatedContents} locale={locale} />
-        )}
-      </div>
     </Layout>
   );
 }

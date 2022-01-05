@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "description": "Fancy Next.js app",
   "scripts": {
-    "data":"node ./scripts/index.js",
+    "data": "node ./scripts/index.js",
     "dev": "next",
     "build": "next build",
     "start": "next start",
@@ -15,6 +15,7 @@
     "autoprefixer": "^10.4.0",
     "axios": "^0.24.0",
     "datocms-structured-text-utils": "^1.2.0",
+    "dayjs": "^1.10.7",
     "dracula-prism": "^2.1.5",
     "lodash": "^4.17.21",
     "next": "^12.0.7",
