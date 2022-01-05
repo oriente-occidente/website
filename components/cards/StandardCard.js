@@ -5,7 +5,6 @@ import { resolveLinkById } from 'lib/utils';
 
 function StandardCard({ data, locale, categoryTitle, dateEvent }) {
   const image = data.imageHero;
-  console.log('data:', data);
   return (
     <div className="pb-8 md:pb-0">
       <Link href={resolveLinkById(data.id, locale)}>
