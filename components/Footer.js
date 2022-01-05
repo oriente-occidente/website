@@ -49,7 +49,6 @@ export default function Footer({ locale, data }) {
                   Social Media
                 </p>
                 <div className="flex space-x-3 ">
-                  {console.log('Social:', data.socials)}
                   {data.socials.map((item) => {
                     return (
                       <Fragment key={item.id}>
@@ -60,7 +59,6 @@ export default function Footer({ locale, data }) {
                             className="text-black hover:text-gray-400"
                           >
                             <span className="sr-only">{item.title}</span>
-                            {console.log('logo social', item.image)}
                             <img
                               src={item.image.url}
                               width="20px"
