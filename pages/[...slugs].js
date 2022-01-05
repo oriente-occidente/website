@@ -39,7 +39,7 @@ function Page({ data, locale }) {
     slideshowHero,
     isFestival,
     dateEvento,
-    paymentSettings
+    paymentSettings,
   } = payload;
   const heroData = {
     layoutHero,
@@ -49,32 +49,30 @@ function Page({ data, locale }) {
     slideshowHero,
     isFestival,
     dateEvento,
-    paymentSettings
+    paymentSettings,
   };
 
   let bgBreadcrumb;
-  if (heroData.layoutHero == 'index'){
-    bgBreadcrumb = "gray"
+  if (heroData.layoutHero == 'index') {
+    bgBreadcrumb = 'gray';
   } else {
-    bgBreadcrumb = null
+    bgBreadcrumb = null;
   }
 
   return (
-    <Layout footer={footer} menu={menu} locale={locale}>
+    <Layout footer={footer} menu={menu} locale={locale} alts={pageInfo.urls}>
       <Seo
         tags={[...site.faviconMetaTags, ...payload.seo]}
         alt={pageInfo.urls}
       />
       <Breadcrumbs background={bgBreadcrumb} />
-      {
-        heroData.layoutHero == 'detail' ?
-          <HeroDetail data={heroData}/>
-        : heroData.layoutHero == 'index' ?
-          <HeroIndex data={heroData}/>
-        :
-          <HeroEmpty data={heroData}/>
-      }
-
+      {heroData.layoutHero == 'detail' ? (
+        <HeroDetail data={heroData} />
+      ) : heroData.layoutHero == 'index' ? (
+        <HeroIndex data={heroData} />
+      ) : (
+        <HeroEmpty data={heroData} />
+      )}
 
       <hr></hr>
       <hr></hr>
@@ -128,13 +126,12 @@ function Page({ data, locale }) {
 }
 export async function getStaticPaths() {
   const paths = getPaths();
-  console.log('paths', paths.length);
+  // console.log('paths', paths.length);
   return { paths, fallback: false };
 }
 
 export async function getStaticProps({ params, locale, preview = false }) {
   const data = await doQuery(locale, params);
-
   return {
     props: { data, locale },
   };

@@ -4,12 +4,13 @@ import { Popover, Transition } from '@headlessui/react';
 import { ChevronDownIcon } from '@heroicons/react/solid';
 
 import { resolveLinkById } from 'lib/utils';
+import LanguageSwitcher from 'components/LanguageSwitcher';
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ');
 }
 
-function renderMobile(data, locale) {
+function renderMobile(data, locale, alts) {
   function renderMobileLink(item) {
     if (item.children && item.children.length > 0) {
       return (
@@ -19,10 +20,12 @@ function renderMobile(data, locale) {
           </div>
           {item.children?.map((child) => (
             <Link
-            key={child?.id}
-            href={resolveLinkById(child?.link?.id, locale)}
+              key={child?.id}
+              href={resolveLinkById(child?.link?.id, locale)}
             >
-              <a className="text-black-light text-sm block font-normal tracking-wider md:py-1 md:text-base">{child.title}</a>
+              <a className="text-black-light text-sm block font-normal tracking-wider md:py-1 md:text-base">
+                {child.title}
+              </a>
             </Link>
           ))}
         </div>
@@ -31,7 +34,9 @@ function renderMobile(data, locale) {
       return (
         <div>
           <Link key={item.id} href={resolveLinkById(item.link?.id, locale)}>
-            <a className="md:mb-8 block md:mt-6 text-sm font-semibold uppercase md:text-xl">{item.title}</a>
+            <a className="md:mb-8 block md:mt-6 text-sm font-semibold uppercase md:text-xl">
+              {item.title}
+            </a>
           </Link>
         </div>
       );
@@ -67,9 +72,13 @@ function renderMobile(data, locale) {
               </div>
               <div className="-mr-2">
                 <Popover.Button className="rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:black">
-                  <span className="text-[12px] md:text-xs font-semibold uppercase tracking-widest text-black">Close</span>
-                  <div className="ml-2 h-6 w-6 md:h-8 md:w-8 md:ml-4 bg-close" aria-hidden="true" />
-
+                  <span className="text-[12px] md:text-xs font-semibold uppercase tracking-widest text-black">
+                    Close
+                  </span>
+                  <div
+                    className="ml-2 h-6 w-6 md:h-8 md:w-8 md:ml-4 bg-close"
+                    aria-hidden="true"
+                  />
                 </Popover.Button>
               </div>
             </div>
@@ -78,7 +87,9 @@ function renderMobile(data, locale) {
             <div className="grid grid-cols-2 gap-4">
               {data?.map((item) => renderMobileLink(item))}
             </div>
-            <div className="uppercase text-xxs tracking-widest mt-6 md:text-base">it / en</div>
+            <div className="uppercase text-xxs tracking-widest mt-6 md:text-base">
+              <LanguageSwitcher locale={locale} alts={alts} />
+            </div>
           </div>
         </div>
       </Popover.Panel>
@@ -87,7 +98,7 @@ function renderMobile(data, locale) {
 }
 
 function Header(props) {
-  const { data, locale } = props;
+  const { data, locale, alts } = props;
   function renderLink(item) {
     if (item.children && item.children.length > 0) {
       return (
@@ -174,18 +185,25 @@ function Header(props) {
           </div>
           <div className="-mr-2 -my-2 lg:hidden">
             <Popover.Button className="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:primary">
-              <span className="text-[12px] md:text-xs font-semibold uppercase tracking-widest text-black">Menu</span>
-              <div className="ml-2 h-6 w-6 md:w-8 md:ml-4 bg-open" aria-hidden="true" />
+              <span className="text-[12px] md:text-xs font-semibold uppercase tracking-widest text-black">
+                Menu
+              </span>
+              <div
+                className="ml-2 h-6 w-6 md:w-8 md:ml-4 bg-open"
+                aria-hidden="true"
+              />
             </Popover.Button>
           </div>
           <div className="hidden lg:flex-1 lg:flex lg:items-center lg:justify-end">
             <Popover.Group as="nav" className="flex space-x-10 uppercase">
               {data?.map((item) => renderLink(item))}
             </Popover.Group>
-            <div className="ml-14 font-semibold uppercase text-black-light tracking-widest text-xxs hover:text-black-light">it / en</div>
+            <div className="ml-14 font-semibold uppercase text-black-light tracking-widest text-xxs hover:text-black-light">
+              <LanguageSwitcher locale={locale} alts={alts} />
+            </div>
           </div>
         </div>
-        {renderMobile(data, locale)}
+        {renderMobile(data, locale, alts)}
       </Popover>
     </header>
   );
