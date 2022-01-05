@@ -1,7 +1,6 @@
 import { Fragment } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { Image as DatoImage } from 'react-datocms';
 
 import translate from 'lib/locales';
 import { resolveLinkById } from 'lib/utils';
@@ -89,7 +88,7 @@ export default function Footer({ locale, data }) {
                   <ul role="list" className="mt-4 space-y-2">
                     {links.map((item) => (
                       <li key={item.id}>
-                        <Link href={`/${resolveLinkById(item.id, locale)}`}>
+                        <Link href={resolveLinkById(item.id, locale)}>
                           <a
                             title={`Link to ${item.title}`}
                             className="text-black-transparent text-xxs tracking-widest hover:text-black"
@@ -154,7 +153,7 @@ export default function Footer({ locale, data }) {
           <div className="mt-8 mb-4 border-t border-gray-200 pt-8 md:border-0 md:mt-0 lg:flex lg:justify-end">
             {data.links.map((item) => (
               <div key={item.id} className="inline-block">
-                <Link href={`/${resolveLinkById(item.id, locale)}`}>
+                <Link href={resolveLinkById(item.id, locale)}>
                   <a
                     title={`Link to ${item.title}`}
                     className="lg:ml-4 mr-4 lg:mr-0 text-xs text-gray-400 xl:text-center"
