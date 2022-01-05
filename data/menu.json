@@ -122,6 +122,30 @@
   {
     "routes": [
       "contaminazioni",
+      "artisti-associati"
+    ],
+    "link": {
+      "__typename": "PageRecord",
+      "id": "89012994",
+      "slug": "artisti-associati",
+      "slugs": [
+        {
+          "locale": "en",
+          "slug": "associated-artists"
+        },
+        {
+          "locale": "it",
+          "slug": "artisti-associati"
+        }
+      ],
+      "indexType": "associated-artists",
+      "isIndex": true
+    },
+    "lang": "it"
+  },
+  {
+    "routes": [
+      "contaminazioni",
       "eventi"
     ],
     "link": {
@@ -163,30 +187,6 @@
         }
       ],
       "indexType": "projects",
-      "isIndex": true
-    },
-    "lang": "it"
-  },
-  {
-    "routes": [
-      "contaminazioni",
-      "eventi"
-    ],
-    "link": {
-      "__typename": "PageRecord",
-      "id": "89012994",
-      "slug": "artisti-associati",
-      "slugs": [
-        {
-          "locale": "en",
-          "slug": "associated-artists"
-        },
-        {
-          "locale": "it",
-          "slug": "artisti-associati"
-        }
-      ],
-      "indexType": "associated-artists",
       "isIndex": true
     },
     "lang": "it"
@@ -409,6 +409,30 @@
   {
     "routes": [
       "community",
+      "associated-artists"
+    ],
+    "link": {
+      "__typename": "PageRecord",
+      "id": "89012994",
+      "slug": "artisti-associati",
+      "slugs": [
+        {
+          "locale": "en",
+          "slug": "associated-artists"
+        },
+        {
+          "locale": "it",
+          "slug": "artisti-associati"
+        }
+      ],
+      "indexType": "associated-artists",
+      "isIndex": true
+    },
+    "lang": "en"
+  },
+  {
+    "routes": [
+      "community",
       "events"
     ],
     "link": {
@@ -450,30 +474,6 @@
         }
       ],
       "indexType": "projects",
-      "isIndex": true
-    },
-    "lang": "en"
-  },
-  {
-    "routes": [
-      "community",
-      "events"
-    ],
-    "link": {
-      "__typename": "PageRecord",
-      "id": "89012994",
-      "slug": "artisti-associati",
-      "slugs": [
-        {
-          "locale": "en",
-          "slug": "associated-artists"
-        },
-        {
-          "locale": "it",
-          "slug": "artisti-associati"
-        }
-      ],
-      "indexType": "associated-artists",
       "isIndex": true
     },
     "lang": "en"

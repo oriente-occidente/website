@@ -56,7 +56,12 @@ fragment itemFrag on MenuItemRecord {
 `;
   return doQuery(q);
 };
-const getRecords = async (name, prefixes) => {
+const getRecords = async (name, prefixes, log = false) => {
+  if (log) {
+    console.log('getRecords', name);
+    console.log('prefixes', prefixes);
+  }
+
   const records = (await allRecords(name)).map((r) => {
     const { id, slug: slugs, isIndex = false, indexType = '' } = r;
     const locales = _.keys(slugs);
@@ -77,7 +82,9 @@ const getRecords = async (name, prefixes) => {
       __typename: name,
     };
   });
-  // console.log(name, records);
+  if (log) {
+    console.log('RECORDS', JSON.stringify(records, null, 2));
+  }
   return records;
 };
 
@@ -90,10 +97,10 @@ function traverse(item, lang, parent = null) {
     routes = [...parent.routes];
   }
   routes.push(slug);
-  const current = { routes, link, lang };
 
+  const current = { routes, link, lang };
   if (item.children.length === 0) {
-    // console.log('isleaf', current.routes);
+    // console.log('isleaf', current.routes, link.slug);
     return current;
   } else {
     return item.children.map((c) => traverse(c, lang, current)).flat();
@@ -110,9 +117,15 @@ function getMenupathByLocale(menu, locale) {
   return routes;
 }
 
-function getPrefix(menu, nameToMatch) {
+function getPrefix(menu, nameToMatch, log = false) {
+  if (log) {
+    console.log('getPrefix', nameToMatch);
+  }
   const item = menu.find((r) => r.indexType === nameToMatch);
-  console.log(nameToMatch, item?.slugs);
+
+  if (log) {
+    console.log('slugs', item?.slugs);
+  }
   return item?.slugs ?? null;
 }
 
@@ -131,16 +144,17 @@ function withAlts(list) {
 
 const generateRoutes = async () => {
   const locales = (await getLocales()).site.locales;
-  console.log('locales', locales);
+  // console.log('locales', locales);
 
   const menuTree = await getData();
   const menuVoices = menuTree.menu;
+  // console.log('menuVoices', JSON.stringify(menuVoices, null, 2));
+
   const menuRoutes = locales.reduce((all, l) => {
     const menuByLocale = getMenupathByLocale(menuVoices, l);
     return [...all, ...menuByLocale];
   }, []);
 
-  // console.log(menuRoutes);
   const linkedPagesIds = menuRoutes.map((i) => i.link?.id).filter(Boolean);
   const ids = _.uniq(linkedPagesIds);
   const menuList = menuRoutes.map((route) => {

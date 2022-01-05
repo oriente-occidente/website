@@ -464,11 +464,11 @@
     "slugs": {
       "it": [
         "contaminazioni",
-        "eventi"
+        "artisti-associati"
       ],
       "en": [
         "community",
-        "events"
+        "associated-artists"
       ]
     },
     "__typename": "page",
@@ -477,25 +477,25 @@
         "locale": "it",
         "slugs": [
           "contaminazioni",
-          "eventi"
+          "artisti-associati"
         ]
       },
       {
         "locale": "en",
         "slugs": [
           "community",
-          "events"
+          "associated-artists"
         ]
       }
     ],
     "urls": [
       {
         "locale": "it",
-        "url": "contaminazioni/eventi"
+        "url": "contaminazioni/artisti-associati"
       },
       {
         "locale": "en",
-        "url": "community/events"
+        "url": "community/associated-artists"
       }
     ]
   },
@@ -642,12 +642,12 @@
     "slugs": {
       "en": [
         "community",
-        "events",
+        "associated-artists",
         "alessio-maria-romano"
       ],
       "it": [
         "contaminazioni",
-        "eventi",
+        "artisti-associati",
         "alessio-maria-romano"
       ]
     },
@@ -659,7 +659,7 @@
         "locale": "en",
         "slugs": [
           "community",
-          "events",
+          "associated-artists",
           "alessio-maria-romano"
         ]
       },
@@ -667,7 +667,7 @@
         "locale": "it",
         "slugs": [
           "contaminazioni",
-          "eventi",
+          "artisti-associati",
           "alessio-maria-romano"
         ]
       }
@@ -675,11 +675,11 @@
     "urls": [
       {
         "locale": "en",
-        "url": "community/events/alessio-maria-romano"
+        "url": "community/associated-artists/alessio-maria-romano"
       },
       {
         "locale": "it",
-        "url": "contaminazioni/eventi/alessio-maria-romano"
+        "url": "contaminazioni/artisti-associati/alessio-maria-romano"
       }
     ]
   },
