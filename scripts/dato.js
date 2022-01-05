@@ -11,6 +11,13 @@ const sleep = (delay) => {
   return new Promise((resolve) => setTimeout(resolve, delay));
 };
 
+async function getItemTypesByApiKey() {
+  return (await client.itemTypes.all()).reduce(
+    (acc, it) => ({ ...acc, [it.apiKey]: it }),
+    {}
+  );
+}
+
 //GRAPHQL
 const doQuery = async (q, v) => {
   const url = `https://graphql.datocms.com${ENV ? '/environments/' + ENV : ''}`;
@@ -267,4 +274,5 @@ module.exports = {
   createUpload,
   destroyRecord,
   doQuery,
+  getItemTypesByApiKey,
 };
