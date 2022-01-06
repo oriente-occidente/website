@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import Script from 'next/script';
 
 import { doQuery, getPaths } from 'lib/api';
 import Layout from 'components/Layout';
@@ -92,7 +92,15 @@ function Page({ data, locale }) {
 
       {isIndex && !showFilters && <ResultsGrid list={list} locale={locale} />}
       {isIndex && showFilters && <Filters list={list} locale={locale} />}
-
+      {!isIndex && (
+        <>
+          <div className="addthis_inline_share_toolbox_ipet" />
+          <Script
+            strategy="afterInteractive"
+            src={`//s7.addthis.com/js/300/addthis_widget.js#pubid=${process.env.NEXT_PUBLIC_ADDTHIS}`}
+          />
+        </>
+      )}
       {payload.relatedContents?.length > 0 && (
         <div className="mt-20">
           <GalleryPreview slides={payload.relatedContents} locale={locale} />
