@@ -31,7 +31,7 @@ const StructuredContent = ({ locale, content }) => {
             {record.externalVideo?.url ? (
               <VideoEmbedded {...record} video={record.externalVideo} />
             ) : (
-              <VideoPlayer {...record} vifeoFile={record.internalVideo} />
+              <VideoPlayer {...record} videoFile={record.internalVideo} />
             )}
           </div>
         );
