@@ -4,8 +4,8 @@ import Link from 'next/link';
 
 import BlockQuote from 'components/BlockQuote';
 import Gallery from 'components/galleries/Gallery';
-import VideoPlayer from 'components/videos/VideoPlayer';
-import VideoEmbedded from 'components/videos/VideoEmbedded';
+import VideoPlayer from 'components/video/VideoPlayer';
+import VideoEmbedded from 'components/video/VideoEmbedded';
 
 import { resolveLinkById } from 'lib/utils';
 
