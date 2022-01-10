@@ -2,7 +2,7 @@ import VideoInternal from 'components/video/VideoInternal';
 import VideoHls from 'components/video/VideoHls';
 
 export default function VideoPlayer(props) {
-  if (props.videoFile.video) {
+  if (props.videoFile?.video) {
     return (
       <VideoHls
         autoPlay={props.autoPlay ? true : false}
@@ -13,7 +13,7 @@ export default function VideoPlayer(props) {
       />
     );
   } else {
-    return <VideoInternal  {...props} />;
+    return <VideoInternal {...props} />;
   }
 }
-<source src={videoFile.url} type={videoFile.mimeType} />;
+// return <source src={props.videoFile.url} type={props.videoFile.mimeType} />;
