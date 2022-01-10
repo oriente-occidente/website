@@ -28,11 +28,14 @@ const StructuredContent = ({ locale, content }) => {
       case 'VideoBlockRecord':
         return (
           <div key={record.id}>
-            {record.externalVideo?.url ? (
-              <VideoEmbedded {...record} video={record.externalVideo} />
-            ) : (
-              <VideoPlayer {...record} videoFile={record.internalVideo} />
-            )}
+            <>
+              {record.externalVideo?.url && (
+                <VideoEmbedded {...record} video={record.externalVideo} />
+              )}
+              {record.externalVideo?.url && (
+                <VideoPlayer {...record} videoFile={record.internalVideo} />
+              )}
+            </>
           </div>
         );
       default:
