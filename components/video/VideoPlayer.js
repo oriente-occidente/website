@@ -7,12 +7,13 @@ export default function VideoPlayer(props) {
       <VideoHls
         autoPlay={props.autoPlay ? true : false}
         loop={props.loop}
-        controls={true}
-        muted={true}
+        controls={props.controls}
+        muted={props.mudeted}
         src={props.videoFile.video.streamingUrl}
       />
     );
   } else {
-    return <VideoInternal controls={true} muted={true} {...props} />;
+    return <VideoInternal  {...props} />;
   }
 }
+<source src={videoFile.url} type={videoFile.mimeType} />;

@@ -1,7 +1,7 @@
 import { useRef, useEffect, useState } from 'react';
 import ReactPlayer from 'react-player';
 
-const VideoEmbedded = ({ id, video, autoplay, loop }) => {
+const VideoEmbedded = ({ id, video, autoPlay, loop, muted, controls }) => {
   const ref = useRef();
   const [width, setWidth] = useState(null);
 
@@ -18,11 +18,11 @@ const VideoEmbedded = ({ id, video, autoplay, loop }) => {
     <div key={id}>
       {width && (
         <ReactPlayer
-          controls={true}
-          muted={true}
+          controls={controls}
+          muted={muted}
           width={width}
           height={500}
-          autoPlay={autoplay}
+          autoPlay={autoPlay}
           loop={loop}
           url={video.url}
         />

@@ -3,9 +3,9 @@ import { isBlockquote } from 'datocms-structured-text-utils';
 import Link from 'next/link';
 
 import BlockQuote from 'components/BlockQuote';
-import CodeHilight from 'components/CodeHilight';
-import Cta from 'components/Cta';
 import Gallery from 'components/galleries/Gallery';
+import VideoPlayer from 'components/videos/VideoPlayer';
+import VideoEmbedded from 'components/videos/VideoEmbedded';
 
 import { resolveLinkById } from 'lib/utils';
 
@@ -22,14 +22,17 @@ const StructuredContent = ({ locale, content }) => {
       case 'ImageBlockRecord':
         return (
           <div key={record.id}>
-            <pre>{JSON.stringify(record)}</pre>
+            <Gallery images={[record.image]} />
           </div>
         );
       case 'VideoBlockRecord':
         return (
           <div key={record.id}>
-            video
-            {/* <VideoBlock cta={record} /> */}
+            {record.externalVideo?.url ? (
+              <VideoEmbedded {...record} video={record.externalVideo} />
+            ) : (
+              <VideoPlayer {...record} vifeoFile={record.internalVideo} />
+            )}
           </div>
         );
       default:
