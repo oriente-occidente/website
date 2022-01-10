@@ -23,7 +23,7 @@ function Gallery({ slides }) {
         navigation={true}
         className="SwiperGallery"
       >
-        {slides.map((slide) => {
+        {slides?.map((slide) => {
           return (
             <SwiperSlide key={slide.id}>
               <div className="relative">

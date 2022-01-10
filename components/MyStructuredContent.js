@@ -1,5 +1,6 @@
 import { StructuredText, renderRule } from 'react-datocms';
 import { isBlockquote } from 'datocms-structured-text-utils';
+import { Image } from 'react-datocms';
 import Link from 'next/link';
 
 import BlockQuote from 'components/BlockQuote';
@@ -22,7 +23,12 @@ const StructuredContent = ({ locale, content }) => {
       case 'ImageBlockRecord':
         return (
           <div key={record.id}>
-            <Gallery images={[record.image]} />
+            <Image
+              className="max-w-[800px]"
+              data={record?.image?.responsiveImage}
+              alt={record?.image?.alt}
+              title={record?.image?.title}
+            />
           </div>
         );
       case 'VideoBlockRecord':
