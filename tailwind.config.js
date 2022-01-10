@@ -22,7 +22,7 @@ module.exports = {
       },
       fontSize: {
         xxs: ['14px', '24px'],
-        xs: ['16px', '20px'],
+        xs: ['16px', '26px'],
         sm: ['18px', '28px'],
         base: ['23px', '33px'],
         lg: ['30px', '40px'],
@@ -46,6 +46,7 @@ module.exports = {
         'arrow-left': "url('/icone/arrow_long_left.svg')",
         'arrow-left-black': "url('/icone/arrow_long_left_black.svg')",
         'arrow-small-right': "url('/icone/arrow_small_right.svg')",
+        'check': "url('/icone/check.svg')",
         open: "url('/icone/open.svg')",
         close: "url('/icone/close.svg')",
       },

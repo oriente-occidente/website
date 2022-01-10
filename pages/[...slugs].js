@@ -88,7 +88,16 @@ function Page({ data, locale }) {
         <HeroEmpty data={heroData} />
       )}
       {payload.content && (
-        <StructuredContent locale={locale} content={payload.content} />
+        // <div className="md:grid md:grid-cols-4 md:gap-4 md:container md:mx-auto">
+        //   <div className="md:bg-gray-dark px-4">
+        //     AA
+        //   </div>
+        //   <div className="md:col-span-3 md:border-l border-color-gray">
+        //     <div className="px-4 md:px-12">
+              <StructuredContent locale={locale} content={payload.content} />
+        //     </div>
+        //   </div>
+        // </div>
       )}
       {payload.sections?.map((section) => {
         const { id, title, body } = section;

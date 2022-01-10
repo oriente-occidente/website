@@ -6,22 +6,52 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
 
 @layer base {
-  /* h1 {
-    @apply text-4xl font-semibold px-2 py-3;
-  }
-  h2 {
-    @apply text-3xl font-semibold px-2 py-3;
-  }
-  h3 {
-    @apply text-2xl font-semibold px-2 py-3;
-  } */
 }
 
 @layer components {
+  .h1 {
+    @apply uppercase text-base lg:text-2xl font-semibold py-2 lg:py-4;
+  }
+  .h2 {
+    @apply text-base lg:text-xl py-2 lg:py-4;
+  }
+  .h3, .h4, .h5, .h6 {
+    @apply text-sm lg:text-base py-2 lg:py-4;
+  }
+
+  .formatted-content p {
+    @apply py-2 lg:py-4 text-xs lg:text-sm text-black-light max-w-[700px]
+  }
+
+  .formatted-content ul {
+    @apply py-2 lg:py-4
+  }
+
+  .formatted-content li {
+    @apply text-sm lg:text-base pl-6 lg:pl-8 relative ;
+    @apply before:absolute before:top-[6px] before:-left-0 before:w-[15px] lg:before:w-[20px] before:h-[15px] lg:before:h-[20px] before:bg-check
+  }
+
+  .formatted-content li p {
+    @apply py-0 text-sm lg:text-base
+  }
+
   .button--with-arrow {
     @apply
       text-black font-semibold tracking-wider flex items-center md:text-xs
       after:w-8 after:h-8 md:after:w-10 md:after:h-10 after:inline-block after:bg-arrow-right-black after:ml-2
+  }
+
+  .title{
+    @apply font-semibold uppercase text-base md:text-2xl
+  }
+
+  .title--big{
+    @apply font-semibold uppercase text-lg md:text-2xl lg:text-3xl xl:text-4xl md:text-white md:absolute md:top-1/2 z-20 md:w-1/2 md:-translate-y-2/4
+  }
+
+  .title--small {
+    @apply uppercase text-xxs md:text-sm lg:text-base md:tracking-wide;
   }
 }
 
@@ -73,18 +103,17 @@
     before:border-black
 }
 
-.title{
-  @apply font-semibold uppercase text-base md:text-2xl
+.SwiperGalleryStandard .swiper-button-prev {
+  @apply hidden
 }
 
-.title--big{
-  @apply font-semibold uppercase text-lg md:text-2xl lg:text-3xl xl:text-4xl md:text-white md:absolute md:top-1/2 z-20 md:w-1/2 md:-translate-y-2/4
+.SwiperGalleryStandard .swiper-button-next {
+  @apply after:bg-arrow-right-black right-0 left-auto top-1/2 hover:before:border-black
 }
 
-.title--small {
-  @apply uppercase text-xxs md:text-sm lg:text-base md:tracking-wide;
+.SwiperGalleryStandard {
+  @apply relative
 }
-
 
 @media (min-width: 1536px) {
   .mySwiper .swiper-button-prev {

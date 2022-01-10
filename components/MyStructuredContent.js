@@ -1,10 +1,10 @@
 import { StructuredText, renderRule } from 'react-datocms';
-import { isBlockquote } from 'datocms-structured-text-utils';
+import { isBlockquote, isHeading, isParagraph } from 'datocms-structured-text-utils';
 import { Image } from 'react-datocms';
 import Link from 'next/link';
 
 import BlockQuote from 'components/BlockQuote';
-import Gallery from 'components/galleries/Gallery';
+import GalleryStandard from 'components/galleries/GalleryStandard';
 import VideoPlayer from 'components/video/VideoPlayer';
 import VideoEmbedded from 'components/video/VideoEmbedded';
 
@@ -16,19 +16,23 @@ const StructuredContent = ({ locale, content }) => {
     switch (record.__typename) {
       case 'GalleryRecord':
         return (
-          <div key={record.id}>
-            <Gallery images={record.images} />
+          <div className="py-2 lg:py-8 2xl:py-12">
+            <div key={record.id}>
+              <GalleryStandard slides={record.images} />
+            </div>
           </div>
         );
       case 'ImageBlockRecord':
         return (
           <div key={record.id}>
-            <Image
-              className="max-w-[800px]"
-              data={record?.image?.responsiveImage}
-              alt={record?.image?.alt}
-              title={record?.image?.title}
-            />
+            <div className="py-2 lg:py-8 2xl:py-12">
+              <Image
+                className="max-w-[800px]"
+                data={record?.image?.responsiveImage}
+                alt={record?.image?.alt}
+                title={record?.image?.title}
+              />
+            </div>
           </div>
         );
       case 'VideoBlockRecord':
@@ -50,12 +54,23 @@ const StructuredContent = ({ locale, content }) => {
   };
 
   return (
-    <div>
+    <div className="formatted-content">
       <StructuredText
         data={content}
         renderInlineRecord={({ record }) => {
           console.log('inline', record.__typename);
-          return null;
+          const resolved = resolveLinkById(record.id, locale);
+          return (
+            <Link
+              href={resolved}
+              key={record.id}
+              locale={locale}
+            >
+              <a className="button--with-arrow">
+                Link
+              </a>
+            </Link>
+          );
         }}
         renderLinkToRecord={({ record, children, transformedMeta }) => {
           // console.log('link', record.__typename);
@@ -67,7 +82,9 @@ const StructuredContent = ({ locale, content }) => {
               key={record.id}
               locale={locale}
             >
-              <a>{children}</a>
+              <a className="underline">
+                {children}
+              </a>
             </Link>
           );
         }}
@@ -77,6 +94,10 @@ const StructuredContent = ({ locale, content }) => {
             const props = { node, children, key };
             return <BlockQuote {...props} />;
           }),
+          renderRule(isHeading, ({ node, children }) => {
+            const classTag = node.level;
+            return <div className={`h${classTag}`}>{children}</div>
+          })
         ]}
       />
     </div>
@@ -84,3 +105,4 @@ const StructuredContent = ({ locale, content }) => {
 };
 
 export default StructuredContent;
+
