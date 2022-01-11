@@ -71,7 +71,6 @@ function Page({ data, locale }) {
       ) : (
         <HeroEmpty data={heroData} />
       )}
-
       {payload.content && (
         <StructuredContent locale={locale} content={payload.content} />
       )}
@@ -84,7 +83,6 @@ function Page({ data, locale }) {
           </div>
         );
       })}
-
       {isIndex && !showFilters && <ResultsGrid list={list} locale={locale} />}
       {isIndex && showFilters && <Filters list={list} locale={locale} />}
       {!isIndex && (
@@ -101,14 +99,18 @@ function Page({ data, locale }) {
           <GalleryPreview slides={payload.relatedContents} locale={locale} />
         </div>
       )}
-
-      <button className="button" onClick={() => setShowDialog(true)}>
-        REGISTRATI
-      </button>
+      {paymentSettings && (
+        <>
+          <button className="button" onClick={() => setShowDialog(true)}>
+            REGISTRATI
+          </button>
+        </>
+      )}
       <Modal
         title="Contact Form"
         description="Fill the form to get in touch with us"
         open={showDialog}
+        levels={paymentSettings}
         onClose={() => setShowDialog(false)}
       >
         <EventForm />
