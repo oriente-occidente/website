@@ -5,14 +5,36 @@
     "patronage": "Con il patrocinio",
     "discoverActivities": "Scopri tutte le attività",
     "more": "Scopri",
-    "email": "Inserisci la mail"
+    "registration": "Registrazione",
+    "level": "Livello",
+    "firstName": "Nome",
+    "lastName": "Cognome",
+    "email": "Email",
+    "address": "Indirizzo",
+    "city": "Città",
+    "stateCode": "Provincia",
+    "zipCode": "CAP",
+    "phone": "Telefono",
+    "notes": "Richiesta - Note",
+    "privacyAgreement": "Dichiaro di aver preso visione dell'informativa dell' Associazione Incontri Internazionali di Rovereto per il trattamento dei dati personali."
   },
-  "en":{
+  "en": {
     "welcome": "Enter the site",
     "goodby": "Goodby",
     "patronage": "With the patronage",
     "discoverActivities": "Discover all activities",
     "more": "More",
-    "email": "insert email"
+    "registration": "Registration",
+    "level": "Level",
+    "firstName": "First Name",
+    "lastName": "Last Name",
+    "email": "Email",
+    "address": "Address",
+    "city": "City",
+    "stateCode": "State Code",
+    "zipCode": "Zip Code",
+    "phone": "Phone",
+    "notes": "Request Notes",
+    "privacyAgreement": "I acknowledge that I have read and agree the Privacy Information of Associazione Incontri Internazionali of Rovereto about the personal data treatment"
   }
 }

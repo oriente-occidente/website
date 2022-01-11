@@ -12,17 +12,7 @@ import HeroIndex from 'components/hero/HeroIndex';
 import GalleryPreview from 'components/galleries/GalleryPreview';
 import ResultsGrid from 'components/ResultsGrid';
 import Filters from 'components/Filters';
-import Tabs from 'components/Tabs';
 
-function Print({ title, data }) {
-  return (
-    <div>
-      <h1>{title}</h1>
-      {data && <pre>{JSON.stringify(data, null, 2)}</pre>}
-      <hr />
-    </div>
-  );
-}
 
 function Page({ data, locale }) {
   const { pageInfo, site, menu, footer, ...rest } = data;
