@@ -17,8 +17,8 @@ module.exports = {
         gray: {
           DEFAULT: '#E2E2E2',
           light: '#F7F7F7',
-          dark: '#332E2D'
-        }
+          dark: '#332E2D',
+        },
       },
       fontSize: {
         xxs: ['14px', '24px'],
@@ -57,7 +57,7 @@ module.exports = {
   },
   plugins: [
     // require('@tailwindcss/typography'),
-    // require('@tailwindcss/forms'),
+    require('@tailwindcss/forms'),
     function ({ addComponents }) {
       addComponents({
         '.container': {

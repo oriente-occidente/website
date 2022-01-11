@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import Script from 'next/script';
 
 import { doQuery, getPaths } from 'lib/api';
@@ -12,7 +13,8 @@ import HeroIndex from 'components/hero/HeroIndex';
 import GalleryPreview from 'components/galleries/GalleryPreview';
 import ResultsGrid from 'components/ResultsGrid';
 import Filters from 'components/Filters';
-
+import Modal from 'components/Modal';
+import EventForm from 'components/forms/EventForm';
 
 function Page({ data, locale }) {
   const { pageInfo, site, menu, footer, ...rest } = data;
@@ -52,6 +54,8 @@ function Page({ data, locale }) {
   } else {
     bgBreadcrumb = null;
   }
+
+  const [showDialog, setShowDialog] = useState(false);
 
   return (
     <Layout footer={footer} menu={menu} locale={locale} alts={pageInfo.urls}>
@@ -97,6 +101,18 @@ function Page({ data, locale }) {
           <GalleryPreview slides={payload.relatedContents} locale={locale} />
         </div>
       )}
+
+      <button className="button" onClick={() => setShowDialog(true)}>
+        REGISTRATI
+      </button>
+      <Modal
+        title="Contact Form"
+        description="Fill the form to get in touch with us"
+        open={showDialog}
+        onClose={() => setShowDialog(false)}
+      >
+        <EventForm />
+      </Modal>
     </Layout>
   );
 }
