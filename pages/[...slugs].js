@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import Script from 'next/script';
+import dayjs from 'dayjs';
 
 import { doQuery, getPaths } from 'lib/api';
 import Layout from 'components/Layout';
@@ -55,7 +56,22 @@ function Page({ data, locale }) {
     bgBreadcrumb = null;
   }
 
+  const isBookable = paymentSettings?.reduce(
+    (result, p) => result || p.bookable,
+    false
+  );
+
+  const today = dayjs(new Date());
+  const isFuture = paymentSettings?.reduce((result, p) => {
+    const start = dayjs(p.startDate);
+    return result || today.isBefore(start);
+  }, false);
+  const showBookButton = isBookable && isFuture;
   const [showDialog, setShowDialog] = useState(false);
+
+  console.log('paymentSettings', paymentSettings);
+  console.log('isBookable', isBookable);
+  console.log('isFuture', isFuture);
 
   return (
     <Layout footer={footer} menu={menu} locale={locale} alts={pageInfo.urls}>
@@ -85,6 +101,31 @@ function Page({ data, locale }) {
       })}
       {isIndex && !showFilters && <ResultsGrid list={list} locale={locale} />}
       {isIndex && showFilters && <Filters list={list} locale={locale} />}
+
+      {payload.relatedContents?.length > 0 && (
+        <div className="mt-20">
+          <GalleryPreview slides={payload.relatedContents} locale={locale} />
+        </div>
+      )}
+      {showBookButton && (
+        <>
+          <button
+            className="mx-10 my-10 w-48 bg-white text-gray-700 font-semibold hover:text-black py-2 px-4 border border-gray-700 hover:border-black"
+            onClick={() => setShowDialog(true)}
+          >
+            REGISTRATI
+          </button>
+        </>
+      )}
+      <Modal
+        title="Contact Form"
+        description="Fill the form to get in touch with us"
+        open={showDialog}
+        onClose={() => setShowDialog(false)}
+      >
+        <EventForm locale={locale} paymentSettings={paymentSettings} />
+      </Modal>
+
       {!isIndex && (
         <>
           <div className="addthis_inline_share_toolbox_ipet" />
@@ -94,27 +135,6 @@ function Page({ data, locale }) {
           />
         </>
       )}
-      {payload.relatedContents?.length > 0 && (
-        <div className="mt-20">
-          <GalleryPreview slides={payload.relatedContents} locale={locale} />
-        </div>
-      )}
-      {paymentSettings && (
-        <>
-          <button className="button" onClick={() => setShowDialog(true)}>
-            REGISTRATI
-          </button>
-        </>
-      )}
-      <Modal
-        title="Contact Form"
-        description="Fill the form to get in touch with us"
-        open={showDialog}
-        levels={paymentSettings}
-        onClose={() => setShowDialog(false)}
-      >
-        <EventForm />
-      </Modal>
     </Layout>
   );
 }

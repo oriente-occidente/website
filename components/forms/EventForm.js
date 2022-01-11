@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
@@ -11,9 +11,13 @@ import t from 'lib/locales';
 //   })
 //   .required();
 
-export default function RegistrationForm({ locale, levels }) {
+export default function RegistrationForm({ locale, paymentSettings }) {
+  const [booked, setBooked] = useState(null);
+
   const schema = yup.object().shape({
     id: yup.string(),
+    formName: yup.string(),
+    language: yup.string(),
     level: yup.string().required(),
     firstName: yup.string().required(),
     lastName: yup.string().required(),
@@ -29,8 +33,12 @@ export default function RegistrationForm({ locale, levels }) {
 
   const fields = [
     {
+      name: 'formName',
+      type: 'hidden',
+      defaultValue: 'event-registration',
+    },
+    {
       name: 'language',
-      label: 'language',
       type: 'hidden',
       defaultValue: locale,
     },
@@ -38,7 +46,9 @@ export default function RegistrationForm({ locale, levels }) {
       name: 'level',
       label: 'level',
       type: 'select',
-      options: levels,
+      options: paymentSettings.map((p) => {
+        return { label: p.description, value: p.id };
+      }),
     },
     {
       name: 'firstName',
@@ -109,18 +119,41 @@ export default function RegistrationForm({ locale, levels }) {
   };
 
   const sendToNetlify = async (data) => {
-    await fetch('/', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      body: encode({ 'form-name': 'contact', ...data }),
-    })
-      .then(() => alert('Success!'))
-      .catch((error) => alert(error));
-
-    e.preventDefault();
+    try {
+      const event = paymentSettings.find((p) => p.id === data.level);
+      const eventDescription = event.description;
+      await fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: encode({ ...data, eventDescription }),
+      });
+      setBooked(event);
+    } catch (error) {
+      console.log(error);
+    }
   };
 
-  const onSubmit = async (data) => await sendToNetlify(data);
+  const onSubmit = async (data) => {
+    console.log('DATA', data);
+    await sendToNetlify(data);
+  };
+
+  if (booked) {
+    return (
+      <div>
+        <h3 className="text-lg font-semibold">
+          Richiesta inviata corretamente
+        </h3>
+        <div>Il costo dell'evento è di {booked.amount}€</div>
+        <div>
+          Qui puoi aquistare il tuo biglietto:
+          <a href={booked.paymentLink} target="_blank" rel="noopener">
+            {booked.paymentLink}
+          </a>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
@@ -129,6 +162,7 @@ export default function RegistrationForm({ locale, levels }) {
         .map((field) => {
           return (
             <input
+              key={field.name}
               type="hidden"
               name={field.name}
               defaultValue={field.defaultValue || ''}
@@ -136,11 +170,11 @@ export default function RegistrationForm({ locale, levels }) {
             />
           );
         })}
-      <div class="grid grid-cols-1 md:grid-cols-3 xl:grid-cols-4 gap-4">
+      <div className="grid grid-cols-1 md:grid-cols-3 xl:grid-cols-4 gap-4">
         {fields
           .filter((f) => f.type !== 'hidden')
           .map((field) => {
-            const { name, label, type, options = [] } = field;
+            const { name, label, type, options } = field;
             return (
               <div key={`${name}`} className="border border-gray-100">
                 {label && !['checkbox'].includes(type) && (
@@ -156,7 +190,7 @@ export default function RegistrationForm({ locale, levels }) {
                       {...register(name)}
                     >
                       <option value="">select a value</option>
-                      {options?.map((o) => (
+                      {options.map((o) => (
                         <option value={o.value} key={o.label}>
                           {o.label}
                         </option>
