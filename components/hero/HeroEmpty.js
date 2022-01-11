@@ -1,7 +1,7 @@
 function HeroEmpty({ data }) {
   const { titleHero, descriptionHero } = data
   return (
-    <header className="py-5 border-t md:border-none border-gray">
+    <header className="py-5 border-t md:border-none border-gray overflow-hidden">
       <div className="container">
         <h1 className="title">
           {titleHero}

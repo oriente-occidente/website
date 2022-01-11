@@ -16,7 +16,7 @@ const StructuredContent = ({ locale, content }) => {
     switch (record.__typename) {
       case 'GalleryRecord':
         return (
-          <div className="py-2 lg:py-8 2xl:py-12">
+          <div className="py-2 lg:py-10 2xl:py-16">
             <div key={record.id}>
               <GalleryStandard slides={record.images} />
             </div>
@@ -25,7 +25,7 @@ const StructuredContent = ({ locale, content }) => {
       case 'ImageBlockRecord':
         return (
           <div key={record.id}>
-            <div className="py-2 lg:py-8 2xl:py-12">
+            <div className="py-2 lg:py-10 2xl:py-16">
               <Image
                 className="max-w-[800px]"
                 data={record?.image?.responsiveImage}
@@ -38,14 +38,14 @@ const StructuredContent = ({ locale, content }) => {
       case 'VideoBlockRecord':
         return (
           <div key={record.id}>
-            <>
+            <div className="py-2 lg:py-10 2xl:py-16">
               {record.externalVideo?.url && (
                 <VideoEmbedded {...record} video={record.externalVideo} />
               )}
               {record.externalVideo?.url && (
                 <VideoPlayer {...record} videoFile={record.internalVideo} />
               )}
-            </>
+            </div>
           </div>
         );
       default:
@@ -67,7 +67,7 @@ const StructuredContent = ({ locale, content }) => {
               locale={locale}
             >
               <a className="button--with-arrow">
-                Link
+                [Link]
               </a>
             </Link>
           );

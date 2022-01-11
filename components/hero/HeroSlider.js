@@ -11,7 +11,7 @@ import { Image as DatoImage } from 'react-datocms';
 function HeroSlider({ slides }) {
   SwiperCore.use([Pagination, Navigation]);
   return (
-    <header className="relative">
+    <header className="relative overflow-hidden">
       <Swiper
         modules={[Autoplay]}
         spaceBetween={0}

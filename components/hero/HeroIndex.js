@@ -7,7 +7,7 @@ function HeroIndex({ data }) {
 
   return (
     <div className="border-t md:border-none bg-gray border-gray pb-10 md:py-0">
-      <header className="relative md:grid md:grid-cols-4 md:gap-4 xl:container xl:mx-auto">
+      <header className="relative md:grid md:grid-cols-4 md:gap-4 xl:container xl:mx-auto overflow-hidden">
         <h1 className="title--big z-20 py-4 px-4 xl:pl-6">{titleHero}</h1>
         <div className="relative md:col-start-2 md:col-span-3 md:border-l md:border-color-gray">
           <div className="pl-4 md:pl-0 xl:w-[calc(100%+3rem)] 2xl:w-[calc((100vw-((100vw-1380px)/2))-333px-1rem)]">

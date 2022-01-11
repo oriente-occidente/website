@@ -1,6 +1,10 @@
 import { useState } from 'react';
 import Script from 'next/script';
+<<<<<<< HEAD
 import dayjs from 'dayjs';
+=======
+import Link from 'next/link';
+>>>>>>> Set sections and paragraph
 
 import { doQuery, getPaths } from 'lib/api';
 import Layout from 'components/Layout';
@@ -88,26 +92,43 @@ function Page({ data, locale }) {
         <HeroEmpty data={heroData} />
       )}
       {payload.content && (
-        // <div className="md:grid md:grid-cols-4 md:gap-4 md:container md:mx-auto">
-        //   <div className="md:bg-gray-dark px-4">
-        //     AA
-        //   </div>
-        //   <div className="md:col-span-3 md:border-l border-color-gray">
-        //     <div className="px-4 md:px-12">
+        <div className="md:grid md:grid-cols-4 md:gap-4 md:container md:mx-auto">
+          <div className="md:col-span-3 md:border-l md:col-start-2 border-color-gray">
+            <div className="px-4 md:px-12">
               <StructuredContent locale={locale} content={payload.content} />
-        //     </div>
-        //   </div>
-        // </div>
-      )}
-      {payload.sections?.map((section) => {
-        const { id, title, body } = section;
-        return (
-          <div key={id}>
-            <h1>{title}</h1>
-            <StructuredContent locale={locale} content={body} />
+            </div>
           </div>
-        );
-      })}
+        </div>
+      )}
+
+      {payload.sections && (
+        <div className="md:grid md:grid-cols-4 md:gap-4 md:container md:mx-auto">
+          <div className="px-4 hidden md:block">
+            <div className="sticky top-0">
+              {payload.sections.map((section) => (
+                <div key={section.id}>
+                  <Link href={`#${section.id}`}>
+                    <a className=""
+                      title={`Link to ${section.title}`}
+                    >
+                      <h2 className="uppercase text-xxs tracking-wider py-2">{section.title}</h2>
+                    </a>
+                  </Link>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <div className="md:col-span-3 md:border-l border-color-gray">
+            {payload.sections.map((section) => (
+              <div key={section.id} id={section.id} className="px-4 md:px-12">
+                <StructuredContent locale={locale} content={section.body} />
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
+
       {isIndex && !showFilters && <ResultsGrid list={list} locale={locale} />}
       {isIndex && showFilters && <Filters list={list} locale={locale} />}
 

@@ -27,7 +27,14 @@ html {
   height: 100%;
   box-sizing: border-box;
   touch-action: manipulation;
+  scroll-behavior: smooth
 }
+@media (prefers-reduced-motion) {
+  html {
+    scroll-behavior: auto
+  }
+}
+
 html,
 body {
   color: var(--text-primary);

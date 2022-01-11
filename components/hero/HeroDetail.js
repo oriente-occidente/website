@@ -15,7 +15,7 @@ function HeroDetail({ data, locale }) {
   } = data;
 
   return (
-    <header className="border-t md:border-none border-gray pb-10 md:py-0 md:grid md:grid-cols-4 md:gap-4 xl:container xl:mx-auto">
+    <header className="border-t md:border-none border-gray pb-10 md:py-0 md:grid md:grid-cols-4 md:gap-4 xl:container xl:mx-auto overflow-hidden">
       {isFestival == true ? (
         <div className="border-b border-gray py-3 md:border-none md:pt-4 xl:pt-8">
           <div className="container">
