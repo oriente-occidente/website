@@ -51,6 +51,11 @@ a {
   object-fit: cover;
 }
 
+.object-contain img {
+  object-fit: contain;
+  object-position: left;
+}
+
 .swiper-slide img {
   object-fit: cover;
 }
