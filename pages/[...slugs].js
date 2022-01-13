@@ -83,6 +83,18 @@ function Page({ data, locale }) {
   const showBookButton = isBookable && isFuture;
   const [showDialog, setShowDialog] = useState(false);
 
+  function getStructuredContent(c) {
+    return c &&
+      (c.value ||
+        (c.links && c.links.length > 0) ||
+        (c.blocks && c.links.blocks > 0))
+      ? c
+      : null;
+  }
+
+  const content = getStructuredContent(payload.content);
+  const sections = getStructuredContent(payload.sections);
+
   // console.log('paymentSettings', paymentSettings);
   // console.log('isBookable', isBookable);
   // console.log('isFuture', isFuture);
@@ -100,31 +112,31 @@ function Page({ data, locale }) {
         <HeroIndex data={heroData} />
       ) : (
         <HeroEmpty data={heroData} />
-        )}
+      )}
 
       {/* inserire controllo che non sia vuoto */}
-      {payload.content && (
+      {content && (
         <div className="md:grid md:grid-cols-4 md:gap-4 md:container md:mx-auto">
           <div className="md:col-span-3 md:border-l md:col-start-2 border-color-gray">
             <div className="px-4 md:px-12">
-              <StructuredContent locale={locale} content={payload.content} />
+              <StructuredContent locale={locale} content={content} />
             </div>
           </div>
         </div>
       )}
 
       {/* inserire controllo che non sia vuoto */}
-      {payload.sections && (
+      {sections && (
         <div className="md:grid md:grid-cols-4 md:gap-4 md:container md:mx-auto">
           <div className="px-4 hidden md:block">
             <div className="sticky top-0">
-              {payload.sections.map((section) => (
+              {sections.map((section) => (
                 <div key={section.id}>
                   <Link href={`#${section.id}`}>
-                    <a className=""
-                      title={`Link to ${section.title}`}
-                    >
-                      <h2 className="uppercase text-xxs tracking-wider py-2">{section.title}</h2>
+                    <a className="" title={`Link to ${section.title}`}>
+                      <h2 className="uppercase text-xxs tracking-wider py-2">
+                        {section.title}
+                      </h2>
                     </a>
                   </Link>
                 </div>
@@ -149,15 +161,15 @@ function Page({ data, locale }) {
               <div className="flex flex-wrap items-center	py-2 lg:py-10 2xl:py-16">
                 {payload.otherSections.map((section) => (
                   <>
-                  { section.__typename == "PartnerRecord" ? (
-                    <>
-                      <Partners locale={locale} data={section}/>
-                    </>
-                  ) : (
-                    <div className="">
-                      <Team locale={locale} data={section}/>
-                    </div>
-                  ) }
+                    {section.__typename == 'PartnerRecord' ? (
+                      <>
+                        <Partners locale={locale} data={section} />
+                      </>
+                    ) : (
+                      <div className="">
+                        <Team locale={locale} data={section} />
+                      </div>
+                    )}
                   </>
                 ))}
               </div>
