@@ -83,9 +83,9 @@ function Page({ data, locale }) {
   const showBookButton = isBookable && isFuture;
   const [showDialog, setShowDialog] = useState(false);
 
-  console.log('paymentSettings', paymentSettings);
-  console.log('isBookable', isBookable);
-  console.log('isFuture', isFuture);
+  // console.log('paymentSettings', paymentSettings);
+  // console.log('isBookable', isBookable);
+  // console.log('isFuture', isFuture);
 
   return (
     <Layout footer={footer} menu={menu} locale={locale} alts={pageInfo.urls}>
