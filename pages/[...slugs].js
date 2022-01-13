@@ -100,7 +100,9 @@ function Page({ data, locale }) {
         <HeroIndex data={heroData} />
       ) : (
         <HeroEmpty data={heroData} />
-      )}
+        )}
+
+      {/* inserire controllo che non sia vuoto */}
       {payload.content && (
         <div className="md:grid md:grid-cols-4 md:gap-4 md:container md:mx-auto">
           <div className="md:col-span-3 md:border-l md:col-start-2 border-color-gray">
@@ -111,6 +113,7 @@ function Page({ data, locale }) {
         </div>
       )}
 
+      {/* inserire controllo che non sia vuoto */}
       {payload.sections && (
         <div className="md:grid md:grid-cols-4 md:gap-4 md:container md:mx-auto">
           <div className="px-4 hidden md:block">

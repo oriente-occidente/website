@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 import { resolveLinkById } from 'lib/utils';
 
-function CardTitleIn({ locale, image, title, description, id }) {
+function CardTextArrow({ locale, image, title, description, id }) {
   return (
     <div className="pb-8 md:pb-0">
       <Link href={`/${resolveLinkById(id, locale)}`}>
@@ -23,4 +23,4 @@ function CardTitleIn({ locale, image, title, description, id }) {
   )
 }
 
-export default CardTitleIn;
+export default CardTextArrow;
