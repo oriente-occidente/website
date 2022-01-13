@@ -14,7 +14,7 @@ export default function Newsletter({ locale, data }) {
               Enter your email:{' '}
             </label>
             <input
-              className="form__input"
+              className="block w-full text-xs border-gray rounded-md px-3 py-4 border text-black-light placeholder:text-black-light"
               placeholder={`${translate('email', locale)}`}
               type="email"
               id="email"

@@ -20,7 +20,7 @@
   }
 
   .formatted-content p {
-    @apply py-2 lg:py-4 text-xs lg:text-sm text-black-light max-w-[700px]
+    @apply text-xs lg:text-sm text-black-light max-w-[700px]
   }
 
   .formatted-content ul {

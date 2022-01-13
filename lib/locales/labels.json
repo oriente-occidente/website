@@ -1,5 +1,7 @@
 {
   "it": {
+    "it": "Italiano",
+    "en": "Inglese",
     "welcome": "Entra nel sito",
     "goodby": "Addio",
     "patronage": "Con il patrocinio",
@@ -19,6 +21,8 @@
     "privacyAgreement": "Dichiaro di aver preso visione dell'informativa dell' Associazione Incontri Internazionali di Rovereto per il trattamento dei dati personali."
   },
   "en": {
+    "it": "Italian",
+    "en": "English",
     "welcome": "Enter the site",
     "goodby": "Goodby",
     "patronage": "With the patronage",

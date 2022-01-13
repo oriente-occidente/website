@@ -2,6 +2,8 @@ import { Fragment } from 'react';
 import Link from 'next/link';
 
 import config from 'data/config.json';
+import translate from 'lib/locales';
+
 
 function LanguageSwitcher({ locale, alts }) {
   const { locales } = config.site;
@@ -13,9 +15,12 @@ function LanguageSwitcher({ locale, alts }) {
           const link = alts?.find((alt) => alt.locale === l)?.url ?? '';
           return (
             <Fragment key={l}>
-              {i > 0 && <span className="text-xs text-gray-600">/</span>}
+              {i > 0 && <span className="text-xs text-gray-600 hidden lg:block">/</span>}
               <Link href={`/${link}`} locale={l}>
-                <a className={`${isActive ? 'active' : ''}`}>{l}</a>
+                <a className={`${isActive ? 'font-semibold' : ''} hidden lg:block`}>{l}</a>
+              </Link>
+              <Link href={`/${link}`} locale={l}>
+                <a className={`${isActive ? 'font-semibold' : ''} mr-6 lg:hidden`}>{translate(l, locale)}</a>
               </Link>
             </Fragment>
           );

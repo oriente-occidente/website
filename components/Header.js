@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { Fragment } from 'react';
-import { Popover, Transition } from '@headlessui/react';
+import { Popover, Transition, Disclosure } from '@headlessui/react';
 import { ChevronDownIcon } from '@heroicons/react/solid';
 
 import { resolveLinkById } from 'lib/utils';
@@ -14,27 +14,34 @@ function renderMobile(data, locale, alts) {
   function renderMobileLink(item) {
     if (item.children && item.children.length > 0) {
       return (
-        <div>
-          <div className="text-sm font-semibold uppercase md:text-xl md:mb-4 md:mt-6">
-            {item.title.toUpperCase()}
-          </div>
-          {item.children?.map((child) => (
-            <Link
-              key={child?.id}
-              href={resolveLinkById(child?.link?.id, locale)}
-            >
-              <a className="text-black-light text-sm block font-normal tracking-wider md:py-1 md:text-base">
-                {child.title}
-              </a>
-            </Link>
-          ))}
-        </div>
+        <Disclosure>
+          {({ open }) => (
+            <>
+              <Disclosure.Button className="text-left flex items-center justify-between text-sm font-semibold uppercase md:text-xl">
+                {item.title.toUpperCase()}
+                <div className={`${open ? "" : "rotate-180"} w-4 h-4 md:w-8 md:h-8  bg-arrow-small-down ease-in duration-300`}/>
+              </Disclosure.Button>
+              <Disclosure.Panel>
+                {item.children?.map((child) => (
+                  <Link
+                    key={child?.id}
+                    href={resolveLinkById(child?.link?.id, locale)}
+                  >
+                    <a className="text-black-light text-sm block font-normal tracking-wider md:py-1 md:text-base">
+                      {child.title}
+                    </a>
+                  </Link>
+                ))}
+              </Disclosure.Panel>
+            </>
+          )}
+        </Disclosure>
       );
     } else {
       return (
         <div>
           <Link key={item.id} href={resolveLinkById(item.link?.id, locale)}>
-            <a className="md:mb-8 block md:mt-6 text-sm font-semibold uppercase md:text-xl">
+            <a className="block text-sm font-semibold uppercase md:text-xl">
               {item.title}
             </a>
           </Link>
@@ -84,12 +91,12 @@ function renderMobile(data, locale, alts) {
             </div>
           </div>
           <div className="py-6 px-5">
-            <div className="grid grid-cols-2 gap-4">
+            <div className="grid gap-4 md:gap-8">
               {data?.map((item) => (
                 <Fragment key={item.id}>{renderMobileLink(item)}</Fragment>
               ))}
             </div>
-            <div className="uppercase text-xxs tracking-widest mt-6 md:text-base">
+            <div className="uppercase text-xxs tracking-widest mt-16 md:mt-28 pt-4 md:pt-10 border-t border-black md:text-base">
               <LanguageSwitcher locale={locale} alts={alts} />
             </div>
           </div>
@@ -202,7 +209,7 @@ function Header(props) {
                 <Fragment key={item.id}>{renderLink(item)}</Fragment>
               ))}
             </Popover.Group>
-            <div className="ml-14 font-semibold uppercase text-black-light tracking-widest text-xxs hover:text-black-light">
+            <div className="ml-14 font-semibold uppercase lg:flex text-black-light tracking-widest text-xxs hover:text-black-light">
               <LanguageSwitcher locale={locale} alts={alts} />
             </div>
           </div>

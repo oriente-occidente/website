@@ -94,6 +94,7 @@ function Page({ data, locale }) {
 
   const content = getStructuredContent(payload.content);
   const sections = getStructuredContent(payload.sections);
+  const otherSections = getStructuredContent(payload.otherSections);
 
   // console.log('paymentSettings', paymentSettings);
   // console.log('isBookable', isBookable);
@@ -106,15 +107,15 @@ function Page({ data, locale }) {
         alt={pageInfo.urls}
       />
       <Breadcrumbs background={bgBreadcrumb} />
-      {heroData.layoutHero == 'detail' ? (
+      {console.log('data.imageHero.lenght:', data.imageHero)}
+      {heroData.layoutHero == 'detail' && data.imageHero ? (
         <HeroDetail data={heroData} />
-      ) : heroData.layoutHero == 'index' ? (
+      ) : heroData.layoutHero == 'index' && data.imageHero ? (
         <HeroIndex data={heroData} />
       ) : (
         <HeroEmpty data={heroData} />
       )}
 
-      {/* inserire controllo che non sia vuoto */}
       {content && (
         <div className="md:grid md:grid-cols-4 md:gap-4 md:container md:mx-auto">
           <div className="md:col-span-3 md:border-l md:col-start-2 border-color-gray">
@@ -125,7 +126,6 @@ function Page({ data, locale }) {
         </div>
       )}
 
-      {/* inserire controllo che non sia vuoto */}
       {sections && (
         <div className="md:grid md:grid-cols-4 md:gap-4 md:container md:mx-auto">
           <div className="px-4 hidden md:block">
@@ -154,12 +154,12 @@ function Page({ data, locale }) {
         </div>
       )}
 
-      {payload.otherSections && (
+      {otherSections && (
         <div className="md:grid md:grid-cols-4 md:gap-4 md:container md:mx-auto">
           <div className="md:col-span-3 md:border-l md:col-start-2 border-color-gray">
             <div className="px-4 md:px-12">
               <div className="flex flex-wrap items-center	py-2 lg:py-10 2xl:py-16">
-                {payload.otherSections.map((section) => (
+                {otherSections.map((section) => (
                   <>
                     {section.__typename == 'PartnerRecord' ? (
                       <>
@@ -187,14 +187,14 @@ function Page({ data, locale }) {
         </div>
       )}
       {showBookButton && (
-        <>
+        <div className="container">
           <button
-            className="mx-10 my-10 w-48 bg-white text-gray-700 font-semibold hover:text-black py-2 px-4 border border-gray-700 hover:border-black"
+            className="w-48 bg-white text-gray-700 font-semibold hover:text-black py-2 px-4 border border-gray-700 hover:border-black"
             onClick={() => setShowDialog(true)}
           >
             REGISTRATI
           </button>
-        </>
+        </div>
       )}
       <Modal
         title="Contact Form"
