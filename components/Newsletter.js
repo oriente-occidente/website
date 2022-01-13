@@ -1,12 +1,14 @@
 import translate from 'lib/locales';
 
-export default function Newsletter({ locale }) {
+export default function Newsletter({ locale, data }) {
   return (
     <div className="bg-gray-light py-8 md:py-12">
       <div className="container lg:max-w-screen-lg xl:max-w-screen-xl lg:px-10">
         <h2 className="title--small">Newsletter</h2>
         <div className="lg:grid lg:grid-cols-2 lg:gap-4">
-          <div className="mt-4 mb-6 text-xs">[placeholder]</div>
+          <div className="mt-4 mb-6 text-xs">
+            {data.newsletterSubscriptionMessage}
+          </div>
           <div className="relative">
             <label className="sr-only" htmlFor="email">
               Enter your email:{' '}

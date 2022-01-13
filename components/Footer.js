@@ -4,6 +4,7 @@ import Image from 'next/image';
 
 import translate from 'lib/locales';
 import { resolveLinkById } from 'lib/utils';
+import Newsletter from './Newsletter';
 
 const navigation = {
   legal: [
@@ -19,6 +20,8 @@ const navigation = {
 
 export default function Footer({ locale, data }) {
   return (
+    <>
+    <Newsletter locale={locale} data={data} />
     <footer className="bg-white container" aria-labelledby="footer-heading">
       <h2 id="footer-heading" className="sr-only">
         Footer
@@ -165,5 +168,6 @@ export default function Footer({ locale, data }) {
         </div>
       </div>
     </footer>
+    </>
   );
 }
