@@ -156,7 +156,7 @@ export default function RegistrationForm({ locale, paymentSettings }) {
   }
 
   return (
-    <form onSubmit={handleSubmit(onSubmit) netlify}>
+    <form onSubmit={handleSubmit(onSubmit)}>
       {fields
         .filter((f) => f.type === 'hidden')
         .map((field) => {
