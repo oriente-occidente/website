@@ -38,6 +38,11 @@ export default function RegistrationForm({ locale, paymentSettings }) {
       defaultValue: 'event-registration',
     },
     {
+      name: 'data-netlify',
+      type: 'hidden',
+      defaultValue: 'true',
+    },
+    {
       name: 'language',
       type: 'hidden',
       defaultValue: locale,
@@ -156,7 +161,11 @@ export default function RegistrationForm({ locale, paymentSettings }) {
   }
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)}>
+    <form
+      onSubmit={handleSubmit(onSubmit)}
+      name="contact-form"
+      data-netlify="true"
+    >
       {fields
         .filter((f) => f.type === 'hidden')
         .map((field) => {
