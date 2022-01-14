@@ -123,3 +123,18 @@
     left: calc(((100vw - 1380px) / 2) + 60px )
   }
 }
+
+@media (max-width: 1023px) {
+  .custom-nth-child:nth-child(even) {
+    margin-left: 2%
+  }
+}
+
+@media (min-width: 1024px) {
+  .custom-nth-child {
+    margin-left: 2%
+  }
+  .custom-nth-child:nth-child(3n+1) {
+    margin-left: 0
+  }
+}

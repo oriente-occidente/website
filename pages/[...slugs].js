@@ -94,7 +94,7 @@ function Page({ data, locale }) {
 
   const content = getStructuredContent(payload.content);
   const sections = getStructuredContent(payload.sections);
-  const otherSections = getStructuredContent(payload.otherSections);
+  const otherSections = payload.otherSections;
 
   // console.log('paymentSettings', paymentSettings);
   // console.log('isBookable', isBookable);
@@ -107,10 +107,9 @@ function Page({ data, locale }) {
         alt={pageInfo.urls}
       />
       <Breadcrumbs background={bgBreadcrumb} />
-      {console.log('data.imageHero.lenght:', data.imageHero)}
-      {heroData.layoutHero == 'detail' && data.imageHero ? (
+      {heroData.layoutHero == 'detail' && data.page.imageHero ? (
         <HeroDetail data={heroData} />
-      ) : heroData.layoutHero == 'index' && data.imageHero ? (
+      ) : heroData.layoutHero == 'index' && data.page.imageHero ? (
         <HeroIndex data={heroData} />
       ) : (
         <HeroEmpty data={heroData} />
@@ -166,9 +165,9 @@ function Page({ data, locale }) {
                         <Partners locale={locale} data={section} />
                       </>
                     ) : (
-                      <div className="">
+                      <>
                         <Team locale={locale} data={section} />
-                      </div>
+                      </>
                     )}
                   </>
                 ))}
