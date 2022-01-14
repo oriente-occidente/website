@@ -21,16 +21,6 @@ import Tabs from 'components/Tabs';
 import Partners from 'components/Partners';
 import Team from 'components/Team';
 
-function Print({ title, data }) {
-  return (
-    <div>
-      <h1>{title}</h1>
-      {data && <pre>{JSON.stringify(data, null, 2)}</pre>}
-      <hr />
-    </div>
-  );
-}
-
 function Page({ data, locale }) {
   const { pageInfo, site, menu, footer, ...rest } = data;
 
@@ -107,9 +97,9 @@ function Page({ data, locale }) {
         alt={pageInfo.urls}
       />
       <Breadcrumbs background={bgBreadcrumb} />
-      {heroData.layoutHero == 'detail' && data.page.imageHero ? (
+      {heroData.layoutHero == 'detail' && data.imageHero ? (
         <HeroDetail data={heroData} />
-      ) : heroData.layoutHero == 'index' && data.page.imageHero ? (
+      ) : heroData.layoutHero == 'index' && data.imageHero ? (
         <HeroIndex data={heroData} />
       ) : (
         <HeroEmpty data={heroData} />
