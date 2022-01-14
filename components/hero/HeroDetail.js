@@ -34,8 +34,8 @@ function HeroDetail({ data, locale }) {
           </div>
         </div>
       ) : null}
-      <div className="relative md:col-span-3 md:border-l md:border-color-gray xl:pt-4">
-        <div className="px-4 md:px-12">
+      <div className="relative md:col-span-3 md:border-l md:border-color-gray xl:pt-4 md:col-start-2">
+        <div className="px-4 md:px-12 md:pt-2">
           <h1 className="text-base uppercase pt-4 pb-1">{titleHero}</h1>
           <h2 className="text-base uppercase font-semibold">
             {descriptionHero}
@@ -58,7 +58,7 @@ function HeroDetail({ data, locale }) {
             ))}
           </>
         ) : null}
-        <div className="mt-6 md:mt-8 lg:mt-2 pl-4 md:pl-0 xl:w-[calc(100%+3rem)] 2xl:w-[calc((100vw-((100vw-1380px)/2))-333px-1rem)]">
+        <div className="mt-6 md:mt-8 pl-4 md:pl-0 xl:w-[calc(100%+3rem)] 2xl:w-[calc((100vw-((100vw-1380px)/2))-333px-1rem)]">
           {slideshowHero != '' ? (
             <Gallery slides={slideshowHero} />
           ) : imageHero ? (
