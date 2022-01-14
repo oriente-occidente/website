@@ -17,7 +17,6 @@ import ResultsGrid from 'components/ResultsGrid';
 import Filters from 'components/Filters';
 import Modal from 'components/Modal';
 import EventForm from 'components/forms/EventForm';
-import Tabs from 'components/Tabs';
 import Partners from 'components/Partners';
 import Team from 'components/Team';
 
@@ -97,9 +96,9 @@ function Page({ data, locale }) {
         alt={pageInfo.urls}
       />
       <Breadcrumbs background={bgBreadcrumb} />
-      {heroData.layoutHero == 'detail' && data.imageHero ? (
+      {heroData.layoutHero == 'detail' && imageHero ? (
         <HeroDetail data={heroData} />
-      ) : heroData.layoutHero == 'index' && data.imageHero ? (
+      ) : heroData.layoutHero == 'index' && imageHero ? (
         <HeroIndex data={heroData} />
       ) : (
         <HeroEmpty data={heroData} />
