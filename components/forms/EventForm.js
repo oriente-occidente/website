@@ -33,7 +33,7 @@ export default function RegistrationForm({ locale, paymentSettings }) {
 
   const fields = [
     {
-      name: 'formName',
+      name: 'form-name',
       type: 'hidden',
       defaultValue: 'event-registration',
     },
@@ -156,7 +156,7 @@ export default function RegistrationForm({ locale, paymentSettings }) {
   }
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)}>
+    <form onSubmit={handleSubmit(onSubmit) netlify}>
       {fields
         .filter((f) => f.type === 'hidden')
         .map((field) => {
