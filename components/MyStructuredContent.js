@@ -67,7 +67,7 @@ const StructuredContent = ({ locale, content }) => {
               locale={locale}
             >
               <a className="button--with-arrow">
-                [Link]
+                {record.title}
               </a>
             </Link>
           );
