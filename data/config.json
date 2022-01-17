@@ -179,6 +179,38 @@
         "indexType": "news-index",
         "isIndex": true
       }
+    },
+    {
+      "parent": null,
+      "id": "97416765",
+      "titles": [
+        {
+          "locale": "en",
+          "title": "Support Us"
+        },
+        {
+          "locale": "it",
+          "title": "Sostienici"
+        }
+      ],
+      "slugs": [
+        {
+          "locale": "en",
+          "slug": "support-us"
+        },
+        {
+          "locale": "it",
+          "slug": "sostienici"
+        }
+      ],
+      "link": {
+        "__typename": "PageRecord",
+        "id": "97420129",
+        "slug": "sostienici",
+        "title": "Sostienici",
+        "indexType": "",
+        "isIndex": false
+      }
     }
   ],
   "footer": {

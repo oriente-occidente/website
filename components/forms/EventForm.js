@@ -152,9 +152,10 @@ export default function RegistrationForm({ locale, paymentSettings }) {
     },
   });
   const onSubmit = (data) => {
-    const event = paymentSettings.find((p) => p.id === data.level);
-    const eventDescription = event.description;
-    setBooked(event);
+    console.log('DATA', data);
+    // const event = paymentSettings.find((p) => p.id === data.level);
+    // const eventDescription = event.description;
+    // setBooked(event);
     netlify.handleSubmit(null, { ...data, eventDescription });
   };
 

@@ -288,6 +288,29 @@
   },
   {
     "routes": [
+      "sostienici"
+    ],
+    "link": {
+      "__typename": "PageRecord",
+      "id": "97420129",
+      "slug": "sostienici",
+      "slugs": [
+        {
+          "locale": "en",
+          "slug": "support-us"
+        },
+        {
+          "locale": "it",
+          "slug": "sostienici"
+        }
+      ],
+      "indexType": "",
+      "isIndex": false
+    },
+    "lang": "it"
+  },
+  {
+    "routes": [
       "festival",
       "program"
     ],
@@ -570,6 +593,29 @@
       ],
       "indexType": "news-index",
       "isIndex": true
+    },
+    "lang": "en"
+  },
+  {
+    "routes": [
+      "support-us"
+    ],
+    "link": {
+      "__typename": "PageRecord",
+      "id": "97420129",
+      "slug": "sostienici",
+      "slugs": [
+        {
+          "locale": "en",
+          "slug": "support-us"
+        },
+        {
+          "locale": "it",
+          "slug": "sostienici"
+        }
+      ],
+      "indexType": "",
+      "isIndex": false
     },
     "lang": "en"
   }

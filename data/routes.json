@@ -500,6 +500,44 @@
     ]
   },
   {
+    "id": "97420129",
+    "isIndex": false,
+    "indexType": "",
+    "slugs": {
+      "it": [
+        "sostienici"
+      ],
+      "en": [
+        "support-us"
+      ]
+    },
+    "__typename": "page",
+    "paths": [
+      {
+        "locale": "it",
+        "slugs": [
+          "sostienici"
+        ]
+      },
+      {
+        "locale": "en",
+        "slugs": [
+          "support-us"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "it",
+        "url": "sostienici"
+      },
+      {
+        "locale": "en",
+        "url": "support-us"
+      }
+    ]
+  },
+  {
     "id": "94866658",
     "slugs": {},
     "isIndex": false,
@@ -509,17 +547,17 @@
     "urls": []
   },
   {
-    "id": "96799799",
+    "id": "96793655",
     "slugs": {
       "en": [
         "community",
         "events",
-        "pierre-jourde-jessica-bruder-mathijs-deen-and-judith-schalansky"
+        "le-migrazioni-ambientali-d-europa"
       ],
       "it": [
         "contaminazioni",
         "eventi",
-        "pierre-jourde-jessica-bruder-mathijs-deen-and-judith-schalansky"
+        "le-migrazioni-ambientali-d-europa"
       ]
     },
     "isIndex": false,
@@ -531,7 +569,7 @@
         "slugs": [
           "community",
           "events",
-          "pierre-jourde-jessica-bruder-mathijs-deen-and-judith-schalansky"
+          "le-migrazioni-ambientali-d-europa"
         ]
       },
       {
@@ -539,18 +577,1076 @@
         "slugs": [
           "contaminazioni",
           "eventi",
-          "pierre-jourde-jessica-bruder-mathijs-deen-and-judith-schalansky"
+          "le-migrazioni-ambientali-d-europa"
         ]
       }
     ],
     "urls": [
       {
         "locale": "en",
-        "url": "community/events/pierre-jourde-jessica-bruder-mathijs-deen-and-judith-schalansky"
+        "url": "community/events/le-migrazioni-ambientali-d-europa"
       },
       {
         "locale": "it",
-        "url": "contaminazioni/eventi/pierre-jourde-jessica-bruder-mathijs-deen-and-judith-schalansky"
+        "url": "contaminazioni/eventi/le-migrazioni-ambientali-d-europa"
+      }
+    ]
+  },
+  {
+    "id": "96738655",
+    "slugs": {
+      "en": [
+        "community",
+        "events",
+        "political-mother-unplugged"
+      ],
+      "it": [
+        "contaminazioni",
+        "eventi",
+        "political-mother-unplugged"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "event",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "community",
+          "events",
+          "political-mother-unplugged"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "contaminazioni",
+          "eventi",
+          "political-mother-unplugged"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "community/events/political-mother-unplugged"
+      },
+      {
+        "locale": "it",
+        "url": "contaminazioni/eventi/political-mother-unplugged"
+      }
+    ]
+  },
+  {
+    "id": "96253300",
+    "slugs": {
+      "en": [
+        "community",
+        "events",
+        "cunningham-centennial-solos-oriente-occidente-dance-festival-site-specific"
+      ],
+      "it": [
+        "contaminazioni",
+        "eventi",
+        "cunningham-centennial-solos-oriente-occidente-dance-festival-site-specific"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "event",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "community",
+          "events",
+          "cunningham-centennial-solos-oriente-occidente-dance-festival-site-specific"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "contaminazioni",
+          "eventi",
+          "cunningham-centennial-solos-oriente-occidente-dance-festival-site-specific"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "community/events/cunningham-centennial-solos-oriente-occidente-dance-festival-site-specific"
+      },
+      {
+        "locale": "it",
+        "url": "contaminazioni/eventi/cunningham-centennial-solos-oriente-occidente-dance-festival-site-specific"
+      }
+    ]
+  },
+  {
+    "id": "96571816",
+    "slugs": {
+      "en": [
+        "community",
+        "events",
+        "i-miei-fragili-amici"
+      ],
+      "it": [
+        "contaminazioni",
+        "eventi",
+        "i-miei-fragili-amici"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "event",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "community",
+          "events",
+          "i-miei-fragili-amici"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "contaminazioni",
+          "eventi",
+          "i-miei-fragili-amici"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "community/events/i-miei-fragili-amici"
+      },
+      {
+        "locale": "it",
+        "url": "contaminazioni/eventi/i-miei-fragili-amici"
+      }
+    ]
+  },
+  {
+    "id": "96572914",
+    "slugs": {
+      "en": [
+        "community",
+        "events",
+        "l-europa-della-pandemia-quale-equilibrio-quale-futuro"
+      ],
+      "it": [
+        "contaminazioni",
+        "eventi",
+        "l-europa-della-pandemia-quale-equilibrio-quale-futuro"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "event",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "community",
+          "events",
+          "l-europa-della-pandemia-quale-equilibrio-quale-futuro"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "contaminazioni",
+          "eventi",
+          "l-europa-della-pandemia-quale-equilibrio-quale-futuro"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "community/events/l-europa-della-pandemia-quale-equilibrio-quale-futuro"
+      },
+      {
+        "locale": "it",
+        "url": "contaminazioni/eventi/l-europa-della-pandemia-quale-equilibrio-quale-futuro"
+      }
+    ]
+  },
+  {
+    "id": "96573178",
+    "slugs": {
+      "en": [
+        "community",
+        "events",
+        "hyenas-forme-di-minotauri-contemporanei"
+      ],
+      "it": [
+        "contaminazioni",
+        "eventi",
+        "hyenas-forme-di-minotauri-contemporanei"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "event",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "community",
+          "events",
+          "hyenas-forme-di-minotauri-contemporanei"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "contaminazioni",
+          "eventi",
+          "hyenas-forme-di-minotauri-contemporanei"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "community/events/hyenas-forme-di-minotauri-contemporanei"
+      },
+      {
+        "locale": "it",
+        "url": "contaminazioni/eventi/hyenas-forme-di-minotauri-contemporanei"
+      }
+    ]
+  },
+  {
+    "id": "96289056",
+    "slugs": {
+      "en": [
+        "community",
+        "events",
+        "over-the-rainbow"
+      ],
+      "it": [
+        "contaminazioni",
+        "eventi",
+        "over-the-rainbow"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "event",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "community",
+          "events",
+          "over-the-rainbow"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "contaminazioni",
+          "eventi",
+          "over-the-rainbow"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "community/events/over-the-rainbow"
+      },
+      {
+        "locale": "it",
+        "url": "contaminazioni/eventi/over-the-rainbow"
+      }
+    ]
+  },
+  {
+    "id": "96567293",
+    "slugs": {
+      "en": [
+        "community",
+        "events",
+        "fascism-in-the-family"
+      ],
+      "it": [
+        "contaminazioni",
+        "eventi",
+        "fascism-in-the-family"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "event",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "community",
+          "events",
+          "fascism-in-the-family"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "contaminazioni",
+          "eventi",
+          "fascism-in-the-family"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "community/events/fascism-in-the-family"
+      },
+      {
+        "locale": "it",
+        "url": "contaminazioni/eventi/fascism-in-the-family"
+      }
+    ]
+  },
+  {
+    "id": "96548073",
+    "slugs": {
+      "en": [
+        "community",
+        "events",
+        "osa"
+      ],
+      "it": [
+        "contaminazioni",
+        "eventi",
+        "osa"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "event",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "community",
+          "events",
+          "osa"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "contaminazioni",
+          "eventi",
+          "osa"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "community/events/osa"
+      },
+      {
+        "locale": "it",
+        "url": "contaminazioni/eventi/osa"
+      }
+    ]
+  },
+  {
+    "id": "96315994",
+    "slugs": {
+      "en": [
+        "community",
+        "events",
+        "cunningham-centennial-solos-oriente-occidente-dance-festival"
+      ],
+      "it": [
+        "contaminazioni",
+        "eventi",
+        "cunningham-centennial-solos-oriente-occidente-dance-festival"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "event",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "community",
+          "events",
+          "cunningham-centennial-solos-oriente-occidente-dance-festival"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "contaminazioni",
+          "eventi",
+          "cunningham-centennial-solos-oriente-occidente-dance-festival"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "community/events/cunningham-centennial-solos-oriente-occidente-dance-festival"
+      },
+      {
+        "locale": "it",
+        "url": "contaminazioni/eventi/cunningham-centennial-solos-oriente-occidente-dance-festival"
+      }
+    ]
+  },
+  {
+    "id": "96292089",
+    "slugs": {
+      "en": [
+        "community",
+        "events",
+        "the-queen"
+      ],
+      "it": [
+        "contaminazioni",
+        "eventi",
+        "the-queen"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "event",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "community",
+          "events",
+          "the-queen"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "contaminazioni",
+          "eventi",
+          "the-queen"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "community/events/the-queen"
+      },
+      {
+        "locale": "it",
+        "url": "contaminazioni/eventi/the-queen"
+      }
+    ]
+  },
+  {
+    "id": "96290928",
+    "slugs": {
+      "en": [
+        "community",
+        "events",
+        "paso-doble"
+      ],
+      "it": [
+        "contaminazioni",
+        "eventi",
+        "paso-doble"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "event",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "community",
+          "events",
+          "paso-doble"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "contaminazioni",
+          "eventi",
+          "paso-doble"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "community/events/paso-doble"
+      },
+      {
+        "locale": "it",
+        "url": "contaminazioni/eventi/paso-doble"
+      }
+    ]
+  },
+  {
+    "id": "96290600",
+    "slugs": {
+      "en": [
+        "community",
+        "events",
+        "sognare-la-terra"
+      ],
+      "it": [
+        "contaminazioni",
+        "eventi",
+        "sognare-la-terra"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "event",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "community",
+          "events",
+          "sognare-la-terra"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "contaminazioni",
+          "eventi",
+          "sognare-la-terra"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "community/events/sognare-la-terra"
+      },
+      {
+        "locale": "it",
+        "url": "contaminazioni/eventi/sognare-la-terra"
+      }
+    ]
+  },
+  {
+    "id": "96290473",
+    "slugs": {
+      "en": [
+        "community",
+        "events",
+        "plonter"
+      ],
+      "it": [
+        "contaminazioni",
+        "eventi",
+        "plonter"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "event",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "community",
+          "events",
+          "plonter"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "contaminazioni",
+          "eventi",
+          "plonter"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "community/events/plonter"
+      },
+      {
+        "locale": "it",
+        "url": "contaminazioni/eventi/plonter"
+      }
+    ]
+  },
+  {
+    "id": "96271432",
+    "slugs": {
+      "en": [
+        "community",
+        "events",
+        "c-est-pas-grave"
+      ],
+      "it": [
+        "contaminazioni",
+        "eventi",
+        "c-est-pas-grave"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "event",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "community",
+          "events",
+          "c-est-pas-grave"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "contaminazioni",
+          "eventi",
+          "c-est-pas-grave"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "community/events/c-est-pas-grave"
+      },
+      {
+        "locale": "it",
+        "url": "contaminazioni/eventi/c-est-pas-grave"
+      }
+    ]
+  },
+  {
+    "id": "96253900",
+    "slugs": {
+      "en": [
+        "community",
+        "events",
+        "il-mondo-virato-come-non-cambia-la-competizione-geopolitica"
+      ],
+      "it": [
+        "contaminazioni",
+        "eventi",
+        "il-mondo-virato-come-non-cambia-la-competizione-geopolitica"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "event",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "community",
+          "events",
+          "il-mondo-virato-come-non-cambia-la-competizione-geopolitica"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "contaminazioni",
+          "eventi",
+          "il-mondo-virato-come-non-cambia-la-competizione-geopolitica"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "community/events/il-mondo-virato-come-non-cambia-la-competizione-geopolitica"
+      },
+      {
+        "locale": "it",
+        "url": "contaminazioni/eventi/il-mondo-virato-come-non-cambia-la-competizione-geopolitica"
+      }
+    ]
+  },
+  {
+    "id": "96239493",
+    "slugs": {
+      "en": [
+        "community",
+        "events",
+        "serenade-you"
+      ],
+      "it": [
+        "contaminazioni",
+        "eventi",
+        "serenade-you"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "event",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "community",
+          "events",
+          "serenade-you"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "contaminazioni",
+          "eventi",
+          "serenade-you"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "community/events/serenade-you"
+      },
+      {
+        "locale": "it",
+        "url": "contaminazioni/eventi/serenade-you"
+      }
+    ]
+  },
+  {
+    "id": "96102059",
+    "slugs": {
+      "en": [
+        "community",
+        "events",
+        "the-mountain-the-truth-e-the-paradise"
+      ],
+      "it": [
+        "contaminazioni",
+        "eventi",
+        "the-mountain-the-truth-e-the-paradise"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "event",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "community",
+          "events",
+          "the-mountain-the-truth-e-the-paradise"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "contaminazioni",
+          "eventi",
+          "the-mountain-the-truth-e-the-paradise"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "community/events/the-mountain-the-truth-e-the-paradise"
+      },
+      {
+        "locale": "it",
+        "url": "contaminazioni/eventi/the-mountain-the-truth-e-the-paradise"
+      }
+    ]
+  },
+  {
+    "id": "96101947",
+    "slugs": {
+      "en": [
+        "community",
+        "events",
+        "le-europe-del-virus"
+      ],
+      "it": [
+        "contaminazioni",
+        "eventi",
+        "le-europe-del-virus"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "event",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "community",
+          "events",
+          "le-europe-del-virus"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "contaminazioni",
+          "eventi",
+          "le-europe-del-virus"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "community/events/le-europe-del-virus"
+      },
+      {
+        "locale": "it",
+        "url": "contaminazioni/eventi/le-europe-del-virus"
+      }
+    ]
+  },
+  {
+    "id": "96102035",
+    "slugs": {
+      "en": [
+        "community",
+        "events",
+        "pastorale"
+      ],
+      "it": [
+        "contaminazioni",
+        "eventi",
+        "pastorale"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "event",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "community",
+          "events",
+          "pastorale"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "contaminazioni",
+          "eventi",
+          "pastorale"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "community/events/pastorale"
+      },
+      {
+        "locale": "it",
+        "url": "contaminazioni/eventi/pastorale"
+      }
+    ]
+  },
+  {
+    "id": "96101925",
+    "slugs": {
+      "en": [
+        "community",
+        "events",
+        "keep-in-touch"
+      ],
+      "it": [
+        "contaminazioni",
+        "eventi",
+        "keep-in-touch"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "event",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "community",
+          "events",
+          "keep-in-touch"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "contaminazioni",
+          "eventi",
+          "keep-in-touch"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "community/events/keep-in-touch"
+      },
+      {
+        "locale": "it",
+        "url": "contaminazioni/eventi/keep-in-touch"
+      }
+    ]
+  },
+  {
+    "id": "96101891",
+    "slugs": {
+      "en": [
+        "community",
+        "events",
+        "making-an-entrance"
+      ],
+      "it": [
+        "contaminazioni",
+        "eventi",
+        "making-an-entrance"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "event",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "community",
+          "events",
+          "making-an-entrance"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "contaminazioni",
+          "eventi",
+          "making-an-entrance"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "community/events/making-an-entrance"
+      },
+      {
+        "locale": "it",
+        "url": "contaminazioni/eventi/making-an-entrance"
+      }
+    ]
+  },
+  {
+    "id": "96086741",
+    "slugs": {
+      "en": [
+        "community",
+        "events",
+        "giorgio-cuscito"
+      ],
+      "it": [
+        "contaminazioni",
+        "eventi",
+        "giorgio-cuscito"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "event",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "community",
+          "events",
+          "giorgio-cuscito"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "contaminazioni",
+          "eventi",
+          "giorgio-cuscito"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "community/events/giorgio-cuscito"
+      },
+      {
+        "locale": "it",
+        "url": "contaminazioni/eventi/giorgio-cuscito"
+      }
+    ]
+  },
+  {
+    "id": "89224754",
+    "slugs": {
+      "en": [
+        "community",
+        "events",
+        "festival-event"
+      ],
+      "it": [
+        "contaminazioni",
+        "eventi",
+        "evento-di-prova"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "event",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "community",
+          "events",
+          "festival-event"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "contaminazioni",
+          "eventi",
+          "evento-di-prova"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "community/events/festival-event"
+      },
+      {
+        "locale": "it",
+        "url": "contaminazioni/eventi/evento-di-prova"
       }
     ]
   },
@@ -601,17 +1697,17 @@
     ]
   },
   {
-    "id": "96793655",
+    "id": "96799799",
     "slugs": {
       "en": [
         "community",
         "events",
-        "lillo-montalto-monella-and-marta-rodriguez-martinez"
+        "pierre-jourde-jessica-bruder-mathijs-deen-and-judith-schalansky"
       ],
       "it": [
         "contaminazioni",
         "eventi",
-        "lillo-montalto-monella-and-marta-rodriguez-martinez"
+        "pierre-jourde-jessica-bruder-mathijs-deen-and-judith-schalansky"
       ]
     },
     "isIndex": false,
@@ -623,7 +1719,7 @@
         "slugs": [
           "community",
           "events",
-          "lillo-montalto-monella-and-marta-rodriguez-martinez"
+          "pierre-jourde-jessica-bruder-mathijs-deen-and-judith-schalansky"
         ]
       },
       {
@@ -631,18 +1727,18 @@
         "slugs": [
           "contaminazioni",
           "eventi",
-          "lillo-montalto-monella-and-marta-rodriguez-martinez"
+          "pierre-jourde-jessica-bruder-mathijs-deen-and-judith-schalansky"
         ]
       }
     ],
     "urls": [
       {
         "locale": "en",
-        "url": "community/events/lillo-montalto-monella-and-marta-rodriguez-martinez"
+        "url": "community/events/pierre-jourde-jessica-bruder-mathijs-deen-and-judith-schalansky"
       },
       {
         "locale": "it",
-        "url": "contaminazioni/eventi/lillo-montalto-monella-and-marta-rodriguez-martinez"
+        "url": "contaminazioni/eventi/pierre-jourde-jessica-bruder-mathijs-deen-and-judith-schalansky"
       }
     ]
   },
@@ -1751,972 +2847,6 @@
     ]
   },
   {
-    "id": "96738655",
-    "slugs": {
-      "en": [
-        "community",
-        "events",
-        "hofesh-shechter"
-      ],
-      "it": [
-        "contaminazioni",
-        "eventi",
-        "hofesh-shechter"
-      ]
-    },
-    "isIndex": false,
-    "indexType": "",
-    "__typename": "event",
-    "paths": [
-      {
-        "locale": "en",
-        "slugs": [
-          "community",
-          "events",
-          "hofesh-shechter"
-        ]
-      },
-      {
-        "locale": "it",
-        "slugs": [
-          "contaminazioni",
-          "eventi",
-          "hofesh-shechter"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "en",
-        "url": "community/events/hofesh-shechter"
-      },
-      {
-        "locale": "it",
-        "url": "contaminazioni/eventi/hofesh-shechter"
-      }
-    ]
-  },
-  {
-    "id": "96253300",
-    "slugs": {
-      "en": [
-        "community",
-        "events",
-        "merce-cunningham-site-specific"
-      ],
-      "it": [
-        "contaminazioni",
-        "eventi",
-        "merce-cunningham-site-specific"
-      ]
-    },
-    "isIndex": false,
-    "indexType": "",
-    "__typename": "event",
-    "paths": [
-      {
-        "locale": "en",
-        "slugs": [
-          "community",
-          "events",
-          "merce-cunningham-site-specific"
-        ]
-      },
-      {
-        "locale": "it",
-        "slugs": [
-          "contaminazioni",
-          "eventi",
-          "merce-cunningham-site-specific"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "en",
-        "url": "community/events/merce-cunningham-site-specific"
-      },
-      {
-        "locale": "it",
-        "url": "contaminazioni/eventi/merce-cunningham-site-specific"
-      }
-    ]
-  },
-  {
-    "id": "96571816",
-    "slugs": {
-      "en": [
-        "community",
-        "events",
-        "valentina-dal-mas"
-      ],
-      "it": [
-        "contaminazioni",
-        "eventi",
-        "valentina-dal-mas"
-      ]
-    },
-    "isIndex": false,
-    "indexType": "",
-    "__typename": "event",
-    "paths": [
-      {
-        "locale": "en",
-        "slugs": [
-          "community",
-          "events",
-          "valentina-dal-mas"
-        ]
-      },
-      {
-        "locale": "it",
-        "slugs": [
-          "contaminazioni",
-          "eventi",
-          "valentina-dal-mas"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "en",
-        "url": "community/events/valentina-dal-mas"
-      },
-      {
-        "locale": "it",
-        "url": "contaminazioni/eventi/valentina-dal-mas"
-      }
-    ]
-  },
-  {
-    "id": "96572914",
-    "slugs": {
-      "en": [
-        "community",
-        "events",
-        "barbara-serra-l-europa-della-pandemia"
-      ],
-      "it": [
-        "contaminazioni",
-        "eventi",
-        "barbara-serra-l-europa-della-pandemia"
-      ]
-    },
-    "isIndex": false,
-    "indexType": "",
-    "__typename": "event",
-    "paths": [
-      {
-        "locale": "en",
-        "slugs": [
-          "community",
-          "events",
-          "barbara-serra-l-europa-della-pandemia"
-        ]
-      },
-      {
-        "locale": "it",
-        "slugs": [
-          "contaminazioni",
-          "eventi",
-          "barbara-serra-l-europa-della-pandemia"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "en",
-        "url": "community/events/barbara-serra-l-europa-della-pandemia"
-      },
-      {
-        "locale": "it",
-        "url": "contaminazioni/eventi/barbara-serra-l-europa-della-pandemia"
-      }
-    ]
-  },
-  {
-    "id": "96573178",
-    "slugs": {
-      "en": [
-        "community",
-        "events",
-        "michele-abbondanza-and-antonella-bertoni"
-      ],
-      "it": [
-        "contaminazioni",
-        "eventi",
-        "michele-abbondanza-and-antonella-bertoni"
-      ]
-    },
-    "isIndex": false,
-    "indexType": "",
-    "__typename": "event",
-    "paths": [
-      {
-        "locale": "en",
-        "slugs": [
-          "community",
-          "events",
-          "michele-abbondanza-and-antonella-bertoni"
-        ]
-      },
-      {
-        "locale": "it",
-        "slugs": [
-          "contaminazioni",
-          "eventi",
-          "michele-abbondanza-and-antonella-bertoni"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "en",
-        "url": "community/events/michele-abbondanza-and-antonella-bertoni"
-      },
-      {
-        "locale": "it",
-        "url": "contaminazioni/eventi/michele-abbondanza-and-antonella-bertoni"
-      }
-    ]
-  },
-  {
-    "id": "96289056",
-    "slugs": {
-      "en": [
-        "community",
-        "events",
-        "matteo-levaggi"
-      ],
-      "it": [
-        "contaminazioni",
-        "eventi",
-        "matteo-levaggi"
-      ]
-    },
-    "isIndex": false,
-    "indexType": "",
-    "__typename": "event",
-    "paths": [
-      {
-        "locale": "en",
-        "slugs": [
-          "community",
-          "events",
-          "matteo-levaggi"
-        ]
-      },
-      {
-        "locale": "it",
-        "slugs": [
-          "contaminazioni",
-          "eventi",
-          "matteo-levaggi"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "en",
-        "url": "community/events/matteo-levaggi"
-      },
-      {
-        "locale": "it",
-        "url": "contaminazioni/eventi/matteo-levaggi"
-      }
-    ]
-  },
-  {
-    "id": "96567293",
-    "slugs": {
-      "en": [
-        "community",
-        "events",
-        "barbara-serra"
-      ],
-      "it": [
-        "contaminazioni",
-        "eventi",
-        "barbara-serra"
-      ]
-    },
-    "isIndex": false,
-    "indexType": "",
-    "__typename": "event",
-    "paths": [
-      {
-        "locale": "en",
-        "slugs": [
-          "community",
-          "events",
-          "barbara-serra"
-        ]
-      },
-      {
-        "locale": "it",
-        "slugs": [
-          "contaminazioni",
-          "eventi",
-          "barbara-serra"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "en",
-        "url": "community/events/barbara-serra"
-      },
-      {
-        "locale": "it",
-        "url": "contaminazioni/eventi/barbara-serra"
-      }
-    ]
-  },
-  {
-    "id": "96548073",
-    "slugs": {
-      "en": [
-        "community",
-        "events",
-        "sonics"
-      ],
-      "it": [
-        "contaminazioni",
-        "eventi",
-        "sonics"
-      ]
-    },
-    "isIndex": false,
-    "indexType": "",
-    "__typename": "event",
-    "paths": [
-      {
-        "locale": "en",
-        "slugs": [
-          "community",
-          "events",
-          "sonics"
-        ]
-      },
-      {
-        "locale": "it",
-        "slugs": [
-          "contaminazioni",
-          "eventi",
-          "sonics"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "en",
-        "url": "community/events/sonics"
-      },
-      {
-        "locale": "it",
-        "url": "contaminazioni/eventi/sonics"
-      }
-    ]
-  },
-  {
-    "id": "96315994",
-    "slugs": {
-      "en": [
-        "community",
-        "events",
-        "merce-cunningham"
-      ],
-      "it": [
-        "contaminazioni",
-        "eventi",
-        "merce-cunningham"
-      ]
-    },
-    "isIndex": false,
-    "indexType": "",
-    "__typename": "event",
-    "paths": [
-      {
-        "locale": "en",
-        "slugs": [
-          "community",
-          "events",
-          "merce-cunningham"
-        ]
-      },
-      {
-        "locale": "it",
-        "slugs": [
-          "contaminazioni",
-          "eventi",
-          "merce-cunningham"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "en",
-        "url": "community/events/merce-cunningham"
-      },
-      {
-        "locale": "it",
-        "url": "contaminazioni/eventi/merce-cunningham"
-      }
-    ]
-  },
-  {
-    "id": "96292089",
-    "slugs": {
-      "en": [
-        "community",
-        "events",
-        "luciano-padovani"
-      ],
-      "it": [
-        "contaminazioni",
-        "eventi",
-        "luciano-padovani"
-      ]
-    },
-    "isIndex": false,
-    "indexType": "",
-    "__typename": "event",
-    "paths": [
-      {
-        "locale": "en",
-        "slugs": [
-          "community",
-          "events",
-          "luciano-padovani"
-        ]
-      },
-      {
-        "locale": "it",
-        "slugs": [
-          "contaminazioni",
-          "eventi",
-          "luciano-padovani"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "en",
-        "url": "community/events/luciano-padovani"
-      },
-      {
-        "locale": "it",
-        "url": "contaminazioni/eventi/luciano-padovani"
-      }
-    ]
-  },
-  {
-    "id": "96290928",
-    "slugs": {
-      "en": [
-        "community",
-        "events",
-        "jorge-jakas"
-      ],
-      "it": [
-        "contaminazioni",
-        "eventi",
-        "jorge-jakas"
-      ]
-    },
-    "isIndex": false,
-    "indexType": "",
-    "__typename": "event",
-    "paths": [
-      {
-        "locale": "en",
-        "slugs": [
-          "community",
-          "events",
-          "jorge-jakas"
-        ]
-      },
-      {
-        "locale": "it",
-        "slugs": [
-          "contaminazioni",
-          "eventi",
-          "jorge-jakas"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "en",
-        "url": "community/events/jorge-jakas"
-      },
-      {
-        "locale": "it",
-        "url": "contaminazioni/eventi/jorge-jakas"
-      }
-    ]
-  },
-  {
-    "id": "96290600",
-    "slugs": {
-      "en": [
-        "community",
-        "events",
-        "fabrice-olivier-dubosc"
-      ],
-      "it": [
-        "contaminazioni",
-        "eventi",
-        "fabrice-olivier-dubosc"
-      ]
-    },
-    "isIndex": false,
-    "indexType": "",
-    "__typename": "event",
-    "paths": [
-      {
-        "locale": "en",
-        "slugs": [
-          "community",
-          "events",
-          "fabrice-olivier-dubosc"
-        ]
-      },
-      {
-        "locale": "it",
-        "slugs": [
-          "contaminazioni",
-          "eventi",
-          "fabrice-olivier-dubosc"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "en",
-        "url": "community/events/fabrice-olivier-dubosc"
-      },
-      {
-        "locale": "it",
-        "url": "contaminazioni/eventi/fabrice-olivier-dubosc"
-      }
-    ]
-  },
-  {
-    "id": "96290473",
-    "slugs": {
-      "en": [
-        "community",
-        "events",
-        "michal-mualem"
-      ],
-      "it": [
-        "contaminazioni",
-        "eventi",
-        "michal-mualem"
-      ]
-    },
-    "isIndex": false,
-    "indexType": "",
-    "__typename": "event",
-    "paths": [
-      {
-        "locale": "en",
-        "slugs": [
-          "community",
-          "events",
-          "michal-mualem"
-        ]
-      },
-      {
-        "locale": "it",
-        "slugs": [
-          "contaminazioni",
-          "eventi",
-          "michal-mualem"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "en",
-        "url": "community/events/michal-mualem"
-      },
-      {
-        "locale": "it",
-        "url": "contaminazioni/eventi/michal-mualem"
-      }
-    ]
-  },
-  {
-    "id": "96271432",
-    "slugs": {
-      "en": [
-        "community",
-        "events",
-        "francesco-colaleo-and-maxime-freixas-cestpasgrave"
-      ],
-      "it": [
-        "contaminazioni",
-        "eventi",
-        "francesco-colaleo-and-maxime-freixas-cestpasgrave"
-      ]
-    },
-    "isIndex": false,
-    "indexType": "",
-    "__typename": "event",
-    "paths": [
-      {
-        "locale": "en",
-        "slugs": [
-          "community",
-          "events",
-          "francesco-colaleo-and-maxime-freixas-cestpasgrave"
-        ]
-      },
-      {
-        "locale": "it",
-        "slugs": [
-          "contaminazioni",
-          "eventi",
-          "francesco-colaleo-and-maxime-freixas-cestpasgrave"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "en",
-        "url": "community/events/francesco-colaleo-and-maxime-freixas-cestpasgrave"
-      },
-      {
-        "locale": "it",
-        "url": "contaminazioni/eventi/francesco-colaleo-and-maxime-freixas-cestpasgrave"
-      }
-    ]
-  },
-  {
-    "id": "96253900",
-    "slugs": {
-      "en": [
-        "community",
-        "events",
-        "lucio-caracciolo"
-      ],
-      "it": [
-        "contaminazioni",
-        "eventi",
-        "lucio-caracciolo"
-      ]
-    },
-    "isIndex": false,
-    "indexType": "",
-    "__typename": "event",
-    "paths": [
-      {
-        "locale": "en",
-        "slugs": [
-          "community",
-          "events",
-          "lucio-caracciolo"
-        ]
-      },
-      {
-        "locale": "it",
-        "slugs": [
-          "contaminazioni",
-          "eventi",
-          "lucio-caracciolo"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "en",
-        "url": "community/events/lucio-caracciolo"
-      },
-      {
-        "locale": "it",
-        "url": "contaminazioni/eventi/lucio-caracciolo"
-      }
-    ]
-  },
-  {
-    "id": "96239493",
-    "slugs": {
-      "en": [
-        "community",
-        "events",
-        "lucrezia-gabrieli"
-      ],
-      "it": [
-        "contaminazioni",
-        "eventi",
-        "lucrezia-gabrieli"
-      ]
-    },
-    "isIndex": false,
-    "indexType": "",
-    "__typename": "event",
-    "paths": [
-      {
-        "locale": "en",
-        "slugs": [
-          "community",
-          "events",
-          "lucrezia-gabrieli"
-        ]
-      },
-      {
-        "locale": "it",
-        "slugs": [
-          "contaminazioni",
-          "eventi",
-          "lucrezia-gabrieli"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "en",
-        "url": "community/events/lucrezia-gabrieli"
-      },
-      {
-        "locale": "it",
-        "url": "contaminazioni/eventi/lucrezia-gabrieli"
-      }
-    ]
-  },
-  {
-    "id": "96102059",
-    "slugs": {
-      "en": [
-        "community",
-        "events",
-        "pep-ramis-and-maria-munoz"
-      ],
-      "it": [
-        "contaminazioni",
-        "eventi",
-        "pep-ramis-and-maria-munoz"
-      ]
-    },
-    "isIndex": false,
-    "indexType": "",
-    "__typename": "event",
-    "paths": [
-      {
-        "locale": "en",
-        "slugs": [
-          "community",
-          "events",
-          "pep-ramis-and-maria-munoz"
-        ]
-      },
-      {
-        "locale": "it",
-        "slugs": [
-          "contaminazioni",
-          "eventi",
-          "pep-ramis-and-maria-munoz"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "en",
-        "url": "community/events/pep-ramis-and-maria-munoz"
-      },
-      {
-        "locale": "it",
-        "url": "contaminazioni/eventi/pep-ramis-and-maria-munoz"
-      }
-    ]
-  },
-  {
-    "id": "96102035",
-    "slugs": {
-      "en": [
-        "community",
-        "events",
-        "daniele-ninarello"
-      ],
-      "it": [
-        "contaminazioni",
-        "eventi",
-        "daniele-ninarello"
-      ]
-    },
-    "isIndex": false,
-    "indexType": "",
-    "__typename": "event",
-    "paths": [
-      {
-        "locale": "en",
-        "slugs": [
-          "community",
-          "events",
-          "daniele-ninarello"
-        ]
-      },
-      {
-        "locale": "it",
-        "slugs": [
-          "contaminazioni",
-          "eventi",
-          "daniele-ninarello"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "en",
-        "url": "community/events/daniele-ninarello"
-      },
-      {
-        "locale": "it",
-        "url": "contaminazioni/eventi/daniele-ninarello"
-      }
-    ]
-  },
-  {
-    "id": "96101947",
-    "slugs": {
-      "en": [
-        "community",
-        "events",
-        "federico-petroni"
-      ],
-      "it": [
-        "contaminazioni",
-        "eventi",
-        "federico-petroni"
-      ]
-    },
-    "isIndex": false,
-    "indexType": "",
-    "__typename": "event",
-    "paths": [
-      {
-        "locale": "en",
-        "slugs": [
-          "community",
-          "events",
-          "federico-petroni"
-        ]
-      },
-      {
-        "locale": "it",
-        "slugs": [
-          "contaminazioni",
-          "eventi",
-          "federico-petroni"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "en",
-        "url": "community/events/federico-petroni"
-      },
-      {
-        "locale": "it",
-        "url": "contaminazioni/eventi/federico-petroni"
-      }
-    ]
-  },
-  {
-    "id": "96101925",
-    "slugs": {
-      "en": [
-        "community",
-        "events",
-        "francesco-colaleo-and-maxime-freixas"
-      ],
-      "it": [
-        "contaminazioni",
-        "eventi",
-        "francesco-colaleo-and-maxime-freixas"
-      ]
-    },
-    "isIndex": false,
-    "indexType": "",
-    "__typename": "event",
-    "paths": [
-      {
-        "locale": "en",
-        "slugs": [
-          "community",
-          "events",
-          "francesco-colaleo-and-maxime-freixas"
-        ]
-      },
-      {
-        "locale": "it",
-        "slugs": [
-          "contaminazioni",
-          "eventi",
-          "francesco-colaleo-and-maxime-freixas"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "en",
-        "url": "community/events/francesco-colaleo-and-maxime-freixas"
-      },
-      {
-        "locale": "it",
-        "url": "contaminazioni/eventi/francesco-colaleo-and-maxime-freixas"
-      }
-    ]
-  },
-  {
-    "id": "96101891",
-    "slugs": {
-      "en": [
-        "community",
-        "events",
-        "adam-benjamin"
-      ],
-      "it": [
-        "contaminazioni",
-        "eventi",
-        "adam-benjamin"
-      ]
-    },
-    "isIndex": false,
-    "indexType": "",
-    "__typename": "event",
-    "paths": [
-      {
-        "locale": "en",
-        "slugs": [
-          "community",
-          "events",
-          "adam-benjamin"
-        ]
-      },
-      {
-        "locale": "it",
-        "slugs": [
-          "contaminazioni",
-          "eventi",
-          "adam-benjamin"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "en",
-        "url": "community/events/adam-benjamin"
-      },
-      {
-        "locale": "it",
-        "url": "contaminazioni/eventi/adam-benjamin"
-      }
-    ]
-  },
-  {
     "id": "96101834",
     "slugs": {
       "en": [
@@ -2851,52 +2981,6 @@
       {
         "locale": "it",
         "url": "contaminazioni/eventi/costas-lamproulis"
-      }
-    ]
-  },
-  {
-    "id": "96086741",
-    "slugs": {
-      "en": [
-        "community",
-        "events",
-        "giorgio-cuscito"
-      ],
-      "it": [
-        "contaminazioni",
-        "eventi",
-        "giorgio-cuscito"
-      ]
-    },
-    "isIndex": false,
-    "indexType": "",
-    "__typename": "event",
-    "paths": [
-      {
-        "locale": "en",
-        "slugs": [
-          "community",
-          "events",
-          "giorgio-cuscito"
-        ]
-      },
-      {
-        "locale": "it",
-        "slugs": [
-          "contaminazioni",
-          "eventi",
-          "giorgio-cuscito"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "en",
-        "url": "community/events/giorgio-cuscito"
-      },
-      {
-        "locale": "it",
-        "url": "contaminazioni/eventi/giorgio-cuscito"
       }
     ]
   },
@@ -3541,52 +3625,6 @@
       {
         "locale": "it",
         "url": "contaminazioni/eventi/michela-lucenti"
-      }
-    ]
-  },
-  {
-    "id": "89224754",
-    "slugs": {
-      "en": [
-        "community",
-        "events",
-        "festival-event"
-      ],
-      "it": [
-        "contaminazioni",
-        "eventi",
-        "evento-di-prova"
-      ]
-    },
-    "isIndex": false,
-    "indexType": "",
-    "__typename": "event",
-    "paths": [
-      {
-        "locale": "en",
-        "slugs": [
-          "community",
-          "events",
-          "festival-event"
-        ]
-      },
-      {
-        "locale": "it",
-        "slugs": [
-          "contaminazioni",
-          "eventi",
-          "evento-di-prova"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "en",
-        "url": "community/events/festival-event"
-      },
-      {
-        "locale": "it",
-        "url": "contaminazioni/eventi/evento-di-prova"
       }
     ]
   },
