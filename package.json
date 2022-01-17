@@ -4,7 +4,7 @@
   "description": "Fancy Next.js app",
   "scripts": {
     "data": "node ./scripts/index.js",
-    "dev": "next",
+    "dev": "yarn data && next",
     "build": "next build",
     "start": "next start",
     "build:static": "next build && next out"
