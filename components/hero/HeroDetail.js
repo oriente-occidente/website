@@ -1,4 +1,5 @@
 import { Image as DatoImage } from 'react-datocms';
+import { LocationMarkerIcon, CalendarIcon } from '@heroicons/react/outline';
 
 import Gallery from 'components/galleries/Gallery';
 import { formatDate } from 'lib/utils';
@@ -7,6 +8,8 @@ function HeroDetail({ data, locale }) {
   const {
     titleHero,
     descriptionHero,
+    authors,
+    location,
     imageHero,
     isFestival,
     dateEvento,
@@ -25,18 +28,30 @@ function HeroDetail({ data, locale }) {
             {dateEvento != null ? (
               <>
                 {dateEvento.map((date) => (
-                  <div key={date.id} className="text-xxs text-black-light">
+                  <div key={date.id} className="text-xxs text-black-light flex">
+                    <CalendarIcon aria-hidden="true" className="w-4 mr-2" />
                     {formatDate(date.startTime, locale || 'en')}
                   </div>
                 ))}
               </>
             ) : null}
+            {location && (
+              <h2 className="text-xxs text-black-light mt-1 flex">
+                <LocationMarkerIcon aria-hidden="true" className="w-4 mr-2" />
+                {location}
+              </h2>
+            )}
           </div>
         </div>
       ) : null}
       <div className="relative md:col-span-3 md:border-l md:border-color-gray xl:pt-4 md:col-start-2">
         <div className="px-4 md:px-12 md:pt-2">
           <h1 className="text-base uppercase pt-4 pb-1">{titleHero}</h1>
+          {authors && (
+            <h2 className="text-xs md:text-sm mb-1 uppercase">
+              {authors}
+            </h2>
+          )}
           <h2 className="text-base uppercase font-semibold">
             {descriptionHero}
           </h2>

@@ -31,6 +31,8 @@ function GalleryHome({ slides, background, locale }) {
             imageHero,
             titleHero,
             category,
+            authors,
+            location,
             dateEvento,
             slug,
             id,

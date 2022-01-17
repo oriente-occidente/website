@@ -34,6 +34,8 @@ function Page({ data, locale }) {
   const {
     layoutHero,
     titleHero,
+    authors,
+    location,
     descriptionHero,
     imageHero,
     slideshowHero,
@@ -44,6 +46,8 @@ function Page({ data, locale }) {
   const heroData = {
     layoutHero,
     titleHero,
+    authors,
+    location,
     descriptionHero,
     imageHero,
     slideshowHero,
@@ -88,10 +92,6 @@ function Page({ data, locale }) {
     (s) => getStructuredContent(s.body) !== null
   );
   const otherSections = payload.otherSections;
-
-  // console.log('paymentSettings', paymentSettings);
-  // console.log('isBookable', isBookable);
-  // console.log('isFuture', isFuture);
 
   return (
     <>

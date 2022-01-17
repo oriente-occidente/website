@@ -19,7 +19,7 @@ function Home({ routes, data, locale, home }) {
       <HeroSlider slides={homeSlideshow} />
 
       {homeSections.map((block) => {
-        // console.log('block:', block);
+        console.log('block:', block);
         return (
           <Fragment key={block.id}>
             <div

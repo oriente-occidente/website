@@ -33,8 +33,13 @@ function CardTitleIn({ locale, data }) {
           <div className="flex space-x-4 absolute z-20 left-4 md:left-8 md:bottom-8 top-48 md:top-auto text-white uppercase text-xxs md:text-xs font-semibold ">
             <span>{categoryTitle}</span>
             {eventDate && (
-              <span className="hidden md:block normal-case font-light">
+              <span className="hidden md:inline-block normal-case font-light">
                 {formatDate(data.eventDate, locale)}
+              </span>
+            )}
+            {data.location && (
+              <span className="hidden md:inline-block normal-case font-light">
+                , {location}
               </span>
             )}
           </div>

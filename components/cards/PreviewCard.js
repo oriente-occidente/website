@@ -28,15 +28,20 @@ function PreviewCard({ data, locale }) {
 
   return (
     <div className="py-4 relative">
-      {console.log('data:', data)}
+      {console.log('data preview:', data)}
       <Link href={`/${resolveLinkById(data.id, locale)}`}>
         <a title={data.title}>
           <div className="relative">
-            <div className="flex space-x-4 absolute z-20 left-4 md:left-8 bottom-2 md:bottom-8 top-auto text-white uppercase text-xxs md:text-xs font-semibold ">
+            <div className="flex absolute z-20 left-4 md:left-8 bottom-2 md:bottom-8 top-auto text-white uppercase text-xxs md:text-xs font-semibold ">
               <span>{categoryTitle}</span>
               {data.dateEvento && (
-                <span className="hidden md:block normal-case font-light">
+                <span className="hidden md:block md:pl-4 md:pr-1 normal-case font-light">
                   {formatDate(data.eventDate, locale)}
+                </span>
+              )}
+              {data.location && (
+                <span className="hidden md:block md:pr-1 normal-case font-light">
+                - {data.location}
                 </span>
               )}
             </div>
@@ -49,15 +54,20 @@ function PreviewCard({ data, locale }) {
             <div className="absolute top-auto bottom-0 left-0 right-0 h-[65px] bg-gradient-to-t z-10 from-black-transparent"></div>
           </div>
           <div className="z-20">
-            {data.titleHero && (
+            {data.title && (
               <h2 className="text-sm md:text-base uppercase text-black-light mt-2">
-                {data.titleHero}
+                {data.title}
               </h2>
             )}
-            {data.title && (
+            {data.titleHero && (
               <h3 className="text-sm md:text-base uppercase text-black font-semibold ">
-                {data.title}
+                {data.titleHero}
               </h3>
+            )}
+            {data.authors && (
+              <div className="text-sm md:text-base uppercase text-black font-semibold ">
+                {data.authors}
+              </div>
             )}
           </div>
           {data.dateEvento && (

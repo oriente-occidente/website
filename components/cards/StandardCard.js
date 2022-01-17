@@ -9,33 +9,52 @@ function StandardCard({ data, locale, categoryTitle, eventDate }) {
     <div className="pb-8 md:pb-0">
       <Link href={resolveLinkById(data.id, locale)} locale={locale}>
         <a title={data.title}>
-          <div className="flex space-x-4 absolute z-20 left-4 md:left-8 md:bottom-8 top-48 md:top-auto text-white uppercase text-xxs md:text-xs font-semibold ">
-            <span>{categoryTitle}</span>
-            {eventDate && (
-              <span className="hidden md:block normal-case font-light">
-                {formatDate(eventDate, locale)}
-              </span>
+          <div className="relative">
+            <div className="absolute md:flex z-20 left-4 md:left-8 bottom-2 md:bottom-6 top-auto text-white uppercase text-xxs md:text-xs font-semibold ">
+              <span>{categoryTitle}</span>
+              {eventDate && (
+                <span className="hidden md:block md:pl-4 md:pr-1 normal-case font-light">
+                  {formatDate(eventDate, locale)}
+                </span>
+              )}
+              {data.location && (
+                <span className="hidden md:inline-block normal-case font-light">
+                  - {data.location}
+                </span>
+              )}
+            </div>
+            {
+              image != null ?
+                <DatoImage
+                  className=""
+                  data={image.responsiveImage}
+                  alt={image.alt}
+                  title={image.title}
+                />
+              : null
+            }
+            <div className="absolute h-[65px] md:h-48 bottom-0 left-0 right-0 bg-gradient-to-t z-10 from-black-transparent"></div>
+          </div>
+          <div className="hidden md:block absolute top-0 h-48 left-0 right-0 bg-gradient-to-b z-10 from-black-transparent"></div>
+          <div className="md:absolute z-20 md:top-6 md:left-8">
+            <h2 className="text-sm md:text-lg uppercase text-black md:text-white font-semibold mt-2">
+              {data.title}
+            </h2>
+            {data.authors && (
+              <div className="text-xs md:text-base uppercase text-black md:text-white font-semibold md:mt-2">
+                {data.authors}
+              </div>
             )}
           </div>
-          {
-            image != null ?
-              <DatoImage
-                className=""
-                data={image.responsiveImage}
-                alt={image.alt}
-                title={image.title}
-              />
-            : null
-          }
-          <div className="absolute top-40 md:top-auto h-[65px] md:h-48 md:bottom-0 left-0 right-0 bg-gradient-to-t z-10 from-black-transparent"></div>
-          <div className="hidden md:block absolute top-0 h-48 left-0 right-0 bg-gradient-to-b z-10 from-black-transparent"></div>
-          <h2 className="text-sm z-20 md:text-lg uppercase text-black md:text-white font-semibold mt-2 md:absolute md:top-6 md:left-8 ">
-            {data.title}
-          </h2>
           {eventDate && (
-            <h3 className="text-xxs md:hidden">
+            <h3 className="inline-block md:hidden normal-case text-xxs mr-1">
               {formatDate(eventDate, locale)}
             </h3>
+          )}
+          {data.location && (
+            <span className="inline-block md:hidden normal-case text-xxs">
+              - {data.location}
+            </span>
           )}
         </a>
       </Link>

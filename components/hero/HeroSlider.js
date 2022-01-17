@@ -35,7 +35,7 @@ function HeroSlider({ slides }) {
                 title={title}
               />
               <div className="container relative">
-                <h2 className="z-20 absolute bottom-16 md:bottom-12 2xl:bottom-24 font-normal w-4/5 md:w-2/3 xl:w-1/2 right-4 xl:right-0 text-base md:text-lg xl:text-2xl text-white text-right">
+                <h2 className="z-20 absolute bottom-16 md:bottom-12 2xl:bottom-24 font-normal w-4/5 md:w-2/3 xl:w-1/2 right-4 2xl:right-0 text-base md:text-lg xl:text-2xl text-white text-right">
                   {slide.title}
                 </h2>
               </div>
