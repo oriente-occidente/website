@@ -26,11 +26,6 @@ export default function RegistrationForm({ locale, paymentSettings }) {
 
   const fields = [
     {
-      name: 'form-name',
-      type: 'hidden',
-      defaultValue: 'registration',
-    },
-    {
       name: 'language',
       type: 'hidden',
       defaultValue: locale,
@@ -189,104 +184,104 @@ export default function RegistrationForm({ locale, paymentSettings }) {
         onSubmit={handleSubmit(handlePost)}
         name="registration"
         method="POST"
-        action="/success/"
         data-netlify="true"
+        netlify="true"
+        action="/thankyou"
       >
-        <>
+        <input type="hidden" name="form-name" value="registration" />
+        {fields
+          .filter((f) => f.type === 'hidden')
+          .map((field) => {
+            return (
+              <input
+                key={field.name}
+                type="hidden"
+                name={field.name}
+                value={field.defaultValue || ''}
+                {...register(field.name)}
+              />
+            );
+          })}
+        <div className="grid grid-cols-1 md:grid-cols-3 xl:grid-cols-4 gap-4">
           {fields
-            .filter((f) => f.type === 'hidden')
+            .filter((f) => f.type !== 'hidden')
             .map((field) => {
+              const { name, label, type, options } = field;
               return (
-                <input
-                  key={field.name}
-                  type="hidden"
-                  name={field.name}
-                  value={field.defaultValue || ''}
-                  {...register(field.name)}
-                />
-              );
-            })}
-          <div className="grid grid-cols-1 md:grid-cols-3 xl:grid-cols-4 gap-4">
-            {fields
-              .filter((f) => f.type !== 'hidden')
-              .map((field) => {
-                const { name, label, type, options } = field;
-                return (
-                  <div key={`${name}`} className="border border-gray-100">
-                    {label && !['checkbox'].includes(type) && (
-                      <div className="pt-2 px-1">
-                        <label htmlFor={name}>{t(label, locale)}</label>
+                <div key={`${name}`} className="border border-gray-100">
+                  {label && !['checkbox'].includes(type) && (
+                    <div className="pt-2 px-1">
+                      <label htmlFor={name}>{t(label, locale)}</label>
+                    </div>
+                  )}
+                  <div className="py-2 px-1">
+                    {type === 'select' && (
+                      <select
+                        className="min-w-full rounded text-gray-700"
+                        name={name}
+                        {...register(name)}
+                      >
+                        <option value="">select a value</option>
+                        {options.map((o) => (
+                          <option value={o.value} key={o.label}>
+                            {o.label}
+                          </option>
+                        ))}
+                      </select>
+                    )}
+
+                    {type === 'checkbox' && (
+                      <div>
+                        <input
+                          className="rounded text-gray-700 mr-4"
+                          type={type}
+                          {...register(name)}
+                        />
+                        {label && (
+                          <label
+                            className="px-2"
+                            htmlFor={name}
+                            dangerouslySetInnerHTML={{ __html: label }}
+                          />
+                        )}
                       </div>
                     )}
-                    <div className="py-2 px-1">
-                      {type === 'select' && (
-                        <select
-                          className="min-w-full rounded text-gray-700"
-                          name={name}
-                          {...register(name)}
-                        >
-                          <option value="">select a value</option>
-                          {options.map((o) => (
-                            <option value={o.value} key={o.label}>
-                              {o.label}
-                            </option>
-                          ))}
-                        </select>
-                      )}
 
-                      {type === 'checkbox' && (
-                        <div>
-                          <input
-                            className="rounded text-gray-700 mr-4"
-                            type={type}
-                            {...register(name)}
-                          />
-                          {label && (
-                            <label
-                              className="px-2"
-                              htmlFor={name}
-                              dangerouslySetInnerHTML={{ __html: label }}
-                            />
-                          )}
-                        </div>
-                      )}
+                    {type === 'textarea' && (
+                      <textarea
+                        className="min-w-full rounded text-gray-700"
+                        rows={4}
+                        type={type}
+                        maxLength="500"
+                        {...register(name)}
+                      />
+                    )}
 
-                      {type === 'textarea' && (
-                        <textarea
-                          className="min-w-full rounded text-gray-700"
-                          rows={4}
-                          type={type}
-                          maxLength="500"
-                          {...register(name)}
-                        />
-                      )}
-
-                      {!['select', 'checkbox', 'textarea'].includes(type) && (
-                        <input
-                          className="min-w-full rounded text-gray-700"
-                          type={type}
-                          maxLength="250"
-                          {...register(name)}
-                        />
-                      )}
-                    </div>
-
-                    {errors[name] && (
-                      <div className="py-1 px-2 text-red-500 font-normal text-xxs ">
-                        {errors[name].message}
-                      </div>
+                    {!['select', 'checkbox', 'textarea'].includes(type) && (
+                      <input
+                        className="min-w-full rounded text-gray-700"
+                        type={type}
+                        maxLength="250"
+                        {...register(name)}
+                      />
                     )}
                   </div>
-                );
-              })}
-          </div>
 
-          <input
-            className="mt-10 min-w-full bg-white text-gray-700 font-semibold hover:text-black py-2 px-4 border border-gray-700 hover:border-black"
-            type="submit"
-            value="Invia"
-          />
-        </>
+                  {errors[name] && (
+                    <div className="py-1 px-2 text-red-500 font-normal text-xxs ">
+                      {errors[name].message}
+                    </div>
+                  )}
+                </div>
+              );
+            })}
+        </div>
+
+        <input
+          className="mt-10 min-w-full bg-white text-gray-700 font-semibold hover:text-black py-2 px-4 border border-gray-700 hover:border-black"
+          type="submit"
+          value="Invia"
+        />
       </form>
     </div>
   );
