@@ -171,11 +171,13 @@ function Header(props) {
       );
     } else {
       return (
-        <Link key={item.id} href={resolveLinkById(item.link?.id, locale)}>
-          <a className="font-semibold text-black tracking-widest text-xxs hover:text-gray-900">
-            {item.title}
-          </a>
-        </Link>
+        <div className="relative">
+          <Link key={item.id} href={resolveLinkById(item.link?.id, locale)}>
+            <a className="font-semibold text-black tracking-widest text-xxs hover:text-gray-900">
+              {item.title}
+            </a>
+          </Link>
+        </div>
       );
     }
   }
@@ -189,7 +191,7 @@ function Header(props) {
               <a href="#" className="flex">
                 <span className="sr-only">Workflow</span>
                 <img
-                  className="h-10 w-auto sm:h-12 lg:h-16"
+                  className="h-10 w-auto sm:h-12 lg:h-16 object-contain"
                   src="/oo_logo.jpg"
                   alt="Oriente Occidente"
                 />
@@ -208,12 +210,12 @@ function Header(props) {
             </Popover.Button>
           </div>
           <div className="hidden lg:flex-1 lg:flex lg:items-center lg:justify-end">
-            <Popover.Group as="nav" className="flex space-x-10 uppercase">
+            <Popover.Group as="nav" className="flex space-x-4 xl:space-x-10 uppercase">
               {data?.map((item) => (
                 <Fragment key={item.id}>{renderLink(item)}</Fragment>
               ))}
             </Popover.Group>
-            <div className="ml-14 font-semibold uppercase lg:flex text-black-light tracking-widest text-xxs hover:text-black-light">
+            <div className="ml-14 pt-1 font-semibold uppercase lg:flex text-black-light tracking-widest text-xxs hover:text-black-light">
               <LanguageSwitcher locale={locale} alts={alts} />
             </div>
           </div>
