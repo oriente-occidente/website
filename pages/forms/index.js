@@ -1,85 +1,49 @@
-import React from 'react';
+import { useState, useEffect } from 'react';
 import { doQueryById } from 'lib/api';
 import Layout from 'components/Layout';
 import Seo from 'components/Seo';
 
-const encode = (data) => {
-  return Object.keys(data)
-    .map((key) => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
-    .join('&');
-};
+function Page({ data, locale }) {
+  const { site, menu, footer } = data;
+  const [success, setSuccess] = useState(false);
 
-class ContactForm extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { name: '', email: '', message: '' };
-  }
+  useEffect(() => {
+    if (window.location.search.includes('success=true')) {
+      setSuccess(true);
+    }
+  }, []);
 
-  handleSubmit = (e) => {
-    fetch('/', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      body: encode({ 'form-name': 'contact', ...this.state }),
-    })
-      .then(() => alert('Success!'))
-      .catch((error) => alert(error));
+  return (
+    <Layout footer={footer} menu={menu} locale={locale}>
+      <Seo tags={site.faviconMetaTags} />
+      <h1 className={styles.title}>Contact Me</h1>
+      {success && (
+        <p style={{ color: 'green' }}>Successfully submitted form!</p>
+      )}
 
-    e.preventDefault();
-  };
-
-  handleChange = (e) => this.setState({ [e.target.name]: e.target.value });
-
-  render() {
-    const { name, email, message } = this.state;
-    return (
-      <form onSubmit={this.handleSubmit}>
+      <form
+        name="contact"
+        method="POST"
+        action="/?success=true"
+        data-netlify="true"
+      >
+        <input type="hidden" name="form-name" value="contact" />
         <p>
-          <label>
-            Your Name:{' '}
-            <input
-              type="text"
-              name="name"
-              value={name}
-              onChange={this.handleChange}
-            />
-          </label>
+          <label htmlFor="name">Name</label>
+          <input type="text" id="name" name="name" />
         </p>
         <p>
-          <label>
-            Your Email:{' '}
-            <input
-              type="email"
-              name="email"
-              value={email}
-              onChange={this.handleChange}
-            />
-          </label>
+          <label htmlFor="email">Email</label>
+          <input type="text" id="email" name="email" />
         </p>
         <p>
-          <label>
-            Message:{' '}
-            <textarea
-              name="message"
-              value={message}
-              onChange={this.handleChange}
-            />
-          </label>
+          <label htmlFor="message">Message</label>
+          <textarea id="message" name="message"></textarea>
         </p>
         <p>
           <button type="submit">Send</button>
         </p>
       </form>
-    );
-  }
-}
-
-function Page({ data, locale }) {
-  const { site, menu, footer } = data;
-
-  return (
-    <Layout footer={footer} menu={menu} locale={locale}>
-      <Seo tags={site.faviconMetaTags} />
-      <ContactForm />
     </Layout>
   );
 }
