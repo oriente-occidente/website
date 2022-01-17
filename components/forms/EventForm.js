@@ -8,21 +8,21 @@ import { formatDate } from 'lib/utils';
 export default function RegistrationForm({ locale, paymentSettings }) {
   const [booked, setBooked] = useState(null);
 
-  const schema = yup.object().shape({
-    'form-name': yup.string(),
-    language: yup.string(),
-    level: yup.string().required('plase choose one option'),
-    firstName: yup.string().required('please provide your first name'),
-    lastName: yup.string().required('please provide your last name'),
-    email: yup.string().email().required('email is required'),
-    address: yup.string().required('please fill with your address'),
-    city: yup.string().required('please indicate your city'),
-    stateCode: yup.string().required('èlease provide a state code'),
-    zipCode: yup.string().required('please provide a zip code'),
-    phone: yup.string().required('Please add your phone number'),
-    notes: yup.string(),
-    privacy: yup.boolean().oneOf([true], 'Should accept privacy policy'),
-  });
+  // const schema = yup.object().shape({
+  //   'form-name': yup.string(),
+  //   language: yup.string(),
+  //   level: yup.string().required('plase choose one option'),
+  //   firstName: yup.string().required('please provide your first name'),
+  //   lastName: yup.string().required('please provide your last name'),
+  //   email: yup.string().email().required('email is required'),
+  //   address: yup.string().required('please fill with your address'),
+  //   city: yup.string().required('please indicate your city'),
+  //   stateCode: yup.string().required('èlease provide a state code'),
+  //   zipCode: yup.string().required('please provide a zip code'),
+  //   phone: yup.string().required('Please add your phone number'),
+  //   notes: yup.string(),
+  //   privacy: yup.boolean().oneOf([true], 'Should accept privacy policy'),
+  // });
 
   const fields = [
     {
@@ -95,7 +95,7 @@ export default function RegistrationForm({ locale, paymentSettings }) {
     handleSubmit,
     formState: { errors },
   } = useForm({
-    resolver: yupResolver(schema),
+    // resolver: yupResolver(schema),
   });
 
   const encode = (data) => {
@@ -111,7 +111,8 @@ export default function RegistrationForm({ locale, paymentSettings }) {
     console.log('formData', formData);
 
     const choosen = paymentSettings.find((p) => p.id === formData.level);
-    const choiche = event.description;
+    const choiche = choosen?.description;
+    console.log('choiche', choiche);
 
     fetch(`/`, {
       method: 'POST',
@@ -128,25 +129,6 @@ export default function RegistrationForm({ locale, paymentSettings }) {
       });
     event.preventDefault();
   };
-  // const sendToNetlify = async (data) => {
-  //   try {
-  //     const event = paymentSettings.find((p) => p.id === data.level);
-  //     const eventName = event.description;
-  //     await fetch('/', {
-  //       method: 'POST',
-  //       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-  //       body: encode({ ...data, eventDescription }),
-  //     });
-  //     setBooked(event);
-  //   } catch (error) {
-  //     console.log(error);
-  //   }
-  // };
-
-  // const onSubmit = async (data) => {
-  //   console.log('DATA', data);
-  //   await sendToNetlify(data);
-  // };
 
   return (
     <div>
@@ -179,9 +161,9 @@ export default function RegistrationForm({ locale, paymentSettings }) {
           </div>
         </div>
       )}
-      <h1>REGISTER NOW</h1>
 
-      {!booked && (
+      <div>
+        <div className="mt-10">REGISTER NOW</div>
         <form
           onSubmit={handleSubmit(handlePost)}
           name="registration"
@@ -225,7 +207,7 @@ export default function RegistrationForm({ locale, paymentSettings }) {
                         >
                           <option value="">select a value</option>
                           {options.map((o) => (
-                            <option value={o.value} key={o.label}>
+                            <option value={o.value} key={o.value}>
                               {o.label}
                             </option>
                           ))}
@@ -285,7 +267,7 @@ export default function RegistrationForm({ locale, paymentSettings }) {
             value="Invia"
           />
         </form>
-      )}
+      </div>
     </div>
   );
 }

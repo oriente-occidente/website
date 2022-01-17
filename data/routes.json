@@ -547,6 +547,52 @@
     "urls": []
   },
   {
+    "id": "96086850",
+    "slugs": {
+      "en": [
+        "community",
+        "events",
+        "cristina-kristal-rizzo"
+      ],
+      "it": [
+        "contaminazioni",
+        "eventi",
+        "cristina-kristal-rizzo"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "event",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "community",
+          "events",
+          "cristina-kristal-rizzo"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "contaminazioni",
+          "eventi",
+          "cristina-kristal-rizzo"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "community/events/cristina-kristal-rizzo"
+      },
+      {
+        "locale": "it",
+        "url": "contaminazioni/eventi/cristina-kristal-rizzo"
+      }
+    ]
+  },
+  {
     "id": "89224754",
     "slugs": {
       "en": [
@@ -3031,52 +3077,6 @@
     ]
   },
   {
-    "id": "96086850",
-    "slugs": {
-      "en": [
-        "community",
-        "events",
-        "cristina-kristal-rizzo"
-      ],
-      "it": [
-        "contaminazioni",
-        "eventi",
-        "cristina-kristal-rizzo"
-      ]
-    },
-    "isIndex": false,
-    "indexType": "",
-    "__typename": "event",
-    "paths": [
-      {
-        "locale": "en",
-        "slugs": [
-          "community",
-          "events",
-          "cristina-kristal-rizzo"
-        ]
-      },
-      {
-        "locale": "it",
-        "slugs": [
-          "contaminazioni",
-          "eventi",
-          "cristina-kristal-rizzo"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "en",
-        "url": "community/events/cristina-kristal-rizzo"
-      },
-      {
-        "locale": "it",
-        "url": "contaminazioni/eventi/cristina-kristal-rizzo"
-      }
-    ]
-  },
-  {
     "id": "96086789",
     "slugs": {
       "en": [
@@ -3763,6 +3763,190 @@
       {
         "locale": "it",
         "url": "contaminazioni/eventi/michela-lucenti"
+      }
+    ]
+  },
+  {
+    "id": "97555523",
+    "slugs": {
+      "en": [
+        "studio",
+        "workshop",
+        "ghosts-go-to-what-is-not-seen-workshop-di-danza-contemporanea"
+      ],
+      "it": [
+        "studio",
+        "workshop",
+        "ghosts-go-to-what-is-not-seen-workshop-di-danza-contemporanea"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "workshop",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "studio",
+          "workshop",
+          "ghosts-go-to-what-is-not-seen-workshop-di-danza-contemporanea"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "studio",
+          "workshop",
+          "ghosts-go-to-what-is-not-seen-workshop-di-danza-contemporanea"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "studio/workshop/ghosts-go-to-what-is-not-seen-workshop-di-danza-contemporanea"
+      },
+      {
+        "locale": "it",
+        "url": "studio/workshop/ghosts-go-to-what-is-not-seen-workshop-di-danza-contemporanea"
+      }
+    ]
+  },
+  {
+    "id": "97538008",
+    "slugs": {
+      "en": [
+        "studio",
+        "workshop",
+        "the-choreographic-creation-between-virtuality-and-interactivity"
+      ],
+      "it": [
+        "studio",
+        "workshop",
+        "la-creazione-coreografica-tra-virtualita-e-interattivita"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "workshop",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "studio",
+          "workshop",
+          "the-choreographic-creation-between-virtuality-and-interactivity"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "studio",
+          "workshop",
+          "la-creazione-coreografica-tra-virtualita-e-interattivita"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "studio/workshop/the-choreographic-creation-between-virtuality-and-interactivity"
+      },
+      {
+        "locale": "it",
+        "url": "studio/workshop/la-creazione-coreografica-tra-virtualita-e-interattivita"
+      }
+    ]
+  },
+  {
+    "id": "97539633",
+    "slugs": {
+      "en": [
+        "studio",
+        "workshop",
+        "masterclass-sidi-larbi-cherkaoui-repertory-fractus-v"
+      ],
+      "it": [
+        "studio",
+        "workshop",
+        "masterclass-sidi-larbi-cherkaoui-repertory-fractus-v"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "workshop",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "studio",
+          "workshop",
+          "masterclass-sidi-larbi-cherkaoui-repertory-fractus-v"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "studio",
+          "workshop",
+          "masterclass-sidi-larbi-cherkaoui-repertory-fractus-v"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "studio/workshop/masterclass-sidi-larbi-cherkaoui-repertory-fractus-v"
+      },
+      {
+        "locale": "it",
+        "url": "studio/workshop/masterclass-sidi-larbi-cherkaoui-repertory-fractus-v"
+      }
+    ]
+  },
+  {
+    "id": "97553467",
+    "slugs": {
+      "en": [
+        "studio",
+        "workshop",
+        "genealogia-una-call-per-danzatori-e-amatori"
+      ],
+      "it": [
+        "studio",
+        "workshop",
+        "genealogia-una-call-per-danzatori-e-amatori"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "workshop",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "studio",
+          "workshop",
+          "genealogia-una-call-per-danzatori-e-amatori"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "studio",
+          "workshop",
+          "genealogia-una-call-per-danzatori-e-amatori"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "studio/workshop/genealogia-una-call-per-danzatori-e-amatori"
+      },
+      {
+        "locale": "it",
+        "url": "studio/workshop/genealogia-una-call-per-danzatori-e-amatori"
       }
     ]
   },
