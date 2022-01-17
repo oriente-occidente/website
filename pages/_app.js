@@ -47,6 +47,12 @@ function MyApp({ Component, pageProps }) {
         }}
       />
       <Component {...pageProps} />;
+      <form
+        name="registration"
+        method="POST"
+        data-netlify="true"
+        action="/thankyou"
+      ></form>
     </>
   );
 }
