@@ -74,6 +74,7 @@ const getRecords = async (name, prefixes, log = false) => {
         return { ...obj, [l]: path };
       }, {});
     }
+
     return {
       id,
       slugs: paths,

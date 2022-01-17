@@ -34,8 +34,6 @@ function Page({ data, locale }) {
   const {
     layoutHero,
     titleHero,
-    authors,
-    location,
     descriptionHero,
     imageHero,
     slideshowHero,
@@ -46,8 +44,6 @@ function Page({ data, locale }) {
   const heroData = {
     layoutHero,
     titleHero,
-    authors,
-    location,
     descriptionHero,
     imageHero,
     slideshowHero,
@@ -92,6 +88,10 @@ function Page({ data, locale }) {
     (s) => getStructuredContent(s.body) !== null
   );
   const otherSections = payload.otherSections;
+
+  // console.log('paymentSettings', paymentSettings);
+  // console.log('isBookable', isBookable);
+  // console.log('isFuture', isFuture);
 
   return (
     <>
@@ -181,12 +181,14 @@ function Page({ data, locale }) {
         )}
         {showBookButton && (
           <div className="container">
-            <button
-              className="w-48 bg-white text-gray-700 font-semibold hover:text-black py-2 px-4 border border-gray-700 hover:border-black"
-              onClick={() => setShowDialog(true)}
-            >
-              REGISTRATI
-            </button>
+            <Link href={`/forms/${pageInfo.id}`} locale={locale}>
+              <a
+                className="w-48 bg-white text-gray-700 font-semibold hover:text-black py-2 px-4 border border-gray-700 hover:border-black"
+                // onClick={() => setShowDialog(true)}
+              >
+                REGISTRATI
+              </a>
+            </Link>
           </div>
         )}
 
@@ -200,7 +202,7 @@ function Page({ data, locale }) {
           </>
         )}
       </Layout>
-      <Modal
+      {/* <Modal
         title="Contact Form"
         description="Fill the form to get in touch with us"
         open={showDialog}
@@ -211,7 +213,7 @@ function Page({ data, locale }) {
           paymentSettings={paymentSettings}
           title={titleHero || payload.title}
         />
-      </Modal>
+      </Modal> */}
     </>
   );
 }
@@ -224,7 +226,7 @@ export async function getStaticPaths() {
 export async function getStaticProps({ params, locale, preview = false }) {
   const data = await doQuery(locale, params);
   return {
-    props: { data, locale },
+    props: { data, locale, params },
   };
 }
 export default Page;
