@@ -1,9 +1,7 @@
-import React, { useState } from 'react';
-import { doQueryById, getFormPaths } from 'lib/api';
+import React from 'react';
+import { doQueryById } from 'lib/api';
 import Layout from 'components/Layout';
 import Seo from 'components/Seo';
-
-// import EventForm from 'components/forms/EventForm';
 
 const encode = (data) => {
   return Object.keys(data)
@@ -16,8 +14,6 @@ class ContactForm extends React.Component {
     super(props);
     this.state = { name: '', email: '', message: '' };
   }
-
-  /* Here’s the juicy bit for posting the form submission */
 
   handleSubmit = (e) => {
     fetch('/', {
