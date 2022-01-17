@@ -24,7 +24,7 @@ function Page({ data, locale }) {
       <form
         name="contact"
         method="POST"
-        action="/forms?success=true"
+        action={`${locale === 'en' ? '/en' : ''}/forms?success=true`}
         data-netlify="true"
       >
         <input type="hidden" name="form-name" value="contact" />
