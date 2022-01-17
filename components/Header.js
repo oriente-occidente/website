@@ -19,7 +19,11 @@ function renderMobile(data, locale, alts) {
             <>
               <Disclosure.Button className="text-left flex items-center justify-between text-sm font-semibold uppercase md:text-xl">
                 {item.title.toUpperCase()}
-                <div className={`${open ? "" : "rotate-180"} w-4 h-4 md:w-8 md:h-8  bg-arrow-small-down ease-in duration-300`}/>
+                <div
+                  className={`${
+                    open ? '' : 'rotate-180'
+                  } w-4 h-4 md:w-8 md:h-8  bg-arrow-small-down ease-in duration-300`}
+                />
               </Disclosure.Button>
               <Disclosure.Panel>
                 {item.children?.map((child) => (

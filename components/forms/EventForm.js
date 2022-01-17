@@ -5,7 +5,7 @@ import * as yup from 'yup';
 import t from 'lib/locales';
 import { formatDate } from 'lib/utils';
 
-export default function RegistrationForm({ locale, paymentSettings }) {
+export default function RegistrationForm({ locale, paymentSettings, title }) {
   const [booked, setBooked] = useState(null);
 
   // const schema = yup.object().shape({
@@ -25,6 +25,11 @@ export default function RegistrationForm({ locale, paymentSettings }) {
   // });
 
   const fields = [
+    {
+      name: 'title',
+      type: 'hidden',
+      defaultValue: title,
+    },
     {
       name: 'language',
       type: 'hidden',
@@ -168,8 +173,8 @@ export default function RegistrationForm({ locale, paymentSettings }) {
           onSubmit={handleSubmit(handlePost)}
           name="registration"
           method="POST"
-          data-netlify="true"
-          netlify="true"
+          data-netlify={true}
+          netlify={true}
           action="/thankyou"
         >
           <input type="hidden" name="form-name" value="registration" />

@@ -25,14 +25,14 @@ function CustomDialog({
     >
       <Dialog
         onClose={() => closeDialog()}
-        className="fixed z-100 inset-0 overflow-y-auto"
+        className="fixed z-10 inset-0 overflow-y-auto"
       >
         <div className="md:flex md:items-center md:justify-center h-full w-full">
-          <Dialog.Overlay className="fixed z-90 inset-0 bg-black opacity-90" />
+          <Dialog.Overlay className="fixed inset-0 bg-black opacity-90" />
           <div className="relative w-full sm:mx-20">
             <button
               type="button"
-              className="absolute right-10 top-5 z-130 bg-white rounded-md text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500"
+              className="absolute right-10 top-5 z-30 bg-white rounded-md text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500"
               onClick={() => closeDialog()}
             >
               <span className="sr-only">Close</span>

@@ -51,8 +51,8 @@ function MyApp({ Component, pageProps }) {
         hidden="true"
         name="registration"
         method="POST"
-        data-netlify="true"
-        netlify="true"
+        data-netlify={true}
+        netlify={true}
         action="/thankyou"
       >
         <input type="hidden" name="form-name" value="registration" />
