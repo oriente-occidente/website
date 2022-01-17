@@ -547,6 +547,52 @@
     "urls": []
   },
   {
+    "id": "96738971",
+    "slugs": {
+      "en": [
+        "community",
+        "events",
+        "desattraction-1-62-la-diagonale-des-anges"
+      ],
+      "it": [
+        "contaminazioni",
+        "eventi",
+        "desattraction-1-62-la-diagonale-des-anges"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "event",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "community",
+          "events",
+          "desattraction-1-62-la-diagonale-des-anges"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "contaminazioni",
+          "eventi",
+          "desattraction-1-62-la-diagonale-des-anges"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "community/events/desattraction-1-62-la-diagonale-des-anges"
+      },
+      {
+        "locale": "it",
+        "url": "contaminazioni/eventi/desattraction-1-62-la-diagonale-des-anges"
+      }
+    ]
+  },
+  {
     "id": "96793655",
     "slugs": {
       "en": [
@@ -2797,52 +2843,6 @@
       {
         "locale": "it",
         "url": "contaminazioni/eventi/alessio-maria-romano"
-      }
-    ]
-  },
-  {
-    "id": "96738971",
-    "slugs": {
-      "en": [
-        "community",
-        "events",
-        "severine-bennevault-caton"
-      ],
-      "it": [
-        "contaminazioni",
-        "eventi",
-        "severine-bennevault-caton"
-      ]
-    },
-    "isIndex": false,
-    "indexType": "",
-    "__typename": "event",
-    "paths": [
-      {
-        "locale": "en",
-        "slugs": [
-          "community",
-          "events",
-          "severine-bennevault-caton"
-        ]
-      },
-      {
-        "locale": "it",
-        "slugs": [
-          "contaminazioni",
-          "eventi",
-          "severine-bennevault-caton"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "en",
-        "url": "community/events/severine-bennevault-caton"
-      },
-      {
-        "locale": "it",
-        "url": "contaminazioni/eventi/severine-bennevault-caton"
       }
     ]
   },

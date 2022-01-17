@@ -52,6 +52,8 @@ function Page({ data, locale }) {
     paymentSettings,
   };
 
+  console.dir(payload);
+
   let bgBreadcrumb;
   if (heroData.layoutHero == 'index') {
     bgBreadcrumb = 'gray';
@@ -82,7 +84,9 @@ function Page({ data, locale }) {
   }
 
   const content = getStructuredContent(payload.content);
-  const sections = getStructuredContent(payload.sections);
+  const sections = payload.sections?.filter(
+    (s) => getStructuredContent(s.body) !== null
+  );
   const otherSections = payload.otherSections;
 
   // console.log('paymentSettings', paymentSettings);
