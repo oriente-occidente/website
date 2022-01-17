@@ -19,31 +19,31 @@ function HeroDetail({ data, locale }) {
 
   return (
     <header className="border-t md:border-none border-gray pb-10 md:py-0 md:grid md:grid-cols-4 md:gap-4 xl:container xl:mx-auto overflow-hidden">
-      {isFestival == true ? (
-        <div className="border-b border-gray py-3 md:border-none md:pt-4 xl:pt-8">
-          <div className="container">
+      <div className="border-b border-gray py-3 md:border-none md:pt-4 xl:pt-8">
+        <div className="container">
+          {isFestival == true ? (
             <div className="uppercase text-black text-xxs font-semibold tracking-wider md:pb-2">
               Festival
             </div>
-            {dateEvento != null ? (
-              <>
-                {dateEvento.map((date) => (
-                  <div key={date.id} className="text-xxs text-black-light flex">
-                    <CalendarIcon aria-hidden="true" className="w-4 mr-2" />
-                    {formatDate(date.startTime, locale || 'en')}
-                  </div>
-                ))}
-              </>
-            ) : null}
-            {location && (
-              <h2 className="text-xxs text-black-light mt-1 flex">
-                <LocationMarkerIcon aria-hidden="true" className="w-4 mr-2" />
-                {location}
-              </h2>
-            )}
-          </div>
+          ) : null}
+          {dateEvento != null ? (
+            <>
+              {dateEvento.map((date) => (
+                <div key={date.id} className="text-xxs text-black-light flex">
+                  <CalendarIcon aria-hidden="true" className="w-4 mr-2" />
+                  {formatDate(date.startTime, locale || 'en')}
+                </div>
+              ))}
+            </>
+          ) : null}
+          {location && (
+            <h2 className="text-xxs text-black-light mt-1 flex">
+              <LocationMarkerIcon aria-hidden="true" className="w-4 mr-2" />
+              {location}
+            </h2>
+          )}
         </div>
-      ) : null}
+      </div>
       <div className="relative md:col-span-3 md:border-l md:border-color-gray xl:pt-4 md:col-start-2">
         <div className="px-4 md:px-12 md:pt-2">
           <h1 className="text-base uppercase pt-4 pb-1">{titleHero}</h1>
