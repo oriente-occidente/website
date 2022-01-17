@@ -20,27 +20,27 @@ export default function RegistrationForm({ locale, paymentSettings }) {
   const [booked, setBooked] = useState(null);
 
   const schema = yup.object().shape({
-    id: yup.string(),
-    formName: yup.string(),
+    'form-name': yup.string(),
+    'data-netlify': yup.string(),
     language: yup.string(),
-    level: yup.string().required(),
-    firstName: yup.string().required(),
-    lastName: yup.string().required(),
-    email: yup.string().email().required(),
-    address: yup.string().required(),
-    city: yup.string().required(),
-    stateCode: yup.string().required(),
-    zipCode: yup.string().required(),
-    phone: yup.string().required(),
+    level: yup.string().required('plase choose one option'),
+    firstName: yup.string().required('please provide your first name'),
+    lastName: yup.string().required('please provide your last name'),
+    email: yup.string().email().required('email is required'),
+    address: yup.string().required('please fill with your address'),
+    city: yup.string().required('please indicate your city'),
+    stateCode: yup.string().required('èlease provide a state code'),
+    zipCode: yup.string().required('please provide a zip code'),
+    phone: yup.string().required('Please add your phone number'),
     notes: yup.string(),
-    privacy: yup.boolean().required(),
+    privacy: yup.boolean().oneOf([true], 'Should accept privacy policy'),
   });
 
   const fields = [
     {
       name: 'form-name',
       type: 'hidden',
-      defaultValue: 'event-registration',
+      defaultValue: 'registration',
     },
     {
       name: 'data-netlify',
@@ -145,8 +145,8 @@ export default function RegistrationForm({ locale, paymentSettings }) {
 
   const netlify = useNetlifyForm({
     name: 'react-hook-form',
-    action: '#',
-    honeypotName: 'bot-field',
+    action: '/thankyou',
+    // honeypotName: 'bot-field',
     onSuccess: (response, context) => {
       console.log('Successfully sent form data to Netlify Server');
     },
@@ -156,7 +156,7 @@ export default function RegistrationForm({ locale, paymentSettings }) {
     // const event = paymentSettings.find((p) => p.id === data.level);
     // const eventDescription = event.description;
     // setBooked(event);
-    netlify.handleSubmit(null, { ...data, eventDescription });
+    netlify.handleSubmit(null, data);
   };
 
   // const onSubmit = async (data) => {

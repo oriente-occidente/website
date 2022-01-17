@@ -547,6 +547,1294 @@
     "urls": []
   },
   {
+    "id": "97510034",
+    "slugs": {
+      "en": [
+        "community",
+        "events",
+        "mostra-oriente-occidente-40-radici"
+      ],
+      "it": [
+        "contaminazioni",
+        "eventi",
+        "mostra-oriente-occidente-40-radici"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "event",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "community",
+          "events",
+          "mostra-oriente-occidente-40-radici"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "contaminazioni",
+          "eventi",
+          "mostra-oriente-occidente-40-radici"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "community/events/mostra-oriente-occidente-40-radici"
+      },
+      {
+        "locale": "it",
+        "url": "contaminazioni/eventi/mostra-oriente-occidente-40-radici"
+      }
+    ]
+  },
+  {
+    "id": "89224754",
+    "slugs": {
+      "en": [
+        "community",
+        "events",
+        "festival-event"
+      ],
+      "it": [
+        "contaminazioni",
+        "eventi",
+        "evento-di-prova"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "event",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "community",
+          "events",
+          "festival-event"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "contaminazioni",
+          "eventi",
+          "evento-di-prova"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "community/events/festival-event"
+      },
+      {
+        "locale": "it",
+        "url": "contaminazioni/eventi/evento-di-prova"
+      }
+    ]
+  },
+  {
+    "id": "97509936",
+    "slugs": {
+      "en": [
+        "community",
+        "events",
+        "oltrepassare"
+      ],
+      "it": [
+        "contaminazioni",
+        "eventi",
+        "oltrepassare"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "event",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "community",
+          "events",
+          "oltrepassare"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "contaminazioni",
+          "eventi",
+          "oltrepassare"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "community/events/oltrepassare"
+      },
+      {
+        "locale": "it",
+        "url": "contaminazioni/eventi/oltrepassare"
+      }
+    ]
+  },
+  {
+    "id": "96086741",
+    "slugs": {
+      "en": [
+        "community",
+        "events",
+        "giorgio-cuscito"
+      ],
+      "it": [
+        "contaminazioni",
+        "eventi",
+        "giorgio-cuscito"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "event",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "community",
+          "events",
+          "giorgio-cuscito"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "contaminazioni",
+          "eventi",
+          "giorgio-cuscito"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "community/events/giorgio-cuscito"
+      },
+      {
+        "locale": "it",
+        "url": "contaminazioni/eventi/giorgio-cuscito"
+      }
+    ]
+  },
+  {
+    "id": "96799799",
+    "slugs": {
+      "en": [
+        "community",
+        "events",
+        "voci-da-lontano"
+      ],
+      "it": [
+        "contaminazioni",
+        "eventi",
+        "voci-da-lontano"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "event",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "community",
+          "events",
+          "voci-da-lontano"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "contaminazioni",
+          "eventi",
+          "voci-da-lontano"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "community/events/voci-da-lontano"
+      },
+      {
+        "locale": "it",
+        "url": "contaminazioni/eventi/voci-da-lontano"
+      }
+    ]
+  },
+  {
+    "id": "96793543",
+    "slugs": {
+      "en": [
+        "community",
+        "events",
+        "l-italia-nella-partita-tra-usa-e-cina-per-le-supply-chain"
+      ],
+      "it": [
+        "contaminazioni",
+        "eventi",
+        "l-italia-nella-partita-tra-usa-e-cina-per-le-supply-chain"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "event",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "community",
+          "events",
+          "l-italia-nella-partita-tra-usa-e-cina-per-le-supply-chain"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "contaminazioni",
+          "eventi",
+          "l-italia-nella-partita-tra-usa-e-cina-per-le-supply-chain"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "community/events/l-italia-nella-partita-tra-usa-e-cina-per-le-supply-chain"
+      },
+      {
+        "locale": "it",
+        "url": "contaminazioni/eventi/l-italia-nella-partita-tra-usa-e-cina-per-le-supply-chain"
+      }
+    ]
+  },
+  {
+    "id": "96778431",
+    "slugs": {
+      "en": [
+        "community",
+        "events",
+        "partecipazione-diritti-e-umanesimo-digitale"
+      ],
+      "it": [
+        "contaminazioni",
+        "eventi",
+        "partecipazione-diritti-e-umanesimo-digitale"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "event",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "community",
+          "events",
+          "partecipazione-diritti-e-umanesimo-digitale"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "contaminazioni",
+          "eventi",
+          "partecipazione-diritti-e-umanesimo-digitale"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "community/events/partecipazione-diritti-e-umanesimo-digitale"
+      },
+      {
+        "locale": "it",
+        "url": "contaminazioni/eventi/partecipazione-diritti-e-umanesimo-digitale"
+      }
+    ]
+  },
+  {
+    "id": "96778403",
+    "slugs": {
+      "en": [
+        "community",
+        "events",
+        "non-solo-ambiente-il-volto-geopolitico-della-transizione-energetica"
+      ],
+      "it": [
+        "contaminazioni",
+        "eventi",
+        "non-solo-ambiente-il-volto-geopolitico-della-transizione-energetica"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "event",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "community",
+          "events",
+          "non-solo-ambiente-il-volto-geopolitico-della-transizione-energetica"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "contaminazioni",
+          "eventi",
+          "non-solo-ambiente-il-volto-geopolitico-della-transizione-energetica"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "community/events/non-solo-ambiente-il-volto-geopolitico-della-transizione-energetica"
+      },
+      {
+        "locale": "it",
+        "url": "contaminazioni/eventi/non-solo-ambiente-il-volto-geopolitico-della-transizione-energetica"
+      }
+    ]
+  },
+  {
+    "id": "96777991",
+    "slugs": {
+      "en": [
+        "community",
+        "events",
+        "il-confine-non-e-una-linea-sottile"
+      ],
+      "it": [
+        "contaminazioni",
+        "eventi",
+        "il-confine-non-e-una-linea-sottile"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "event",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "community",
+          "events",
+          "il-confine-non-e-una-linea-sottile"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "contaminazioni",
+          "eventi",
+          "il-confine-non-e-una-linea-sottile"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "community/events/il-confine-non-e-una-linea-sottile"
+      },
+      {
+        "locale": "it",
+        "url": "contaminazioni/eventi/il-confine-non-e-una-linea-sottile"
+      }
+    ]
+  },
+  {
+    "id": "96778017",
+    "slugs": {
+      "en": [
+        "community",
+        "events",
+        "tra-estraneita-e-familiarita-identita-e-percorsi-di-vite-femminili-in-movimento"
+      ],
+      "it": [
+        "contaminazioni",
+        "eventi",
+        "tra-estraneita-e-familiarita-identita-e-percorsi-di-vite-femminili-in-movimento"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "event",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "community",
+          "events",
+          "tra-estraneita-e-familiarita-identita-e-percorsi-di-vite-femminili-in-movimento"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "contaminazioni",
+          "eventi",
+          "tra-estraneita-e-familiarita-identita-e-percorsi-di-vite-femminili-in-movimento"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "community/events/tra-estraneita-e-familiarita-identita-e-percorsi-di-vite-femminili-in-movimento"
+      },
+      {
+        "locale": "it",
+        "url": "contaminazioni/eventi/tra-estraneita-e-familiarita-identita-e-percorsi-di-vite-femminili-in-movimento"
+      }
+    ]
+  },
+  {
+    "id": "96777762",
+    "slugs": {
+      "en": [
+        "community",
+        "events",
+        "mixed-doubles"
+      ],
+      "it": [
+        "contaminazioni",
+        "eventi",
+        "mixed-doubles"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "event",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "community",
+          "events",
+          "mixed-doubles"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "contaminazioni",
+          "eventi",
+          "mixed-doubles"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "community/events/mixed-doubles"
+      },
+      {
+        "locale": "it",
+        "url": "contaminazioni/eventi/mixed-doubles"
+      }
+    ]
+  },
+  {
+    "id": "96776776",
+    "slugs": {
+      "en": [
+        "community",
+        "events",
+        "umwelt"
+      ],
+      "it": [
+        "contaminazioni",
+        "eventi",
+        "umwelt"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "event",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "community",
+          "events",
+          "umwelt"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "contaminazioni",
+          "eventi",
+          "umwelt"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "community/events/umwelt"
+      },
+      {
+        "locale": "it",
+        "url": "contaminazioni/eventi/umwelt"
+      }
+    ]
+  },
+  {
+    "id": "96776483",
+    "slugs": {
+      "en": [
+        "community",
+        "events",
+        "juliette-on-the-road"
+      ],
+      "it": [
+        "contaminazioni",
+        "eventi",
+        "juliette-on-the-road"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "event",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "community",
+          "events",
+          "juliette-on-the-road"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "contaminazioni",
+          "eventi",
+          "juliette-on-the-road"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "community/events/juliette-on-the-road"
+      },
+      {
+        "locale": "it",
+        "url": "contaminazioni/eventi/juliette-on-the-road"
+      }
+    ]
+  },
+  {
+    "id": "96776422",
+    "slugs": {
+      "en": [
+        "community",
+        "events",
+        "figli-di-un-dio-ubriaco-incursioni-fisiche-sui-madrigali-di-claudio-monteverdi"
+      ],
+      "it": [
+        "contaminazioni",
+        "eventi",
+        "figli-di-un-dio-ubriaco-incursioni-fisiche-sui-madrigali-di-claudio-monteverdi"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "event",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "community",
+          "events",
+          "figli-di-un-dio-ubriaco-incursioni-fisiche-sui-madrigali-di-claudio-monteverdi"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "contaminazioni",
+          "eventi",
+          "figli-di-un-dio-ubriaco-incursioni-fisiche-sui-madrigali-di-claudio-monteverdi"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "community/events/figli-di-un-dio-ubriaco-incursioni-fisiche-sui-madrigali-di-claudio-monteverdi"
+      },
+      {
+        "locale": "it",
+        "url": "contaminazioni/eventi/figli-di-un-dio-ubriaco-incursioni-fisiche-sui-madrigali-di-claudio-monteverdi"
+      }
+    ]
+  },
+  {
+    "id": "96776358",
+    "slugs": {
+      "en": [
+        "community",
+        "events",
+        "manbuhsona"
+      ],
+      "it": [
+        "contaminazioni",
+        "eventi",
+        "manbuhsona"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "event",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "community",
+          "events",
+          "manbuhsona"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "contaminazioni",
+          "eventi",
+          "manbuhsona"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "community/events/manbuhsona"
+      },
+      {
+        "locale": "it",
+        "url": "contaminazioni/eventi/manbuhsona"
+      }
+    ]
+  },
+  {
+    "id": "96759990",
+    "slugs": {
+      "en": [
+        "community",
+        "events",
+        "migrazioni"
+      ],
+      "it": [
+        "contaminazioni",
+        "eventi",
+        "migrazioni"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "event",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "community",
+          "events",
+          "migrazioni"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "contaminazioni",
+          "eventi",
+          "migrazioni"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "community/events/migrazioni"
+      },
+      {
+        "locale": "it",
+        "url": "contaminazioni/eventi/migrazioni"
+      }
+    ]
+  },
+  {
+    "id": "96759930",
+    "slugs": {
+      "en": [
+        "community",
+        "events",
+        "the-fifth-winter-bach"
+      ],
+      "it": [
+        "contaminazioni",
+        "eventi",
+        "the-fifth-winter-bach"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "event",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "community",
+          "events",
+          "the-fifth-winter-bach"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "contaminazioni",
+          "eventi",
+          "the-fifth-winter-bach"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "community/events/the-fifth-winter-bach"
+      },
+      {
+        "locale": "it",
+        "url": "contaminazioni/eventi/the-fifth-winter-bach"
+      }
+    ]
+  },
+  {
+    "id": "96759866",
+    "slugs": {
+      "en": [
+        "community",
+        "events",
+        "right"
+      ],
+      "it": [
+        "contaminazioni",
+        "eventi",
+        "right"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "event",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "community",
+          "events",
+          "right"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "contaminazioni",
+          "eventi",
+          "right"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "community/events/right"
+      },
+      {
+        "locale": "it",
+        "url": "contaminazioni/eventi/right"
+      }
+    ]
+  },
+  {
+    "id": "96759849",
+    "slugs": {
+      "en": [
+        "community",
+        "events",
+        "youme-you-are-you-and-me-i-m-me"
+      ],
+      "it": [
+        "contaminazioni",
+        "eventi",
+        "youme-you-are-you-and-me-i-m-me"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "event",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "community",
+          "events",
+          "youme-you-are-you-and-me-i-m-me"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "contaminazioni",
+          "eventi",
+          "youme-you-are-you-and-me-i-m-me"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "community/events/youme-you-are-you-and-me-i-m-me"
+      },
+      {
+        "locale": "it",
+        "url": "contaminazioni/eventi/youme-you-are-you-and-me-i-m-me"
+      }
+    ]
+  },
+  {
+    "id": "96757112",
+    "slugs": {
+      "en": [
+        "community",
+        "events",
+        "elegia-delle-cose-perdute"
+      ],
+      "it": [
+        "contaminazioni",
+        "eventi",
+        "elegia-delle-cose-perdute"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "event",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "community",
+          "events",
+          "elegia-delle-cose-perdute"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "contaminazioni",
+          "eventi",
+          "elegia-delle-cose-perdute"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "community/events/elegia-delle-cose-perdute"
+      },
+      {
+        "locale": "it",
+        "url": "contaminazioni/eventi/elegia-delle-cose-perdute"
+      }
+    ]
+  },
+  {
+    "id": "96753759",
+    "slugs": {
+      "en": [
+        "community",
+        "events",
+        "diptych-the-missing-door-e-the-lost-room"
+      ],
+      "it": [
+        "contaminazioni",
+        "eventi",
+        "diptych-the-missing-door-e-the-lost-room"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "event",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "community",
+          "events",
+          "diptych-the-missing-door-e-the-lost-room"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "contaminazioni",
+          "eventi",
+          "diptych-the-missing-door-e-the-lost-room"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "community/events/diptych-the-missing-door-e-the-lost-room"
+      },
+      {
+        "locale": "it",
+        "url": "contaminazioni/eventi/diptych-the-missing-door-e-the-lost-room"
+      }
+    ]
+  },
+  {
+    "id": "96753517",
+    "slugs": {
+      "en": [
+        "community",
+        "events",
+        "i-poveri"
+      ],
+      "it": [
+        "contaminazioni",
+        "eventi",
+        "i-poveri"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "event",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "community",
+          "events",
+          "i-poveri"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "contaminazioni",
+          "eventi",
+          "i-poveri"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "community/events/i-poveri"
+      },
+      {
+        "locale": "it",
+        "url": "contaminazioni/eventi/i-poveri"
+      }
+    ]
+  },
+  {
+    "id": "96753479",
+    "slugs": {
+      "en": [
+        "community",
+        "events",
+        "chouf-le-ciel"
+      ],
+      "it": [
+        "contaminazioni",
+        "eventi",
+        "chouf-le-ciel"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "event",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "community",
+          "events",
+          "chouf-le-ciel"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "contaminazioni",
+          "eventi",
+          "chouf-le-ciel"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "community/events/chouf-le-ciel"
+      },
+      {
+        "locale": "it",
+        "url": "contaminazioni/eventi/chouf-le-ciel"
+      }
+    ]
+  },
+  {
+    "id": "96752145",
+    "slugs": {
+      "en": [
+        "community",
+        "events",
+        "20-di-versi-madrigali-contemporanei"
+      ],
+      "it": [
+        "contaminazioni",
+        "eventi",
+        "20-di-versi-madrigali-contemporanei"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "event",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "community",
+          "events",
+          "20-di-versi-madrigali-contemporanei"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "contaminazioni",
+          "eventi",
+          "20-di-versi-madrigali-contemporanei"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "community/events/20-di-versi-madrigali-contemporanei"
+      },
+      {
+        "locale": "it",
+        "url": "contaminazioni/eventi/20-di-versi-madrigali-contemporanei"
+      }
+    ]
+  },
+  {
+    "id": "96748477",
+    "slugs": {
+      "en": [
+        "community",
+        "events",
+        "moby-dick"
+      ],
+      "it": [
+        "contaminazioni",
+        "eventi",
+        "moby-dick"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "event",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "community",
+          "events",
+          "moby-dick"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "contaminazioni",
+          "eventi",
+          "moby-dick"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "community/events/moby-dick"
+      },
+      {
+        "locale": "it",
+        "url": "contaminazioni/eventi/moby-dick"
+      }
+    ]
+  },
+  {
+    "id": "96744741",
+    "slugs": {
+      "en": [
+        "community",
+        "events",
+        "nobody-nobody-nobody-it-s-ok-not-to-be-ok-theatre-performance"
+      ],
+      "it": [
+        "contaminazioni",
+        "eventi",
+        "nobody-nobody-nobody-it-s-ok-not-to-be-ok-theatre-performance"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "event",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "community",
+          "events",
+          "nobody-nobody-nobody-it-s-ok-not-to-be-ok-theatre-performance"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "contaminazioni",
+          "eventi",
+          "nobody-nobody-nobody-it-s-ok-not-to-be-ok-theatre-performance"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "community/events/nobody-nobody-nobody-it-s-ok-not-to-be-ok-theatre-performance"
+      },
+      {
+        "locale": "it",
+        "url": "contaminazioni/eventi/nobody-nobody-nobody-it-s-ok-not-to-be-ok-theatre-performance"
+      }
+    ]
+  },
+  {
+    "id": "96744568",
+    "slugs": {
+      "en": [
+        "community",
+        "events",
+        "nobody-nobody-nobody-it-s-ok-not-to-be-ok-installazione"
+      ],
+      "it": [
+        "contaminazioni",
+        "eventi",
+        "nobody-nobody-nobody-it-s-ok-not-to-be-ok-installazione"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "event",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "community",
+          "events",
+          "nobody-nobody-nobody-it-s-ok-not-to-be-ok-installazione"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "contaminazioni",
+          "eventi",
+          "nobody-nobody-nobody-it-s-ok-not-to-be-ok-installazione"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "community/events/nobody-nobody-nobody-it-s-ok-not-to-be-ok-installazione"
+      },
+      {
+        "locale": "it",
+        "url": "contaminazioni/eventi/nobody-nobody-nobody-it-s-ok-not-to-be-ok-installazione"
+      }
+    ]
+  },
+  {
+    "id": "96740795",
+    "slugs": {
+      "en": [
+        "community",
+        "events",
+        "choros-il-luogo-dove-si-danza"
+      ],
+      "it": [
+        "contaminazioni",
+        "eventi",
+        "choros-il-luogo-dove-si-danza"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "event",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "community",
+          "events",
+          "choros-il-luogo-dove-si-danza"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "contaminazioni",
+          "eventi",
+          "choros-il-luogo-dove-si-danza"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "community/events/choros-il-luogo-dove-si-danza"
+      },
+      {
+        "locale": "it",
+        "url": "contaminazioni/eventi/choros-il-luogo-dove-si-danza"
+      }
+    ]
+  },
+  {
     "id": "96738971",
     "slugs": {
       "en": [
@@ -1605,109 +2893,17 @@
     ]
   },
   {
-    "id": "96086741",
-    "slugs": {
-      "en": [
-        "community",
-        "events",
-        "giorgio-cuscito"
-      ],
-      "it": [
-        "contaminazioni",
-        "eventi",
-        "giorgio-cuscito"
-      ]
-    },
-    "isIndex": false,
-    "indexType": "",
-    "__typename": "event",
-    "paths": [
-      {
-        "locale": "en",
-        "slugs": [
-          "community",
-          "events",
-          "giorgio-cuscito"
-        ]
-      },
-      {
-        "locale": "it",
-        "slugs": [
-          "contaminazioni",
-          "eventi",
-          "giorgio-cuscito"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "en",
-        "url": "community/events/giorgio-cuscito"
-      },
-      {
-        "locale": "it",
-        "url": "contaminazioni/eventi/giorgio-cuscito"
-      }
-    ]
-  },
-  {
-    "id": "89224754",
-    "slugs": {
-      "en": [
-        "community",
-        "events",
-        "festival-event"
-      ],
-      "it": [
-        "contaminazioni",
-        "eventi",
-        "evento-di-prova"
-      ]
-    },
-    "isIndex": false,
-    "indexType": "",
-    "__typename": "event",
-    "paths": [
-      {
-        "locale": "en",
-        "slugs": [
-          "community",
-          "events",
-          "festival-event"
-        ]
-      },
-      {
-        "locale": "it",
-        "slugs": [
-          "contaminazioni",
-          "eventi",
-          "evento-di-prova"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "en",
-        "url": "community/events/festival-event"
-      },
-      {
-        "locale": "it",
-        "url": "contaminazioni/eventi/evento-di-prova"
-      }
-    ]
-  },
-  {
     "id": "96796864",
     "slugs": {
       "en": [
         "community",
         "events",
-        "vera-gheno-and-marco-guerini"
+        "la-lingua-in-movimento"
       ],
       "it": [
         "contaminazioni",
         "eventi",
-        "vera-gheno-and-marco-guerini"
+        "la-lingua-in-movimento"
       ]
     },
     "isIndex": false,
@@ -1719,7 +2915,7 @@
         "slugs": [
           "community",
           "events",
-          "vera-gheno-and-marco-guerini"
+          "la-lingua-in-movimento"
         ]
       },
       {
@@ -1727,1122 +2923,18 @@
         "slugs": [
           "contaminazioni",
           "eventi",
-          "vera-gheno-and-marco-guerini"
+          "la-lingua-in-movimento"
         ]
       }
     ],
     "urls": [
       {
         "locale": "en",
-        "url": "community/events/vera-gheno-and-marco-guerini"
+        "url": "community/events/la-lingua-in-movimento"
       },
       {
         "locale": "it",
-        "url": "contaminazioni/eventi/vera-gheno-and-marco-guerini"
-      }
-    ]
-  },
-  {
-    "id": "96799799",
-    "slugs": {
-      "en": [
-        "community",
-        "events",
-        "pierre-jourde-jessica-bruder-mathijs-deen-and-judith-schalansky"
-      ],
-      "it": [
-        "contaminazioni",
-        "eventi",
-        "pierre-jourde-jessica-bruder-mathijs-deen-and-judith-schalansky"
-      ]
-    },
-    "isIndex": false,
-    "indexType": "",
-    "__typename": "event",
-    "paths": [
-      {
-        "locale": "en",
-        "slugs": [
-          "community",
-          "events",
-          "pierre-jourde-jessica-bruder-mathijs-deen-and-judith-schalansky"
-        ]
-      },
-      {
-        "locale": "it",
-        "slugs": [
-          "contaminazioni",
-          "eventi",
-          "pierre-jourde-jessica-bruder-mathijs-deen-and-judith-schalansky"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "en",
-        "url": "community/events/pierre-jourde-jessica-bruder-mathijs-deen-and-judith-schalansky"
-      },
-      {
-        "locale": "it",
-        "url": "contaminazioni/eventi/pierre-jourde-jessica-bruder-mathijs-deen-and-judith-schalansky"
-      }
-    ]
-  },
-  {
-    "id": "96793543",
-    "slugs": {
-      "en": [
-        "community",
-        "events",
-        "giorgio-cuscito-festival-2021"
-      ],
-      "it": [
-        "contaminazioni",
-        "eventi",
-        "giorgio-cuscito-festival-2021"
-      ]
-    },
-    "isIndex": false,
-    "indexType": "",
-    "__typename": "event",
-    "paths": [
-      {
-        "locale": "en",
-        "slugs": [
-          "community",
-          "events",
-          "giorgio-cuscito-festival-2021"
-        ]
-      },
-      {
-        "locale": "it",
-        "slugs": [
-          "contaminazioni",
-          "eventi",
-          "giorgio-cuscito-festival-2021"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "en",
-        "url": "community/events/giorgio-cuscito-festival-2021"
-      },
-      {
-        "locale": "it",
-        "url": "contaminazioni/eventi/giorgio-cuscito-festival-2021"
-      }
-    ]
-  },
-  {
-    "id": "96778431",
-    "slugs": {
-      "en": [
-        "community",
-        "events",
-        "francesca-bria"
-      ],
-      "it": [
-        "contaminazioni",
-        "eventi",
-        "francesca-bria"
-      ]
-    },
-    "isIndex": false,
-    "indexType": "",
-    "__typename": "event",
-    "paths": [
-      {
-        "locale": "en",
-        "slugs": [
-          "community",
-          "events",
-          "francesca-bria"
-        ]
-      },
-      {
-        "locale": "it",
-        "slugs": [
-          "contaminazioni",
-          "eventi",
-          "francesca-bria"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "en",
-        "url": "community/events/francesca-bria"
-      },
-      {
-        "locale": "it",
-        "url": "contaminazioni/eventi/francesca-bria"
-      }
-    ]
-  },
-  {
-    "id": "96778403",
-    "slugs": {
-      "en": [
-        "community",
-        "events",
-        "fabrizio-maronta-non-solo-ambiente"
-      ],
-      "it": [
-        "contaminazioni",
-        "eventi",
-        "fabrizio-maronta-non-solo-ambiente"
-      ]
-    },
-    "isIndex": false,
-    "indexType": "",
-    "__typename": "event",
-    "paths": [
-      {
-        "locale": "en",
-        "slugs": [
-          "community",
-          "events",
-          "fabrizio-maronta-non-solo-ambiente"
-        ]
-      },
-      {
-        "locale": "it",
-        "slugs": [
-          "contaminazioni",
-          "eventi",
-          "fabrizio-maronta-non-solo-ambiente"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "en",
-        "url": "community/events/fabrizio-maronta-non-solo-ambiente"
-      },
-      {
-        "locale": "it",
-        "url": "contaminazioni/eventi/fabrizio-maronta-non-solo-ambiente"
-      }
-    ]
-  },
-  {
-    "id": "96777991",
-    "slugs": {
-      "en": [
-        "community",
-        "events",
-        "laura-canali"
-      ],
-      "it": [
-        "contaminazioni",
-        "eventi",
-        "laura-canali"
-      ]
-    },
-    "isIndex": false,
-    "indexType": "",
-    "__typename": "event",
-    "paths": [
-      {
-        "locale": "en",
-        "slugs": [
-          "community",
-          "events",
-          "laura-canali"
-        ]
-      },
-      {
-        "locale": "it",
-        "slugs": [
-          "contaminazioni",
-          "eventi",
-          "laura-canali"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "en",
-        "url": "community/events/laura-canali"
-      },
-      {
-        "locale": "it",
-        "url": "contaminazioni/eventi/laura-canali"
-      }
-    ]
-  },
-  {
-    "id": "96778017",
-    "slugs": {
-      "en": [
-        "community",
-        "events",
-        "martina-cvajner-and-lucia-ghebreghiorges"
-      ],
-      "it": [
-        "contaminazioni",
-        "eventi",
-        "martina-cvajner-and-lucia-ghebreghiorges"
-      ]
-    },
-    "isIndex": false,
-    "indexType": "",
-    "__typename": "event",
-    "paths": [
-      {
-        "locale": "en",
-        "slugs": [
-          "community",
-          "events",
-          "martina-cvajner-and-lucia-ghebreghiorges"
-        ]
-      },
-      {
-        "locale": "it",
-        "slugs": [
-          "contaminazioni",
-          "eventi",
-          "martina-cvajner-and-lucia-ghebreghiorges"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "en",
-        "url": "community/events/martina-cvajner-and-lucia-ghebreghiorges"
-      },
-      {
-        "locale": "it",
-        "url": "contaminazioni/eventi/martina-cvajner-and-lucia-ghebreghiorges"
-      }
-    ]
-  },
-  {
-    "id": "96777762",
-    "slugs": {
-      "en": [
-        "community",
-        "events",
-        "faizah-grootens-venetsiana-kalampaliki-diego-tortelli-and-roser-lopez-espinosa"
-      ],
-      "it": [
-        "contaminazioni",
-        "eventi",
-        "faizah-grootens-venetsiana-kalampaliki-diego-tortelli-and-roser-lopez-espinosa"
-      ]
-    },
-    "isIndex": false,
-    "indexType": "",
-    "__typename": "event",
-    "paths": [
-      {
-        "locale": "en",
-        "slugs": [
-          "community",
-          "events",
-          "faizah-grootens-venetsiana-kalampaliki-diego-tortelli-and-roser-lopez-espinosa"
-        ]
-      },
-      {
-        "locale": "it",
-        "slugs": [
-          "contaminazioni",
-          "eventi",
-          "faizah-grootens-venetsiana-kalampaliki-diego-tortelli-and-roser-lopez-espinosa"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "en",
-        "url": "community/events/faizah-grootens-venetsiana-kalampaliki-diego-tortelli-and-roser-lopez-espinosa"
-      },
-      {
-        "locale": "it",
-        "url": "contaminazioni/eventi/faizah-grootens-venetsiana-kalampaliki-diego-tortelli-and-roser-lopez-espinosa"
-      }
-    ]
-  },
-  {
-    "id": "96776776",
-    "slugs": {
-      "en": [
-        "community",
-        "events",
-        "maguy-marin"
-      ],
-      "it": [
-        "contaminazioni",
-        "eventi",
-        "maguy-marin"
-      ]
-    },
-    "isIndex": false,
-    "indexType": "",
-    "__typename": "event",
-    "paths": [
-      {
-        "locale": "en",
-        "slugs": [
-          "community",
-          "events",
-          "maguy-marin"
-        ]
-      },
-      {
-        "locale": "it",
-        "slugs": [
-          "contaminazioni",
-          "eventi",
-          "maguy-marin"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "en",
-        "url": "community/events/maguy-marin"
-      },
-      {
-        "locale": "it",
-        "url": "contaminazioni/eventi/maguy-marin"
-      }
-    ]
-  },
-  {
-    "id": "96776483",
-    "slugs": {
-      "en": [
-        "community",
-        "events",
-        "loredana-parrella"
-      ],
-      "it": [
-        "contaminazioni",
-        "eventi",
-        "loredana-parrella"
-      ]
-    },
-    "isIndex": false,
-    "indexType": "",
-    "__typename": "event",
-    "paths": [
-      {
-        "locale": "en",
-        "slugs": [
-          "community",
-          "events",
-          "loredana-parrella"
-        ]
-      },
-      {
-        "locale": "it",
-        "slugs": [
-          "contaminazioni",
-          "eventi",
-          "loredana-parrella"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "en",
-        "url": "community/events/loredana-parrella"
-      },
-      {
-        "locale": "it",
-        "url": "contaminazioni/eventi/loredana-parrella"
-      }
-    ]
-  },
-  {
-    "id": "96776422",
-    "slugs": {
-      "en": [
-        "community",
-        "events",
-        "michela-lucenti-figli-di-un-dio-ubriaco"
-      ],
-      "it": [
-        "contaminazioni",
-        "eventi",
-        "michela-lucenti-figli-di-un-dio-ubriaco"
-      ]
-    },
-    "isIndex": false,
-    "indexType": "",
-    "__typename": "event",
-    "paths": [
-      {
-        "locale": "en",
-        "slugs": [
-          "community",
-          "events",
-          "michela-lucenti-figli-di-un-dio-ubriaco"
-        ]
-      },
-      {
-        "locale": "it",
-        "slugs": [
-          "contaminazioni",
-          "eventi",
-          "michela-lucenti-figli-di-un-dio-ubriaco"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "en",
-        "url": "community/events/michela-lucenti-figli-di-un-dio-ubriaco"
-      },
-      {
-        "locale": "it",
-        "url": "contaminazioni/eventi/michela-lucenti-figli-di-un-dio-ubriaco"
-      }
-    ]
-  },
-  {
-    "id": "96776358",
-    "slugs": {
-      "en": [
-        "community",
-        "events",
-        "pablo-girolami-manbuhsona"
-      ],
-      "it": [
-        "contaminazioni",
-        "eventi",
-        "pablo-girolami-manbuhsona"
-      ]
-    },
-    "isIndex": false,
-    "indexType": "",
-    "__typename": "event",
-    "paths": [
-      {
-        "locale": "en",
-        "slugs": [
-          "community",
-          "events",
-          "pablo-girolami-manbuhsona"
-        ]
-      },
-      {
-        "locale": "it",
-        "slugs": [
-          "contaminazioni",
-          "eventi",
-          "pablo-girolami-manbuhsona"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "en",
-        "url": "community/events/pablo-girolami-manbuhsona"
-      },
-      {
-        "locale": "it",
-        "url": "contaminazioni/eventi/pablo-girolami-manbuhsona"
-      }
-    ]
-  },
-  {
-    "id": "96759990",
-    "slugs": {
-      "en": [
-        "community",
-        "events",
-        "pablo-girolami-migrazioni"
-      ],
-      "it": [
-        "contaminazioni",
-        "eventi",
-        "pablo-girolami-migrazioni"
-      ]
-    },
-    "isIndex": false,
-    "indexType": "",
-    "__typename": "event",
-    "paths": [
-      {
-        "locale": "en",
-        "slugs": [
-          "community",
-          "events",
-          "pablo-girolami-migrazioni"
-        ]
-      },
-      {
-        "locale": "it",
-        "slugs": [
-          "contaminazioni",
-          "eventi",
-          "pablo-girolami-migrazioni"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "en",
-        "url": "community/events/pablo-girolami-migrazioni"
-      },
-      {
-        "locale": "it",
-        "url": "contaminazioni/eventi/pablo-girolami-migrazioni"
-      }
-    ]
-  },
-  {
-    "id": "96759930",
-    "slugs": {
-      "en": [
-        "community",
-        "events",
-        "maria-munoz-and-pep-ramis"
-      ],
-      "it": [
-        "contaminazioni",
-        "eventi",
-        "maria-munoz-and-pep-ramis"
-      ]
-    },
-    "isIndex": false,
-    "indexType": "",
-    "__typename": "event",
-    "paths": [
-      {
-        "locale": "en",
-        "slugs": [
-          "community",
-          "events",
-          "maria-munoz-and-pep-ramis"
-        ]
-      },
-      {
-        "locale": "it",
-        "slugs": [
-          "contaminazioni",
-          "eventi",
-          "maria-munoz-and-pep-ramis"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "en",
-        "url": "community/events/maria-munoz-and-pep-ramis"
-      },
-      {
-        "locale": "it",
-        "url": "contaminazioni/eventi/maria-munoz-and-pep-ramis"
-      }
-    ]
-  },
-  {
-    "id": "96759866",
-    "slugs": {
-      "en": [
-        "community",
-        "events",
-        "carlo-massari"
-      ],
-      "it": [
-        "contaminazioni",
-        "eventi",
-        "carlo-massari"
-      ]
-    },
-    "isIndex": false,
-    "indexType": "",
-    "__typename": "event",
-    "paths": [
-      {
-        "locale": "en",
-        "slugs": [
-          "community",
-          "events",
-          "carlo-massari"
-        ]
-      },
-      {
-        "locale": "it",
-        "slugs": [
-          "contaminazioni",
-          "eventi",
-          "carlo-massari"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "en",
-        "url": "community/events/carlo-massari"
-      },
-      {
-        "locale": "it",
-        "url": "contaminazioni/eventi/carlo-massari"
-      }
-    ]
-  },
-  {
-    "id": "96759849",
-    "slugs": {
-      "en": [
-        "community",
-        "events",
-        "honji-wang-and-sebastien-ramirez"
-      ],
-      "it": [
-        "contaminazioni",
-        "eventi",
-        "honji-wang-and-sebastien-ramirez"
-      ]
-    },
-    "isIndex": false,
-    "indexType": "",
-    "__typename": "event",
-    "paths": [
-      {
-        "locale": "en",
-        "slugs": [
-          "community",
-          "events",
-          "honji-wang-and-sebastien-ramirez"
-        ]
-      },
-      {
-        "locale": "it",
-        "slugs": [
-          "contaminazioni",
-          "eventi",
-          "honji-wang-and-sebastien-ramirez"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "en",
-        "url": "community/events/honji-wang-and-sebastien-ramirez"
-      },
-      {
-        "locale": "it",
-        "url": "contaminazioni/eventi/honji-wang-and-sebastien-ramirez"
-      }
-    ]
-  },
-  {
-    "id": "96757112",
-    "slugs": {
-      "en": [
-        "community",
-        "events",
-        "stefano-mazzotta"
-      ],
-      "it": [
-        "contaminazioni",
-        "eventi",
-        "stefano-mazzotta"
-      ]
-    },
-    "isIndex": false,
-    "indexType": "",
-    "__typename": "event",
-    "paths": [
-      {
-        "locale": "en",
-        "slugs": [
-          "community",
-          "events",
-          "stefano-mazzotta"
-        ]
-      },
-      {
-        "locale": "it",
-        "slugs": [
-          "contaminazioni",
-          "eventi",
-          "stefano-mazzotta"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "en",
-        "url": "community/events/stefano-mazzotta"
-      },
-      {
-        "locale": "it",
-        "url": "contaminazioni/eventi/stefano-mazzotta"
-      }
-    ]
-  },
-  {
-    "id": "96753759",
-    "slugs": {
-      "en": [
-        "community",
-        "events",
-        "gabriela-carrizo-and-franck-chartier"
-      ],
-      "it": [
-        "contaminazioni",
-        "eventi",
-        "gabriela-carrizo-and-franck-chartier"
-      ]
-    },
-    "isIndex": false,
-    "indexType": "",
-    "__typename": "event",
-    "paths": [
-      {
-        "locale": "en",
-        "slugs": [
-          "community",
-          "events",
-          "gabriela-carrizo-and-franck-chartier"
-        ]
-      },
-      {
-        "locale": "it",
-        "slugs": [
-          "contaminazioni",
-          "eventi",
-          "gabriela-carrizo-and-franck-chartier"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "en",
-        "url": "community/events/gabriela-carrizo-and-franck-chartier"
-      },
-      {
-        "locale": "it",
-        "url": "contaminazioni/eventi/gabriela-carrizo-and-franck-chartier"
-      }
-    ]
-  },
-  {
-    "id": "96753517",
-    "slugs": {
-      "en": [
-        "community",
-        "events",
-        "stafano-mazzotta-sala-conferenze"
-      ],
-      "it": [
-        "contaminazioni",
-        "eventi",
-        "stafano-mazzotta-sala-conferenze"
-      ]
-    },
-    "isIndex": false,
-    "indexType": "",
-    "__typename": "event",
-    "paths": [
-      {
-        "locale": "en",
-        "slugs": [
-          "community",
-          "events",
-          "stafano-mazzotta-sala-conferenze"
-        ]
-      },
-      {
-        "locale": "it",
-        "slugs": [
-          "contaminazioni",
-          "eventi",
-          "stafano-mazzotta-sala-conferenze"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "en",
-        "url": "community/events/stafano-mazzotta-sala-conferenze"
-      },
-      {
-        "locale": "it",
-        "url": "contaminazioni/eventi/stafano-mazzotta-sala-conferenze"
-      }
-    ]
-  },
-  {
-    "id": "96753479",
-    "slugs": {
-      "en": [
-        "community",
-        "events",
-        "colokolo"
-      ],
-      "it": [
-        "contaminazioni",
-        "eventi",
-        "colokolo"
-      ]
-    },
-    "isIndex": false,
-    "indexType": "",
-    "__typename": "event",
-    "paths": [
-      {
-        "locale": "en",
-        "slugs": [
-          "community",
-          "events",
-          "colokolo"
-        ]
-      },
-      {
-        "locale": "it",
-        "slugs": [
-          "contaminazioni",
-          "eventi",
-          "colokolo"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "en",
-        "url": "community/events/colokolo"
-      },
-      {
-        "locale": "it",
-        "url": "contaminazioni/eventi/colokolo"
-      }
-    ]
-  },
-  {
-    "id": "96752145",
-    "slugs": {
-      "en": [
-        "community",
-        "events",
-        "michela-lucenti-20-diversi"
-      ],
-      "it": [
-        "contaminazioni",
-        "eventi",
-        "michela-lucenti-20-diversi"
-      ]
-    },
-    "isIndex": false,
-    "indexType": "",
-    "__typename": "event",
-    "paths": [
-      {
-        "locale": "en",
-        "slugs": [
-          "community",
-          "events",
-          "michela-lucenti-20-diversi"
-        ]
-      },
-      {
-        "locale": "it",
-        "slugs": [
-          "contaminazioni",
-          "eventi",
-          "michela-lucenti-20-diversi"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "en",
-        "url": "community/events/michela-lucenti-20-diversi"
-      },
-      {
-        "locale": "it",
-        "url": "contaminazioni/eventi/michela-lucenti-20-diversi"
-      }
-    ]
-  },
-  {
-    "id": "96748477",
-    "slugs": {
-      "en": [
-        "community",
-        "events",
-        "chiara-bersani"
-      ],
-      "it": [
-        "contaminazioni",
-        "eventi",
-        "chiara-bersani"
-      ]
-    },
-    "isIndex": false,
-    "indexType": "",
-    "__typename": "event",
-    "paths": [
-      {
-        "locale": "en",
-        "slugs": [
-          "community",
-          "events",
-          "chiara-bersani"
-        ]
-      },
-      {
-        "locale": "it",
-        "slugs": [
-          "contaminazioni",
-          "eventi",
-          "chiara-bersani"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "en",
-        "url": "community/events/chiara-bersani"
-      },
-      {
-        "locale": "it",
-        "url": "contaminazioni/eventi/chiara-bersani"
-      }
-    ]
-  },
-  {
-    "id": "96744741",
-    "slugs": {
-      "en": [
-        "community",
-        "events",
-        "daniele-ninarello-theatre-performance"
-      ],
-      "it": [
-        "contaminazioni",
-        "eventi",
-        "daniele-ninarello-theatre-performance"
-      ]
-    },
-    "isIndex": false,
-    "indexType": "",
-    "__typename": "event",
-    "paths": [
-      {
-        "locale": "en",
-        "slugs": [
-          "community",
-          "events",
-          "daniele-ninarello-theatre-performance"
-        ]
-      },
-      {
-        "locale": "it",
-        "slugs": [
-          "contaminazioni",
-          "eventi",
-          "daniele-ninarello-theatre-performance"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "en",
-        "url": "community/events/daniele-ninarello-theatre-performance"
-      },
-      {
-        "locale": "it",
-        "url": "contaminazioni/eventi/daniele-ninarello-theatre-performance"
-      }
-    ]
-  },
-  {
-    "id": "96744568",
-    "slugs": {
-      "en": [
-        "community",
-        "events",
-        "daniele-ninarello-installation"
-      ],
-      "it": [
-        "contaminazioni",
-        "eventi",
-        "daniele-ninarello-installazione"
-      ]
-    },
-    "isIndex": false,
-    "indexType": "",
-    "__typename": "event",
-    "paths": [
-      {
-        "locale": "en",
-        "slugs": [
-          "community",
-          "events",
-          "daniele-ninarello-installation"
-        ]
-      },
-      {
-        "locale": "it",
-        "slugs": [
-          "contaminazioni",
-          "eventi",
-          "daniele-ninarello-installazione"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "en",
-        "url": "community/events/daniele-ninarello-installation"
-      },
-      {
-        "locale": "it",
-        "url": "contaminazioni/eventi/daniele-ninarello-installazione"
-      }
-    ]
-  },
-  {
-    "id": "96740795",
-    "slugs": {
-      "en": [
-        "community",
-        "events",
-        "alessio-maria-romano"
-      ],
-      "it": [
-        "contaminazioni",
-        "eventi",
-        "alessio-maria-romano"
-      ]
-    },
-    "isIndex": false,
-    "indexType": "",
-    "__typename": "event",
-    "paths": [
-      {
-        "locale": "en",
-        "slugs": [
-          "community",
-          "events",
-          "alessio-maria-romano"
-        ]
-      },
-      {
-        "locale": "it",
-        "slugs": [
-          "contaminazioni",
-          "eventi",
-          "alessio-maria-romano"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "en",
-        "url": "community/events/alessio-maria-romano"
-      },
-      {
-        "locale": "it",
-        "url": "contaminazioni/eventi/alessio-maria-romano"
+        "url": "contaminazioni/eventi/la-lingua-in-movimento"
       }
     ]
   },
