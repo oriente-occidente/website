@@ -8,21 +8,22 @@ import { formatDate } from 'lib/utils';
 export default function RegistrationForm({ locale, paymentSettings, title }) {
   const [booked, setBooked] = useState(null);
 
-  // const schema = yup.object().shape({
-  //   'form-name': yup.string(),
-  //   language: yup.string(),
-  //   level: yup.string().required('plase choose one option'),
-  //   firstName: yup.string().required('please provide your first name'),
-  //   lastName: yup.string().required('please provide your last name'),
-  //   email: yup.string().email().required('email is required'),
-  //   address: yup.string().required('please fill with your address'),
-  //   city: yup.string().required('please indicate your city'),
-  //   stateCode: yup.string().required('èlease provide a state code'),
-  //   zipCode: yup.string().required('please provide a zip code'),
-  //   phone: yup.string().required('Please add your phone number'),
-  //   notes: yup.string(),
-  //   privacy: yup.boolean().oneOf([true], 'Should accept privacy policy'),
-  // });
+  const schema = yup.object().shape({
+    title: yup.string(),
+    'form-name': yup.string(),
+    language: yup.string(),
+    level: yup.string().required('plase choose one option'),
+    firstName: yup.string().required('please provide your first name'),
+    lastName: yup.string().required('please provide your last name'),
+    email: yup.string().email().required('email is required'),
+    address: yup.string().required('please fill with your address'),
+    city: yup.string().required('please indicate your city'),
+    stateCode: yup.string().required('èlease provide a state code'),
+    zipCode: yup.string().required('please provide a zip code'),
+    phone: yup.string().required('Please add your phone number'),
+    notes: yup.string(),
+    privacy: yup.boolean().oneOf([true], 'Should accept privacy policy'),
+  });
 
   const fields = [
     {
@@ -100,7 +101,7 @@ export default function RegistrationForm({ locale, paymentSettings, title }) {
     handleSubmit,
     formState: { errors },
   } = useForm({
-    // resolver: yupResolver(schema),
+    resolver: yupResolver(schema),
   });
 
   const encode = (data) => {
@@ -173,7 +174,7 @@ export default function RegistrationForm({ locale, paymentSettings, title }) {
           <form
             onSubmit={handleSubmit(handlePost)}
             name="registration"
-            netlify={true}
+            netlify-data="true"
           >
             <input type="hidden" name="form-name" value="registration" />
             {fields

@@ -92,6 +92,7 @@ function Page({ data, locale }) {
   // console.log('paymentSettings', paymentSettings);
   // console.log('isBookable', isBookable);
   // console.log('isFuture', isFuture);
+  //forms/${pageInfo.id}
 
   return (
     <>
@@ -139,7 +140,11 @@ function Page({ data, locale }) {
 
             <div className="md:col-span-3 md:border-l border-color-gray">
               {payload.sections.map((section) => (
-                <div key={section.id} id={section.id} className="px-4 md:py-2 md:px-12">
+                <div
+                  key={section.id}
+                  id={section.id}
+                  className="px-4 md:py-2 md:px-12"
+                >
                   <StructuredContent locale={locale} content={section.body} />
                 </div>
               ))}
@@ -181,7 +186,7 @@ function Page({ data, locale }) {
         )}
         {showBookButton && (
           <div className="container">
-            <Link href={`/forms/${pageInfo.id}`} locale={locale}>
+            <Link href={`/forms`} locale={locale}>
               <a
                 className="w-48 bg-white text-gray-700 font-semibold hover:text-black py-2 px-4 border border-gray-700 hover:border-black"
                 // onClick={() => setShowDialog(true)}
