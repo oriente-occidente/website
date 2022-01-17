@@ -128,6 +128,7 @@ export default function RegistrationForm({ locale, paymentSettings, title }) {
         console.log('SUCCESS', response);
         console.log('body', response.body);
         setBooked(choosen);
+        alert('Success!');
       })
       .catch((error) => {
         console.log('ERROR', error);
@@ -172,10 +173,7 @@ export default function RegistrationForm({ locale, paymentSettings, title }) {
           <form
             onSubmit={handleSubmit(handlePost)}
             name="registration"
-            method="POST"
-            data-netlify={true}
             netlify={true}
-            action="/thankyou"
           >
             <input type="hidden" name="form-name" value="registration" />
             {fields
