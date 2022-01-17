@@ -10,7 +10,6 @@ export default function RegistrationForm({ locale, paymentSettings }) {
 
   const schema = yup.object().shape({
     'form-name': yup.string(),
-    'data-netlify': yup.string(),
     language: yup.string(),
     level: yup.string().required('plase choose one option'),
     firstName: yup.string().required('please provide your first name'),
