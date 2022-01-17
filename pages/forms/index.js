@@ -16,7 +16,7 @@ function Page({ data, locale }) {
   return (
     <Layout footer={footer} menu={menu} locale={locale}>
       <Seo tags={site.faviconMetaTags} />
-      <h1 className={styles.title}>Contact Me</h1>
+      <h1 className="text-lg">Contact Me</h1>
       {success && (
         <p style={{ color: 'green' }}>Successfully submitted form!</p>
       )}
@@ -24,7 +24,7 @@ function Page({ data, locale }) {
       <form
         name="contact"
         method="POST"
-        action="/?success=true"
+        action="/forms?success=true"
         data-netlify="true"
       >
         <input type="hidden" name="form-name" value="contact" />
