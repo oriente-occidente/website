@@ -547,6 +547,52 @@
     "urls": []
   },
   {
+    "id": "89224754",
+    "slugs": {
+      "en": [
+        "community",
+        "events",
+        "festival-event"
+      ],
+      "it": [
+        "contaminazioni",
+        "eventi",
+        "evento-di-prova"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "event",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "community",
+          "events",
+          "festival-event"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "contaminazioni",
+          "eventi",
+          "evento-di-prova"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "community/events/festival-event"
+      },
+      {
+        "locale": "it",
+        "url": "contaminazioni/eventi/evento-di-prova"
+      }
+    ]
+  },
+  {
     "id": "97510034",
     "slugs": {
       "en": [
@@ -593,17 +639,17 @@
     ]
   },
   {
-    "id": "89224754",
+    "id": "97512354",
     "slugs": {
       "en": [
         "community",
         "events",
-        "festival-event"
+        "mostra-oriente-occidente-40-ricordi"
       ],
       "it": [
         "contaminazioni",
         "eventi",
-        "evento-di-prova"
+        "mostra-oriente-occidente-40-ricordi"
       ]
     },
     "isIndex": false,
@@ -615,7 +661,7 @@
         "slugs": [
           "community",
           "events",
-          "festival-event"
+          "mostra-oriente-occidente-40-ricordi"
         ]
       },
       {
@@ -623,18 +669,18 @@
         "slugs": [
           "contaminazioni",
           "eventi",
-          "evento-di-prova"
+          "mostra-oriente-occidente-40-ricordi"
         ]
       }
     ],
     "urls": [
       {
         "locale": "en",
-        "url": "community/events/festival-event"
+        "url": "community/events/mostra-oriente-occidente-40-ricordi"
       },
       {
         "locale": "it",
-        "url": "contaminazioni/eventi/evento-di-prova"
+        "url": "contaminazioni/eventi/mostra-oriente-occidente-40-ricordi"
       }
     ]
   },
@@ -3717,6 +3763,144 @@
       {
         "locale": "it",
         "url": "contaminazioni/eventi/michela-lucenti"
+      }
+    ]
+  },
+  {
+    "id": "97536012",
+    "slugs": {
+      "en": [
+        "studio",
+        "workshop",
+        "cunningham-technique-r-workshop"
+      ],
+      "it": [
+        "studio",
+        "workshop",
+        "cunningham-technique-r-workshop"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "workshop",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "studio",
+          "workshop",
+          "cunningham-technique-r-workshop"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "studio",
+          "workshop",
+          "cunningham-technique-r-workshop"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "studio/workshop/cunningham-technique-r-workshop"
+      },
+      {
+        "locale": "it",
+        "url": "studio/workshop/cunningham-technique-r-workshop"
+      }
+    ]
+  },
+  {
+    "id": "97516225",
+    "slugs": {
+      "en": [
+        "studio",
+        "workshop",
+        "impart-lab-ripensare-il-palcoscenico"
+      ],
+      "it": [
+        "studio",
+        "workshop",
+        "impart-lab-ripensare-il-palcoscenico"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "workshop",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "studio",
+          "workshop",
+          "impart-lab-ripensare-il-palcoscenico"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "studio",
+          "workshop",
+          "impart-lab-ripensare-il-palcoscenico"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "studio/workshop/impart-lab-ripensare-il-palcoscenico"
+      },
+      {
+        "locale": "it",
+        "url": "studio/workshop/impart-lab-ripensare-il-palcoscenico"
+      }
+    ]
+  },
+  {
+    "id": "97514206",
+    "slugs": {
+      "en": [
+        "studio",
+        "workshop",
+        "tools-for-action-workshop"
+      ],
+      "it": [
+        "studio",
+        "workshop",
+        "tools-for-action-workshop"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "workshop",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "studio",
+          "workshop",
+          "tools-for-action-workshop"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "studio",
+          "workshop",
+          "tools-for-action-workshop"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "studio/workshop/tools-for-action-workshop"
+      },
+      {
+        "locale": "it",
+        "url": "studio/workshop/tools-for-action-workshop"
       }
     ]
   },

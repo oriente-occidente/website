@@ -3,7 +3,18 @@ import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
 import t from 'lib/locales';
-import { formatDate } from 'lib/utils';
+import {
+  useNetlifyForm,
+  NetlifyFormProvider,
+  NetlifyFormComponent,
+  Honeypot,
+} from 'react-netlify-forms';
+// const schema2 = yup
+//   .object({
+//     firstName: yup.string().required(),
+//     age: yup.number().positive().integer().required(),
+//   })
+//   .required();
 
 export default function RegistrationForm({ locale, paymentSettings }) {
   const [booked, setBooked] = useState(null);
@@ -30,6 +41,11 @@ export default function RegistrationForm({ locale, paymentSettings }) {
       name: 'form-name',
       type: 'hidden',
       defaultValue: 'registration',
+    },
+    {
+      name: 'data-netlify',
+      type: 'hidden',
+      defaultValue: 'true',
     },
     {
       name: 'language',
@@ -104,40 +120,18 @@ export default function RegistrationForm({ locale, paymentSettings }) {
     resolver: yupResolver(schema),
   });
 
-  const encode = (data) => {
-    return Object.keys(data)
-      .map(
-        (key) => encodeURIComponent(key) + '=' + encodeURIComponent(data[key])
-      )
-      .join('&');
-  };
+  // const encode = (data) => {
+  //   return Object.keys(data)
+  //     .map(
+  //       (key) => encodeURIComponent(key) + '=' + encodeURIComponent(data[key])
+  //     )
+  //     .join('&');
+  // };
 
-  // Handles the post process to Netlify so we can access their serverless functions
-  const handlePost = (formData, event) => {
-    console.log('formData', formData);
-
-    const choosen = paymentSettings.find((p) => p.id === formData.level);
-    const choiche = event.description;
-
-    fetch(`/`, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      body: encode({ ...formData, choiche }),
-    })
-      .then((response) => {
-        console.log('SUCCESS', response);
-        console.log('body', response.body);
-        setBooked(choosen);
-      })
-      .catch((error) => {
-        console.log('ERROR', error);
-      });
-    event.preventDefault();
-  };
   // const sendToNetlify = async (data) => {
   //   try {
   //     const event = paymentSettings.find((p) => p.id === data.level);
-  //     const eventName = event.description;
+  //     const eventDescription = event.description;
   //     await fetch('/', {
   //       method: 'POST',
   //       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
@@ -149,51 +143,56 @@ export default function RegistrationForm({ locale, paymentSettings }) {
   //   }
   // };
 
+  const netlify = useNetlifyForm({
+    name: 'react-hook-form',
+    action: '/thankyou',
+    // honeypotName: 'bot-field',
+    onSuccess: (response, context) => {
+      console.log('Successfully sent form data to Netlify Server');
+    },
+  });
+  const onSubmit = (data) => {
+    console.log('DATA', data);
+    // const event = paymentSettings.find((p) => p.id === data.level);
+    // const eventDescription = event.description;
+    // setBooked(event);
+    netlify.handleSubmit(null, data);
+  };
+
   // const onSubmit = async (data) => {
   //   console.log('DATA', data);
   //   await sendToNetlify(data);
   // };
 
-  return (
-    <div>
-      <ul>
-        {!booked &&
-          paymentSettings.map((p) => {
-            return (
-              <li key={p.id}>
-                <span>{p.description}</span>
-                <span>, PRICE: {p.amount} €</span>
-                <span>
-                  , DATES: {p.startDate ? formatDate(p.startDate, locale) : ''}{' '}
-                  - {p.endDate ? formatDate(p.endDate, locale) : ''}
-                </span>
-              </li>
-            );
-          })}
-      </ul>
-      {booked && (
+  if (netlify.success && booked) {
+    return (
+      <div>
+        <h3 className="text-lg font-semibold">
+          Richiesta inviata corretamente
+        </h3>
+        <div>Il costo dell'evento è di {booked.amount}€</div>
         <div>
-          <h3 className="text-lg font-semibold">
-            Richiesta inviata corretamente
-          </h3>
-          <div>Il costo dell'evento è di {booked.amount}€</div>
-          <div>
-            Qui puoi aquistare il tuo biglietto:
-            <a href={booked.paymentLink} target="_blank" rel="noopener">
-              {booked.paymentLink}
-            </a>
-          </div>
+          Qui puoi aquistare il tuo biglietto:
+          <a href={booked.paymentLink} target="_blank" rel="noopener">
+            {booked.paymentLink}
+          </a>
         </div>
-      )}
-      <h1>REGISTER NOW</h1>
-      <form
-        onSubmit={handleSubmit(handlePost)}
-        name="registration"
-        method="POST"
-        action="/success/"
-        data-netlify="true"
-      >
-        <>
+      </div>
+    );
+  }
+
+  return (
+    <NetlifyFormProvider {...netlify}>
+      <NetlifyFormComponent onSubmit={handleSubmit(onSubmit)}>
+        <div>
+          <Honeypot />
+
+          {netlify.error && (
+            <p sx={{ variant: 'alerts.muted', p: 3 }}>
+              Sorry, we could not reach servers. Because it only works on
+              Netlify, our GitHub demo does not provide a response.
+            </p>
+          )}
           {fields
             .filter((f) => f.type === 'hidden')
             .map((field) => {
@@ -202,7 +201,7 @@ export default function RegistrationForm({ locale, paymentSettings }) {
                   key={field.name}
                   type="hidden"
                   name={field.name}
-                  value={field.defaultValue || ''}
+                  defaultValue={field.defaultValue || ''}
                   {...register(field.name)}
                 />
               );
@@ -287,8 +286,8 @@ export default function RegistrationForm({ locale, paymentSettings }) {
             type="submit"
             value="Invia"
           />
-        </>
-      </form>
-    </div>
+        </div>
+      </NetlifyFormComponent>
+    </NetlifyFormProvider>
   );
 }
