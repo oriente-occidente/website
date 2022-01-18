@@ -16,10 +16,10 @@ import HeroIndex from 'components/hero/HeroIndex';
 import GalleryPreview from 'components/galleries/GalleryPreview';
 import ResultsGrid from 'components/ResultsGrid';
 import Filters from 'components/Filters';
-// import Modal from 'components/Modal';
-// import EventForm from 'components/forms/EventForm';
 import Partners from 'components/Partners';
 import Team from 'components/Team';
+// import EventForm from 'components/forms/EventForm';
+// import Modal from 'components/Modal';
 // import { useAppContext } from 'lib/ctx';
 
 function Page({ data, locale }) {
