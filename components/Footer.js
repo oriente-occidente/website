@@ -6,18 +6,6 @@ import translate from 'lib/locales';
 import { resolveLinkById } from 'lib/utils';
 import Newsletter from './Newsletter';
 
-const navigation = {
-  legal: [
-    { title: 'Privacy', link: '#', target: '' },
-    { title: 'Terms', link: '#', target: '' },
-    {
-      title: 'Credits',
-      link: 'https://www.cantierecreativo.net',
-      target: '_blank',
-    },
-  ],
-};
-
 export default function Footer({ locale, data, hideNewsletter = false }) {
   return (
     <>
@@ -108,19 +96,42 @@ export default function Footer({ locale, data, hideNewsletter = false }) {
                   Legal
                 </div>
                 <ul role="list" className="mt-4 space-y-2">
-                  {navigation.legal.map((item) => (
-                    <li key={item.title}>
-                      <Link href={`${item.link}`}>
-                        <a
-                          title={`Link to ${item.title}`}
-                          target={item.target}
-                          className="text-black-transparent text-xxs tracking-widest hover:text-black"
-                        >
-                          {item.title}
-                        </a>
-                      </Link>
-                    </li>
-                  ))}
+                  <li>
+                    <Link href={`https://www.iubenda.com/privacy-policy/${translate('cookiePolicyId', locale)}`}>
+                      <a
+                        title={`${translate('privacyPolicyTitle', locale)}`}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="text-black-transparent text-xxs tracking-widest hover:text-black iubenda-nostyle no-brand iubenda-embed"
+                      >
+                        Privacy Policy
+                      </a>
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href={`https://www.iubenda.com/privacy-policy/${translate('cookiePolicyId', locale)}/cookie-policy`}>
+                      <a
+                        title={`${translate('cookiePolicyTitle', locale)}`}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="text-black-transparent text-xxs tracking-widest hover:text-black iubenda-nostyle no-brand iubenda-embed"
+                      >
+                        Cookie Policy
+                      </a>
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="https://www.cantierecreativo.net/">
+                      <a
+                        title={`${translate('creditsTitle', locale)}`}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="text-black-transparent text-xxs tracking-widest hover:text-black whitespace-nowrap"
+                      >
+                        Credits
+                      </a>
+                    </Link>
+                  </li>
                 </ul>
               </div>
             </div>
