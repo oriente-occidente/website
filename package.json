@@ -1,7 +1,7 @@
 {
-  "name": "netlify-test-next12",
-  "version": "0.1.0",
-  "description": "Fancy Next.js app",
+  "name": "orienteoccidente",
+  "version": "0.1.1",
+  "description": "orienteoccidente",
   "scripts": {
     "data": "node ./scripts/index.js",
     "dev": "yarn data && next",
