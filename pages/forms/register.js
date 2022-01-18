@@ -115,7 +115,7 @@ function Page({ data, locale }) {
             method="POST"
             action={`${
               locale === 'en' ? '/en' : ''
-            }/forms/registration?success=true&id=${eventId}&choicheId=${paymentId}`}
+            }/forms/register?success=true&id=${eventId}&choicheId=${paymentId}`}
             data-netlify="true"
           >
             <input type="hidden" name="form-name" value="register" />
