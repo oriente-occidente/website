@@ -547,6 +547,98 @@
     "urls": []
   },
   {
+    "id": "96086557",
+    "slugs": {
+      "en": [
+        "community",
+        "events",
+        "silvia-dezulian-and-filippo-porro"
+      ],
+      "it": [
+        "contaminazioni",
+        "eventi",
+        "silvia-dezulian-and-filippo-porro"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "event",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "community",
+          "events",
+          "silvia-dezulian-and-filippo-porro"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "contaminazioni",
+          "eventi",
+          "silvia-dezulian-and-filippo-porro"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "community/events/silvia-dezulian-and-filippo-porro"
+      },
+      {
+        "locale": "it",
+        "url": "contaminazioni/eventi/silvia-dezulian-and-filippo-porro"
+      }
+    ]
+  },
+  {
+    "id": "96086850",
+    "slugs": {
+      "en": [
+        "community",
+        "events",
+        "cristina-kristal-rizzo"
+      ],
+      "it": [
+        "contaminazioni",
+        "eventi",
+        "cristina-kristal-rizzo"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "event",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "community",
+          "events",
+          "cristina-kristal-rizzo"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "contaminazioni",
+          "eventi",
+          "cristina-kristal-rizzo"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "community/events/cristina-kristal-rizzo"
+      },
+      {
+        "locale": "it",
+        "url": "contaminazioni/eventi/cristina-kristal-rizzo"
+      }
+    ]
+  },
+  {
     "id": "97512354",
     "slugs": {
       "en": [
@@ -865,52 +957,6 @@
       {
         "locale": "it",
         "url": "contaminazioni/eventi/mostra-oriente-occidente-40-radici"
-      }
-    ]
-  },
-  {
-    "id": "96086850",
-    "slugs": {
-      "en": [
-        "community",
-        "events",
-        "cristina-kristal-rizzo"
-      ],
-      "it": [
-        "contaminazioni",
-        "eventi",
-        "cristina-kristal-rizzo"
-      ]
-    },
-    "isIndex": false,
-    "indexType": "",
-    "__typename": "event",
-    "paths": [
-      {
-        "locale": "en",
-        "slugs": [
-          "community",
-          "events",
-          "cristina-kristal-rizzo"
-        ]
-      },
-      {
-        "locale": "it",
-        "slugs": [
-          "contaminazioni",
-          "eventi",
-          "cristina-kristal-rizzo"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "en",
-        "url": "community/events/cristina-kristal-rizzo"
-      },
-      {
-        "locale": "it",
-        "url": "contaminazioni/eventi/cristina-kristal-rizzo"
       }
     ]
   },
@@ -3169,52 +3215,6 @@
     ]
   },
   {
-    "id": "96086557",
-    "slugs": {
-      "en": [
-        "community",
-        "events",
-        "silvia-dezulian-and-filippo-porro"
-      ],
-      "it": [
-        "contaminazioni",
-        "eventi",
-        "silvia-dezulian-and-filippo-porro"
-      ]
-    },
-    "isIndex": false,
-    "indexType": "",
-    "__typename": "event",
-    "paths": [
-      {
-        "locale": "en",
-        "slugs": [
-          "community",
-          "events",
-          "silvia-dezulian-and-filippo-porro"
-        ]
-      },
-      {
-        "locale": "it",
-        "slugs": [
-          "contaminazioni",
-          "eventi",
-          "silvia-dezulian-and-filippo-porro"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "en",
-        "url": "community/events/silvia-dezulian-and-filippo-porro"
-      },
-      {
-        "locale": "it",
-        "url": "contaminazioni/eventi/silvia-dezulian-and-filippo-porro"
-      }
-    ]
-  },
-  {
     "id": "96086364",
     "slugs": {
       "en": [
@@ -3767,98 +3767,6 @@
     ]
   },
   {
-    "id": "97900318",
-    "slugs": {
-      "en": [
-        "studio",
-        "workshop",
-        "repertory-sasha-waltz-workshop"
-      ],
-      "it": [
-        "studio",
-        "workshop",
-        "repertory-sasha-waltz-workshop"
-      ]
-    },
-    "isIndex": false,
-    "indexType": "",
-    "__typename": "workshop",
-    "paths": [
-      {
-        "locale": "en",
-        "slugs": [
-          "studio",
-          "workshop",
-          "repertory-sasha-waltz-workshop"
-        ]
-      },
-      {
-        "locale": "it",
-        "slugs": [
-          "studio",
-          "workshop",
-          "repertory-sasha-waltz-workshop"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "en",
-        "url": "studio/workshop/repertory-sasha-waltz-workshop"
-      },
-      {
-        "locale": "it",
-        "url": "studio/workshop/repertory-sasha-waltz-workshop"
-      }
-    ]
-  },
-  {
-    "id": "97516225",
-    "slugs": {
-      "en": [
-        "studio",
-        "workshop",
-        "impart-lab-ripensare-il-palcoscenico"
-      ],
-      "it": [
-        "studio",
-        "workshop",
-        "impart-lab-ripensare-il-palcoscenico"
-      ]
-    },
-    "isIndex": false,
-    "indexType": "",
-    "__typename": "workshop",
-    "paths": [
-      {
-        "locale": "en",
-        "slugs": [
-          "studio",
-          "workshop",
-          "impart-lab-ripensare-il-palcoscenico"
-        ]
-      },
-      {
-        "locale": "it",
-        "slugs": [
-          "studio",
-          "workshop",
-          "impart-lab-ripensare-il-palcoscenico"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "en",
-        "url": "studio/workshop/impart-lab-ripensare-il-palcoscenico"
-      },
-      {
-        "locale": "it",
-        "url": "studio/workshop/impart-lab-ripensare-il-palcoscenico"
-      }
-    ]
-  },
-  {
     "id": "97911583",
     "slugs": {
       "en": [
@@ -3901,6 +3809,374 @@
       {
         "locale": "it",
         "url": "studio/workshop/workshop-studio-wayne-mcgregor"
+      }
+    ]
+  },
+  {
+    "id": "98006577",
+    "slugs": {
+      "en": [
+        "studio",
+        "workshop",
+        "masterclass-compagnie-maguy-marin"
+      ],
+      "it": [
+        "studio",
+        "workshop",
+        "masterclass-compagnie-maguy-marin"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "workshop",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "studio",
+          "workshop",
+          "masterclass-compagnie-maguy-marin"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "studio",
+          "workshop",
+          "masterclass-compagnie-maguy-marin"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "studio/workshop/masterclass-compagnie-maguy-marin"
+      },
+      {
+        "locale": "it",
+        "url": "studio/workshop/masterclass-compagnie-maguy-marin"
+      }
+    ]
+  },
+  {
+    "id": "98007464",
+    "slugs": {
+      "en": [
+        "studio",
+        "workshop",
+        "tools-for-action-workshop-maggio-2021"
+      ],
+      "it": [
+        "studio",
+        "workshop",
+        "tools-for-action-workshop-maggio-2021"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "workshop",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "studio",
+          "workshop",
+          "tools-for-action-workshop-maggio-2021"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "studio",
+          "workshop",
+          "tools-for-action-workshop-maggio-2021"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "studio/workshop/tools-for-action-workshop-maggio-2021"
+      },
+      {
+        "locale": "it",
+        "url": "studio/workshop/tools-for-action-workshop-maggio-2021"
+      }
+    ]
+  },
+  {
+    "id": "98007460",
+    "slugs": {
+      "en": [
+        "studio",
+        "workshop",
+        "oltre-il-confine-workshop-intensivo-di-teatro-danza"
+      ],
+      "it": [
+        "studio",
+        "workshop",
+        "oltre-il-confine-workshop-intensivo-di-teatro-danza"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "workshop",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "studio",
+          "workshop",
+          "oltre-il-confine-workshop-intensivo-di-teatro-danza"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "studio",
+          "workshop",
+          "oltre-il-confine-workshop-intensivo-di-teatro-danza"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "studio/workshop/oltre-il-confine-workshop-intensivo-di-teatro-danza"
+      },
+      {
+        "locale": "it",
+        "url": "studio/workshop/oltre-il-confine-workshop-intensivo-di-teatro-danza"
+      }
+    ]
+  },
+  {
+    "id": "98007248",
+    "slugs": {
+      "en": [
+        "studio",
+        "workshop",
+        "workshop-repertory-johan-inger"
+      ],
+      "it": [
+        "studio",
+        "workshop",
+        "workshop-repertory-johan-inger"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "workshop",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "studio",
+          "workshop",
+          "workshop-repertory-johan-inger"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "studio",
+          "workshop",
+          "workshop-repertory-johan-inger"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "studio/workshop/workshop-repertory-johan-inger"
+      },
+      {
+        "locale": "it",
+        "url": "studio/workshop/workshop-repertory-johan-inger"
+      }
+    ]
+  },
+  {
+    "id": "98007148",
+    "slugs": {
+      "en": [
+        "studio",
+        "workshop",
+        "rosas-repertory-workshop-drumming-aprile"
+      ],
+      "it": [
+        "studio",
+        "workshop",
+        "rosas-repertory-workshop-drumming-aprile"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "workshop",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "studio",
+          "workshop",
+          "rosas-repertory-workshop-drumming-aprile"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "studio",
+          "workshop",
+          "rosas-repertory-workshop-drumming-aprile"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "studio/workshop/rosas-repertory-workshop-drumming-aprile"
+      },
+      {
+        "locale": "it",
+        "url": "studio/workshop/rosas-repertory-workshop-drumming-aprile"
+      }
+    ]
+  },
+  {
+    "id": "97899921",
+    "slugs": {
+      "en": [
+        "studio",
+        "workshop",
+        "rosas-repertory-workshop-drumming"
+      ],
+      "it": [
+        "studio",
+        "workshop",
+        "rosas-repertory-workshop-drumming"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "workshop",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "studio",
+          "workshop",
+          "rosas-repertory-workshop-drumming"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "studio",
+          "workshop",
+          "rosas-repertory-workshop-drumming"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "studio/workshop/rosas-repertory-workshop-drumming"
+      },
+      {
+        "locale": "it",
+        "url": "studio/workshop/rosas-repertory-workshop-drumming"
+      }
+    ]
+  },
+  {
+    "id": "98006906",
+    "slugs": {
+      "en": [
+        "studio",
+        "workshop",
+        "as-far-as-the-imagination-can-reach-using-a-piece-of-string-workshop"
+      ],
+      "it": [
+        "studio",
+        "workshop",
+        "as-far-as-the-imagination-can-reach-using-a-piece-of-string-workshop"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "workshop",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "studio",
+          "workshop",
+          "as-far-as-the-imagination-can-reach-using-a-piece-of-string-workshop"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "studio",
+          "workshop",
+          "as-far-as-the-imagination-can-reach-using-a-piece-of-string-workshop"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "studio/workshop/as-far-as-the-imagination-can-reach-using-a-piece-of-string-workshop"
+      },
+      {
+        "locale": "it",
+        "url": "studio/workshop/as-far-as-the-imagination-can-reach-using-a-piece-of-string-workshop"
+      }
+    ]
+  },
+  {
+    "id": "98006519",
+    "slugs": {
+      "en": [
+        "studio",
+        "workshop",
+        "choreographic-material-landerer"
+      ],
+      "it": [
+        "studio",
+        "workshop",
+        "choreographic-material-landerer"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "workshop",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "studio",
+          "workshop",
+          "choreographic-material-landerer"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "studio",
+          "workshop",
+          "choreographic-material-landerer"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "studio/workshop/choreographic-material-landerer"
+      },
+      {
+        "locale": "it",
+        "url": "studio/workshop/choreographic-material-landerer"
       }
     ]
   },
@@ -4135,52 +4411,6 @@
     ]
   },
   {
-    "id": "97899921",
-    "slugs": {
-      "en": [
-        "studio",
-        "workshop",
-        "rosas-repertory-workshop-drumming"
-      ],
-      "it": [
-        "studio",
-        "workshop",
-        "rosas-repertory-workshop-drumming"
-      ]
-    },
-    "isIndex": false,
-    "indexType": "",
-    "__typename": "workshop",
-    "paths": [
-      {
-        "locale": "en",
-        "slugs": [
-          "studio",
-          "workshop",
-          "rosas-repertory-workshop-drumming"
-        ]
-      },
-      {
-        "locale": "it",
-        "slugs": [
-          "studio",
-          "workshop",
-          "rosas-repertory-workshop-drumming"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "en",
-        "url": "studio/workshop/rosas-repertory-workshop-drumming"
-      },
-      {
-        "locale": "it",
-        "url": "studio/workshop/rosas-repertory-workshop-drumming"
-      }
-    ]
-  },
-  {
     "id": "97553467",
     "slugs": {
       "en": [
@@ -4411,6 +4641,98 @@
     ]
   },
   {
+    "id": "97900318",
+    "slugs": {
+      "en": [
+        "studio",
+        "workshop",
+        "repertory-sasha-waltz-workshop"
+      ],
+      "it": [
+        "studio",
+        "workshop",
+        "repertory-sasha-waltz-workshop"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "workshop",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "studio",
+          "workshop",
+          "repertory-sasha-waltz-workshop"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "studio",
+          "workshop",
+          "repertory-sasha-waltz-workshop"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "studio/workshop/repertory-sasha-waltz-workshop"
+      },
+      {
+        "locale": "it",
+        "url": "studio/workshop/repertory-sasha-waltz-workshop"
+      }
+    ]
+  },
+  {
+    "id": "97516225",
+    "slugs": {
+      "en": [
+        "studio",
+        "workshop",
+        "impart-lab-ripensare-il-palcoscenico"
+      ],
+      "it": [
+        "studio",
+        "workshop",
+        "impart-lab-ripensare-il-palcoscenico"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "workshop",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "studio",
+          "workshop",
+          "impart-lab-ripensare-il-palcoscenico"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "studio",
+          "workshop",
+          "impart-lab-ripensare-il-palcoscenico"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "studio/workshop/impart-lab-ripensare-il-palcoscenico"
+      },
+      {
+        "locale": "it",
+        "url": "studio/workshop/impart-lab-ripensare-il-palcoscenico"
+      }
+    ]
+  },
+  {
     "id": "96815611",
     "slugs": {
       "en": [
@@ -4549,52 +4871,6 @@
     ]
   },
   {
-    "id": "96816267",
-    "slugs": {
-      "en": [
-        "community",
-        "associated-artists",
-        "cristina-kristal-rizzo"
-      ],
-      "it": [
-        "contaminazioni",
-        "artisti-associati",
-        "cristina-kristal-rizzo"
-      ]
-    },
-    "isIndex": false,
-    "indexType": "",
-    "__typename": "artist",
-    "paths": [
-      {
-        "locale": "en",
-        "slugs": [
-          "community",
-          "associated-artists",
-          "cristina-kristal-rizzo"
-        ]
-      },
-      {
-        "locale": "it",
-        "slugs": [
-          "contaminazioni",
-          "artisti-associati",
-          "cristina-kristal-rizzo"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "en",
-        "url": "community/associated-artists/cristina-kristal-rizzo"
-      },
-      {
-        "locale": "it",
-        "url": "contaminazioni/artisti-associati/cristina-kristal-rizzo"
-      }
-    ]
-  },
-  {
     "id": "96816225",
     "slugs": {
       "en": [
@@ -4637,6 +4913,52 @@
       {
         "locale": "it",
         "url": "contaminazioni/artisti-associati/azioni-fuori-posto"
+      }
+    ]
+  },
+  {
+    "id": "96816267",
+    "slugs": {
+      "en": [
+        "community",
+        "associated-artists",
+        "cristina-kristal-rizzo"
+      ],
+      "it": [
+        "contaminazioni",
+        "artisti-associati",
+        "cristina-kristal-rizzo"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "artist",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "community",
+          "associated-artists",
+          "cristina-kristal-rizzo"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "contaminazioni",
+          "artisti-associati",
+          "cristina-kristal-rizzo"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "community/associated-artists/cristina-kristal-rizzo"
+      },
+      {
+        "locale": "it",
+        "url": "contaminazioni/artisti-associati/cristina-kristal-rizzo"
       }
     ]
   },
@@ -4687,52 +5009,6 @@
     ]
   },
   {
-    "id": "96816267",
-    "slugs": {
-      "en": [
-        "studio",
-        "artistic-residences",
-        "cristina-kristal-rizzo"
-      ],
-      "it": [
-        "studio",
-        "residenze-artistiche",
-        "cristina-kristal-rizzo"
-      ]
-    },
-    "isIndex": false,
-    "indexType": "",
-    "__typename": "artist",
-    "paths": [
-      {
-        "locale": "en",
-        "slugs": [
-          "studio",
-          "artistic-residences",
-          "cristina-kristal-rizzo"
-        ]
-      },
-      {
-        "locale": "it",
-        "slugs": [
-          "studio",
-          "residenze-artistiche",
-          "cristina-kristal-rizzo"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "en",
-        "url": "studio/artistic-residences/cristina-kristal-rizzo"
-      },
-      {
-        "locale": "it",
-        "url": "studio/residenze-artistiche/cristina-kristal-rizzo"
-      }
-    ]
-  },
-  {
     "id": "96816225",
     "slugs": {
       "en": [
@@ -4775,6 +5051,52 @@
       {
         "locale": "it",
         "url": "studio/residenze-artistiche/azioni-fuori-posto"
+      }
+    ]
+  },
+  {
+    "id": "96816267",
+    "slugs": {
+      "en": [
+        "studio",
+        "artistic-residences",
+        "cristina-kristal-rizzo"
+      ],
+      "it": [
+        "studio",
+        "residenze-artistiche",
+        "cristina-kristal-rizzo"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "artist",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "studio",
+          "artistic-residences",
+          "cristina-kristal-rizzo"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "studio",
+          "residenze-artistiche",
+          "cristina-kristal-rizzo"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "studio/artistic-residences/cristina-kristal-rizzo"
+      },
+      {
+        "locale": "it",
+        "url": "studio/residenze-artistiche/cristina-kristal-rizzo"
       }
     ]
   },

@@ -3,7 +3,7 @@ const { SiteClient } = require('datocms-client');
 const _ = require('lodash');
 
 const ENV = process.env.NEXT_PUBLIC_DATO_ENV ?? '';
-const DATO_API_KEY = process.env.DATO_API_KEY;
+const DATO_API_KEY = process.env.NEXT_PUBLIC_DATO_API_KEY;
 const options = ENV ? { environment: ENV } : null;
 const client = new SiteClient(DATO_API_KEY, options);
 
