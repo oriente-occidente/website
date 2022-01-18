@@ -248,6 +248,7 @@ export default function RegistrationForm({ locale, paymentSettings, title }) {
                         {!['select', 'checkbox', 'textarea'].includes(type) && (
                           <input
                             className="min-w-full rounded text-gray-700"
+                            name={name}
                             type={type}
                             maxLength="250"
                             {...register(name)}

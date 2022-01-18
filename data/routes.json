@@ -547,6 +547,328 @@
     "urls": []
   },
   {
+    "id": "97512354",
+    "slugs": {
+      "en": [
+        "community",
+        "events",
+        "mostra-oriente-occidente-40-ricordi"
+      ],
+      "it": [
+        "contaminazioni",
+        "eventi",
+        "mostra-oriente-occidente-40-ricordi"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "event",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "community",
+          "events",
+          "mostra-oriente-occidente-40-ricordi"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "contaminazioni",
+          "eventi",
+          "mostra-oriente-occidente-40-ricordi"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "community/events/mostra-oriente-occidente-40-ricordi"
+      },
+      {
+        "locale": "it",
+        "url": "contaminazioni/eventi/mostra-oriente-occidente-40-ricordi"
+      }
+    ]
+  },
+  {
+    "id": "96271432",
+    "slugs": {
+      "en": [
+        "community",
+        "events",
+        "c-est-pas-grave"
+      ],
+      "it": [
+        "contaminazioni",
+        "eventi",
+        "c-est-pas-grave"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "event",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "community",
+          "events",
+          "c-est-pas-grave"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "contaminazioni",
+          "eventi",
+          "c-est-pas-grave"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "community/events/c-est-pas-grave"
+      },
+      {
+        "locale": "it",
+        "url": "contaminazioni/eventi/c-est-pas-grave"
+      }
+    ]
+  },
+  {
+    "id": "96777991",
+    "slugs": {
+      "en": [
+        "community",
+        "events",
+        "il-confine-non-e-una-linea-sottile"
+      ],
+      "it": [
+        "contaminazioni",
+        "eventi",
+        "il-confine-non-e-una-linea-sottile"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "event",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "community",
+          "events",
+          "il-confine-non-e-una-linea-sottile"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "contaminazioni",
+          "eventi",
+          "il-confine-non-e-una-linea-sottile"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "community/events/il-confine-non-e-una-linea-sottile"
+      },
+      {
+        "locale": "it",
+        "url": "contaminazioni/eventi/il-confine-non-e-una-linea-sottile"
+      }
+    ]
+  },
+  {
+    "id": "96101947",
+    "slugs": {
+      "en": [
+        "community",
+        "events",
+        "le-europe-del-virus"
+      ],
+      "it": [
+        "contaminazioni",
+        "eventi",
+        "le-europe-del-virus"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "event",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "community",
+          "events",
+          "le-europe-del-virus"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "contaminazioni",
+          "eventi",
+          "le-europe-del-virus"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "community/events/le-europe-del-virus"
+      },
+      {
+        "locale": "it",
+        "url": "contaminazioni/eventi/le-europe-del-virus"
+      }
+    ]
+  },
+  {
+    "id": "96799799",
+    "slugs": {
+      "en": [
+        "community",
+        "events",
+        "voci-da-lontano"
+      ],
+      "it": [
+        "contaminazioni",
+        "eventi",
+        "voci-da-lontano"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "event",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "community",
+          "events",
+          "voci-da-lontano"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "contaminazioni",
+          "eventi",
+          "voci-da-lontano"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "community/events/voci-da-lontano"
+      },
+      {
+        "locale": "it",
+        "url": "contaminazioni/eventi/voci-da-lontano"
+      }
+    ]
+  },
+  {
+    "id": "96086741",
+    "slugs": {
+      "en": [
+        "community",
+        "events",
+        "giorgio-cuscito"
+      ],
+      "it": [
+        "contaminazioni",
+        "eventi",
+        "giorgio-cuscito"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "event",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "community",
+          "events",
+          "giorgio-cuscito"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "contaminazioni",
+          "eventi",
+          "giorgio-cuscito"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "community/events/giorgio-cuscito"
+      },
+      {
+        "locale": "it",
+        "url": "contaminazioni/eventi/giorgio-cuscito"
+      }
+    ]
+  },
+  {
+    "id": "97510034",
+    "slugs": {
+      "en": [
+        "community",
+        "events",
+        "mostra-oriente-occidente-40-radici"
+      ],
+      "it": [
+        "contaminazioni",
+        "eventi",
+        "mostra-oriente-occidente-40-radici"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "event",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "community",
+          "events",
+          "mostra-oriente-occidente-40-radici"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "contaminazioni",
+          "eventi",
+          "mostra-oriente-occidente-40-radici"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "community/events/mostra-oriente-occidente-40-radici"
+      },
+      {
+        "locale": "it",
+        "url": "contaminazioni/eventi/mostra-oriente-occidente-40-radici"
+      }
+    ]
+  },
+  {
     "id": "96086850",
     "slugs": {
       "en": [
@@ -639,98 +961,6 @@
     ]
   },
   {
-    "id": "97510034",
-    "slugs": {
-      "en": [
-        "community",
-        "events",
-        "mostra-oriente-occidente-40-radici"
-      ],
-      "it": [
-        "contaminazioni",
-        "eventi",
-        "mostra-oriente-occidente-40-radici"
-      ]
-    },
-    "isIndex": false,
-    "indexType": "",
-    "__typename": "event",
-    "paths": [
-      {
-        "locale": "en",
-        "slugs": [
-          "community",
-          "events",
-          "mostra-oriente-occidente-40-radici"
-        ]
-      },
-      {
-        "locale": "it",
-        "slugs": [
-          "contaminazioni",
-          "eventi",
-          "mostra-oriente-occidente-40-radici"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "en",
-        "url": "community/events/mostra-oriente-occidente-40-radici"
-      },
-      {
-        "locale": "it",
-        "url": "contaminazioni/eventi/mostra-oriente-occidente-40-radici"
-      }
-    ]
-  },
-  {
-    "id": "97512354",
-    "slugs": {
-      "en": [
-        "community",
-        "events",
-        "mostra-oriente-occidente-40-ricordi"
-      ],
-      "it": [
-        "contaminazioni",
-        "eventi",
-        "mostra-oriente-occidente-40-ricordi"
-      ]
-    },
-    "isIndex": false,
-    "indexType": "",
-    "__typename": "event",
-    "paths": [
-      {
-        "locale": "en",
-        "slugs": [
-          "community",
-          "events",
-          "mostra-oriente-occidente-40-ricordi"
-        ]
-      },
-      {
-        "locale": "it",
-        "slugs": [
-          "contaminazioni",
-          "eventi",
-          "mostra-oriente-occidente-40-ricordi"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "en",
-        "url": "community/events/mostra-oriente-occidente-40-ricordi"
-      },
-      {
-        "locale": "it",
-        "url": "contaminazioni/eventi/mostra-oriente-occidente-40-ricordi"
-      }
-    ]
-  },
-  {
     "id": "97509936",
     "slugs": {
       "en": [
@@ -773,98 +1003,6 @@
       {
         "locale": "it",
         "url": "contaminazioni/eventi/oltrepassare"
-      }
-    ]
-  },
-  {
-    "id": "96086741",
-    "slugs": {
-      "en": [
-        "community",
-        "events",
-        "giorgio-cuscito"
-      ],
-      "it": [
-        "contaminazioni",
-        "eventi",
-        "giorgio-cuscito"
-      ]
-    },
-    "isIndex": false,
-    "indexType": "",
-    "__typename": "event",
-    "paths": [
-      {
-        "locale": "en",
-        "slugs": [
-          "community",
-          "events",
-          "giorgio-cuscito"
-        ]
-      },
-      {
-        "locale": "it",
-        "slugs": [
-          "contaminazioni",
-          "eventi",
-          "giorgio-cuscito"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "en",
-        "url": "community/events/giorgio-cuscito"
-      },
-      {
-        "locale": "it",
-        "url": "contaminazioni/eventi/giorgio-cuscito"
-      }
-    ]
-  },
-  {
-    "id": "96799799",
-    "slugs": {
-      "en": [
-        "community",
-        "events",
-        "voci-da-lontano"
-      ],
-      "it": [
-        "contaminazioni",
-        "eventi",
-        "voci-da-lontano"
-      ]
-    },
-    "isIndex": false,
-    "indexType": "",
-    "__typename": "event",
-    "paths": [
-      {
-        "locale": "en",
-        "slugs": [
-          "community",
-          "events",
-          "voci-da-lontano"
-        ]
-      },
-      {
-        "locale": "it",
-        "slugs": [
-          "contaminazioni",
-          "eventi",
-          "voci-da-lontano"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "en",
-        "url": "community/events/voci-da-lontano"
-      },
-      {
-        "locale": "it",
-        "url": "contaminazioni/eventi/voci-da-lontano"
       }
     ]
   },
@@ -1003,52 +1141,6 @@
       {
         "locale": "it",
         "url": "contaminazioni/eventi/non-solo-ambiente-il-volto-geopolitico-della-transizione-energetica"
-      }
-    ]
-  },
-  {
-    "id": "96777991",
-    "slugs": {
-      "en": [
-        "community",
-        "events",
-        "il-confine-non-e-una-linea-sottile"
-      ],
-      "it": [
-        "contaminazioni",
-        "eventi",
-        "il-confine-non-e-una-linea-sottile"
-      ]
-    },
-    "isIndex": false,
-    "indexType": "",
-    "__typename": "event",
-    "paths": [
-      {
-        "locale": "en",
-        "slugs": [
-          "community",
-          "events",
-          "il-confine-non-e-una-linea-sottile"
-        ]
-      },
-      {
-        "locale": "it",
-        "slugs": [
-          "contaminazioni",
-          "eventi",
-          "il-confine-non-e-una-linea-sottile"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "en",
-        "url": "community/events/il-confine-non-e-una-linea-sottile"
-      },
-      {
-        "locale": "it",
-        "url": "contaminazioni/eventi/il-confine-non-e-una-linea-sottile"
       }
     ]
   },
@@ -2617,52 +2709,6 @@
     ]
   },
   {
-    "id": "96271432",
-    "slugs": {
-      "en": [
-        "community",
-        "events",
-        "c-est-pas-grave"
-      ],
-      "it": [
-        "contaminazioni",
-        "eventi",
-        "c-est-pas-grave"
-      ]
-    },
-    "isIndex": false,
-    "indexType": "",
-    "__typename": "event",
-    "paths": [
-      {
-        "locale": "en",
-        "slugs": [
-          "community",
-          "events",
-          "c-est-pas-grave"
-        ]
-      },
-      {
-        "locale": "it",
-        "slugs": [
-          "contaminazioni",
-          "eventi",
-          "c-est-pas-grave"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "en",
-        "url": "community/events/c-est-pas-grave"
-      },
-      {
-        "locale": "it",
-        "url": "contaminazioni/eventi/c-est-pas-grave"
-      }
-    ]
-  },
-  {
     "id": "96253900",
     "slugs": {
       "en": [
@@ -2797,52 +2843,6 @@
       {
         "locale": "it",
         "url": "contaminazioni/eventi/the-mountain-the-truth-e-the-paradise"
-      }
-    ]
-  },
-  {
-    "id": "96101947",
-    "slugs": {
-      "en": [
-        "community",
-        "events",
-        "le-europe-del-virus"
-      ],
-      "it": [
-        "contaminazioni",
-        "eventi",
-        "le-europe-del-virus"
-      ]
-    },
-    "isIndex": false,
-    "indexType": "",
-    "__typename": "event",
-    "paths": [
-      {
-        "locale": "en",
-        "slugs": [
-          "community",
-          "events",
-          "le-europe-del-virus"
-        ]
-      },
-      {
-        "locale": "it",
-        "slugs": [
-          "contaminazioni",
-          "eventi",
-          "le-europe-del-virus"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "en",
-        "url": "community/events/le-europe-del-virus"
-      },
-      {
-        "locale": "it",
-        "url": "contaminazioni/eventi/le-europe-del-virus"
       }
     ]
   },
@@ -3767,6 +3767,512 @@
     ]
   },
   {
+    "id": "97900318",
+    "slugs": {
+      "en": [
+        "studio",
+        "workshop",
+        "repertory-sasha-waltz-workshop"
+      ],
+      "it": [
+        "studio",
+        "workshop",
+        "repertory-sasha-waltz-workshop"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "workshop",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "studio",
+          "workshop",
+          "repertory-sasha-waltz-workshop"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "studio",
+          "workshop",
+          "repertory-sasha-waltz-workshop"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "studio/workshop/repertory-sasha-waltz-workshop"
+      },
+      {
+        "locale": "it",
+        "url": "studio/workshop/repertory-sasha-waltz-workshop"
+      }
+    ]
+  },
+  {
+    "id": "97516225",
+    "slugs": {
+      "en": [
+        "studio",
+        "workshop",
+        "impart-lab-ripensare-il-palcoscenico"
+      ],
+      "it": [
+        "studio",
+        "workshop",
+        "impart-lab-ripensare-il-palcoscenico"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "workshop",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "studio",
+          "workshop",
+          "impart-lab-ripensare-il-palcoscenico"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "studio",
+          "workshop",
+          "impart-lab-ripensare-il-palcoscenico"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "studio/workshop/impart-lab-ripensare-il-palcoscenico"
+      },
+      {
+        "locale": "it",
+        "url": "studio/workshop/impart-lab-ripensare-il-palcoscenico"
+      }
+    ]
+  },
+  {
+    "id": "97911583",
+    "slugs": {
+      "en": [
+        "studio",
+        "workshop",
+        "workshop-studio-wayne-mcgregor"
+      ],
+      "it": [
+        "studio",
+        "workshop",
+        "workshop-studio-wayne-mcgregor"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "workshop",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "studio",
+          "workshop",
+          "workshop-studio-wayne-mcgregor"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "studio",
+          "workshop",
+          "workshop-studio-wayne-mcgregor"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "studio/workshop/workshop-studio-wayne-mcgregor"
+      },
+      {
+        "locale": "it",
+        "url": "studio/workshop/workshop-studio-wayne-mcgregor"
+      }
+    ]
+  },
+  {
+    "id": "97907516",
+    "slugs": {
+      "en": [
+        "studio",
+        "workshop",
+        "ki_contact-workshop"
+      ],
+      "it": [
+        "studio",
+        "workshop",
+        "ki_contact-workshop"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "workshop",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "studio",
+          "workshop",
+          "ki_contact-workshop"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "studio",
+          "workshop",
+          "ki_contact-workshop"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "studio/workshop/ki_contact-workshop"
+      },
+      {
+        "locale": "it",
+        "url": "studio/workshop/ki_contact-workshop"
+      }
+    ]
+  },
+  {
+    "id": "97900993",
+    "slugs": {
+      "en": [
+        "studio",
+        "workshop",
+        "axis-syllabus-workshop"
+      ],
+      "it": [
+        "studio",
+        "workshop",
+        "axis-syllabus-workshop"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "workshop",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "studio",
+          "workshop",
+          "axis-syllabus-workshop"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "studio",
+          "workshop",
+          "axis-syllabus-workshop"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "studio/workshop/axis-syllabus-workshop"
+      },
+      {
+        "locale": "it",
+        "url": "studio/workshop/axis-syllabus-workshop"
+      }
+    ]
+  },
+  {
+    "id": "97900835",
+    "slugs": {
+      "en": [
+        "studio",
+        "workshop",
+        "urgence-et-movement-i-said-africa-not-tradition"
+      ],
+      "it": [
+        "studio",
+        "workshop",
+        "urgence-et-movement-i-said-africa-not-tradition"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "workshop",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "studio",
+          "workshop",
+          "urgence-et-movement-i-said-africa-not-tradition"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "studio",
+          "workshop",
+          "urgence-et-movement-i-said-africa-not-tradition"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "studio/workshop/urgence-et-movement-i-said-africa-not-tradition"
+      },
+      {
+        "locale": "it",
+        "url": "studio/workshop/urgence-et-movement-i-said-africa-not-tradition"
+      }
+    ]
+  },
+  {
+    "id": "97536012",
+    "slugs": {
+      "en": [
+        "studio",
+        "workshop",
+        "cunningham-technique-r-workshop"
+      ],
+      "it": [
+        "studio",
+        "workshop",
+        "cunningham-technique-r-workshop"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "workshop",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "studio",
+          "workshop",
+          "cunningham-technique-r-workshop"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "studio",
+          "workshop",
+          "cunningham-technique-r-workshop"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "studio/workshop/cunningham-technique-r-workshop"
+      },
+      {
+        "locale": "it",
+        "url": "studio/workshop/cunningham-technique-r-workshop"
+      }
+    ]
+  },
+  {
+    "id": "97514206",
+    "slugs": {
+      "en": [
+        "studio",
+        "workshop",
+        "tools-for-action-workshop"
+      ],
+      "it": [
+        "studio",
+        "workshop",
+        "tools-for-action-workshop"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "workshop",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "studio",
+          "workshop",
+          "tools-for-action-workshop"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "studio",
+          "workshop",
+          "tools-for-action-workshop"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "studio/workshop/tools-for-action-workshop"
+      },
+      {
+        "locale": "it",
+        "url": "studio/workshop/tools-for-action-workshop"
+      }
+    ]
+  },
+  {
+    "id": "97899921",
+    "slugs": {
+      "en": [
+        "studio",
+        "workshop",
+        "rosas-repertory-workshop-drumming"
+      ],
+      "it": [
+        "studio",
+        "workshop",
+        "rosas-repertory-workshop-drumming"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "workshop",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "studio",
+          "workshop",
+          "rosas-repertory-workshop-drumming"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "studio",
+          "workshop",
+          "rosas-repertory-workshop-drumming"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "studio/workshop/rosas-repertory-workshop-drumming"
+      },
+      {
+        "locale": "it",
+        "url": "studio/workshop/rosas-repertory-workshop-drumming"
+      }
+    ]
+  },
+  {
+    "id": "97553467",
+    "slugs": {
+      "en": [
+        "studio",
+        "workshop",
+        "genealogia-una-call-per-danzatori-e-amatori"
+      ],
+      "it": [
+        "studio",
+        "workshop",
+        "genealogia-una-call-per-danzatori-e-amatori"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "workshop",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "studio",
+          "workshop",
+          "genealogia-una-call-per-danzatori-e-amatori"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "studio",
+          "workshop",
+          "genealogia-una-call-per-danzatori-e-amatori"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "studio/workshop/genealogia-una-call-per-danzatori-e-amatori"
+      },
+      {
+        "locale": "it",
+        "url": "studio/workshop/genealogia-una-call-per-danzatori-e-amatori"
+      }
+    ]
+  },
+  {
+    "id": "97539633",
+    "slugs": {
+      "en": [
+        "studio",
+        "workshop",
+        "masterclass-sidi-larbi-cherkaoui-repertory-fractus-v"
+      ],
+      "it": [
+        "studio",
+        "workshop",
+        "masterclass-sidi-larbi-cherkaoui-repertory-fractus-v"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "workshop",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "studio",
+          "workshop",
+          "masterclass-sidi-larbi-cherkaoui-repertory-fractus-v"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "studio",
+          "workshop",
+          "masterclass-sidi-larbi-cherkaoui-repertory-fractus-v"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "studio/workshop/masterclass-sidi-larbi-cherkaoui-repertory-fractus-v"
+      },
+      {
+        "locale": "it",
+        "url": "studio/workshop/masterclass-sidi-larbi-cherkaoui-repertory-fractus-v"
+      }
+    ]
+  },
+  {
     "id": "97555523",
     "slugs": {
       "en": [
@@ -3859,17 +4365,17 @@
     ]
   },
   {
-    "id": "97539633",
+    "id": "97881296",
     "slugs": {
       "en": [
         "studio",
         "workshop",
-        "masterclass-sidi-larbi-cherkaoui-repertory-fractus-v"
+        "william-forsythe-s-improvisation-technologies"
       ],
       "it": [
         "studio",
         "workshop",
-        "masterclass-sidi-larbi-cherkaoui-repertory-fractus-v"
+        "william-forsythe-s-improvisation-technologies"
       ]
     },
     "isIndex": false,
@@ -3881,7 +4387,7 @@
         "slugs": [
           "studio",
           "workshop",
-          "masterclass-sidi-larbi-cherkaoui-repertory-fractus-v"
+          "william-forsythe-s-improvisation-technologies"
         ]
       },
       {
@@ -3889,202 +4395,18 @@
         "slugs": [
           "studio",
           "workshop",
-          "masterclass-sidi-larbi-cherkaoui-repertory-fractus-v"
+          "william-forsythe-s-improvisation-technologies"
         ]
       }
     ],
     "urls": [
       {
         "locale": "en",
-        "url": "studio/workshop/masterclass-sidi-larbi-cherkaoui-repertory-fractus-v"
+        "url": "studio/workshop/william-forsythe-s-improvisation-technologies"
       },
       {
         "locale": "it",
-        "url": "studio/workshop/masterclass-sidi-larbi-cherkaoui-repertory-fractus-v"
-      }
-    ]
-  },
-  {
-    "id": "97553467",
-    "slugs": {
-      "en": [
-        "studio",
-        "workshop",
-        "genealogia-una-call-per-danzatori-e-amatori"
-      ],
-      "it": [
-        "studio",
-        "workshop",
-        "genealogia-una-call-per-danzatori-e-amatori"
-      ]
-    },
-    "isIndex": false,
-    "indexType": "",
-    "__typename": "workshop",
-    "paths": [
-      {
-        "locale": "en",
-        "slugs": [
-          "studio",
-          "workshop",
-          "genealogia-una-call-per-danzatori-e-amatori"
-        ]
-      },
-      {
-        "locale": "it",
-        "slugs": [
-          "studio",
-          "workshop",
-          "genealogia-una-call-per-danzatori-e-amatori"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "en",
-        "url": "studio/workshop/genealogia-una-call-per-danzatori-e-amatori"
-      },
-      {
-        "locale": "it",
-        "url": "studio/workshop/genealogia-una-call-per-danzatori-e-amatori"
-      }
-    ]
-  },
-  {
-    "id": "97536012",
-    "slugs": {
-      "en": [
-        "studio",
-        "workshop",
-        "cunningham-technique-r-workshop"
-      ],
-      "it": [
-        "studio",
-        "workshop",
-        "cunningham-technique-r-workshop"
-      ]
-    },
-    "isIndex": false,
-    "indexType": "",
-    "__typename": "workshop",
-    "paths": [
-      {
-        "locale": "en",
-        "slugs": [
-          "studio",
-          "workshop",
-          "cunningham-technique-r-workshop"
-        ]
-      },
-      {
-        "locale": "it",
-        "slugs": [
-          "studio",
-          "workshop",
-          "cunningham-technique-r-workshop"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "en",
-        "url": "studio/workshop/cunningham-technique-r-workshop"
-      },
-      {
-        "locale": "it",
-        "url": "studio/workshop/cunningham-technique-r-workshop"
-      }
-    ]
-  },
-  {
-    "id": "97516225",
-    "slugs": {
-      "en": [
-        "studio",
-        "workshop",
-        "impart-lab-ripensare-il-palcoscenico"
-      ],
-      "it": [
-        "studio",
-        "workshop",
-        "impart-lab-ripensare-il-palcoscenico"
-      ]
-    },
-    "isIndex": false,
-    "indexType": "",
-    "__typename": "workshop",
-    "paths": [
-      {
-        "locale": "en",
-        "slugs": [
-          "studio",
-          "workshop",
-          "impart-lab-ripensare-il-palcoscenico"
-        ]
-      },
-      {
-        "locale": "it",
-        "slugs": [
-          "studio",
-          "workshop",
-          "impart-lab-ripensare-il-palcoscenico"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "en",
-        "url": "studio/workshop/impart-lab-ripensare-il-palcoscenico"
-      },
-      {
-        "locale": "it",
-        "url": "studio/workshop/impart-lab-ripensare-il-palcoscenico"
-      }
-    ]
-  },
-  {
-    "id": "97514206",
-    "slugs": {
-      "en": [
-        "studio",
-        "workshop",
-        "tools-for-action-workshop"
-      ],
-      "it": [
-        "studio",
-        "workshop",
-        "tools-for-action-workshop"
-      ]
-    },
-    "isIndex": false,
-    "indexType": "",
-    "__typename": "workshop",
-    "paths": [
-      {
-        "locale": "en",
-        "slugs": [
-          "studio",
-          "workshop",
-          "tools-for-action-workshop"
-        ]
-      },
-      {
-        "locale": "it",
-        "slugs": [
-          "studio",
-          "workshop",
-          "tools-for-action-workshop"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "en",
-        "url": "studio/workshop/tools-for-action-workshop"
-      },
-      {
-        "locale": "it",
-        "url": "studio/workshop/tools-for-action-workshop"
+        "url": "studio/workshop/william-forsythe-s-improvisation-technologies"
       }
     ]
   },

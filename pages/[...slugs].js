@@ -1,7 +1,8 @@
-import { useState } from 'react';
+// import { useState } from 'react';
 import Script from 'next/script';
 import dayjs from 'dayjs';
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 
 import { doQuery, getPaths } from 'lib/api';
 import Layout from 'components/Layout';
@@ -15,13 +16,22 @@ import HeroIndex from 'components/hero/HeroIndex';
 import GalleryPreview from 'components/galleries/GalleryPreview';
 import ResultsGrid from 'components/ResultsGrid';
 import Filters from 'components/Filters';
-import Modal from 'components/Modal';
-import EventForm from 'components/forms/EventForm';
+// import Modal from 'components/Modal';
+// import EventForm from 'components/forms/EventForm';
 import Partners from 'components/Partners';
 import Team from 'components/Team';
+// import { useAppContext } from 'lib/ctx';
 
 function Page({ data, locale }) {
   const { pageInfo, site, menu, footer, ...rest } = data;
+  // const { state, dispatch } = useAppContext();
+  const router = useRouter();
+
+  const handleRegistration = (value) => {
+    console.log('ID:', value);
+    // dispatch({ type: 'SET_EVENT', value });
+    router.push(`/forms/registration?id=${value}`);
+  };
 
   const { __typename: pageType } = pageInfo;
   const payload = rest[pageType];
@@ -72,7 +82,7 @@ function Page({ data, locale }) {
     return result || today.isBefore(start);
   }, false);
   const showBookButton = isBookable && isFuture;
-  const [showDialog, setShowDialog] = useState(false);
+  // const [showDialog, setShowDialog] = useState(false);
 
   function getStructuredContent(c) {
     return c &&
@@ -186,14 +196,12 @@ function Page({ data, locale }) {
         )}
         {showBookButton && (
           <div className="container">
-            <Link href={`/forms`} locale={locale}>
-              <a
-                className="w-48 bg-white text-gray-700 font-semibold hover:text-black py-2 px-4 border border-gray-700 hover:border-black"
-                // onClick={() => setShowDialog(true)}
-              >
-                REGISTRATI
-              </a>
-            </Link>
+            <button
+              className="w-48 bg-white text-gray-700 font-semibold hover:text-black py-2 px-4 border border-gray-700 hover:border-black"
+              onClick={() => handleRegistration(pageInfo.id)}
+            >
+              REGISTRATI
+            </button>
           </div>
         )}
 

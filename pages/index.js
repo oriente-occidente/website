@@ -9,17 +9,19 @@ import HeroSlider from 'components/hero/HeroSlider';
 import GalleryPreview from 'components/galleries/GalleryPreview';
 import GalleryHome from 'components/galleries/GalleryHome';
 import { resolveLinkById } from 'lib/utils';
+import Seo from 'components/Seo';
 
-function Home({ routes, data, locale, home }) {
-  const { homeSlideshow, homeSections } = home;
+function Home({ data, locale, home }) {
+  const { homeSlideshow, homeSections, seo } = home;
   const { site, footer, menu } = data;
   return (
     <Layout footer={footer} menu={menu} locale={locale}>
+      <Seo tags={[...site.faviconMetaTags, ...seo]} />
       <h1 className="sr-only">Oriente Occidente</h1>
       <HeroSlider slides={homeSlideshow} />
 
       {homeSections.map((block) => {
-        console.log('block:', block);
+        // console.log('block:', block);
         return (
           <Fragment key={block.id}>
             <div
@@ -68,7 +70,7 @@ export async function getStaticProps({ preview = false, locale }) {
       data,
       home: response.home,
     },
-    revalidate: 30,
+    // revalidate: 30,
   };
 }
 

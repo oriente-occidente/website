@@ -4,6 +4,8 @@ import TagManager from 'react-gtm-module';
 import 'styles/globals.css';
 import 'styles/base.css';
 
+// import { AppWrapper } from 'lib/ctx';
+
 const GTM = process.env.NEXT_PUBLIC_GTM;
 const IUBENDA_SITE_ID = process.env.NEXT_PUBLIC_IUBENDA_SITE_ID;
 const IUBENDA_POLICY_ID = process.env.NEXT_PUBLIC_IUBENDA_POLICY_ID;
