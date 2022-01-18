@@ -87,7 +87,7 @@ const updateConfig = async () => {
   if (data) {
     const json = JSON.stringify(data, null, 2);
     fs.writeFileSync(outPath, json);
-    console.log('Config Updated');
+    // console.log('Config Updated');
   }
 };
 

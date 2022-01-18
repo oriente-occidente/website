@@ -29,7 +29,7 @@ function renderMobile(data, locale, alts) {
                 {item.children?.map((child) => (
                   <Link
                     key={child?.id}
-                    href={resolveLinkById(child?.link?.id, locale)}
+                    href={resolveLinkById(child?.link?.id || '/', locale)}
                   >
                     <a className="text-black-light text-sm block font-normal tracking-wider md:py-1 md:text-base">
                       {child.title}
@@ -210,7 +210,10 @@ function Header(props) {
             </Popover.Button>
           </div>
           <div className="hidden lg:flex-1 lg:flex lg:items-center lg:justify-end">
-            <Popover.Group as="nav" className="flex space-x-4 xl:space-x-10 uppercase">
+            <Popover.Group
+              as="nav"
+              className="flex space-x-4 xl:space-x-10 uppercase"
+            >
               {data?.map((item) => (
                 <Fragment key={item.id}>{renderLink(item)}</Fragment>
               ))}

@@ -33,7 +33,7 @@ export async function getStaticPaths() {
     params: { slug },
     locale,
   }));
-  console.log('paths', paths);
+  // console.log('paths', paths);
   return { paths, fallback: 'blocking' };
 }
 

@@ -1,5 +1,9 @@
 import { StructuredText, renderRule } from 'react-datocms';
-import { isBlockquote, isHeading, isParagraph } from 'datocms-structured-text-utils';
+import {
+  isBlockquote,
+  isHeading,
+  isParagraph,
+} from 'datocms-structured-text-utils';
 import { Image } from 'react-datocms';
 import Link from 'next/link';
 
@@ -12,7 +16,7 @@ import { resolveLinkById } from 'lib/utils';
 
 const StructuredContent = ({ locale, content }) => {
   const renderBlock = (record) => {
-    console.log('block', record.__typename);
+    // console.log('block', record.__typename);
     switch (record.__typename) {
       case 'GalleryRecord':
         return (
@@ -58,17 +62,11 @@ const StructuredContent = ({ locale, content }) => {
       <StructuredText
         data={content}
         renderInlineRecord={({ record }) => {
-          console.log('inline', record.__typename);
+          // console.log('inline', record.__typename);
           const resolved = resolveLinkById(record.id, locale);
           return (
-            <Link
-              href={resolved}
-              key={record.id}
-              locale={locale}
-            >
-              <a className="button--with-arrow">
-                {record.title}
-              </a>
+            <Link href={resolved} key={record.id} locale={locale}>
+              <a className="button--with-arrow">{record.title}</a>
             </Link>
           );
         }}
@@ -82,9 +80,7 @@ const StructuredContent = ({ locale, content }) => {
               key={record.id}
               locale={locale}
             >
-              <a className="underline">
-                {children}
-              </a>
+              <a className="underline">{children}</a>
             </Link>
           );
         }}
@@ -96,8 +92,8 @@ const StructuredContent = ({ locale, content }) => {
           }),
           renderRule(isHeading, ({ node, children }) => {
             const classTag = node.level;
-            return <div className={`h${classTag}`}>{children}</div>
-          })
+            return <div className={`h${classTag}`}>{children}</div>;
+          }),
         ]}
       />
     </div>
@@ -105,4 +101,3 @@ const StructuredContent = ({ locale, content }) => {
 };
 
 export default StructuredContent;
-

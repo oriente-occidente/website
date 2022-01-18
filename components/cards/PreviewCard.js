@@ -4,7 +4,6 @@ import Link from 'next/link';
 import { resolveLinkById, formatDate } from 'lib/utils';
 
 function PreviewCard({ data, locale }) {
-
   let categoryTitle;
   let dateEvent;
   if (data.category) {
@@ -28,8 +27,7 @@ function PreviewCard({ data, locale }) {
 
   return (
     <div className="py-4 relative">
-      {console.log('data preview:', data)}
-      <Link href={`/${resolveLinkById(data.id, locale)}`}>
+      <Link href={resolveLinkById(data.id, locale)}>
         <a title={data.title}>
           <div className="relative">
             <div className="flex absolute z-20 left-4 md:left-8 bottom-2 md:bottom-8 top-auto text-white uppercase text-xxs md:text-xs font-semibold ">
@@ -41,7 +39,7 @@ function PreviewCard({ data, locale }) {
               )}
               {data.location && (
                 <span className="hidden md:block md:pr-1 normal-case font-light">
-                - {data.location}
+                  - {data.location}
                 </span>
               )}
             </div>

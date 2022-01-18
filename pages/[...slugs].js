@@ -28,7 +28,6 @@ function Page({ data, locale }) {
   const router = useRouter();
 
   const handleRegistration = (value) => {
-    console.log('ID:', value);
     // dispatch({ type: 'SET_EVENT', value });
     router.push(`/forms/register?id=${value}`);
   };

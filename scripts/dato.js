@@ -21,7 +21,7 @@ async function getItemTypesByApiKey() {
 //GRAPHQL
 const doQuery = async (q, v) => {
   const url = `https://graphql.datocms.com${ENV ? '/environments/' + ENV : ''}`;
-  console.log('doquery', DATO_API_KEY);
+  // console.log('doquery', DATO_API_KEY);
   try {
     const response = await axios({
       url,

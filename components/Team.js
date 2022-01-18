@@ -6,7 +6,6 @@ import translate from 'lib/locales';
 export default function Team ({ locale, data }) {
   return (
     <div className="mb-4 w-[49%] lg:w-[32%] custom-nth-child">
-      {console.log('data:', data)}
       <Image
         className=""
         data={data.image.responsiveImage}

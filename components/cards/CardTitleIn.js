@@ -4,7 +4,6 @@ import Link from 'next/link';
 import { resolveLinkById, formatDate } from 'lib/utils';
 
 function CardTitleIn({ locale, data }) {
-
   let categoryTitle;
   let dateEvent;
   if (data.category) {
@@ -28,7 +27,7 @@ function CardTitleIn({ locale, data }) {
 
   return (
     <div className="pb-8 md:pb-0">
-      <Link href={`/${resolveLinkById(data.id, locale)}`}>
+      <Link href={resolveLinkById(data.id, locale)}>
         <a title={data.title}>
           <div className="flex space-x-4 absolute z-20 left-4 md:left-8 md:bottom-8 top-48 md:top-auto text-white uppercase text-xxs md:text-xs font-semibold ">
             <span>{categoryTitle}</span>

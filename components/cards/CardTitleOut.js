@@ -4,7 +4,6 @@ import Link from 'next/link';
 import { resolveLinkById, formatDate } from 'lib/utils';
 
 function CardOutTitle({ data, locale }) {
-
   let categoryTitle;
   let dateEvent;
   if (data.category) {
@@ -28,7 +27,7 @@ function CardOutTitle({ data, locale }) {
 
   return (
     <div className="pb-8 md:pb-0">
-      <Link href={`/${resolveLinkById(data.id, locale)}`}>
+      <Link href={resolveLinkById(data.id, locale)}>
         <a title={title}>
           <div className="md:relative md:h-[360px]">
             <DatoImage
@@ -57,7 +56,7 @@ function CardOutTitle({ data, locale }) {
         </a>
       </Link>
     </div>
-  )
+  );
 }
 
 export default CardOutTitle;

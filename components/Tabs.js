@@ -11,7 +11,6 @@ const tabs = [
 export default function Tabs({ selected, handleSelect }) {
   const [current, setCurrent] = useState('festival-events');
   function handleChange(value) {
-    console.log('handleChange', value);
     if (value && handleSelect) {
       handleSelect(value);
     }
