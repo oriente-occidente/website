@@ -10,20 +10,35 @@ export default function Newsletter({ locale, data }) {
             {data.newsletterSubscriptionMessage}
           </div>
           <div className="relative">
-            <label className="sr-only" htmlFor="email">
-              Enter your email:{' '}
-            </label>
-            <input
-              className="block w-full text-xs border-gray rounded-md px-3 py-4 border text-black-light placeholder:text-black-light"
-              placeholder={`${translate('email', locale)}`}
-              type="email"
-              id="email"
-              name="email"
-            />
-            <button className="absolute top-4 right-4 w-6 h-6 bg-arrow-small-right block"></button>
+            <div id="mc_embed_signup">
+              <form action="https://orienteoccidente.us7.list-manage.com/subscribe/post?u=58396ba31c40d0c1a6e058a82&amp;id=c261770ce1" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+                <div id="mc_embed_signup_scroll">
+                  <div>
+                    <input
+                      type="email"
+                      name="EMAIL"id="mce-EMAIL"
+                      className="block w-full text-xs border-gray rounded-md px-3 py-4 border text-black-light placeholder:text-black-light"
+                      placeholder={`${translate('email', locale)}`}
+                    />
+                  </div>
+                  <div id="mce-responses">
+                    <div className="hidden" id="mce-error-response"></div>
+                    <div className="hidden" id="mce-success-response"></div>
+                  </div>
+                <div className="sr-only" aria-hidden="true">
+                  <input
+                    type="text" name="b_58396ba31c40d0c1a6e058a82_c261770ce1" tabindex="-1" value="" />
+                </div>
+                <div>
+                  <input className="absolute top-4 right-4 w-6 h-6 bg-arrow-small-right block pointer" type="submit" value="" name="subscribe" id="mc-embedded-subscribe"/>
+                </div>
+                </div>
+              </form>
+            </div>
           </div>
         </div>
       </div>
     </div>
   );
 }
+
