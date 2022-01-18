@@ -2,6 +2,7 @@
   "it": {
     "it": "Italiano",
     "en": "Inglese",
+    "cookiePolicyId": "94139888",
     "welcome": "Entra nel sito",
     "goodby": "Addio",
     "patronage": "Con il patrocinio",
@@ -23,6 +24,7 @@
   "en": {
     "it": "Italian",
     "en": "English",
+    "cookiePolicyId": "86853640",
     "welcome": "Enter the site",
     "goodby": "Goodby",
     "patronage": "With the patronage",
