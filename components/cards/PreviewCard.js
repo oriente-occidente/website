@@ -57,7 +57,7 @@ function PreviewCard({ data, locale }) {
                 {data.title}
               </h2>
             )}
-            {data.titleHero && (
+            {data.titleHero && data.titleHero != data.title && (
               <h3 className="text-sm md:text-base uppercase text-black font-semibold ">
                 {data.titleHero}
               </h3>

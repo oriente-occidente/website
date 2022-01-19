@@ -121,7 +121,7 @@ function Header(props) {
               <Popover.Button
                 className={classNames(
                   open ? 'text-black' : 'text-black',
-                  'uppercase text-xxs tracking-widest group bg-white rounded-md inline-flex items-center font-semibold hover:text-gray-900 focus:outline-none '
+                  'uppercase text-xxs tracking-widest group rounded-md inline-flex items-center font-semibold hover:text-gray-900 focus:outline-none '
                 )}
               >
                 <span>{item.title}</span>
@@ -184,7 +184,7 @@ function Header(props) {
 
   return (
     <header>
-      <Popover className="relative bg-white">
+      <Popover className="fixed inset-x-0 t-0 bg-white/60 z-50">
         <div className="container flex justify-between items-center py-2 lg:py-3 sm:px-6 lg:justify-start lg:space-x-10">
           <div>
             <Link locale={locale} href="/" passHref>
@@ -199,7 +199,7 @@ function Header(props) {
             </Link>
           </div>
           <div className="-mr-2 -my-2 lg:hidden">
-            <Popover.Button className="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:primary">
+            <Popover.Button className="bg-transparent p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:primary">
               <span className="text-[12px] md:text-xs font-semibold uppercase tracking-widest text-black">
                 Menu
               </span>

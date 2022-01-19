@@ -3767,6 +3767,52 @@
     ]
   },
   {
+    "id": "98949094",
+    "slugs": {
+      "en": [
+        "studio",
+        "workshop",
+        "as-far-as-the-imagination-can-reach-using-a-piece-of-string-workshop-2022"
+      ],
+      "it": [
+        "studio",
+        "workshop",
+        "as-far-as-the-imagination-can-reach-using-a-piece-of-string-workshop-2022"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "workshop",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "studio",
+          "workshop",
+          "as-far-as-the-imagination-can-reach-using-a-piece-of-string-workshop-2022"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "studio",
+          "workshop",
+          "as-far-as-the-imagination-can-reach-using-a-piece-of-string-workshop-2022"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "studio/workshop/as-far-as-the-imagination-can-reach-using-a-piece-of-string-workshop-2022"
+      },
+      {
+        "locale": "it",
+        "url": "studio/workshop/as-far-as-the-imagination-can-reach-using-a-piece-of-string-workshop-2022"
+      }
+    ]
+  },
+  {
     "id": "97911583",
     "slugs": {
       "en": [

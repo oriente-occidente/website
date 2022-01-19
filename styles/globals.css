@@ -23,6 +23,10 @@
     @apply text-xs lg:text-sm text-black-light max-w-[700px]
   }
 
+  .formatted-content a {
+    @apply underline font-semibold
+  }
+
   .formatted-content ul {
     @apply py-2 lg:py-4
   }
@@ -33,12 +37,12 @@
   }
 
   .formatted-content li p {
-    @apply py-0 text-sm lg:text-base
+    @apply py-0 text-[20px]
   }
 
-  .button--with-arrow {
+  .button--with-arrow, .formatted-content a {
     @apply
-      text-black font-semibold tracking-wider flex items-center md:text-xs
+      text-black font-semibold tracking-wider flex items-center md:text-xs no-underline
       after:w-8 after:h-8 md:after:w-10 md:after:h-10 after:inline-block after:bg-arrow-right-black after:ml-2
   }
 

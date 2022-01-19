@@ -63,3 +63,7 @@ a {
 .container {
   @apply mx-auto my-0 px-4 md:px-6
 }
+
+strong {
+  @apply font-semibold
+}
