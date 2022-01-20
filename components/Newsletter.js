@@ -17,9 +17,9 @@ export default function Newsletter({ locale, data }) {
                 method="post"
                 id="mc-embedded-subscribe-form"
                 name="mc-embedded-subscribe-form"
-                class="validate"
+                className="validate"
                 target="_blank"
-                novalidate
+                noValidate
               >
                 <div id="mc_embed_signup_scroll">
                   <div>
@@ -40,15 +40,14 @@ export default function Newsletter({ locale, data }) {
                     <input
                       type="text"
                       name="b_58396ba31c40d0c1a6e058a82_c261770ce1"
-                      tabindex="-1"
-                      value=""
+                      tabIndex="-1"
+                      defaultValue=""
                     />
                   </div>
                   <div>
                     <input
                       className="absolute top-4 right-4 w-6 h-6 bg-arrow-small-right block pointer"
                       type="submit"
-                      value=""
                       name="subscribe"
                       id="mc-embedded-subscribe"
                     />
