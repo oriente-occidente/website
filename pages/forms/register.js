@@ -47,22 +47,29 @@ function Page({ data, locale }) {
     if (eventId) {
       //todo fetch event data
       doQueryItem(locale, eventId)
-        .then((result) => {
-          console.log('event data:', result);
-          setPayload(result);
+        .then((payload) => {
+          console.log('event data:', payload);
+          setPayload(payload);
+          if (paymentId) {
+            const choosen = payload.paymentSettings?.find(
+              (p) => p.id === paymentId
+            );
+            console.log('choosen:', choosen);
+            setChoiche(choosen);
+          }
         })
         .catch((e) => console.log(e));
     }
-  }, [eventId]);
+  }, [eventId, paymentId]);
 
-  useEffect(() => {
-    if (paymentId && payload) {
-      //todo fetch event payload
-      const choosen = payload.paymentSettings.find((p) => p.id === paymentId);
-      console.log('choosen:', choosen);
-      setChoiche(choosen);
-    }
-  }, [paymentId, payload]);
+  // useEffect(() => {
+  //   if (paymentId && payload) {
+  //     //todo fetch event payload
+  //     const choosen = payload.paymentSettings.find((p) => p.id === paymentId);
+  //     console.log('choosen:', choosen);
+  //     setChoiche(choosen);
+  //   }
+  // }, [paymentId, payload]);
 
   return (
     <Layout footer={footer} menu={menu} locale={locale} hideNewsletter={true}>
@@ -120,7 +127,7 @@ function Page({ data, locale }) {
           >
             <input type="hidden" name="form-name" value="register" />
             <input type="hidden" name="locale" value={locale} />
-            <input type="hidden" name="title" value={data?.title} />
+            <input type="hidden" name="title" value={payload?.title} />
             <input
               type="hidden"
               name="level-name"
@@ -133,7 +140,8 @@ function Page({ data, locale }) {
                 <select
                   className="min-w-full rounded text-gray-700"
                   name="level"
-                  value={paymentId}
+                  // value={paymentId}
+                  defaultValue={''}
                   onChange={(e) => handleChange(e)}
                 >
                   <option value="">select a value</option>
@@ -232,6 +240,7 @@ function Page({ data, locale }) {
                   className="rounded text-gray-700 mr-4"
                   name="privacy"
                   type="checkbox"
+                  required="required"
                 />
                 <label
                   className="px-2"

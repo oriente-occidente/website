@@ -1,5 +1,6 @@
 import translate from 'lib/locales';
 
+const NEWSLETTER_LIST_URL = process.env.NEXT_PUBLIC_NEWSLETTER_LIST_URL;
 export default function Newsletter({ locale, data }) {
   return (
     <div className="bg-gray-light py-8 md:py-12">
@@ -11,12 +12,22 @@ export default function Newsletter({ locale, data }) {
           </div>
           <div className="relative">
             <div id="mc_embed_signup">
-              <form action="https://orienteoccidente.us7.list-manage.com/subscribe/post?u=58396ba31c40d0c1a6e058a82&amp;id=c261770ce1" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+              <form
+                action={NEWSLETTER_LIST_URL}
+                method="post"
+                id="mc-embedded-subscribe-form"
+                name="mc-embedded-subscribe-form"
+                class="validate"
+                target="_blank"
+                novalidate
+              >
                 <div id="mc_embed_signup_scroll">
                   <div>
                     <input
+                      defaultValue=""
                       type="email"
-                      name="EMAIL"id="mce-EMAIL"
+                      name="EMAIL"
+                      id="mce-EMAIL"
                       className="block w-full text-xs border-gray rounded-md px-3 py-4 border text-black-light placeholder:text-black-light"
                       placeholder={`${translate('email', locale)}`}
                     />
@@ -25,13 +36,23 @@ export default function Newsletter({ locale, data }) {
                     <div className="hidden" id="mce-error-response"></div>
                     <div className="hidden" id="mce-success-response"></div>
                   </div>
-                <div className="sr-only" aria-hidden="true">
-                  <input
-                    type="text" name="b_58396ba31c40d0c1a6e058a82_c261770ce1" tabindex="-1" value="" />
-                </div>
-                <div>
-                  <input className="absolute top-4 right-4 w-6 h-6 bg-arrow-small-right block pointer" type="submit" value="" name="subscribe" id="mc-embedded-subscribe"/>
-                </div>
+                  <div className="sr-only" aria-hidden="true">
+                    <input
+                      type="text"
+                      name="b_58396ba31c40d0c1a6e058a82_c261770ce1"
+                      tabindex="-1"
+                      value=""
+                    />
+                  </div>
+                  <div>
+                    <input
+                      className="absolute top-4 right-4 w-6 h-6 bg-arrow-small-right block pointer"
+                      type="submit"
+                      value=""
+                      name="subscribe"
+                      id="mc-embedded-subscribe"
+                    />
+                  </div>
                 </div>
               </form>
             </div>
@@ -41,4 +62,3 @@ export default function Newsletter({ locale, data }) {
     </div>
   );
 }
-
