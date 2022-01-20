@@ -20,10 +20,8 @@ const StructuredContent = ({ locale, content }) => {
     switch (record.__typename) {
       case 'GalleryRecord':
         return (
-          <div className="py-2 lg:py-10 2xl:py-16">
-            <div key={record.id}>
-              <GalleryStandard slides={record.images} />
-            </div>
+          <div className="py-2 lg:py-10 2xl:py-16" key={record.id}>
+            <GalleryStandard slides={record.images} />
           </div>
         );
       case 'ImageBlockRecord':
@@ -90,9 +88,13 @@ const StructuredContent = ({ locale, content }) => {
             const props = { node, children, key };
             return <BlockQuote {...props} />;
           }),
-          renderRule(isHeading, ({ node, children }) => {
+          renderRule(isHeading, ({ node, children, key }) => {
             const classTag = node.level;
-            return <div className={`h${classTag}`}>{children}</div>;
+            return (
+              <div className={`h${classTag}`} key={key}>
+                {children}
+              </div>
+            );
           }),
         ]}
       />

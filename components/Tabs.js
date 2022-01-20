@@ -2,14 +2,14 @@ import { useState, useEffect } from 'react';
 
 const tabs = [
   { name: 'All', slug: 'all' },
-  { name: 'Festival', slug: 'festival-events' },
-  { name: 'Events', slug: 'other-events' },
+  { name: 'Festival', slug: 'festivalEvents' },
+  { name: 'Events', slug: 'otherEvents' },
   { name: 'Workshop', slug: 'workshops' },
   { name: 'Courses', slug: 'courses' },
 ];
 
 export default function Tabs({ selected, handleSelect }) {
-  const [current, setCurrent] = useState('festival-events');
+  const [current, setCurrent] = useState('festivalEvents');
   function handleChange(value) {
     if (value && handleSelect) {
       handleSelect(value);

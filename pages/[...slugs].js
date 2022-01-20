@@ -32,13 +32,22 @@ function Page({ data, locale }) {
     router.push(`/forms/register?id=${value}`);
   };
 
+  const pluk = (data) => {
+    const { festivalEvents, otherEvents, courses, workshops } = data;
+    return { festivalEvents, otherEvents, courses, workshops };
+  };
   const { __typename: pageType } = pageInfo;
   const payload = rest[pageType];
   const isPage = pageType === 'page';
   const isIndex = isPage && payload.isIndex;
   const indexType = isIndex && payload.indexType;
-  const list = isIndex && indexType ? rest[camelCase(indexType)] : [];
   const showFilters = indexType === 'festival-events';
+  const list =
+    isIndex && indexType
+      ? showFilters
+        ? pluk(rest)
+        : rest[camelCase(indexType)]
+      : [];
 
   const {
     layoutHero,
@@ -188,7 +197,7 @@ function Page({ data, locale }) {
         {isIndex && !showFilters && <ResultsGrid list={list} locale={locale} />}
         {isIndex && showFilters && <Filters list={list} locale={locale} />}
 
-        {payload.relatedContents?.length > 0 && (
+        {false && payload.relatedContents?.length > 0 && (
           <div className="mt-20">
             <GalleryPreview slides={payload.relatedContents} locale={locale} />
           </div>
@@ -204,7 +213,7 @@ function Page({ data, locale }) {
           </div>
         )}
 
-        {!isIndex && (
+        {false && !isIndex && (
           <>
             <div className="addthis_inline_share_toolbox_ipet" />
             <Script
