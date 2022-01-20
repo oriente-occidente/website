@@ -29,7 +29,6 @@ function Filters({ locale, list }) {
     }
   }
   const resultList = filterData(data, list, typeFilter);
-  console.log(resultList);
   return (
     <div className="mt-10">
       <div className="xl:border-b border-gray">
@@ -59,10 +58,10 @@ function Filters({ locale, list }) {
           </div>
         </div>
       </div>
-      <div className="mt-10">
+      {/* <div className="mt-10">
         <div className="text-md">TYPE: {typeFilter}</div>
         <div className="text-md">YEAR: {year}</div>
-      </div>
+      </div> */}
 
       <div className="my-4">
         <div className="container lg:grid lg:grid-cols-2 lg:gap-6">
