@@ -128,6 +128,17 @@ function Page({ data, locale }) {
           <HeroEmpty data={heroData} />
         )}
 
+        {showBookButton && (
+          <div className="container">
+            <button
+              className="w-48 bg-white text-gray-700 font-semibold hover:text-black py-2 px-4 border border-gray-700 hover:border-black"
+              onClick={() => handleRegistration(pageInfo.id)}
+            >
+              REGISTRATI
+            </button>
+          </div>
+        )}
+
         {content && (
           <div className="md:grid md:grid-cols-4 md:gap-4 md:container md:mx-auto">
             <div className="md:col-span-3 md:border-l md:col-start-2 border-color-gray">
@@ -197,19 +208,9 @@ function Page({ data, locale }) {
         {isIndex && !showFilters && <ResultsGrid list={list} locale={locale} />}
         {isIndex && showFilters && <Filters list={list} locale={locale} />}
 
-        {false && payload.relatedContents?.length > 0 && (
+        {payload.relatedContents?.length > 0 && (
           <div className="mt-20">
             <GalleryPreview slides={payload.relatedContents} locale={locale} />
-          </div>
-        )}
-        {showBookButton && (
-          <div className="container">
-            <button
-              className="w-48 bg-white text-gray-700 font-semibold hover:text-black py-2 px-4 border border-gray-700 hover:border-black"
-              onClick={() => handleRegistration(pageInfo.id)}
-            >
-              REGISTRATI
-            </button>
           </div>
         )}
 

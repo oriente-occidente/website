@@ -11,7 +11,7 @@ function Filters({ locale, list }) {
   const years = [`${currentYear}`, `${currentYear - 1}`, `${currentYear - 2}`];
   const [typeFilter, setTypeFilter] = useState('festivalEvents');
   const [year, setYear] = useState(currentYear);
-  const { loading, data, error } = useFestivalByDate(locale, year);
+  const { data, error, loading } = useFestivalByDate(locale, year);
 
   function handleChange(e) {
     const value = e.target?.value;
