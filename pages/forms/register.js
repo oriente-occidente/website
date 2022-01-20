@@ -25,12 +25,12 @@ function Page({ data, locale }) {
       const { success, id, choicheId = null } = query;
       if (success === 'true') {
         setSuccess(true);
-        if (choicheId) {
-          setPaymentId(choicheId);
-        }
       }
       if (id) {
         setEventId(id);
+      }
+      if (choicheId) {
+        setPaymentId(choicheId);
       }
     }
   }, [query]);
