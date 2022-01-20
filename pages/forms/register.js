@@ -22,22 +22,22 @@ function Page({ data, locale }) {
   useEffect(() => {
     // if (window.location.search.includes('success=true')) {
     if (query) {
-      const { success, id, choicheId = null } = query;
-      if (success === 'true') {
-        setSuccess(true);
-      }
+      const { success, id, choicheId } = query;
       if (id) {
         setEventId(id);
       }
       if (choicheId) {
         setPaymentId(choicheId);
       }
+      if (success) {
+        setSuccess(true);
+      }
     }
   }, [query]);
 
   const handleChange = (e) => {
     const value = e.target?.value;
-    if (!value) return;
+    if (!value || success) return;
     console.log('choosen ID:', value);
     // dispatch({ type: 'SET_PAYMENT', value });
     setPaymentId(value);
@@ -62,14 +62,14 @@ function Page({ data, locale }) {
     }
   }, [eventId, paymentId]);
 
-  // useEffect(() => {
-  //   if (paymentId && payload) {
-  //     //todo fetch event payload
-  //     const choosen = payload.paymentSettings.find((p) => p.id === paymentId);
-  //     console.log('choosen:', choosen);
-  //     setChoiche(choosen);
-  //   }
-  // }, [paymentId, payload]);
+  useEffect(() => {
+    if (paymentId && payload) {
+      //todo fetch event payload
+      const choosen = payload.paymentSettings.find((p) => p.id === paymentId);
+      console.log('choosen:', choosen);
+      setChoiche(choosen);
+    }
+  }, [paymentId, payload, success]);
 
   return (
     <Layout footer={footer} menu={menu} locale={locale} hideNewsletter={true}>
