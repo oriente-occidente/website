@@ -71,6 +71,10 @@ function Page({ data, locale }) {
     }
   }, [paymentId, payload, success]);
 
+  const action = `${locale === 'en' ? '/en' : ''}/forms/thankyou?id=${eventId}${
+    paymentId ? '&choicheId=' + paymentId : ''
+  }`;
+  console.log('action:', action);
   return (
     <Layout footer={footer} menu={menu} locale={locale} hideNewsletter={true}>
       <Seo tags={site.faviconMetaTags} />
@@ -120,9 +124,7 @@ function Page({ data, locale }) {
           <form
             name="register"
             method="POST"
-            action={`${
-              locale === 'en' ? '/en' : ''
-            }/forms/register?success=true&id=${eventId}&choicheId=${paymentId}`}
+            action={action}
             data-netlify="true"
           >
             <input type="hidden" name="form-name" value="register" />
