@@ -5,7 +5,7 @@ export default function SectionsParagraphs({ sections, locale }) {
   return (
     <div className="md:grid md:grid-cols-4 md:gap-4 md:container md:mx-auto">
       <div className="px-4 hidden md:block">
-        <div className="sticky top-0 py-2">
+        <div className="sticky top-20 py-2">
           {sections.map((section) => (
             <div key={section.id}>
               <Link href={`#${section.id}`}>
