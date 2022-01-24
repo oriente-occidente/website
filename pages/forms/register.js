@@ -72,7 +72,7 @@ function Page({ data, locale }) {
   }, [paymentId, payload, success]);
 
   const action = `${locale === 'en' ? '/en' : ''}/forms/thankyou?id=${eventId}${
-    paymentId ? '&choicheId=' + paymentId : ''
+    paymentId ? '&cp=' + paymentId : ''
   }`;
   console.log('action:', action);
   return (

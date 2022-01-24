@@ -12,18 +12,18 @@ function Page({ data, locale }) {
   const { query } = router;
   useEffect(() => {
     // if (window.location.search.includes('success=true')) {
-    if (query) {
-      console.log('QUERY:', query);
-      const { id, choicheId } = query;
+    console.log('QUERY:', query);
+    if (query && query.id && query.cp) {
+      const { id, cp } = query;
       doQueryItem(locale, id)
         .then((data) => {
           console.log('event data:', data);
-          const choiche = data?.paymentSettings.find((p) => p.id === choicheId);
+          const choiche = data?.paymentSettings.find((p) => p.id === cp);
           setPayload({ data, choiche });
         })
         .catch((e) => console.log(e));
     }
-  }, [query, locale]);
+  }, [query]);
 
   return (
     <Layout footer={footer} menu={menu} locale={locale} hideNewsletter={true}>
