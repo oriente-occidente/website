@@ -190,6 +190,7 @@ function Page({ data, locale }) {
                   name="address"
                   type="text"
                   maxLength="250"
+                  required="required"
                 />
               </div>
               <div>
@@ -199,6 +200,7 @@ function Page({ data, locale }) {
                   name="city"
                   type="text"
                   maxLength="250"
+                  required="required"
                 />
               </div>
               <div>
@@ -208,6 +210,7 @@ function Page({ data, locale }) {
                   name="stateCode"
                   type="text"
                   maxLength="250"
+                  required="required"
                 />
               </div>
               <div>
@@ -217,6 +220,7 @@ function Page({ data, locale }) {
                   name="zipCode"
                   type="text"
                   maxLength="250"
+                  required="required"
                 />
               </div>
               <div>
