@@ -259,13 +259,15 @@ const generateRoutes = async () => {
   const workshops = await getRecords(
     ws,
     'workshop',
-    getPrefix(menu, 'workshops')
+    getPrefix(menu, 'workshops'),
+    workshops
   );
   const cs = allWorkshops.filter((event) => !event.isWorkshop);
   const courses = await getRecords(
     cs,
     'workshop',
-    getPrefix(menu, 'workshops')
+    getPrefix(menu, 'courses'),
+    'courses'
   );
 
   const list = withAlts([
