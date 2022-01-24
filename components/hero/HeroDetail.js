@@ -1,7 +1,8 @@
 import { Image as DatoImage } from 'react-datocms';
 import { LocationMarkerIcon, CalendarIcon } from '@heroicons/react/outline';
+import dynamic from 'next/dynamic';
+// import Gallery from 'components/galleries/Gallery';
 
-import Gallery from 'components/galleries/Gallery';
 import { formatDate } from 'lib/utils';
 
 function HeroDetail({ data, locale }) {
@@ -16,6 +17,14 @@ function HeroDetail({ data, locale }) {
     paymentSettings,
     slideshowHero,
   } = data;
+
+  let Gallery = () => <div />;
+  if (slideshowHero != '') {
+    Gallery = dynamic(() => import('components/galleries/Gallery'), {
+      loading: () => <div>...</div>,
+      ssr: false,
+    });
+  }
 
   return (
     <header className="border-t md:border-none border-gray pb-10 md:py-0 md:grid md:grid-cols-4 md:gap-4 xl:container xl:mx-auto overflow-hidden">
@@ -48,9 +57,7 @@ function HeroDetail({ data, locale }) {
         <div className="px-4 md:px-12 md:pt-2">
           <h1 className="text-base uppercase pt-4 pb-1">{titleHero}</h1>
           {authors && (
-            <h2 className="text-xs md:text-sm mb-1 uppercase">
-              {authors}
-            </h2>
+            <h2 className="text-xs md:text-sm mb-1 uppercase">{authors}</h2>
           )}
           <h2 className="text-base uppercase font-semibold">
             {descriptionHero}

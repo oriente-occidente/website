@@ -1,9 +1,17 @@
 import { Image as DatoImage } from 'react-datocms';
-
-import Gallery from 'components/galleries/Gallery';
+import dynamic from 'next/dynamic';
+// import Gallery from 'components/galleries/Gallery';
 
 function HeroIndex({ data }) {
   const { titleHero, descriptionHero, imageHero, slideshowHero } = data;
+
+  let Gallery = () => <div />;
+  if (slideshowHero != '') {
+    Gallery = dynamic(() => import('components/galleries/Gallery'), {
+      loading: () => <div>...</div>,
+      ssr: false,
+    });
+  }
 
   return (
     <div className="border-t md:border-none bg-gray border-gray pb-10 md:py-0">
