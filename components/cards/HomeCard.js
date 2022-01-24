@@ -9,7 +9,7 @@ function HomeCard({ count, categoryTitle, dateEvent, data, locale }) {
 
   return (
     <Link href={resolveLinkById(data.id, locale)} locale={locale}>
-      <a title={data.titleHero}>
+      <a title={data.titleHero} className="group">
         <div className="pb-8 md:pb-16 lg:pb-20 pl-4 md:pl-6 relative h-[240px] md:h-[640px] xl:h-[45vw]">
           <div className="relative flex h-full justify-between lg:pl-8 2xl:pl-[calc((100vw-1390px)/2)]">
             <div>
@@ -17,12 +17,12 @@ function HomeCard({ count, categoryTitle, dateEvent, data, locale }) {
                 0{count + 1}/
               </div>
               <div className="hidden md:block mt-4 mb-12 lg:py-16 title--small">
-                [placeholder]
+              {data.descriptionHero}
               </div>
             </div>
-            <div className="w-3/4 lg:w-8/12 relative">
+            <div className="w-3/4 lg:w-8/12 relative overflow-hidden">
               <DatoImage
-                className="w-full h-full"
+                className="w-full h-full duration-300 group-hover:scale-105"
                 data={responsiveImage}
                 alt={alt}
                 title={title}
@@ -42,7 +42,7 @@ function HomeCard({ count, categoryTitle, dateEvent, data, locale }) {
           </div>
         </div>
         <div className="md:hidden ml-20 pl-1 mt-4 mb-12 lg:py-16 title--small relative after:h-px after:w-32 after:bg-black after:absolute after:-top-3 after:left-1">
-          [placeholder]
+          {data.descriptionHero}
         </div>
       </a>
     </Link>

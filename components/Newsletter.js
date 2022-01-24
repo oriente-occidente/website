@@ -46,11 +46,11 @@ export default function Newsletter({ locale, data }) {
                   </div>
                   <div>
                     <input
-                      className="absolute top-4 right-4 w-6 h-6 bg-arrow-small-right block pointer"
+                      className="absolute top-4 right-4 w-6 h-6 bg-arrow-small-right block pointer text-transparent"
                       type="submit"
                       name="subscribe"
                       id="mc-embedded-subscribe"
-                    />
+                    ></input>
                   </div>
                 </div>
               </form>

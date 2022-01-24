@@ -28,7 +28,7 @@ function PreviewCard({ data, locale }) {
   return (
     <div className="py-4 relative">
       <Link href={resolveLinkById(data.id, locale)}>
-        <a title={data.title}>
+        <a title={data.title} className="group">
           <div className="relative">
             <div className="flex absolute z-20 left-4 md:left-8 bottom-2 md:bottom-8 top-auto text-white uppercase text-xxs md:text-xs font-semibold ">
               <span>{categoryTitle}</span>
@@ -43,12 +43,14 @@ function PreviewCard({ data, locale }) {
                 </span>
               )}
             </div>
-            <DatoImage
-              className="h-[220px] md:h-[360px] object-cover"
-              data={data.imageHero.responsiveImage}
-              alt={data.imageHero.alt}
-              title={data.imageHero.title}
-            />
+            <div className="overflow-hidden h-[220px] md:h-[360px] relative">
+              <DatoImage
+                className="object-cover duration-300 group-hover:scale-105"
+                data={data.imageHero.responsiveImage}
+                alt={data.imageHero.alt}
+                title={data.imageHero.title}
+              />
+            </div>
             <div className="absolute top-auto bottom-0 left-0 right-0 h-[65px] bg-gradient-to-t z-10 from-black-transparent"></div>
           </div>
           <div className="z-20">

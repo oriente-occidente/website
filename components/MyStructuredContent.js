@@ -64,7 +64,7 @@ const StructuredContent = ({ locale, content }) => {
           const resolved = resolveLinkById(record.id, locale);
           return (
             <Link href={resolved} key={record.id} locale={locale}>
-              <a className="button--with-arrow">{record.title}</a>
+              <a className="underline">{record.title}</a>
             </Link>
           );
         }}

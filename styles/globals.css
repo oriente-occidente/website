@@ -40,7 +40,7 @@
     @apply py-0 text-[20px]
   }
 
-  .button--with-arrow, .formatted-content a {
+  .button--with-arrow{
     @apply
       text-black font-semibold tracking-wider flex items-center md:text-xs no-underline
       after:w-8 after:h-8 md:after:w-10 md:after:h-10 after:inline-block after:bg-arrow-right-black after:ml-2
