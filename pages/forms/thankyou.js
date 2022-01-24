@@ -12,8 +12,8 @@ function Page({ data, locale }) {
   const { query } = router;
   useEffect(() => {
     // if (window.location.search.includes('success=true')) {
-    console.log('QUERY:', query);
     if (query && query.id && query.cp) {
+      console.log('QUERY:', query);
       const { id, cp } = query;
       doQueryItem(locale, id)
         .then((data) => {
