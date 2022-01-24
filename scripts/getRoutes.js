@@ -260,7 +260,7 @@ const generateRoutes = async () => {
     ws,
     'workshop',
     getPrefix(menu, 'workshops'),
-    workshops
+    'workshops'
   );
   const cs = allWorkshops.filter((event) => !event.isWorkshop);
   const courses = await getRecords(
