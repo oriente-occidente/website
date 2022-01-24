@@ -64,6 +64,7 @@ function Filters({ locale, list }) {
 
       <div className="my-4">
         <div className="container lg:grid lg:grid-cols-2 lg:gap-6">
+          {console.log('data:', data)}
           {resultList?.map((item) => (
             <PreviewCard locale={locale} data={item} key={item.id} />
           ))}

@@ -33,7 +33,7 @@
 
   .formatted-content li {
     @apply text-sm lg:text-base pl-6 lg:pl-8 relative ;
-    @apply before:absolute before:top-[6px] before:-left-0 before:w-[15px] lg:before:w-[20px] before:h-[15px] lg:before:h-[20px] before:bg-check
+    @apply before:absolute before:top-[4px] before:-left-0 before:w-[15px] lg:before:w-[20px] before:h-[15px] lg:before:h-[20px] before:bg-check
   }
 
   .formatted-content li p {

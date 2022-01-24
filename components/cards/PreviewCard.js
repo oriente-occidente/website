@@ -51,7 +51,7 @@ function PreviewCard({ data, locale, group = null }) {
                 title={data.imageHero.title}
               />
             </div>
-            <div className="absolute top-auto bottom-0 left-0 right-0 h-[65px] bg-gradient-to-t z-10 from-black-transparent"></div>
+            <div className="absolute top-auto bottom-0 left-0 right-0 h-[65px] md:h-[120px] bg-gradient-to-t z-10 from-black-transparent"></div>
           </div>
           <div className="z-20">
             {data.title && (
@@ -69,6 +69,7 @@ function PreviewCard({ data, locale, group = null }) {
                 {data.authors}
               </div>
             )}
+            {console.log('data:', data)}
           </div>
           {data.dateEvento && (
             <div className="text-xxs md:hidden">
