@@ -19,7 +19,7 @@ export default function Newsletter({ locale, data }) {
                 name="mc-embedded-subscribe-form"
                 className="validate"
                 target="_blank"
-                noValidate
+                // noValidate
               >
                 <div id="mc_embed_signup_scroll">
                   <div>
@@ -30,6 +30,7 @@ export default function Newsletter({ locale, data }) {
                       id="mce-EMAIL"
                       className="block w-full text-xs border-gray rounded-md px-3 py-4 border text-black-light placeholder:text-black-light"
                       placeholder={`${translate('email', locale)}`}
+                      required="required"
                     />
                   </div>
                   <div id="mce-responses">

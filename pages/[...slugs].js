@@ -88,6 +88,7 @@ function Page({ data, locale }) {
         <Breadcrumbs
           background={heroData.layoutHero == 'index' ? 'gray' : null}
           paths={getBreadcrumbs(pageInfo.slugs[locale], payload.slug, locale)}
+          locale={locale}
         />
         {heroData.layoutHero == 'detail' && imageHero ? (
           <HeroDetail data={heroData} />

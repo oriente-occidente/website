@@ -169,8 +169,8 @@
   },
   {
     "id": "79196187",
-    "isIndex": false,
-    "indexType": "",
+    "isIndex": true,
+    "indexType": "courses",
     "slugs": {
       "it": [
         "studio",
@@ -3883,7 +3883,7 @@
     "isIndex": false,
     "indexType": "",
     "__typename": "workshop",
-    "group": "page",
+    "group": "workshops",
     "paths": [
       {
         "locale": "en",
@@ -3930,7 +3930,7 @@
     "isIndex": false,
     "indexType": "",
     "__typename": "workshop",
-    "group": "page",
+    "group": "workshops",
     "paths": [
       {
         "locale": "en",
@@ -3977,7 +3977,7 @@
     "isIndex": false,
     "indexType": "",
     "__typename": "workshop",
-    "group": "page",
+    "group": "workshops",
     "paths": [
       {
         "locale": "en",
@@ -4024,7 +4024,7 @@
     "isIndex": false,
     "indexType": "",
     "__typename": "workshop",
-    "group": "page",
+    "group": "workshops",
     "paths": [
       {
         "locale": "en",
@@ -4071,7 +4071,7 @@
     "isIndex": false,
     "indexType": "",
     "__typename": "workshop",
-    "group": "page",
+    "group": "workshops",
     "paths": [
       {
         "locale": "en",
@@ -4118,7 +4118,7 @@
     "isIndex": false,
     "indexType": "",
     "__typename": "workshop",
-    "group": "page",
+    "group": "workshops",
     "paths": [
       {
         "locale": "en",
@@ -4165,7 +4165,7 @@
     "isIndex": false,
     "indexType": "",
     "__typename": "workshop",
-    "group": "page",
+    "group": "workshops",
     "paths": [
       {
         "locale": "en",
@@ -4212,7 +4212,7 @@
     "isIndex": false,
     "indexType": "",
     "__typename": "workshop",
-    "group": "page",
+    "group": "workshops",
     "paths": [
       {
         "locale": "en",
@@ -4259,7 +4259,7 @@
     "isIndex": false,
     "indexType": "",
     "__typename": "workshop",
-    "group": "page",
+    "group": "workshops",
     "paths": [
       {
         "locale": "en",
@@ -4306,7 +4306,7 @@
     "isIndex": false,
     "indexType": "",
     "__typename": "workshop",
-    "group": "page",
+    "group": "workshops",
     "paths": [
       {
         "locale": "en",
@@ -4353,7 +4353,7 @@
     "isIndex": false,
     "indexType": "",
     "__typename": "workshop",
-    "group": "page",
+    "group": "workshops",
     "paths": [
       {
         "locale": "en",
@@ -4400,7 +4400,7 @@
     "isIndex": false,
     "indexType": "",
     "__typename": "workshop",
-    "group": "page",
+    "group": "workshops",
     "paths": [
       {
         "locale": "en",
@@ -4447,7 +4447,7 @@
     "isIndex": false,
     "indexType": "",
     "__typename": "workshop",
-    "group": "page",
+    "group": "workshops",
     "paths": [
       {
         "locale": "en",
@@ -4494,7 +4494,7 @@
     "isIndex": false,
     "indexType": "",
     "__typename": "workshop",
-    "group": "page",
+    "group": "workshops",
     "paths": [
       {
         "locale": "en",
@@ -4541,7 +4541,7 @@
     "isIndex": false,
     "indexType": "",
     "__typename": "workshop",
-    "group": "page",
+    "group": "workshops",
     "paths": [
       {
         "locale": "en",
@@ -4588,7 +4588,7 @@
     "isIndex": false,
     "indexType": "",
     "__typename": "workshop",
-    "group": "page",
+    "group": "workshops",
     "paths": [
       {
         "locale": "en",
@@ -4635,7 +4635,7 @@
     "isIndex": false,
     "indexType": "",
     "__typename": "workshop",
-    "group": "page",
+    "group": "workshops",
     "paths": [
       {
         "locale": "en",
@@ -4682,7 +4682,7 @@
     "isIndex": false,
     "indexType": "",
     "__typename": "workshop",
-    "group": "page",
+    "group": "workshops",
     "paths": [
       {
         "locale": "en",
@@ -4729,7 +4729,7 @@
     "isIndex": false,
     "indexType": "",
     "__typename": "workshop",
-    "group": "page",
+    "group": "workshops",
     "paths": [
       {
         "locale": "en",
@@ -4776,7 +4776,7 @@
     "isIndex": false,
     "indexType": "",
     "__typename": "workshop",
-    "group": "page",
+    "group": "workshops",
     "paths": [
       {
         "locale": "en",
@@ -4823,7 +4823,7 @@
     "isIndex": false,
     "indexType": "",
     "__typename": "workshop",
-    "group": "page",
+    "group": "workshops",
     "paths": [
       {
         "locale": "en",
@@ -4870,7 +4870,7 @@
     "isIndex": false,
     "indexType": "",
     "__typename": "workshop",
-    "group": "page",
+    "group": "workshops",
     "paths": [
       {
         "locale": "en",
@@ -4917,7 +4917,7 @@
     "isIndex": false,
     "indexType": "",
     "__typename": "workshop",
-    "group": "page",
+    "group": "workshops",
     "paths": [
       {
         "locale": "en",
@@ -4964,7 +4964,7 @@
     "isIndex": false,
     "indexType": "",
     "__typename": "workshop",
-    "group": "page",
+    "group": "workshops",
     "paths": [
       {
         "locale": "en",
@@ -5011,7 +5011,7 @@
     "isIndex": false,
     "indexType": "",
     "__typename": "workshop",
-    "group": "page",
+    "group": "workshops",
     "paths": [
       {
         "locale": "en",
@@ -5058,7 +5058,7 @@
     "isIndex": false,
     "indexType": "",
     "__typename": "workshop",
-    "group": "page",
+    "group": "workshops",
     "paths": [
       {
         "locale": "en",
@@ -5105,7 +5105,7 @@
     "isIndex": false,
     "indexType": "",
     "__typename": "workshop",
-    "group": "page",
+    "group": "workshops",
     "paths": [
       {
         "locale": "en",
@@ -5132,6 +5132,53 @@
       {
         "locale": "it",
         "url": "studio/workshop/impart-lab-ripensare-il-palcoscenico"
+      }
+    ]
+  },
+  {
+    "id": "100390361",
+    "slugs": {
+      "en": [
+        "studio",
+        "education",
+        "test-your-family"
+      ],
+      "it": [
+        "studio",
+        "educazione",
+        "metti-alla-prova-la-tua-famiglia"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "workshop",
+    "group": "courses",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "studio",
+          "education",
+          "test-your-family"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "studio",
+          "educazione",
+          "metti-alla-prova-la-tua-famiglia"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "studio/education/test-your-family"
+      },
+      {
+        "locale": "it",
+        "url": "studio/educazione/metti-alla-prova-la-tua-famiglia"
       }
     ]
   },

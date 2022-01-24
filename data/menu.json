@@ -114,8 +114,8 @@
           "slug": "educazione"
         }
       ],
-      "indexType": "",
-      "isIndex": false
+      "indexType": "courses",
+      "isIndex": true
     },
     "lang": "it"
   },
@@ -424,8 +424,8 @@
           "slug": "educazione"
         }
       ],
-      "indexType": "",
-      "isIndex": false
+      "indexType": "courses",
+      "isIndex": true
     },
     "lang": "en"
   },

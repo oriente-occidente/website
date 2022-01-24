@@ -22,7 +22,8 @@
     "zipCode": "CAP",
     "phone": "Telefono",
     "notes": "Richiesta - Note",
-    "privacyAgreement": "Dichiaro di aver preso visione dell'informativa dell' Associazione Incontri Internazionali di Rovereto per il trattamento dei dati personali."
+    "privacyAgreement": "Dichiaro di aver preso visione dell'informativa dell' Associazione Incontri Internazionali di Rovereto per il trattamento dei dati personali.",
+    "register": "Prenota"
   },
   "en": {
     "it": "Italian",
@@ -47,6 +48,7 @@
     "zipCode": "Zip Code",
     "phone": "Phone",
     "notes": "Request Notes",
-    "privacyAgreement": "I acknowledge that I have read and agree the Privacy Information of Associazione Incontri Internazionali of Rovereto about the personal data treatment"
+    "privacyAgreement": "I acknowledge that I have read and agree the Privacy Information of Associazione Incontri Internazionali of Rovereto about the personal data treatment",
+    "register": "Reserve"
   }
 }

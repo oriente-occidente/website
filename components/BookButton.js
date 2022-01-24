@@ -14,7 +14,7 @@ export default function BookButton({ locale, id }) {
         className="w-48 bg-white text-gray-700 font-semibold hover:text-black py-2 px-4 border border-gray-700 hover:border-black"
         onClick={() => handleRegistration(id)}
       >
-        {translate(' REGISTRATI', locale)}
+        {translate('register', locale)}
       </button>
     </div>
   );

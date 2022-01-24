@@ -142,6 +142,7 @@ function Page({ data, locale }) {
                   name="level"
                   // value={paymentId}
                   defaultValue={''}
+                  required="required"
                   onChange={(e) => handleChange(e)}
                 >
                   <option value="">select a value</option>
@@ -159,6 +160,7 @@ function Page({ data, locale }) {
                   name="firstName"
                   type="text"
                   maxLength="250"
+                  required="required"
                 />
               </div>
               <div>
@@ -168,6 +170,7 @@ function Page({ data, locale }) {
                   name="lastName"
                   type="text"
                   maxLength="250"
+                  required="required"
                 />
               </div>
               <div>
@@ -177,6 +180,7 @@ function Page({ data, locale }) {
                   name="email"
                   type="email"
                   maxLength="250"
+                  required="required"
                 />
               </div>
               <div>
@@ -222,6 +226,7 @@ function Page({ data, locale }) {
                   name="phone"
                   type="text"
                   maxLength="250"
+                  required="required"
                 />
               </div>
               <div>
