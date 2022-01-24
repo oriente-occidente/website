@@ -25,12 +25,13 @@ function Page({ data, locale }) {
     }
   }, [query]);
 
+  console.log(payload);
   return (
     <Layout footer={footer} menu={menu} locale={locale} hideNewsletter={true}>
       <Seo tags={site.faviconMetaTags} />
       <div className="p-10 my-10">
         <h1 className="text-lg">Thank You</h1>
-        {payload && (
+        {payload?.choiche && (
           <div>
             <h3 className="text-lg font-semibold">
               Richiesta inviata corretamente
