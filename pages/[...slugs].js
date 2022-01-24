@@ -48,7 +48,7 @@ function Page({ data, locale }) {
         ? pluk(rest)
         : rest[camelCase(indexType)]
       : [];
-
+  const group = indexType ? indexType : null;
   const {
     layoutHero,
     titleHero,
@@ -205,7 +205,9 @@ function Page({ data, locale }) {
           </div>
         )}
 
-        {isIndex && !showFilters && <ResultsGrid list={list} locale={locale} />}
+        {isIndex && !showFilters && (
+          <ResultsGrid list={list} group={group} locale={locale} />
+        )}
         {isIndex && showFilters && <Filters list={list} locale={locale} />}
 
         {payload.relatedContents?.length > 0 && (

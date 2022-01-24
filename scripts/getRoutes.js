@@ -56,38 +56,6 @@ fragment itemFrag on MenuItemRecord {
 `;
   return doQuery(q);
 };
-const getRecords = async (name, prefixes, log = false) => {
-  if (log) {
-    console.log('getRecords', name);
-    console.log('prefixes', prefixes);
-  }
-
-  const records = (await allRecords(name)).map((r) => {
-    const { id, slug: slugs, isIndex = false, indexType = '' } = r;
-    const locales = _.keys(slugs);
-
-    let paths = {};
-    if (prefixes) {
-      paths = locales.reduce((obj, l) => {
-        const prefix = prefixes[l] || [];
-        const path = [...prefix, slugs[l]];
-        return { ...obj, [l]: path };
-      }, {});
-    }
-
-    return {
-      id,
-      slugs: paths,
-      isIndex,
-      indexType,
-      __typename: name,
-    };
-  });
-  if (log) {
-    console.log('RECORDS', JSON.stringify(records, null, 2));
-  }
-  return records;
-};
 
 function traverse(item, lang, parent = null) {
   const { slugs, link } = item;
@@ -143,6 +111,51 @@ function withAlts(list) {
   });
 }
 
+const getRecords = async (
+  list,
+  name,
+  prefixes,
+  group = 'page',
+  log = false
+) => {
+  if (log) {
+    console.log('getRecords', name);
+    console.log('prefixes', prefixes);
+  }
+
+  const records = list.map((r) => {
+    const { id, slug: slugs, isIndex = false, indexType = '' } = r;
+    const locales = _.keys(slugs);
+    let paths = locales.reduce((obj, l) => {
+      const path = [slugs[l]];
+      return { ...obj, [l]: path };
+    }, {});
+    if (prefixes) {
+      paths = locales.reduce((obj, l) => {
+        const prefix = prefixes[l] || [];
+        const path = [...prefix, slugs[l]];
+        return { ...obj, [l]: path };
+      }, {});
+    }
+    if (log) {
+      console.log('paths', paths);
+    }
+
+    return {
+      id,
+      slugs: paths,
+      isIndex,
+      indexType,
+      __typename: name,
+      group,
+    };
+  });
+  if (log) {
+    console.log('RECORDS', JSON.stringify(records, null, 2));
+  }
+  return records;
+};
+
 const generateRoutes = async () => {
   const locales = (await getLocales()).site.locales;
   // console.log('locales', locales);
@@ -182,27 +195,88 @@ const generateRoutes = async () => {
     return { id, isIndex, indexType, slugs, __typename: 'page' };
   });
 
-  const pages = (await getRecords('page')).filter((r) => !ids.includes(r.id));
-  const events = await getRecords('event', getPrefix(menu, 'other-events'));
-  const courses = await getRecords('workshop', getPrefix(menu, 'workshops'));
-  const projects = await getRecords('project', getPrefix(menu, 'projects'));
+  //get the pages not in menu
+  const pageList = (await allRecords('page')).filter(
+    (r) => !ids.includes(r.id)
+  );
+  const pages = await getRecords(pageList, 'page');
+
+  //get the projects list
+  const pjList = await allRecords('project');
+  const projects = await getRecords(
+    pjList,
+    'project',
+    getPrefix(menu, 'projects'),
+    'projects'
+  );
+
+  //get the news items
+  const newsList = await allRecords('news');
+  const news = await getRecords(
+    newsList,
+    'news',
+    getPrefix(menu, 'news-index'),
+    'news-index'
+  );
+
+  //split artists into groups
+  const artists = await allRecords('artist');
+  const aa = artists.filter((r) => r.associatedArtist?.length > 0);
+  const associated = await getRecords(
+    aa,
+    'artist',
+    getPrefix(menu, 'associated-artists'),
+    'associated-artists'
+  );
+  const ar = artists.filter((r) => r.artisticResidence?.length > 0);
   const residences = await getRecords(
+    ar,
     'artist',
-    getPrefix(menu, 'artistic-residences')
+    getPrefix(menu, 'artistic-residences'),
+    'artistic-residences'
   );
-  const artists = await getRecords(
-    'artist',
-    getPrefix(menu, 'associated-artists')
+
+  //split events into groups
+  const allEvents = await allRecords('event');
+  const fe = allEvents.filter((event) => event.isFestival);
+  const festival = await getRecords(
+    fe,
+    'event',
+    getPrefix(menu, 'festival-events'),
+    'festival-events'
   );
-  const news = await getRecords('news', getPrefix(menu, 'news-index'));
+  const oe = allEvents.filter((event) => !event.isFestival);
+  const events = await getRecords(
+    oe,
+    'event',
+    getPrefix(menu, 'other-events'),
+    'other-events'
+  );
+
+  //split courses into groups
+  const allWorkshops = await allRecords('workshop');
+  const ws = allWorkshops.filter((event) => event.isWorkshop);
+  const workshops = await getRecords(
+    ws,
+    'workshop',
+    getPrefix(menu, 'workshops')
+  );
+  const cs = allWorkshops.filter((event) => !event.isWorkshop);
+  const courses = await getRecords(
+    cs,
+    'workshop',
+    getPrefix(menu, 'workshops')
+  );
 
   const list = withAlts([
     ...menu,
     ...pages,
+    ...festival,
     ...events,
+    ...workshops,
     ...courses,
     ...projects,
-    ...artists,
+    ...associated,
     ...residences,
     ...news,
   ]);
@@ -212,6 +286,7 @@ const generateRoutes = async () => {
     JSON.stringify(menuRoutes, null, 2),
     'utf8'
   );
+  console.log('routes len', list.length);
   fs.writeFileSync('data/routes.json', JSON.stringify(list, null, 2), 'utf8');
 };
 
