@@ -54,6 +54,7 @@ export default function Newsletter({ locale, data }) {
                       type="submit"
                       name="subscribe"
                       id="mc-embedded-subscribe"
+                      aria-label={translate('subscribe', locale)}
                     ></input>
                   </div>
                 </div>

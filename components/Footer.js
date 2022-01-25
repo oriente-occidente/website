@@ -19,7 +19,7 @@ export default function Footer({ locale, data, hideNewsletter = false }) {
             <div className="space-y-4 xl:grid xl:grid-cols-2 xl:gap-4 xl:space-y-0">
               <div>
                 <Image
-                  src="/oo_logo.jpg"
+                  src="/logo.svg"
                   alt="Oriente Occidente"
                   objectFit="contain"
                   objectPosition="left"
@@ -139,7 +139,7 @@ export default function Footer({ locale, data, hideNewsletter = false }) {
           <div className="md:grid md:grid-cols-2 md:mt-8 md:gap-4 md:border-t md:border-gray-200">
             <div className="">
               <div className="mt-8 mb-4 border-t border-gray-200 pt-8 md:border-0 md:mt-0">
-                <p className="text-xs text-gray-400">
+                <p className="text-xs text-gray-dark">
                   {translate('patronage', locale)}
                 </p>
               </div>
@@ -168,7 +168,7 @@ export default function Footer({ locale, data, hideNewsletter = false }) {
                   <Link href={resolveLinkById(item.id, locale)}>
                     <a
                       title={`Link to ${item.title}`}
-                      className="lg:ml-4 mr-4 lg:mr-0 text-xs text-gray-400 xl:text-center"
+                      className="lg:ml-4 mr-4 lg:mr-0 text-xs text-gray-dark xl:text-center"
                     >
                       {item.title}
                     </a>

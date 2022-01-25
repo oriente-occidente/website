@@ -75,7 +75,7 @@ function renderMobile(data, locale, alts) {
                   <a title="homepage">
                     <img
                       className="h-10 w-auto sm:h-12 lg:h-16"
-                      src="/oo_logo.jpg"
+                      src="/logo.svg"
                       alt="Oriente Occidente"
                     />
                   </a>
@@ -193,7 +193,7 @@ function Header(props) {
                 <span className="sr-only">Workflow</span>
                 <img
                   className="h-10 w-auto sm:h-12 lg:h-16 object-contain"
-                  src="/oo_logo.jpg"
+                  src="/logo.svg"
                   alt="Oriente Occidente"
                 />
               </a>

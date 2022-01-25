@@ -5183,6 +5183,53 @@
     ]
   },
   {
+    "id": "100599149",
+    "slugs": {
+      "en": [
+        "community",
+        "projects",
+        "nobody-nobody-nobody-it-s-ok-not-to-be-ok-collective-experience"
+      ],
+      "it": [
+        "contaminazioni",
+        "progetti",
+        "nobody-nobody-nobody-it-s-ok-not-to-be-ok-collective-experience"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "project",
+    "group": "projects",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "community",
+          "projects",
+          "nobody-nobody-nobody-it-s-ok-not-to-be-ok-collective-experience"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "contaminazioni",
+          "progetti",
+          "nobody-nobody-nobody-it-s-ok-not-to-be-ok-collective-experience"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "community/projects/nobody-nobody-nobody-it-s-ok-not-to-be-ok-collective-experience"
+      },
+      {
+        "locale": "it",
+        "url": "contaminazioni/progetti/nobody-nobody-nobody-it-s-ok-not-to-be-ok-collective-experience"
+      }
+    ]
+  },
+  {
     "id": "99656719",
     "slugs": {
       "en": [
