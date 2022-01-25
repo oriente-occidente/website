@@ -12,7 +12,7 @@ function Layout({
   return (
     <>
       <Header locale={locale} data={menu} alts={alts} />
-        <main className="py-[70px] md:py-[80px] lg:py-[110px] min-h-[50vh]">{children}</main>
+        <main className="pt-[70px] md:pt-[80px] lg:pt-[110px] min-h-[50vh]">{children}</main>
       <Footer locale={locale} data={footer} hideNewsletter={hideNewsletter} />
     </>
   );
