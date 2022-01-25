@@ -30,7 +30,7 @@ function HeroIndex({ data }) {
               />
             ) : null}
           </div>
-          <div className="hidden md:absolute top-0 h-full md:bottom-0 left-0 md:left-[25%] max-w-[1400px] right-1/2 bg-gradient-to-r z-10 from-black-transparent" />
+          <div className="hidden md:absolute top-0 h-full md:bottom-0 left-0 md:left-[25%] max-w-[1400px] right-1/2 bg-gradient-to-r z-10 from-black-transparent to-transparent" />
         </div>
       </header>
       <div className="md:grid md:grid-cols-4 md:gap-4 md:container md:mx-auto">

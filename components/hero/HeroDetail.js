@@ -38,16 +38,16 @@ function HeroDetail({ data, locale }) {
           {dateEvento != null ? (
             <>
               {dateEvento.map((date) => (
-                <div key={date.id} className="text-xxs text-black-light flex">
-                  <CalendarIcon aria-hidden="true" className="w-4 mr-2" />
+                <div key={date.id} className="text-xxs text-black-light flex items-center">
+                  <CalendarIcon aria-hidden="true" className="w-4 h-4 mr-2" />
                   {formatDate(date.startTime, locale || 'en')}
                 </div>
               ))}
             </>
           ) : null}
           {location && (
-            <h2 className="text-xxs text-black-light mt-1 flex">
-              <LocationMarkerIcon aria-hidden="true" className="w-4 mr-2" />
+            <h2 className="text-xxs text-black-light mt-1 flex items-center">
+              <LocationMarkerIcon aria-hidden="true" className="w-4 h-4 mr-2" />
               {location}
             </h2>
           )}
@@ -93,7 +93,7 @@ function HeroDetail({ data, locale }) {
           ) : null}
         </div>
 
-        <div className="hidden md:absolute top-0 h-full md:bottom-0 left-0 md:left-[25%] max-w-[1400px] right-1/2 bg-gradient-to-r z-10 from-black-transparent"></div>
+        <div className="hidden md:absolute top-0 h-full md:bottom-0 left-0 md:left-[25%] max-w-[1400px] right-1/2 bg-gradient-to-r z-10 from-black-transparent to-transparent"></div>
       </div>
     </header>
   );

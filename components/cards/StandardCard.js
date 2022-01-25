@@ -33,9 +33,9 @@ function StandardCard({ data, locale, categoryTitle, eventDate }) {
                 />
               : null
             }
-            <div className="absolute h-[65px] md:h-48 bottom-0 left-0 right-0 bg-gradient-to-t z-10 from-black-transparent"></div>
+            <div className="absolute h-[65px] md:h-48 bottom-0 left-0 right-0 bg-gradient-to-t z-10 from-black-transparent to-transparent"></div>
           </div>
-          <div className="hidden md:block absolute top-0 h-48 left-0 right-0 bg-gradient-to-b z-10 from-black-transparent"></div>
+          <div className="hidden md:block absolute top-0 h-48 left-0 right-0 bg-gradient-to-b z-10 from-black-transparent to-transparent"></div>
           <div className="md:absolute z-20 md:top-6 md:left-8">
             <h2 className="text-sm md:text-lg uppercase text-black md:text-white font-semibold mt-2">
               {data.title}

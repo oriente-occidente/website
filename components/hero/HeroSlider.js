@@ -18,7 +18,7 @@ function HeroSlider({ slides }) {
         speed={900}
         loop={true}
         slidesPerView={1}
-        autoplay={true}
+        // autoplay={true}
         pagination={true}
         navigation={true}
         className="mySwiper"
@@ -39,7 +39,7 @@ function HeroSlider({ slides }) {
                   {slide.title}
                 </h2>
               </div>
-              <div className="absolute -top-20 bottom-0 left-0 right-0 bg-gradient-to-t z-10 from-black-transparent"></div>
+              <div className="absolute inset-0 bg-gradient-to-t z-10 from-black-transparent to-transparent"></div>
             </SwiperSlide>
           );
         })}

@@ -27,8 +27,8 @@ function HomeCard({ count, categoryTitle, dateEvent, data, locale }) {
                 alt={alt}
                 title={title}
               />
-              <div className="absolute h-1/2 w-full left-0 top-0 bg-gradient-to-b z-10 from-black-transparent"></div>
-              <div className="hidden md:block absolute h-1/2 bottom-0 left-0 right-0 bg-gradient-to-t z-10 from-black-transparent"></div>
+              <div className="absolute h-1/2 w-full left-0 top-0 bg-gradient-to-b z-10 from-black-transparent to-transparent"></div>
+              <div className="hidden md:block absolute h-1/2 bottom-0 left-0 right-0 bg-gradient-to-t z-10 from-black-transparent to-transparent"></div>
               <div className="md:hidden text-white text-xl after:w-10 after:h-10 font-thin absolute left-1/2 -translate-x-2/4 after:border-white after:border bottom-4 after:rounded-full after:absolute after:top-1/2 after:left-1/2 after:-translate-y-2/4 after:-translate-x-2/4">
                 +
               </div>

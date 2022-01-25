@@ -82,7 +82,7 @@ function renderMobile(data, locale, alts) {
                 </Link>
               </div>
               <div className="-mr-2">
-                <Popover.Button className="rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:black">
+                <Popover.Button className="rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:ring-2 focus:ring-inset focus:black">
                   <span className="text-[12px] md:text-xs font-semibold uppercase tracking-widest text-black">
                     Close
                   </span>
@@ -121,7 +121,7 @@ function Header(props) {
               <Popover.Button
                 className={classNames(
                   open ? 'text-black' : 'text-black',
-                  'uppercase text-xxs tracking-widest group rounded-md inline-flex items-center font-semibold hover:text-gray-900 focus:outline-none '
+                  'uppercase text-xxs tracking-widest group rounded-md inline-flex items-center font-semibold hover:text-gray-900'
                 )}
               >
                 <span>{item.title}</span>
@@ -131,6 +131,7 @@ function Header(props) {
                     'ml-1 h-5 w-5 group-hover:text-gray-500'
                   )}
                   aria-hidden="true"
+                  focusable="false"
                 />
               </Popover.Button>
 
@@ -155,7 +156,7 @@ function Header(props) {
                             className="-m-3 p-1 block rounded-md hover:bg-gray-50"
                             onClick={() => close()}
                           >
-                            <p className="font-medium tracking-wider normal-case text-black-light">
+                            <p className="text-sm normal-case text-black-light">
                               {child.title}
                             </p>
                           </a>
@@ -184,8 +185,8 @@ function Header(props) {
 
   return (
     <header>
-      <Popover className="fixed inset-x-0 t-0 bg-white/60 z-50">
-        <div className="container flex justify-between items-center py-2 lg:py-3 sm:px-6 lg:justify-start lg:space-x-10">
+      <Popover className="fixed h-[70px] md:h-[80px] lg:h-[110px] inset-x-0 t-0 bg-white/60 z-40">
+        <div className="container h-full flex justify-between items-center py-2 lg:py-3 sm:px-6 lg:justify-start lg:space-x-10">
           <div>
             <Link locale={locale} href="/" passHref>
               <a href="#" className="flex">

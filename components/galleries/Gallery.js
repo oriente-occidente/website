@@ -33,7 +33,7 @@ function Gallery({ slides }) {
                   alt={slide.alt}
                   title={slide.title}
                 />
-                <div className="absolute inset-0 max-w-[1400px] bg-gradient-to-t z-10 from-black-transparent"></div>
+                <div className="absolute inset-0 max-w-[1400px] bg-gradient-to-t z-10 from-black-transparent to-transparent"></div>
               </div>
             </SwiperSlide>
           );

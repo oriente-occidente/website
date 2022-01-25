@@ -5700,6 +5700,53 @@
     ]
   },
   {
+    "id": "100562859",
+    "slugs": {
+      "en": [
+        "community",
+        "associated-artists",
+        "daniele-ninarello"
+      ],
+      "it": [
+        "contaminazioni",
+        "artisti-associati",
+        "daniele-ninarello"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "artist",
+    "group": "associated-artists",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "community",
+          "associated-artists",
+          "daniele-ninarello"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "contaminazioni",
+          "artisti-associati",
+          "daniele-ninarello"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "community/associated-artists/daniele-ninarello"
+      },
+      {
+        "locale": "it",
+        "url": "contaminazioni/artisti-associati/daniele-ninarello"
+      }
+    ]
+  },
+  {
     "id": "85765727",
     "slugs": {
       "en": [
@@ -5743,6 +5790,100 @@
       {
         "locale": "it",
         "url": "contaminazioni/artisti-associati/alessio-maria-romano"
+      }
+    ]
+  },
+  {
+    "id": "100562859",
+    "slugs": {
+      "en": [
+        "studio",
+        "artistic-residences",
+        "daniele-ninarello"
+      ],
+      "it": [
+        "studio",
+        "residenze-artistiche",
+        "daniele-ninarello"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "artist",
+    "group": "artistic-residences",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "studio",
+          "artistic-residences",
+          "daniele-ninarello"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "studio",
+          "residenze-artistiche",
+          "daniele-ninarello"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "studio/artistic-residences/daniele-ninarello"
+      },
+      {
+        "locale": "it",
+        "url": "studio/residenze-artistiche/daniele-ninarello"
+      }
+    ]
+  },
+  {
+    "id": "85765727",
+    "slugs": {
+      "en": [
+        "studio",
+        "artistic-residences",
+        "alessio-maria-romano"
+      ],
+      "it": [
+        "studio",
+        "residenze-artistiche",
+        "alessio-maria-romano"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "artist",
+    "group": "artistic-residences",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "studio",
+          "artistic-residences",
+          "alessio-maria-romano"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "studio",
+          "residenze-artistiche",
+          "alessio-maria-romano"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "studio/artistic-residences/alessio-maria-romano"
+      },
+      {
+        "locale": "it",
+        "url": "studio/residenze-artistiche/alessio-maria-romano"
       }
     ]
   },
@@ -5837,53 +5978,6 @@
       {
         "locale": "it",
         "url": "studio/residenze-artistiche/azioni-fuori-posto"
-      }
-    ]
-  },
-  {
-    "id": "85765727",
-    "slugs": {
-      "en": [
-        "studio",
-        "artistic-residences",
-        "alessio-maria-romano"
-      ],
-      "it": [
-        "studio",
-        "residenze-artistiche",
-        "alessio-maria-romano"
-      ]
-    },
-    "isIndex": false,
-    "indexType": "",
-    "__typename": "artist",
-    "group": "artistic-residences",
-    "paths": [
-      {
-        "locale": "en",
-        "slugs": [
-          "studio",
-          "artistic-residences",
-          "alessio-maria-romano"
-        ]
-      },
-      {
-        "locale": "it",
-        "slugs": [
-          "studio",
-          "residenze-artistiche",
-          "alessio-maria-romano"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "en",
-        "url": "studio/artistic-residences/alessio-maria-romano"
-      },
-      {
-        "locale": "it",
-        "url": "studio/residenze-artistiche/alessio-maria-romano"
       }
     ]
   },

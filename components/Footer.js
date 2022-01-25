@@ -10,7 +10,7 @@ export default function Footer({ locale, data, hideNewsletter = false }) {
   return (
     <>
       {!hideNewsletter && <Newsletter locale={locale} data={data} />}
-      <footer className="bg-white container" aria-labelledby="footer-heading">
+      <footer id="footer" className="bg-white container" aria-labelledby="footer-heading">
         <h2 id="footer-heading" className="sr-only">
           Footer
         </h2>

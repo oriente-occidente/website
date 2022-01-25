@@ -12,7 +12,7 @@ module.exports = {
           DEFAULT: '#000000',
           light: '#424242',
           medium: '#979797',
-          transparent: 'rgba(0,0,0,0.43)',
+          transparent: 'rgba(0,0,0,0.8)',
         },
         gray: {
           DEFAULT: '#E2E2E2',

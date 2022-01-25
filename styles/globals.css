@@ -142,3 +142,7 @@
     margin-left: 0
   }
 }
+
+.skip-link {
+  @apply text-white bg-black px-3 py-2 hover:bg-gray-dark absolute left-1/2 z-50 -translate-x-1/2 -translate-y-full focus:translate-y-0
+}

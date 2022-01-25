@@ -23,6 +23,7 @@ export default function Newsletter({ locale, data }) {
               >
                 <div id="mc_embed_signup_scroll">
                   <div>
+                    <label className="sr-only" for="mce-EMAIL">Insert your Email:</label>
                     <input
                       defaultValue=""
                       type="email"
@@ -37,9 +38,11 @@ export default function Newsletter({ locale, data }) {
                     <div className="hidden" id="mce-error-response"></div>
                     <div className="hidden" id="mce-success-response"></div>
                   </div>
+                  <label className="sr-only" for="input-text">Text:</label>
                   <div className="sr-only" aria-hidden="true">
                     <input
                       type="text"
+                      id="input-text"
                       name="b_58396ba31c40d0c1a6e058a82_c261770ce1"
                       tabIndex="-1"
                       defaultValue=""
