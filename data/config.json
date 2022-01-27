@@ -104,21 +104,21 @@
       "titles": [
         {
           "locale": "en",
-          "title": "Community"
+          "title": "People"
         },
         {
           "locale": "it",
-          "title": "Contaminazioni"
+          "title": "People"
         }
       ],
       "slugs": [
         {
           "locale": "en",
-          "slug": "community"
+          "slug": "people"
         },
         {
           "locale": "it",
-          "slug": "contaminazioni"
+          "slug": "people"
         }
       ],
       "link": null

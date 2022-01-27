@@ -168,58 +168,16 @@
     ]
   },
   {
-    "id": "79196187",
-    "isIndex": true,
-    "indexType": "courses",
-    "slugs": {
-      "it": [
-        "studio",
-        "educazione"
-      ],
-      "en": [
-        "studio",
-        "education"
-      ]
-    },
-    "__typename": "page",
-    "paths": [
-      {
-        "locale": "it",
-        "slugs": [
-          "studio",
-          "educazione"
-        ]
-      },
-      {
-        "locale": "en",
-        "slugs": [
-          "studio",
-          "education"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "it",
-        "url": "studio/educazione"
-      },
-      {
-        "locale": "en",
-        "url": "studio/education"
-      }
-    ]
-  },
-  {
     "id": "79196189",
     "isIndex": true,
     "indexType": "other-events",
     "slugs": {
       "it": [
-        "contaminazioni",
+        "people",
         "eventi"
       ],
       "en": [
-        "community",
+        "people",
         "events"
       ]
     },
@@ -228,14 +186,14 @@
       {
         "locale": "it",
         "slugs": [
-          "contaminazioni",
+          "people",
           "eventi"
         ]
       },
       {
         "locale": "en",
         "slugs": [
-          "community",
+          "people",
           "events"
         ]
       }
@@ -243,11 +201,11 @@
     "urls": [
       {
         "locale": "it",
-        "url": "contaminazioni/eventi"
+        "url": "people/eventi"
       },
       {
         "locale": "en",
-        "url": "community/events"
+        "url": "people/events"
       }
     ]
   },
@@ -257,11 +215,11 @@
     "indexType": "projects",
     "slugs": {
       "it": [
-        "contaminazioni",
+        "people",
         "progetti"
       ],
       "en": [
-        "community",
+        "people",
         "projects"
       ]
     },
@@ -270,14 +228,14 @@
       {
         "locale": "it",
         "slugs": [
-          "contaminazioni",
+          "people",
           "progetti"
         ]
       },
       {
         "locale": "en",
         "slugs": [
-          "community",
+          "people",
           "projects"
         ]
       }
@@ -285,11 +243,11 @@
     "urls": [
       {
         "locale": "it",
-        "url": "contaminazioni/progetti"
+        "url": "people/progetti"
       },
       {
         "locale": "en",
-        "url": "community/projects"
+        "url": "people/projects"
       }
     ]
   },
@@ -463,11 +421,11 @@
     "indexType": "associated-artists",
     "slugs": {
       "it": [
-        "contaminazioni",
+        "studio",
         "artisti-associati"
       ],
       "en": [
-        "community",
+        "studio",
         "associated-artists"
       ]
     },
@@ -476,14 +434,14 @@
       {
         "locale": "it",
         "slugs": [
-          "contaminazioni",
+          "studio",
           "artisti-associati"
         ]
       },
       {
         "locale": "en",
         "slugs": [
-          "community",
+          "studio",
           "associated-artists"
         ]
       }
@@ -491,11 +449,11 @@
     "urls": [
       {
         "locale": "it",
-        "url": "contaminazioni/artisti-associati"
+        "url": "studio/artisti-associati"
       },
       {
         "locale": "en",
-        "url": "community/associated-artists"
+        "url": "studio/associated-artists"
       }
     ]
   },
@@ -538,6 +496,45 @@
     ]
   },
   {
+    "id": "79196187",
+    "slugs": {
+      "en": [
+        "education"
+      ],
+      "it": [
+        "educazione"
+      ]
+    },
+    "isIndex": true,
+    "indexType": "courses",
+    "__typename": "page",
+    "group": "page",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "education"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "educazione"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "education"
+      },
+      {
+        "locale": "it",
+        "url": "educazione"
+      }
+    ]
+  },
+  {
     "id": "94866658",
     "slugs": {
       "en": [
@@ -573,6 +570,570 @@
       {
         "locale": "it",
         "url": "informativa-privacy"
+      }
+    ]
+  },
+  {
+    "id": "96057245",
+    "slugs": {
+      "en": [
+        "festival",
+        "program",
+        "antonio-vigano-and-michela-lucenti"
+      ],
+      "it": [
+        "festival",
+        "programma",
+        "antonio-vigano-and-michela-lucenti"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "event",
+    "group": "festival-events",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "festival",
+          "program",
+          "antonio-vigano-and-michela-lucenti"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "festival",
+          "programma",
+          "antonio-vigano-and-michela-lucenti"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "festival/program/antonio-vigano-and-michela-lucenti"
+      },
+      {
+        "locale": "it",
+        "url": "festival/programma/antonio-vigano-and-michela-lucenti"
+      }
+    ]
+  },
+  {
+    "id": "96081881",
+    "slugs": {
+      "en": [
+        "festival",
+        "program",
+        "pablo-girolami"
+      ],
+      "it": [
+        "festival",
+        "programma",
+        "gianni-pasquale"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "event",
+    "group": "festival-events",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "festival",
+          "program",
+          "pablo-girolami"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "festival",
+          "programma",
+          "gianni-pasquale"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "festival/program/pablo-girolami"
+      },
+      {
+        "locale": "it",
+        "url": "festival/programma/gianni-pasquale"
+      }
+    ]
+  },
+  {
+    "id": "96056619",
+    "slugs": {
+      "en": [
+        "festival",
+        "program",
+        "michela-lucenti"
+      ],
+      "it": [
+        "festival",
+        "programma",
+        "michela-lucenti"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "event",
+    "group": "festival-events",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "festival",
+          "program",
+          "michela-lucenti"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "festival",
+          "programma",
+          "michela-lucenti"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "festival/program/michela-lucenti"
+      },
+      {
+        "locale": "it",
+        "url": "festival/programma/michela-lucenti"
+      }
+    ]
+  },
+  {
+    "id": "96086789",
+    "slugs": {
+      "en": [
+        "festival",
+        "program",
+        "gravity-and-other-attraction"
+      ],
+      "it": [
+        "festival",
+        "programma",
+        "gravity-and-other-attraction"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "event",
+    "group": "festival-events",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "festival",
+          "program",
+          "gravity-and-other-attraction"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "festival",
+          "programma",
+          "gravity-and-other-attraction"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "festival/program/gravity-and-other-attraction"
+      },
+      {
+        "locale": "it",
+        "url": "festival/programma/gravity-and-other-attraction"
+      }
+    ]
+  },
+  {
+    "id": "96086741",
+    "slugs": {
+      "en": [
+        "festival",
+        "program",
+        "cina-coronavirus"
+      ],
+      "it": [
+        "festival",
+        "programma",
+        "cina-coronavirus"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "event",
+    "group": "festival-events",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "festival",
+          "program",
+          "cina-coronavirus"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "festival",
+          "programma",
+          "cina-coronavirus"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "festival/program/cina-coronavirus"
+      },
+      {
+        "locale": "it",
+        "url": "festival/programma/cina-coronavirus"
+      }
+    ]
+  },
+  {
+    "id": "96081767",
+    "slugs": {
+      "en": [
+        "festival",
+        "program",
+        "fabrizio-maronta"
+      ],
+      "it": [
+        "festival",
+        "programma",
+        "terra-fabrizio-maronta"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "event",
+    "group": "festival-events",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "festival",
+          "program",
+          "fabrizio-maronta"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "festival",
+          "programma",
+          "terra-fabrizio-maronta"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "festival/program/fabrizio-maronta"
+      },
+      {
+        "locale": "it",
+        "url": "festival/programma/terra-fabrizio-maronta"
+      }
+    ]
+  },
+  {
+    "id": "96101834",
+    "slugs": {
+      "en": [
+        "festival",
+        "program",
+        "cage-cunningham"
+      ],
+      "it": [
+        "festival",
+        "programma",
+        "cage-cunningham"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "event",
+    "group": "festival-events",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "festival",
+          "program",
+          "cage-cunningham"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "festival",
+          "programma",
+          "cage-cunningham"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "festival/program/cage-cunningham"
+      },
+      {
+        "locale": "it",
+        "url": "festival/programma/cage-cunningham"
+      }
+    ]
+  },
+  {
+    "id": "96086557",
+    "slugs": {
+      "en": [
+        "festival",
+        "program",
+        "silvia-dezulian-and-filippo-porro"
+      ],
+      "it": [
+        "festival",
+        "programma",
+        "perspectiva"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "event",
+    "group": "festival-events",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "festival",
+          "program",
+          "silvia-dezulian-and-filippo-porro"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "festival",
+          "programma",
+          "perspectiva"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "festival/program/silvia-dezulian-and-filippo-porro"
+      },
+      {
+        "locale": "it",
+        "url": "festival/programma/perspectiva"
+      }
+    ]
+  },
+  {
+    "id": "96083006",
+    "slugs": {
+      "en": [
+        "festival",
+        "program",
+        "luna-cenere"
+      ],
+      "it": [
+        "festival",
+        "programma",
+        "genealogia"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "event",
+    "group": "festival-events",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "festival",
+          "program",
+          "luna-cenere"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "festival",
+          "programma",
+          "genealogia"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "festival/program/luna-cenere"
+      },
+      {
+        "locale": "it",
+        "url": "festival/programma/genealogia"
+      }
+    ]
+  },
+  {
+    "id": "96081715",
+    "slugs": {
+      "en": [
+        "festival",
+        "program",
+        "ezio-mauro"
+      ],
+      "it": [
+        "festival",
+        "programma",
+        "liberi-dal-male"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "event",
+    "group": "festival-events",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "festival",
+          "program",
+          "ezio-mauro"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "festival",
+          "programma",
+          "liberi-dal-male"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "festival/program/ezio-mauro"
+      },
+      {
+        "locale": "it",
+        "url": "festival/programma/liberi-dal-male"
+      }
+    ]
+  },
+  {
+    "id": "96080305",
+    "slugs": {
+      "en": [
+        "festival",
+        "program",
+        "centaur"
+      ],
+      "it": [
+        "festival",
+        "programma",
+        "centaur"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "event",
+    "group": "festival-events",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "festival",
+          "program",
+          "centaur"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "festival",
+          "programma",
+          "centaur"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "festival/program/centaur"
+      },
+      {
+        "locale": "it",
+        "url": "festival/programma/centaur"
+      }
+    ]
+  },
+  {
+    "id": "96101891",
+    "slugs": {
+      "en": [
+        "festival",
+        "program",
+        "making-an-entrance"
+      ],
+      "it": [
+        "festival",
+        "programma",
+        "making-an-entrance"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "event",
+    "group": "festival-events",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "festival",
+          "program",
+          "making-an-entrance"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "festival",
+          "programma",
+          "making-an-entrance"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "festival/program/making-an-entrance"
+      },
+      {
+        "locale": "it",
+        "url": "festival/programma/making-an-entrance"
       }
     ]
   },
@@ -1090,53 +1651,6 @@
       {
         "locale": "it",
         "url": "festival/programma/20-di-versi-madrigali-contemporanei"
-      }
-    ]
-  },
-  {
-    "id": "96567293",
-    "slugs": {
-      "en": [
-        "festival",
-        "program",
-        "fascism-in-the-family"
-      ],
-      "it": [
-        "festival",
-        "programma",
-        "fascism-in-the-family"
-      ]
-    },
-    "isIndex": false,
-    "indexType": "",
-    "__typename": "event",
-    "group": "festival-events",
-    "paths": [
-      {
-        "locale": "en",
-        "slugs": [
-          "festival",
-          "program",
-          "fascism-in-the-family"
-        ]
-      },
-      {
-        "locale": "it",
-        "slugs": [
-          "festival",
-          "programma",
-          "fascism-in-the-family"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "en",
-        "url": "festival/program/fascism-in-the-family"
-      },
-      {
-        "locale": "it",
-        "url": "festival/programma/fascism-in-the-family"
       }
     ]
   },
@@ -1701,53 +2215,6 @@
       {
         "locale": "it",
         "url": "festival/programma/keep-in-touch"
-      }
-    ]
-  },
-  {
-    "id": "96101891",
-    "slugs": {
-      "en": [
-        "festival",
-        "program",
-        "making-an-entrance"
-      ],
-      "it": [
-        "festival",
-        "programma",
-        "making-an-entrance"
-      ]
-    },
-    "isIndex": false,
-    "indexType": "",
-    "__typename": "event",
-    "group": "festival-events",
-    "paths": [
-      {
-        "locale": "en",
-        "slugs": [
-          "festival",
-          "program",
-          "making-an-entrance"
-        ]
-      },
-      {
-        "locale": "it",
-        "slugs": [
-          "festival",
-          "programma",
-          "making-an-entrance"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "en",
-        "url": "festival/program/making-an-entrance"
-      },
-      {
-        "locale": "it",
-        "url": "festival/programma/making-an-entrance"
       }
     ]
   },
@@ -2974,53 +3441,6 @@
     ]
   },
   {
-    "id": "89224754",
-    "slugs": {
-      "en": [
-        "festival",
-        "program",
-        "festival-event"
-      ],
-      "it": [
-        "festival",
-        "programma",
-        "evento-di-prova"
-      ]
-    },
-    "isIndex": false,
-    "indexType": "",
-    "__typename": "event",
-    "group": "festival-events",
-    "paths": [
-      {
-        "locale": "en",
-        "slugs": [
-          "festival",
-          "program",
-          "festival-event"
-        ]
-      },
-      {
-        "locale": "it",
-        "slugs": [
-          "festival",
-          "programma",
-          "evento-di-prova"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "en",
-        "url": "festival/program/festival-event"
-      },
-      {
-        "locale": "it",
-        "url": "festival/programma/evento-di-prova"
-      }
-    ]
-  },
-  {
     "id": "97510034",
     "slugs": {
       "en": [
@@ -3064,53 +3484,6 @@
       {
         "locale": "it",
         "url": "festival/programma/mostra-oriente-occidente-40-radici"
-      }
-    ]
-  },
-  {
-    "id": "96086741",
-    "slugs": {
-      "en": [
-        "festival",
-        "program",
-        "giorgio-cuscito"
-      ],
-      "it": [
-        "festival",
-        "programma",
-        "giorgio-cuscito"
-      ]
-    },
-    "isIndex": false,
-    "indexType": "",
-    "__typename": "event",
-    "group": "festival-events",
-    "paths": [
-      {
-        "locale": "en",
-        "slugs": [
-          "festival",
-          "program",
-          "giorgio-cuscito"
-        ]
-      },
-      {
-        "locale": "it",
-        "slugs": [
-          "festival",
-          "programma",
-          "giorgio-cuscito"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "en",
-        "url": "festival/program/giorgio-cuscito"
-      },
-      {
-        "locale": "it",
-        "url": "festival/programma/giorgio-cuscito"
       }
     ]
   },
@@ -3393,476 +3766,6 @@
       {
         "locale": "it",
         "url": "festival/programma/il-confine-non-e-una-linea-sottile"
-      }
-    ]
-  },
-  {
-    "id": "96086789",
-    "slugs": {
-      "en": [
-        "community",
-        "events",
-        "costas-lamproulis"
-      ],
-      "it": [
-        "contaminazioni",
-        "eventi",
-        "costas-lamproulis"
-      ]
-    },
-    "isIndex": false,
-    "indexType": "",
-    "__typename": "event",
-    "group": "other-events",
-    "paths": [
-      {
-        "locale": "en",
-        "slugs": [
-          "community",
-          "events",
-          "costas-lamproulis"
-        ]
-      },
-      {
-        "locale": "it",
-        "slugs": [
-          "contaminazioni",
-          "eventi",
-          "costas-lamproulis"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "en",
-        "url": "community/events/costas-lamproulis"
-      },
-      {
-        "locale": "it",
-        "url": "contaminazioni/eventi/costas-lamproulis"
-      }
-    ]
-  },
-  {
-    "id": "96083006",
-    "slugs": {
-      "en": [
-        "community",
-        "events",
-        "luna-cenere"
-      ],
-      "it": [
-        "contaminazioni",
-        "eventi",
-        "luna-cenere"
-      ]
-    },
-    "isIndex": false,
-    "indexType": "",
-    "__typename": "event",
-    "group": "other-events",
-    "paths": [
-      {
-        "locale": "en",
-        "slugs": [
-          "community",
-          "events",
-          "luna-cenere"
-        ]
-      },
-      {
-        "locale": "it",
-        "slugs": [
-          "contaminazioni",
-          "eventi",
-          "luna-cenere"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "en",
-        "url": "community/events/luna-cenere"
-      },
-      {
-        "locale": "it",
-        "url": "contaminazioni/eventi/luna-cenere"
-      }
-    ]
-  },
-  {
-    "id": "96080305",
-    "slugs": {
-      "en": [
-        "community",
-        "events",
-        "centaur"
-      ],
-      "it": [
-        "contaminazioni",
-        "eventi",
-        "centaur"
-      ]
-    },
-    "isIndex": false,
-    "indexType": "",
-    "__typename": "event",
-    "group": "other-events",
-    "paths": [
-      {
-        "locale": "en",
-        "slugs": [
-          "community",
-          "events",
-          "centaur"
-        ]
-      },
-      {
-        "locale": "it",
-        "slugs": [
-          "contaminazioni",
-          "eventi",
-          "centaur"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "en",
-        "url": "community/events/centaur"
-      },
-      {
-        "locale": "it",
-        "url": "contaminazioni/eventi/centaur"
-      }
-    ]
-  },
-  {
-    "id": "96101834",
-    "slugs": {
-      "en": [
-        "community",
-        "events",
-        "francesca-aste"
-      ],
-      "it": [
-        "contaminazioni",
-        "eventi",
-        "francesca-aste"
-      ]
-    },
-    "isIndex": false,
-    "indexType": "",
-    "__typename": "event",
-    "group": "other-events",
-    "paths": [
-      {
-        "locale": "en",
-        "slugs": [
-          "community",
-          "events",
-          "francesca-aste"
-        ]
-      },
-      {
-        "locale": "it",
-        "slugs": [
-          "contaminazioni",
-          "eventi",
-          "francesca-aste"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "en",
-        "url": "community/events/francesca-aste"
-      },
-      {
-        "locale": "it",
-        "url": "contaminazioni/eventi/francesca-aste"
-      }
-    ]
-  },
-  {
-    "id": "96081715",
-    "slugs": {
-      "en": [
-        "community",
-        "events",
-        "ezio-mauro"
-      ],
-      "it": [
-        "contaminazioni",
-        "eventi",
-        "ezio-mauro"
-      ]
-    },
-    "isIndex": false,
-    "indexType": "",
-    "__typename": "event",
-    "group": "other-events",
-    "paths": [
-      {
-        "locale": "en",
-        "slugs": [
-          "community",
-          "events",
-          "ezio-mauro"
-        ]
-      },
-      {
-        "locale": "it",
-        "slugs": [
-          "contaminazioni",
-          "eventi",
-          "ezio-mauro"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "en",
-        "url": "community/events/ezio-mauro"
-      },
-      {
-        "locale": "it",
-        "url": "contaminazioni/eventi/ezio-mauro"
-      }
-    ]
-  },
-  {
-    "id": "96081767",
-    "slugs": {
-      "en": [
-        "community",
-        "events",
-        "fabrizio-maronta"
-      ],
-      "it": [
-        "contaminazioni",
-        "eventi",
-        "fabrizio-maronta"
-      ]
-    },
-    "isIndex": false,
-    "indexType": "",
-    "__typename": "event",
-    "group": "other-events",
-    "paths": [
-      {
-        "locale": "en",
-        "slugs": [
-          "community",
-          "events",
-          "fabrizio-maronta"
-        ]
-      },
-      {
-        "locale": "it",
-        "slugs": [
-          "contaminazioni",
-          "eventi",
-          "fabrizio-maronta"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "en",
-        "url": "community/events/fabrizio-maronta"
-      },
-      {
-        "locale": "it",
-        "url": "contaminazioni/eventi/fabrizio-maronta"
-      }
-    ]
-  },
-  {
-    "id": "96057245",
-    "slugs": {
-      "en": [
-        "community",
-        "events",
-        "antonio-vigano-and-michela-lucenti"
-      ],
-      "it": [
-        "contaminazioni",
-        "eventi",
-        "antonio-vigano-and-michela-lucenti"
-      ]
-    },
-    "isIndex": false,
-    "indexType": "",
-    "__typename": "event",
-    "group": "other-events",
-    "paths": [
-      {
-        "locale": "en",
-        "slugs": [
-          "community",
-          "events",
-          "antonio-vigano-and-michela-lucenti"
-        ]
-      },
-      {
-        "locale": "it",
-        "slugs": [
-          "contaminazioni",
-          "eventi",
-          "antonio-vigano-and-michela-lucenti"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "en",
-        "url": "community/events/antonio-vigano-and-michela-lucenti"
-      },
-      {
-        "locale": "it",
-        "url": "contaminazioni/eventi/antonio-vigano-and-michela-lucenti"
-      }
-    ]
-  },
-  {
-    "id": "96056619",
-    "slugs": {
-      "en": [
-        "community",
-        "events",
-        "michela-lucenti"
-      ],
-      "it": [
-        "contaminazioni",
-        "eventi",
-        "michela-lucenti"
-      ]
-    },
-    "isIndex": false,
-    "indexType": "",
-    "__typename": "event",
-    "group": "other-events",
-    "paths": [
-      {
-        "locale": "en",
-        "slugs": [
-          "community",
-          "events",
-          "michela-lucenti"
-        ]
-      },
-      {
-        "locale": "it",
-        "slugs": [
-          "contaminazioni",
-          "eventi",
-          "michela-lucenti"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "en",
-        "url": "community/events/michela-lucenti"
-      },
-      {
-        "locale": "it",
-        "url": "contaminazioni/eventi/michela-lucenti"
-      }
-    ]
-  },
-  {
-    "id": "96086557",
-    "slugs": {
-      "en": [
-        "community",
-        "events",
-        "silvia-dezulian-and-filippo-porro"
-      ],
-      "it": [
-        "contaminazioni",
-        "eventi",
-        "silvia-dezulian-and-filippo-porro"
-      ]
-    },
-    "isIndex": false,
-    "indexType": "",
-    "__typename": "event",
-    "group": "other-events",
-    "paths": [
-      {
-        "locale": "en",
-        "slugs": [
-          "community",
-          "events",
-          "silvia-dezulian-and-filippo-porro"
-        ]
-      },
-      {
-        "locale": "it",
-        "slugs": [
-          "contaminazioni",
-          "eventi",
-          "silvia-dezulian-and-filippo-porro"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "en",
-        "url": "community/events/silvia-dezulian-and-filippo-porro"
-      },
-      {
-        "locale": "it",
-        "url": "contaminazioni/eventi/silvia-dezulian-and-filippo-porro"
-      }
-    ]
-  },
-  {
-    "id": "96081881",
-    "slugs": {
-      "en": [
-        "community",
-        "events",
-        "pablo-girolami"
-      ],
-      "it": [
-        "contaminazioni",
-        "eventi",
-        "pablo-girolami"
-      ]
-    },
-    "isIndex": false,
-    "indexType": "",
-    "__typename": "event",
-    "group": "other-events",
-    "paths": [
-      {
-        "locale": "en",
-        "slugs": [
-          "community",
-          "events",
-          "pablo-girolami"
-        ]
-      },
-      {
-        "locale": "it",
-        "slugs": [
-          "contaminazioni",
-          "eventi",
-          "pablo-girolami"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "en",
-        "url": "community/events/pablo-girolami"
-      },
-      {
-        "locale": "it",
-        "url": "contaminazioni/eventi/pablo-girolami"
       }
     ]
   },
@@ -4807,53 +4710,6 @@
     ]
   },
   {
-    "id": "97553467",
-    "slugs": {
-      "en": [
-        "studio",
-        "workshop",
-        "genealogia-una-call-per-danzatori-e-amatori"
-      ],
-      "it": [
-        "studio",
-        "workshop",
-        "genealogia-una-call-per-danzatori-e-amatori"
-      ]
-    },
-    "isIndex": false,
-    "indexType": "",
-    "__typename": "workshop",
-    "group": "workshops",
-    "paths": [
-      {
-        "locale": "en",
-        "slugs": [
-          "studio",
-          "workshop",
-          "genealogia-una-call-per-danzatori-e-amatori"
-        ]
-      },
-      {
-        "locale": "it",
-        "slugs": [
-          "studio",
-          "workshop",
-          "genealogia-una-call-per-danzatori-e-amatori"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "en",
-        "url": "studio/workshop/genealogia-una-call-per-danzatori-e-amatori"
-      },
-      {
-        "locale": "it",
-        "url": "studio/workshop/genealogia-una-call-per-danzatori-e-amatori"
-      }
-    ]
-  },
-  {
     "id": "97539633",
     "slugs": {
       "en": [
@@ -5136,16 +4992,51 @@
     ]
   },
   {
+    "id": "97553467",
+    "slugs": {
+      "en": [
+        "genealogia-una-call-per-danzatori-e-amatori"
+      ],
+      "it": [
+        "genealogia-una-call-per-danzatori-e-amatori"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "workshop",
+    "group": "courses",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "genealogia-una-call-per-danzatori-e-amatori"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "genealogia-una-call-per-danzatori-e-amatori"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "genealogia-una-call-per-danzatori-e-amatori"
+      },
+      {
+        "locale": "it",
+        "url": "genealogia-una-call-per-danzatori-e-amatori"
+      }
+    ]
+  },
+  {
     "id": "100390361",
     "slugs": {
       "en": [
-        "studio",
-        "education",
         "test-your-family"
       ],
       "it": [
-        "studio",
-        "educazione",
         "metti-alla-prova-la-tua-famiglia"
       ]
     },
@@ -5157,16 +5048,12 @@
       {
         "locale": "en",
         "slugs": [
-          "studio",
-          "education",
           "test-your-family"
         ]
       },
       {
         "locale": "it",
         "slugs": [
-          "studio",
-          "educazione",
           "metti-alla-prova-la-tua-famiglia"
         ]
       }
@@ -5174,11 +5061,11 @@
     "urls": [
       {
         "locale": "en",
-        "url": "studio/education/test-your-family"
+        "url": "test-your-family"
       },
       {
         "locale": "it",
-        "url": "studio/educazione/metti-alla-prova-la-tua-famiglia"
+        "url": "metti-alla-prova-la-tua-famiglia"
       }
     ]
   },
@@ -5186,12 +5073,12 @@
     "id": "100599149",
     "slugs": {
       "en": [
-        "community",
+        "people",
         "projects",
         "nobody-nobody-nobody-it-s-ok-not-to-be-ok-collective-experience"
       ],
       "it": [
-        "contaminazioni",
+        "people",
         "progetti",
         "nobody-nobody-nobody-it-s-ok-not-to-be-ok-collective-experience"
       ]
@@ -5204,7 +5091,7 @@
       {
         "locale": "en",
         "slugs": [
-          "community",
+          "people",
           "projects",
           "nobody-nobody-nobody-it-s-ok-not-to-be-ok-collective-experience"
         ]
@@ -5212,7 +5099,7 @@
       {
         "locale": "it",
         "slugs": [
-          "contaminazioni",
+          "people",
           "progetti",
           "nobody-nobody-nobody-it-s-ok-not-to-be-ok-collective-experience"
         ]
@@ -5221,11 +5108,11 @@
     "urls": [
       {
         "locale": "en",
-        "url": "community/projects/nobody-nobody-nobody-it-s-ok-not-to-be-ok-collective-experience"
+        "url": "people/projects/nobody-nobody-nobody-it-s-ok-not-to-be-ok-collective-experience"
       },
       {
         "locale": "it",
-        "url": "contaminazioni/progetti/nobody-nobody-nobody-it-s-ok-not-to-be-ok-collective-experience"
+        "url": "people/progetti/nobody-nobody-nobody-it-s-ok-not-to-be-ok-collective-experience"
       }
     ]
   },
@@ -5233,12 +5120,12 @@
     "id": "99656719",
     "slugs": {
       "en": [
-        "community",
+        "people",
         "projects",
         "spring"
       ],
       "it": [
-        "contaminazioni",
+        "people",
         "progetti",
         "spring"
       ]
@@ -5251,7 +5138,7 @@
       {
         "locale": "en",
         "slugs": [
-          "community",
+          "people",
           "projects",
           "spring"
         ]
@@ -5259,7 +5146,7 @@
       {
         "locale": "it",
         "slugs": [
-          "contaminazioni",
+          "people",
           "progetti",
           "spring"
         ]
@@ -5268,11 +5155,11 @@
     "urls": [
       {
         "locale": "en",
-        "url": "community/projects/spring"
+        "url": "people/projects/spring"
       },
       {
         "locale": "it",
-        "url": "contaminazioni/progetti/spring"
+        "url": "people/progetti/spring"
       }
     ]
   },
@@ -5280,12 +5167,12 @@
     "id": "99652254",
     "slugs": {
       "en": [
-        "community",
+        "people",
         "projects",
         "over-limited"
       ],
       "it": [
-        "contaminazioni",
+        "people",
         "progetti",
         "over-limited"
       ]
@@ -5298,7 +5185,7 @@
       {
         "locale": "en",
         "slugs": [
-          "community",
+          "people",
           "projects",
           "over-limited"
         ]
@@ -5306,7 +5193,7 @@
       {
         "locale": "it",
         "slugs": [
-          "contaminazioni",
+          "people",
           "progetti",
           "over-limited"
         ]
@@ -5315,11 +5202,11 @@
     "urls": [
       {
         "locale": "en",
-        "url": "community/projects/over-limited"
+        "url": "people/projects/over-limited"
       },
       {
         "locale": "it",
-        "url": "contaminazioni/progetti/over-limited"
+        "url": "people/progetti/over-limited"
       }
     ]
   },
@@ -5327,12 +5214,12 @@
     "id": "99652172",
     "slugs": {
       "en": [
-        "community",
+        "people",
         "projects",
         "dimmi-cosa-vuoi-vedere"
       ],
       "it": [
-        "contaminazioni",
+        "people",
         "progetti",
         "dimmi-cosa-vuoi-vedere"
       ]
@@ -5345,7 +5232,7 @@
       {
         "locale": "en",
         "slugs": [
-          "community",
+          "people",
           "projects",
           "dimmi-cosa-vuoi-vedere"
         ]
@@ -5353,7 +5240,7 @@
       {
         "locale": "it",
         "slugs": [
-          "contaminazioni",
+          "people",
           "progetti",
           "dimmi-cosa-vuoi-vedere"
         ]
@@ -5362,11 +5249,11 @@
     "urls": [
       {
         "locale": "en",
-        "url": "community/projects/dimmi-cosa-vuoi-vedere"
+        "url": "people/projects/dimmi-cosa-vuoi-vedere"
       },
       {
         "locale": "it",
-        "url": "contaminazioni/progetti/dimmi-cosa-vuoi-vedere"
+        "url": "people/progetti/dimmi-cosa-vuoi-vedere"
       }
     ]
   },
@@ -5374,12 +5261,12 @@
     "id": "99652019",
     "slugs": {
       "en": [
-        "community",
+        "people",
         "projects",
         "rete-italiana-europe-beyond-access-2021-2023"
       ],
       "it": [
-        "contaminazioni",
+        "people",
         "progetti",
         "rete-italiana-europe-beyond-access-2021-2023"
       ]
@@ -5392,7 +5279,7 @@
       {
         "locale": "en",
         "slugs": [
-          "community",
+          "people",
           "projects",
           "rete-italiana-europe-beyond-access-2021-2023"
         ]
@@ -5400,7 +5287,7 @@
       {
         "locale": "it",
         "slugs": [
-          "contaminazioni",
+          "people",
           "progetti",
           "rete-italiana-europe-beyond-access-2021-2023"
         ]
@@ -5409,11 +5296,11 @@
     "urls": [
       {
         "locale": "en",
-        "url": "community/projects/rete-italiana-europe-beyond-access-2021-2023"
+        "url": "people/projects/rete-italiana-europe-beyond-access-2021-2023"
       },
       {
         "locale": "it",
-        "url": "contaminazioni/progetti/rete-italiana-europe-beyond-access-2021-2023"
+        "url": "people/progetti/rete-italiana-europe-beyond-access-2021-2023"
       }
     ]
   },
@@ -5421,12 +5308,12 @@
     "id": "99647390",
     "slugs": {
       "en": [
-        "community",
+        "people",
         "projects",
         "movimento-libero"
       ],
       "it": [
-        "contaminazioni",
+        "people",
         "progetti",
         "movimento-libero"
       ]
@@ -5439,7 +5326,7 @@
       {
         "locale": "en",
         "slugs": [
-          "community",
+          "people",
           "projects",
           "movimento-libero"
         ]
@@ -5447,7 +5334,7 @@
       {
         "locale": "it",
         "slugs": [
-          "contaminazioni",
+          "people",
           "progetti",
           "movimento-libero"
         ]
@@ -5456,11 +5343,11 @@
     "urls": [
       {
         "locale": "en",
-        "url": "community/projects/movimento-libero"
+        "url": "people/projects/movimento-libero"
       },
       {
         "locale": "it",
-        "url": "contaminazioni/progetti/movimento-libero"
+        "url": "people/progetti/movimento-libero"
       }
     ]
   },
@@ -5468,12 +5355,12 @@
     "id": "99646293",
     "slugs": {
       "en": [
-        "community",
+        "people",
         "projects",
         "spark"
       ],
       "it": [
-        "contaminazioni",
+        "people",
         "progetti",
         "spark"
       ]
@@ -5486,7 +5373,7 @@
       {
         "locale": "en",
         "slugs": [
-          "community",
+          "people",
           "projects",
           "spark"
         ]
@@ -5494,7 +5381,7 @@
       {
         "locale": "it",
         "slugs": [
-          "contaminazioni",
+          "people",
           "progetti",
           "spark"
         ]
@@ -5503,11 +5390,11 @@
     "urls": [
       {
         "locale": "en",
-        "url": "community/projects/spark"
+        "url": "people/projects/spark"
       },
       {
         "locale": "it",
-        "url": "contaminazioni/progetti/spark"
+        "url": "people/progetti/spark"
       }
     ]
   },
@@ -5515,12 +5402,12 @@
     "id": "99641013",
     "slugs": {
       "en": [
-        "community",
+        "people",
         "projects",
         "crossing-the-sea"
       ],
       "it": [
-        "contaminazioni",
+        "people",
         "progetti",
         "crossing-the-sea"
       ]
@@ -5533,7 +5420,7 @@
       {
         "locale": "en",
         "slugs": [
-          "community",
+          "people",
           "projects",
           "crossing-the-sea"
         ]
@@ -5541,7 +5428,7 @@
       {
         "locale": "it",
         "slugs": [
-          "contaminazioni",
+          "people",
           "progetti",
           "crossing-the-sea"
         ]
@@ -5550,11 +5437,11 @@
     "urls": [
       {
         "locale": "en",
-        "url": "community/projects/crossing-the-sea"
+        "url": "people/projects/crossing-the-sea"
       },
       {
         "locale": "it",
-        "url": "contaminazioni/progetti/crossing-the-sea"
+        "url": "people/progetti/crossing-the-sea"
       }
     ]
   },
@@ -5562,12 +5449,12 @@
     "id": "99639463",
     "slugs": {
       "en": [
-        "community",
+        "people",
         "projects",
         "eba-europe-beyond-access"
       ],
       "it": [
-        "contaminazioni",
+        "people",
         "progetti",
         "eba-europe-beyond-access"
       ]
@@ -5580,7 +5467,7 @@
       {
         "locale": "en",
         "slugs": [
-          "community",
+          "people",
           "projects",
           "eba-europe-beyond-access"
         ]
@@ -5588,7 +5475,7 @@
       {
         "locale": "it",
         "slugs": [
-          "contaminazioni",
+          "people",
           "progetti",
           "eba-europe-beyond-access"
         ]
@@ -5597,11 +5484,11 @@
     "urls": [
       {
         "locale": "en",
-        "url": "community/projects/eba-europe-beyond-access"
+        "url": "people/projects/eba-europe-beyond-access"
       },
       {
         "locale": "it",
-        "url": "contaminazioni/progetti/eba-europe-beyond-access"
+        "url": "people/progetti/eba-europe-beyond-access"
       }
     ]
   },
@@ -5609,12 +5496,12 @@
     "id": "99638384",
     "slugs": {
       "en": [
-        "community",
+        "people",
         "projects",
         "impart"
       ],
       "it": [
-        "contaminazioni",
+        "people",
         "progetti",
         "impart"
       ]
@@ -5627,7 +5514,7 @@
       {
         "locale": "en",
         "slugs": [
-          "community",
+          "people",
           "projects",
           "impart"
         ]
@@ -5635,7 +5522,7 @@
       {
         "locale": "it",
         "slugs": [
-          "contaminazioni",
+          "people",
           "progetti",
           "impart"
         ]
@@ -5644,11 +5531,11 @@
     "urls": [
       {
         "locale": "en",
-        "url": "community/projects/impart"
+        "url": "people/projects/impart"
       },
       {
         "locale": "it",
-        "url": "contaminazioni/progetti/impart"
+        "url": "people/progetti/impart"
       }
     ]
   },
@@ -5656,12 +5543,12 @@
     "id": "99592452",
     "slugs": {
       "en": [
-        "community",
+        "people",
         "projects",
         "moving-beyond-inclusion"
       ],
       "it": [
-        "contaminazioni",
+        "people",
         "progetti",
         "moving-beyond-inclusion"
       ]
@@ -5674,7 +5561,7 @@
       {
         "locale": "en",
         "slugs": [
-          "community",
+          "people",
           "projects",
           "moving-beyond-inclusion"
         ]
@@ -5682,7 +5569,7 @@
       {
         "locale": "it",
         "slugs": [
-          "contaminazioni",
+          "people",
           "progetti",
           "moving-beyond-inclusion"
         ]
@@ -5691,58 +5578,58 @@
     "urls": [
       {
         "locale": "en",
-        "url": "community/projects/moving-beyond-inclusion"
+        "url": "people/projects/moving-beyond-inclusion"
       },
       {
         "locale": "it",
-        "url": "contaminazioni/progetti/moving-beyond-inclusion"
+        "url": "people/progetti/moving-beyond-inclusion"
       }
     ]
   },
   {
-    "id": "89226190",
+    "id": "101319111",
     "slugs": {
       "en": [
-        "community",
-        "projects",
-        "project-sample"
+        "studio",
+        "associated-artists",
+        "luna-cenere"
       ],
       "it": [
-        "contaminazioni",
-        "progetti",
-        "esempio-di-progetto"
+        "studio",
+        "artisti-associati",
+        "luna-cenere"
       ]
     },
     "isIndex": false,
     "indexType": "",
-    "__typename": "project",
-    "group": "projects",
+    "__typename": "artist",
+    "group": "associated-artists",
     "paths": [
       {
         "locale": "en",
         "slugs": [
-          "community",
-          "projects",
-          "project-sample"
+          "studio",
+          "associated-artists",
+          "luna-cenere"
         ]
       },
       {
         "locale": "it",
         "slugs": [
-          "contaminazioni",
-          "progetti",
-          "esempio-di-progetto"
+          "studio",
+          "artisti-associati",
+          "luna-cenere"
         ]
       }
     ],
     "urls": [
       {
         "locale": "en",
-        "url": "community/projects/project-sample"
+        "url": "studio/associated-artists/luna-cenere"
       },
       {
         "locale": "it",
-        "url": "contaminazioni/progetti/esempio-di-progetto"
+        "url": "studio/artisti-associati/luna-cenere"
       }
     ]
   },
@@ -5750,12 +5637,12 @@
     "id": "100562859",
     "slugs": {
       "en": [
-        "community",
+        "studio",
         "associated-artists",
         "daniele-ninarello"
       ],
       "it": [
-        "contaminazioni",
+        "studio",
         "artisti-associati",
         "daniele-ninarello"
       ]
@@ -5768,7 +5655,7 @@
       {
         "locale": "en",
         "slugs": [
-          "community",
+          "studio",
           "associated-artists",
           "daniele-ninarello"
         ]
@@ -5776,7 +5663,7 @@
       {
         "locale": "it",
         "slugs": [
-          "contaminazioni",
+          "studio",
           "artisti-associati",
           "daniele-ninarello"
         ]
@@ -5785,11 +5672,11 @@
     "urls": [
       {
         "locale": "en",
-        "url": "community/associated-artists/daniele-ninarello"
+        "url": "studio/associated-artists/daniele-ninarello"
       },
       {
         "locale": "it",
-        "url": "contaminazioni/artisti-associati/daniele-ninarello"
+        "url": "studio/artisti-associati/daniele-ninarello"
       }
     ]
   },
@@ -5797,12 +5684,12 @@
     "id": "85765727",
     "slugs": {
       "en": [
-        "community",
+        "studio",
         "associated-artists",
         "alessio-maria-romano"
       ],
       "it": [
-        "contaminazioni",
+        "studio",
         "artisti-associati",
         "alessio-maria-romano"
       ]
@@ -5815,7 +5702,7 @@
       {
         "locale": "en",
         "slugs": [
-          "community",
+          "studio",
           "associated-artists",
           "alessio-maria-romano"
         ]
@@ -5823,7 +5710,7 @@
       {
         "locale": "it",
         "slugs": [
-          "contaminazioni",
+          "studio",
           "artisti-associati",
           "alessio-maria-romano"
         ]
@@ -5832,26 +5719,26 @@
     "urls": [
       {
         "locale": "en",
-        "url": "community/associated-artists/alessio-maria-romano"
+        "url": "studio/associated-artists/alessio-maria-romano"
       },
       {
         "locale": "it",
-        "url": "contaminazioni/artisti-associati/alessio-maria-romano"
+        "url": "studio/artisti-associati/alessio-maria-romano"
       }
     ]
   },
   {
-    "id": "100562859",
+    "id": "101319111",
     "slugs": {
       "en": [
         "studio",
         "artistic-residences",
-        "daniele-ninarello"
+        "luna-cenere"
       ],
       "it": [
         "studio",
         "residenze-artistiche",
-        "daniele-ninarello"
+        "luna-cenere"
       ]
     },
     "isIndex": false,
@@ -5864,7 +5751,7 @@
         "slugs": [
           "studio",
           "artistic-residences",
-          "daniele-ninarello"
+          "luna-cenere"
         ]
       },
       {
@@ -5872,65 +5759,18 @@
         "slugs": [
           "studio",
           "residenze-artistiche",
-          "daniele-ninarello"
+          "luna-cenere"
         ]
       }
     ],
     "urls": [
       {
         "locale": "en",
-        "url": "studio/artistic-residences/daniele-ninarello"
+        "url": "studio/artistic-residences/luna-cenere"
       },
       {
         "locale": "it",
-        "url": "studio/residenze-artistiche/daniele-ninarello"
-      }
-    ]
-  },
-  {
-    "id": "85765727",
-    "slugs": {
-      "en": [
-        "studio",
-        "artistic-residences",
-        "alessio-maria-romano"
-      ],
-      "it": [
-        "studio",
-        "residenze-artistiche",
-        "alessio-maria-romano"
-      ]
-    },
-    "isIndex": false,
-    "indexType": "",
-    "__typename": "artist",
-    "group": "artistic-residences",
-    "paths": [
-      {
-        "locale": "en",
-        "slugs": [
-          "studio",
-          "artistic-residences",
-          "alessio-maria-romano"
-        ]
-      },
-      {
-        "locale": "it",
-        "slugs": [
-          "studio",
-          "residenze-artistiche",
-          "alessio-maria-romano"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "en",
-        "url": "studio/artistic-residences/alessio-maria-romano"
-      },
-      {
-        "locale": "it",
-        "url": "studio/residenze-artistiche/alessio-maria-romano"
+        "url": "studio/residenze-artistiche/luna-cenere"
       }
     ]
   },
@@ -5982,6 +5822,53 @@
     ]
   },
   {
+    "id": "100562859",
+    "slugs": {
+      "en": [
+        "studio",
+        "artistic-residences",
+        "daniele-ninarello"
+      ],
+      "it": [
+        "studio",
+        "residenze-artistiche",
+        "daniele-ninarello"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "artist",
+    "group": "artistic-residences",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "studio",
+          "artistic-residences",
+          "daniele-ninarello"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "studio",
+          "residenze-artistiche",
+          "daniele-ninarello"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "studio/artistic-residences/daniele-ninarello"
+      },
+      {
+        "locale": "it",
+        "url": "studio/residenze-artistiche/daniele-ninarello"
+      }
+    ]
+  },
+  {
     "id": "96816225",
     "slugs": {
       "en": [
@@ -6029,6 +5916,100 @@
     ]
   },
   {
+    "id": "85765727",
+    "slugs": {
+      "en": [
+        "studio",
+        "artistic-residences",
+        "alessio-maria-romano"
+      ],
+      "it": [
+        "studio",
+        "residenze-artistiche",
+        "alessio-maria-romano"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "artist",
+    "group": "artistic-residences",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "studio",
+          "artistic-residences",
+          "alessio-maria-romano"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "studio",
+          "residenze-artistiche",
+          "alessio-maria-romano"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "studio/artistic-residences/alessio-maria-romano"
+      },
+      {
+        "locale": "it",
+        "url": "studio/residenze-artistiche/alessio-maria-romano"
+      }
+    ]
+  },
+  {
+    "id": "100946179",
+    "slugs": {
+      "en": [
+        "studio",
+        "artistic-residences",
+        "lucrezia-gabrieli"
+      ],
+      "it": [
+        "studio",
+        "residenze-artistiche",
+        "lucrezia-gabrieli"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "artist",
+    "group": "artistic-residences",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "studio",
+          "artistic-residences",
+          "lucrezia-gabrieli"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "studio",
+          "residenze-artistiche",
+          "lucrezia-gabrieli"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "studio/artistic-residences/lucrezia-gabrieli"
+      },
+      {
+        "locale": "it",
+        "url": "studio/residenze-artistiche/lucrezia-gabrieli"
+      }
+    ]
+  },
+  {
     "id": "89223999",
     "slugs": {
       "en": [
@@ -6037,7 +6018,7 @@
       ],
       "it": [
         "news",
-        "notizia-di-esempio"
+        "servizio-civile"
       ]
     },
     "isIndex": false,
@@ -6056,7 +6037,7 @@
         "locale": "it",
         "slugs": [
           "news",
-          "notizia-di-esempio"
+          "servizio-civile"
         ]
       }
     ],
@@ -6067,7 +6048,7 @@
       },
       {
         "locale": "it",
-        "url": "news/notizia-di-esempio"
+        "url": "news/servizio-civile"
       }
     ]
   }

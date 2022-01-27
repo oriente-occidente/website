@@ -2,6 +2,30 @@
   {
     "routes": [
       "festival",
+      "biglietti"
+    ],
+    "link": {
+      "__typename": "PageRecord",
+      "id": "79196174",
+      "slug": "biglietti",
+      "slugs": [
+        {
+          "locale": "en",
+          "slug": "tickets"
+        },
+        {
+          "locale": "it",
+          "slug": "biglietti"
+        }
+      ],
+      "indexType": "",
+      "isIndex": false
+    },
+    "lang": "it"
+  },
+  {
+    "routes": [
+      "festival",
       "programma"
     ],
     "link": {
@@ -25,25 +49,25 @@
   },
   {
     "routes": [
-      "festival",
-      "biglietti"
+      "studio",
+      "artisti-associati"
     ],
     "link": {
       "__typename": "PageRecord",
-      "id": "79196174",
-      "slug": "biglietti",
+      "id": "89012994",
+      "slug": "artisti-associati",
       "slugs": [
         {
           "locale": "en",
-          "slug": "tickets"
+          "slug": "associated-artists"
         },
         {
           "locale": "it",
-          "slug": "biglietti"
+          "slug": "artisti-associati"
         }
       ],
-      "indexType": "",
-      "isIndex": false
+      "indexType": "associated-artists",
+      "isIndex": true
     },
     "lang": "it"
   },
@@ -97,55 +121,7 @@
   },
   {
     "routes": [
-      "studio",
-      "educazione"
-    ],
-    "link": {
-      "__typename": "PageRecord",
-      "id": "79196187",
-      "slug": "educazione",
-      "slugs": [
-        {
-          "locale": "en",
-          "slug": "education"
-        },
-        {
-          "locale": "it",
-          "slug": "educazione"
-        }
-      ],
-      "indexType": "courses",
-      "isIndex": true
-    },
-    "lang": "it"
-  },
-  {
-    "routes": [
-      "contaminazioni",
-      "artisti-associati"
-    ],
-    "link": {
-      "__typename": "PageRecord",
-      "id": "89012994",
-      "slug": "artisti-associati",
-      "slugs": [
-        {
-          "locale": "en",
-          "slug": "associated-artists"
-        },
-        {
-          "locale": "it",
-          "slug": "artisti-associati"
-        }
-      ],
-      "indexType": "associated-artists",
-      "isIndex": true
-    },
-    "lang": "it"
-  },
-  {
-    "routes": [
-      "contaminazioni",
+      "people",
       "eventi"
     ],
     "link": {
@@ -169,7 +145,7 @@
   },
   {
     "routes": [
-      "contaminazioni",
+      "people",
       "progetti"
     ],
     "link": {
@@ -312,6 +288,30 @@
   {
     "routes": [
       "festival",
+      "tickets"
+    ],
+    "link": {
+      "__typename": "PageRecord",
+      "id": "79196174",
+      "slug": "biglietti",
+      "slugs": [
+        {
+          "locale": "en",
+          "slug": "tickets"
+        },
+        {
+          "locale": "it",
+          "slug": "biglietti"
+        }
+      ],
+      "indexType": "",
+      "isIndex": false
+    },
+    "lang": "en"
+  },
+  {
+    "routes": [
+      "festival",
       "program"
     ],
     "link": {
@@ -335,25 +335,25 @@
   },
   {
     "routes": [
-      "festival",
-      "tickets"
+      "studio",
+      "associated-artists"
     ],
     "link": {
       "__typename": "PageRecord",
-      "id": "79196174",
-      "slug": "biglietti",
+      "id": "89012994",
+      "slug": "artisti-associati",
       "slugs": [
         {
           "locale": "en",
-          "slug": "tickets"
+          "slug": "associated-artists"
         },
         {
           "locale": "it",
-          "slug": "biglietti"
+          "slug": "artisti-associati"
         }
       ],
-      "indexType": "",
-      "isIndex": false
+      "indexType": "associated-artists",
+      "isIndex": true
     },
     "lang": "en"
   },
@@ -407,55 +407,7 @@
   },
   {
     "routes": [
-      "studio",
-      "education"
-    ],
-    "link": {
-      "__typename": "PageRecord",
-      "id": "79196187",
-      "slug": "educazione",
-      "slugs": [
-        {
-          "locale": "en",
-          "slug": "education"
-        },
-        {
-          "locale": "it",
-          "slug": "educazione"
-        }
-      ],
-      "indexType": "courses",
-      "isIndex": true
-    },
-    "lang": "en"
-  },
-  {
-    "routes": [
-      "community",
-      "associated-artists"
-    ],
-    "link": {
-      "__typename": "PageRecord",
-      "id": "89012994",
-      "slug": "artisti-associati",
-      "slugs": [
-        {
-          "locale": "en",
-          "slug": "associated-artists"
-        },
-        {
-          "locale": "it",
-          "slug": "artisti-associati"
-        }
-      ],
-      "indexType": "associated-artists",
-      "isIndex": true
-    },
-    "lang": "en"
-  },
-  {
-    "routes": [
-      "community",
+      "people",
       "events"
     ],
     "link": {
@@ -479,7 +431,7 @@
   },
   {
     "routes": [
-      "community",
+      "people",
       "projects"
     ],
     "link": {
