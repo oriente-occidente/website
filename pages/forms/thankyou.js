@@ -25,7 +25,7 @@ function Page({ data, locale }) {
     }
   }, [query]);
 
-  console.log(payload);
+  // console.log(payload);
   return (
     <Layout footer={footer} menu={menu} locale={locale} hideNewsletter={true}>
       <Seo tags={site.faviconMetaTags} />

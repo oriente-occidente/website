@@ -1,21 +1,43 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import { useRouter } from 'next/router';
 import 'react-datepicker/dist/react-datepicker.css';
 
 import Tabs from 'components/Tabs';
 import PreviewCard from 'components/cards/PreviewCard';
 import { useFestivalByDate } from 'lib/api/queryHooks';
 
-function Filters({ locale, list }) {
-  const currentYear = new Date().getFullYear();
-  const years = [`${currentYear}`, `${currentYear - 1}`, `${currentYear - 2}`];
+function getDatesOfYear(datesOfYear, y) {
+  return datesOfYear.find((d) => d.year == y);
+}
+
+function Filters({ locale, list, datesOfYear }) {
+  const router = useRouter();
+
+  //const currentYear = new Date().getFullYear();
+  // const years = [`${currentYear}`, `${currentYear - 1}`, `${currentYear - 2}`];
+  const years = datesOfYear
+    .map((fd) => fd.year)
+    .sort()
+    .reverse();
+  const currentYear = years[0];
   const [typeFilter, setTypeFilter] = useState('festivalEvents');
   const [year, setYear] = useState(currentYear);
-  const { data, error, loading } = useFestivalByDate(locale, year);
+  const { data, error, loading } = useFestivalByDate(
+    locale,
+    year,
+    getDatesOfYear(datesOfYear, year)
+  );
+
+  useEffect(() => {
+    console.log('window', window.location.search);
+  }, []);
 
   function handleChange(e) {
     const value = e.target?.value;
     if (!value) return;
     setYear(value);
+    // console.log(router);
+    // router.push(`${router.asPath}?year=${value}`);
   }
   function filterData(data, list, typeFilter) {
     const results = data ? data : list;

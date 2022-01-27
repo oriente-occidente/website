@@ -1,9 +1,8 @@
 import { useState, useEffect } from 'react';
 
 const tabs = [
-  { name: 'All', slug: 'all' },
-  { name: 'Festival', slug: 'festivalEvents' },
-  { name: 'Events', slug: 'otherEvents' },
+  { name: 'Festival', slug: 'all' },
+  { name: 'Events', slug: 'festivalEvents' },
   { name: 'Workshop', slug: 'workshops' },
   { name: 'Courses', slug: 'courses' },
 ];

@@ -65,6 +65,8 @@ function Page({ data, locale }) {
     paymentSettings,
   };
 
+  console.log('REST', rest);
+
   const isBookable = paymentSettings?.reduce(
     (result, p) => result || p.bookable,
     false
@@ -112,7 +114,15 @@ function Page({ data, locale }) {
         {isIndex && !showFilters && (
           <ResultsGrid list={list} group={group} locale={locale} />
         )}
-        {isIndex && showFilters && <Filters list={list} locale={locale} />}
+        {isIndex && showFilters && (
+          <Filters
+            list={list}
+            locale={locale}
+            datesOfYear={rest?.festivalDates?.datesOfYear.filter(
+              (d) => d.active
+            )}
+          />
+        )}
         {payload.relatedContents?.length > 0 && (
           <div className="mt-20">
             <GalleryPreview slides={payload.relatedContents} locale={locale} />
