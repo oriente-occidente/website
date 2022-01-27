@@ -61,7 +61,6 @@ function PreviewCard({ data, locale, group = null }) {
                 {data.authors}
               </div>
             )}
-            {console.log('data:', data)}
           </div>
           {data.dates && (
             <div className="text-xxs md:hidden">
