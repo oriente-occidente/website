@@ -1,11 +1,10 @@
 import { Image as DatoImage } from 'react-datocms';
 import Link from 'next/link';
 
-import { resolveLinkById, formatDate } from 'lib/utils';
+import { resolveLinkById, showDates } from 'lib/utils';
 
 function PreviewCard({ data, locale, group = null }) {
   let categoryTitle;
-  let dateEvent;
   if (data.category) {
     if (Array.isArray(data.category)) {
       categoryTitle = data.category
@@ -17,13 +16,6 @@ function PreviewCard({ data, locale, group = null }) {
       categoryTitle = data.category.title;
     }
   }
-  if (data.dateEvento) {
-    dateEvent = data.dateEvento
-      .map((event) => {
-        return event.startTime;
-      })
-      .join(', ');
-  }
 
   return (
     <div className="py-4 relative">
@@ -32,9 +24,9 @@ function PreviewCard({ data, locale, group = null }) {
           <div className="relative">
             <div className="flex absolute z-20 left-4 md:left-8 bottom-2 md:bottom-8 top-auto text-white uppercase text-xxs md:text-xs font-semibold ">
               <span>{categoryTitle}</span>
-              {data.dateEvento && (
+              {data.dates && (
                 <span className="hidden md:block md:pl-4 md:pr-1 normal-case font-light">
-                  {formatDate(data.eventDate, locale)}
+                  {showDates(data.dates, locale)}
                 </span>
               )}
               {data.location && (
@@ -71,9 +63,9 @@ function PreviewCard({ data, locale, group = null }) {
             )}
             {console.log('data:', data)}
           </div>
-          {data.dateEvento && (
+          {data.dates && (
             <div className="text-xxs md:hidden">
-              {formatDate(data.eventDate, locale)}
+              {showDates(data.dates, locale)}
             </div>
           )}
         </a>

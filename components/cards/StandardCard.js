@@ -23,16 +23,14 @@ function StandardCard({ data, locale, categoryTitle, eventDate }) {
                 </span>
               )}
             </div>
-            {
-              image != null ?
-                <DatoImage
-                  className=""
-                  data={image.responsiveImage}
-                  alt={image.alt}
-                  title={image.title}
-                />
-              : null
-            }
+            {image != null ? (
+              <DatoImage
+                className=""
+                data={image.responsiveImage}
+                alt={image.alt}
+                title={image.title}
+              />
+            ) : null}
             <div className="absolute h-[65px] md:h-48 bottom-0 left-0 right-0 bg-gradient-to-t z-10 from-black-transparent to-transparent"></div>
           </div>
           <div className="hidden md:block absolute top-0 h-48 left-0 right-0 bg-gradient-to-b z-10 from-black-transparent to-transparent"></div>

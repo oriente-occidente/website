@@ -4,7 +4,7 @@ import { resolveLinkById } from 'lib/utils';
 
 import Link from 'next/link';
 
-function HomeCard({ count, categoryTitle, dateEvent, data, locale }) {
+function HomeCard({ count, categoryTitle, data, locale }) {
   const { responsiveImage, alt, title, id } = data.imageHero;
 
   return (
@@ -17,7 +17,7 @@ function HomeCard({ count, categoryTitle, dateEvent, data, locale }) {
                 0{count + 1}/
               </div>
               <div className="hidden md:block mt-4 mb-12 lg:py-16 title--small">
-              {data.descriptionHero}
+                {data.descriptionHero}
               </div>
             </div>
             <div className="w-3/4 lg:w-8/12 relative overflow-hidden">
