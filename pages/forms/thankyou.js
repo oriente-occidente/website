@@ -13,10 +13,12 @@ function Page({ data, locale }) {
   // const { query } = router;
 
   async function getData({ id, cp }) {
-    const data = await doQueryItem(locale, id);
-    console.log('event data:', data);
-    const choiche = data?.paymentSettings.find((p) => p.id === cp);
-    setPayload({ data, choiche });
+    if (id && cp) {
+      const data = await doQueryItem(locale, id);
+      console.log('event data:', data);
+      const choiche = data?.paymentSettings.find((p) => p.id === cp);
+      setPayload({ data, choiche });
+    }
   }
 
   useEffect(() => {
@@ -24,7 +26,7 @@ function Page({ data, locale }) {
     const query = queryString.parse(location.search);
     console.log('QUERY:', query);
     getData(query);
-  }, []);
+  });
 
   // console.log(payload);
   return (
