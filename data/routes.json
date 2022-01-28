@@ -5634,6 +5634,53 @@
     ]
   },
   {
+    "id": "101561558",
+    "slugs": {
+      "en": [
+        "studio",
+        "associated-artists",
+        "pietro-marullo"
+      ],
+      "it": [
+        "studio",
+        "artisti-associati",
+        "pietro-marullo"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "artist",
+    "group": "associated-artists",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "studio",
+          "associated-artists",
+          "pietro-marullo"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "studio",
+          "artisti-associati",
+          "pietro-marullo"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "studio/associated-artists/pietro-marullo"
+      },
+      {
+        "locale": "it",
+        "url": "studio/artisti-associati/pietro-marullo"
+      }
+    ]
+  },
+  {
     "id": "101319111",
     "slugs": {
       "en": [
@@ -5724,6 +5771,53 @@
       {
         "locale": "it",
         "url": "studio/artisti-associati/daniele-ninarello"
+      }
+    ]
+  },
+  {
+    "id": "101561558",
+    "slugs": {
+      "en": [
+        "studio",
+        "artistic-residences",
+        "pietro-marullo"
+      ],
+      "it": [
+        "studio",
+        "residenze-artistiche",
+        "pietro-marullo"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "artist",
+    "group": "artistic-residences",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "studio",
+          "artistic-residences",
+          "pietro-marullo"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "studio",
+          "residenze-artistiche",
+          "pietro-marullo"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "studio/artistic-residences/pietro-marullo"
+      },
+      {
+        "locale": "it",
+        "url": "studio/residenze-artistiche/pietro-marullo"
       }
     ]
   },

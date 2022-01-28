@@ -1,7 +1,9 @@
 import { useRef, useEffect, useState } from 'react';
 import ReactPlayer from 'react-player';
 
-const VideoEmbedded = ({ id, video, autoPlay, loop, muted, controls }) => {
+const VideoEmbedded = (props) => {
+  console.log(props);
+  const { id, video, autoPlay, loop, muted, controls } = props;
   const ref = useRef();
   const [width, setWidth] = useState(null);
 

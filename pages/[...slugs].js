@@ -65,8 +65,6 @@ function Page({ data, locale }) {
     paymentSettings,
   };
 
-  console.log('REST', rest);
-
   const isBookable = paymentSettings?.reduce(
     (result, p) => result || p.bookable,
     false
