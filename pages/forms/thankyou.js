@@ -1,5 +1,6 @@
-import { useRouter } from 'next/router';
+// import { useRouter } from 'next/router';
 import { useState, useEffect } from 'react';
+import queryString from 'query-string';
 
 import { doQueryItem, doQueryById } from 'lib/api';
 import Layout from 'components/Layout';
@@ -8,22 +9,22 @@ import Seo from 'components/Seo';
 function Page({ data, locale }) {
   const { site, menu, footer } = data;
   const [payload, setPayload] = useState(null);
-  const router = useRouter();
-  const { query } = router;
+  // const router = useRouter();
+  // const { query } = router;
+
+  async function getData({ id, cp }) {
+    const data = await doQueryItem(locale, id);
+    console.log('event data:', data);
+    const choiche = data?.paymentSettings.find((p) => p.id === cp);
+    setPayload({ data, choiche });
+  }
+
   useEffect(() => {
-    // if (window.location.search.includes('success=true')) {
-    if (query && query.id && query.cp) {
-      console.log('QUERY:', query);
-      const { id, cp } = query;
-      doQueryItem(locale, id)
-        .then((data) => {
-          console.log('event data:', data);
-          const choiche = data?.paymentSettings.find((p) => p.id === cp);
-          setPayload({ data, choiche });
-        })
-        .catch((e) => console.log(e));
-    }
-  }, [query]);
+    // if (window.location.search.includes('success=true'))
+    const query = queryString.parse(location.search);
+    console.log('QUERY:', query);
+    getData(query);
+  }, []);
 
   // console.log(payload);
   return (
@@ -31,7 +32,8 @@ function Page({ data, locale }) {
       <Seo tags={site.faviconMetaTags} />
       <div className="p-10 my-10">
         <h1 className="text-lg">Thank You</h1>
-        {payload?.choiche && (
+        {!payload && <div>Loading...</div>}
+        {!!payload && payload?.choiche && (
           <div>
             <h3 className="text-lg font-semibold">
               Richiesta inviata corretamente

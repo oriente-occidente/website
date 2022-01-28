@@ -48,7 +48,7 @@ function Page({ data, locale }) {
     imageHero,
     slideshowHero,
     isFestival,
-    dateEvento,
+    dates: dateEvento,
     location,
     paymentSettings,
   } = payload;

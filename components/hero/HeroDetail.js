@@ -38,9 +38,12 @@ function HeroDetail({ data, locale }) {
           {dateEvento != null ? (
             <>
               {dateEvento.map((date) => (
-                <div key={date.id} className="text-xxs text-black-light flex items-center">
+                <div
+                  key={date.id}
+                  className="text-xxs text-black-light flex items-center"
+                >
                   <CalendarIcon aria-hidden="true" className="w-4 h-4 mr-2" />
-                  {formatDate(date.startTime, locale || 'en')}
+                  {formatDate(date.startTime, locale || 'en', date.isDaily)}
                 </div>
               ))}
             </>

@@ -5775,6 +5775,53 @@
     ]
   },
   {
+    "id": "101553604",
+    "slugs": {
+      "en": [
+        "studio",
+        "artistic-residences",
+        "paola-bianchi"
+      ],
+      "it": [
+        "studio",
+        "residenze-artistiche",
+        "paola-bianchi"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "artist",
+    "group": "artistic-residences",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "studio",
+          "artistic-residences",
+          "paola-bianchi"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "studio",
+          "residenze-artistiche",
+          "paola-bianchi"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "studio/artistic-residences/paola-bianchi"
+      },
+      {
+        "locale": "it",
+        "url": "studio/residenze-artistiche/paola-bianchi"
+      }
+    ]
+  },
+  {
     "id": "101365948",
     "slugs": {
       "en": [
