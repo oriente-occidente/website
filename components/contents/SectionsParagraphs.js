@@ -9,7 +9,7 @@ export default function SectionsParagraphs({ sections, locale }) {
           {sections.map((section) => (
             <div key={section.id}>
               <Link href={`#${section.id}`}>
-                <a className="" title={`Link to ${section.title}`}>
+                <a className="-top-20" title={`Link to ${section.title}`}>
                   <h2 className="uppercase text-xxs tracking-wider mb-1">
                     {section.title}
                   </h2>
@@ -22,13 +22,18 @@ export default function SectionsParagraphs({ sections, locale }) {
 
       <div className="md:col-span-3 md:border-l border-color-gray">
         {sections.map((section) => (
-          <div
-            key={section.id}
-            id={section.id}
-            className="px-4 md:py-2 md:px-12"
-          >
-            <StructuredContent locale={locale} content={section.body} />
-          </div>
+          <>
+            <div
+              className="-top-20 xl:-top-32 block relative invisible"
+              key={section.id}
+              id={section.id}
+            />
+              <div
+                className="px-4 md:py-2 md:px-12"
+              >
+              <StructuredContent locale={locale} content={section.body} />
+            </div>
+          </>
         ))}
       </div>
     </div>
