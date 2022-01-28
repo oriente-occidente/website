@@ -1,13 +1,15 @@
 import { useRouter } from 'next/router';
 import { useState, useEffect, useRef } from 'react';
 
+import * as q from 'lib/queries';
+import fetchData from 'lib/api/dato';
 import { doQueryItem, doQueryById } from 'lib/api';
 import Layout from 'components/Layout';
 import Seo from 'components/Seo';
 import t from 'lib/locales';
 import { formatDate } from 'lib/utils';
 
-function Page({ data, locale }) {
+function Page({ data, locale, thankyouMessage }) {
   const { site, menu, footer } = data;
   const [success, setSuccess] = useState(false);
   const [payload, setPayload] = useState(null);
@@ -256,7 +258,9 @@ function Page({ data, locale }) {
                 <label
                   className="px-2"
                   htmlFor={'privacy'}
-                  dangerouslySetInnerHTML={{ __html: 'PRIVACY AGREEMENT' }}
+                  dangerouslySetInnerHTML={{
+                    __html: thankyouMessage.textPrivacy,
+                  }}
                 />
               </div>
             </div>
@@ -277,8 +281,11 @@ function Page({ data, locale }) {
 
 export async function getStaticProps({ params, locale }) {
   const data = await doQueryById(locale);
+  const ty = await fetchData(q.extra_content, { locale });
+  const thankyouMessage = ty.extraContent;
+  console.log('thankyouMessage', thankyouMessage);
   return {
-    props: { data, locale },
+    props: { data, locale, thankyouMessage },
   };
 }
 export default Page;

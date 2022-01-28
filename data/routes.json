@@ -3817,6 +3817,53 @@
     ]
   },
   {
+    "id": "85752360",
+    "slugs": {
+      "en": [
+        "studio",
+        "workshop",
+        "alessio-maria-romano"
+      ],
+      "it": [
+        "studio",
+        "workshop",
+        "alessio-maria-romano"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "workshop",
+    "group": "workshops",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "studio",
+          "workshop",
+          "alessio-maria-romano"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "studio",
+          "workshop",
+          "alessio-maria-romano"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "studio/workshop/alessio-maria-romano"
+      },
+      {
+        "locale": "it",
+        "url": "studio/workshop/alessio-maria-romano"
+      }
+    ]
+  },
+  {
     "id": "96815611",
     "slugs": {
       "en": [
@@ -4095,53 +4142,6 @@
       {
         "locale": "it",
         "url": "studio/workshop/la-veronal-working-tools"
-      }
-    ]
-  },
-  {
-    "id": "85752360",
-    "slugs": {
-      "en": [
-        "studio",
-        "workshop",
-        "alessio-maria-romano"
-      ],
-      "it": [
-        "studio",
-        "workshop",
-        "alessio-maria-romano"
-      ]
-    },
-    "isIndex": false,
-    "indexType": "",
-    "__typename": "workshop",
-    "group": "workshops",
-    "paths": [
-      {
-        "locale": "en",
-        "slugs": [
-          "studio",
-          "workshop",
-          "alessio-maria-romano"
-        ]
-      },
-      {
-        "locale": "it",
-        "slugs": [
-          "studio",
-          "workshop",
-          "alessio-maria-romano"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "en",
-        "url": "studio/workshop/alessio-maria-romano"
-      },
-      {
-        "locale": "it",
-        "url": "studio/workshop/alessio-maria-romano"
       }
     ]
   },
