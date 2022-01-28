@@ -35,6 +35,9 @@ const StructuredContent = ({ locale, content }) => {
                 title={record?.image?.title}
               />
             </div>
+            <div className="bg-black-transparent px-2 py-1 text-xxs -mt-2 lg:-mt-10 2xl:-mt-16 mb-2 lg:mb-10 2xl:mb-16 max-w-[800px]">
+              {record.image.responsiveImage.alt}
+            </div>
           </div>
         );
       case 'VideoBlockRecord':
