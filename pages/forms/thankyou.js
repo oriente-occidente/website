@@ -9,6 +9,7 @@ import Seo from 'components/Seo';
 function Page({ data, locale }) {
   const { site, menu, footer } = data;
   const [payload, setPayload] = useState(null);
+  const [triggher, setTRiggher] = useState(null);
   // const router = useRouter();
   // const { query } = router;
 
@@ -18,6 +19,8 @@ function Page({ data, locale }) {
       console.log('event data:', data);
       const choiche = data?.paymentSettings.find((p) => p.id === cp);
       setPayload({ data, choiche });
+    } else {
+      setTRiggher(Date.now());
     }
   }
 
