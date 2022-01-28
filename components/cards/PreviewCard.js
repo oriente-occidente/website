@@ -1,5 +1,6 @@
 import { Image as DatoImage } from 'react-datocms';
 import Link from 'next/link';
+import { LocationMarkerIcon, CalendarIcon } from '@heroicons/react/outline';
 
 import { resolveLinkById, showDates } from 'lib/utils';
 
@@ -22,17 +23,23 @@ function PreviewCard({ data, locale, group = null }) {
       <Link href={resolveLinkById(data.id, locale, group)}>
         <a title={data.title} className="group">
           <div className="relative">
-            <div className="flex absolute z-20 left-4 md:left-8 bottom-2 md:bottom-8 top-auto text-white uppercase text-xxs md:text-xs font-semibold ">
+            <div className="absolute z-20 left-4 md:left-8 bottom-2 md:bottom-8 top-auto text-white uppercase text-xxs md:text-xs font-semibold ">
               <span>{categoryTitle}</span>
               {data.dates && (
-                <span className="hidden md:block md:pl-4 md:pr-1 normal-case font-light">
-                  {showDates(data.dates, locale)}
-                </span>
+                <div className="hidden md:flex gap-x-2 items-center">
+                  <CalendarIcon aria-hidden="true" className="w-4 h-4" />
+                  <span className="md:pr-1 normal-case font-light">
+                    {showDates(data.dates, locale)}
+                  </span>
+                </div>
               )}
               {data.location && (
-                <span className="hidden md:block md:pr-1 normal-case font-light">
-                  - {data.location}
-                </span>
+                <div className="hidden md:flex gap-x-2 items-center">
+                  <LocationMarkerIcon aria-hidden="true" className="w-4 h-4" />
+                  <span className="md:pr-1 normal-case font-light">
+                    {data.location}
+                  </span>
+                </div>
               )}
             </div>
             <div className="overflow-hidden h-[220px] md:h-[360px] relative">
@@ -43,7 +50,7 @@ function PreviewCard({ data, locale, group = null }) {
                 title={data.imageHero.title}
               />
             </div>
-            <div className="absolute top-auto bottom-0 left-0 right-0 h-[65px] md:h-[120px] bg-gradient-to-t z-10 from-black-transparent to-transparent"></div>
+            <div className="absolute top-auto bottom-0 left-0 right-0 h-[65px] md:h-[180px] bg-gradient-to-t z-10 from-black-transparent to-transparent"></div>
           </div>
           <div className="z-20  mt-2">
             {data.title &&
@@ -66,8 +73,19 @@ function PreviewCard({ data, locale, group = null }) {
             )}
           </div>
           {data.dates && (
-            <div className="text-xxs md:hidden">
-              {showDates(data.dates, locale)}
+            <div className="md:hidden flex gap-1 items-center">
+              <CalendarIcon aria-hidden="true" className="w-3 h-4 mr-1 text-black" />
+              <div className="text-xxs">
+                {showDates(data.dates, locale)}
+              </div>
+            </div>
+          )}
+          {data.location && (
+            <div className="md:hidden flex gap-1 items-center">
+              <LocationMarkerIcon aria-hidden="true" className="w-3 h-4 mr-1 text-black" />
+              <div className="text-xxs">
+                {data.location}
+              </div>
             </div>
           )}
         </a>
