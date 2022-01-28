@@ -11,7 +11,6 @@ import { formatDate } from 'lib/utils';
 
 function Page({ data, locale, thankyouMessage }) {
   const { site, menu, footer } = data;
-  const [success, setSuccess] = useState(false);
   const [payload, setPayload] = useState(null);
   const [choiche, setChoiche] = useState(null);
   const [paymentId, setPaymentId] = useState(null);
@@ -22,56 +21,28 @@ function Page({ data, locale, thankyouMessage }) {
   const { query } = router;
 
   useEffect(() => {
-    // if (window.location.search.includes('success=true')) {
-    if (query) {
-      const { success, id, choicheId } = query;
-      if (id) {
-        setEventId(id);
-      }
-      if (choicheId) {
-        setPaymentId(choicheId);
-      }
-      if (success) {
-        setSuccess(true);
-      }
+    if (query.id) {
+      setEventId(query.id);
     }
   }, [query]);
 
   const handleChange = (e) => {
     const value = e.target?.value;
-    if (!value || success) return;
+    if (!value) return;
     console.log('choosen ID:', value);
     // dispatch({ type: 'SET_PAYMENT', value });
     setPaymentId(value);
   };
-
   useEffect(() => {
     if (eventId) {
-      //todo fetch event data
       doQueryItem(locale, eventId)
         .then((payload) => {
           console.log('event data:', payload);
           setPayload(payload);
-          if (paymentId) {
-            const choosen = payload.paymentSettings?.find(
-              (p) => p.id === paymentId
-            );
-            console.log('choosen:', choosen);
-            setChoiche(choosen);
-          }
         })
         .catch((e) => console.log(e));
     }
-  }, [eventId, paymentId]);
-
-  useEffect(() => {
-    if (paymentId && payload) {
-      //todo fetch event payload
-      const choosen = payload.paymentSettings.find((p) => p.id === paymentId);
-      console.log('choosen:', choosen);
-      setChoiche(choosen);
-    }
-  }, [paymentId, payload, success]);
+  }, [eventId]);
 
   const action = `${locale === 'en' ? '/en' : ''}/forms/thankyou?id=${eventId}${
     paymentId ? '&cp=' + paymentId : ''
@@ -81,7 +52,7 @@ function Page({ data, locale, thankyouMessage }) {
     <Layout footer={footer} menu={menu} locale={locale} hideNewsletter={true}>
       <Seo tags={site.faviconMetaTags} />
       <div className="p-10 my-10">
-        <h1 className="text-lg">Registration Form</h1>
+        <h1 className="text-lg">{t('registration_form', locale)}</h1>
         {payload && (
           <>
             <h2 className="text-lg my-10">{payload.title}</h2>
@@ -90,39 +61,22 @@ function Page({ data, locale, thankyouMessage }) {
                 return (
                   <li key={p.id} className="list-item">
                     <span>{p.description}</span>
-                    <span>, PRICE: {p.amount} €</span>
                     <span>
-                      , DATES:{' '}
-                      {p.startDate ? formatDate(p.startDate, locale) : ''} -{' '}
-                      {p.endDate ? formatDate(p.endDate, locale) : ''}
+                      , {t('dates', locale)}
+                      {p.startDate
+                        ? formatDate(p.startDate, locale)
+                        : ''} - {p.endDate ? formatDate(p.endDate, locale) : ''}
                     </span>
+                    {p.amount && (
+                      <span>{` ${t('amount', locale)} ${p.amount} €`}</span>
+                    )}
                   </li>
                 );
               })}
             </ul>
           </>
         )}
-        {success && (
-          <div>
-            <h3 className="text-lg font-semibold">
-              Richiesta inviata corretamente
-            </h3>
-            <div>{choiche?.description}</div>
-            <div>Il costo dell'evento è di {choiche?.amount}€</div>
-            <div>
-              Qui puoi aquistare il tuo biglietto:
-              <a
-                class="text-green-900"
-                href={choiche?.paymentLink}
-                target="_blank"
-                rel="noopener"
-              >
-                {choiche?.paymentLink}
-              </a>
-            </div>
-          </div>
-        )}
-        <div className={`my-10 ${success && choiche ? 'hidden' : ''}`}>
+        <div className={`my-10`}>
           <form
             name="register"
             method="POST"
@@ -269,7 +223,7 @@ function Page({ data, locale, thankyouMessage }) {
                 type="submit"
                 className="mt-10 min-w-full bg-white text-gray-700 font-semibold hover:text-black py-2 px-4 border border-gray-700 hover:border-black"
               >
-                Send
+                {t('send', locale)}
               </button>
             </div>
           </form>

@@ -29,7 +29,11 @@
     "404cta": "Torna in homepage",
     "skipContent": "Vai al contenuto principale",
     "skipFooter": "Vai al footer",
-    "subscribe": "Iscriviti"
+    "subscribe": "Iscriviti",
+    "registration_form": "Form di prenotazione",
+    "dates": "date: ",
+    "amount": "costo: ",
+    "send": "Invia"
   },
   "en": {
     "it": "Italian",
@@ -61,6 +65,10 @@
     "404cta": "Back to home",
     "skipContent": "Go to main content",
     "skipFooter": "Go to footer",
-    "subscribe": "Subscribe"
+    "subscribe": "Subscribe",
+    "registration_form": "Registration Form",
+    "dates": "dates: ",
+    "amount": "amount: ",
+    "send": "Send"
   }
 }
