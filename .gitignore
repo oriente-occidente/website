@@ -38,3 +38,5 @@ yarn-error.log*
 
 # pa11y
 .pa11yci
+
+/data

@@ -5775,6 +5775,53 @@
     ]
   },
   {
+    "id": "101365948",
+    "slugs": {
+      "en": [
+        "studio",
+        "artistic-residences",
+        "pablo-girolami"
+      ],
+      "it": [
+        "studio",
+        "residenze-artistiche",
+        "pablo-girolami"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "artist",
+    "group": "artistic-residences",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "studio",
+          "artistic-residences",
+          "pablo-girolami"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "studio",
+          "residenze-artistiche",
+          "pablo-girolami"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "studio/artistic-residences/pablo-girolami"
+      },
+      {
+        "locale": "it",
+        "url": "studio/residenze-artistiche/pablo-girolami"
+      }
+    ]
+  },
+  {
     "id": "101319111",
     "slugs": {
       "en": [
