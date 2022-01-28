@@ -20,7 +20,7 @@
   }
 
   .formatted-content p {
-    @apply text-xs lg:text-sm text-black-light max-w-[700px]
+    @apply text-xs lg:text-sm text-black-light max-w-[700px] mb-2
   }
 
   .formatted-content a {
