@@ -1,0 +1,421 @@
+{
+  "site": {
+    "locales": [
+      "it",
+      "en"
+    ],
+    "faviconMetaTags": [
+      {
+        "tag": "link",
+        "content": null,
+        "attributes": {
+          "sizes": "16x16",
+          "type": "image/png",
+          "rel": "icon",
+          "href": "https://www.datocms-assets.com/55129/1639999966-android-chrome-512x512.png?h=16&w=16"
+        }
+      },
+      {
+        "tag": "link",
+        "content": null,
+        "attributes": {
+          "sizes": "32x32",
+          "type": "image/png",
+          "rel": "icon",
+          "href": "https://www.datocms-assets.com/55129/1639999966-android-chrome-512x512.png?h=32&w=32"
+        }
+      },
+      {
+        "tag": "link",
+        "content": null,
+        "attributes": {
+          "sizes": "96x96",
+          "type": "image/png",
+          "rel": "icon",
+          "href": "https://www.datocms-assets.com/55129/1639999966-android-chrome-512x512.png?h=96&w=96"
+        }
+      },
+      {
+        "tag": "link",
+        "content": null,
+        "attributes": {
+          "sizes": "192x192",
+          "type": "image/png",
+          "rel": "icon",
+          "href": "https://www.datocms-assets.com/55129/1639999966-android-chrome-512x512.png?h=192&w=192"
+        }
+      }
+    ]
+  },
+  "menu": [
+    {
+      "parent": null,
+      "id": "79074708",
+      "titles": [
+        {
+          "locale": "en",
+          "title": "Festival"
+        },
+        {
+          "locale": "it",
+          "title": "Festival"
+        }
+      ],
+      "slugs": [
+        {
+          "locale": "en",
+          "slug": "festival"
+        },
+        {
+          "locale": "it",
+          "slug": "festival"
+        }
+      ],
+      "link": null
+    },
+    {
+      "parent": null,
+      "id": "79074711",
+      "titles": [
+        {
+          "locale": "en",
+          "title": "Studio"
+        },
+        {
+          "locale": "it",
+          "title": "Studio"
+        }
+      ],
+      "slugs": [
+        {
+          "locale": "en",
+          "slug": "studio"
+        },
+        {
+          "locale": "it",
+          "slug": "studio"
+        }
+      ],
+      "link": null
+    },
+    {
+      "parent": null,
+      "id": "79074718",
+      "titles": [
+        {
+          "locale": "en",
+          "title": "People"
+        },
+        {
+          "locale": "it",
+          "title": "People"
+        }
+      ],
+      "slugs": [
+        {
+          "locale": "en",
+          "slug": "people"
+        },
+        {
+          "locale": "it",
+          "slug": "people"
+        }
+      ],
+      "link": null
+    },
+    {
+      "parent": null,
+      "id": "79074713",
+      "titles": [
+        {
+          "locale": "en",
+          "title": "Info"
+        },
+        {
+          "locale": "it",
+          "title": "Info"
+        }
+      ],
+      "slugs": [
+        {
+          "locale": "en",
+          "slug": "info"
+        },
+        {
+          "locale": "it",
+          "slug": "info"
+        }
+      ],
+      "link": null
+    },
+    {
+      "parent": null,
+      "id": "79074710",
+      "titles": [
+        {
+          "locale": "en",
+          "title": "News"
+        },
+        {
+          "locale": "it",
+          "title": "News"
+        }
+      ],
+      "slugs": [
+        {
+          "locale": "en",
+          "slug": "news"
+        },
+        {
+          "locale": "it",
+          "slug": "news"
+        }
+      ],
+      "link": {
+        "__typename": "PageRecord",
+        "id": "79196192",
+        "slug": "news",
+        "title": "News",
+        "indexType": "news-index",
+        "isIndex": true
+      }
+    },
+    {
+      "parent": null,
+      "id": "97416765",
+      "titles": [
+        {
+          "locale": "en",
+          "title": "Support Us"
+        },
+        {
+          "locale": "it",
+          "title": "Sostienici"
+        }
+      ],
+      "slugs": [
+        {
+          "locale": "en",
+          "slug": "support-us"
+        },
+        {
+          "locale": "it",
+          "slug": "sostienici"
+        }
+      ],
+      "link": {
+        "__typename": "PageRecord",
+        "id": "97420129",
+        "slug": "sostienici",
+        "title": "Sostienici",
+        "indexType": "",
+        "isIndex": false
+      }
+    }
+  ],
+  "footer": {
+    "info": "<p>Corso Rosmini 58 <a title=\"Link to call +39 0464 431660\" class=\"block\" href=\"tel:+390464431660\">tel +39 0464 431660</a> <a title=\"Link to send email to festival@orienteoccidente.it\" class=\"block\" href=\"mailto:festival@orienteoccidente.it\">festival@orienteoccidente.it</a> <a title=\"Link to send email to cid@centrodelladanza.it\" class=\"block\" href=\"mailto:cid@centrodelladanza.it\">cid@centrodelladanza.it</a></p>",
+    "logo": {
+      "responsiveImage": {
+        "src": "https://www.datocms-assets.com/55129/1639999903-oomarchiosinistra.jpeg?auto=format&max-w=600"
+      }
+    },
+    "socials": [
+      {
+        "id": "88853417",
+        "link": "https://www.facebook.com/FestivalOrienteOccidente",
+        "title": "Facebook",
+        "image": {
+          "url": "https://www.datocms-assets.com/55129/1639999887-facebook.svg?auto=format&h=80"
+        }
+      },
+      {
+        "id": "88853418",
+        "link": "https://www.instagram.com/orienteoccidente",
+        "title": "Instagram",
+        "image": {
+          "url": "https://www.datocms-assets.com/55129/1639999888-instagram.svg?auto=format&h=80"
+        }
+      },
+      {
+        "id": "88853419",
+        "link": "https://twitter.com/Festival_OO",
+        "title": "Twitter",
+        "image": {
+          "url": "https://www.datocms-assets.com/55129/1639999889-twitter.svg?auto=format&h=80"
+        }
+      }
+    ],
+    "sections": [
+      {
+        "id": "88853415",
+        "links": [
+          {
+            "slugs": [
+              {
+                "locale": "en",
+                "value": "program"
+              },
+              {
+                "locale": "it",
+                "value": "programma"
+              }
+            ],
+            "titles": [
+              {
+                "locale": "en",
+                "value": "Program"
+              },
+              {
+                "locale": "it",
+                "value": "Programma"
+              }
+            ]
+          },
+          {
+            "slugs": [
+              {
+                "locale": "en",
+                "value": "tickets"
+              },
+              {
+                "locale": "it",
+                "value": "biglietti"
+              }
+            ],
+            "titles": [
+              {
+                "locale": "en",
+                "value": "Tickets"
+              },
+              {
+                "locale": "it",
+                "value": "Biglietti"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "88853437",
+        "links": [
+          {
+            "slugs": [
+              {
+                "locale": "en",
+                "value": "about-us"
+              },
+              {
+                "locale": "it",
+                "value": "chi-siamo"
+              }
+            ],
+            "titles": [
+              {
+                "locale": "en",
+                "value": "About US"
+              },
+              {
+                "locale": "it",
+                "value": "Chi Siamo"
+              }
+            ]
+          },
+          {
+            "slugs": [
+              {
+                "locale": "en",
+                "value": "workshop"
+              },
+              {
+                "locale": "it",
+                "value": "workshop"
+              }
+            ],
+            "titles": [
+              {
+                "locale": "en",
+                "value": "Workshop"
+              },
+              {
+                "locale": "it",
+                "value": "Workshop"
+              }
+            ]
+          },
+          {
+            "slugs": [
+              {
+                "locale": "en",
+                "value": "artistic-residences"
+              },
+              {
+                "locale": "it",
+                "value": "residenze-artistiche"
+              }
+            ],
+            "titles": [
+              {
+                "locale": "en",
+                "value": "Artistic Residences"
+              },
+              {
+                "locale": "it",
+                "value": "Residenze artistiche"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "88853438",
+        "links": [
+          {
+            "slugs": [
+              {
+                "locale": "en",
+                "value": "events"
+              },
+              {
+                "locale": "it",
+                "value": "eventi"
+              }
+            ],
+            "titles": [
+              {
+                "locale": "en",
+                "value": "Events"
+              },
+              {
+                "locale": "it",
+                "value": "Eventi"
+              }
+            ]
+          },
+          {
+            "slugs": [
+              {
+                "locale": "en",
+                "value": "projects"
+              },
+              {
+                "locale": "it",
+                "value": "progetti"
+              }
+            ],
+            "titles": [
+              {
+                "locale": "en",
+                "value": "Projects"
+              },
+              {
+                "locale": "it",
+                "value": "Progetti"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}
