@@ -8,6 +8,7 @@ import Layout from 'components/Layout';
 import Seo from 'components/Seo';
 import t from 'lib/locales';
 import { formatDate } from 'lib/utils';
+import Table from 'components/Table';
 
 function Page({ data, locale, thankyouMessage }) {
   const { site, menu, footer } = data;
@@ -46,35 +47,27 @@ function Page({ data, locale, thankyouMessage }) {
     ? payload.paymentSettings?.find((p) => p.id === paymentId)
     : null;
 
+  const titles = ['', t('dates', locale), t('amount', locale)];
+  const rows = payload?.paymentSettings?.map((p) => {
+    const { description, startDate, endDate, amount } = p;
+    const range = `${startDate ? formatDate(p.startDate, locale) : ''} - ${
+      endDate ? formatDate(endDate, locale) : ''
+    }`;
+    const price = `${amount ? amount + ' €' : ''}`;
+    return [description, range, price];
+  });
   return (
     <Layout footer={footer} menu={menu} locale={locale} hideNewsletter={true}>
       <Seo tags={site.faviconMetaTags} />
       <div className="p-10 my-10">
-        <h1 className="text-lg">{t('registration_form', locale)}</h1>
         {payload && (
           <>
-            <h2 className="text-lg my-10">{payload.title}</h2>
-            <ul className="list">
-              {payload.paymentSettings?.map((p) => {
-                return (
-                  <li key={p.id} className="list-item">
-                    <span>{p.description}</span>
-                    <span>
-                      , {t('dates', locale)}
-                      {p.startDate
-                        ? formatDate(p.startDate, locale)
-                        : ''} - {p.endDate ? formatDate(p.endDate, locale) : ''}
-                    </span>
-                    {p.amount && (
-                      <span>{` ${t('amount', locale)} ${p.amount} €`}</span>
-                    )}
-                  </li>
-                );
-              })}
-            </ul>
+            <h3 className="h3">{payload?.title}</h3>
+            <Table titles={titles} rows={rows} />
           </>
         )}
-        <div className={`my-10`}>
+        <h1 className="h1 mt-10">{t('registration_form', locale)}</h1>
+        <div className={`mb-10 p-4 border rounded-lg `}>
           <form
             name="register"
             method="POST"
