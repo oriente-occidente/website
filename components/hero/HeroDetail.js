@@ -2,6 +2,7 @@ import { Image as DatoImage } from 'react-datocms';
 import { LocationMarkerIcon, CalendarIcon } from '@heroicons/react/outline';
 import dynamic from 'next/dynamic';
 // import Gallery from 'components/galleries/Gallery';
+import BookButton from 'components/BookButton';
 
 import { formatDate } from 'lib/utils';
 
@@ -16,6 +17,7 @@ function HeroDetail({ data, locale }) {
     dateEvento,
     paymentSettings,
     slideshowHero,
+    pageId,
   } = data;
 
   let Gallery = () => <div />;
@@ -66,23 +68,16 @@ function HeroDetail({ data, locale }) {
             {descriptionHero}
           </h2>
         </div>
-        {paymentSettings != null ? (
-          <>
-            {paymentSettings.map((item) => (
-              <div
-                key={item.id}
-                className="px-4 md:px-12 lg:flex justify-between items-center"
-              >
-                <h2 className="py-4 lg:py-6 text-xxs tracking-widest">
-                  {item.description}
-                </h2>
-                {/* <Link href={sectionLink.slug} key={sectionLink.slug}> */}
-                <a className="button--with-arrow">Link</a>
-                {/* </Link> */}
-              </div>
-            ))}
-          </>
-        ) : null}
+        {paymentSettings != null && (
+          <div className="full-w flex md:justify-end px-4">
+            <BookButton
+              paymentSettings={paymentSettings}
+              locale={locale}
+              id={pageId}
+            />
+          </div>
+        )}
+
         <div className="mt-6 md:mt-8 pl-4 md:pl-0 xl:w-[calc(100%+3rem)] 2xl:w-[calc((100vw-((100vw-1380px)/2))-333px-1rem)]">
           {slideshowHero != '' ? (
             <Gallery slides={slideshowHero} />

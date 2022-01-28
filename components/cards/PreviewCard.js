@@ -45,13 +45,16 @@ function PreviewCard({ data, locale, group = null }) {
             </div>
             <div className="absolute top-auto bottom-0 left-0 right-0 h-[65px] md:h-[120px] bg-gradient-to-t z-10 from-black-transparent to-transparent"></div>
           </div>
-          <div className="z-20">
-            {data.title && (
-              <h2 className="text-sm md:text-base uppercase text-black-light mt-2">
-                {data.title}
-              </h2>
-            )}
-            {data.titleHero && data.titleHero != data.title && (
+          <div className="z-20  mt-2">
+            {data.title &&
+              (data.authors ||
+                !data.titleHero ||
+                data.titleHero !== data.title) && (
+                <h2 className="text-sm md:text-base uppercase text-black-light">
+                  {data.title}
+                </h2>
+              )}
+            {data.titleHero && !data.authors && (
               <h3 className="text-sm md:text-base uppercase text-black font-semibold ">
                 {data.titleHero}
               </h3>

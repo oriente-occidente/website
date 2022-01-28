@@ -1,5 +1,5 @@
 // import { useState } from 'react';
-import dayjs from 'dayjs';
+
 import dynamic from 'next/dynamic';
 
 import { doQuery, getPaths } from 'lib/api';
@@ -18,7 +18,7 @@ import Filters from 'components/Filters';
 import MainContent from 'components/contents/MainContent';
 import SectionsParagraphs from 'components/contents/SectionsParagraphs';
 import OtherSections from 'components/contents/OtherSections';
-import BookButton from 'components/BookButton';
+
 // import ShareButtons from 'components/ShareButtons';
 
 function Page({ data, locale }) {
@@ -63,23 +63,13 @@ function Page({ data, locale }) {
     isFestival,
     dateEvento,
     paymentSettings,
+    pageId: pageInfo.id,
   };
-
-  const isBookable = paymentSettings?.reduce(
-    (result, p) => result || p.bookable,
-    false
-  );
-
-  const today = dayjs(new Date());
-  const isFuture = paymentSettings?.reduce((result, p) => {
-    const start = dayjs(p.startDate);
-    return result || today.isBefore(start);
-  }, false);
-  const showBookButton = isBookable && isFuture;
 
   const ShareButtons = !isIndex
     ? dynamic(() => import('components/ShareButtons'), { ssr: false })
     : null;
+
   return (
     <>
       <Seo
@@ -99,7 +89,7 @@ function Page({ data, locale }) {
         ) : (
           <HeroEmpty data={heroData} />
         )}
-        {showBookButton && <BookButton locale={locale} id={pageInfo.id} />}
+
         {payload?.content && (
           <MainContent locale={locale} data={payload.content} />
         )}

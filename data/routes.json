@@ -3817,6 +3817,53 @@
     ]
   },
   {
+    "id": "96815611",
+    "slugs": {
+      "en": [
+        "studio",
+        "workshop",
+        "re-start-laboratorio-di-teatro-fisico"
+      ],
+      "it": [
+        "studio",
+        "workshop",
+        "re-start-laboratorio-di-teatro-fisico"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "workshop",
+    "group": "workshops",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "studio",
+          "workshop",
+          "re-start-laboratorio-di-teatro-fisico"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "studio",
+          "workshop",
+          "re-start-laboratorio-di-teatro-fisico"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "studio/workshop/re-start-laboratorio-di-teatro-fisico"
+      },
+      {
+        "locale": "it",
+        "url": "studio/workshop/re-start-laboratorio-di-teatro-fisico"
+      }
+    ]
+  },
+  {
     "id": "97900835",
     "slugs": {
       "en": [
@@ -4095,53 +4142,6 @@
       {
         "locale": "it",
         "url": "studio/workshop/alessio-maria-romano"
-      }
-    ]
-  },
-  {
-    "id": "96815611",
-    "slugs": {
-      "en": [
-        "studio",
-        "workshop",
-        "michela-lucenti"
-      ],
-      "it": [
-        "studio",
-        "workshop",
-        "michela-lucenti"
-      ]
-    },
-    "isIndex": false,
-    "indexType": "",
-    "__typename": "workshop",
-    "group": "workshops",
-    "paths": [
-      {
-        "locale": "en",
-        "slugs": [
-          "studio",
-          "workshop",
-          "michela-lucenti"
-        ]
-      },
-      {
-        "locale": "it",
-        "slugs": [
-          "studio",
-          "workshop",
-          "michela-lucenti"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "en",
-        "url": "studio/workshop/michela-lucenti"
-      },
-      {
-        "locale": "it",
-        "url": "studio/workshop/michela-lucenti"
       }
     ]
   },
@@ -5634,6 +5634,53 @@
     ]
   },
   {
+    "id": "101561558",
+    "slugs": {
+      "en": [
+        "studio",
+        "associated-artists",
+        "pietro-marullo"
+      ],
+      "it": [
+        "studio",
+        "artisti-associati",
+        "pietro-marullo"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "artist",
+    "group": "associated-artists",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "studio",
+          "associated-artists",
+          "pietro-marullo"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "studio",
+          "artisti-associati",
+          "pietro-marullo"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "studio/associated-artists/pietro-marullo"
+      },
+      {
+        "locale": "it",
+        "url": "studio/artisti-associati/pietro-marullo"
+      }
+    ]
+  },
+  {
     "id": "100562859",
     "slugs": {
       "en": [
@@ -5728,29 +5775,76 @@
     ]
   },
   {
+    "id": "101637072",
+    "slugs": {
+      "en": [
+        "studio",
+        "artistic-residences",
+        "chiara-bersani-and-danskompaniet-spinn"
+      ],
+      "it": [
+        "studio",
+        "residenze-artistiche",
+        "chiara-bersani-and-danskompaniet-spinn"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "artist",
+    "group": "artistic-residences",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "studio",
+          "artistic-residences",
+          "chiara-bersani-and-danskompaniet-spinn"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "studio",
+          "residenze-artistiche",
+          "chiara-bersani-and-danskompaniet-spinn"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "studio/artistic-residences/chiara-bersani-and-danskompaniet-spinn"
+      },
+      {
+        "locale": "it",
+        "url": "studio/residenze-artistiche/chiara-bersani-and-danskompaniet-spinn"
+      }
+    ]
+  },
+  {
     "id": "101561558",
     "slugs": {
       "en": [
         "studio",
-        "associated-artists",
+        "artistic-residences",
         "pietro-marullo"
       ],
       "it": [
         "studio",
-        "artisti-associati",
+        "residenze-artistiche",
         "pietro-marullo"
       ]
     },
     "isIndex": false,
     "indexType": "",
     "__typename": "artist",
-    "group": "associated-artists",
+    "group": "artistic-residences",
     "paths": [
       {
         "locale": "en",
         "slugs": [
           "studio",
-          "associated-artists",
+          "artistic-residences",
           "pietro-marullo"
         ]
       },
@@ -5758,7 +5852,7 @@
         "locale": "it",
         "slugs": [
           "studio",
-          "artisti-associati",
+          "residenze-artistiche",
           "pietro-marullo"
         ]
       }
@@ -5766,11 +5860,11 @@
     "urls": [
       {
         "locale": "en",
-        "url": "studio/associated-artists/pietro-marullo"
+        "url": "studio/artistic-residences/pietro-marullo"
       },
       {
         "locale": "it",
-        "url": "studio/artisti-associati/pietro-marullo"
+        "url": "studio/residenze-artistiche/pietro-marullo"
       }
     ]
   },
@@ -6006,53 +6100,6 @@
       {
         "locale": "it",
         "url": "studio/residenze-artistiche/paola-bianchi"
-      }
-    ]
-  },
-  {
-    "id": "101561558",
-    "slugs": {
-      "en": [
-        "studio",
-        "artistic-residences",
-        "pietro-marullo"
-      ],
-      "it": [
-        "studio",
-        "residenze-artistiche",
-        "pietro-marullo"
-      ]
-    },
-    "isIndex": false,
-    "indexType": "",
-    "__typename": "artist",
-    "group": "artistic-residences",
-    "paths": [
-      {
-        "locale": "en",
-        "slugs": [
-          "studio",
-          "artistic-residences",
-          "pietro-marullo"
-        ]
-      },
-      {
-        "locale": "it",
-        "slugs": [
-          "studio",
-          "residenze-artistiche",
-          "pietro-marullo"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "en",
-        "url": "studio/artistic-residences/pietro-marullo"
-      },
-      {
-        "locale": "it",
-        "url": "studio/residenze-artistiche/pietro-marullo"
       }
     ]
   },
