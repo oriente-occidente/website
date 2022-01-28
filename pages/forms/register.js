@@ -12,7 +12,6 @@ import { formatDate } from 'lib/utils';
 function Page({ data, locale, thankyouMessage }) {
   const { site, menu, footer } = data;
   const [payload, setPayload] = useState(null);
-  const [choiche, setChoiche] = useState(null);
   const [paymentId, setPaymentId] = useState(null);
   const [eventId, setEventId] = useState(null);
   // const { state, dispatch } = useAppContext();
@@ -47,7 +46,10 @@ function Page({ data, locale, thankyouMessage }) {
   const action = `${locale === 'en' ? '/en' : ''}/forms/thankyou?id=${eventId}${
     paymentId ? '&cp=' + paymentId : ''
   }`;
-  console.log('action:', action);
+  const choiche = paymentId
+    ? payload.paymentSettings?.find(p.id === paymentId)
+    : null;
+
   return (
     <Layout footer={footer} menu={menu} locale={locale} hideNewsletter={true}>
       <Seo tags={site.faviconMetaTags} />
