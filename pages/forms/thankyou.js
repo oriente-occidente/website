@@ -16,19 +16,19 @@ function Page({ data, locale, thankyouMessage }) {
     if (id && cp) {
       const data = await doQueryItem(locale, id);
       const choosen = data?.paymentSettings?.find((p) => p.id === cp);
-      console.log('choiche data:', choosen);
+      // console.log('choiche data:', choosen);
       setChoiche(choosen);
     }
   }
   useEffect(() => {
     if (query) {
+      // console.log('QUERY:', query);
       const url = window.location;
       if (!window.location.search.includes('success=true')) {
         setTimeout(() => {
           window.location.href = `${url}&success=true`;
         }, 1000);
       } else {
-        console.log('QUERY:', query);
         getData(query);
       }
     }

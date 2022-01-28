@@ -30,7 +30,6 @@ function useWindowSize() {
 const VideoEmbedded = (props) => {
   const size = useWindowSize();
 
-  console.log('VideoEmbedded', props);
   const { id, video, autoPlay, loop, muted, controls } = props;
   const ref = useRef();
   const [width, setWidth] = useState(null);
@@ -39,7 +38,6 @@ const VideoEmbedded = (props) => {
     if (ref?.current) {
       //&& !width
       const rect = ref.current.getBoundingClientRect().toJSON();
-      console.log('RECT WIDTH', rect.width);
       setWidth(rect.width);
     }
   }, [ref?.current, width, size]);

@@ -1,6 +1,5 @@
 const VideoInternal = (props) => {
   const { id, videoFile, autoPlay, ...other } = props;
-  console.log(props);
   return (
     <div key={id}>
       <video autoPlay={autoPlay || false} {...other} style={{ width: '100%' }}>

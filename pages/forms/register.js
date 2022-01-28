@@ -235,7 +235,6 @@ export async function getStaticProps({ params, locale }) {
   const data = await doQueryById(locale);
   const ty = await fetchData(q.extra_content, { locale });
   const thankyouMessage = ty.extraContent;
-  console.log('thankyouMessage', thankyouMessage);
   return {
     props: { data, locale, thankyouMessage },
   };
