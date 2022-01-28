@@ -1,5 +1,6 @@
 import { Image as DatoImage } from 'react-datocms';
 import Link from 'next/link';
+import { LocationMarkerIcon, CalendarIcon } from '@heroicons/react/outline';
 
 import { resolveLinkById, showDates } from 'lib/utils';
 
@@ -10,17 +11,23 @@ function StandardCard({ data, locale, categoryTitle }) {
       <Link href={resolveLinkById(data.id, locale)} locale={locale}>
         <a title={data.title}>
           <div className="relative">
-            <div className="absolute md:flex z-20 left-4 md:left-8 bottom-2 md:bottom-6 top-auto text-white uppercase text-xxs md:text-xs font-semibold ">
+            <div className="absolute z-20 left-4 md:left-8 bottom-2 md:bottom-6 top-auto text-white uppercase text-xxs md:text-xs font-semibold ">
               <span>{categoryTitle}</span>
               {data.dates && (
-                <span className="hidden md:block md:pl-4 md:pr-1 normal-case font-light">
-                  {showDates(data.dates, locale)}
-                </span>
+                <div className="hidden md:flex gap-x-2 items-center">
+                  <CalendarIcon aria-hidden="true" className="w-4 h-4" />
+                  <span className="hidden md:block normal-case font-light">
+                    {showDates(data.dates, locale)}
+                  </span>
+                </div>
               )}
               {data.location && (
-                <span className="hidden md:inline-block normal-case font-light">
-                  - {data.location}
-                </span>
+                <div className="hidden md:flex gap-x-2 items-center">
+                  <LocationMarkerIcon aria-hidden="true" className="w-4 h-4" />
+                  <span className="hidden md:inline-block normal-case font-light">
+                    {data.location}
+                  </span>
+                </div>
               )}
             </div>
             {image != null ? (
@@ -45,14 +52,20 @@ function StandardCard({ data, locale, categoryTitle }) {
             )}
           </div>
           {data.dates && (
-            <h3 className="inline-block md:hidden normal-case text-xxs mr-1">
-              {showDates(data.dates, locale)}
-            </h3>
+            <div className="md:hidden flex gap-1 items-center">
+              <CalendarIcon aria-hidden="true" className="w-3 h-4 mr-1 text-black" />
+              <h3 className="inline-block md:hidden normal-case text-xxs">
+                {showDates(data.dates, locale)}
+              </h3>
+            </div>
           )}
           {data.location && (
-            <span className="inline-block md:hidden normal-case text-xxs">
-              - {data.location}
-            </span>
+            <div className="md:hidden flex gap-1 items-center">
+              <LocationMarkerIcon aria-hidden="true" className="w-3 h-4 mr-1 text-black" />
+              <div className="inline-block md:hidden normal-case text-xxs">
+                {data.location}
+              </div>
+            </div>
           )}
         </a>
       </Link>
