@@ -5634,53 +5634,6 @@
     ]
   },
   {
-    "id": "101561558",
-    "slugs": {
-      "en": [
-        "studio",
-        "associated-artists",
-        "pietro-marullo"
-      ],
-      "it": [
-        "studio",
-        "artisti-associati",
-        "pietro-marullo"
-      ]
-    },
-    "isIndex": false,
-    "indexType": "",
-    "__typename": "artist",
-    "group": "associated-artists",
-    "paths": [
-      {
-        "locale": "en",
-        "slugs": [
-          "studio",
-          "associated-artists",
-          "pietro-marullo"
-        ]
-      },
-      {
-        "locale": "it",
-        "slugs": [
-          "studio",
-          "artisti-associati",
-          "pietro-marullo"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "en",
-        "url": "studio/associated-artists/pietro-marullo"
-      },
-      {
-        "locale": "it",
-        "url": "studio/artisti-associati/pietro-marullo"
-      }
-    ]
-  },
-  {
     "id": "101319111",
     "slugs": {
       "en": [
@@ -5728,6 +5681,53 @@
     ]
   },
   {
+    "id": "101561558",
+    "slugs": {
+      "en": [
+        "studio",
+        "associated-artists",
+        "pietro-marullo"
+      ],
+      "it": [
+        "studio",
+        "artisti-associati",
+        "pietro-marullo"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "artist",
+    "group": "associated-artists",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "studio",
+          "associated-artists",
+          "pietro-marullo"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "studio",
+          "artisti-associati",
+          "pietro-marullo"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "studio/associated-artists/pietro-marullo"
+      },
+      {
+        "locale": "it",
+        "url": "studio/artisti-associati/pietro-marullo"
+      }
+    ]
+  },
+  {
     "id": "100562859",
     "slugs": {
       "en": [
@@ -5771,6 +5771,147 @@
       {
         "locale": "it",
         "url": "studio/artisti-associati/daniele-ninarello"
+      }
+    ]
+  },
+  {
+    "id": "101365948",
+    "slugs": {
+      "en": [
+        "studio",
+        "artistic-residences",
+        "pablo-girolami"
+      ],
+      "it": [
+        "studio",
+        "residenze-artistiche",
+        "pablo-girolami"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "artist",
+    "group": "artistic-residences",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "studio",
+          "artistic-residences",
+          "pablo-girolami"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "studio",
+          "residenze-artistiche",
+          "pablo-girolami"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "studio/artistic-residences/pablo-girolami"
+      },
+      {
+        "locale": "it",
+        "url": "studio/residenze-artistiche/pablo-girolami"
+      }
+    ]
+  },
+  {
+    "id": "101553604",
+    "slugs": {
+      "en": [
+        "studio",
+        "artistic-residences",
+        "paola-bianchi"
+      ],
+      "it": [
+        "studio",
+        "residenze-artistiche",
+        "paola-bianchi"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "artist",
+    "group": "artistic-residences",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "studio",
+          "artistic-residences",
+          "paola-bianchi"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "studio",
+          "residenze-artistiche",
+          "paola-bianchi"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "studio/artistic-residences/paola-bianchi"
+      },
+      {
+        "locale": "it",
+        "url": "studio/residenze-artistiche/paola-bianchi"
+      }
+    ]
+  },
+  {
+    "id": "101319111",
+    "slugs": {
+      "en": [
+        "studio",
+        "artistic-residences",
+        "luna-cenere"
+      ],
+      "it": [
+        "studio",
+        "residenze-artistiche",
+        "luna-cenere"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "artist",
+    "group": "artistic-residences",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "studio",
+          "artistic-residences",
+          "luna-cenere"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "studio",
+          "residenze-artistiche",
+          "luna-cenere"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "studio/artistic-residences/luna-cenere"
+      },
+      {
+        "locale": "it",
+        "url": "studio/residenze-artistiche/luna-cenere"
       }
     ]
   },
@@ -5865,147 +6006,6 @@
       {
         "locale": "it",
         "url": "studio/residenze-artistiche/alessio-maria-romano"
-      }
-    ]
-  },
-  {
-    "id": "101553604",
-    "slugs": {
-      "en": [
-        "studio",
-        "artistic-residences",
-        "paola-bianchi"
-      ],
-      "it": [
-        "studio",
-        "residenze-artistiche",
-        "paola-bianchi"
-      ]
-    },
-    "isIndex": false,
-    "indexType": "",
-    "__typename": "artist",
-    "group": "artistic-residences",
-    "paths": [
-      {
-        "locale": "en",
-        "slugs": [
-          "studio",
-          "artistic-residences",
-          "paola-bianchi"
-        ]
-      },
-      {
-        "locale": "it",
-        "slugs": [
-          "studio",
-          "residenze-artistiche",
-          "paola-bianchi"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "en",
-        "url": "studio/artistic-residences/paola-bianchi"
-      },
-      {
-        "locale": "it",
-        "url": "studio/residenze-artistiche/paola-bianchi"
-      }
-    ]
-  },
-  {
-    "id": "101365948",
-    "slugs": {
-      "en": [
-        "studio",
-        "artistic-residences",
-        "pablo-girolami"
-      ],
-      "it": [
-        "studio",
-        "residenze-artistiche",
-        "pablo-girolami"
-      ]
-    },
-    "isIndex": false,
-    "indexType": "",
-    "__typename": "artist",
-    "group": "artistic-residences",
-    "paths": [
-      {
-        "locale": "en",
-        "slugs": [
-          "studio",
-          "artistic-residences",
-          "pablo-girolami"
-        ]
-      },
-      {
-        "locale": "it",
-        "slugs": [
-          "studio",
-          "residenze-artistiche",
-          "pablo-girolami"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "en",
-        "url": "studio/artistic-residences/pablo-girolami"
-      },
-      {
-        "locale": "it",
-        "url": "studio/residenze-artistiche/pablo-girolami"
-      }
-    ]
-  },
-  {
-    "id": "101319111",
-    "slugs": {
-      "en": [
-        "studio",
-        "artistic-residences",
-        "luna-cenere"
-      ],
-      "it": [
-        "studio",
-        "residenze-artistiche",
-        "luna-cenere"
-      ]
-    },
-    "isIndex": false,
-    "indexType": "",
-    "__typename": "artist",
-    "group": "artistic-residences",
-    "paths": [
-      {
-        "locale": "en",
-        "slugs": [
-          "studio",
-          "artistic-residences",
-          "luna-cenere"
-        ]
-      },
-      {
-        "locale": "it",
-        "slugs": [
-          "studio",
-          "residenze-artistiche",
-          "luna-cenere"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "en",
-        "url": "studio/artistic-residences/luna-cenere"
-      },
-      {
-        "locale": "it",
-        "url": "studio/residenze-artistiche/luna-cenere"
       }
     ]
   },

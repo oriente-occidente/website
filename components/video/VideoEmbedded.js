@@ -36,7 +36,8 @@ const VideoEmbedded = (props) => {
   const [width, setWidth] = useState(null);
 
   useEffect(() => {
-    if (ref?.current && !width) {
+    if (ref?.current) {
+      //&& !width
       const rect = ref.current.getBoundingClientRect().toJSON();
       console.log('RECT WIDTH', rect.width);
       setWidth(rect.width);
