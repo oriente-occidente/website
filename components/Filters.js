@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react';
 // import { useRouter } from 'next/router';
-import 'react-datepicker/dist/react-datepicker.css';
 
 import Tabs from 'components/Tabs';
 import PreviewCard from 'components/cards/PreviewCard';

@@ -3,7 +3,7 @@ module.exports = {
   generateRobotsTxt: true,
   sitemapSize: 5000,
   exclude: [
-    '404',
+    '/404',
     '/forms/register',
     '/forms/thankyou',
     '/forms/contact',
