@@ -64,6 +64,7 @@ function Page({ data, locale }) {
     dateEvento,
     paymentSettings,
     pageId: pageInfo.id,
+    locale,
   };
 
   const ShareButtons = !isIndex
