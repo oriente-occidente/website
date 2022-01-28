@@ -7,7 +7,8 @@
     "dev": "yarn data && next",
     "build": "next build",
     "start": "next start",
-    "build:static": "next build && next out"
+    "build:static": "next build && next out",
+    "postbuild": "next-sitemap"
   },
   "dependencies": {
     "@headlessui/react": "^1.4.2",
@@ -26,6 +27,7 @@
     "leaflet-defaulticon-compatibility": "^0.1.1",
     "lodash": "^4.17.21",
     "next": "^12.0.7",
+    "next-sitemap": "^2.0.7",
     "postcss": "^8.4.5",
     "prismjs": "^1.25.0",
     "query-string": "^7.1.0",
