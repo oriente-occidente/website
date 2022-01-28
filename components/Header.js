@@ -10,7 +10,7 @@ function classNames(...classes) {
   return classes.filter(Boolean).join(' ');
 }
 
-function renderMobile(data, locale, alts) {
+function renderMobile(data, locale, alts, handleClose) {
   function renderMobileLink(item) {
     if (item.children && item.children.length > 0) {
       return (
@@ -28,10 +28,14 @@ function renderMobile(data, locale, alts) {
               <Disclosure.Panel>
                 {item.children?.map((child) => (
                   <Link
+                    onClick={() => handleClose()}
                     key={child?.id}
                     href={resolveLinkById(child?.link?.id || '/', locale)}
                   >
-                    <a className="text-black-light text-sm block font-normal tracking-wider md:py-1 md:text-base">
+                    <a
+                      onClick={() => handleClose()}
+                      className="text-black-light text-sm block font-normal tracking-wider md:py-1 md:text-base"
+                    >
                       {child.title}
                     </a>
                   </Link>
@@ -186,45 +190,49 @@ function Header(props) {
   return (
     <header>
       <Popover className="fixed h-[70px] md:h-[80px] lg:h-[110px] inset-x-0 t-0 bg-white/60 z-40">
-        <div className="container h-full flex justify-between items-center py-2 lg:py-3 sm:px-6 lg:justify-start lg:space-x-10">
-          <div>
-            <Link locale={locale} href="/" passHref>
-              <a href="#" className="flex">
-                <span className="sr-only">Workflow</span>
-                <img
-                  className="h-10 w-auto sm:h-12 lg:h-16 object-contain"
-                  src="/logo.svg"
-                  alt="Oriente Occidente"
-                />
-              </a>
-            </Link>
-          </div>
-          <div className="-mr-2 -my-2 lg:hidden">
-            <Popover.Button className="bg-transparent p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:primary">
-              <span className="text-[12px] md:text-xs font-semibold uppercase tracking-widest text-black">
-                Menu
-              </span>
-              <div
-                className="ml-2 h-6 w-6 md:w-8 md:ml-4 bg-open"
-                aria-hidden="true"
-              />
-            </Popover.Button>
-          </div>
-          <div className="hidden lg:flex-1 lg:flex lg:items-center lg:justify-end">
-            <Popover.Group
-              as="nav"
-              className="flex space-x-4 xl:space-x-10 uppercase"
-            >
-              {data?.map((item) => (
-                <Fragment key={item.id}>{renderLink(item)}</Fragment>
-              ))}
-            </Popover.Group>
-            <div className="ml-14 pt-1 font-semibold uppercase lg:flex text-black-light tracking-widest text-xxs hover:text-black-light">
-              <LanguageSwitcher locale={locale} alts={alts} />
+        {({ open, close: handleClose }) => (
+          <>
+            <div className="container h-full flex justify-between items-center py-2 lg:py-3 sm:px-6 lg:justify-start lg:space-x-10">
+              <div>
+                <Link locale={locale} href="/" passHref>
+                  <a href="#" className="flex">
+                    <span className="sr-only">Workflow</span>
+                    <img
+                      className="h-10 w-auto sm:h-12 lg:h-16 object-contain"
+                      src="/logo.svg"
+                      alt="Oriente Occidente"
+                    />
+                  </a>
+                </Link>
+              </div>
+              <div className="-mr-2 -my-2 lg:hidden">
+                <Popover.Button className="bg-transparent p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:primary">
+                  <span className="text-[12px] md:text-xs font-semibold uppercase tracking-widest text-black">
+                    Menu
+                  </span>
+                  <div
+                    className="ml-2 h-6 w-6 md:w-8 md:ml-4 bg-open"
+                    aria-hidden="true"
+                  />
+                </Popover.Button>
+              </div>
+              <div className="hidden lg:flex-1 lg:flex lg:items-center lg:justify-end">
+                <Popover.Group
+                  as="nav"
+                  className="flex space-x-4 xl:space-x-10 uppercase"
+                >
+                  {data?.map((item) => (
+                    <Fragment key={item.id}>{renderLink(item)}</Fragment>
+                  ))}
+                </Popover.Group>
+                <div className="ml-14 pt-1 font-semibold uppercase lg:flex text-black-light tracking-widest text-xxs hover:text-black-light">
+                  <LanguageSwitcher locale={locale} alts={alts} />
+                </div>
+              </div>
             </div>
-          </div>
-        </div>
-        {renderMobile(data, locale, alts)}
+            {renderMobile(data, locale, alts, handleClose)}
+          </>
+        )}
       </Popover>
     </header>
   );

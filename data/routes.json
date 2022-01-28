@@ -574,6 +574,53 @@
     ]
   },
   {
+    "id": "96777762",
+    "slugs": {
+      "en": [
+        "festival",
+        "program",
+        "mixed-doubles"
+      ],
+      "it": [
+        "festival",
+        "programma",
+        "mixed-doubles"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "event",
+    "group": "festival-events",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "festival",
+          "program",
+          "mixed-doubles"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "festival",
+          "programma",
+          "mixed-doubles"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "festival/program/mixed-doubles"
+      },
+      {
+        "locale": "it",
+        "url": "festival/programma/mixed-doubles"
+      }
+    ]
+  },
+  {
     "id": "101323990",
     "slugs": {
       "en": [
@@ -3108,53 +3155,6 @@
       {
         "locale": "it",
         "url": "festival/programma/la-lingua-in-movimento"
-      }
-    ]
-  },
-  {
-    "id": "96777762",
-    "slugs": {
-      "en": [
-        "festival",
-        "program",
-        "mixed-doubles"
-      ],
-      "it": [
-        "festival",
-        "programma",
-        "mixed-doubles"
-      ]
-    },
-    "isIndex": false,
-    "indexType": "",
-    "__typename": "event",
-    "group": "festival-events",
-    "paths": [
-      {
-        "locale": "en",
-        "slugs": [
-          "festival",
-          "program",
-          "mixed-doubles"
-        ]
-      },
-      {
-        "locale": "it",
-        "slugs": [
-          "festival",
-          "programma",
-          "mixed-doubles"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "en",
-        "url": "festival/program/mixed-doubles"
-      },
-      {
-        "locale": "it",
-        "url": "festival/programma/mixed-doubles"
       }
     ]
   },

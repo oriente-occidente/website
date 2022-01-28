@@ -36,7 +36,9 @@ export default function Tabs({ selected, handleSelect }) {
             onChange={(e) => handleChange(e.target.value)}
           >
             {tabs.map((tab) => (
-              <option key={tab.slug}>{tab.name}</option>
+              <option key={tab.slug} value={tab.slug}>
+                {tab.name}
+              </option>
             ))}
           </select>
         </div>

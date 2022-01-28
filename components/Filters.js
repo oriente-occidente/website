@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { useRouter } from 'next/router';
+// import { useRouter } from 'next/router';
 import 'react-datepicker/dist/react-datepicker.css';
 
 import Tabs from 'components/Tabs';
@@ -11,8 +11,7 @@ function getDatesOfYear(datesOfYear, y) {
 }
 
 function Filters({ locale, list, datesOfYear }) {
-  const router = useRouter();
-
+  // const router = useRouter();
   //const currentYear = new Date().getFullYear();
   // const years = [`${currentYear}`, `${currentYear - 1}`, `${currentYear - 2}`];
   const years = datesOfYear
@@ -28,9 +27,9 @@ function Filters({ locale, list, datesOfYear }) {
     getDatesOfYear(datesOfYear, year)
   );
 
-  useEffect(() => {
-    console.log('window', window.location.search);
-  }, []);
+  // useEffect(() => {
+  //   console.log('window', window.location.search);
+  // }, []);
 
   function handleChange(e) {
     const value = e.target?.value;
@@ -86,7 +85,6 @@ function Filters({ locale, list, datesOfYear }) {
 
       <div className="my-4">
         <div className="container lg:grid lg:grid-cols-2 lg:gap-6">
-          {console.log('data:', data)}
           {resultList?.map((item) => (
             <PreviewCard locale={locale} data={item} key={item.id} />
           ))}
