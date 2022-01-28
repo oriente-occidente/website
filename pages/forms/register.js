@@ -1,5 +1,5 @@
 import { useRouter } from 'next/router';
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect } from 'react';
 
 import * as q from 'lib/queries';
 import fetchData from 'lib/api/dato';
@@ -14,8 +14,6 @@ function Page({ data, locale, thankyouMessage }) {
   const [payload, setPayload] = useState(null);
   const [paymentId, setPaymentId] = useState(null);
   const [eventId, setEventId] = useState(null);
-  // const { state, dispatch } = useAppContext();
-  // const { eventId, paymentId } = state;
   const router = useRouter();
   const { query } = router;
 
@@ -28,8 +26,6 @@ function Page({ data, locale, thankyouMessage }) {
   const handleChange = (e) => {
     const value = e.target?.value;
     if (!value) return;
-    console.log('choosen ID:', value);
-    // dispatch({ type: 'SET_PAYMENT', value });
     setPaymentId(value);
   };
   useEffect(() => {
