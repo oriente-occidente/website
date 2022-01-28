@@ -24,9 +24,9 @@ export default function BookButton({ locale, paymentSettings, id }) {
     return null;
   }
   return (
-    <div className="self-start md:self-end">
+    <div className="pl-4">
       <button
-        className="w-48 bg-white text-gray-700 font-semibold hover:text-black py-2 px-4 border border-gray-700 hover:border-black"
+        className="button--with-arrow"
         onClick={() => handleRegistration(id)}
       >
         {translate('register', locale)}

@@ -32,7 +32,7 @@ function HeroDetail({ data }) {
   return (
     <header className="border-t md:border-none border-gray pb-10 md:py-0 md:grid md:grid-cols-4 md:gap-4 xl:container xl:mx-auto overflow-hidden">
       <div className="border-b border-gray py-3 md:border-none md:pt-4 xl:pt-8">
-        <div className="container">
+        <div className="pl-4 xl:container">
           {isFestival == true ? (
             <div className="uppercase text-black text-xxs font-semibold tracking-wider md:pb-2">
               Festival
@@ -59,25 +59,25 @@ function HeroDetail({ data }) {
           )}
         </div>
       </div>
-      <div className="relative md:col-span-3 md:border-l md:border-color-gray xl:pt-4 md:col-start-2">
-        <div className="px-4 md:px-12 md:pt-2">
-          <h1 className="text-base uppercase pt-4 pb-1">{titleHero}</h1>
-          {authors && (
-            <h2 className="text-xs md:text-sm mb-1 uppercase">{authors}</h2>
-          )}
-          <h2 className="text-base uppercase font-semibold">
-            {descriptionHero}
-          </h2>
-        </div>
-        {paymentSettings != null && (
-          <div className="full-w flex md:justify-end px-4">
+      <div className="relative md:col-span-3 md:border-l md:border-color-gray xl:pt-4 md:col-start-2 lg:w-full">
+        <div className="md:flex md:justify-between md:items-flex-start px-4 md:px-12 pt-4">
+          <div className="">
+            <h1 className="text-base uppercase pt-1 pb-1">{titleHero}</h1>
+            {authors && (
+              <h2 className="text-xs md:text-sm mb-1 uppercase">{authors}</h2>
+            )}
+            <h2 className="text-base uppercase font-semibold">
+              {descriptionHero}
+            </h2>
+          </div>
+          {paymentSettings != null && (
             <BookButton
               paymentSettings={paymentSettings}
               locale={locale}
               id={pageId}
             />
-          </div>
-        )}
+          )}
+        </div>
 
         <div className="mt-6 md:mt-8 pl-4 md:pl-0 xl:w-[calc(100%+3rem)] 2xl:w-[calc((100vw-((100vw-1380px)/2))-333px-1rem)]">
           {slideshowHero != '' ? (

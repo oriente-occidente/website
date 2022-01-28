@@ -1,9 +1,24 @@
 import { Image as DatoImage } from 'react-datocms';
+import { LocationMarkerIcon, CalendarIcon } from '@heroicons/react/outline';
 import dynamic from 'next/dynamic';
 // import Gallery from 'components/galleries/Gallery';
+import BookButton from 'components/BookButton';
+import { formatDate } from 'lib/utils';
 
-function HeroIndex({ data }) {
-  const { titleHero, descriptionHero, imageHero, slideshowHero } = data;
+
+function HeroIndex({ data, locale }) {
+  const {
+    titleHero,
+    descriptionHero,
+    authors,
+    location,
+    imageHero,
+    isFestival,
+    dateEvento,
+    paymentSettings,
+    slideshowHero,
+    pageId,
+  } = data;
 
   let Gallery = () => <div />;
   if (slideshowHero != '') {
@@ -34,10 +49,44 @@ function HeroIndex({ data }) {
         </div>
       </header>
       <div className="md:grid md:grid-cols-4 md:gap-4 md:container md:mx-auto">
-        <div className="md:col-start-2 md:col-span-3">
-          <div className="text-black-light lg:text-black lg:font-light md:pb-10 pt-10 text-sm lg:text-xl px-4 lg:px-20 lg:py-20 md:pl-10 md:border-l border-gray-300">
-            {descriptionHero}
-          </div>
+        <div className="md:col-start-2 md:col-span-3 md:pb-10 gap-4 pt-6 md:border-l border-gray-300">
+          {descriptionHero && (
+            <div className="text-black-light lg:text-black lg:font-light text-sm lg:text-xl lg:pt-2 px-4 lg:px-20 md:pl-10">
+              {descriptionHero}
+            </div>
+          )}
+          {paymentSettings != null && (
+            <div className="pt-4 md:pl-6 lg:pl-16">
+              <BookButton
+                paymentSettings={paymentSettings}
+                locale={locale}
+                id={pageId}
+              />
+            </div>
+          )}
+          {dateEvento && (
+            <div className="pt-4 px-4 lg:px-20 md:pl-10">
+              {dateEvento != null ? (
+              <>
+                {dateEvento.map((date) => (
+                  <div
+                    key={date.id}
+                    className="text-xxs text-black-light flex items-center"
+                  >
+                    <CalendarIcon aria-hidden="true" className="w-4 h-4 mr-2" />
+                    {formatDate(date.startTime, locale || 'en', date.isDaily)}
+                  </div>
+                ))}
+              </>
+              ) : null}
+              {location && (
+                <h2 className="text-xxs text-black-light mt-1 flex items-center">
+                  <LocationMarkerIcon aria-hidden="true" className="w-4 h-4 mr-2" />
+                  {location}
+                </h2>
+              )}
+            </div>
+          )}
         </div>
       </div>
     </div>
