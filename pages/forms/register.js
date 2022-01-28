@@ -47,7 +47,7 @@ function Page({ data, locale, thankyouMessage }) {
     paymentId ? '&cp=' + paymentId : ''
   }`;
   const choiche = paymentId
-    ? payload.paymentSettings?.find(p.id === paymentId)
+    ? payload.paymentSettings?.find((p) => p.id === paymentId)
     : null;
 
   return (
