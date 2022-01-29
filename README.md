@@ -1,8 +1,8 @@
 # Get Started
 
-first clone or update repo `git@gitlab.com:cantiere-creativo/internals/formazione-next/pokewars.git`, then
+if you do not have environment variables, the project will not work, check netlify for variables or ask someone.
 
-then check you `.env.local` file, if you do not have copi and rename `sample.env.local`
+Check you `.env.local` file, if you do not have copi and rename `sample.env.local`
 
 ```bash
 yarn install  # missing deps
@@ -11,8 +11,8 @@ yarn dev #start dev
 
 # Dato project :
 
-https://cc-next-template.admin.datocms.com/
+https://oriente-occidente.admin.datocms.com
 
 # Netlify Url
 
-https://pokewars.netlify.app
+https://orienteoccidente.netlify.app
