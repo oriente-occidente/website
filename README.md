@@ -1,4 +1,4 @@
-# Get Started
+# Get Started:
 
 CLONE THE PROJECT
 
