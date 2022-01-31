@@ -34,7 +34,7 @@ function HomeCard({ count, categoryTitle, data, locale }) {
               <div className="md:hidden text-white text-xl after:w-10 after:h-10 font-thin absolute left-1/2 -translate-x-2/4 after:border-white after:border bottom-4 after:rounded-full after:absolute after:top-1/2 after:left-1/2 after:-translate-y-2/4 after:-translate-x-2/4">
                 +
               </div>
-              <div className="hidden z-20 md:block text-white text-sm uppercase after:w-28 after:h-28 font-thin absolute bottom-16 left-1/2 -translate-x-2/4 after:border-white after:border after:rounded-full after:absolute after:top-1/2 after:left-1/2 after:-translate-y-2/4 after:-translate-x-2/4">
+              <div className="hidden z-20 md:block text-white text-xxs tracking-widest uppercase after:w-28 after:h-28 font-thin absolute bottom-16 left-1/2 -translate-x-2/4 after:border-white after:border after:rounded-full after:absolute after:top-1/2 after:left-1/2 after:-translate-y-2/4 after:-translate-x-2/4 after:duration-300 group-hover:after:border-red">
                 {translate('more', locale)}
               </div>
             </div>

@@ -23,7 +23,7 @@ export default function Tabs({ selected, handleSelect }) {
 
   return (
     <div>
-      <div className="sm:hidden px-4">
+      <div aria-hidden className="sm:hidden px-4">
         <div className="border-b border-black">
           <label htmlFor="tabs" className="sr-only">
             -

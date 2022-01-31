@@ -90,11 +90,11 @@
     "slugs": {
       "it": [
         "festival",
-        "biglietti"
+        "box-office"
       ],
       "en": [
         "festival",
-        "tickets"
+        "box-office"
       ]
     },
     "__typename": "page",
@@ -103,25 +103,25 @@
         "locale": "it",
         "slugs": [
           "festival",
-          "biglietti"
+          "box-office"
         ]
       },
       {
         "locale": "en",
         "slugs": [
           "festival",
-          "tickets"
+          "box-office"
         ]
       }
     ],
     "urls": [
       {
         "locale": "it",
-        "url": "festival/biglietti"
+        "url": "festival/box-office"
       },
       {
         "locale": "en",
-        "url": "festival/tickets"
+        "url": "festival/box-office"
       }
     ]
   },
@@ -574,17 +574,17 @@
     ]
   },
   {
-    "id": "101880648",
+    "id": "97509936",
     "slugs": {
       "en": [
         "festival",
         "program",
-        "il-mondo-altrove"
+        "oltrepassare"
       ],
       "it": [
         "festival",
         "programma",
-        "il-mondo-altrove"
+        "oltrepassare"
       ]
     },
     "isIndex": false,
@@ -597,7 +597,7 @@
         "slugs": [
           "festival",
           "program",
-          "il-mondo-altrove"
+          "oltrepassare"
         ]
       },
       {
@@ -605,18 +605,112 @@
         "slugs": [
           "festival",
           "programma",
-          "il-mondo-altrove"
+          "oltrepassare"
         ]
       }
     ],
     "urls": [
       {
         "locale": "en",
-        "url": "festival/program/il-mondo-altrove"
+        "url": "festival/program/oltrepassare"
       },
       {
         "locale": "it",
-        "url": "festival/programma/il-mondo-altrove"
+        "url": "festival/programma/oltrepassare"
+      }
+    ]
+  },
+  {
+    "id": "102389123",
+    "slugs": {
+      "en": [
+        "festival",
+        "program",
+        "habitus"
+      ],
+      "it": [
+        "festival",
+        "programma",
+        "habitus"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "event",
+    "group": "festival-events",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "festival",
+          "program",
+          "habitus"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "festival",
+          "programma",
+          "habitus"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "festival/program/habitus"
+      },
+      {
+        "locale": "it",
+        "url": "festival/programma/habitus"
+      }
+    ]
+  },
+  {
+    "id": "102388104",
+    "slugs": {
+      "en": [
+        "festival",
+        "program",
+        "trigger"
+      ],
+      "it": [
+        "festival",
+        "programma",
+        "trigger"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "event",
+    "group": "festival-events",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "festival",
+          "program",
+          "trigger"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "festival",
+          "programma",
+          "trigger"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "festival/program/trigger"
+      },
+      {
+        "locale": "it",
+        "url": "festival/programma/trigger"
       }
     ]
   },
@@ -3535,53 +3629,6 @@
     ]
   },
   {
-    "id": "97509936",
-    "slugs": {
-      "en": [
-        "festival",
-        "program",
-        "oltrepassare"
-      ],
-      "it": [
-        "festival",
-        "programma",
-        "oltrepassare"
-      ]
-    },
-    "isIndex": false,
-    "indexType": "",
-    "__typename": "event",
-    "group": "festival-events",
-    "paths": [
-      {
-        "locale": "en",
-        "slugs": [
-          "festival",
-          "program",
-          "oltrepassare"
-        ]
-      },
-      {
-        "locale": "it",
-        "slugs": [
-          "festival",
-          "programma",
-          "oltrepassare"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "en",
-        "url": "festival/program/oltrepassare"
-      },
-      {
-        "locale": "it",
-        "url": "festival/programma/oltrepassare"
-      }
-    ]
-  },
-  {
     "id": "97510034",
     "slugs": {
       "en": [
@@ -3860,6 +3907,100 @@
       {
         "locale": "it",
         "url": "festival/programma/il-confine-non-e-una-linea-sottile"
+      }
+    ]
+  },
+  {
+    "id": "102387137",
+    "slugs": {
+      "en": [
+        "people",
+        "events",
+        "ombelichi-tenui"
+      ],
+      "it": [
+        "people",
+        "eventi",
+        "ombelichi-tenui"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "event",
+    "group": "other-events",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "people",
+          "events",
+          "ombelichi-tenui"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "people",
+          "eventi",
+          "ombelichi-tenui"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "people/events/ombelichi-tenui"
+      },
+      {
+        "locale": "it",
+        "url": "people/eventi/ombelichi-tenui"
+      }
+    ]
+  },
+  {
+    "id": "101880648",
+    "slugs": {
+      "en": [
+        "people",
+        "events",
+        "il-mondo-altrove"
+      ],
+      "it": [
+        "people",
+        "eventi",
+        "il-mondo-altrove"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "event",
+    "group": "other-events",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "people",
+          "events",
+          "il-mondo-altrove"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "people",
+          "eventi",
+          "il-mondo-altrove"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "people/events/il-mondo-altrove"
+      },
+      {
+        "locale": "it",
+        "url": "people/eventi/il-mondo-altrove"
       }
     ]
   },
@@ -5164,6 +5305,53 @@
     ]
   },
   {
+    "id": "102304510",
+    "slugs": {
+      "en": [
+        "people",
+        "projects",
+        "sconfinamenti"
+      ],
+      "it": [
+        "people",
+        "progetti",
+        "sconfinamenti"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "project",
+    "group": "projects",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "people",
+          "projects",
+          "sconfinamenti"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "people",
+          "progetti",
+          "sconfinamenti"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "people/projects/sconfinamenti"
+      },
+      {
+        "locale": "it",
+        "url": "people/progetti/sconfinamenti"
+      }
+    ]
+  },
+  {
     "id": "100599149",
     "slugs": {
       "en": [
@@ -5681,53 +5869,6 @@
     ]
   },
   {
-    "id": "101319111",
-    "slugs": {
-      "en": [
-        "studio",
-        "associated-artists",
-        "luna-cenere"
-      ],
-      "it": [
-        "studio",
-        "artisti-associati",
-        "luna-cenere"
-      ]
-    },
-    "isIndex": false,
-    "indexType": "",
-    "__typename": "artist",
-    "group": "associated-artists",
-    "paths": [
-      {
-        "locale": "en",
-        "slugs": [
-          "studio",
-          "associated-artists",
-          "luna-cenere"
-        ]
-      },
-      {
-        "locale": "it",
-        "slugs": [
-          "studio",
-          "artisti-associati",
-          "luna-cenere"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "en",
-        "url": "studio/associated-artists/luna-cenere"
-      },
-      {
-        "locale": "it",
-        "url": "studio/artisti-associati/luna-cenere"
-      }
-    ]
-  },
-  {
     "id": "100562859",
     "slugs": {
       "en": [
@@ -5771,6 +5912,53 @@
       {
         "locale": "it",
         "url": "studio/artisti-associati/daniele-ninarello"
+      }
+    ]
+  },
+  {
+    "id": "101319111",
+    "slugs": {
+      "en": [
+        "studio",
+        "associated-artists",
+        "luna-cenere"
+      ],
+      "it": [
+        "studio",
+        "artisti-associati",
+        "luna-cenere"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "artist",
+    "group": "associated-artists",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "studio",
+          "associated-artists",
+          "luna-cenere"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "studio",
+          "artisti-associati",
+          "luna-cenere"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "studio/associated-artists/luna-cenere"
+      },
+      {
+        "locale": "it",
+        "url": "studio/artisti-associati/luna-cenere"
       }
     ]
   },
@@ -5869,53 +6057,6 @@
     ]
   },
   {
-    "id": "101319111",
-    "slugs": {
-      "en": [
-        "studio",
-        "artistic-residences",
-        "luna-cenere"
-      ],
-      "it": [
-        "studio",
-        "residenze-artistiche",
-        "luna-cenere"
-      ]
-    },
-    "isIndex": false,
-    "indexType": "",
-    "__typename": "artist",
-    "group": "artistic-residences",
-    "paths": [
-      {
-        "locale": "en",
-        "slugs": [
-          "studio",
-          "artistic-residences",
-          "luna-cenere"
-        ]
-      },
-      {
-        "locale": "it",
-        "slugs": [
-          "studio",
-          "residenze-artistiche",
-          "luna-cenere"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "en",
-        "url": "studio/artistic-residences/luna-cenere"
-      },
-      {
-        "locale": "it",
-        "url": "studio/residenze-artistiche/luna-cenere"
-      }
-    ]
-  },
-  {
     "id": "100562859",
     "slugs": {
       "en": [
@@ -5959,6 +6100,53 @@
       {
         "locale": "it",
         "url": "studio/residenze-artistiche/daniele-ninarello"
+      }
+    ]
+  },
+  {
+    "id": "101319111",
+    "slugs": {
+      "en": [
+        "studio",
+        "artistic-residences",
+        "luna-cenere"
+      ],
+      "it": [
+        "studio",
+        "residenze-artistiche",
+        "luna-cenere"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "artist",
+    "group": "artistic-residences",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "studio",
+          "artistic-residences",
+          "luna-cenere"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "studio",
+          "residenze-artistiche",
+          "luna-cenere"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "studio/artistic-residences/luna-cenere"
+      },
+      {
+        "locale": "it",
+        "url": "studio/residenze-artistiche/luna-cenere"
       }
     ]
   },

@@ -10,7 +10,7 @@ export default function SectionsParagraphs({ sections, locale }) {
             <div key={section.id}>
               <Link href={`#${section.id}`}>
                 <a className="-top-20" title={`Link to ${section.title}`}>
-                  <h2 className="uppercase text-xxs tracking-wider mb-1">
+                  <h2 className="uppercase text-xxs tracking-wider mb-1 hover:text-red">
                     {section.title}
                   </h2>
                 </a>

@@ -2,20 +2,20 @@
   {
     "routes": [
       "festival",
-      "biglietti"
+      "box-office"
     ],
     "link": {
       "__typename": "PageRecord",
       "id": "79196174",
-      "slug": "biglietti",
+      "slug": "box-office",
       "slugs": [
         {
           "locale": "en",
-          "slug": "tickets"
+          "slug": "box-office"
         },
         {
           "locale": "it",
-          "slug": "biglietti"
+          "slug": "box-office"
         }
       ],
       "indexType": "",
@@ -288,20 +288,20 @@
   {
     "routes": [
       "festival",
-      "tickets"
+      "box-office"
     ],
     "link": {
       "__typename": "PageRecord",
       "id": "79196174",
-      "slug": "biglietti",
+      "slug": "box-office",
       "slugs": [
         {
           "locale": "en",
-          "slug": "tickets"
+          "slug": "box-office"
         },
         {
           "locale": "it",
-          "slug": "biglietti"
+          "slug": "box-office"
         }
       ],
       "indexType": "",

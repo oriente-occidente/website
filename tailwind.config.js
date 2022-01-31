@@ -8,6 +8,7 @@ module.exports = {
     extend: {
       colors: {
         green: '#81845C',
+        red: '#e64011',
         black: {
           DEFAULT: '#000000',
           light: '#424242',
@@ -20,7 +21,6 @@ module.exports = {
           light: '#F7F7F7',
           dark: '#332E2D',
         },
-        red: '#e64011'
       },
       fontSize: {
         xxs: ['14px', '24px'],
@@ -45,6 +45,7 @@ module.exports = {
       backgroundImage: {
         'arrow-right': "url('/icone/arrow_long_right.svg')",
         'arrow-right-black': "url('/icone/arrow_long_right_black.svg')",
+        'arrow-right-red': "url('/icone/arrow_long_right_red.svg')",
         'arrow-left': "url('/icone/arrow_long_left.svg')",
         'arrow-left-black': "url('/icone/arrow_long_left_black.svg')",
         'arrow-small-right': "url('/icone/arrow_small_right.svg')",

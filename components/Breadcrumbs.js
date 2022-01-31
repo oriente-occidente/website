@@ -12,7 +12,7 @@ export default function Breadcrumbs({ background, paths, locale }) {
               <div className="flex items-center">
                 <Link href={p.href} locale={locale}>
                   <a
-                    className="text-[12px] uppercase"
+                    className="text-[12px] uppercase hover:text-red"
                     aria-current={p.current ? 'page' : undefined}
                   >
                     {p.name}

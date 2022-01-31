@@ -19,12 +19,20 @@
     @apply text-sm lg:text-base py-2 lg:py-4;
   }
 
+  .formatted-content strong {
+    @apply font-semibold
+  }
+
   .formatted-content p {
     @apply text-xs lg:text-sm text-black-light max-w-[700px] mb-2
   }
 
+  .formatted-content hr {
+    @apply my-4 lg:my-6
+  }
+
   .formatted-content a {
-    @apply underline font-semibold
+    @apply underline font-semibold hover:text-red
   }
 
   .formatted-content ul {
@@ -43,7 +51,7 @@
   .button--with-arrow{
     @apply
       text-black font-semibold tracking-wider flex items-center md:text-xs no-underline
-      after:w-8 after:h-8 md:after:w-10 md:after:h-10 after:inline-block after:bg-arrow-right-black after:ml-2
+      after:w-8 after:h-8 md:after:w-10 md:after:h-10 after:inline-block after:bg-arrow-right-black hover:after:bg-arrow-right-red after:ml-2 after:duration-300 hover:after:translate-x-2
   }
 
   .title{
@@ -102,7 +110,7 @@
 .SwiperGallery .swiper-button-next {
     @apply
     bottom-0 xl:bottom-8
-    left-[calc(-33%+3rem)] xl:left-[calc(-33%+4.5rem)] 2xl:-left-[calc(333px-3rem)]
+    left-[calc(-33%+3.5rem)] xl:left-[calc(-33%+5rem)] 2xl:-left-[calc(333px-3.5rem)]
     after:bg-arrow-right-black
     before:border-black
 }
@@ -124,7 +132,7 @@
     left: calc((100vw - 1380px) / 2)
   }
   .mySwiper .swiper-button-next {
-    left: calc(((100vw - 1380px) / 2) + 60px )
+    left: calc(((100vw - 1380px) / 2) + 70px )
   }
 }
 

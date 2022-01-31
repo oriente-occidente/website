@@ -9,9 +9,9 @@ function StandardCard({ data, locale, categoryTitle }) {
   return (
     <div className="pb-8 md:pb-0">
       <Link href={resolveLinkById(data.id, locale)} locale={locale}>
-        <a title={data.title}>
+        <a title={data.title} className="group">
           <div className="relative">
-            <div className="absolute z-20 left-4 md:left-8 bottom-2 md:bottom-6 top-auto text-white uppercase text-xxs md:text-xs font-semibold ">
+            <div className="absolute z-20 left-4 md:left-8 bottom-2 md:bottom-6 top-auto text-white uppercase text-xxs md:text-xs font-semibold">
               <span>{categoryTitle}</span>
               {data.dates && (
                 <div className="hidden md:flex gap-x-2 items-center">
@@ -31,18 +31,20 @@ function StandardCard({ data, locale, categoryTitle }) {
               )}
             </div>
             {image != null ? (
-              <DatoImage
-                className=""
-                data={image.responsiveImage}
-                alt={image.alt}
-                title={image.title}
-              />
+              <div className="overflow-hidden">
+                <DatoImage
+                  className="duration-300 group-hover:scale-105"
+                  data={image.responsiveImage}
+                  alt={image.alt}
+                  title={image.title}
+                />
+              </div>
             ) : null}
-            <div className="absolute h-[65px] md:h-48 bottom-0 left-0 right-0 bg-gradient-to-t z-10 from-black-transparent to-transparent"></div>
+            <div className="absolute h-[65px] md:h-48 bottom-0 left-0 right-0 bg-gradient-to-t z-10 from-black/80 to-transparent"></div>
           </div>
-          <div className="hidden md:block absolute top-0 h-48 left-0 right-0 bg-gradient-to-b z-10 from-black-transparent to-transparent"></div>
+          <div className="hidden md:block absolute top-0 h-48 left-0 right-0 bg-gradient-to-b z-10 from-black/80 to-transparent"></div>
           <div className="md:absolute z-20 md:top-6 md:left-8">
-            <h2 className="text-sm md:text-lg uppercase text-black md:text-white font-semibold mt-2">
+            <h2 className="text-sm md:text-lg uppercase text-black md:text-white font-semibold mt-2 duration-300 group-hover:text-red">
               {data.title}
             </h2>
             {data.authors && (

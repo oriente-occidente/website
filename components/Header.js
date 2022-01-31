@@ -125,14 +125,14 @@ function Header(props) {
               <Popover.Button
                 className={classNames(
                   open ? 'text-black' : 'text-black',
-                  'uppercase text-xxs tracking-widest group rounded-md inline-flex items-center font-semibold hover:text-gray-900'
+                  'uppercase text-xxs tracking-widest group rounded-md inline-flex items-center font-semibold hover:text-red'
                 )}
               >
                 <span>{item.title}</span>
                 <ChevronDownIcon
                   className={classNames(
                     open ? 'text-black' : 'text-black',
-                    'ml-1 h-5 w-5 group-hover:text-gray-500'
+                    'ml-1 h-5 w-5 group-hover:text-red'
                   )}
                   aria-hidden="true"
                   focusable="false"
@@ -157,10 +157,10 @@ function Header(props) {
                           href={resolveLinkById(child.link?.id, locale)}
                         >
                           <a
-                            className="-m-3 p-1 block rounded-md hover:bg-gray-50"
+                            className="-m-3 p-1 block rounded-md"
                             onClick={() => close()}
                           >
-                            <p className="text-sm normal-case text-black-light">
+                            <p className="text-sm normal-case text-black-light hover:text-red">
                               {child.title}
                             </p>
                           </a>
@@ -178,7 +178,7 @@ function Header(props) {
       return (
         <div className="relative">
           <Link key={item.id} href={resolveLinkById(item.link?.id, locale)}>
-            <a className="font-semibold text-black tracking-widest text-xxs hover:text-gray-900">
+            <a className="font-semibold text-black tracking-widest text-xxs hover:text-red">
               {item.title}
             </a>
           </Link>
@@ -225,7 +225,7 @@ function Header(props) {
                     <Fragment key={item.id}>{renderLink(item)}</Fragment>
                   ))}
                 </Popover.Group>
-                <div className="ml-14 pt-1 font-semibold uppercase lg:flex text-black-light tracking-widest text-xxs hover:text-black-light">
+                <div className="ml-14 pt-1 font-semibold uppercase lg:flex text-black-light tracking-widest text-xxs hover:text-red">
                   <LanguageSwitcher locale={locale} alts={alts} />
                 </div>
               </div>
