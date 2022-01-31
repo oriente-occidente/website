@@ -17,12 +17,12 @@ function Layout({
       <div data-datocms-noindex>
         <Link href="#content">
           <a className="skip-link">
-              {translate('skipContent', locale)}
+            {translate('skipContent', locale)}
           </a>
         </Link>
         <Link href="#footer">
           <a className="skip-link">
-              {translate('skipFooter', locale)}
+            {translate('skipFooter', locale)}
           </a>
         </Link>
       </div>

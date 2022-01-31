@@ -33,7 +33,8 @@
     "registration_form": "Form di prenotazione",
     "dates": "date: ",
     "amount": "costo: ",
-    "send": "Invia"
+    "send": "Invia",
+    "externaLink": "Vai a (link esterno)"
   },
   "en": {
     "it": "Italian",
@@ -69,6 +70,7 @@
     "registration_form": "Registration Form",
     "dates": "dates: ",
     "amount": "amount: ",
-    "send": "Send"
+    "send": "Send",
+    "externaLink": "Go to (external link)"
   }
 }

@@ -98,7 +98,7 @@ function renderMobile(data, locale, alts, handleClose) {
               </div>
             </div>
           </div>
-          <div className="py-6 px-5">
+          <nav className="py-6 px-5">
             <div className="grid gap-4 md:gap-8">
               {data?.map((item) => (
                 <Fragment key={item.id}>{renderMobileLink(item)}</Fragment>
@@ -107,7 +107,7 @@ function renderMobile(data, locale, alts, handleClose) {
             <div className="uppercase text-xxs tracking-widest mt-16 md:mt-28 pt-4 md:pt-10 border-t border-black md:text-base">
               <LanguageSwitcher locale={locale} alts={alts} />
             </div>
-          </div>
+          </nav>
         </div>
       </Popover.Panel>
     </Transition>
@@ -189,7 +189,7 @@ function Header(props) {
 
   return (
     <header>
-      <Popover className="fixed h-[70px] md:h-[80px] lg:h-[110px] inset-x-0 t-0 bg-white/60 z-40">
+      <Popover className="fixed h-[70px] md:h-[80px] lg:h-[110px] inset-x-0 t-0 bg-white/80 z-40">
         {({ open, close: handleClose }) => (
           <>
             <div className="container h-full flex justify-between items-center py-2 lg:py-3 sm:px-6 lg:justify-start lg:space-x-10">
