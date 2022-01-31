@@ -62,9 +62,9 @@ function HeroDetail({ data }) {
       <div className="relative md:col-span-3 md:border-l md:border-color-gray xl:pt-4 md:col-start-2 lg:w-full">
         <div className="md:flex md:justify-between md:items-flex-start px-4 md:px-12 pt-4">
           <div className="">
-            <h1 className="text-base uppercase pt-1 pb-1">{titleHero}</h1>
+            <h1 className="text-base lg:text-xl uppercase pt-1 pb-1">{titleHero}</h1>
             {authors && (
-              <h2 className="text-base font-semibold mb-1 uppercase">{authors}</h2>
+              <h2 className="text-base lg:text-xl font-semibold mb-1 uppercase">{authors}</h2>
             )}
             <h2 className="text-base uppercase font-semibold">
               {descriptionHero}

@@ -20,6 +20,7 @@ module.exports = {
           light: '#F7F7F7',
           dark: '#332E2D',
         },
+        red: '#e64011'
       },
       fontSize: {
         xxs: ['14px', '24px'],
