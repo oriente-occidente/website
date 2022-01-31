@@ -64,7 +64,7 @@ function HeroDetail({ data }) {
           <div className="">
             <h1 className="text-base uppercase pt-1 pb-1">{titleHero}</h1>
             {authors && (
-              <h2 className="text-xs md:text-sm mb-1 uppercase">{authors}</h2>
+              <h2 className="text-base font-semibold mb-1 uppercase">{authors}</h2>
             )}
             <h2 className="text-base uppercase font-semibold">
               {descriptionHero}
