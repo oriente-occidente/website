@@ -12,6 +12,7 @@ export default function Partners({ locale, data }) {
           <Image
             data={data.image.responsiveImage}
             className="max-h-[55px] max-w-[170px] object-contain"
+            alt={data.image.alt}
           />
         </a>
       </Link>

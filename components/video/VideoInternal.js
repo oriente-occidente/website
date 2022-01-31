@@ -4,7 +4,7 @@ const VideoInternal = (props) => {
     <div key={id}>
       <video autoPlay={autoPlay || false} {...other} style={{ width: '100%' }}>
         <source src={videoFile?.url} type={videoFile?.mimeType} />
-        Sorry, your browser doesn't support embedded videos.
+        Sorry, your browser doesn`&apos;`t support embedded videos.
       </video>
     </div>
   );

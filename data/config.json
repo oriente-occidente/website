@@ -223,7 +223,7 @@
     "socials": [
       {
         "id": "88853417",
-        "link": "https://www.facebook.com/FestivalOrienteOccidente",
+        "link": "https://www.facebook.com/OrienteOccidenteOO",
         "title": "Facebook",
         "image": {
           "url": "https://www.datocms-assets.com/55129/1639999887-facebook.svg?auto=format&h=80"
@@ -303,43 +303,21 @@
             "slugs": [
               {
                 "locale": "en",
-                "value": "about-us"
+                "value": "associated-artists"
               },
               {
                 "locale": "it",
-                "value": "chi-siamo"
+                "value": "artisti-associati"
               }
             ],
             "titles": [
               {
                 "locale": "en",
-                "value": "About US"
+                "value": "Associated Artists"
               },
               {
                 "locale": "it",
-                "value": "Chi Siamo"
-              }
-            ]
-          },
-          {
-            "slugs": [
-              {
-                "locale": "en",
-                "value": "workshop"
-              },
-              {
-                "locale": "it",
-                "value": "workshop"
-              }
-            ],
-            "titles": [
-              {
-                "locale": "en",
-                "value": "Workshop"
-              },
-              {
-                "locale": "it",
-                "value": "Workshop"
+                "value": "Artisti Associati"
               }
             ]
           },
@@ -362,6 +340,28 @@
               {
                 "locale": "it",
                 "value": "Residenze artistiche"
+              }
+            ]
+          },
+          {
+            "slugs": [
+              {
+                "locale": "en",
+                "value": "workshop"
+              },
+              {
+                "locale": "it",
+                "value": "workshop"
+              }
+            ],
+            "titles": [
+              {
+                "locale": "en",
+                "value": "Workshop"
+              },
+              {
+                "locale": "it",
+                "value": "Workshop"
               }
             ]
           }

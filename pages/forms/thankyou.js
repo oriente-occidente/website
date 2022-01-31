@@ -44,7 +44,7 @@ function Page({ data, locale, thankyouMessage }) {
         {!choiche && <div>Loading...</div>}
         {choiche && (
           <div className="bg-gray-50 p-4">
-            <a href={choiche?.paymentLink} target="_blank" rel="noopener">
+            <a href={choiche?.paymentLink} target="_blank" rel="noreferrer">
               {`${choiche?.description} ${
                 choiche?.amount ? '- ' + choiche.amount + '€' : ''
               }`}

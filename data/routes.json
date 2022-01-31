@@ -574,6 +574,53 @@
     ]
   },
   {
+    "id": "101880648",
+    "slugs": {
+      "en": [
+        "festival",
+        "program",
+        "il-mondo-altrove"
+      ],
+      "it": [
+        "festival",
+        "programma",
+        "il-mondo-altrove"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "event",
+    "group": "festival-events",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "festival",
+          "program",
+          "il-mondo-altrove"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "festival",
+          "programma",
+          "il-mondo-altrove"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "festival/program/il-mondo-altrove"
+      },
+      {
+        "locale": "it",
+        "url": "festival/programma/il-mondo-altrove"
+      }
+    ]
+  },
+  {
     "id": "96777762",
     "slugs": {
       "en": [
@@ -5634,17 +5681,17 @@
     ]
   },
   {
-    "id": "101561558",
+    "id": "101319111",
     "slugs": {
       "en": [
         "studio",
         "associated-artists",
-        "pietro-marullo"
+        "luna-cenere"
       ],
       "it": [
         "studio",
         "artisti-associati",
-        "pietro-marullo"
+        "luna-cenere"
       ]
     },
     "isIndex": false,
@@ -5657,7 +5704,7 @@
         "slugs": [
           "studio",
           "associated-artists",
-          "pietro-marullo"
+          "luna-cenere"
         ]
       },
       {
@@ -5665,18 +5712,18 @@
         "slugs": [
           "studio",
           "artisti-associati",
-          "pietro-marullo"
+          "luna-cenere"
         ]
       }
     ],
     "urls": [
       {
         "locale": "en",
-        "url": "studio/associated-artists/pietro-marullo"
+        "url": "studio/associated-artists/luna-cenere"
       },
       {
         "locale": "it",
-        "url": "studio/artisti-associati/pietro-marullo"
+        "url": "studio/artisti-associati/luna-cenere"
       }
     ]
   },
@@ -5728,17 +5775,17 @@
     ]
   },
   {
-    "id": "101319111",
+    "id": "101561558",
     "slugs": {
       "en": [
         "studio",
         "associated-artists",
-        "luna-cenere"
+        "pietro-marullo"
       ],
       "it": [
         "studio",
         "artisti-associati",
-        "luna-cenere"
+        "pietro-marullo"
       ]
     },
     "isIndex": false,
@@ -5751,7 +5798,7 @@
         "slugs": [
           "studio",
           "associated-artists",
-          "luna-cenere"
+          "pietro-marullo"
         ]
       },
       {
@@ -5759,6 +5806,100 @@
         "slugs": [
           "studio",
           "artisti-associati",
+          "pietro-marullo"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "studio/associated-artists/pietro-marullo"
+      },
+      {
+        "locale": "it",
+        "url": "studio/artisti-associati/pietro-marullo"
+      }
+    ]
+  },
+  {
+    "id": "101880606",
+    "slugs": {
+      "en": [
+        "studio",
+        "artistic-residences",
+        "nicola-galli"
+      ],
+      "it": [
+        "studio",
+        "residenze-artistiche",
+        "nicola-galli"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "artist",
+    "group": "artistic-residences",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "studio",
+          "artistic-residences",
+          "nicola-galli"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "studio",
+          "residenze-artistiche",
+          "nicola-galli"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "studio/artistic-residences/nicola-galli"
+      },
+      {
+        "locale": "it",
+        "url": "studio/residenze-artistiche/nicola-galli"
+      }
+    ]
+  },
+  {
+    "id": "101319111",
+    "slugs": {
+      "en": [
+        "studio",
+        "artistic-residences",
+        "luna-cenere"
+      ],
+      "it": [
+        "studio",
+        "residenze-artistiche",
+        "luna-cenere"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "artist",
+    "group": "artistic-residences",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "studio",
+          "artistic-residences",
+          "luna-cenere"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "studio",
+          "residenze-artistiche",
           "luna-cenere"
         ]
       }
@@ -5766,11 +5907,105 @@
     "urls": [
       {
         "locale": "en",
-        "url": "studio/associated-artists/luna-cenere"
+        "url": "studio/artistic-residences/luna-cenere"
       },
       {
         "locale": "it",
-        "url": "studio/artisti-associati/luna-cenere"
+        "url": "studio/residenze-artistiche/luna-cenere"
+      }
+    ]
+  },
+  {
+    "id": "100562859",
+    "slugs": {
+      "en": [
+        "studio",
+        "artistic-residences",
+        "daniele-ninarello"
+      ],
+      "it": [
+        "studio",
+        "residenze-artistiche",
+        "daniele-ninarello"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "artist",
+    "group": "artistic-residences",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "studio",
+          "artistic-residences",
+          "daniele-ninarello"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "studio",
+          "residenze-artistiche",
+          "daniele-ninarello"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "studio/artistic-residences/daniele-ninarello"
+      },
+      {
+        "locale": "it",
+        "url": "studio/residenze-artistiche/daniele-ninarello"
+      }
+    ]
+  },
+  {
+    "id": "101878907",
+    "slugs": {
+      "en": [
+        "studio",
+        "artistic-residences",
+        "cie-mf"
+      ],
+      "it": [
+        "studio",
+        "residenze-artistiche",
+        "cie-mf"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "artist",
+    "group": "artistic-residences",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "studio",
+          "artistic-residences",
+          "cie-mf"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "studio",
+          "residenze-artistiche",
+          "cie-mf"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "studio/artistic-residences/cie-mf"
+      },
+      {
+        "locale": "it",
+        "url": "studio/residenze-artistiche/cie-mf"
       }
     ]
   },
@@ -5869,147 +6104,6 @@
     ]
   },
   {
-    "id": "100562859",
-    "slugs": {
-      "en": [
-        "studio",
-        "artistic-residences",
-        "daniele-ninarello"
-      ],
-      "it": [
-        "studio",
-        "residenze-artistiche",
-        "daniele-ninarello"
-      ]
-    },
-    "isIndex": false,
-    "indexType": "",
-    "__typename": "artist",
-    "group": "artistic-residences",
-    "paths": [
-      {
-        "locale": "en",
-        "slugs": [
-          "studio",
-          "artistic-residences",
-          "daniele-ninarello"
-        ]
-      },
-      {
-        "locale": "it",
-        "slugs": [
-          "studio",
-          "residenze-artistiche",
-          "daniele-ninarello"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "en",
-        "url": "studio/artistic-residences/daniele-ninarello"
-      },
-      {
-        "locale": "it",
-        "url": "studio/residenze-artistiche/daniele-ninarello"
-      }
-    ]
-  },
-  {
-    "id": "96816267",
-    "slugs": {
-      "en": [
-        "studio",
-        "artistic-residences",
-        "cristina-kristal-rizzo"
-      ],
-      "it": [
-        "studio",
-        "residenze-artistiche",
-        "cristina-kristal-rizzo"
-      ]
-    },
-    "isIndex": false,
-    "indexType": "",
-    "__typename": "artist",
-    "group": "artistic-residences",
-    "paths": [
-      {
-        "locale": "en",
-        "slugs": [
-          "studio",
-          "artistic-residences",
-          "cristina-kristal-rizzo"
-        ]
-      },
-      {
-        "locale": "it",
-        "slugs": [
-          "studio",
-          "residenze-artistiche",
-          "cristina-kristal-rizzo"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "en",
-        "url": "studio/artistic-residences/cristina-kristal-rizzo"
-      },
-      {
-        "locale": "it",
-        "url": "studio/residenze-artistiche/cristina-kristal-rizzo"
-      }
-    ]
-  },
-  {
-    "id": "101319111",
-    "slugs": {
-      "en": [
-        "studio",
-        "artistic-residences",
-        "luna-cenere"
-      ],
-      "it": [
-        "studio",
-        "residenze-artistiche",
-        "luna-cenere"
-      ]
-    },
-    "isIndex": false,
-    "indexType": "",
-    "__typename": "artist",
-    "group": "artistic-residences",
-    "paths": [
-      {
-        "locale": "en",
-        "slugs": [
-          "studio",
-          "artistic-residences",
-          "luna-cenere"
-        ]
-      },
-      {
-        "locale": "it",
-        "slugs": [
-          "studio",
-          "residenze-artistiche",
-          "luna-cenere"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "en",
-        "url": "studio/artistic-residences/luna-cenere"
-      },
-      {
-        "locale": "it",
-        "url": "studio/residenze-artistiche/luna-cenere"
-      }
-    ]
-  },
-  {
     "id": "101365948",
     "slugs": {
       "en": [
@@ -6100,6 +6194,53 @@
       {
         "locale": "it",
         "url": "studio/residenze-artistiche/paola-bianchi"
+      }
+    ]
+  },
+  {
+    "id": "96816267",
+    "slugs": {
+      "en": [
+        "studio",
+        "artistic-residences",
+        "cristina-kristal-rizzo"
+      ],
+      "it": [
+        "studio",
+        "residenze-artistiche",
+        "cristina-kristal-rizzo"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "artist",
+    "group": "artistic-residences",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "studio",
+          "artistic-residences",
+          "cristina-kristal-rizzo"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "studio",
+          "residenze-artistiche",
+          "cristina-kristal-rizzo"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "studio/artistic-residences/cristina-kristal-rizzo"
+      },
+      {
+        "locale": "it",
+        "url": "studio/residenze-artistiche/cristina-kristal-rizzo"
       }
     ]
   },

@@ -42,7 +42,7 @@ function CardOutTitle({ data, locale }) {
                 {formatDate(data.eventDate, locale)}
               </span>
             </div>
-            <div class="absolute top-40 md:h-1/3 md:top-auto md:bottom-0 left-0 right-0 bg-gradient-to-t z-10 from-black-transparent to-transparent" />
+            <div className="absolute top-40 md:h-1/3 md:top-auto md:bottom-0 left-0 right-0 bg-gradient-to-t z-10 from-black-transparent to-transparent" />
           </div>
           <h2 className="text-sm md:text-base z-20 uppercase text-black font-normal md:font-semibold mt-2">
             {data.title}

@@ -17,7 +17,7 @@ function CardTextArrow({ locale, data }) {
             alt={data.image.alt}
             title={data.image.title}
           />
-          <div class="md:block absolute top-0 h-1/3 left-0 right-0 bg-gradient-to-b z-10 from-black-transparent to-transparent"></div>
+          <div className="md:block absolute top-0 h-1/3 left-0 right-0 bg-gradient-to-b z-10 from-black-transparent to-transparent"></div>
         </a>
       </Link>
       <div className="hidden lg:block text-sm w-10/12 py-6 pb-4">
