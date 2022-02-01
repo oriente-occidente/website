@@ -38,7 +38,7 @@ function ResultsGrid({ list, locale, group }) {
     }
     return list;
   }
-  console.log(list);
+  // console.log(list);
   return (
     <div className="py-6 border-t border-color-gray">
       <div className="container lg:grid lg:grid-cols-2 lg:gap-6">
