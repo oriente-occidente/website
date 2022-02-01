@@ -574,6 +574,53 @@
     ]
   },
   {
+    "id": "102388104",
+    "slugs": {
+      "en": [
+        "festival",
+        "program",
+        "trigger"
+      ],
+      "it": [
+        "festival",
+        "programma",
+        "trigger"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "event",
+    "group": "festival-events",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "festival",
+          "program",
+          "trigger"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "festival",
+          "programma",
+          "trigger"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "festival/program/trigger"
+      },
+      {
+        "locale": "it",
+        "url": "festival/programma/trigger"
+      }
+    ]
+  },
+  {
     "id": "97509936",
     "slugs": {
       "en": [
@@ -664,53 +711,6 @@
       {
         "locale": "it",
         "url": "festival/programma/habitus"
-      }
-    ]
-  },
-  {
-    "id": "102388104",
-    "slugs": {
-      "en": [
-        "festival",
-        "program",
-        "trigger"
-      ],
-      "it": [
-        "festival",
-        "programma",
-        "trigger"
-      ]
-    },
-    "isIndex": false,
-    "indexType": "",
-    "__typename": "event",
-    "group": "festival-events",
-    "paths": [
-      {
-        "locale": "en",
-        "slugs": [
-          "festival",
-          "program",
-          "trigger"
-        ]
-      },
-      {
-        "locale": "it",
-        "slugs": [
-          "festival",
-          "programma",
-          "trigger"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "en",
-        "url": "festival/program/trigger"
-      },
-      {
-        "locale": "it",
-        "url": "festival/programma/trigger"
       }
     ]
   },
@@ -3911,6 +3911,53 @@
     ]
   },
   {
+    "id": "102744871",
+    "slugs": {
+      "en": [
+        "people",
+        "events",
+        "oltrepassare-sconfinamenti"
+      ],
+      "it": [
+        "people",
+        "eventi",
+        "oltrepassare-sconfinamenti"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "event",
+    "group": "other-events",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "people",
+          "events",
+          "oltrepassare-sconfinamenti"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "people",
+          "eventi",
+          "oltrepassare-sconfinamenti"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "people/events/oltrepassare-sconfinamenti"
+      },
+      {
+        "locale": "it",
+        "url": "people/eventi/oltrepassare-sconfinamenti"
+      }
+    ]
+  },
+  {
     "id": "102387137",
     "slugs": {
       "en": [
@@ -5869,53 +5916,6 @@
     ]
   },
   {
-    "id": "100562859",
-    "slugs": {
-      "en": [
-        "studio",
-        "associated-artists",
-        "daniele-ninarello"
-      ],
-      "it": [
-        "studio",
-        "artisti-associati",
-        "daniele-ninarello"
-      ]
-    },
-    "isIndex": false,
-    "indexType": "",
-    "__typename": "artist",
-    "group": "associated-artists",
-    "paths": [
-      {
-        "locale": "en",
-        "slugs": [
-          "studio",
-          "associated-artists",
-          "daniele-ninarello"
-        ]
-      },
-      {
-        "locale": "it",
-        "slugs": [
-          "studio",
-          "artisti-associati",
-          "daniele-ninarello"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "en",
-        "url": "studio/associated-artists/daniele-ninarello"
-      },
-      {
-        "locale": "it",
-        "url": "studio/artisti-associati/daniele-ninarello"
-      }
-    ]
-  },
-  {
     "id": "101319111",
     "slugs": {
       "en": [
@@ -6010,17 +6010,64 @@
     ]
   },
   {
-    "id": "101880606",
+    "id": "100562859",
+    "slugs": {
+      "en": [
+        "studio",
+        "associated-artists",
+        "daniele-ninarello"
+      ],
+      "it": [
+        "studio",
+        "artisti-associati",
+        "daniele-ninarello"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "artist",
+    "group": "associated-artists",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "studio",
+          "associated-artists",
+          "daniele-ninarello"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "studio",
+          "artisti-associati",
+          "daniele-ninarello"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "studio/associated-artists/daniele-ninarello"
+      },
+      {
+        "locale": "it",
+        "url": "studio/artisti-associati/daniele-ninarello"
+      }
+    ]
+  },
+  {
+    "id": "101319111",
     "slugs": {
       "en": [
         "studio",
         "artistic-residences",
-        "nicola-galli"
+        "luna-cenere"
       ],
       "it": [
         "studio",
         "residenze-artistiche",
-        "nicola-galli"
+        "luna-cenere"
       ]
     },
     "isIndex": false,
@@ -6033,7 +6080,7 @@
         "slugs": [
           "studio",
           "artistic-residences",
-          "nicola-galli"
+          "luna-cenere"
         ]
       },
       {
@@ -6041,18 +6088,65 @@
         "slugs": [
           "studio",
           "residenze-artistiche",
-          "nicola-galli"
+          "luna-cenere"
         ]
       }
     ],
     "urls": [
       {
         "locale": "en",
-        "url": "studio/artistic-residences/nicola-galli"
+        "url": "studio/artistic-residences/luna-cenere"
       },
       {
         "locale": "it",
-        "url": "studio/residenze-artistiche/nicola-galli"
+        "url": "studio/residenze-artistiche/luna-cenere"
+      }
+    ]
+  },
+  {
+    "id": "101561558",
+    "slugs": {
+      "en": [
+        "studio",
+        "artistic-residences",
+        "pietro-marullo"
+      ],
+      "it": [
+        "studio",
+        "residenze-artistiche",
+        "pietro-marullo"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "artist",
+    "group": "artistic-residences",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "studio",
+          "artistic-residences",
+          "pietro-marullo"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "studio",
+          "residenze-artistiche",
+          "pietro-marullo"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "studio/artistic-residences/pietro-marullo"
+      },
+      {
+        "locale": "it",
+        "url": "studio/residenze-artistiche/pietro-marullo"
       }
     ]
   },
@@ -6104,17 +6198,17 @@
     ]
   },
   {
-    "id": "101319111",
+    "id": "101880606",
     "slugs": {
       "en": [
         "studio",
         "artistic-residences",
-        "luna-cenere"
+        "nicola-galli"
       ],
       "it": [
         "studio",
         "residenze-artistiche",
-        "luna-cenere"
+        "nicola-galli"
       ]
     },
     "isIndex": false,
@@ -6127,7 +6221,7 @@
         "slugs": [
           "studio",
           "artistic-residences",
-          "luna-cenere"
+          "nicola-galli"
         ]
       },
       {
@@ -6135,18 +6229,18 @@
         "slugs": [
           "studio",
           "residenze-artistiche",
-          "luna-cenere"
+          "nicola-galli"
         ]
       }
     ],
     "urls": [
       {
         "locale": "en",
-        "url": "studio/artistic-residences/luna-cenere"
+        "url": "studio/artistic-residences/nicola-galli"
       },
       {
         "locale": "it",
-        "url": "studio/residenze-artistiche/luna-cenere"
+        "url": "studio/residenze-artistiche/nicola-galli"
       }
     ]
   },
@@ -6241,53 +6335,6 @@
       {
         "locale": "it",
         "url": "studio/residenze-artistiche/chiara-bersani-and-danskompaniet-spinn"
-      }
-    ]
-  },
-  {
-    "id": "101561558",
-    "slugs": {
-      "en": [
-        "studio",
-        "artistic-residences",
-        "pietro-marullo"
-      ],
-      "it": [
-        "studio",
-        "residenze-artistiche",
-        "pietro-marullo"
-      ]
-    },
-    "isIndex": false,
-    "indexType": "",
-    "__typename": "artist",
-    "group": "artistic-residences",
-    "paths": [
-      {
-        "locale": "en",
-        "slugs": [
-          "studio",
-          "artistic-residences",
-          "pietro-marullo"
-        ]
-      },
-      {
-        "locale": "it",
-        "slugs": [
-          "studio",
-          "residenze-artistiche",
-          "pietro-marullo"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "en",
-        "url": "studio/artistic-residences/pietro-marullo"
-      },
-      {
-        "locale": "it",
-        "url": "studio/residenze-artistiche/pietro-marullo"
       }
     ]
   },
