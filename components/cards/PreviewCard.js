@@ -4,7 +4,7 @@ import { LocationMarkerIcon, CalendarIcon } from '@heroicons/react/outline';
 
 import { resolveLinkById, showDates } from 'lib/utils';
 
-function PreviewCard({ data, locale, group = null }) {
+function PreviewCard({ data, locale, group = null, year }) {
   let categoryTitle;
   if (data.category) {
     if (Array.isArray(data.category)) {
@@ -41,6 +41,11 @@ function PreviewCard({ data, locale, group = null }) {
                   </span>
                 </div>
               )}
+              {year && (
+                <div className="hidden md:flex gap-x-2 items-center">
+                  <span className="md:pr-1 normal-case font-light">{year}</span>
+                </div>
+              )}
             </div>
             <div className="overflow-hidden h-[220px] md:h-[360px] relative">
               <DatoImage
@@ -74,18 +79,20 @@ function PreviewCard({ data, locale, group = null }) {
           </div>
           {data.dates && (
             <div className="md:hidden flex gap-1 items-center">
-              <CalendarIcon aria-hidden="true" className="w-3 h-4 mr-1 text-black" />
-              <div className="text-xxs">
-                {showDates(data.dates, locale)}
-              </div>
+              <CalendarIcon
+                aria-hidden="true"
+                className="w-3 h-4 mr-1 text-black"
+              />
+              <div className="text-xxs">{showDates(data.dates, locale)}</div>
             </div>
           )}
           {data.location && (
             <div className="md:hidden flex gap-1 items-center">
-              <LocationMarkerIcon aria-hidden="true" className="w-3 h-4 mr-1 text-black" />
-              <div className="text-xxs">
-                {data.location}
-              </div>
+              <LocationMarkerIcon
+                aria-hidden="true"
+                className="w-3 h-4 mr-1 text-black"
+              />
+              <div className="text-xxs">{data.location}</div>
             </div>
           )}
         </a>
