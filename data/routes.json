@@ -5916,6 +5916,53 @@
     ]
   },
   {
+    "id": "102761793",
+    "slugs": {
+      "en": [
+        "studio",
+        "associated-artists",
+        "carlo-massari"
+      ],
+      "it": [
+        "studio",
+        "artisti-associati",
+        "carlo-massari"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "artist",
+    "group": "associated-artists",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "studio",
+          "associated-artists",
+          "carlo-massari"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "studio",
+          "artisti-associati",
+          "carlo-massari"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "studio/associated-artists/carlo-massari"
+      },
+      {
+        "locale": "it",
+        "url": "studio/artisti-associati/carlo-massari"
+      }
+    ]
+  },
+  {
     "id": "101319111",
     "slugs": {
       "en": [

@@ -2,7 +2,7 @@ import { Image as DatoImage } from 'react-datocms';
 import Link from 'next/link';
 import { LocationMarkerIcon, CalendarIcon } from '@heroicons/react/outline';
 
-import { resolveLinkById, showDates } from 'lib/utils';
+import { resolveLinkById, formatDate, groupDatesByDay } from 'lib/utils';
 
 function PreviewCard({ data, locale, group = null, year }) {
   let categoryTitle;
@@ -18,21 +18,30 @@ function PreviewCard({ data, locale, group = null, year }) {
     }
   }
 
+  const datesGrouped = data.dates ? groupDatesByDay(data.dates, locale) : [];
   return (
     <div className="py-4 relative">
       <Link href={resolveLinkById(data.id, locale, group)}>
         <a title={data.title} className="group">
           <div className="relative">
             <div className="absolute z-20 left-4 md:left-8 bottom-2 md:bottom-8 top-auto text-white uppercase text-xxs md:text-xs font-semibold ">
-              <span>{categoryTitle}</span>
-              {data.dates && (
-                <div className="hidden md:flex gap-x-2 items-center">
+              {datesGrouped.map((str) => (
+                <div className="hidden md:flex gap-x-2 items-center" key={str}>
+                  <CalendarIcon aria-hidden="true" className="w-4 h-4" />
+                  <span className="md:pr-1 normal-case font-light">{str}</span>
+                </div>
+              ))}
+              {/* {data.dates.map((d) => (
+                <div
+                  className="hidden md:flex gap-x-2 items-center"
+                  key={d.startTime}
+                >
                   <CalendarIcon aria-hidden="true" className="w-4 h-4" />
                   <span className="md:pr-1 normal-case font-light">
-                    {showDates(data.dates, locale)}
+                    {formatDate(d.startTime, locale, d.isDaily)}
                   </span>
                 </div>
-              )}
+              ))} */}
               {data.location && (
                 <div className="hidden md:flex gap-x-2 items-center">
                   <LocationMarkerIcon aria-hidden="true" className="w-4 h-4" />
@@ -46,6 +55,7 @@ function PreviewCard({ data, locale, group = null, year }) {
                   <span className="md:pr-1 normal-case font-light">{year}</span>
                 </div>
               )}
+              <span>{categoryTitle}</span>
             </div>
             <div className="overflow-hidden h-[220px] md:h-[360px] relative">
               <DatoImage
@@ -77,15 +87,18 @@ function PreviewCard({ data, locale, group = null, year }) {
               </div>
             )}
           </div>
-          {data.dates && (
-            <div className="md:hidden flex gap-1 items-center">
+          {datesGrouped.map((d) => (
+            <div
+              className="md:hidden flex gap-1 items-center"
+              key={'descr_' + d}
+            >
               <CalendarIcon
                 aria-hidden="true"
                 className="w-3 h-4 mr-1 text-black"
               />
-              <div className="text-xxs">{showDates(data.dates, locale)}</div>
+              <div className="text-xxs">{d}</div>
             </div>
-          )}
+          ))}
           {data.location && (
             <div className="md:hidden flex gap-1 items-center">
               <LocationMarkerIcon
