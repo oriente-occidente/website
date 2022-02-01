@@ -6065,6 +6065,53 @@
     ]
   },
   {
+    "id": "102816303",
+    "slugs": {
+      "en": [
+        "studio",
+        "artistic-residences",
+        "honji-wang-and-sebastien-ramirez"
+      ],
+      "it": [
+        "studio",
+        "residenze-artistiche",
+        "honji-wang-and-sebastien-ramirez"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "artist",
+    "group": "artistic-residences",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "studio",
+          "artistic-residences",
+          "honji-wang-and-sebastien-ramirez"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "studio",
+          "residenze-artistiche",
+          "honji-wang-and-sebastien-ramirez"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "studio/artistic-residences/honji-wang-and-sebastien-ramirez"
+      },
+      {
+        "locale": "it",
+        "url": "studio/residenze-artistiche/honji-wang-and-sebastien-ramirez"
+      }
+    ]
+  },
+  {
     "id": "96816225",
     "slugs": {
       "en": [

@@ -24,7 +24,10 @@ const StructuredContent = ({ locale, content }) => {
             <GalleryStandard slides={record.images} />
           </div>
         );
-      case 'ImageBlockRecord':
+      case 'ImageBlockRecord': {
+        if (!record?.image?.responsiveImage) {
+          return null;
+        }
         return (
           <div key={record.id}>
             <div className="py-2 lg:py-10 2xl:py-16">
@@ -40,6 +43,7 @@ const StructuredContent = ({ locale, content }) => {
             </div>
           </div>
         );
+      }
       case 'VideoBlockRecord':
         return (
           <div key={record.id}>
@@ -92,6 +96,7 @@ const StructuredContent = ({ locale, content }) => {
             return <BlockQuote {...props} />;
           }),
           renderRule(isHeading, ({ node, children, key }) => {
+            if (!children) return null;
             const classTag = node.level;
             return (
               <div className={`h${classTag}`} key={key}>
