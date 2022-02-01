@@ -496,45 +496,6 @@
     ]
   },
   {
-    "id": "79196187",
-    "slugs": {
-      "en": [
-        "education"
-      ],
-      "it": [
-        "educazione"
-      ]
-    },
-    "isIndex": true,
-    "indexType": "courses",
-    "__typename": "page",
-    "group": "page",
-    "paths": [
-      {
-        "locale": "en",
-        "slugs": [
-          "education"
-        ]
-      },
-      {
-        "locale": "it",
-        "slugs": [
-          "educazione"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "en",
-        "url": "education"
-      },
-      {
-        "locale": "it",
-        "url": "educazione"
-      }
-    ]
-  },
-  {
     "id": "94866658",
     "slugs": {
       "en": [
@@ -6104,6 +6065,100 @@
     ]
   },
   {
+    "id": "96816225",
+    "slugs": {
+      "en": [
+        "studio",
+        "artistic-residences",
+        "azioni-fuori-posto"
+      ],
+      "it": [
+        "studio",
+        "residenze-artistiche",
+        "azioni-fuori-posto"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "artist",
+    "group": "artistic-residences",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "studio",
+          "artistic-residences",
+          "azioni-fuori-posto"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "studio",
+          "residenze-artistiche",
+          "azioni-fuori-posto"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "studio/artistic-residences/azioni-fuori-posto"
+      },
+      {
+        "locale": "it",
+        "url": "studio/residenze-artistiche/azioni-fuori-posto"
+      }
+    ]
+  },
+  {
+    "id": "102761793",
+    "slugs": {
+      "en": [
+        "studio",
+        "artistic-residences",
+        "carlo-massari"
+      ],
+      "it": [
+        "studio",
+        "residenze-artistiche",
+        "carlo-massari"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "artist",
+    "group": "artistic-residences",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "studio",
+          "artistic-residences",
+          "carlo-massari"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "studio",
+          "residenze-artistiche",
+          "carlo-massari"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "studio/artistic-residences/carlo-massari"
+      },
+      {
+        "locale": "it",
+        "url": "studio/residenze-artistiche/carlo-massari"
+      }
+    ]
+  },
+  {
     "id": "101319111",
     "slugs": {
       "en": [
@@ -6570,53 +6625,6 @@
       {
         "locale": "it",
         "url": "studio/residenze-artistiche/alessio-maria-romano"
-      }
-    ]
-  },
-  {
-    "id": "96816225",
-    "slugs": {
-      "en": [
-        "studio",
-        "artistic-residences",
-        "azioni-fuori-posto"
-      ],
-      "it": [
-        "studio",
-        "residenze-artistiche",
-        "azioni-fuori-posto"
-      ]
-    },
-    "isIndex": false,
-    "indexType": "",
-    "__typename": "artist",
-    "group": "artistic-residences",
-    "paths": [
-      {
-        "locale": "en",
-        "slugs": [
-          "studio",
-          "artistic-residences",
-          "azioni-fuori-posto"
-        ]
-      },
-      {
-        "locale": "it",
-        "slugs": [
-          "studio",
-          "residenze-artistiche",
-          "azioni-fuori-posto"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "en",
-        "url": "studio/artistic-residences/azioni-fuori-posto"
-      },
-      {
-        "locale": "it",
-        "url": "studio/residenze-artistiche/azioni-fuori-posto"
       }
     ]
   },

@@ -108,6 +108,11 @@ function PreviewCard({ data, locale, group = null, year }) {
               <div className="text-xxs">{data.location}</div>
             </div>
           )}
+          {year && (
+            <div className="md:hidden flex gap-1 items-center">
+              <div className="text-xxs">{year}</div>
+            </div>
+          )}
         </a>
       </Link>
     </div>

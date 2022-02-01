@@ -7,13 +7,19 @@ function ResultsGrid({ list, locale, group }) {
     }, 0);
   }
 
-  function getYear(item, group) {
+  function getYears(item, group) {
     if (group === 'artistic-residences') {
-      return getMaxYear(item.artisticResidence);
+      return item.artisticResidence
+        .map((res) => res.year)
+        .sort()
+        .reverse();
     } else if (group === 'associated-artists') {
-      return getMaxYear(item.associatedArtist);
+      return item.associatedArtist
+        .map((res) => res.year)
+        .sort()
+        .reverse();
     }
-    return null;
+    return [];
   }
 
   function sortList(list, group) {
@@ -42,7 +48,7 @@ function ResultsGrid({ list, locale, group }) {
             data={item}
             key={item.id}
             group={group}
-            year={getYear(item, group)}
+            year={getYears(item, group).join(', ')}
           />
         ))}
       </div>
