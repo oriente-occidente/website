@@ -1,3 +1,4 @@
+import { Fragment } from 'react';
 import Link from 'next/link';
 import StructuredContent from 'components/MyStructuredContent';
 
@@ -22,18 +23,15 @@ export default function SectionsParagraphs({ sections, locale }) {
 
       <div className="md:col-span-3 md:border-l border-color-gray">
         {sections.map((section) => (
-          <>
+          <Fragment key={section.id}>
             <div
               className="-top-20 xl:-top-32 block relative invisible"
-              key={section.id}
               id={section.id}
             />
-              <div
-                className="px-4 md:py-2 md:px-12"
-              >
+            <div className="px-4 md:py-2 md:px-12">
               <StructuredContent locale={locale} content={section.body} />
             </div>
-          </>
+          </Fragment>
         ))}
       </div>
     </div>

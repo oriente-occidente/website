@@ -28,7 +28,6 @@ function renderMobile(data, locale, alts, handleClose) {
               <Disclosure.Panel>
                 {item.children?.map((child) => (
                   <Link
-                    onClick={() => handleClose()}
                     key={child?.id}
                     href={resolveLinkById(child?.link?.id || '/', locale)}
                   >
@@ -49,7 +48,10 @@ function renderMobile(data, locale, alts, handleClose) {
       return (
         <div>
           <Link key={item.id} href={resolveLinkById(item.link?.id, locale)}>
-            <a className="block text-sm font-semibold uppercase md:text-xl">
+            <a
+              onClick={() => handleClose()}
+              className="block text-sm font-semibold uppercase md:text-xl"
+            >
               {item.title}
             </a>
           </Link>
