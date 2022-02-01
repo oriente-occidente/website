@@ -1,6 +1,6 @@
 {
   "name": "orienteoccidente",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "orienteoccidente",
   "scripts": {
     "data": "node ./scripts/index.js",
