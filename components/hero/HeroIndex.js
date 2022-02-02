@@ -1,10 +1,9 @@
 import { Image as DatoImage } from 'react-datocms';
 import { LocationMarkerIcon, CalendarIcon } from '@heroicons/react/outline';
-import dynamic from 'next/dynamic';
-// import Gallery from 'components/galleries/Gallery';
+// import dynamic from 'next/dynamic';
+import Gallery from 'components/galleries/Gallery';
 import BookButton from 'components/BookButton';
 import { formatDate } from 'lib/utils';
-
 
 function HeroIndex({ data, locale }) {
   const {
@@ -20,13 +19,13 @@ function HeroIndex({ data, locale }) {
     pageId,
   } = data;
 
-  let Gallery = () => <div />;
-  if (slideshowHero != '') {
-    Gallery = dynamic(() => import('components/galleries/Gallery'), {
-      loading: () => <div>...</div>,
-      ssr: false,
-    });
-  }
+  // let Gallery = () => <div />;
+  // if (slideshowHero != '') {
+  //   Gallery = dynamic(() => import('components/galleries/Gallery'), {
+  //     loading: () => <div>...</div>,
+  //     ssr: false,
+  //   });
+  // }
 
   return (
     <div className="border-t md:border-none bg-gray border-gray pb-10 md:py-0">
@@ -67,21 +66,27 @@ function HeroIndex({ data, locale }) {
           {dateEvento && (
             <div className="pt-4 px-4 lg:px-20 md:pl-10">
               {dateEvento != null ? (
-              <>
-                {dateEvento.map((date) => (
-                  <div
-                    key={date.id}
-                    className="text-xxs text-black-light flex items-center"
-                  >
-                    <CalendarIcon aria-hidden="true" className="w-4 h-4 mr-2" />
-                    {formatDate(date.startTime, locale || 'en', date.isDaily)}
-                  </div>
-                ))}
-              </>
+                <>
+                  {dateEvento.map((date) => (
+                    <div
+                      key={date.id}
+                      className="text-xxs text-black-light flex items-center"
+                    >
+                      <CalendarIcon
+                        aria-hidden="true"
+                        className="w-4 h-4 mr-2"
+                      />
+                      {formatDate(date.startTime, locale || 'en', date.isDaily)}
+                    </div>
+                  ))}
+                </>
               ) : null}
               {location && (
                 <h2 className="text-xxs text-black-light mt-1 flex items-center">
-                  <LocationMarkerIcon aria-hidden="true" className="w-4 h-4 mr-2" />
+                  <LocationMarkerIcon
+                    aria-hidden="true"
+                    className="w-4 h-4 mr-2"
+                  />
                   {location}
                 </h2>
               )}

@@ -9,7 +9,7 @@ export default function ShareButtons() {
         </div>
       </div>
       <Script
-        strategy="afterInteractive"
+        strategy="lazyOnload"
         src={`//s7.addthis.com/js/300/addthis_widget.js#pubid=${process.env.NEXT_PUBLIC_ADDTHIS}`}
       />
     </>
