@@ -8,11 +8,15 @@ import fetchDato from 'lib/api/dato';
 import { resolveLinkById } from 'lib/utils';
 
 import Layout from 'components/Layout';
-import Seo from 'components/Seo';
-
+// import Seo from 'components/Seo';
 // import HeroSlider from 'components/hero/HeroSlider';
 // import GalleryPreview from 'components/galleries/GalleryPreview';
 // import GalleryHome from 'components/galleries/GalleryHome';
+
+let Seo = dynamic(() => import('components/Seo'), {
+  loading: () => <div>...</div>,
+  ssr: false,
+});
 
 let GalleryHome = dynamic(() => import('components/galleries/GalleryHome'), {
   loading: () => <div>...</div>,
@@ -91,7 +95,6 @@ export async function getStaticProps({ preview = false, locale }) {
       data,
       home: response.home,
     },
-    // revalidate: 30,
   };
 }
 

@@ -661,6 +661,53 @@
     ]
   },
   {
+    "id": "96086364",
+    "slugs": {
+      "en": [
+        "festival",
+        "program",
+        "marcos-morau"
+      ],
+      "it": [
+        "festival",
+        "programma",
+        "marcos-morau"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "event",
+    "group": "festival-events",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "festival",
+          "program",
+          "marcos-morau"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "festival",
+          "programma",
+          "marcos-morau"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "festival/program/marcos-morau"
+      },
+      {
+        "locale": "it",
+        "url": "festival/programma/marcos-morau"
+      }
+    ]
+  },
+  {
     "id": "96085881",
     "slugs": {
       "en": [
@@ -704,6 +751,53 @@
       {
         "locale": "it",
         "url": "festival/programma/arkadi-zaides"
+      }
+    ]
+  },
+  {
+    "id": "96777762",
+    "slugs": {
+      "en": [
+        "festival",
+        "program",
+        "mixed-doubles"
+      ],
+      "it": [
+        "festival",
+        "programma",
+        "mixed-doubles"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "event",
+    "group": "festival-events",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "festival",
+          "program",
+          "mixed-doubles"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "festival",
+          "programma",
+          "mixed-doubles"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "festival/program/mixed-doubles"
+      },
+      {
+        "locale": "it",
+        "url": "festival/programma/mixed-doubles"
       }
     ]
   },
@@ -1883,53 +1977,6 @@
     ]
   },
   {
-    "id": "96777762",
-    "slugs": {
-      "en": [
-        "festival",
-        "program",
-        "mixed-doubles"
-      ],
-      "it": [
-        "festival",
-        "programma",
-        "mixed-doubles"
-      ]
-    },
-    "isIndex": false,
-    "indexType": "",
-    "__typename": "event",
-    "group": "festival-events",
-    "paths": [
-      {
-        "locale": "en",
-        "slugs": [
-          "festival",
-          "program",
-          "mixed-doubles"
-        ]
-      },
-      {
-        "locale": "it",
-        "slugs": [
-          "festival",
-          "programma",
-          "mixed-doubles"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "en",
-        "url": "festival/program/mixed-doubles"
-      },
-      {
-        "locale": "it",
-        "url": "festival/programma/mixed-doubles"
-      }
-    ]
-  },
-  {
     "id": "97509936",
     "slugs": {
       "en": [
@@ -2772,53 +2819,6 @@
       {
         "locale": "it",
         "url": "festival/programma/lucas-condro"
-      }
-    ]
-  },
-  {
-    "id": "96086364",
-    "slugs": {
-      "en": [
-        "festival",
-        "program",
-        "marcos-morau"
-      ],
-      "it": [
-        "festival",
-        "programma",
-        "marcos-morau"
-      ]
-    },
-    "isIndex": false,
-    "indexType": "",
-    "__typename": "event",
-    "group": "festival-events",
-    "paths": [
-      {
-        "locale": "en",
-        "slugs": [
-          "festival",
-          "program",
-          "marcos-morau"
-        ]
-      },
-      {
-        "locale": "it",
-        "slugs": [
-          "festival",
-          "programma",
-          "marcos-morau"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "en",
-        "url": "festival/program/marcos-morau"
-      },
-      {
-        "locale": "it",
-        "url": "festival/programma/marcos-morau"
       }
     ]
   },
