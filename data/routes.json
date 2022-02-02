@@ -496,6 +496,132 @@
     ]
   },
   {
+    "id": "102905880",
+    "isIndex": false,
+    "indexType": "",
+    "slugs": {
+      "it": [
+        "info",
+        "accessibilita"
+      ],
+      "en": [
+        "info",
+        "accessibility"
+      ]
+    },
+    "__typename": "page",
+    "paths": [
+      {
+        "locale": "it",
+        "slugs": [
+          "info",
+          "accessibilita"
+        ]
+      },
+      {
+        "locale": "en",
+        "slugs": [
+          "info",
+          "accessibility"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "it",
+        "url": "info/accessibilita"
+      },
+      {
+        "locale": "en",
+        "url": "info/accessibility"
+      }
+    ]
+  },
+  {
+    "id": "103091036",
+    "isIndex": false,
+    "indexType": "",
+    "slugs": {
+      "it": [
+        "info",
+        "sostenibilita"
+      ],
+      "en": [
+        "info",
+        "sustainability"
+      ]
+    },
+    "__typename": "page",
+    "paths": [
+      {
+        "locale": "it",
+        "slugs": [
+          "info",
+          "sostenibilita"
+        ]
+      },
+      {
+        "locale": "en",
+        "slugs": [
+          "info",
+          "sustainability"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "it",
+        "url": "info/sostenibilita"
+      },
+      {
+        "locale": "en",
+        "url": "info/sustainability"
+      }
+    ]
+  },
+  {
+    "id": "103172417",
+    "isIndex": false,
+    "indexType": "",
+    "slugs": {
+      "it": [
+        "info",
+        "sicurezza-covid-19"
+      ],
+      "en": [
+        "info",
+        "safety-covid-19"
+      ]
+    },
+    "__typename": "page",
+    "paths": [
+      {
+        "locale": "it",
+        "slugs": [
+          "info",
+          "sicurezza-covid-19"
+        ]
+      },
+      {
+        "locale": "en",
+        "slugs": [
+          "info",
+          "safety-covid-19"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "it",
+        "url": "info/sicurezza-covid-19"
+      },
+      {
+        "locale": "en",
+        "url": "info/safety-covid-19"
+      }
+    ]
+  },
+  {
     "id": "94866658",
     "slugs": {
       "en": [
@@ -531,1087 +657,6 @@
       {
         "locale": "it",
         "url": "informativa-privacy"
-      }
-    ]
-  },
-  {
-    "id": "102388104",
-    "slugs": {
-      "en": [
-        "festival",
-        "program",
-        "trigger"
-      ],
-      "it": [
-        "festival",
-        "programma",
-        "trigger"
-      ]
-    },
-    "isIndex": false,
-    "indexType": "",
-    "__typename": "event",
-    "group": "festival-events",
-    "paths": [
-      {
-        "locale": "en",
-        "slugs": [
-          "festival",
-          "program",
-          "trigger"
-        ]
-      },
-      {
-        "locale": "it",
-        "slugs": [
-          "festival",
-          "programma",
-          "trigger"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "en",
-        "url": "festival/program/trigger"
-      },
-      {
-        "locale": "it",
-        "url": "festival/programma/trigger"
-      }
-    ]
-  },
-  {
-    "id": "97509936",
-    "slugs": {
-      "en": [
-        "festival",
-        "program",
-        "oltrepassare"
-      ],
-      "it": [
-        "festival",
-        "programma",
-        "oltrepassare"
-      ]
-    },
-    "isIndex": false,
-    "indexType": "",
-    "__typename": "event",
-    "group": "festival-events",
-    "paths": [
-      {
-        "locale": "en",
-        "slugs": [
-          "festival",
-          "program",
-          "oltrepassare"
-        ]
-      },
-      {
-        "locale": "it",
-        "slugs": [
-          "festival",
-          "programma",
-          "oltrepassare"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "en",
-        "url": "festival/program/oltrepassare"
-      },
-      {
-        "locale": "it",
-        "url": "festival/programma/oltrepassare"
-      }
-    ]
-  },
-  {
-    "id": "102389123",
-    "slugs": {
-      "en": [
-        "festival",
-        "program",
-        "habitus"
-      ],
-      "it": [
-        "festival",
-        "programma",
-        "habitus"
-      ]
-    },
-    "isIndex": false,
-    "indexType": "",
-    "__typename": "event",
-    "group": "festival-events",
-    "paths": [
-      {
-        "locale": "en",
-        "slugs": [
-          "festival",
-          "program",
-          "habitus"
-        ]
-      },
-      {
-        "locale": "it",
-        "slugs": [
-          "festival",
-          "programma",
-          "habitus"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "en",
-        "url": "festival/program/habitus"
-      },
-      {
-        "locale": "it",
-        "url": "festival/programma/habitus"
-      }
-    ]
-  },
-  {
-    "id": "96777762",
-    "slugs": {
-      "en": [
-        "festival",
-        "program",
-        "mixed-doubles"
-      ],
-      "it": [
-        "festival",
-        "programma",
-        "mixed-doubles"
-      ]
-    },
-    "isIndex": false,
-    "indexType": "",
-    "__typename": "event",
-    "group": "festival-events",
-    "paths": [
-      {
-        "locale": "en",
-        "slugs": [
-          "festival",
-          "program",
-          "mixed-doubles"
-        ]
-      },
-      {
-        "locale": "it",
-        "slugs": [
-          "festival",
-          "programma",
-          "mixed-doubles"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "en",
-        "url": "festival/program/mixed-doubles"
-      },
-      {
-        "locale": "it",
-        "url": "festival/programma/mixed-doubles"
-      }
-    ]
-  },
-  {
-    "id": "101323990",
-    "slugs": {
-      "en": [
-        "festival",
-        "program",
-        "zoe-appunti-sulla-nuda-vita"
-      ],
-      "it": [
-        "festival",
-        "programma",
-        "zoe-appunti-sulla-nuda-vita"
-      ]
-    },
-    "isIndex": false,
-    "indexType": "",
-    "__typename": "event",
-    "group": "festival-events",
-    "paths": [
-      {
-        "locale": "en",
-        "slugs": [
-          "festival",
-          "program",
-          "zoe-appunti-sulla-nuda-vita"
-        ]
-      },
-      {
-        "locale": "it",
-        "slugs": [
-          "festival",
-          "programma",
-          "zoe-appunti-sulla-nuda-vita"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "en",
-        "url": "festival/program/zoe-appunti-sulla-nuda-vita"
-      },
-      {
-        "locale": "it",
-        "url": "festival/programma/zoe-appunti-sulla-nuda-vita"
-      }
-    ]
-  },
-  {
-    "id": "96271432",
-    "slugs": {
-      "en": [
-        "festival",
-        "program",
-        "c-est-pas-grave"
-      ],
-      "it": [
-        "festival",
-        "programma",
-        "c-est-pas-grave"
-      ]
-    },
-    "isIndex": false,
-    "indexType": "",
-    "__typename": "event",
-    "group": "festival-events",
-    "paths": [
-      {
-        "locale": "en",
-        "slugs": [
-          "festival",
-          "program",
-          "c-est-pas-grave"
-        ]
-      },
-      {
-        "locale": "it",
-        "slugs": [
-          "festival",
-          "programma",
-          "c-est-pas-grave"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "en",
-        "url": "festival/program/c-est-pas-grave"
-      },
-      {
-        "locale": "it",
-        "url": "festival/programma/c-est-pas-grave"
-      }
-    ]
-  },
-  {
-    "id": "96057245",
-    "slugs": {
-      "en": [
-        "festival",
-        "program",
-        "antonio-vigano-and-michela-lucenti"
-      ],
-      "it": [
-        "festival",
-        "programma",
-        "antonio-vigano-and-michela-lucenti"
-      ]
-    },
-    "isIndex": false,
-    "indexType": "",
-    "__typename": "event",
-    "group": "festival-events",
-    "paths": [
-      {
-        "locale": "en",
-        "slugs": [
-          "festival",
-          "program",
-          "antonio-vigano-and-michela-lucenti"
-        ]
-      },
-      {
-        "locale": "it",
-        "slugs": [
-          "festival",
-          "programma",
-          "antonio-vigano-and-michela-lucenti"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "en",
-        "url": "festival/program/antonio-vigano-and-michela-lucenti"
-      },
-      {
-        "locale": "it",
-        "url": "festival/programma/antonio-vigano-and-michela-lucenti"
-      }
-    ]
-  },
-  {
-    "id": "96081881",
-    "slugs": {
-      "en": [
-        "festival",
-        "program",
-        "pablo-girolami"
-      ],
-      "it": [
-        "festival",
-        "programma",
-        "gianni-pasquale"
-      ]
-    },
-    "isIndex": false,
-    "indexType": "",
-    "__typename": "event",
-    "group": "festival-events",
-    "paths": [
-      {
-        "locale": "en",
-        "slugs": [
-          "festival",
-          "program",
-          "pablo-girolami"
-        ]
-      },
-      {
-        "locale": "it",
-        "slugs": [
-          "festival",
-          "programma",
-          "gianni-pasquale"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "en",
-        "url": "festival/program/pablo-girolami"
-      },
-      {
-        "locale": "it",
-        "url": "festival/programma/gianni-pasquale"
-      }
-    ]
-  },
-  {
-    "id": "96056619",
-    "slugs": {
-      "en": [
-        "festival",
-        "program",
-        "michela-lucenti"
-      ],
-      "it": [
-        "festival",
-        "programma",
-        "michela-lucenti"
-      ]
-    },
-    "isIndex": false,
-    "indexType": "",
-    "__typename": "event",
-    "group": "festival-events",
-    "paths": [
-      {
-        "locale": "en",
-        "slugs": [
-          "festival",
-          "program",
-          "michela-lucenti"
-        ]
-      },
-      {
-        "locale": "it",
-        "slugs": [
-          "festival",
-          "programma",
-          "michela-lucenti"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "en",
-        "url": "festival/program/michela-lucenti"
-      },
-      {
-        "locale": "it",
-        "url": "festival/programma/michela-lucenti"
-      }
-    ]
-  },
-  {
-    "id": "96086789",
-    "slugs": {
-      "en": [
-        "festival",
-        "program",
-        "gravity-and-other-attraction"
-      ],
-      "it": [
-        "festival",
-        "programma",
-        "gravity-and-other-attraction"
-      ]
-    },
-    "isIndex": false,
-    "indexType": "",
-    "__typename": "event",
-    "group": "festival-events",
-    "paths": [
-      {
-        "locale": "en",
-        "slugs": [
-          "festival",
-          "program",
-          "gravity-and-other-attraction"
-        ]
-      },
-      {
-        "locale": "it",
-        "slugs": [
-          "festival",
-          "programma",
-          "gravity-and-other-attraction"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "en",
-        "url": "festival/program/gravity-and-other-attraction"
-      },
-      {
-        "locale": "it",
-        "url": "festival/programma/gravity-and-other-attraction"
-      }
-    ]
-  },
-  {
-    "id": "96086741",
-    "slugs": {
-      "en": [
-        "festival",
-        "program",
-        "cina-coronavirus"
-      ],
-      "it": [
-        "festival",
-        "programma",
-        "cina-coronavirus"
-      ]
-    },
-    "isIndex": false,
-    "indexType": "",
-    "__typename": "event",
-    "group": "festival-events",
-    "paths": [
-      {
-        "locale": "en",
-        "slugs": [
-          "festival",
-          "program",
-          "cina-coronavirus"
-        ]
-      },
-      {
-        "locale": "it",
-        "slugs": [
-          "festival",
-          "programma",
-          "cina-coronavirus"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "en",
-        "url": "festival/program/cina-coronavirus"
-      },
-      {
-        "locale": "it",
-        "url": "festival/programma/cina-coronavirus"
-      }
-    ]
-  },
-  {
-    "id": "96081767",
-    "slugs": {
-      "en": [
-        "festival",
-        "program",
-        "fabrizio-maronta"
-      ],
-      "it": [
-        "festival",
-        "programma",
-        "terra-fabrizio-maronta"
-      ]
-    },
-    "isIndex": false,
-    "indexType": "",
-    "__typename": "event",
-    "group": "festival-events",
-    "paths": [
-      {
-        "locale": "en",
-        "slugs": [
-          "festival",
-          "program",
-          "fabrizio-maronta"
-        ]
-      },
-      {
-        "locale": "it",
-        "slugs": [
-          "festival",
-          "programma",
-          "terra-fabrizio-maronta"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "en",
-        "url": "festival/program/fabrizio-maronta"
-      },
-      {
-        "locale": "it",
-        "url": "festival/programma/terra-fabrizio-maronta"
-      }
-    ]
-  },
-  {
-    "id": "96101834",
-    "slugs": {
-      "en": [
-        "festival",
-        "program",
-        "cage-cunningham"
-      ],
-      "it": [
-        "festival",
-        "programma",
-        "cage-cunningham"
-      ]
-    },
-    "isIndex": false,
-    "indexType": "",
-    "__typename": "event",
-    "group": "festival-events",
-    "paths": [
-      {
-        "locale": "en",
-        "slugs": [
-          "festival",
-          "program",
-          "cage-cunningham"
-        ]
-      },
-      {
-        "locale": "it",
-        "slugs": [
-          "festival",
-          "programma",
-          "cage-cunningham"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "en",
-        "url": "festival/program/cage-cunningham"
-      },
-      {
-        "locale": "it",
-        "url": "festival/programma/cage-cunningham"
-      }
-    ]
-  },
-  {
-    "id": "96086557",
-    "slugs": {
-      "en": [
-        "festival",
-        "program",
-        "silvia-dezulian-and-filippo-porro"
-      ],
-      "it": [
-        "festival",
-        "programma",
-        "perspectiva"
-      ]
-    },
-    "isIndex": false,
-    "indexType": "",
-    "__typename": "event",
-    "group": "festival-events",
-    "paths": [
-      {
-        "locale": "en",
-        "slugs": [
-          "festival",
-          "program",
-          "silvia-dezulian-and-filippo-porro"
-        ]
-      },
-      {
-        "locale": "it",
-        "slugs": [
-          "festival",
-          "programma",
-          "perspectiva"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "en",
-        "url": "festival/program/silvia-dezulian-and-filippo-porro"
-      },
-      {
-        "locale": "it",
-        "url": "festival/programma/perspectiva"
-      }
-    ]
-  },
-  {
-    "id": "96083006",
-    "slugs": {
-      "en": [
-        "festival",
-        "program",
-        "luna-cenere"
-      ],
-      "it": [
-        "festival",
-        "programma",
-        "genealogia"
-      ]
-    },
-    "isIndex": false,
-    "indexType": "",
-    "__typename": "event",
-    "group": "festival-events",
-    "paths": [
-      {
-        "locale": "en",
-        "slugs": [
-          "festival",
-          "program",
-          "luna-cenere"
-        ]
-      },
-      {
-        "locale": "it",
-        "slugs": [
-          "festival",
-          "programma",
-          "genealogia"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "en",
-        "url": "festival/program/luna-cenere"
-      },
-      {
-        "locale": "it",
-        "url": "festival/programma/genealogia"
-      }
-    ]
-  },
-  {
-    "id": "96081715",
-    "slugs": {
-      "en": [
-        "festival",
-        "program",
-        "ezio-mauro"
-      ],
-      "it": [
-        "festival",
-        "programma",
-        "liberi-dal-male"
-      ]
-    },
-    "isIndex": false,
-    "indexType": "",
-    "__typename": "event",
-    "group": "festival-events",
-    "paths": [
-      {
-        "locale": "en",
-        "slugs": [
-          "festival",
-          "program",
-          "ezio-mauro"
-        ]
-      },
-      {
-        "locale": "it",
-        "slugs": [
-          "festival",
-          "programma",
-          "liberi-dal-male"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "en",
-        "url": "festival/program/ezio-mauro"
-      },
-      {
-        "locale": "it",
-        "url": "festival/programma/liberi-dal-male"
-      }
-    ]
-  },
-  {
-    "id": "96080305",
-    "slugs": {
-      "en": [
-        "festival",
-        "program",
-        "centaur"
-      ],
-      "it": [
-        "festival",
-        "programma",
-        "centaur"
-      ]
-    },
-    "isIndex": false,
-    "indexType": "",
-    "__typename": "event",
-    "group": "festival-events",
-    "paths": [
-      {
-        "locale": "en",
-        "slugs": [
-          "festival",
-          "program",
-          "centaur"
-        ]
-      },
-      {
-        "locale": "it",
-        "slugs": [
-          "festival",
-          "programma",
-          "centaur"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "en",
-        "url": "festival/program/centaur"
-      },
-      {
-        "locale": "it",
-        "url": "festival/programma/centaur"
-      }
-    ]
-  },
-  {
-    "id": "96101891",
-    "slugs": {
-      "en": [
-        "festival",
-        "program",
-        "making-an-entrance"
-      ],
-      "it": [
-        "festival",
-        "programma",
-        "making-an-entrance"
-      ]
-    },
-    "isIndex": false,
-    "indexType": "",
-    "__typename": "event",
-    "group": "festival-events",
-    "paths": [
-      {
-        "locale": "en",
-        "slugs": [
-          "festival",
-          "program",
-          "making-an-entrance"
-        ]
-      },
-      {
-        "locale": "it",
-        "slugs": [
-          "festival",
-          "programma",
-          "making-an-entrance"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "en",
-        "url": "festival/program/making-an-entrance"
-      },
-      {
-        "locale": "it",
-        "url": "festival/programma/making-an-entrance"
-      }
-    ]
-  },
-  {
-    "id": "96776422",
-    "slugs": {
-      "en": [
-        "festival",
-        "program",
-        "figli-di-un-dio-ubriaco-incursioni-fisiche-sui-madrigali-di-claudio-monteverdi"
-      ],
-      "it": [
-        "festival",
-        "programma",
-        "figli-di-un-dio-ubriaco-incursioni-fisiche-sui-madrigali-di-claudio-monteverdi"
-      ]
-    },
-    "isIndex": false,
-    "indexType": "",
-    "__typename": "event",
-    "group": "festival-events",
-    "paths": [
-      {
-        "locale": "en",
-        "slugs": [
-          "festival",
-          "program",
-          "figli-di-un-dio-ubriaco-incursioni-fisiche-sui-madrigali-di-claudio-monteverdi"
-        ]
-      },
-      {
-        "locale": "it",
-        "slugs": [
-          "festival",
-          "programma",
-          "figli-di-un-dio-ubriaco-incursioni-fisiche-sui-madrigali-di-claudio-monteverdi"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "en",
-        "url": "festival/program/figli-di-un-dio-ubriaco-incursioni-fisiche-sui-madrigali-di-claudio-monteverdi"
-      },
-      {
-        "locale": "it",
-        "url": "festival/programma/figli-di-un-dio-ubriaco-incursioni-fisiche-sui-madrigali-di-claudio-monteverdi"
-      }
-    ]
-  },
-  {
-    "id": "96085945",
-    "slugs": {
-      "en": [
-        "festival",
-        "program",
-        "leonardo-caffo"
-      ],
-      "it": [
-        "festival",
-        "programma",
-        "leonardo-caffo"
-      ]
-    },
-    "isIndex": false,
-    "indexType": "",
-    "__typename": "event",
-    "group": "festival-events",
-    "paths": [
-      {
-        "locale": "en",
-        "slugs": [
-          "festival",
-          "program",
-          "leonardo-caffo"
-        ]
-      },
-      {
-        "locale": "it",
-        "slugs": [
-          "festival",
-          "programma",
-          "leonardo-caffo"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "en",
-        "url": "festival/program/leonardo-caffo"
-      },
-      {
-        "locale": "it",
-        "url": "festival/programma/leonardo-caffo"
-      }
-    ]
-  },
-  {
-    "id": "96086125",
-    "slugs": {
-      "en": [
-        "festival",
-        "program",
-        "michela-lucenti-peepshow"
-      ],
-      "it": [
-        "festival",
-        "programma",
-        "michela-lucenti-peepshow"
-      ]
-    },
-    "isIndex": false,
-    "indexType": "",
-    "__typename": "event",
-    "group": "festival-events",
-    "paths": [
-      {
-        "locale": "en",
-        "slugs": [
-          "festival",
-          "program",
-          "michela-lucenti-peepshow"
-        ]
-      },
-      {
-        "locale": "it",
-        "slugs": [
-          "festival",
-          "programma",
-          "michela-lucenti-peepshow"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "en",
-        "url": "festival/program/michela-lucenti-peepshow"
-      },
-      {
-        "locale": "it",
-        "url": "festival/programma/michela-lucenti-peepshow"
-      }
-    ]
-  },
-  {
-    "id": "96086269",
-    "slugs": {
-      "en": [
-        "festival",
-        "program",
-        "lucas-condro"
-      ],
-      "it": [
-        "festival",
-        "programma",
-        "lucas-condro"
-      ]
-    },
-    "isIndex": false,
-    "indexType": "",
-    "__typename": "event",
-    "group": "festival-events",
-    "paths": [
-      {
-        "locale": "en",
-        "slugs": [
-          "festival",
-          "program",
-          "lucas-condro"
-        ]
-      },
-      {
-        "locale": "it",
-        "slugs": [
-          "festival",
-          "programma",
-          "lucas-condro"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "en",
-        "url": "festival/program/lucas-condro"
-      },
-      {
-        "locale": "it",
-        "url": "festival/programma/lucas-condro"
-      }
-    ]
-  },
-  {
-    "id": "96086364",
-    "slugs": {
-      "en": [
-        "festival",
-        "program",
-        "marcos-morau"
-      ],
-      "it": [
-        "festival",
-        "programma",
-        "marcos-morau"
-      ]
-    },
-    "isIndex": false,
-    "indexType": "",
-    "__typename": "event",
-    "group": "festival-events",
-    "paths": [
-      {
-        "locale": "en",
-        "slugs": [
-          "festival",
-          "program",
-          "marcos-morau"
-        ]
-      },
-      {
-        "locale": "it",
-        "slugs": [
-          "festival",
-          "programma",
-          "marcos-morau"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "en",
-        "url": "festival/program/marcos-morau"
-      },
-      {
-        "locale": "it",
-        "url": "festival/programma/marcos-morau"
       }
     ]
   },
@@ -1663,53 +708,6 @@
     ]
   },
   {
-    "id": "96086693",
-    "slugs": {
-      "en": [
-        "festival",
-        "program",
-        "tommaso-monza"
-      ],
-      "it": [
-        "festival",
-        "programma",
-        "tommaso-monza"
-      ]
-    },
-    "isIndex": false,
-    "indexType": "",
-    "__typename": "event",
-    "group": "festival-events",
-    "paths": [
-      {
-        "locale": "en",
-        "slugs": [
-          "festival",
-          "program",
-          "tommaso-monza"
-        ]
-      },
-      {
-        "locale": "it",
-        "slugs": [
-          "festival",
-          "programma",
-          "tommaso-monza"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "en",
-        "url": "festival/program/tommaso-monza"
-      },
-      {
-        "locale": "it",
-        "url": "festival/programma/tommaso-monza"
-      }
-    ]
-  },
-  {
     "id": "96740795",
     "slugs": {
       "en": [
@@ -1757,17 +755,17 @@
     ]
   },
   {
-    "id": "96744741",
+    "id": "96752145",
     "slugs": {
       "en": [
         "festival",
         "program",
-        "nobody-nobody-nobody-it-s-ok-not-to-be-ok-theatre-performance"
+        "20-di-versi-madrigali-contemporanei"
       ],
       "it": [
         "festival",
         "programma",
-        "nobody-nobody-nobody-it-s-ok-not-to-be-ok-theatre-performance"
+        "20-di-versi-madrigali-contemporanei"
       ]
     },
     "isIndex": false,
@@ -1780,7 +778,7 @@
         "slugs": [
           "festival",
           "program",
-          "nobody-nobody-nobody-it-s-ok-not-to-be-ok-theatre-performance"
+          "20-di-versi-madrigali-contemporanei"
         ]
       },
       {
@@ -1788,18 +786,65 @@
         "slugs": [
           "festival",
           "programma",
-          "nobody-nobody-nobody-it-s-ok-not-to-be-ok-theatre-performance"
+          "20-di-versi-madrigali-contemporanei"
         ]
       }
     ],
     "urls": [
       {
         "locale": "en",
-        "url": "festival/program/nobody-nobody-nobody-it-s-ok-not-to-be-ok-theatre-performance"
+        "url": "festival/program/20-di-versi-madrigali-contemporanei"
       },
       {
         "locale": "it",
-        "url": "festival/programma/nobody-nobody-nobody-it-s-ok-not-to-be-ok-theatre-performance"
+        "url": "festival/programma/20-di-versi-madrigali-contemporanei"
+      }
+    ]
+  },
+  {
+    "id": "96086693",
+    "slugs": {
+      "en": [
+        "festival",
+        "program",
+        "tommaso-monza"
+      ],
+      "it": [
+        "festival",
+        "programma",
+        "tommaso-monza"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "event",
+    "group": "festival-events",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "festival",
+          "program",
+          "tommaso-monza"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "festival",
+          "programma",
+          "tommaso-monza"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "festival/program/tommaso-monza"
+      },
+      {
+        "locale": "it",
+        "url": "festival/programma/tommaso-monza"
       }
     ]
   },
@@ -1847,53 +892,6 @@
       {
         "locale": "it",
         "url": "festival/programma/sognare-la-terra"
-      }
-    ]
-  },
-  {
-    "id": "96752145",
-    "slugs": {
-      "en": [
-        "festival",
-        "program",
-        "20-di-versi-madrigali-contemporanei"
-      ],
-      "it": [
-        "festival",
-        "programma",
-        "20-di-versi-madrigali-contemporanei"
-      ]
-    },
-    "isIndex": false,
-    "indexType": "",
-    "__typename": "event",
-    "group": "festival-events",
-    "paths": [
-      {
-        "locale": "en",
-        "slugs": [
-          "festival",
-          "program",
-          "20-di-versi-madrigali-contemporanei"
-        ]
-      },
-      {
-        "locale": "it",
-        "slugs": [
-          "festival",
-          "programma",
-          "20-di-versi-madrigali-contemporanei"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "en",
-        "url": "festival/program/20-di-versi-madrigali-contemporanei"
-      },
-      {
-        "locale": "it",
-        "url": "festival/programma/20-di-versi-madrigali-contemporanei"
       }
     ]
   },
@@ -2650,6 +1648,100 @@
     ]
   },
   {
+    "id": "96776422",
+    "slugs": {
+      "en": [
+        "festival",
+        "program",
+        "figli-di-un-dio-ubriaco-incursioni-fisiche-sui-madrigali-di-claudio-monteverdi"
+      ],
+      "it": [
+        "festival",
+        "programma",
+        "figli-di-un-dio-ubriaco-incursioni-fisiche-sui-madrigali-di-claudio-monteverdi"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "event",
+    "group": "festival-events",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "festival",
+          "program",
+          "figli-di-un-dio-ubriaco-incursioni-fisiche-sui-madrigali-di-claudio-monteverdi"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "festival",
+          "programma",
+          "figli-di-un-dio-ubriaco-incursioni-fisiche-sui-madrigali-di-claudio-monteverdi"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "festival/program/figli-di-un-dio-ubriaco-incursioni-fisiche-sui-madrigali-di-claudio-monteverdi"
+      },
+      {
+        "locale": "it",
+        "url": "festival/programma/figli-di-un-dio-ubriaco-incursioni-fisiche-sui-madrigali-di-claudio-monteverdi"
+      }
+    ]
+  },
+  {
+    "id": "96744741",
+    "slugs": {
+      "en": [
+        "festival",
+        "program",
+        "nobody-nobody-nobody-it-s-ok-not-to-be-ok-theatre-performance"
+      ],
+      "it": [
+        "festival",
+        "programma",
+        "nobody-nobody-nobody-it-s-ok-not-to-be-ok-theatre-performance"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "event",
+    "group": "festival-events",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "festival",
+          "program",
+          "nobody-nobody-nobody-it-s-ok-not-to-be-ok-theatre-performance"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "festival",
+          "programma",
+          "nobody-nobody-nobody-it-s-ok-not-to-be-ok-theatre-performance"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "festival/program/nobody-nobody-nobody-it-s-ok-not-to-be-ok-theatre-performance"
+      },
+      {
+        "locale": "it",
+        "url": "festival/programma/nobody-nobody-nobody-it-s-ok-not-to-be-ok-theatre-performance"
+      }
+    ]
+  },
+  {
     "id": "96253900",
     "slugs": {
       "en": [
@@ -2740,6 +1832,993 @@
       {
         "locale": "it",
         "url": "festival/programma/cunningham-centennial-solos-oriente-occidente-dance-festival"
+      }
+    ]
+  },
+  {
+    "id": "96081767",
+    "slugs": {
+      "en": [
+        "festival",
+        "program",
+        "fabrizio-maronta"
+      ],
+      "it": [
+        "festival",
+        "programma",
+        "terra-fabrizio-maronta"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "event",
+    "group": "festival-events",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "festival",
+          "program",
+          "fabrizio-maronta"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "festival",
+          "programma",
+          "terra-fabrizio-maronta"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "festival/program/fabrizio-maronta"
+      },
+      {
+        "locale": "it",
+        "url": "festival/programma/terra-fabrizio-maronta"
+      }
+    ]
+  },
+  {
+    "id": "96777762",
+    "slugs": {
+      "en": [
+        "festival",
+        "program",
+        "mixed-doubles"
+      ],
+      "it": [
+        "festival",
+        "programma",
+        "mixed-doubles"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "event",
+    "group": "festival-events",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "festival",
+          "program",
+          "mixed-doubles"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "festival",
+          "programma",
+          "mixed-doubles"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "festival/program/mixed-doubles"
+      },
+      {
+        "locale": "it",
+        "url": "festival/programma/mixed-doubles"
+      }
+    ]
+  },
+  {
+    "id": "97509936",
+    "slugs": {
+      "en": [
+        "festival",
+        "program",
+        "oltrepassare"
+      ],
+      "it": [
+        "festival",
+        "programma",
+        "oltrepassare"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "event",
+    "group": "festival-events",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "festival",
+          "program",
+          "oltrepassare"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "festival",
+          "programma",
+          "oltrepassare"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "festival/program/oltrepassare"
+      },
+      {
+        "locale": "it",
+        "url": "festival/programma/oltrepassare"
+      }
+    ]
+  },
+  {
+    "id": "102389123",
+    "slugs": {
+      "en": [
+        "festival",
+        "program",
+        "habitus"
+      ],
+      "it": [
+        "festival",
+        "programma",
+        "habitus"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "event",
+    "group": "festival-events",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "festival",
+          "program",
+          "habitus"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "festival",
+          "programma",
+          "habitus"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "festival/program/habitus"
+      },
+      {
+        "locale": "it",
+        "url": "festival/programma/habitus"
+      }
+    ]
+  },
+  {
+    "id": "101323990",
+    "slugs": {
+      "en": [
+        "festival",
+        "program",
+        "zoe-appunti-sulla-nuda-vita"
+      ],
+      "it": [
+        "festival",
+        "programma",
+        "zoe-appunti-sulla-nuda-vita"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "event",
+    "group": "festival-events",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "festival",
+          "program",
+          "zoe-appunti-sulla-nuda-vita"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "festival",
+          "programma",
+          "zoe-appunti-sulla-nuda-vita"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "festival/program/zoe-appunti-sulla-nuda-vita"
+      },
+      {
+        "locale": "it",
+        "url": "festival/programma/zoe-appunti-sulla-nuda-vita"
+      }
+    ]
+  },
+  {
+    "id": "96271432",
+    "slugs": {
+      "en": [
+        "festival",
+        "program",
+        "c-est-pas-grave"
+      ],
+      "it": [
+        "festival",
+        "programma",
+        "c-est-pas-grave"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "event",
+    "group": "festival-events",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "festival",
+          "program",
+          "c-est-pas-grave"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "festival",
+          "programma",
+          "c-est-pas-grave"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "festival/program/c-est-pas-grave"
+      },
+      {
+        "locale": "it",
+        "url": "festival/programma/c-est-pas-grave"
+      }
+    ]
+  },
+  {
+    "id": "96057245",
+    "slugs": {
+      "en": [
+        "festival",
+        "program",
+        "antonio-vigano-and-michela-lucenti"
+      ],
+      "it": [
+        "festival",
+        "programma",
+        "antonio-vigano-and-michela-lucenti"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "event",
+    "group": "festival-events",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "festival",
+          "program",
+          "antonio-vigano-and-michela-lucenti"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "festival",
+          "programma",
+          "antonio-vigano-and-michela-lucenti"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "festival/program/antonio-vigano-and-michela-lucenti"
+      },
+      {
+        "locale": "it",
+        "url": "festival/programma/antonio-vigano-and-michela-lucenti"
+      }
+    ]
+  },
+  {
+    "id": "96081881",
+    "slugs": {
+      "en": [
+        "festival",
+        "program",
+        "pablo-girolami"
+      ],
+      "it": [
+        "festival",
+        "programma",
+        "gianni-pasquale"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "event",
+    "group": "festival-events",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "festival",
+          "program",
+          "pablo-girolami"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "festival",
+          "programma",
+          "gianni-pasquale"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "festival/program/pablo-girolami"
+      },
+      {
+        "locale": "it",
+        "url": "festival/programma/gianni-pasquale"
+      }
+    ]
+  },
+  {
+    "id": "96056619",
+    "slugs": {
+      "en": [
+        "festival",
+        "program",
+        "michela-lucenti"
+      ],
+      "it": [
+        "festival",
+        "programma",
+        "michela-lucenti"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "event",
+    "group": "festival-events",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "festival",
+          "program",
+          "michela-lucenti"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "festival",
+          "programma",
+          "michela-lucenti"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "festival/program/michela-lucenti"
+      },
+      {
+        "locale": "it",
+        "url": "festival/programma/michela-lucenti"
+      }
+    ]
+  },
+  {
+    "id": "96086789",
+    "slugs": {
+      "en": [
+        "festival",
+        "program",
+        "gravity-and-other-attraction"
+      ],
+      "it": [
+        "festival",
+        "programma",
+        "gravity-and-other-attraction"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "event",
+    "group": "festival-events",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "festival",
+          "program",
+          "gravity-and-other-attraction"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "festival",
+          "programma",
+          "gravity-and-other-attraction"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "festival/program/gravity-and-other-attraction"
+      },
+      {
+        "locale": "it",
+        "url": "festival/programma/gravity-and-other-attraction"
+      }
+    ]
+  },
+  {
+    "id": "96086741",
+    "slugs": {
+      "en": [
+        "festival",
+        "program",
+        "cina-coronavirus"
+      ],
+      "it": [
+        "festival",
+        "programma",
+        "cina-coronavirus"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "event",
+    "group": "festival-events",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "festival",
+          "program",
+          "cina-coronavirus"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "festival",
+          "programma",
+          "cina-coronavirus"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "festival/program/cina-coronavirus"
+      },
+      {
+        "locale": "it",
+        "url": "festival/programma/cina-coronavirus"
+      }
+    ]
+  },
+  {
+    "id": "96101834",
+    "slugs": {
+      "en": [
+        "festival",
+        "program",
+        "cage-cunningham"
+      ],
+      "it": [
+        "festival",
+        "programma",
+        "cage-cunningham"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "event",
+    "group": "festival-events",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "festival",
+          "program",
+          "cage-cunningham"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "festival",
+          "programma",
+          "cage-cunningham"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "festival/program/cage-cunningham"
+      },
+      {
+        "locale": "it",
+        "url": "festival/programma/cage-cunningham"
+      }
+    ]
+  },
+  {
+    "id": "96086557",
+    "slugs": {
+      "en": [
+        "festival",
+        "program",
+        "silvia-dezulian-and-filippo-porro"
+      ],
+      "it": [
+        "festival",
+        "programma",
+        "perspectiva"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "event",
+    "group": "festival-events",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "festival",
+          "program",
+          "silvia-dezulian-and-filippo-porro"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "festival",
+          "programma",
+          "perspectiva"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "festival/program/silvia-dezulian-and-filippo-porro"
+      },
+      {
+        "locale": "it",
+        "url": "festival/programma/perspectiva"
+      }
+    ]
+  },
+  {
+    "id": "96083006",
+    "slugs": {
+      "en": [
+        "festival",
+        "program",
+        "luna-cenere"
+      ],
+      "it": [
+        "festival",
+        "programma",
+        "genealogia"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "event",
+    "group": "festival-events",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "festival",
+          "program",
+          "luna-cenere"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "festival",
+          "programma",
+          "genealogia"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "festival/program/luna-cenere"
+      },
+      {
+        "locale": "it",
+        "url": "festival/programma/genealogia"
+      }
+    ]
+  },
+  {
+    "id": "96081715",
+    "slugs": {
+      "en": [
+        "festival",
+        "program",
+        "ezio-mauro"
+      ],
+      "it": [
+        "festival",
+        "programma",
+        "liberi-dal-male"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "event",
+    "group": "festival-events",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "festival",
+          "program",
+          "ezio-mauro"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "festival",
+          "programma",
+          "liberi-dal-male"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "festival/program/ezio-mauro"
+      },
+      {
+        "locale": "it",
+        "url": "festival/programma/liberi-dal-male"
+      }
+    ]
+  },
+  {
+    "id": "96080305",
+    "slugs": {
+      "en": [
+        "festival",
+        "program",
+        "centaur"
+      ],
+      "it": [
+        "festival",
+        "programma",
+        "centaur"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "event",
+    "group": "festival-events",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "festival",
+          "program",
+          "centaur"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "festival",
+          "programma",
+          "centaur"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "festival/program/centaur"
+      },
+      {
+        "locale": "it",
+        "url": "festival/programma/centaur"
+      }
+    ]
+  },
+  {
+    "id": "96101891",
+    "slugs": {
+      "en": [
+        "festival",
+        "program",
+        "making-an-entrance"
+      ],
+      "it": [
+        "festival",
+        "programma",
+        "making-an-entrance"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "event",
+    "group": "festival-events",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "festival",
+          "program",
+          "making-an-entrance"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "festival",
+          "programma",
+          "making-an-entrance"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "festival/program/making-an-entrance"
+      },
+      {
+        "locale": "it",
+        "url": "festival/programma/making-an-entrance"
+      }
+    ]
+  },
+  {
+    "id": "96085945",
+    "slugs": {
+      "en": [
+        "festival",
+        "program",
+        "leonardo-caffo"
+      ],
+      "it": [
+        "festival",
+        "programma",
+        "leonardo-caffo"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "event",
+    "group": "festival-events",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "festival",
+          "program",
+          "leonardo-caffo"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "festival",
+          "programma",
+          "leonardo-caffo"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "festival/program/leonardo-caffo"
+      },
+      {
+        "locale": "it",
+        "url": "festival/programma/leonardo-caffo"
+      }
+    ]
+  },
+  {
+    "id": "96086125",
+    "slugs": {
+      "en": [
+        "festival",
+        "program",
+        "michela-lucenti-peepshow"
+      ],
+      "it": [
+        "festival",
+        "programma",
+        "michela-lucenti-peepshow"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "event",
+    "group": "festival-events",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "festival",
+          "program",
+          "michela-lucenti-peepshow"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "festival",
+          "programma",
+          "michela-lucenti-peepshow"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "festival/program/michela-lucenti-peepshow"
+      },
+      {
+        "locale": "it",
+        "url": "festival/programma/michela-lucenti-peepshow"
+      }
+    ]
+  },
+  {
+    "id": "96086269",
+    "slugs": {
+      "en": [
+        "festival",
+        "program",
+        "lucas-condro"
+      ],
+      "it": [
+        "festival",
+        "programma",
+        "lucas-condro"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "event",
+    "group": "festival-events",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "festival",
+          "program",
+          "lucas-condro"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "festival",
+          "programma",
+          "lucas-condro"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "festival/program/lucas-condro"
+      },
+      {
+        "locale": "it",
+        "url": "festival/programma/lucas-condro"
+      }
+    ]
+  },
+  {
+    "id": "96086364",
+    "slugs": {
+      "en": [
+        "festival",
+        "program",
+        "marcos-morau"
+      ],
+      "it": [
+        "festival",
+        "programma",
+        "marcos-morau"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "event",
+    "group": "festival-events",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "festival",
+          "program",
+          "marcos-morau"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "festival",
+          "programma",
+          "marcos-morau"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "festival/program/marcos-morau"
+      },
+      {
+        "locale": "it",
+        "url": "festival/programma/marcos-morau"
       }
     ]
   },
@@ -3868,6 +3947,53 @@
       {
         "locale": "it",
         "url": "festival/programma/il-confine-non-e-una-linea-sottile"
+      }
+    ]
+  },
+  {
+    "id": "102388104",
+    "slugs": {
+      "en": [
+        "people",
+        "events",
+        "trigger"
+      ],
+      "it": [
+        "people",
+        "eventi",
+        "trigger"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "event",
+    "group": "other-events",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "people",
+          "events",
+          "trigger"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "people",
+          "eventi",
+          "trigger"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "people/events/trigger"
+      },
+      {
+        "locale": "it",
+        "url": "people/eventi/trigger"
       }
     ]
   },
@@ -5877,6 +6003,53 @@
     ]
   },
   {
+    "id": "102847546",
+    "slugs": {
+      "en": [
+        "studio",
+        "associated-artists",
+        "marcus-morau"
+      ],
+      "it": [
+        "studio",
+        "artisti-associati",
+        "marcus-morau"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "artist",
+    "group": "associated-artists",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "studio",
+          "associated-artists",
+          "marcus-morau"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "studio",
+          "artisti-associati",
+          "marcus-morau"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "studio/associated-artists/marcus-morau"
+      },
+      {
+        "locale": "it",
+        "url": "studio/artisti-associati/marcus-morau"
+      }
+    ]
+  },
+  {
     "id": "102761793",
     "slugs": {
       "en": [
@@ -6061,6 +6234,194 @@
       {
         "locale": "it",
         "url": "studio/artisti-associati/daniele-ninarello"
+      }
+    ]
+  },
+  {
+    "id": "103268186",
+    "slugs": {
+      "en": [
+        "studio",
+        "artistic-residences",
+        "martina-gambardella"
+      ],
+      "it": [
+        "studio",
+        "residenze-artistiche",
+        "martina-gambardella"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "artist",
+    "group": "artistic-residences",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "studio",
+          "artistic-residences",
+          "martina-gambardella"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "studio",
+          "residenze-artistiche",
+          "martina-gambardella"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "studio/artistic-residences/martina-gambardella"
+      },
+      {
+        "locale": "it",
+        "url": "studio/residenze-artistiche/martina-gambardella"
+      }
+    ]
+  },
+  {
+    "id": "103211835",
+    "slugs": {
+      "en": [
+        "studio",
+        "artistic-residences",
+        "aristide-rontini"
+      ],
+      "it": [
+        "studio",
+        "residenze-artistiche",
+        "aristide-rontini"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "artist",
+    "group": "artistic-residences",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "studio",
+          "artistic-residences",
+          "aristide-rontini"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "studio",
+          "residenze-artistiche",
+          "aristide-rontini"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "studio/artistic-residences/aristide-rontini"
+      },
+      {
+        "locale": "it",
+        "url": "studio/residenze-artistiche/aristide-rontini"
+      }
+    ]
+  },
+  {
+    "id": "85765727",
+    "slugs": {
+      "en": [
+        "studio",
+        "artistic-residences",
+        "alessio-maria-romano"
+      ],
+      "it": [
+        "studio",
+        "residenze-artistiche",
+        "alessio-maria-romano"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "artist",
+    "group": "artistic-residences",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "studio",
+          "artistic-residences",
+          "alessio-maria-romano"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "studio",
+          "residenze-artistiche",
+          "alessio-maria-romano"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "studio/artistic-residences/alessio-maria-romano"
+      },
+      {
+        "locale": "it",
+        "url": "studio/residenze-artistiche/alessio-maria-romano"
+      }
+    ]
+  },
+  {
+    "id": "101878907",
+    "slugs": {
+      "en": [
+        "studio",
+        "artistic-residences",
+        "cie-mf"
+      ],
+      "it": [
+        "studio",
+        "residenze-artistiche",
+        "cie-mf"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "artist",
+    "group": "artistic-residences",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "studio",
+          "artistic-residences",
+          "cie-mf"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "studio",
+          "residenze-artistiche",
+          "cie-mf"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "studio/artistic-residences/cie-mf"
+      },
+      {
+        "locale": "it",
+        "url": "studio/residenze-artistiche/cie-mf"
       }
     ]
   },
@@ -6394,53 +6755,6 @@
     ]
   },
   {
-    "id": "101878907",
-    "slugs": {
-      "en": [
-        "studio",
-        "artistic-residences",
-        "cie-mf"
-      ],
-      "it": [
-        "studio",
-        "residenze-artistiche",
-        "cie-mf"
-      ]
-    },
-    "isIndex": false,
-    "indexType": "",
-    "__typename": "artist",
-    "group": "artistic-residences",
-    "paths": [
-      {
-        "locale": "en",
-        "slugs": [
-          "studio",
-          "artistic-residences",
-          "cie-mf"
-        ]
-      },
-      {
-        "locale": "it",
-        "slugs": [
-          "studio",
-          "residenze-artistiche",
-          "cie-mf"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "en",
-        "url": "studio/artistic-residences/cie-mf"
-      },
-      {
-        "locale": "it",
-        "url": "studio/residenze-artistiche/cie-mf"
-      }
-    ]
-  },
-  {
     "id": "101637072",
     "slugs": {
       "en": [
@@ -6625,53 +6939,6 @@
       {
         "locale": "it",
         "url": "studio/residenze-artistiche/cristina-kristal-rizzo"
-      }
-    ]
-  },
-  {
-    "id": "85765727",
-    "slugs": {
-      "en": [
-        "studio",
-        "artistic-residences",
-        "alessio-maria-romano"
-      ],
-      "it": [
-        "studio",
-        "residenze-artistiche",
-        "alessio-maria-romano"
-      ]
-    },
-    "isIndex": false,
-    "indexType": "",
-    "__typename": "artist",
-    "group": "artistic-residences",
-    "paths": [
-      {
-        "locale": "en",
-        "slugs": [
-          "studio",
-          "artistic-residences",
-          "alessio-maria-romano"
-        ]
-      },
-      {
-        "locale": "it",
-        "slugs": [
-          "studio",
-          "residenze-artistiche",
-          "alessio-maria-romano"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "en",
-        "url": "studio/artistic-residences/alessio-maria-romano"
-      },
-      {
-        "locale": "it",
-        "url": "studio/residenze-artistiche/alessio-maria-romano"
       }
     ]
   },

@@ -1,15 +1,36 @@
 import Link from 'next/link';
 import { Fragment } from 'react';
+import dynamic from 'next/dynamic';
 
 import translate from 'lib/locales';
-import Layout from 'components/Layout';
 import * as queries from 'lib/queries';
 import fetchDato from 'lib/api/dato';
-import HeroSlider from 'components/hero/HeroSlider';
-import GalleryPreview from 'components/galleries/GalleryPreview';
-import GalleryHome from 'components/galleries/GalleryHome';
 import { resolveLinkById } from 'lib/utils';
+
+import Layout from 'components/Layout';
 import Seo from 'components/Seo';
+
+// import HeroSlider from 'components/hero/HeroSlider';
+// import GalleryPreview from 'components/galleries/GalleryPreview';
+// import GalleryHome from 'components/galleries/GalleryHome';
+
+let GalleryHome = dynamic(() => import('components/galleries/GalleryHome'), {
+  loading: () => <div>...</div>,
+  ssr: false,
+});
+
+let GalleryPreview = dynamic(
+  () => import('components/galleries/GalleryPreview'),
+  {
+    loading: () => <div />,
+    ssr: false,
+  }
+);
+
+let HeroSlider = dynamic(() => import('components/hero/HeroSlider'), {
+  loading: () => <div />,
+  ssr: false,
+});
 
 function Home({ data, locale, home }) {
   const { homeSlideshow, homeSections, seo } = home;

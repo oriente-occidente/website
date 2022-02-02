@@ -2,30 +2,6 @@
   {
     "routes": [
       "festival",
-      "box-office"
-    ],
-    "link": {
-      "__typename": "PageRecord",
-      "id": "79196174",
-      "slug": "box-office",
-      "slugs": [
-        {
-          "locale": "en",
-          "slug": "box-office"
-        },
-        {
-          "locale": "it",
-          "slug": "box-office"
-        }
-      ],
-      "indexType": "",
-      "isIndex": false
-    },
-    "lang": "it"
-  },
-  {
-    "routes": [
-      "festival",
       "programma"
     ],
     "link": {
@@ -44,6 +20,30 @@
       ],
       "indexType": "festival-events",
       "isIndex": true
+    },
+    "lang": "it"
+  },
+  {
+    "routes": [
+      "festival",
+      "box-office"
+    ],
+    "link": {
+      "__typename": "PageRecord",
+      "id": "79196174",
+      "slug": "box-office",
+      "slugs": [
+        {
+          "locale": "en",
+          "slug": "box-office"
+        },
+        {
+          "locale": "it",
+          "slug": "box-office"
+        }
+      ],
+      "indexType": "",
+      "isIndex": false
     },
     "lang": "it"
   },
@@ -83,7 +83,7 @@
       "slugs": [
         {
           "locale": "en",
-          "slug": "artistic-residences"
+          "slug": "artistic-residencies"
         },
         {
           "locale": "it",
@@ -194,6 +194,54 @@
   {
     "routes": [
       "info",
+      "accessibilita"
+    ],
+    "link": {
+      "__typename": "PageRecord",
+      "id": "102905880",
+      "slug": "accessibilita",
+      "slugs": [
+        {
+          "locale": "en",
+          "slug": "accessibility"
+        },
+        {
+          "locale": "it",
+          "slug": "accessibilita"
+        }
+      ],
+      "indexType": "",
+      "isIndex": false
+    },
+    "lang": "it"
+  },
+  {
+    "routes": [
+      "info",
+      "sostenibilita"
+    ],
+    "link": {
+      "__typename": "PageRecord",
+      "id": "103091036",
+      "slug": "sostenibilita",
+      "slugs": [
+        {
+          "locale": "en",
+          "slug": "sustainability"
+        },
+        {
+          "locale": "it",
+          "slug": "sostenibilita"
+        }
+      ],
+      "indexType": "",
+      "isIndex": false
+    },
+    "lang": "it"
+  },
+  {
+    "routes": [
+      "info",
       "report"
     ],
     "link": {
@@ -232,6 +280,30 @@
         {
           "locale": "it",
           "slug": "partners"
+        }
+      ],
+      "indexType": "",
+      "isIndex": false
+    },
+    "lang": "it"
+  },
+  {
+    "routes": [
+      "info",
+      "sicurezza-covid-19"
+    ],
+    "link": {
+      "__typename": "PageRecord",
+      "id": "103172417",
+      "slug": "sicurezza-covid-19",
+      "slugs": [
+        {
+          "locale": "en",
+          "slug": "safety-covid-19"
+        },
+        {
+          "locale": "it",
+          "slug": "sicurezza-covid-19"
         }
       ],
       "indexType": "",
@@ -288,30 +360,6 @@
   {
     "routes": [
       "festival",
-      "box-office"
-    ],
-    "link": {
-      "__typename": "PageRecord",
-      "id": "79196174",
-      "slug": "box-office",
-      "slugs": [
-        {
-          "locale": "en",
-          "slug": "box-office"
-        },
-        {
-          "locale": "it",
-          "slug": "box-office"
-        }
-      ],
-      "indexType": "",
-      "isIndex": false
-    },
-    "lang": "en"
-  },
-  {
-    "routes": [
-      "festival",
       "program"
     ],
     "link": {
@@ -330,6 +378,30 @@
       ],
       "indexType": "festival-events",
       "isIndex": true
+    },
+    "lang": "en"
+  },
+  {
+    "routes": [
+      "festival",
+      "box-office"
+    ],
+    "link": {
+      "__typename": "PageRecord",
+      "id": "79196174",
+      "slug": "box-office",
+      "slugs": [
+        {
+          "locale": "en",
+          "slug": "box-office"
+        },
+        {
+          "locale": "it",
+          "slug": "box-office"
+        }
+      ],
+      "indexType": "",
+      "isIndex": false
     },
     "lang": "en"
   },
@@ -369,7 +441,7 @@
       "slugs": [
         {
           "locale": "en",
-          "slug": "artistic-residences"
+          "slug": "artistic-residencies"
         },
         {
           "locale": "it",
@@ -480,6 +552,54 @@
   {
     "routes": [
       "info",
+      "accessibility"
+    ],
+    "link": {
+      "__typename": "PageRecord",
+      "id": "102905880",
+      "slug": "accessibilita",
+      "slugs": [
+        {
+          "locale": "en",
+          "slug": "accessibility"
+        },
+        {
+          "locale": "it",
+          "slug": "accessibilita"
+        }
+      ],
+      "indexType": "",
+      "isIndex": false
+    },
+    "lang": "en"
+  },
+  {
+    "routes": [
+      "info",
+      "sustainability"
+    ],
+    "link": {
+      "__typename": "PageRecord",
+      "id": "103091036",
+      "slug": "sostenibilita",
+      "slugs": [
+        {
+          "locale": "en",
+          "slug": "sustainability"
+        },
+        {
+          "locale": "it",
+          "slug": "sostenibilita"
+        }
+      ],
+      "indexType": "",
+      "isIndex": false
+    },
+    "lang": "en"
+  },
+  {
+    "routes": [
+      "info",
       "report"
     ],
     "link": {
@@ -518,6 +638,30 @@
         {
           "locale": "it",
           "slug": "partners"
+        }
+      ],
+      "indexType": "",
+      "isIndex": false
+    },
+    "lang": "en"
+  },
+  {
+    "routes": [
+      "info",
+      "safety-covid-19"
+    ],
+    "link": {
+      "__typename": "PageRecord",
+      "id": "103172417",
+      "slug": "sicurezza-covid-19",
+      "slugs": [
+        {
+          "locale": "en",
+          "slug": "safety-covid-19"
+        },
+        {
+          "locale": "it",
+          "slug": "sicurezza-covid-19"
         }
       ],
       "indexType": "",
