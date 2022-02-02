@@ -21,6 +21,7 @@ function MyApp({ Component, pageProps }) {
   }, []);
   return (
     <>
+      <Component {...pageProps} />
       <Script
         src="//cdn.iubenda.com/cs/iubenda_cs.js"
         strategy="afterInteractive"
@@ -61,7 +62,6 @@ function MyApp({ Component, pageProps }) {
             `,
         }}
       />
-      <Component {...pageProps} />
     </>
   );
 }
