@@ -172,23 +172,7 @@
       "people",
       "reti"
     ],
-    "link": {
-      "__typename": "PageRecord",
-      "id": "103800503",
-      "slug": "reti",
-      "slugs": [
-        {
-          "locale": "en",
-          "slug": "network"
-        },
-        {
-          "locale": "it",
-          "slug": "reti"
-        }
-      ],
-      "indexType": "projects",
-      "isIndex": true
-    },
+    "link": null,
     "lang": "it"
   },
   {
@@ -554,23 +538,7 @@
       "people",
       "network"
     ],
-    "link": {
-      "__typename": "PageRecord",
-      "id": "103800503",
-      "slug": "reti",
-      "slugs": [
-        {
-          "locale": "en",
-          "slug": "network"
-        },
-        {
-          "locale": "it",
-          "slug": "reti"
-        }
-      ],
-      "indexType": "projects",
-      "isIndex": true
-    },
+    "link": null,
     "lang": "en"
   },
   {
