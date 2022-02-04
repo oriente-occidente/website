@@ -1,17 +1,21 @@
 import Link from 'next/link';
-import { Image } from "react-datocms";
+import { Image } from 'react-datocms';
 
 import translate from 'lib/locales';
 
-export default function Team ({ locale, data }) {
+export default function Team({ locale, data }) {
+  if (!data) return null;
+  console.log('Team data:', data);
   return (
     <div className="mb-4 w-[49%] lg:w-[32%] custom-nth-child">
-      <Image
-        className=""
-        data={data.image.responsiveImage}
-        alt={data.image.alt}
-        title={data.image.title}
-      />
+      {data.image && (
+        <Image
+          className=""
+          data={data.image?.responsiveImage}
+          alt={data.image.alt}
+          title={data.image.title}
+        />
+      )}
       <div className="uppercase text-black-light text-xxs xl:text-xs mt-1">
         {data.role}
       </div>

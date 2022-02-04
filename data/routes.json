@@ -622,6 +622,48 @@
     ]
   },
   {
+    "id": "103872435",
+    "isIndex": false,
+    "indexType": "",
+    "slugs": {
+      "it": [
+        "info",
+        "collabora-con-noi"
+      ],
+      "en": [
+        "info",
+        "work-with-us"
+      ]
+    },
+    "__typename": "page",
+    "paths": [
+      {
+        "locale": "it",
+        "slugs": [
+          "info",
+          "collabora-con-noi"
+        ]
+      },
+      {
+        "locale": "en",
+        "slugs": [
+          "info",
+          "work-with-us"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "it",
+        "url": "info/collabora-con-noi"
+      },
+      {
+        "locale": "en",
+        "url": "info/work-with-us"
+      }
+    ]
+  },
+  {
     "id": "94866658",
     "slugs": {
       "en": [
@@ -657,6 +699,92 @@
       {
         "locale": "it",
         "url": "informativa-privacy"
+      }
+    ]
+  },
+  {
+    "id": "103822814",
+    "slugs": {
+      "en": [
+        "staff"
+      ],
+      "it": [
+        "staff"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "page",
+    "group": "page",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "staff"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "staff"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "staff"
+      },
+      {
+        "locale": "it",
+        "url": "staff"
+      }
+    ]
+  },
+  {
+    "id": "102389123",
+    "slugs": {
+      "en": [
+        "festival",
+        "program",
+        "habitus"
+      ],
+      "it": [
+        "festival",
+        "programma",
+        "habitus"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "event",
+    "group": "festival-events",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "festival",
+          "program",
+          "habitus"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "festival",
+          "programma",
+          "habitus"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "festival/program/habitus"
+      },
+      {
+        "locale": "it",
+        "url": "festival/programma/habitus"
       }
     ]
   },
@@ -3904,53 +4032,6 @@
     ]
   },
   {
-    "id": "102389123",
-    "slugs": {
-      "en": [
-        "festival",
-        "program",
-        "habitus"
-      ],
-      "it": [
-        "festival",
-        "programma",
-        "habitus"
-      ]
-    },
-    "isIndex": false,
-    "indexType": "",
-    "__typename": "event",
-    "group": "festival-events",
-    "paths": [
-      {
-        "locale": "en",
-        "slugs": [
-          "festival",
-          "program",
-          "habitus"
-        ]
-      },
-      {
-        "locale": "it",
-        "slugs": [
-          "festival",
-          "programma",
-          "habitus"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "en",
-        "url": "festival/program/habitus"
-      },
-      {
-        "locale": "it",
-        "url": "festival/programma/habitus"
-      }
-    ]
-  },
-  {
     "id": "102744871",
     "slugs": {
       "en": [
@@ -4139,6 +4220,288 @@
     ]
   },
   {
+    "id": "97539633",
+    "slugs": {
+      "en": [
+        "studio",
+        "workshop",
+        "masterclass-sidi-larbi-cherkaoui-repertory-fractus-v"
+      ],
+      "it": [
+        "studio",
+        "workshop",
+        "masterclass-sidi-larbi-cherkaoui-repertory-fractus-v"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "workshop",
+    "group": "workshops",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "studio",
+          "workshop",
+          "masterclass-sidi-larbi-cherkaoui-repertory-fractus-v"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "studio",
+          "workshop",
+          "masterclass-sidi-larbi-cherkaoui-repertory-fractus-v"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "studio/workshop/masterclass-sidi-larbi-cherkaoui-repertory-fractus-v"
+      },
+      {
+        "locale": "it",
+        "url": "studio/workshop/masterclass-sidi-larbi-cherkaoui-repertory-fractus-v"
+      }
+    ]
+  },
+  {
+    "id": "97514206",
+    "slugs": {
+      "en": [
+        "studio",
+        "workshop",
+        "tools-for-action-workshop"
+      ],
+      "it": [
+        "studio",
+        "workshop",
+        "tools-for-action-workshop"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "workshop",
+    "group": "workshops",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "studio",
+          "workshop",
+          "tools-for-action-workshop"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "studio",
+          "workshop",
+          "tools-for-action-workshop"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "studio/workshop/tools-for-action-workshop"
+      },
+      {
+        "locale": "it",
+        "url": "studio/workshop/tools-for-action-workshop"
+      }
+    ]
+  },
+  {
+    "id": "99588388",
+    "slugs": {
+      "en": [
+        "studio",
+        "workshop",
+        "laboratorio-di-ricerca-corporea"
+      ],
+      "it": [
+        "studio",
+        "workshop",
+        "laboratorio-di-ricerca-corporea"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "workshop",
+    "group": "workshops",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "studio",
+          "workshop",
+          "laboratorio-di-ricerca-corporea"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "studio",
+          "workshop",
+          "laboratorio-di-ricerca-corporea"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "studio/workshop/laboratorio-di-ricerca-corporea"
+      },
+      {
+        "locale": "it",
+        "url": "studio/workshop/laboratorio-di-ricerca-corporea"
+      }
+    ]
+  },
+  {
+    "id": "98007460",
+    "slugs": {
+      "en": [
+        "studio",
+        "workshop",
+        "oltre-il-confine-workshop-intensivo-di-teatro-danza"
+      ],
+      "it": [
+        "studio",
+        "workshop",
+        "oltre-il-confine-workshop-intensivo-di-teatro-danza"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "workshop",
+    "group": "workshops",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "studio",
+          "workshop",
+          "oltre-il-confine-workshop-intensivo-di-teatro-danza"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "studio",
+          "workshop",
+          "oltre-il-confine-workshop-intensivo-di-teatro-danza"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "studio/workshop/oltre-il-confine-workshop-intensivo-di-teatro-danza"
+      },
+      {
+        "locale": "it",
+        "url": "studio/workshop/oltre-il-confine-workshop-intensivo-di-teatro-danza"
+      }
+    ]
+  },
+  {
+    "id": "97536012",
+    "slugs": {
+      "en": [
+        "studio",
+        "workshop",
+        "cunningham-technique-r-workshop"
+      ],
+      "it": [
+        "studio",
+        "workshop",
+        "cunningham-technique-r-workshop"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "workshop",
+    "group": "workshops",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "studio",
+          "workshop",
+          "cunningham-technique-r-workshop"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "studio",
+          "workshop",
+          "cunningham-technique-r-workshop"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "studio/workshop/cunningham-technique-r-workshop"
+      },
+      {
+        "locale": "it",
+        "url": "studio/workshop/cunningham-technique-r-workshop"
+      }
+    ]
+  },
+  {
+    "id": "99590685",
+    "slugs": {
+      "en": [
+        "studio",
+        "workshop",
+        "practice-ina"
+      ],
+      "it": [
+        "studio",
+        "workshop",
+        "practice-ina"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "workshop",
+    "group": "workshops",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "studio",
+          "workshop",
+          "practice-ina"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "studio",
+          "workshop",
+          "practice-ina"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "studio/workshop/practice-ina"
+      },
+      {
+        "locale": "it",
+        "url": "studio/workshop/practice-ina"
+      }
+    ]
+  },
+  {
     "id": "98949094",
     "slugs": {
       "en": [
@@ -4182,6 +4545,53 @@
       {
         "locale": "it",
         "url": "studio/workshop/as-far-as-the-imagination-can-reach-using-a-piece-of-string-workshop-2022"
+      }
+    ]
+  },
+  {
+    "id": "99561377",
+    "slugs": {
+      "en": [
+        "studio",
+        "workshop",
+        "la-veronal-working-tools"
+      ],
+      "it": [
+        "studio",
+        "workshop",
+        "la-veronal-working-tools"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "workshop",
+    "group": "workshops",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "studio",
+          "workshop",
+          "la-veronal-working-tools"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "studio",
+          "workshop",
+          "la-veronal-working-tools"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "studio/workshop/la-veronal-working-tools"
+      },
+      {
+        "locale": "it",
+        "url": "studio/workshop/la-veronal-working-tools"
       }
     ]
   },
@@ -4280,331 +4690,190 @@
     ]
   },
   {
-    "id": "97536012",
+    "id": "99652019",
     "slugs": {
       "en": [
-        "studio",
-        "workshop",
-        "cunningham-technique-r-workshop"
+        "people",
+        "projects",
+        "rete-italiana-europe-beyond-access-2021-2023"
       ],
       "it": [
-        "studio",
-        "workshop",
-        "cunningham-technique-r-workshop"
+        "people",
+        "progetti",
+        "rete-italiana-europe-beyond-access-2021-2023"
       ]
     },
     "isIndex": false,
     "indexType": "",
-    "__typename": "workshop",
-    "group": "workshops",
+    "__typename": "project",
+    "group": "projects",
     "paths": [
       {
         "locale": "en",
         "slugs": [
-          "studio",
-          "workshop",
-          "cunningham-technique-r-workshop"
+          "people",
+          "projects",
+          "rete-italiana-europe-beyond-access-2021-2023"
         ]
       },
       {
         "locale": "it",
         "slugs": [
-          "studio",
-          "workshop",
-          "cunningham-technique-r-workshop"
+          "people",
+          "progetti",
+          "rete-italiana-europe-beyond-access-2021-2023"
         ]
       }
     ],
     "urls": [
       {
         "locale": "en",
-        "url": "studio/workshop/cunningham-technique-r-workshop"
+        "url": "people/projects/rete-italiana-europe-beyond-access-2021-2023"
       },
       {
         "locale": "it",
-        "url": "studio/workshop/cunningham-technique-r-workshop"
+        "url": "people/progetti/rete-italiana-europe-beyond-access-2021-2023"
       }
     ]
   },
   {
-    "id": "97514206",
+    "id": "99638384",
     "slugs": {
       "en": [
-        "studio",
-        "workshop",
-        "tools-for-action-workshop"
+        "people",
+        "projects",
+        "impart"
       ],
       "it": [
-        "studio",
-        "workshop",
-        "tools-for-action-workshop"
+        "people",
+        "progetti",
+        "impart"
       ]
     },
     "isIndex": false,
     "indexType": "",
-    "__typename": "workshop",
-    "group": "workshops",
+    "__typename": "project",
+    "group": "projects",
     "paths": [
       {
         "locale": "en",
         "slugs": [
-          "studio",
-          "workshop",
-          "tools-for-action-workshop"
+          "people",
+          "projects",
+          "impart"
         ]
       },
       {
         "locale": "it",
         "slugs": [
-          "studio",
-          "workshop",
-          "tools-for-action-workshop"
+          "people",
+          "progetti",
+          "impart"
         ]
       }
     ],
     "urls": [
       {
         "locale": "en",
-        "url": "studio/workshop/tools-for-action-workshop"
+        "url": "people/projects/impart"
       },
       {
         "locale": "it",
-        "url": "studio/workshop/tools-for-action-workshop"
+        "url": "people/progetti/impart"
       }
     ]
   },
   {
-    "id": "97539633",
+    "id": "99641013",
     "slugs": {
       "en": [
-        "studio",
-        "workshop",
-        "masterclass-sidi-larbi-cherkaoui-repertory-fractus-v"
+        "people",
+        "projects",
+        "crossing-the-sea"
       ],
       "it": [
-        "studio",
-        "workshop",
-        "masterclass-sidi-larbi-cherkaoui-repertory-fractus-v"
+        "people",
+        "progetti",
+        "crossing-the-sea"
       ]
     },
     "isIndex": false,
     "indexType": "",
-    "__typename": "workshop",
-    "group": "workshops",
+    "__typename": "project",
+    "group": "projects",
     "paths": [
       {
         "locale": "en",
         "slugs": [
-          "studio",
-          "workshop",
-          "masterclass-sidi-larbi-cherkaoui-repertory-fractus-v"
+          "people",
+          "projects",
+          "crossing-the-sea"
         ]
       },
       {
         "locale": "it",
         "slugs": [
-          "studio",
-          "workshop",
-          "masterclass-sidi-larbi-cherkaoui-repertory-fractus-v"
+          "people",
+          "progetti",
+          "crossing-the-sea"
         ]
       }
     ],
     "urls": [
       {
         "locale": "en",
-        "url": "studio/workshop/masterclass-sidi-larbi-cherkaoui-repertory-fractus-v"
+        "url": "people/projects/crossing-the-sea"
       },
       {
         "locale": "it",
-        "url": "studio/workshop/masterclass-sidi-larbi-cherkaoui-repertory-fractus-v"
+        "url": "people/progetti/crossing-the-sea"
       }
     ]
   },
   {
-    "id": "98007460",
+    "id": "99656719",
     "slugs": {
       "en": [
-        "studio",
-        "workshop",
-        "oltre-il-confine-workshop-intensivo-di-teatro-danza"
+        "people",
+        "projects",
+        "spring"
       ],
       "it": [
-        "studio",
-        "workshop",
-        "oltre-il-confine-workshop-intensivo-di-teatro-danza"
+        "people",
+        "progetti",
+        "spring"
       ]
     },
     "isIndex": false,
     "indexType": "",
-    "__typename": "workshop",
-    "group": "workshops",
+    "__typename": "project",
+    "group": "projects",
     "paths": [
       {
         "locale": "en",
         "slugs": [
-          "studio",
-          "workshop",
-          "oltre-il-confine-workshop-intensivo-di-teatro-danza"
+          "people",
+          "projects",
+          "spring"
         ]
       },
       {
         "locale": "it",
         "slugs": [
-          "studio",
-          "workshop",
-          "oltre-il-confine-workshop-intensivo-di-teatro-danza"
+          "people",
+          "progetti",
+          "spring"
         ]
       }
     ],
     "urls": [
       {
         "locale": "en",
-        "url": "studio/workshop/oltre-il-confine-workshop-intensivo-di-teatro-danza"
+        "url": "people/projects/spring"
       },
       {
         "locale": "it",
-        "url": "studio/workshop/oltre-il-confine-workshop-intensivo-di-teatro-danza"
-      }
-    ]
-  },
-  {
-    "id": "99590685",
-    "slugs": {
-      "en": [
-        "studio",
-        "workshop",
-        "practice-ina"
-      ],
-      "it": [
-        "studio",
-        "workshop",
-        "practice-ina"
-      ]
-    },
-    "isIndex": false,
-    "indexType": "",
-    "__typename": "workshop",
-    "group": "workshops",
-    "paths": [
-      {
-        "locale": "en",
-        "slugs": [
-          "studio",
-          "workshop",
-          "practice-ina"
-        ]
-      },
-      {
-        "locale": "it",
-        "slugs": [
-          "studio",
-          "workshop",
-          "practice-ina"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "en",
-        "url": "studio/workshop/practice-ina"
-      },
-      {
-        "locale": "it",
-        "url": "studio/workshop/practice-ina"
-      }
-    ]
-  },
-  {
-    "id": "99588388",
-    "slugs": {
-      "en": [
-        "studio",
-        "workshop",
-        "laboratorio-di-ricerca-corporea"
-      ],
-      "it": [
-        "studio",
-        "workshop",
-        "laboratorio-di-ricerca-corporea"
-      ]
-    },
-    "isIndex": false,
-    "indexType": "",
-    "__typename": "workshop",
-    "group": "workshops",
-    "paths": [
-      {
-        "locale": "en",
-        "slugs": [
-          "studio",
-          "workshop",
-          "laboratorio-di-ricerca-corporea"
-        ]
-      },
-      {
-        "locale": "it",
-        "slugs": [
-          "studio",
-          "workshop",
-          "laboratorio-di-ricerca-corporea"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "en",
-        "url": "studio/workshop/laboratorio-di-ricerca-corporea"
-      },
-      {
-        "locale": "it",
-        "url": "studio/workshop/laboratorio-di-ricerca-corporea"
-      }
-    ]
-  },
-  {
-    "id": "99561377",
-    "slugs": {
-      "en": [
-        "studio",
-        "workshop",
-        "la-veronal-working-tools"
-      ],
-      "it": [
-        "studio",
-        "workshop",
-        "la-veronal-working-tools"
-      ]
-    },
-    "isIndex": false,
-    "indexType": "",
-    "__typename": "workshop",
-    "group": "workshops",
-    "paths": [
-      {
-        "locale": "en",
-        "slugs": [
-          "studio",
-          "workshop",
-          "la-veronal-working-tools"
-        ]
-      },
-      {
-        "locale": "it",
-        "slugs": [
-          "studio",
-          "workshop",
-          "la-veronal-working-tools"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "en",
-        "url": "studio/workshop/la-veronal-working-tools"
-      },
-      {
-        "locale": "it",
-        "url": "studio/workshop/la-veronal-working-tools"
+        "url": "people/progetti/spring"
       }
     ]
   },
@@ -4797,53 +5066,6 @@
     ]
   },
   {
-    "id": "99656719",
-    "slugs": {
-      "en": [
-        "people",
-        "projects",
-        "spring"
-      ],
-      "it": [
-        "people",
-        "progetti",
-        "spring"
-      ]
-    },
-    "isIndex": false,
-    "indexType": "",
-    "__typename": "project",
-    "group": "projects",
-    "paths": [
-      {
-        "locale": "en",
-        "slugs": [
-          "people",
-          "projects",
-          "spring"
-        ]
-      },
-      {
-        "locale": "it",
-        "slugs": [
-          "people",
-          "progetti",
-          "spring"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "en",
-        "url": "people/projects/spring"
-      },
-      {
-        "locale": "it",
-        "url": "people/progetti/spring"
-      }
-    ]
-  },
-  {
     "id": "99652254",
     "slugs": {
       "en": [
@@ -4985,100 +5207,6 @@
     ]
   },
   {
-    "id": "99652019",
-    "slugs": {
-      "en": [
-        "people",
-        "projects",
-        "rete-italiana-europe-beyond-access-2021-2023"
-      ],
-      "it": [
-        "people",
-        "progetti",
-        "rete-italiana-europe-beyond-access-2021-2023"
-      ]
-    },
-    "isIndex": false,
-    "indexType": "",
-    "__typename": "project",
-    "group": "projects",
-    "paths": [
-      {
-        "locale": "en",
-        "slugs": [
-          "people",
-          "projects",
-          "rete-italiana-europe-beyond-access-2021-2023"
-        ]
-      },
-      {
-        "locale": "it",
-        "slugs": [
-          "people",
-          "progetti",
-          "rete-italiana-europe-beyond-access-2021-2023"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "en",
-        "url": "people/projects/rete-italiana-europe-beyond-access-2021-2023"
-      },
-      {
-        "locale": "it",
-        "url": "people/progetti/rete-italiana-europe-beyond-access-2021-2023"
-      }
-    ]
-  },
-  {
-    "id": "99641013",
-    "slugs": {
-      "en": [
-        "people",
-        "projects",
-        "crossing-the-sea"
-      ],
-      "it": [
-        "people",
-        "progetti",
-        "crossing-the-sea"
-      ]
-    },
-    "isIndex": false,
-    "indexType": "",
-    "__typename": "project",
-    "group": "projects",
-    "paths": [
-      {
-        "locale": "en",
-        "slugs": [
-          "people",
-          "projects",
-          "crossing-the-sea"
-        ]
-      },
-      {
-        "locale": "it",
-        "slugs": [
-          "people",
-          "progetti",
-          "crossing-the-sea"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "en",
-        "url": "people/projects/crossing-the-sea"
-      },
-      {
-        "locale": "it",
-        "url": "people/progetti/crossing-the-sea"
-      }
-    ]
-  },
-  {
     "id": "99639463",
     "slugs": {
       "en": [
@@ -5122,53 +5250,6 @@
       {
         "locale": "it",
         "url": "people/progetti/eba-europe-beyond-access"
-      }
-    ]
-  },
-  {
-    "id": "99638384",
-    "slugs": {
-      "en": [
-        "people",
-        "projects",
-        "impart"
-      ],
-      "it": [
-        "people",
-        "progetti",
-        "impart"
-      ]
-    },
-    "isIndex": false,
-    "indexType": "",
-    "__typename": "project",
-    "group": "projects",
-    "paths": [
-      {
-        "locale": "en",
-        "slugs": [
-          "people",
-          "projects",
-          "impart"
-        ]
-      },
-      {
-        "locale": "it",
-        "slugs": [
-          "people",
-          "progetti",
-          "impart"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "en",
-        "url": "people/projects/impart"
-      },
-      {
-        "locale": "it",
-        "url": "people/progetti/impart"
       }
     ]
   },
