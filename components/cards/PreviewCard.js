@@ -2,7 +2,7 @@ import { Image as DatoImage } from 'react-datocms';
 import Link from 'next/link';
 import { LocationMarkerIcon, CalendarIcon } from '@heroicons/react/outline';
 
-import { resolveLinkById, formatDate, groupDatesByDay } from 'lib/utils';
+import { resolveLinkById, groupDatesByDay } from 'lib/utils';
 
 function PreviewCard({ data, locale, group = null, year }) {
   let categoryTitle;
@@ -28,7 +28,7 @@ function PreviewCard({ data, locale, group = null, year }) {
               {datesGrouped.map((str) => (
                 <div className="hidden md:flex gap-x-2 items-center" key={str}>
                   <CalendarIcon aria-hidden="true" className="w-4 h-4" />
-                  <span className="md:pr-1 normal-case font-light">{str}</span>
+                  <span className="md:pr-1 font-light capitalize">{str}</span>
                 </div>
               ))}
               {/* {data.dates.map((d) => (
@@ -96,7 +96,7 @@ function PreviewCard({ data, locale, group = null, year }) {
                 aria-hidden="true"
                 className="w-3 h-4 mr-1 text-black"
               />
-              <div className="text-xxs">{d}</div>
+              <div className="text-xxs capitalize">{d}</div>
             </div>
           ))}
           {data.location && (

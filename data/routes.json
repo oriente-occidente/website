@@ -742,53 +742,6 @@
     ]
   },
   {
-    "id": "102389123",
-    "slugs": {
-      "en": [
-        "festival",
-        "program",
-        "habitus"
-      ],
-      "it": [
-        "festival",
-        "programma",
-        "habitus"
-      ]
-    },
-    "isIndex": false,
-    "indexType": "",
-    "__typename": "event",
-    "group": "festival-events",
-    "paths": [
-      {
-        "locale": "en",
-        "slugs": [
-          "festival",
-          "program",
-          "habitus"
-        ]
-      },
-      {
-        "locale": "it",
-        "slugs": [
-          "festival",
-          "programma",
-          "habitus"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "en",
-        "url": "festival/program/habitus"
-      },
-      {
-        "locale": "it",
-        "url": "festival/programma/habitus"
-      }
-    ]
-  },
-  {
     "id": "96102059",
     "slugs": {
       "en": [
@@ -4032,17 +3985,17 @@
     ]
   },
   {
-    "id": "102744871",
+    "id": "102388104",
     "slugs": {
       "en": [
         "people",
         "events",
-        "oltrepassare-sconfinamenti"
+        "trigger"
       ],
       "it": [
         "people",
         "eventi",
-        "oltrepassare-sconfinamenti"
+        "trigger"
       ]
     },
     "isIndex": false,
@@ -4055,7 +4008,7 @@
         "slugs": [
           "people",
           "events",
-          "oltrepassare-sconfinamenti"
+          "trigger"
         ]
       },
       {
@@ -4063,18 +4016,18 @@
         "slugs": [
           "people",
           "eventi",
-          "oltrepassare-sconfinamenti"
+          "trigger"
         ]
       }
     ],
     "urls": [
       {
         "locale": "en",
-        "url": "people/events/oltrepassare-sconfinamenti"
+        "url": "people/events/trigger"
       },
       {
         "locale": "it",
-        "url": "people/eventi/oltrepassare-sconfinamenti"
+        "url": "people/eventi/trigger"
       }
     ]
   },
@@ -4126,6 +4079,100 @@
     ]
   },
   {
+    "id": "102744871",
+    "slugs": {
+      "en": [
+        "people",
+        "events",
+        "oltrepassare-sconfinamenti"
+      ],
+      "it": [
+        "people",
+        "eventi",
+        "oltrepassare-sconfinamenti"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "event",
+    "group": "other-events",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "people",
+          "events",
+          "oltrepassare-sconfinamenti"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "people",
+          "eventi",
+          "oltrepassare-sconfinamenti"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "people/events/oltrepassare-sconfinamenti"
+      },
+      {
+        "locale": "it",
+        "url": "people/eventi/oltrepassare-sconfinamenti"
+      }
+    ]
+  },
+  {
+    "id": "102389123",
+    "slugs": {
+      "en": [
+        "people",
+        "events",
+        "habitus"
+      ],
+      "it": [
+        "people",
+        "eventi",
+        "habitus"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "event",
+    "group": "other-events",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "people",
+          "events",
+          "habitus"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "people",
+          "eventi",
+          "habitus"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "people/events/habitus"
+      },
+      {
+        "locale": "it",
+        "url": "people/eventi/habitus"
+      }
+    ]
+  },
+  {
     "id": "102387137",
     "slugs": {
       "en": [
@@ -4169,100 +4216,6 @@
       {
         "locale": "it",
         "url": "people/eventi/ombelichi-tenui"
-      }
-    ]
-  },
-  {
-    "id": "102388104",
-    "slugs": {
-      "en": [
-        "people",
-        "events",
-        "trigger"
-      ],
-      "it": [
-        "people",
-        "eventi",
-        "trigger"
-      ]
-    },
-    "isIndex": false,
-    "indexType": "",
-    "__typename": "event",
-    "group": "other-events",
-    "paths": [
-      {
-        "locale": "en",
-        "slugs": [
-          "people",
-          "events",
-          "trigger"
-        ]
-      },
-      {
-        "locale": "it",
-        "slugs": [
-          "people",
-          "eventi",
-          "trigger"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "en",
-        "url": "people/events/trigger"
-      },
-      {
-        "locale": "it",
-        "url": "people/eventi/trigger"
-      }
-    ]
-  },
-  {
-    "id": "97539633",
-    "slugs": {
-      "en": [
-        "studio",
-        "workshop",
-        "masterclass-sidi-larbi-cherkaoui-repertory-fractus-v"
-      ],
-      "it": [
-        "studio",
-        "workshop",
-        "masterclass-sidi-larbi-cherkaoui-repertory-fractus-v"
-      ]
-    },
-    "isIndex": false,
-    "indexType": "",
-    "__typename": "workshop",
-    "group": "workshops",
-    "paths": [
-      {
-        "locale": "en",
-        "slugs": [
-          "studio",
-          "workshop",
-          "masterclass-sidi-larbi-cherkaoui-repertory-fractus-v"
-        ]
-      },
-      {
-        "locale": "it",
-        "slugs": [
-          "studio",
-          "workshop",
-          "masterclass-sidi-larbi-cherkaoui-repertory-fractus-v"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "en",
-        "url": "studio/workshop/masterclass-sidi-larbi-cherkaoui-repertory-fractus-v"
-      },
-      {
-        "locale": "it",
-        "url": "studio/workshop/masterclass-sidi-larbi-cherkaoui-repertory-fractus-v"
       }
     ]
   },
@@ -4502,100 +4455,6 @@
     ]
   },
   {
-    "id": "98949094",
-    "slugs": {
-      "en": [
-        "studio",
-        "workshop",
-        "as-far-as-the-imagination-can-reach-using-a-piece-of-string-workshop-2022"
-      ],
-      "it": [
-        "studio",
-        "workshop",
-        "as-far-as-the-imagination-can-reach-using-a-piece-of-string-workshop-2022"
-      ]
-    },
-    "isIndex": false,
-    "indexType": "",
-    "__typename": "workshop",
-    "group": "workshops",
-    "paths": [
-      {
-        "locale": "en",
-        "slugs": [
-          "studio",
-          "workshop",
-          "as-far-as-the-imagination-can-reach-using-a-piece-of-string-workshop-2022"
-        ]
-      },
-      {
-        "locale": "it",
-        "slugs": [
-          "studio",
-          "workshop",
-          "as-far-as-the-imagination-can-reach-using-a-piece-of-string-workshop-2022"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "en",
-        "url": "studio/workshop/as-far-as-the-imagination-can-reach-using-a-piece-of-string-workshop-2022"
-      },
-      {
-        "locale": "it",
-        "url": "studio/workshop/as-far-as-the-imagination-can-reach-using-a-piece-of-string-workshop-2022"
-      }
-    ]
-  },
-  {
-    "id": "99561377",
-    "slugs": {
-      "en": [
-        "studio",
-        "workshop",
-        "la-veronal-working-tools"
-      ],
-      "it": [
-        "studio",
-        "workshop",
-        "la-veronal-working-tools"
-      ]
-    },
-    "isIndex": false,
-    "indexType": "",
-    "__typename": "workshop",
-    "group": "workshops",
-    "paths": [
-      {
-        "locale": "en",
-        "slugs": [
-          "studio",
-          "workshop",
-          "la-veronal-working-tools"
-        ]
-      },
-      {
-        "locale": "it",
-        "slugs": [
-          "studio",
-          "workshop",
-          "la-veronal-working-tools"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "en",
-        "url": "studio/workshop/la-veronal-working-tools"
-      },
-      {
-        "locale": "it",
-        "url": "studio/workshop/la-veronal-working-tools"
-      }
-    ]
-  },
-  {
     "id": "85752360",
     "slugs": {
       "en": [
@@ -4690,17 +4549,236 @@
     ]
   },
   {
-    "id": "99652019",
+    "id": "98949094",
+    "slugs": {
+      "en": [
+        "studio",
+        "workshop",
+        "as-far-as-the-imagination-can-reach-using-a-piece-of-string-workshop-2022"
+      ],
+      "it": [
+        "studio",
+        "workshop",
+        "as-far-as-the-imagination-can-reach-using-a-piece-of-string-workshop-2022"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "workshop",
+    "group": "workshops",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "studio",
+          "workshop",
+          "as-far-as-the-imagination-can-reach-using-a-piece-of-string-workshop-2022"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "studio",
+          "workshop",
+          "as-far-as-the-imagination-can-reach-using-a-piece-of-string-workshop-2022"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "studio/workshop/as-far-as-the-imagination-can-reach-using-a-piece-of-string-workshop-2022"
+      },
+      {
+        "locale": "it",
+        "url": "studio/workshop/as-far-as-the-imagination-can-reach-using-a-piece-of-string-workshop-2022"
+      }
+    ]
+  },
+  {
+    "id": "99561377",
+    "slugs": {
+      "en": [
+        "studio",
+        "workshop",
+        "la-veronal-working-tools"
+      ],
+      "it": [
+        "studio",
+        "workshop",
+        "la-veronal-working-tools"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "workshop",
+    "group": "workshops",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "studio",
+          "workshop",
+          "la-veronal-working-tools"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "studio",
+          "workshop",
+          "la-veronal-working-tools"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "studio/workshop/la-veronal-working-tools"
+      },
+      {
+        "locale": "it",
+        "url": "studio/workshop/la-veronal-working-tools"
+      }
+    ]
+  },
+  {
+    "id": "97539633",
+    "slugs": {
+      "en": [
+        "studio",
+        "workshop",
+        "masterclass-sidi-larbi-cherkaoui-repertory-fractus-v"
+      ],
+      "it": [
+        "studio",
+        "workshop",
+        "masterclass-sidi-larbi-cherkaoui-repertory-fractus-v"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "workshop",
+    "group": "workshops",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "studio",
+          "workshop",
+          "masterclass-sidi-larbi-cherkaoui-repertory-fractus-v"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "studio",
+          "workshop",
+          "masterclass-sidi-larbi-cherkaoui-repertory-fractus-v"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "studio/workshop/masterclass-sidi-larbi-cherkaoui-repertory-fractus-v"
+      },
+      {
+        "locale": "it",
+        "url": "studio/workshop/masterclass-sidi-larbi-cherkaoui-repertory-fractus-v"
+      }
+    ]
+  },
+  {
+    "id": "104434820",
+    "slugs": {
+      "en": [
+        "lab-eba-europe-beyond-access"
+      ],
+      "it": [
+        "lab-eba-europe-beyond-access"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "workshop",
+    "group": "courses",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "lab-eba-europe-beyond-access"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "lab-eba-europe-beyond-access"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "lab-eba-europe-beyond-access"
+      },
+      {
+        "locale": "it",
+        "url": "lab-eba-europe-beyond-access"
+      }
+    ]
+  },
+  {
+    "id": "104435605",
+    "slugs": {
+      "en": [
+        "lab-impart"
+      ],
+      "it": [
+        "lab-impart-ripensare-il-palcoscenico"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "workshop",
+    "group": "courses",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "lab-impart"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "lab-impart-ripensare-il-palcoscenico"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "lab-impart"
+      },
+      {
+        "locale": "it",
+        "url": "lab-impart-ripensare-il-palcoscenico"
+      }
+    ]
+  },
+  {
+    "id": "104438524",
     "slugs": {
       "en": [
         "people",
         "projects",
-        "rete-italiana-europe-beyond-access-2021-2023"
+        "save-energy-dance-more"
       ],
       "it": [
         "people",
         "progetti",
-        "rete-italiana-europe-beyond-access-2021-2023"
+        "save-energy-dance-more"
       ]
     },
     "isIndex": false,
@@ -4713,7 +4791,7 @@
         "slugs": [
           "people",
           "projects",
-          "rete-italiana-europe-beyond-access-2021-2023"
+          "save-energy-dance-more"
         ]
       },
       {
@@ -4721,18 +4799,65 @@
         "slugs": [
           "people",
           "progetti",
-          "rete-italiana-europe-beyond-access-2021-2023"
+          "save-energy-dance-more"
         ]
       }
     ],
     "urls": [
       {
         "locale": "en",
-        "url": "people/projects/rete-italiana-europe-beyond-access-2021-2023"
+        "url": "people/projects/save-energy-dance-more"
       },
       {
         "locale": "it",
-        "url": "people/progetti/rete-italiana-europe-beyond-access-2021-2023"
+        "url": "people/progetti/save-energy-dance-more"
+      }
+    ]
+  },
+  {
+    "id": "104436377",
+    "slugs": {
+      "en": [
+        "people",
+        "projects",
+        "un-grand-jete-tra-le-pagine-e-il-palco"
+      ],
+      "it": [
+        "people",
+        "progetti",
+        "un-grand-jete-tra-le-pagine-e-il-palco"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "project",
+    "group": "projects",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "people",
+          "projects",
+          "un-grand-jete-tra-le-pagine-e-il-palco"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "people",
+          "progetti",
+          "un-grand-jete-tra-le-pagine-e-il-palco"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "people/projects/un-grand-jete-tra-le-pagine-e-il-palco"
+      },
+      {
+        "locale": "it",
+        "url": "people/progetti/un-grand-jete-tra-le-pagine-e-il-palco"
       }
     ]
   },
@@ -4784,6 +4909,147 @@
     ]
   },
   {
+    "id": "99639463",
+    "slugs": {
+      "en": [
+        "people",
+        "projects",
+        "eba-europe-beyond-access"
+      ],
+      "it": [
+        "people",
+        "progetti",
+        "eba-europe-beyond-access"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "project",
+    "group": "projects",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "people",
+          "projects",
+          "eba-europe-beyond-access"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "people",
+          "progetti",
+          "eba-europe-beyond-access"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "people/projects/eba-europe-beyond-access"
+      },
+      {
+        "locale": "it",
+        "url": "people/progetti/eba-europe-beyond-access"
+      }
+    ]
+  },
+  {
+    "id": "99592452",
+    "slugs": {
+      "en": [
+        "people",
+        "projects",
+        "moving-beyond-inclusion"
+      ],
+      "it": [
+        "people",
+        "progetti",
+        "moving-beyond-inclusion"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "project",
+    "group": "projects",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "people",
+          "projects",
+          "moving-beyond-inclusion"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "people",
+          "progetti",
+          "moving-beyond-inclusion"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "people/projects/moving-beyond-inclusion"
+      },
+      {
+        "locale": "it",
+        "url": "people/progetti/moving-beyond-inclusion"
+      }
+    ]
+  },
+  {
+    "id": "99652172",
+    "slugs": {
+      "en": [
+        "people",
+        "projects",
+        "dimmi-cosa-vuoi-vedere"
+      ],
+      "it": [
+        "people",
+        "progetti",
+        "dimmi-cosa-vuoi-vedere"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "project",
+    "group": "projects",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "people",
+          "projects",
+          "dimmi-cosa-vuoi-vedere"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "people",
+          "progetti",
+          "dimmi-cosa-vuoi-vedere"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "people/projects/dimmi-cosa-vuoi-vedere"
+      },
+      {
+        "locale": "it",
+        "url": "people/progetti/dimmi-cosa-vuoi-vedere"
+      }
+    ]
+  },
+  {
     "id": "99641013",
     "slugs": {
       "en": [
@@ -4827,6 +5093,53 @@
       {
         "locale": "it",
         "url": "people/progetti/crossing-the-sea"
+      }
+    ]
+  },
+  {
+    "id": "99652019",
+    "slugs": {
+      "en": [
+        "people",
+        "projects",
+        "rete-italiana-europe-beyond-access-2021-2023"
+      ],
+      "it": [
+        "people",
+        "progetti",
+        "rete-italiana-europe-beyond-access-2021-2023"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "project",
+    "group": "projects",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "people",
+          "projects",
+          "rete-italiana-europe-beyond-access-2021-2023"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "people",
+          "progetti",
+          "rete-italiana-europe-beyond-access-2021-2023"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "people/projects/rete-italiana-europe-beyond-access-2021-2023"
+      },
+      {
+        "locale": "it",
+        "url": "people/progetti/rete-italiana-europe-beyond-access-2021-2023"
       }
     ]
   },
@@ -4972,100 +5285,6 @@
     ]
   },
   {
-    "id": "99592452",
-    "slugs": {
-      "en": [
-        "people",
-        "projects",
-        "moving-beyond-inclusion"
-      ],
-      "it": [
-        "people",
-        "progetti",
-        "moving-beyond-inclusion"
-      ]
-    },
-    "isIndex": false,
-    "indexType": "",
-    "__typename": "project",
-    "group": "projects",
-    "paths": [
-      {
-        "locale": "en",
-        "slugs": [
-          "people",
-          "projects",
-          "moving-beyond-inclusion"
-        ]
-      },
-      {
-        "locale": "it",
-        "slugs": [
-          "people",
-          "progetti",
-          "moving-beyond-inclusion"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "en",
-        "url": "people/projects/moving-beyond-inclusion"
-      },
-      {
-        "locale": "it",
-        "url": "people/progetti/moving-beyond-inclusion"
-      }
-    ]
-  },
-  {
-    "id": "99652172",
-    "slugs": {
-      "en": [
-        "people",
-        "projects",
-        "dimmi-cosa-vuoi-vedere"
-      ],
-      "it": [
-        "people",
-        "progetti",
-        "dimmi-cosa-vuoi-vedere"
-      ]
-    },
-    "isIndex": false,
-    "indexType": "",
-    "__typename": "project",
-    "group": "projects",
-    "paths": [
-      {
-        "locale": "en",
-        "slugs": [
-          "people",
-          "projects",
-          "dimmi-cosa-vuoi-vedere"
-        ]
-      },
-      {
-        "locale": "it",
-        "slugs": [
-          "people",
-          "progetti",
-          "dimmi-cosa-vuoi-vedere"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "en",
-        "url": "people/projects/dimmi-cosa-vuoi-vedere"
-      },
-      {
-        "locale": "it",
-        "url": "people/progetti/dimmi-cosa-vuoi-vedere"
-      }
-    ]
-  },
-  {
     "id": "99652254",
     "slugs": {
       "en": [
@@ -5203,53 +5422,6 @@
       {
         "locale": "it",
         "url": "people/progetti/nobody-nobody-nobody-it-s-ok-not-to-be-ok-collective-experience"
-      }
-    ]
-  },
-  {
-    "id": "99639463",
-    "slugs": {
-      "en": [
-        "people",
-        "projects",
-        "eba-europe-beyond-access"
-      ],
-      "it": [
-        "people",
-        "progetti",
-        "eba-europe-beyond-access"
-      ]
-    },
-    "isIndex": false,
-    "indexType": "",
-    "__typename": "project",
-    "group": "projects",
-    "paths": [
-      {
-        "locale": "en",
-        "slugs": [
-          "people",
-          "projects",
-          "eba-europe-beyond-access"
-        ]
-      },
-      {
-        "locale": "it",
-        "slugs": [
-          "people",
-          "progetti",
-          "eba-europe-beyond-access"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "en",
-        "url": "people/projects/eba-europe-beyond-access"
-      },
-      {
-        "locale": "it",
-        "url": "people/progetti/eba-europe-beyond-access"
       }
     ]
   },

@@ -2,25 +2,31 @@ import { Image as DatoImage } from 'react-datocms';
 import Link from 'next/link';
 import { LocationMarkerIcon, CalendarIcon } from '@heroicons/react/outline';
 
-import { resolveLinkById, showDates } from 'lib/utils';
+import { resolveLinkById, groupDatesByDay } from 'lib/utils';
 
 function StandardCard({ data, locale, categoryTitle }) {
   const image = data.imageHero;
+  const datesGrouped = data.dates ? groupDatesByDay(data.dates, locale) : [];
   return (
     <div className="pb-8 md:pb-0">
       <Link href={resolveLinkById(data.id, locale)} locale={locale}>
         <a title={data.title} className="group">
           <div className="relative">
             <div className="absolute z-20 left-4 md:left-8 bottom-2 md:bottom-6 top-auto text-white uppercase text-xxs md:text-xs font-semibold">
-              <span>{categoryTitle}</span>
-              {data.dates && (
-                <div className="hidden md:flex gap-x-2 items-center">
+              {datesGrouped.map((str) => (
+                <div className="hidden md:flex gap-x-2 items-center" key={str}>
                   <CalendarIcon aria-hidden="true" className="w-4 h-4" />
-                  <span className="hidden md:block normal-case font-light">
-                    {showDates(data.dates, locale)}
-                  </span>
+                  <span className="md:pr-1 font-light capitalize">{str}</span>
                 </div>
-              )}
+              ))}
+              {/* {data.dates && (
+                <div className="hidden md:flex gap-x-2 items-center">
+                <CalendarIcon aria-hidden="true" className="w-4 h-4" />
+                <span className="hidden md:block normal-case font-light">
+                {showDates(data.dates, locale)}
+                </span>
+                </div>
+              )} */}
               {data.location && (
                 <div className="hidden md:flex gap-x-2 items-center">
                   <LocationMarkerIcon aria-hidden="true" className="w-4 h-4" />
@@ -29,6 +35,7 @@ function StandardCard({ data, locale, categoryTitle }) {
                   </span>
                 </div>
               )}
+              <span>{categoryTitle}</span>
             </div>
             {image != null ? (
               <div className="overflow-hidden">
@@ -53,17 +60,35 @@ function StandardCard({ data, locale, categoryTitle }) {
               </div>
             )}
           </div>
-          {data.dates && (
+          {/* {data.dates && (
             <div className="md:hidden flex gap-1 items-center">
-              <CalendarIcon aria-hidden="true" className="w-3 h-4 mr-1 text-black" />
+              <CalendarIcon
+                aria-hidden="true"
+                className="w-3 h-4 mr-1 text-black"
+              />
               <h3 className="inline-block md:hidden normal-case text-xxs">
                 {showDates(data.dates, locale)}
               </h3>
             </div>
-          )}
+          )} */}
+          {datesGrouped.map((d) => (
+            <div
+              className="md:hidden flex gap-1 items-center"
+              key={'descr_' + d}
+            >
+              <CalendarIcon
+                aria-hidden="true"
+                className="w-3 h-4 mr-1 text-black"
+              />
+              <div className="text-xxs capitalize">{d}</div>
+            </div>
+          ))}
           {data.location && (
             <div className="md:hidden flex gap-1 items-center">
-              <LocationMarkerIcon aria-hidden="true" className="w-3 h-4 mr-1 text-black" />
+              <LocationMarkerIcon
+                aria-hidden="true"
+                className="w-3 h-4 mr-1 text-black"
+              />
               <div className="inline-block md:hidden normal-case text-xxs">
                 {data.location}
               </div>
