@@ -8,10 +8,10 @@ export default function Team({ locale, data }) {
   console.log('Team data:', data);
   return (
     <div className="mb-4 w-[49%] lg:w-[32%] custom-nth-child">
-      {data.image && (
+      {data.image?.responsiveImage && (
         <Image
           className=""
-          data={data.image?.responsiveImage}
+          data={data.image.responsiveImage}
           alt={data.image.alt}
           title={data.image.title}
         />

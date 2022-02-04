@@ -194,6 +194,30 @@
   {
     "routes": [
       "info",
+      "staff"
+    ],
+    "link": {
+      "__typename": "PageRecord",
+      "id": "103822814",
+      "slug": "staff",
+      "slugs": [
+        {
+          "locale": "en",
+          "slug": "staff"
+        },
+        {
+          "locale": "it",
+          "slug": "staff"
+        }
+      ],
+      "indexType": "",
+      "isIndex": false
+    },
+    "lang": "it"
+  },
+  {
+    "routes": [
+      "info",
       "accessibilita"
     ],
     "link": {
@@ -566,6 +590,30 @@
         {
           "locale": "it",
           "slug": "chi-siamo"
+        }
+      ],
+      "indexType": "",
+      "isIndex": false
+    },
+    "lang": "en"
+  },
+  {
+    "routes": [
+      "info",
+      "staff"
+    ],
+    "link": {
+      "__typename": "PageRecord",
+      "id": "103822814",
+      "slug": "staff",
+      "slugs": [
+        {
+          "locale": "en",
+          "slug": "staff"
+        },
+        {
+          "locale": "it",
+          "slug": "staff"
         }
       ],
       "indexType": "",

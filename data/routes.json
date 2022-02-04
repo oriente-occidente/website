@@ -622,6 +622,48 @@
     ]
   },
   {
+    "id": "103822814",
+    "isIndex": false,
+    "indexType": "",
+    "slugs": {
+      "it": [
+        "info",
+        "staff"
+      ],
+      "en": [
+        "info",
+        "staff"
+      ]
+    },
+    "__typename": "page",
+    "paths": [
+      {
+        "locale": "it",
+        "slugs": [
+          "info",
+          "staff"
+        ]
+      },
+      {
+        "locale": "en",
+        "slugs": [
+          "info",
+          "staff"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "it",
+        "url": "info/staff"
+      },
+      {
+        "locale": "en",
+        "url": "info/staff"
+      }
+    ]
+  },
+  {
     "id": "103872435",
     "isIndex": false,
     "indexType": "",
@@ -699,45 +741,6 @@
       {
         "locale": "it",
         "url": "informativa-privacy"
-      }
-    ]
-  },
-  {
-    "id": "103822814",
-    "slugs": {
-      "en": [
-        "staff"
-      ],
-      "it": [
-        "staff"
-      ]
-    },
-    "isIndex": false,
-    "indexType": "",
-    "__typename": "page",
-    "group": "page",
-    "paths": [
-      {
-        "locale": "en",
-        "slugs": [
-          "staff"
-        ]
-      },
-      {
-        "locale": "it",
-        "slugs": [
-          "staff"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "en",
-        "url": "staff"
-      },
-      {
-        "locale": "it",
-        "url": "staff"
       }
     ]
   },
