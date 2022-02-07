@@ -1,10 +1,10 @@
-const nodeEnv = process.env.NODE_ENV || 'develop';
-if (nodeEnv === 'develop') {
-  require('dotenv').config({ path: '.env.local' });
+const nodeEnv = process.env.NODE_ENV || "develop";
+if (nodeEnv === "develop") {
+  require("dotenv").config({ path: ".env.local" });
 }
-const fs = require('fs');
-const _ = require('lodash');
-const { doQuery, allRecords } = require('./dato');
+const fs = require("fs");
+const _ = require("lodash");
+const { doQuery, allRecords } = require("./dato");
 
 const getLocales = async () => {
   return doQuery(`query locales { site:_site{ locales } }`);
@@ -171,7 +171,6 @@ const generateRoutes = async () => {
 
   const linkedPagesIds = menuRoutes.map((i) => i.link?.id).filter(Boolean);
   const ids = _.uniq(linkedPagesIds);
-<<<<<<< HEAD
   const menuList = menuRoutes
     .map((route) => {
       const { lang, routes: slugs, link } = route;
@@ -182,19 +181,7 @@ const generateRoutes = async () => {
       return null;
     })
     .filter(Boolean);
-  let menuGrouped = _.groupBy(menuList, 'id');
-=======
-  const menuList = menuRoutes.map((route) => {
-    const {
-      lang,
-      routes: slugs,
-      link: { id, indexType, isIndex },
-    } = route;
-
-    return { id, indexType, isIndex, lang, slugs };
-  });
   let menuGrouped = _.groupBy(menuList, "id");
->>>>>>> 134468b (Run prettier plugin)
 
   const menu = _.values(menuGrouped).map((values) => {
     const slugs = values.reduce((merged, current) => {

@@ -1,6 +1,9 @@
 [
   {
-    "routes": ["festival", "programma"],
+    "routes": [
+      "festival",
+      "programma"
+    ],
     "link": {
       "__typename": "PageRecord",
       "id": "79074701",
@@ -21,7 +24,10 @@
     "lang": "it"
   },
   {
-    "routes": ["festival", "box-office"],
+    "routes": [
+      "festival",
+      "box-office"
+    ],
     "link": {
       "__typename": "PageRecord",
       "id": "79196174",
@@ -42,7 +48,10 @@
     "lang": "it"
   },
   {
-    "routes": ["studio", "artisti-associati"],
+    "routes": [
+      "studio",
+      "artisti-associati"
+    ],
     "link": {
       "__typename": "PageRecord",
       "id": "89012994",
@@ -63,7 +72,10 @@
     "lang": "it"
   },
   {
-    "routes": ["studio", "residenze-artistiche"],
+    "routes": [
+      "studio",
+      "residenze-artistiche"
+    ],
     "link": {
       "__typename": "PageRecord",
       "id": "79182550",
@@ -84,7 +96,10 @@
     "lang": "it"
   },
   {
-    "routes": ["studio", "workshop"],
+    "routes": [
+      "studio",
+      "workshop"
+    ],
     "link": {
       "__typename": "PageRecord",
       "id": "79196175",
@@ -105,7 +120,10 @@
     "lang": "it"
   },
   {
-    "routes": ["people", "eventi"],
+    "routes": [
+      "people",
+      "eventi"
+    ],
     "link": {
       "__typename": "PageRecord",
       "id": "79196189",
@@ -126,7 +144,10 @@
     "lang": "it"
   },
   {
-    "routes": ["people", "progetti"],
+    "routes": [
+      "people",
+      "progetti"
+    ],
     "link": {
       "__typename": "PageRecord",
       "id": "79196191",
@@ -147,7 +168,10 @@
     "lang": "it"
   },
   {
-    "routes": ["info", "chi-siamo"],
+    "routes": [
+      "info",
+      "chi-siamo"
+    ],
     "link": {
       "__typename": "PageRecord",
       "id": "79196196",
@@ -168,7 +192,10 @@
     "lang": "it"
   },
   {
-    "routes": ["info", "staff"],
+    "routes": [
+      "info",
+      "staff"
+    ],
     "link": {
       "__typename": "PageRecord",
       "id": "103822814",
@@ -189,7 +216,10 @@
     "lang": "it"
   },
   {
-    "routes": ["info", "accessibilita"],
+    "routes": [
+      "info",
+      "accessibilita"
+    ],
     "link": {
       "__typename": "PageRecord",
       "id": "102905880",
@@ -210,7 +240,10 @@
     "lang": "it"
   },
   {
-    "routes": ["info", "sostenibilita"],
+    "routes": [
+      "info",
+      "sostenibilita"
+    ],
     "link": {
       "__typename": "PageRecord",
       "id": "103091036",
@@ -231,7 +264,10 @@
     "lang": "it"
   },
   {
-    "routes": ["info", "collabora-con-noi"],
+    "routes": [
+      "info",
+      "collabora-con-noi"
+    ],
     "link": {
       "__typename": "PageRecord",
       "id": "103872435",
@@ -252,7 +288,10 @@
     "lang": "it"
   },
   {
-    "routes": ["info", "report"],
+    "routes": [
+      "info",
+      "report"
+    ],
     "link": {
       "__typename": "PageRecord",
       "id": "79196203",
@@ -273,7 +312,10 @@
     "lang": "it"
   },
   {
-    "routes": ["info", "partners"],
+    "routes": [
+      "info",
+      "partners"
+    ],
     "link": {
       "__typename": "PageRecord",
       "id": "79207456",
@@ -294,7 +336,10 @@
     "lang": "it"
   },
   {
-    "routes": ["info", "sicurezza-covid-19"],
+    "routes": [
+      "info",
+      "sicurezza-covid-19"
+    ],
     "link": {
       "__typename": "PageRecord",
       "id": "103172417",
@@ -315,7 +360,9 @@
     "lang": "it"
   },
   {
-    "routes": ["news"],
+    "routes": [
+      "news"
+    ],
     "link": {
       "__typename": "PageRecord",
       "id": "79196192",
@@ -336,7 +383,9 @@
     "lang": "it"
   },
   {
-    "routes": ["sostienici"],
+    "routes": [
+      "sostienici"
+    ],
     "link": {
       "__typename": "PageRecord",
       "id": "97420129",
@@ -357,7 +406,10 @@
     "lang": "it"
   },
   {
-    "routes": ["festival", "program"],
+    "routes": [
+      "festival",
+      "program"
+    ],
     "link": {
       "__typename": "PageRecord",
       "id": "79074701",
@@ -378,7 +430,10 @@
     "lang": "en"
   },
   {
-    "routes": ["festival", "box-office"],
+    "routes": [
+      "festival",
+      "box-office"
+    ],
     "link": {
       "__typename": "PageRecord",
       "id": "79196174",
@@ -399,7 +454,10 @@
     "lang": "en"
   },
   {
-    "routes": ["studio", "associated-artists"],
+    "routes": [
+      "studio",
+      "associated-artists"
+    ],
     "link": {
       "__typename": "PageRecord",
       "id": "89012994",
@@ -420,7 +478,10 @@
     "lang": "en"
   },
   {
-    "routes": ["studio", "artistic-residences"],
+    "routes": [
+      "studio",
+      "artistic-residences"
+    ],
     "link": {
       "__typename": "PageRecord",
       "id": "79182550",
@@ -441,7 +502,10 @@
     "lang": "en"
   },
   {
-    "routes": ["studio", "workshop"],
+    "routes": [
+      "studio",
+      "workshop"
+    ],
     "link": {
       "__typename": "PageRecord",
       "id": "79196175",
@@ -462,7 +526,10 @@
     "lang": "en"
   },
   {
-    "routes": ["people", "events"],
+    "routes": [
+      "people",
+      "events"
+    ],
     "link": {
       "__typename": "PageRecord",
       "id": "79196189",
@@ -483,7 +550,10 @@
     "lang": "en"
   },
   {
-    "routes": ["people", "projects"],
+    "routes": [
+      "people",
+      "projects"
+    ],
     "link": {
       "__typename": "PageRecord",
       "id": "79196191",
@@ -504,7 +574,10 @@
     "lang": "en"
   },
   {
-    "routes": ["info", "about-us"],
+    "routes": [
+      "info",
+      "about-us"
+    ],
     "link": {
       "__typename": "PageRecord",
       "id": "79196196",
@@ -525,7 +598,10 @@
     "lang": "en"
   },
   {
-    "routes": ["info", "staff"],
+    "routes": [
+      "info",
+      "staff"
+    ],
     "link": {
       "__typename": "PageRecord",
       "id": "103822814",
@@ -546,7 +622,10 @@
     "lang": "en"
   },
   {
-    "routes": ["info", "accessibility"],
+    "routes": [
+      "info",
+      "accessibility"
+    ],
     "link": {
       "__typename": "PageRecord",
       "id": "102905880",
@@ -567,7 +646,10 @@
     "lang": "en"
   },
   {
-    "routes": ["info", "sustainability"],
+    "routes": [
+      "info",
+      "sustainability"
+    ],
     "link": {
       "__typename": "PageRecord",
       "id": "103091036",
@@ -588,7 +670,10 @@
     "lang": "en"
   },
   {
-    "routes": ["info", "work-with-us"],
+    "routes": [
+      "info",
+      "work-with-us"
+    ],
     "link": {
       "__typename": "PageRecord",
       "id": "103872435",
@@ -609,7 +694,10 @@
     "lang": "en"
   },
   {
-    "routes": ["info", "report"],
+    "routes": [
+      "info",
+      "report"
+    ],
     "link": {
       "__typename": "PageRecord",
       "id": "79196203",
@@ -630,7 +718,10 @@
     "lang": "en"
   },
   {
-    "routes": ["info", "partners"],
+    "routes": [
+      "info",
+      "partners"
+    ],
     "link": {
       "__typename": "PageRecord",
       "id": "79207456",
@@ -651,7 +742,10 @@
     "lang": "en"
   },
   {
-    "routes": ["info", "safety-covid-19"],
+    "routes": [
+      "info",
+      "safety-covid-19"
+    ],
     "link": {
       "__typename": "PageRecord",
       "id": "103172417",
@@ -672,7 +766,9 @@
     "lang": "en"
   },
   {
-    "routes": ["news"],
+    "routes": [
+      "news"
+    ],
     "link": {
       "__typename": "PageRecord",
       "id": "79196192",
@@ -693,7 +789,9 @@
     "lang": "en"
   },
   {
-    "routes": ["support-us"],
+    "routes": [
+      "support-us"
+    ],
     "link": {
       "__typename": "PageRecord",
       "id": "97420129",
