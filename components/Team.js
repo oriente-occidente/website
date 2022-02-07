@@ -1,10 +1,7 @@
-import Link from "next/link";
-import { Image } from "react-datocms";
-import translate from "lib/locales";
+import { Image } from 'react-datocms';
 
 export default function Team({ locale, data }) {
   if (!data) return null;
-  console.log("Team data:", data);
   return (
     <div className="custom-nth-child mb-4 w-[49%] lg:w-[32%]">
       {data.image?.responsiveImage && (

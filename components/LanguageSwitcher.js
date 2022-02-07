@@ -45,3 +45,5 @@ function LanguageSwitcher({ locale, alts }) {
 }
 
 export default LanguageSwitcher;
+
+
