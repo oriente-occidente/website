@@ -1,12 +1,12 @@
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Autoplay } from 'swiper';
-import SwiperCore, { Pagination, Navigation } from 'swiper';
-import 'swiper/css';
-import 'swiper/css/pagination';
-import 'swiper/css/navigation';
-import 'swiper/css/autoplay';
-import 'swiper/css/effect-fade';
-import { Image as DatoImage } from 'react-datocms';
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay } from "swiper";
+import SwiperCore, { Pagination, Navigation } from "swiper";
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
+import "swiper/css/autoplay";
+import "swiper/css/effect-fade";
+import { Image as DatoImage } from "react-datocms";
 
 function HeroSlider({ slides }) {
   SwiperCore.use([Pagination, Navigation]);
@@ -16,9 +16,7 @@ function HeroSlider({ slides }) {
         modules={[Autoplay]}
         spaceBetween={0}
         speed={900}
-        loop={true}
         slidesPerView={1}
-        // autoplay={true}
         pagination={true}
         navigation={true}
         className="mySwiper"
@@ -29,17 +27,17 @@ function HeroSlider({ slides }) {
           return (
             <SwiperSlide key={id}>
               <DatoImage
-                className="h-80vh md:h-50vh xl:h-80vh object-cover"
+                className="h-80vh object-cover md:h-50vh xl:h-80vh"
                 data={responsiveImage}
                 alt={alt}
                 title={title}
               />
               <div className="container relative">
-                <h2 className="z-20 absolute bottom-16 md:bottom-12 2xl:bottom-24 font-normal w-4/5 md:w-2/3 xl:w-1/2 right-4 2xl:right-0 text-base md:text-lg xl:text-2xl text-white text-right">
+                <h2 className="absolute bottom-16 right-4 z-20 w-4/5 text-right text-base font-normal text-white md:bottom-12 md:w-2/3 md:text-lg xl:w-1/2 xl:text-2xl 2xl:bottom-24 2xl:right-0">
                   {slide.title}
                 </h2>
               </div>
-              <div className="absolute inset-0 bg-gradient-to-t z-10 from-black-lessTransparent to-transparent"></div>
+              <div className="absolute inset-0 z-10 bg-gradient-to-t from-black-lessTransparent to-transparent"></div>
             </SwiperSlide>
           );
         })}

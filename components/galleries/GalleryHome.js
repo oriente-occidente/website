@@ -1,12 +1,12 @@
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Autoplay } from 'swiper';
-import SwiperCore, { Navigation } from 'swiper';
-import 'swiper/css';
-import 'swiper/css/navigation';
-import 'swiper/css/autoplay';
-import 'swiper/css/effect-fade';
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay } from "swiper";
+import SwiperCore, { Navigation } from "swiper";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/autoplay";
+import "swiper/css/effect-fade";
 
-import HomeCard from 'components/cards/HomeCard';
+import HomeCard from "components/cards/HomeCard";
 
 function GalleryHome({ slides, background, locale }) {
   return (
@@ -15,10 +15,7 @@ function GalleryHome({ slides, background, locale }) {
         modules={[Autoplay]}
         spaceBetween={24}
         speed={900}
-        loop={true}
         slidesPerView={1.25}
-        // centeredSlides={true}
-        // autoplay={true}
         className="mySwiper"
         breakpoints={{
           1280: {
@@ -45,7 +42,7 @@ function GalleryHome({ slides, background, locale }) {
                 .map((cat) => {
                   return cat.title;
                 })
-                .join(', ');
+                .join(", ");
             } else {
               categoryTitle = category.title;
             }
@@ -55,7 +52,7 @@ function GalleryHome({ slides, background, locale }) {
               .map((event) => {
                 return event.startTime;
               })
-              .join(', ');
+              .join(", ");
           }
 
           return (

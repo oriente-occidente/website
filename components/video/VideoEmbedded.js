@@ -1,5 +1,5 @@
-import { useRef, useEffect, useState } from 'react';
-import ReactPlayer from 'react-player';
+import { useRef, useEffect, useState } from "react";
+import ReactPlayer from "react-player";
 
 function useWindowSize() {
   // Initialize state with undefined width/height so server and client renders match
@@ -18,11 +18,11 @@ function useWindowSize() {
       });
     }
     // Add event listener
-    window.addEventListener('resize', handleResize);
+    window.addEventListener("resize", handleResize);
     // Call handler right away so state gets updated with initial window size
     handleResize();
     // Remove event listener on cleanup
-    return () => window.removeEventListener('resize', handleResize);
+    return () => window.removeEventListener("resize", handleResize);
   }, []); // Empty array ensures that effect is only run on mount
   return windowSize;
 }
@@ -43,7 +43,7 @@ const VideoEmbedded = (props) => {
   }, [ref?.current, width, size]);
 
   return (
-    <div ref={ref} key={id} style={{ width: '100%', backgroundColor: '#000' }}>
+    <div ref={ref} key={id} style={{ width: "100%", backgroundColor: "#000" }}>
       {width && (
         <ReactPlayer
           controls={controls}

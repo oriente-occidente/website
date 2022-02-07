@@ -1,5 +1,5 @@
-import { useRef, useEffect } from 'react';
-import Hls from 'hls.js';
+import { useRef, useEffect } from "react";
+import Hls from "hls.js";
 
 export default function VideoPlayer({ src, autoplay = true, ...other }) {
   const ref = useRef();
@@ -20,7 +20,7 @@ export default function VideoPlayer({ src, autoplay = true, ...other }) {
 
   return (
     <div>
-      <video ref={ref} style={{ width: '100%' }} {...other} />
+      <video ref={ref} style={{ width: "100%" }} {...other} />
     </div>
   );
 }

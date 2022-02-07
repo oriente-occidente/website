@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600;800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600;800&display=swap");
 
 :root {
   --primary: #111;
@@ -27,18 +27,18 @@ html {
   height: 100%;
   box-sizing: border-box;
   touch-action: manipulation;
-  scroll-behavior: smooth
+  scroll-behavior: smooth;
 }
 @media (prefers-reduced-motion) {
   html {
-    scroll-behavior: auto
+    scroll-behavior: auto;
   }
 }
 
 html,
 body {
   color: var(--text-primary);
-  font-family: 'Poppins';
+  font-family: "Poppins";
 }
 
 a {
@@ -61,9 +61,9 @@ a {
 }
 
 .container {
-  @apply mx-auto my-0 px-4 md:px-6
+  @apply mx-auto my-0 px-4 md:px-6;
 }
 
 strong {
-  @apply font-semibold
+  @apply font-semibold;
 }

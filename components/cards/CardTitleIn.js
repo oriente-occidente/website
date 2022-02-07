@@ -1,7 +1,7 @@
-import { Image as DatoImage } from 'react-datocms';
-import Link from 'next/link';
+import { Image as DatoImage } from "react-datocms";
+import Link from "next/link";
 
-import { resolveLinkById, formatDate } from 'lib/utils';
+import { resolveLinkById, formatDate } from "lib/utils";
 
 function CardTitleIn({ locale, data }) {
   let categoryTitle;
@@ -12,7 +12,7 @@ function CardTitleIn({ locale, data }) {
         .map((cat) => {
           return cat.title;
         })
-        .join(', ');
+        .join(", ");
     } else {
       categoryTitle = data.category.title;
     }
@@ -22,22 +22,22 @@ function CardTitleIn({ locale, data }) {
       .map((event) => {
         return event.startTime;
       })
-      .join(', ');
+      .join(", ");
   }
 
   return (
     <div className="pb-8 md:pb-0">
       <Link href={resolveLinkById(data.id, locale)}>
         <a title={data.title}>
-          <div className="flex space-x-4 absolute z-20 left-4 md:left-8 md:bottom-8 top-48 md:top-auto text-white uppercase text-xxs md:text-xs font-semibold ">
+          <div className="absolute left-4 top-48 z-20 flex space-x-4 text-xxs font-semibold uppercase text-white md:left-8 md:bottom-8 md:top-auto md:text-xs ">
             <span>{categoryTitle}</span>
             {eventDate && (
-              <span className="hidden md:inline-block normal-case font-light">
+              <span className="hidden font-light normal-case md:inline-block">
                 {formatDate(data.eventDate, locale)}
               </span>
             )}
             {data.location && (
-              <span className="hidden md:inline-block normal-case font-light">
+              <span className="hidden font-light normal-case md:inline-block">
                 , {location}
               </span>
             )}
@@ -48,9 +48,9 @@ function CardTitleIn({ locale, data }) {
             alt={data.image.alt}
             title={data.image.title}
           />
-          <div className="absolute top-40 md:top-auto h-[65px] md:h-48 md:bottom-0 left-0 right-0 bg-gradient-to-t z-10 from-black-transparent-transparent to-transparent"></div>
-          <div className="hidden md:block absolute top-0 h-48 left-0 right-0 bg-gradient-to-b z-10 from-black-transparent-transparent to-transparent"></div>
-          <h2 className="text-sm z-20 md:text-lg uppercase text-black md:text-white font-semibold mt-2 md:absolute md:top-6 md:left-8 ">
+          <div className="from-black-transparent-transparent absolute top-40 left-0 right-0 z-10 h-[65px] bg-gradient-to-t to-transparent md:top-auto md:bottom-0 md:h-48"></div>
+          <div className="from-black-transparent-transparent absolute top-0 left-0 right-0 z-10 hidden h-48 bg-gradient-to-b to-transparent md:block"></div>
+          <h2 className="z-20 mt-2 text-sm font-semibold uppercase text-black md:absolute md:top-6 md:left-8 md:text-lg md:text-white ">
             {data.title}
           </h2>
           {eventDate && (

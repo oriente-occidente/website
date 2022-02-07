@@ -1,9 +1,9 @@
-import { MapContainer, Marker, Popup, TileLayer } from 'react-leaflet';
-import 'leaflet/dist/leaflet.css';
-import 'leaflet-defaulticon-compatibility/dist/leaflet-defaulticon-compatibility.css';
-import 'leaflet-defaulticon-compatibility';
+import { MapContainer, Marker, Popup, TileLayer } from "react-leaflet";
+import "leaflet/dist/leaflet.css";
+import "leaflet-defaulticon-compatibility/dist/leaflet-defaulticon-compatibility.css";
+import "leaflet-defaulticon-compatibility";
 
-const Map = ({ position, name = 'We are here' }) => {
+const Map = ({ position, name = "We are here" }) => {
   const layerUrl = `https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png`;
   const attributionText =
     '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors';
@@ -13,7 +13,7 @@ const Map = ({ position, name = 'We are here' }) => {
       center={position}
       zoom={14}
       scrollWheelZoom={false}
-      style={{ height: '100%', width: '100%' }}
+      style={{ height: "100%", width: "100%" }}
     >
       <TileLayer url={layerUrl} attribution={attributionText} />
       <Marker position={position}>

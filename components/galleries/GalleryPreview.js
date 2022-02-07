@@ -1,13 +1,13 @@
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Autoplay } from 'swiper';
-import SwiperCore, { Navigation } from 'swiper';
-import 'swiper/css';
-import 'swiper/css/navigation';
-import 'swiper/css/autoplay';
-import 'swiper/css/effect-fade';
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay } from "swiper";
+import SwiperCore, { Navigation } from "swiper";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/autoplay";
+import "swiper/css/effect-fade";
 
-import StandardCard from 'components/cards/StandardCard';
-import { closestInterval } from 'lib/utils';
+import StandardCard from "components/cards/StandardCard";
+import { closestInterval } from "lib/utils";
 
 function GalleryPreview({ slides, locale }) {
   return (
@@ -19,7 +19,6 @@ function GalleryPreview({ slides, locale }) {
         loop={true}
         slidesPerView={1.3}
         centeredSlides={true}
-        // autoplay={true}
         className="mySwiper"
         breakpoints={{
           1024: {
@@ -42,7 +41,7 @@ function GalleryPreview({ slides, locale }) {
                 .map((cat) => {
                   return cat.title;
                 })
-                .join(', ');
+                .join(", ");
             } else {
               categoryTitle = slide.category.title;
             }

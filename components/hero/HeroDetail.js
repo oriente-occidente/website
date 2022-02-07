@@ -1,10 +1,10 @@
-import { Image as DatoImage } from 'react-datocms';
-import { LocationMarkerIcon, CalendarIcon } from '@heroicons/react/outline';
+import { Image as DatoImage } from "react-datocms";
+import { LocationMarkerIcon, CalendarIcon } from "@heroicons/react/outline";
 // import dynamic from 'next/dynamic';
-import Gallery from 'components/galleries/Gallery';
-import BookButton from 'components/BookButton';
+import Gallery from "components/galleries/Gallery";
+import BookButton from "components/BookButton";
 
-import { formatDate } from 'lib/utils';
+import { formatDate } from "lib/utils";
 
 function HeroDetail({ data }) {
   const {
@@ -30,11 +30,11 @@ function HeroDetail({ data }) {
   // }
 
   return (
-    <header className="border-t md:border-none border-gray pb-10 md:py-0 md:grid md:grid-cols-4 md:gap-4 xl:container xl:mx-auto overflow-hidden">
+    <header className="overflow-hidden border-t border-gray pb-10 md:grid md:grid-cols-4 md:gap-4 md:border-none md:py-0 xl:container xl:mx-auto">
       <div className="border-b border-gray py-3 md:border-none md:pt-4 xl:pt-8">
         <div className="pl-4 xl:container">
           {isFestival == true ? (
-            <div className="uppercase text-black text-xxs font-semibold tracking-wider md:pb-2">
+            <div className="text-xxs font-semibold uppercase tracking-wider text-black md:pb-2">
               Festival
             </div>
           ) : null}
@@ -43,34 +43,34 @@ function HeroDetail({ data }) {
               {dateEvento.map((date) => (
                 <div
                   key={date.id}
-                  className="text-xxs text-black-light flex items-center"
+                  className="flex items-center text-xxs text-black-light"
                 >
-                  <CalendarIcon aria-hidden="true" className="w-4 h-4 mr-2" />
+                  <CalendarIcon aria-hidden="true" className="mr-2 h-4 w-4" />
                   {formatDate(date.startTime, locale, date.isDaily)}
                 </div>
               ))}
             </>
           ) : null}
           {location && (
-            <h2 className="text-xxs text-black-light mt-1 flex items-center">
-              <LocationMarkerIcon aria-hidden="true" className="w-4 h-4 mr-2" />
+            <h2 className="mt-1 flex items-center text-xxs text-black-light">
+              <LocationMarkerIcon aria-hidden="true" className="mr-2 h-4 w-4" />
               {location}
             </h2>
           )}
         </div>
       </div>
-      <div className="relative md:col-span-3 md:border-l md:border-color-gray xl:pt-4 md:col-start-2 lg:w-full">
-        <div className="md:flex md:justify-between md:items-flex-start px-4 md:px-12 pt-4">
+      <div className="md:border-color-gray relative md:col-span-3 md:col-start-2 md:border-l lg:w-full xl:pt-4">
+        <div className="md:items-flex-start px-4 pt-4 md:flex md:justify-between md:px-12">
           <div className="">
-            <h1 className="text-base lg:text-xl uppercase pt-1 pb-1">
+            <h1 className="pt-1 pb-1 text-base uppercase lg:text-xl">
               {titleHero}
             </h1>
             {authors && (
-              <h2 className="text-base lg:text-xl font-semibold mb-1 uppercase">
+              <h2 className="mb-1 text-base font-semibold uppercase lg:text-xl">
                 {authors}
               </h2>
             )}
-            <h2 className="text-base uppercase font-semibold">
+            <h2 className="text-base font-semibold uppercase">
               {descriptionHero}
             </h2>
           </div>
@@ -83,8 +83,8 @@ function HeroDetail({ data }) {
           )}
         </div>
 
-        <div className="mt-6 md:mt-8 pl-4 md:pl-0 xl:w-[calc(100%+3rem)] 2xl:w-[calc((100vw-((100vw-1380px)/2))-333px-1rem)]">
-          {slideshowHero != '' ? (
+        <div className="mt-6 pl-4 md:mt-8 md:pl-0 xl:w-[calc(100%+3rem)] 2xl:w-[calc((100vw-((100vw-1380px)/2))-333px-1rem)]">
+          {slideshowHero != "" ? (
             <Gallery slides={slideshowHero} />
           ) : imageHero ? (
             <DatoImage
@@ -96,7 +96,7 @@ function HeroDetail({ data }) {
           ) : null}
         </div>
 
-        <div className="hidden md:absolute top-0 h-full md:bottom-0 left-0 md:left-[25%] max-w-[1400px] right-1/2 bg-gradient-to-r z-10 from-black-transparent to-transparent"></div>
+        <div className="top-0 left-0 right-1/2 z-10 hidden h-full max-w-[1400px] bg-gradient-to-r from-black-transparent to-transparent md:absolute md:bottom-0 md:left-[25%]"></div>
       </div>
     </header>
   );

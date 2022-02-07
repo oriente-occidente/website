@@ -1,7 +1,7 @@
-import { useRouter } from 'next/router';
-import dayjs from 'dayjs';
+import { useRouter } from "next/router";
+import dayjs from "dayjs";
 
-import translate from 'lib/locales';
+import translate from "lib/locales";
 
 export default function BookButton({ locale, paymentSettings, id }) {
   const router = useRouter();
@@ -29,7 +29,7 @@ export default function BookButton({ locale, paymentSettings, id }) {
         className="button--with-arrow"
         onClick={() => handleRegistration(id)}
       >
-        {translate('register', locale)}
+        {translate("register", locale)}
       </button>
     </div>
   );

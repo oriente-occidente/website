@@ -1,7 +1,7 @@
-import { Image as DatoImage } from 'react-datocms';
-import Link from 'next/link';
+import { Image as DatoImage } from "react-datocms";
+import Link from "next/link";
 
-import { resolveLinkById, formatDate } from 'lib/utils';
+import { resolveLinkById, formatDate } from "lib/utils";
 
 function CardOutTitle({ data, locale }) {
   let categoryTitle;
@@ -12,7 +12,7 @@ function CardOutTitle({ data, locale }) {
         .map((cat) => {
           return cat.title;
         })
-        .join(', ');
+        .join(", ");
     } else {
       categoryTitle = data.category.title;
     }
@@ -22,7 +22,7 @@ function CardOutTitle({ data, locale }) {
       .map((event) => {
         return event.startTime;
       })
-      .join(', ');
+      .join(", ");
   }
 
   return (
@@ -36,18 +36,18 @@ function CardOutTitle({ data, locale }) {
               alt={data.image.alt}
               title={data.image.title}
             />
-            <div className="flex space-x-4 absolute z-20 left-4 md:left-8 md:bottom-8 top-48 md:top-auto text-white uppercase text-xxs md:text-xs font-semibold ">
+            <div className="absolute left-4 top-48 z-20 flex space-x-4 text-xxs font-semibold uppercase text-white md:left-8 md:bottom-8 md:top-auto md:text-xs ">
               <span>{data.title}</span>
-              <span className="hidden md:block normal-case font-light">
+              <span className="hidden font-light normal-case md:block">
                 {formatDate(data.eventDate, locale)}
               </span>
             </div>
-            <div className="absolute top-40 md:h-1/3 md:top-auto md:bottom-0 left-0 right-0 bg-gradient-to-t z-10 from-black-transparent to-transparent" />
+            <div className="absolute top-40 left-0 right-0 z-10 bg-gradient-to-t from-black-transparent to-transparent md:top-auto md:bottom-0 md:h-1/3" />
           </div>
-          <h2 className="text-sm md:text-base z-20 uppercase text-black font-normal md:font-semibold mt-2">
+          <h2 className="z-20 mt-2 text-sm font-normal uppercase text-black md:text-base md:font-semibold">
             {data.title}
           </h2>
-          <h3 className="text-sm md:text-base z-20 uppercase text-black font-semibold">
+          <h3 className="z-20 text-sm font-semibold uppercase text-black md:text-base">
             {data.subtitle}
           </h3>
           <div className="text-xxs md:hidden">

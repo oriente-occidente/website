@@ -1,16 +1,16 @@
-import Link from 'next/link';
-import { Fragment } from 'react';
+import Link from "next/link";
+import { Fragment } from "react";
 
-import translate from 'lib/locales';
-import * as queries from 'lib/queries';
-import fetchDato from 'lib/api/dato';
-import { resolveLinkById } from 'lib/utils';
+import translate from "lib/locales";
+import * as queries from "lib/queries";
+import fetchDato from "lib/api/dato";
+import { resolveLinkById } from "lib/utils";
 
-import Layout from 'components/Layout';
-import Seo from 'components/Seo';
-import HeroSlider from 'components/hero/HeroSlider';
-import GalleryPreview from 'components/galleries/GalleryPreview';
-import GalleryHome from 'components/galleries/GalleryHome';
+import Layout from "components/Layout";
+import Seo from "components/Seo";
+import HeroSlider from "components/hero/HeroSlider";
+import GalleryPreview from "components/galleries/GalleryPreview";
+import GalleryHome from "components/galleries/GalleryHome";
 
 function Home({ data, locale, home }) {
   const { homeSlideshow, homeSections, seo } = home;
@@ -25,10 +25,10 @@ function Home({ data, locale, home }) {
         return (
           <Fragment key={block.id}>
             <div
-              className="container flex justify-between items-center border-t border-gray"
+              className="container flex items-center justify-between border-t border-gray"
               key={block.id}
             >
-              <h2 className="py-8 lg:py-16 title--small">{block.title}</h2>
+              <h2 className="title--small py-8 lg:py-16">{block.title}</h2>
               <Link
                 href={resolveLinkById(block.sectionLink.id, locale)}
                 locale={locale}
@@ -36,20 +36,20 @@ function Home({ data, locale, home }) {
                 <a className="button--with-arrow">{block.sectionLinkLabel}</a>
               </Link>
             </div>
-            {block.layout == 'Mission' ? (
+            {block.layout == "Mission" ? (
               <div className="bg-gray">
-                <div className="container py-8 lg:pb-12 lg:pt-16 title--small">
-                  {translate('discoverActivities', locale)}
+                <div className="title--small container py-8 lg:pb-12 lg:pt-16">
+                  {translate("discoverActivities", locale)}
                 </div>
               </div>
             ) : null}
             <div>
-              {block.layout == 'PrimoPiano' ? (
+              {block.layout == "PrimoPiano" ? (
                 <GalleryPreview slides={block.slides} locale={locale} />
               ) : (
                 <GalleryHome
                   slides={block.slides}
-                  background={'gray'}
+                  background={"gray"}
                   locale={locale}
                 />
               )}

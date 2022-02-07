@@ -1,8 +1,8 @@
-import { Image as DatoImage } from 'react-datocms';
-import Link from 'next/link';
-import { LocationMarkerIcon, CalendarIcon } from '@heroicons/react/outline';
+import { Image as DatoImage } from "react-datocms";
+import Link from "next/link";
+import { LocationMarkerIcon, CalendarIcon } from "@heroicons/react/outline";
 
-import { resolveLinkById, groupDatesByDay } from 'lib/utils';
+import { resolveLinkById, showDates } from "lib/utils";
 
 function StandardCard({ data, locale, categoryTitle }) {
   const image = data.imageHero;
@@ -12,11 +12,11 @@ function StandardCard({ data, locale, categoryTitle }) {
       <Link href={resolveLinkById(data.id, locale)} locale={locale}>
         <a title={data.title} className="group">
           <div className="relative">
-            <div className="absolute z-20 left-4 md:left-8 bottom-2 md:bottom-6 top-auto text-white uppercase text-xxs md:text-xs font-semibold">
+            <div className="absolute left-4 bottom-2 top-auto z-20 text-xxs font-semibold uppercase text-white md:left-8 md:bottom-6 md:text-xs">
               {datesGrouped.map((str) => (
-                <div className="hidden md:flex gap-x-2 items-center" key={str}>
-                  <CalendarIcon aria-hidden="true" className="w-4 h-4" />
-                  <span className="md:pr-1 font-light capitalize">{str}</span>
+                <div className="hidden items-center gap-x-2 md:flex" key={str}>
+                  <CalendarIcon aria-hidden="true" className="h-4 w-4" />
+                  <span className="font-light capitalize md:pr-1">{str}</span>
                 </div>
               ))}
               {/* {data.dates && (
@@ -28,9 +28,9 @@ function StandardCard({ data, locale, categoryTitle }) {
                 </div>
               )} */}
               {data.location && (
-                <div className="hidden md:flex gap-x-2 items-center">
-                  <LocationMarkerIcon aria-hidden="true" className="w-4 h-4" />
-                  <span className="hidden md:inline-block normal-case font-light">
+                <div className="hidden items-center gap-x-2 md:flex">
+                  <LocationMarkerIcon aria-hidden="true" className="h-4 w-4" />
+                  <span className="hidden font-light normal-case md:inline-block">
                     {data.location}
                   </span>
                 </div>
@@ -47,15 +47,15 @@ function StandardCard({ data, locale, categoryTitle }) {
                 />
               </div>
             ) : null}
-            <div className="absolute h-[65px] md:h-48 bottom-0 left-0 right-0 bg-gradient-to-t z-10 from-black/80 to-transparent"></div>
+            <div className="absolute bottom-0 left-0 right-0 z-10 h-[65px] bg-gradient-to-t from-black/80 to-transparent md:h-48"></div>
           </div>
-          <div className="hidden md:block absolute top-0 h-48 left-0 right-0 bg-gradient-to-b z-10 from-black/80 to-transparent"></div>
-          <div className="md:absolute z-20 md:top-6 md:left-8">
-            <h2 className="text-sm md:text-lg uppercase text-black md:text-white font-semibold mt-2 duration-300 group-hover:text-red">
+          <div className="absolute top-0 left-0 right-0 z-10 hidden h-48 bg-gradient-to-b from-black/80 to-transparent md:block"></div>
+          <div className="z-20 md:absolute md:top-6 md:left-8">
+            <h2 className="mt-2 text-sm font-semibold uppercase text-black duration-300 group-hover:text-red md:text-lg md:text-white">
               {data.title}
             </h2>
             {data.authors && (
-              <div className="text-xs md:text-base uppercase text-black md:text-white font-semibold md:mt-2">
+              <div className="text-xs font-semibold uppercase text-black md:mt-2 md:text-base md:text-white">
                 {data.authors}
               </div>
             )}
@@ -73,23 +73,23 @@ function StandardCard({ data, locale, categoryTitle }) {
           )} */}
           {datesGrouped.map((d) => (
             <div
-              className="md:hidden flex gap-1 items-center"
-              key={'descr_' + d}
+              className="flex items-center gap-1 md:hidden"
+              key={"descr_" + d}
             >
               <CalendarIcon
                 aria-hidden="true"
-                className="w-3 h-4 mr-1 text-black"
+                className="mr-1 h-4 w-3 text-black"
               />
               <div className="text-xxs capitalize">{d}</div>
             </div>
           ))}
           {data.location && (
-            <div className="md:hidden flex gap-1 items-center">
+            <div className="flex items-center gap-1 md:hidden">
               <LocationMarkerIcon
                 aria-hidden="true"
-                className="w-3 h-4 mr-1 text-black"
+                className="mr-1 h-4 w-3 text-black"
               />
-              <div className="inline-block md:hidden normal-case text-xxs">
+              <div className="inline-block text-xxs normal-case md:hidden">
                 {data.location}
               </div>
             </div>

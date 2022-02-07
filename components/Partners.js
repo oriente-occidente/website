@@ -1,10 +1,10 @@
-import Link from 'next/link';
-import { Image } from 'react-datocms';
+import Link from "next/link";
+import { Image } from "react-datocms";
 
 export default function Partners({ locale, data }) {
   if (!data) return null;
   return (
-    <div className="w-1/2 md:w-1/3 xl:w-1/5 pr-8 pb-4 md:pb-12 text-center">
+    <div className="w-1/2 pr-8 pb-4 text-center md:w-1/3 md:pb-12 xl:w-1/5">
       <Link href={data.url}>
         <a target="_blank" title={data.title}>
           {data.image?.responsiveImage && (

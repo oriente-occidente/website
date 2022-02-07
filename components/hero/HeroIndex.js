@@ -1,9 +1,9 @@
-import { Image as DatoImage } from 'react-datocms';
-import { LocationMarkerIcon, CalendarIcon } from '@heroicons/react/outline';
+import { Image as DatoImage } from "react-datocms";
+import { LocationMarkerIcon, CalendarIcon } from "@heroicons/react/outline";
 // import dynamic from 'next/dynamic';
-import Gallery from 'components/galleries/Gallery';
-import BookButton from 'components/BookButton';
-import { formatDate } from 'lib/utils';
+import Gallery from "components/galleries/Gallery";
+import BookButton from "components/BookButton";
+import { formatDate } from "lib/utils";
 
 function HeroIndex({ data, locale }) {
   const {
@@ -28,12 +28,12 @@ function HeroIndex({ data, locale }) {
   // }
 
   return (
-    <div className="border-t md:border-none bg-gray border-gray pb-10 md:py-0">
-      <header className="relative md:grid md:grid-cols-4 md:gap-4 xl:container xl:mx-auto overflow-hidden">
+    <div className="border-t border-gray bg-gray pb-10 md:border-none md:py-0">
+      <header className="relative overflow-hidden md:grid md:grid-cols-4 md:gap-4 xl:container xl:mx-auto">
         <h1 className="title--big z-20 py-4 px-4 xl:pl-6">{titleHero}</h1>
-        <div className="relative md:col-start-2 md:col-span-3 md:border-l md:border-color-gray">
+        <div className="md:border-color-gray relative md:col-span-3 md:col-start-2 md:border-l">
           <div className="pl-4 md:pl-0 xl:w-[calc(100%+3rem)] 2xl:w-[calc((100vw-((100vw-1380px)/2))-333px-1rem)]">
-            {slideshowHero != '' ? (
+            {slideshowHero != "" ? (
               <Gallery slides={slideshowHero} />
             ) : imageHero ? (
               <DatoImage
@@ -44,13 +44,13 @@ function HeroIndex({ data, locale }) {
               />
             ) : null}
           </div>
-          <div className="hidden md:absolute top-0 h-full md:bottom-0 left-0 md:left-[25%] max-w-[1400px] right-1/2 bg-gradient-to-r z-10 from-black-transparent to-transparent" />
+          <div className="top-0 left-0 right-1/2 z-10 hidden h-full max-w-[1400px] bg-gradient-to-r from-black-transparent to-transparent md:absolute md:bottom-0 md:left-[25%]" />
         </div>
       </header>
-      <div className="md:grid md:grid-cols-4 md:gap-4 md:container md:mx-auto">
-        <div className="md:col-start-2 md:col-span-3 md:pb-10 gap-4 pt-6 md:border-l border-gray-300">
+      <div className="md:container md:mx-auto md:grid md:grid-cols-4 md:gap-4">
+        <div className="gap-4 border-gray-300 pt-6 md:col-span-3 md:col-start-2 md:border-l md:pb-10">
           {descriptionHero && (
-            <div className="text-black-light lg:text-black lg:font-light text-sm lg:text-xl lg:pt-2 px-4 lg:px-20 md:pl-10">
+            <div className="px-4 text-sm text-black-light md:pl-10 lg:px-20 lg:pt-2 lg:text-xl lg:font-light lg:text-black">
               {descriptionHero}
             </div>
           )}
@@ -64,28 +64,28 @@ function HeroIndex({ data, locale }) {
             </div>
           )}
           {dateEvento && (
-            <div className="pt-4 px-4 lg:px-20 md:pl-10">
+            <div className="px-4 pt-4 md:pl-10 lg:px-20">
               {dateEvento != null ? (
                 <>
                   {dateEvento.map((date) => (
                     <div
                       key={date.id}
-                      className="text-xxs text-black-light flex items-center"
+                      className="flex items-center text-xxs text-black-light"
                     >
                       <CalendarIcon
                         aria-hidden="true"
-                        className="w-4 h-4 mr-2"
+                        className="mr-2 h-4 w-4"
                       />
-                      {formatDate(date.startTime, locale || 'en', date.isDaily)}
+                      {formatDate(date.startTime, locale || "en", date.isDaily)}
                     </div>
                   ))}
                 </>
               ) : null}
               {location && (
-                <h2 className="text-xxs text-black-light mt-1 flex items-center">
+                <h2 className="mt-1 flex items-center text-xxs text-black-light">
                   <LocationMarkerIcon
                     aria-hidden="true"
-                    className="w-4 h-4 mr-2"
+                    className="mr-2 h-4 w-4"
                   />
                   {location}
                 </h2>

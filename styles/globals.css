@@ -1,156 +1,154 @@
-@import '../styles/form.css';
+@import "../styles/form.css";
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
 
 @layer base {
 }
 
 @layer components {
   .h1 {
-    @apply uppercase text-base lg:text-2xl font-semibold py-2 lg:py-4;
+    @apply py-2 text-base font-semibold uppercase lg:py-4 lg:text-2xl;
   }
   .h2 {
-    @apply text-base lg:text-xl py-2 lg:py-4;
+    @apply py-2 text-base lg:py-4 lg:text-xl;
   }
-  .h3, .h4, .h5, .h6 {
-    @apply text-sm lg:text-base py-2 lg:py-4;
+  .h3,
+  .h4,
+  .h5,
+  .h6 {
+    @apply py-2 text-sm lg:py-4 lg:text-base;
   }
 
   .formatted-content strong {
-    @apply font-semibold
+    @apply font-semibold;
   }
 
   .formatted-content p {
-    @apply text-xs lg:text-sm text-black-light max-w-[700px] mb-2
+    @apply mb-2 max-w-[700px] text-xs text-black-light lg:text-sm;
   }
 
   .formatted-content hr {
-    @apply my-4 lg:my-6
+    @apply my-4 lg:my-6;
   }
 
   .formatted-content a {
-    @apply underline font-semibold hover:text-red
+    @apply font-semibold underline hover:text-red;
   }
 
   .formatted-content ul {
-    @apply py-2 lg:py-4
+    @apply py-2 lg:py-4;
   }
 
   .formatted-content li {
-    @apply text-sm lg:text-base pl-6 lg:pl-8 relative ;
-    @apply before:absolute before:top-[4px] before:-left-0 before:w-[15px] lg:before:w-[20px] before:h-[15px] lg:before:h-[20px] before:bg-check
+    @apply relative pl-6 text-sm lg:pl-8 lg:text-base;
+    @apply before:absolute before:top-[4px] before:-left-0 before:h-[15px] before:w-[15px] before:bg-check lg:before:h-[20px] lg:before:w-[20px];
   }
 
   .formatted-content li p {
-    @apply py-0 text-[20px]
+    @apply py-0 text-[20px];
   }
 
-  .button--with-arrow{
-    @apply
-      text-black font-semibold tracking-wider flex items-center md:text-xs no-underline
-      after:w-8 after:h-8 md:after:w-10 md:after:h-10 after:inline-block after:bg-arrow-right-black hover:after:bg-arrow-right-red after:ml-2 after:duration-300 hover:after:translate-x-2
+  .button--with-arrow {
+    @apply flex items-center font-semibold tracking-wider text-black no-underline after:ml-2
+      after:inline-block after:h-8 after:w-8 after:bg-arrow-right-black after:duration-300 hover:after:translate-x-2 hover:after:bg-arrow-right-red md:text-xs md:after:h-10 md:after:w-10;
   }
 
-  .title{
-    @apply font-semibold uppercase text-base md:text-2xl
+  .title {
+    @apply text-base font-semibold uppercase md:text-2xl;
   }
 
-  .title--big{
-    @apply font-semibold uppercase text-lg md:text-2xl lg:text-2xl xl:text-3xl 2xl:text-4xl md:text-white md:absolute md:top-1/2 z-20 md:w-1/2 md:-translate-y-2/4
+  .title--big {
+    @apply z-20 text-lg font-semibold uppercase md:absolute md:top-1/2 md:w-1/2 md:-translate-y-2/4 md:text-2xl md:text-white lg:text-2xl xl:text-3xl 2xl:text-4xl;
   }
 
   .title--small {
-    @apply uppercase text-xxs md:text-sm lg:text-base md:tracking-wide;
+    @apply text-xxs uppercase md:text-sm md:tracking-wide lg:text-base;
   }
 }
 
 .swiper .swiper-pagination .swiper-pagination-bullet {
-  @apply w-3 h-3 mx-2 bg-white md:hidden
+  @apply mx-2 h-3 w-3 bg-white md:hidden;
 }
 
 .swiper .swiper-button-prev {
-  @apply
-    hidden md:flex w-14 h-14 top-auto bottom-12 2xl:bottom-24 left-16
-    after:text-white after:bg-arrow-left after:w-3/5 after:h-full after:bg-no-repeat after:bg-center
-    before:absolute before:inset-0 before:border before:border-white before:rounded-full before:scale-0 before:ease-in before:duration-300
-    hover:before:scale-100;
+  @apply top-auto bottom-12 left-16 hidden h-14 w-14 before:absolute before:inset-0
+    before:scale-0 before:rounded-full before:border before:border-white before:duration-300 before:ease-in
+    after:h-full after:w-3/5 after:bg-arrow-left after:bg-center after:bg-no-repeat after:text-white hover:before:scale-100 md:flex
+    2xl:bottom-24;
 }
 
 .swiper .swiper-button-next {
-  @apply
-    hidden md:flex w-14 h-14 top-auto bottom-12 left-32 2xl:bottom-24
-    after:text-white after:bg-arrow-right after:w-3/5 after:h-full after:bg-no-repeat after:bg-center
-    before:absolute before:inset-0 before:border before:border-white before:rounded-full before:scale-0 before:ease-in before:duration-300
-    hover:before:scale-100;
+  @apply top-auto bottom-12 left-32 hidden h-14 w-14 before:absolute before:inset-0
+    before:scale-0 before:rounded-full before:border before:border-white before:duration-300 before:ease-in
+    after:h-full after:w-3/5 after:bg-arrow-right after:bg-center after:bg-no-repeat after:text-white hover:before:scale-100 md:flex
+    2xl:bottom-24;
 }
 
 .SwiperGallery.swiper {
-  @apply overflow-visible
+  @apply overflow-visible;
 }
 
 .SwiperGallery.swiper .swiper-slide {
-  @apply opacity-0 transition-all
+  @apply opacity-0 transition-all;
 }
 
 .SwiperGallery.swiper .swiper-slide-active {
-  @apply opacity-100
+  @apply opacity-100;
 }
 
 .SwiperGallery .swiper-button-prev {
-  @apply
-    left-[-33%] xl:left-[calc(-33%+1.5rem)] 2xl:-left-[333px]
-    bottom-0 xl:bottom-8
-    after:bg-arrow-left-black
-    before:border-black
-  }
+  @apply left-[-33%] bottom-0 before:border-black
+    after:bg-arrow-left-black xl:left-[calc(-33%+1.5rem)]
+    xl:bottom-8
+    2xl:-left-[333px];
+}
 
 .SwiperGallery .swiper-button-next {
-    @apply
-    bottom-0 xl:bottom-8
-    left-[calc(-33%+3.5rem)] xl:left-[calc(-33%+5rem)] 2xl:-left-[calc(333px-3.5rem)]
-    after:bg-arrow-right-black
-    before:border-black
+  @apply bottom-0 left-[calc(-33%+3.5rem)]
+    before:border-black after:bg-arrow-right-black xl:bottom-8
+    xl:left-[calc(-33%+5rem)]
+    2xl:-left-[calc(333px-3.5rem)];
 }
 
 .SwiperGalleryStandard .swiper-button-prev {
-  @apply hidden
+  @apply hidden;
 }
 
 .SwiperGalleryStandard .swiper-button-next {
-  @apply after:bg-arrow-right-black right-0 left-auto top-1/2 hover:before:border-black
+  @apply right-0 left-auto top-1/2 after:bg-arrow-right-black hover:before:border-black;
 }
 
 .SwiperGalleryStandard {
-  @apply relative
+  @apply relative;
 }
 
 @media (min-width: 1536px) {
   .mySwiper .swiper-button-prev {
-    left: calc((100vw - 1380px) / 2)
+    left: calc((100vw - 1380px) / 2);
   }
   .mySwiper .swiper-button-next {
-    left: calc(((100vw - 1380px) / 2) + 70px )
+    left: calc(((100vw - 1380px) / 2) + 70px);
   }
 }
 
 @media (max-width: 1023px) {
   .custom-nth-child:nth-child(even) {
-    margin-left: 2%
+    margin-left: 2%;
   }
 }
 
 @media (min-width: 1024px) {
   .custom-nth-child {
-    margin-left: 2%
+    margin-left: 2%;
   }
-  .custom-nth-child:nth-child(3n+1) {
-    margin-left: 0
+  .custom-nth-child:nth-child(3n + 1) {
+    margin-left: 0;
   }
 }
 
 .skip-link {
-  @apply text-white bg-black px-3 py-2 hover:bg-gray-dark absolute left-1/2 z-50 -translate-x-1/2 -translate-y-full focus:translate-y-0
+  @apply absolute left-1/2 z-50 -translate-x-1/2 -translate-y-full bg-black px-3 py-2 text-white hover:bg-gray-dark focus:translate-y-0;
 }

@@ -4,8 +4,8 @@
 
 module.exports = {
   i18n: {
-    locales: ['it', 'en'],
-    defaultLocale: 'it',
+    locales: ["it", "en"],
+    defaultLocale: "it",
   },
   reactStrictMode: true,
   // async rewrites() {

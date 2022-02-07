@@ -1,5 +1,5 @@
-import Head from 'next/head';
-import { renderMetaTags } from 'react-datocms';
+import Head from "next/head";
+import { renderMetaTags } from "react-datocms";
 
 const SEO = ({ tags, alt = [] }) => {
   return (

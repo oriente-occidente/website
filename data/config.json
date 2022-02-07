@@ -1,9 +1,6 @@
 {
   "site": {
-    "locales": [
-      "it",
-      "en"
-    ],
+    "locales": ["it", "en"],
     "faviconMetaTags": [
       {
         "tag": "link",

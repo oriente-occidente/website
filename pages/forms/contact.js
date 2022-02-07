@@ -1,14 +1,14 @@
-import { useState, useEffect } from 'react';
-import { doQueryById } from 'lib/api';
-import Layout from 'components/Layout';
-import Seo from 'components/Seo';
+import { useState, useEffect } from "react";
+import { doQueryById } from "lib/api";
+import Layout from "components/Layout";
+import Seo from "components/Seo";
 
 function Page({ data, locale }) {
   const { site, menu, footer } = data;
   const [success, setSuccess] = useState(false);
 
   useEffect(() => {
-    if (window.location.search.includes('success=true')) {
+    if (window.location.search.includes("success=true")) {
       setSuccess(true);
     }
   }, []);
@@ -18,13 +18,13 @@ function Page({ data, locale }) {
       <Seo tags={site.faviconMetaTags} />
       <h1 className="text-lg">Contact Me</h1>
       {success && (
-        <p style={{ color: 'green' }}>Successfully submitted form!</p>
+        <p style={{ color: "green" }}>Successfully submitted form!</p>
       )}
 
       <form
         name="contact"
         method="POST"
-        action={`${locale === 'en' ? '/en' : ''}/forms?success=true`}
+        action={`${locale === "en" ? "/en" : ""}/forms?success=true`}
         data-netlify="true"
       >
         <input type="hidden" name="form-name" value="contact" />

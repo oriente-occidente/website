@@ -1,5 +1,5 @@
-import { Dialog, Transition } from '@headlessui/react';
-import { XIcon } from '@heroicons/react/outline';
+import { Dialog, Transition } from "@headlessui/react";
+import { XIcon } from "@heroicons/react/outline";
 
 function CustomDialog({
   title,
@@ -25,21 +25,21 @@ function CustomDialog({
     >
       <Dialog
         onClose={() => closeDialog()}
-        className="fixed z-10 inset-0 overflow-y-auto"
+        className="fixed inset-0 z-10 overflow-y-auto"
       >
-        <div className="md:flex md:items-center md:justify-center h-full w-full">
+        <div className="h-full w-full md:flex md:items-center md:justify-center">
           <Dialog.Overlay className="fixed inset-0 bg-black opacity-90" />
           <div className="relative w-full sm:mx-20">
             <button
               type="button"
-              className="absolute right-10 top-5 z-30 bg-white rounded-md text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500"
+              className="absolute right-10 top-5 z-30 rounded-md bg-white text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2"
               onClick={() => closeDialog()}
             >
               <span className="sr-only">Close</span>
               <XIcon className="h-6 w-6" aria-hidden="true" />
             </button>
 
-            <div className="relative bg-white text-black flex-col flex p-10 ">
+            <div className="relative flex flex-col bg-white p-10 text-black ">
               <div className="mb-10">
                 <Dialog.Title className="text-lg">{title}</Dialog.Title>
                 <Dialog.Description>{description}</Dialog.Description>
