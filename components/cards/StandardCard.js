@@ -2,7 +2,7 @@ import { Image as DatoImage } from "react-datocms";
 import Link from "next/link";
 import { LocationMarkerIcon, CalendarIcon } from "@heroicons/react/outline";
 
-import { resolveLinkById, showDates } from "lib/utils";
+import { resolveLinkById, groupDatesByDay } from "lib/utils";
 
 function StandardCard({ data, locale, categoryTitle }) {
   const image = data.imageHero;
@@ -12,21 +12,13 @@ function StandardCard({ data, locale, categoryTitle }) {
       <Link href={resolveLinkById(data.id, locale)} locale={locale}>
         <a title={data.title} className="group">
           <div className="relative">
-            <div className="absolute left-4 bottom-2 top-auto z-20 text-xxs font-semibold uppercase text-white md:left-8 md:bottom-6 md:text-xs">
+            <div className="text-xxs absolute left-4 bottom-2 top-auto z-20 font-semibold uppercase text-white md:left-8 md:bottom-6 md:text-xs">
               {datesGrouped.map((str) => (
                 <div className="hidden items-center gap-x-2 md:flex" key={str}>
                   <CalendarIcon aria-hidden="true" className="h-4 w-4" />
                   <span className="font-light capitalize md:pr-1">{str}</span>
                 </div>
               ))}
-              {/* {data.dates && (
-                <div className="hidden md:flex gap-x-2 items-center">
-                <CalendarIcon aria-hidden="true" className="w-4 h-4" />
-                <span className="hidden md:block normal-case font-light">
-                {showDates(data.dates, locale)}
-                </span>
-                </div>
-              )} */}
               {data.location && (
                 <div className="hidden items-center gap-x-2 md:flex">
                   <LocationMarkerIcon aria-hidden="true" className="h-4 w-4" />
@@ -51,7 +43,7 @@ function StandardCard({ data, locale, categoryTitle }) {
           </div>
           <div className="absolute top-0 left-0 right-0 z-10 hidden h-48 bg-gradient-to-b from-black/80 to-transparent md:block"></div>
           <div className="z-20 md:absolute md:top-6 md:left-8">
-            <h2 className="mt-2 text-sm font-semibold uppercase text-black duration-300 group-hover:text-red md:text-lg md:text-white">
+            <h2 className="group-hover:text-red mt-2 text-sm font-semibold uppercase text-black duration-300 md:text-lg md:text-white">
               {data.title}
             </h2>
             {data.authors && (
@@ -89,7 +81,7 @@ function StandardCard({ data, locale, categoryTitle }) {
                 aria-hidden="true"
                 className="mr-1 h-4 w-3 text-black"
               />
-              <div className="inline-block text-xxs normal-case md:hidden">
+              <div className="text-xxs inline-block normal-case md:hidden">
                 {data.location}
               </div>
             </div>

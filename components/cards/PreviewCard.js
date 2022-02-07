@@ -24,7 +24,7 @@ function PreviewCard({ data, locale, group = null, year }) {
       <Link href={resolveLinkById(data.id, locale, group)}>
         <a title={data.title} className="group">
           <div className="relative">
-            <div className="absolute left-4 bottom-2 top-auto z-20 text-xxs font-semibold uppercase text-white md:left-8 md:bottom-8 md:text-xs ">
+            <div className="text-xxs absolute left-4 bottom-2 top-auto z-20 font-semibold uppercase text-white md:left-8 md:bottom-8 md:text-xs ">
               {datesGrouped.map((str) => (
                 <div className="hidden items-center gap-x-2 md:flex" key={str}>
                   <CalendarIcon aria-hidden="true" className="h-4 w-4" />
@@ -61,7 +61,7 @@ function PreviewCard({ data, locale, group = null, year }) {
               (data.authors ||
                 !data.titleHero ||
                 data.titleHero !== data.title) && (
-                <h2 className="text-sm uppercase text-black-light md:text-base">
+                <h2 className="text-black-light text-sm uppercase md:text-base">
                   {data.title}
                 </h2>
               )}

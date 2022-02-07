@@ -4779,45 +4779,6 @@
     ]
   },
   {
-    "id": "104434820",
-    "slugs": {
-      "en": [
-        "lab-eba-europe-beyond-access"
-      ],
-      "it": [
-        "lab-eba-europe-beyond-access"
-      ]
-    },
-    "isIndex": false,
-    "indexType": "",
-    "__typename": "workshop",
-    "group": "courses",
-    "paths": [
-      {
-        "locale": "en",
-        "slugs": [
-          "lab-eba-europe-beyond-access"
-        ]
-      },
-      {
-        "locale": "it",
-        "slugs": [
-          "lab-eba-europe-beyond-access"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "en",
-        "url": "lab-eba-europe-beyond-access"
-      },
-      {
-        "locale": "it",
-        "url": "lab-eba-europe-beyond-access"
-      }
-    ]
-  },
-  {
     "id": "104438524",
     "slugs": {
       "en": [
