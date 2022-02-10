@@ -1,6 +1,6 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper";
-import SwiperCore, { Navigation } from "swiper";
+import SwiperCore, { Navigation, A11y } from "swiper";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/autoplay";
@@ -12,7 +12,7 @@ function GalleryHome({ slides, background, locale }) {
   return (
     <header className={`relative bg-${background}`}>
       <Swiper
-        modules={[Autoplay]}
+        modules={[Autoplay, A11y]}
         spaceBetween={24}
         speed={900}
         slidesPerView={1.25}

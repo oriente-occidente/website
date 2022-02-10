@@ -1,6 +1,6 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper";
-import SwiperCore, { Navigation } from "swiper";
+import SwiperCore, { Navigation, A11y } from "swiper";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/autoplay";
@@ -13,7 +13,7 @@ function GalleryPreview({ slides, locale }) {
   return (
     <header className="relative">
       <Swiper
-        modules={[Autoplay]}
+        modules={[Autoplay, A11y]}
         spaceBetween={24}
         speed={900}
         loop={true}

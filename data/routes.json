@@ -745,17 +745,17 @@
     ]
   },
   {
-    "id": "96102059",
+    "id": "96290600",
     "slugs": {
       "en": [
         "festival",
         "program",
-        "the-mountain-the-truth-e-the-paradise"
+        "sognare-la-terra"
       ],
       "it": [
         "festival",
         "programma",
-        "the-mountain-the-truth-e-the-paradise"
+        "sognare-la-terra"
       ]
     },
     "isIndex": false,
@@ -768,7 +768,7 @@
         "slugs": [
           "festival",
           "program",
-          "the-mountain-the-truth-e-the-paradise"
+          "sognare-la-terra"
         ]
       },
       {
@@ -776,18 +776,1099 @@
         "slugs": [
           "festival",
           "programma",
-          "the-mountain-the-truth-e-the-paradise"
+          "sognare-la-terra"
         ]
       }
     ],
     "urls": [
       {
         "locale": "en",
-        "url": "festival/program/the-mountain-the-truth-e-the-paradise"
+        "url": "festival/program/sognare-la-terra"
       },
       {
         "locale": "it",
-        "url": "festival/programma/the-mountain-the-truth-e-the-paradise"
+        "url": "festival/programma/sognare-la-terra"
+      }
+    ]
+  },
+  {
+    "id": "96753479",
+    "slugs": {
+      "en": [
+        "festival",
+        "program",
+        "chouf-le-ciel"
+      ],
+      "it": [
+        "festival",
+        "programma",
+        "chouf-le-ciel"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "event",
+    "group": "festival-events",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "festival",
+          "program",
+          "chouf-le-ciel"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "festival",
+          "programma",
+          "chouf-le-ciel"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "festival/program/chouf-le-ciel"
+      },
+      {
+        "locale": "it",
+        "url": "festival/programma/chouf-le-ciel"
+      }
+    ]
+  },
+  {
+    "id": "96738971",
+    "slugs": {
+      "en": [
+        "festival",
+        "program",
+        "desattraction-1-62-la-diagonale-des-anges"
+      ],
+      "it": [
+        "festival",
+        "programma",
+        "desattraction-1-62-la-diagonale-des-anges"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "event",
+    "group": "festival-events",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "festival",
+          "program",
+          "desattraction-1-62-la-diagonale-des-anges"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "festival",
+          "programma",
+          "desattraction-1-62-la-diagonale-des-anges"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "festival/program/desattraction-1-62-la-diagonale-des-anges"
+      },
+      {
+        "locale": "it",
+        "url": "festival/programma/desattraction-1-62-la-diagonale-des-anges"
+      }
+    ]
+  },
+  {
+    "id": "96573178",
+    "slugs": {
+      "en": [
+        "festival",
+        "program",
+        "hyenas-forme-di-minotauri-contemporanei"
+      ],
+      "it": [
+        "festival",
+        "programma",
+        "hyenas-forme-di-minotauri-contemporanei"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "event",
+    "group": "festival-events",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "festival",
+          "program",
+          "hyenas-forme-di-minotauri-contemporanei"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "festival",
+          "programma",
+          "hyenas-forme-di-minotauri-contemporanei"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "festival/program/hyenas-forme-di-minotauri-contemporanei"
+      },
+      {
+        "locale": "it",
+        "url": "festival/programma/hyenas-forme-di-minotauri-contemporanei"
+      }
+    ]
+  },
+  {
+    "id": "96738655",
+    "slugs": {
+      "en": [
+        "festival",
+        "program",
+        "political-mother-unplugged"
+      ],
+      "it": [
+        "festival",
+        "programma",
+        "political-mother-unplugged"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "event",
+    "group": "festival-events",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "festival",
+          "program",
+          "political-mother-unplugged"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "festival",
+          "programma",
+          "political-mother-unplugged"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "festival/program/political-mother-unplugged"
+      },
+      {
+        "locale": "it",
+        "url": "festival/programma/political-mother-unplugged"
+      }
+    ]
+  },
+  {
+    "id": "96744568",
+    "slugs": {
+      "en": [
+        "festival",
+        "program",
+        "nobody-nobody-nobody-it-s-ok-not-to-be-ok-installazione"
+      ],
+      "it": [
+        "festival",
+        "programma",
+        "nobody-nobody-nobody-it-s-ok-not-to-be-ok-installazione"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "event",
+    "group": "festival-events",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "festival",
+          "program",
+          "nobody-nobody-nobody-it-s-ok-not-to-be-ok-installazione"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "festival",
+          "programma",
+          "nobody-nobody-nobody-it-s-ok-not-to-be-ok-installazione"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "festival/program/nobody-nobody-nobody-it-s-ok-not-to-be-ok-installazione"
+      },
+      {
+        "locale": "it",
+        "url": "festival/programma/nobody-nobody-nobody-it-s-ok-not-to-be-ok-installazione"
+      }
+    ]
+  },
+  {
+    "id": "96753759",
+    "slugs": {
+      "en": [
+        "festival",
+        "program",
+        "diptych-the-missing-door-e-the-lost-room"
+      ],
+      "it": [
+        "festival",
+        "programma",
+        "diptych-the-missing-door-e-the-lost-room"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "event",
+    "group": "festival-events",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "festival",
+          "program",
+          "diptych-the-missing-door-e-the-lost-room"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "festival",
+          "programma",
+          "diptych-the-missing-door-e-the-lost-room"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "festival/program/diptych-the-missing-door-e-the-lost-room"
+      },
+      {
+        "locale": "it",
+        "url": "festival/programma/diptych-the-missing-door-e-the-lost-room"
+      }
+    ]
+  },
+  {
+    "id": "96572914",
+    "slugs": {
+      "en": [
+        "festival",
+        "program",
+        "l-europa-della-pandemia-quale-equilibrio-quale-futuro"
+      ],
+      "it": [
+        "festival",
+        "programma",
+        "l-europa-della-pandemia-quale-equilibrio-quale-futuro"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "event",
+    "group": "festival-events",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "festival",
+          "program",
+          "l-europa-della-pandemia-quale-equilibrio-quale-futuro"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "festival",
+          "programma",
+          "l-europa-della-pandemia-quale-equilibrio-quale-futuro"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "festival/program/l-europa-della-pandemia-quale-equilibrio-quale-futuro"
+      },
+      {
+        "locale": "it",
+        "url": "festival/programma/l-europa-della-pandemia-quale-equilibrio-quale-futuro"
+      }
+    ]
+  },
+  {
+    "id": "96748477",
+    "slugs": {
+      "en": [
+        "festival",
+        "program",
+        "moby-dick"
+      ],
+      "it": [
+        "festival",
+        "programma",
+        "moby-dick"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "event",
+    "group": "festival-events",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "festival",
+          "program",
+          "moby-dick"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "festival",
+          "programma",
+          "moby-dick"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "festival/program/moby-dick"
+      },
+      {
+        "locale": "it",
+        "url": "festival/programma/moby-dick"
+      }
+    ]
+  },
+  {
+    "id": "96290928",
+    "slugs": {
+      "en": [
+        "festival",
+        "program",
+        "paso-doble"
+      ],
+      "it": [
+        "festival",
+        "programma",
+        "paso-doble"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "event",
+    "group": "festival-events",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "festival",
+          "program",
+          "paso-doble"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "festival",
+          "programma",
+          "paso-doble"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "festival/program/paso-doble"
+      },
+      {
+        "locale": "it",
+        "url": "festival/programma/paso-doble"
+      }
+    ]
+  },
+  {
+    "id": "96292089",
+    "slugs": {
+      "en": [
+        "festival",
+        "program",
+        "the-queen"
+      ],
+      "it": [
+        "festival",
+        "programma",
+        "the-queen"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "event",
+    "group": "festival-events",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "festival",
+          "program",
+          "the-queen"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "festival",
+          "programma",
+          "the-queen"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "festival/program/the-queen"
+      },
+      {
+        "locale": "it",
+        "url": "festival/programma/the-queen"
+      }
+    ]
+  },
+  {
+    "id": "96290473",
+    "slugs": {
+      "en": [
+        "festival",
+        "program",
+        "plonter"
+      ],
+      "it": [
+        "festival",
+        "programma",
+        "plonter"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "event",
+    "group": "festival-events",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "festival",
+          "program",
+          "plonter"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "festival",
+          "programma",
+          "plonter"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "festival/program/plonter"
+      },
+      {
+        "locale": "it",
+        "url": "festival/programma/plonter"
+      }
+    ]
+  },
+  {
+    "id": "96101925",
+    "slugs": {
+      "en": [
+        "festival",
+        "program",
+        "keep-in-touch"
+      ],
+      "it": [
+        "festival",
+        "programma",
+        "keep-in-touch"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "event",
+    "group": "festival-events",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "festival",
+          "program",
+          "keep-in-touch"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "festival",
+          "programma",
+          "keep-in-touch"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "festival/program/keep-in-touch"
+      },
+      {
+        "locale": "it",
+        "url": "festival/programma/keep-in-touch"
+      }
+    ]
+  },
+  {
+    "id": "96102035",
+    "slugs": {
+      "en": [
+        "festival",
+        "program",
+        "pastorale"
+      ],
+      "it": [
+        "festival",
+        "programma",
+        "pastorale"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "event",
+    "group": "festival-events",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "festival",
+          "program",
+          "pastorale"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "festival",
+          "programma",
+          "pastorale"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "festival/program/pastorale"
+      },
+      {
+        "locale": "it",
+        "url": "festival/programma/pastorale"
+      }
+    ]
+  },
+  {
+    "id": "96776422",
+    "slugs": {
+      "en": [
+        "festival",
+        "program",
+        "figli-di-un-dio-ubriaco-incursioni-fisiche-sui-madrigali-di-claudio-monteverdi"
+      ],
+      "it": [
+        "festival",
+        "programma",
+        "figli-di-un-dio-ubriaco-incursioni-fisiche-sui-madrigali-di-claudio-monteverdi"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "event",
+    "group": "festival-events",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "festival",
+          "program",
+          "figli-di-un-dio-ubriaco-incursioni-fisiche-sui-madrigali-di-claudio-monteverdi"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "festival",
+          "programma",
+          "figli-di-un-dio-ubriaco-incursioni-fisiche-sui-madrigali-di-claudio-monteverdi"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "festival/program/figli-di-un-dio-ubriaco-incursioni-fisiche-sui-madrigali-di-claudio-monteverdi"
+      },
+      {
+        "locale": "it",
+        "url": "festival/programma/figli-di-un-dio-ubriaco-incursioni-fisiche-sui-madrigali-di-claudio-monteverdi"
+      }
+    ]
+  },
+  {
+    "id": "96253900",
+    "slugs": {
+      "en": [
+        "festival",
+        "program",
+        "il-mondo-virato-come-non-cambia-la-competizione-geopolitica"
+      ],
+      "it": [
+        "festival",
+        "programma",
+        "il-mondo-virato-come-non-cambia-la-competizione-geopolitica"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "event",
+    "group": "festival-events",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "festival",
+          "program",
+          "il-mondo-virato-come-non-cambia-la-competizione-geopolitica"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "festival",
+          "programma",
+          "il-mondo-virato-come-non-cambia-la-competizione-geopolitica"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "festival/program/il-mondo-virato-come-non-cambia-la-competizione-geopolitica"
+      },
+      {
+        "locale": "it",
+        "url": "festival/programma/il-mondo-virato-come-non-cambia-la-competizione-geopolitica"
+      }
+    ]
+  },
+  {
+    "id": "96315994",
+    "slugs": {
+      "en": [
+        "festival",
+        "program",
+        "cunningham-centennial-solos-oriente-occidente-dance-festival"
+      ],
+      "it": [
+        "festival",
+        "programma",
+        "cunningham-centennial-solos-oriente-occidente-dance-festival"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "event",
+    "group": "festival-events",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "festival",
+          "program",
+          "cunningham-centennial-solos-oriente-occidente-dance-festival"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "festival",
+          "programma",
+          "cunningham-centennial-solos-oriente-occidente-dance-festival"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "festival/program/cunningham-centennial-solos-oriente-occidente-dance-festival"
+      },
+      {
+        "locale": "it",
+        "url": "festival/programma/cunningham-centennial-solos-oriente-occidente-dance-festival"
+      }
+    ]
+  },
+  {
+    "id": "96081767",
+    "slugs": {
+      "en": [
+        "festival",
+        "program",
+        "fabrizio-maronta"
+      ],
+      "it": [
+        "festival",
+        "programma",
+        "terra-fabrizio-maronta"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "event",
+    "group": "festival-events",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "festival",
+          "program",
+          "fabrizio-maronta"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "festival",
+          "programma",
+          "terra-fabrizio-maronta"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "festival/program/fabrizio-maronta"
+      },
+      {
+        "locale": "it",
+        "url": "festival/programma/terra-fabrizio-maronta"
+      }
+    ]
+  },
+  {
+    "id": "97509936",
+    "slugs": {
+      "en": [
+        "festival",
+        "program",
+        "oltrepassare"
+      ],
+      "it": [
+        "festival",
+        "programma",
+        "oltrepassare"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "event",
+    "group": "festival-events",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "festival",
+          "program",
+          "oltrepassare"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "festival",
+          "programma",
+          "oltrepassare"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "festival/program/oltrepassare"
+      },
+      {
+        "locale": "it",
+        "url": "festival/programma/oltrepassare"
+      }
+    ]
+  },
+  {
+    "id": "96759866",
+    "slugs": {
+      "en": [
+        "festival",
+        "program",
+        "right"
+      ],
+      "it": [
+        "festival",
+        "programma",
+        "right"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "event",
+    "group": "festival-events",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "festival",
+          "program",
+          "right"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "festival",
+          "programma",
+          "right"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "festival/program/right"
+      },
+      {
+        "locale": "it",
+        "url": "festival/programma/right"
+      }
+    ]
+  },
+  {
+    "id": "96778403",
+    "slugs": {
+      "en": [
+        "festival",
+        "program",
+        "non-solo-ambiente-il-volto-geopolitico-della-transizione-energetica"
+      ],
+      "it": [
+        "festival",
+        "programma",
+        "non-solo-ambiente-il-volto-geopolitico-della-transizione-energetica"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "event",
+    "group": "festival-events",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "festival",
+          "program",
+          "non-solo-ambiente-il-volto-geopolitico-della-transizione-energetica"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "festival",
+          "programma",
+          "non-solo-ambiente-il-volto-geopolitico-della-transizione-energetica"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "festival/program/non-solo-ambiente-il-volto-geopolitico-della-transizione-energetica"
+      },
+      {
+        "locale": "it",
+        "url": "festival/programma/non-solo-ambiente-il-volto-geopolitico-della-transizione-energetica"
+      }
+    ]
+  },
+  {
+    "id": "96757112",
+    "slugs": {
+      "en": [
+        "festival",
+        "program",
+        "elegia-delle-cose-perdute"
+      ],
+      "it": [
+        "festival",
+        "programma",
+        "elegia-delle-cose-perdute"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "event",
+    "group": "festival-events",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "festival",
+          "program",
+          "elegia-delle-cose-perdute"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "festival",
+          "programma",
+          "elegia-delle-cose-perdute"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "festival/program/elegia-delle-cose-perdute"
+      },
+      {
+        "locale": "it",
+        "url": "festival/programma/elegia-delle-cose-perdute"
+      }
+    ]
+  },
+  {
+    "id": "96759849",
+    "slugs": {
+      "en": [
+        "festival",
+        "program",
+        "youme-you-are-you-and-me-i-m-me"
+      ],
+      "it": [
+        "festival",
+        "programma",
+        "youme-you-are-you-and-me-i-m-me"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "event",
+    "group": "festival-events",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "festival",
+          "program",
+          "youme-you-are-you-and-me-i-m-me"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "festival",
+          "programma",
+          "youme-you-are-you-and-me-i-m-me"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "festival/program/youme-you-are-you-and-me-i-m-me"
+      },
+      {
+        "locale": "it",
+        "url": "festival/programma/youme-you-are-you-and-me-i-m-me"
+      }
+    ]
+  },
+  {
+    "id": "96778431",
+    "slugs": {
+      "en": [
+        "festival",
+        "program",
+        "partecipazione-diritti-e-umanesimo-digitale"
+      ],
+      "it": [
+        "festival",
+        "programma",
+        "partecipazione-diritti-e-umanesimo-digitale"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "event",
+    "group": "festival-events",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "festival",
+          "program",
+          "partecipazione-diritti-e-umanesimo-digitale"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "festival",
+          "programma",
+          "partecipazione-diritti-e-umanesimo-digitale"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "festival/program/partecipazione-diritti-e-umanesimo-digitale"
+      },
+      {
+        "locale": "it",
+        "url": "festival/programma/partecipazione-diritti-e-umanesimo-digitale"
       }
     ]
   },
@@ -839,53 +1920,6 @@
     ]
   },
   {
-    "id": "97510034",
-    "slugs": {
-      "en": [
-        "festival",
-        "program",
-        "mostra-oriente-occidente-40-radici"
-      ],
-      "it": [
-        "festival",
-        "programma",
-        "mostra-oriente-occidente-40-radici"
-      ]
-    },
-    "isIndex": false,
-    "indexType": "",
-    "__typename": "event",
-    "group": "festival-events",
-    "paths": [
-      {
-        "locale": "en",
-        "slugs": [
-          "festival",
-          "program",
-          "mostra-oriente-occidente-40-radici"
-        ]
-      },
-      {
-        "locale": "it",
-        "slugs": [
-          "festival",
-          "programma",
-          "mostra-oriente-occidente-40-radici"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "en",
-        "url": "festival/program/mostra-oriente-occidente-40-radici"
-      },
-      {
-        "locale": "it",
-        "url": "festival/programma/mostra-oriente-occidente-40-radici"
-      }
-    ]
-  },
-  {
     "id": "96793543",
     "slugs": {
       "en": [
@@ -929,6 +1963,429 @@
       {
         "locale": "it",
         "url": "festival/programma/l-italia-nella-partita-tra-usa-e-cina-per-le-supply-chain"
+      }
+    ]
+  },
+  {
+    "id": "96759990",
+    "slugs": {
+      "en": [
+        "festival",
+        "program",
+        "migrazioni"
+      ],
+      "it": [
+        "festival",
+        "programma",
+        "migrazioni"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "event",
+    "group": "festival-events",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "festival",
+          "program",
+          "migrazioni"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "festival",
+          "programma",
+          "migrazioni"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "festival/program/migrazioni"
+      },
+      {
+        "locale": "it",
+        "url": "festival/programma/migrazioni"
+      }
+    ]
+  },
+  {
+    "id": "96793655",
+    "slugs": {
+      "en": [
+        "festival",
+        "program",
+        "le-migrazioni-ambientali-d-europa"
+      ],
+      "it": [
+        "festival",
+        "programma",
+        "le-migrazioni-ambientali-d-europa"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "event",
+    "group": "festival-events",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "festival",
+          "program",
+          "le-migrazioni-ambientali-d-europa"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "festival",
+          "programma",
+          "le-migrazioni-ambientali-d-europa"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "festival/program/le-migrazioni-ambientali-d-europa"
+      },
+      {
+        "locale": "it",
+        "url": "festival/programma/le-migrazioni-ambientali-d-europa"
+      }
+    ]
+  },
+  {
+    "id": "96776483",
+    "slugs": {
+      "en": [
+        "festival",
+        "program",
+        "juliette-on-the-road"
+      ],
+      "it": [
+        "festival",
+        "programma",
+        "juliette-on-the-road"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "event",
+    "group": "festival-events",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "festival",
+          "program",
+          "juliette-on-the-road"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "festival",
+          "programma",
+          "juliette-on-the-road"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "festival/program/juliette-on-the-road"
+      },
+      {
+        "locale": "it",
+        "url": "festival/programma/juliette-on-the-road"
+      }
+    ]
+  },
+  {
+    "id": "96776358",
+    "slugs": {
+      "en": [
+        "festival",
+        "program",
+        "manbuhsona"
+      ],
+      "it": [
+        "festival",
+        "programma",
+        "manbuhsona"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "event",
+    "group": "festival-events",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "festival",
+          "program",
+          "manbuhsona"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "festival",
+          "programma",
+          "manbuhsona"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "festival/program/manbuhsona"
+      },
+      {
+        "locale": "it",
+        "url": "festival/programma/manbuhsona"
+      }
+    ]
+  },
+  {
+    "id": "96796864",
+    "slugs": {
+      "en": [
+        "festival",
+        "program",
+        "la-lingua-in-movimento"
+      ],
+      "it": [
+        "festival",
+        "programma",
+        "la-lingua-in-movimento"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "event",
+    "group": "festival-events",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "festival",
+          "program",
+          "la-lingua-in-movimento"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "festival",
+          "programma",
+          "la-lingua-in-movimento"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "festival/program/la-lingua-in-movimento"
+      },
+      {
+        "locale": "it",
+        "url": "festival/programma/la-lingua-in-movimento"
+      }
+    ]
+  },
+  {
+    "id": "96253300",
+    "slugs": {
+      "en": [
+        "festival",
+        "program",
+        "cunningham-centennial-solos-oriente-occidente-dance-festival-site-specific"
+      ],
+      "it": [
+        "festival",
+        "programma",
+        "cunningham-centennial-solos-oriente-occidente-dance-festival-site-specific"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "event",
+    "group": "festival-events",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "festival",
+          "program",
+          "cunningham-centennial-solos-oriente-occidente-dance-festival-site-specific"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "festival",
+          "programma",
+          "cunningham-centennial-solos-oriente-occidente-dance-festival-site-specific"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "festival/program/cunningham-centennial-solos-oriente-occidente-dance-festival-site-specific"
+      },
+      {
+        "locale": "it",
+        "url": "festival/programma/cunningham-centennial-solos-oriente-occidente-dance-festival-site-specific"
+      }
+    ]
+  },
+  {
+    "id": "96548073",
+    "slugs": {
+      "en": [
+        "festival",
+        "program",
+        "osa"
+      ],
+      "it": [
+        "festival",
+        "programma",
+        "osa"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "event",
+    "group": "festival-events",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "festival",
+          "program",
+          "osa"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "festival",
+          "programma",
+          "osa"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "festival/program/osa"
+      },
+      {
+        "locale": "it",
+        "url": "festival/programma/osa"
+      }
+    ]
+  },
+  {
+    "id": "96102059",
+    "slugs": {
+      "en": [
+        "festival",
+        "program",
+        "the-mountain-the-truth-e-the-paradise"
+      ],
+      "it": [
+        "festival",
+        "programma",
+        "the-mountain-the-truth-e-the-paradise"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "event",
+    "group": "festival-events",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "festival",
+          "program",
+          "the-mountain-the-truth-e-the-paradise"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "festival",
+          "programma",
+          "the-mountain-the-truth-e-the-paradise"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "festival/program/the-mountain-the-truth-e-the-paradise"
+      },
+      {
+        "locale": "it",
+        "url": "festival/programma/the-mountain-the-truth-e-the-paradise"
+      }
+    ]
+  },
+  {
+    "id": "97510034",
+    "slugs": {
+      "en": [
+        "festival",
+        "program",
+        "mostra-oriente-occidente-40-radici"
+      ],
+      "it": [
+        "festival",
+        "programma",
+        "mostra-oriente-occidente-40-radici"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "event",
+    "group": "festival-events",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "festival",
+          "program",
+          "mostra-oriente-occidente-40-radici"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "festival",
+          "programma",
+          "mostra-oriente-occidente-40-radici"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "festival/program/mostra-oriente-occidente-40-radici"
+      },
+      {
+        "locale": "it",
+        "url": "festival/programma/mostra-oriente-occidente-40-radici"
       }
     ]
   },
@@ -1070,100 +2527,6 @@
       {
         "locale": "it",
         "url": "festival/programma/nobody-nobody-nobody-it-s-ok-not-to-be-ok-theatre-performance"
-      }
-    ]
-  },
-  {
-    "id": "96759990",
-    "slugs": {
-      "en": [
-        "festival",
-        "program",
-        "migrazioni"
-      ],
-      "it": [
-        "festival",
-        "programma",
-        "migrazioni"
-      ]
-    },
-    "isIndex": false,
-    "indexType": "",
-    "__typename": "event",
-    "group": "festival-events",
-    "paths": [
-      {
-        "locale": "en",
-        "slugs": [
-          "festival",
-          "program",
-          "migrazioni"
-        ]
-      },
-      {
-        "locale": "it",
-        "slugs": [
-          "festival",
-          "programma",
-          "migrazioni"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "en",
-        "url": "festival/program/migrazioni"
-      },
-      {
-        "locale": "it",
-        "url": "festival/programma/migrazioni"
-      }
-    ]
-  },
-  {
-    "id": "96776358",
-    "slugs": {
-      "en": [
-        "festival",
-        "program",
-        "manbuhsona"
-      ],
-      "it": [
-        "festival",
-        "programma",
-        "manbuhsona"
-      ]
-    },
-    "isIndex": false,
-    "indexType": "",
-    "__typename": "event",
-    "group": "festival-events",
-    "paths": [
-      {
-        "locale": "en",
-        "slugs": [
-          "festival",
-          "program",
-          "manbuhsona"
-        ]
-      },
-      {
-        "locale": "it",
-        "slugs": [
-          "festival",
-          "programma",
-          "manbuhsona"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "en",
-        "url": "festival/program/manbuhsona"
-      },
-      {
-        "locale": "it",
-        "url": "festival/programma/manbuhsona"
       }
     ]
   },
@@ -1356,194 +2719,6 @@
     ]
   },
   {
-    "id": "96253300",
-    "slugs": {
-      "en": [
-        "festival",
-        "program",
-        "cunningham-centennial-solos-oriente-occidente-dance-festival-site-specific"
-      ],
-      "it": [
-        "festival",
-        "programma",
-        "cunningham-centennial-solos-oriente-occidente-dance-festival-site-specific"
-      ]
-    },
-    "isIndex": false,
-    "indexType": "",
-    "__typename": "event",
-    "group": "festival-events",
-    "paths": [
-      {
-        "locale": "en",
-        "slugs": [
-          "festival",
-          "program",
-          "cunningham-centennial-solos-oriente-occidente-dance-festival-site-specific"
-        ]
-      },
-      {
-        "locale": "it",
-        "slugs": [
-          "festival",
-          "programma",
-          "cunningham-centennial-solos-oriente-occidente-dance-festival-site-specific"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "en",
-        "url": "festival/program/cunningham-centennial-solos-oriente-occidente-dance-festival-site-specific"
-      },
-      {
-        "locale": "it",
-        "url": "festival/programma/cunningham-centennial-solos-oriente-occidente-dance-festival-site-specific"
-      }
-    ]
-  },
-  {
-    "id": "96759849",
-    "slugs": {
-      "en": [
-        "festival",
-        "program",
-        "youme-you-are-you-and-me-i-m-me"
-      ],
-      "it": [
-        "festival",
-        "programma",
-        "youme-you-are-you-and-me-i-m-me"
-      ]
-    },
-    "isIndex": false,
-    "indexType": "",
-    "__typename": "event",
-    "group": "festival-events",
-    "paths": [
-      {
-        "locale": "en",
-        "slugs": [
-          "festival",
-          "program",
-          "youme-you-are-you-and-me-i-m-me"
-        ]
-      },
-      {
-        "locale": "it",
-        "slugs": [
-          "festival",
-          "programma",
-          "youme-you-are-you-and-me-i-m-me"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "en",
-        "url": "festival/program/youme-you-are-you-and-me-i-m-me"
-      },
-      {
-        "locale": "it",
-        "url": "festival/programma/youme-you-are-you-and-me-i-m-me"
-      }
-    ]
-  },
-  {
-    "id": "96759866",
-    "slugs": {
-      "en": [
-        "festival",
-        "program",
-        "right"
-      ],
-      "it": [
-        "festival",
-        "programma",
-        "right"
-      ]
-    },
-    "isIndex": false,
-    "indexType": "",
-    "__typename": "event",
-    "group": "festival-events",
-    "paths": [
-      {
-        "locale": "en",
-        "slugs": [
-          "festival",
-          "program",
-          "right"
-        ]
-      },
-      {
-        "locale": "it",
-        "slugs": [
-          "festival",
-          "programma",
-          "right"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "en",
-        "url": "festival/program/right"
-      },
-      {
-        "locale": "it",
-        "url": "festival/programma/right"
-      }
-    ]
-  },
-  {
-    "id": "96776483",
-    "slugs": {
-      "en": [
-        "festival",
-        "program",
-        "juliette-on-the-road"
-      ],
-      "it": [
-        "festival",
-        "programma",
-        "juliette-on-the-road"
-      ]
-    },
-    "isIndex": false,
-    "indexType": "",
-    "__typename": "event",
-    "group": "festival-events",
-    "paths": [
-      {
-        "locale": "en",
-        "slugs": [
-          "festival",
-          "program",
-          "juliette-on-the-road"
-        ]
-      },
-      {
-        "locale": "it",
-        "slugs": [
-          "festival",
-          "programma",
-          "juliette-on-the-road"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "en",
-        "url": "festival/program/juliette-on-the-road"
-      },
-      {
-        "locale": "it",
-        "url": "festival/programma/juliette-on-the-road"
-      }
-    ]
-  },
-  {
     "id": "96776776",
     "slugs": {
       "en": [
@@ -1728,194 +2903,6 @@
       {
         "locale": "it",
         "url": "festival/programma/tra-estraneita-e-familiarita-identita-e-percorsi-di-vite-femminili-in-movimento"
-      }
-    ]
-  },
-  {
-    "id": "96796864",
-    "slugs": {
-      "en": [
-        "festival",
-        "program",
-        "la-lingua-in-movimento"
-      ],
-      "it": [
-        "festival",
-        "programma",
-        "la-lingua-in-movimento"
-      ]
-    },
-    "isIndex": false,
-    "indexType": "",
-    "__typename": "event",
-    "group": "festival-events",
-    "paths": [
-      {
-        "locale": "en",
-        "slugs": [
-          "festival",
-          "program",
-          "la-lingua-in-movimento"
-        ]
-      },
-      {
-        "locale": "it",
-        "slugs": [
-          "festival",
-          "programma",
-          "la-lingua-in-movimento"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "en",
-        "url": "festival/program/la-lingua-in-movimento"
-      },
-      {
-        "locale": "it",
-        "url": "festival/programma/la-lingua-in-movimento"
-      }
-    ]
-  },
-  {
-    "id": "96793655",
-    "slugs": {
-      "en": [
-        "festival",
-        "program",
-        "le-migrazioni-ambientali-d-europa"
-      ],
-      "it": [
-        "festival",
-        "programma",
-        "le-migrazioni-ambientali-d-europa"
-      ]
-    },
-    "isIndex": false,
-    "indexType": "",
-    "__typename": "event",
-    "group": "festival-events",
-    "paths": [
-      {
-        "locale": "en",
-        "slugs": [
-          "festival",
-          "program",
-          "le-migrazioni-ambientali-d-europa"
-        ]
-      },
-      {
-        "locale": "it",
-        "slugs": [
-          "festival",
-          "programma",
-          "le-migrazioni-ambientali-d-europa"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "en",
-        "url": "festival/program/le-migrazioni-ambientali-d-europa"
-      },
-      {
-        "locale": "it",
-        "url": "festival/programma/le-migrazioni-ambientali-d-europa"
-      }
-    ]
-  },
-  {
-    "id": "96778403",
-    "slugs": {
-      "en": [
-        "festival",
-        "program",
-        "non-solo-ambiente-il-volto-geopolitico-della-transizione-energetica"
-      ],
-      "it": [
-        "festival",
-        "programma",
-        "non-solo-ambiente-il-volto-geopolitico-della-transizione-energetica"
-      ]
-    },
-    "isIndex": false,
-    "indexType": "",
-    "__typename": "event",
-    "group": "festival-events",
-    "paths": [
-      {
-        "locale": "en",
-        "slugs": [
-          "festival",
-          "program",
-          "non-solo-ambiente-il-volto-geopolitico-della-transizione-energetica"
-        ]
-      },
-      {
-        "locale": "it",
-        "slugs": [
-          "festival",
-          "programma",
-          "non-solo-ambiente-il-volto-geopolitico-della-transizione-energetica"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "en",
-        "url": "festival/program/non-solo-ambiente-il-volto-geopolitico-della-transizione-energetica"
-      },
-      {
-        "locale": "it",
-        "url": "festival/programma/non-solo-ambiente-il-volto-geopolitico-della-transizione-energetica"
-      }
-    ]
-  },
-  {
-    "id": "96778431",
-    "slugs": {
-      "en": [
-        "festival",
-        "program",
-        "partecipazione-diritti-e-umanesimo-digitale"
-      ],
-      "it": [
-        "festival",
-        "programma",
-        "partecipazione-diritti-e-umanesimo-digitale"
-      ]
-    },
-    "isIndex": false,
-    "indexType": "",
-    "__typename": "event",
-    "group": "festival-events",
-    "paths": [
-      {
-        "locale": "en",
-        "slugs": [
-          "festival",
-          "program",
-          "partecipazione-diritti-e-umanesimo-digitale"
-        ]
-      },
-      {
-        "locale": "it",
-        "slugs": [
-          "festival",
-          "programma",
-          "partecipazione-diritti-e-umanesimo-digitale"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "en",
-        "url": "festival/program/partecipazione-diritti-e-umanesimo-digitale"
-      },
-      {
-        "locale": "it",
-        "url": "festival/programma/partecipazione-diritti-e-umanesimo-digitale"
       }
     ]
   },
@@ -3001,993 +3988,6 @@
     ]
   },
   {
-    "id": "96290600",
-    "slugs": {
-      "en": [
-        "festival",
-        "program",
-        "sognare-la-terra"
-      ],
-      "it": [
-        "festival",
-        "programma",
-        "sognare-la-terra"
-      ]
-    },
-    "isIndex": false,
-    "indexType": "",
-    "__typename": "event",
-    "group": "festival-events",
-    "paths": [
-      {
-        "locale": "en",
-        "slugs": [
-          "festival",
-          "program",
-          "sognare-la-terra"
-        ]
-      },
-      {
-        "locale": "it",
-        "slugs": [
-          "festival",
-          "programma",
-          "sognare-la-terra"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "en",
-        "url": "festival/program/sognare-la-terra"
-      },
-      {
-        "locale": "it",
-        "url": "festival/programma/sognare-la-terra"
-      }
-    ]
-  },
-  {
-    "id": "96753479",
-    "slugs": {
-      "en": [
-        "festival",
-        "program",
-        "chouf-le-ciel"
-      ],
-      "it": [
-        "festival",
-        "programma",
-        "chouf-le-ciel"
-      ]
-    },
-    "isIndex": false,
-    "indexType": "",
-    "__typename": "event",
-    "group": "festival-events",
-    "paths": [
-      {
-        "locale": "en",
-        "slugs": [
-          "festival",
-          "program",
-          "chouf-le-ciel"
-        ]
-      },
-      {
-        "locale": "it",
-        "slugs": [
-          "festival",
-          "programma",
-          "chouf-le-ciel"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "en",
-        "url": "festival/program/chouf-le-ciel"
-      },
-      {
-        "locale": "it",
-        "url": "festival/programma/chouf-le-ciel"
-      }
-    ]
-  },
-  {
-    "id": "96738971",
-    "slugs": {
-      "en": [
-        "festival",
-        "program",
-        "desattraction-1-62-la-diagonale-des-anges"
-      ],
-      "it": [
-        "festival",
-        "programma",
-        "desattraction-1-62-la-diagonale-des-anges"
-      ]
-    },
-    "isIndex": false,
-    "indexType": "",
-    "__typename": "event",
-    "group": "festival-events",
-    "paths": [
-      {
-        "locale": "en",
-        "slugs": [
-          "festival",
-          "program",
-          "desattraction-1-62-la-diagonale-des-anges"
-        ]
-      },
-      {
-        "locale": "it",
-        "slugs": [
-          "festival",
-          "programma",
-          "desattraction-1-62-la-diagonale-des-anges"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "en",
-        "url": "festival/program/desattraction-1-62-la-diagonale-des-anges"
-      },
-      {
-        "locale": "it",
-        "url": "festival/programma/desattraction-1-62-la-diagonale-des-anges"
-      }
-    ]
-  },
-  {
-    "id": "96573178",
-    "slugs": {
-      "en": [
-        "festival",
-        "program",
-        "hyenas-forme-di-minotauri-contemporanei"
-      ],
-      "it": [
-        "festival",
-        "programma",
-        "hyenas-forme-di-minotauri-contemporanei"
-      ]
-    },
-    "isIndex": false,
-    "indexType": "",
-    "__typename": "event",
-    "group": "festival-events",
-    "paths": [
-      {
-        "locale": "en",
-        "slugs": [
-          "festival",
-          "program",
-          "hyenas-forme-di-minotauri-contemporanei"
-        ]
-      },
-      {
-        "locale": "it",
-        "slugs": [
-          "festival",
-          "programma",
-          "hyenas-forme-di-minotauri-contemporanei"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "en",
-        "url": "festival/program/hyenas-forme-di-minotauri-contemporanei"
-      },
-      {
-        "locale": "it",
-        "url": "festival/programma/hyenas-forme-di-minotauri-contemporanei"
-      }
-    ]
-  },
-  {
-    "id": "96738655",
-    "slugs": {
-      "en": [
-        "festival",
-        "program",
-        "political-mother-unplugged"
-      ],
-      "it": [
-        "festival",
-        "programma",
-        "political-mother-unplugged"
-      ]
-    },
-    "isIndex": false,
-    "indexType": "",
-    "__typename": "event",
-    "group": "festival-events",
-    "paths": [
-      {
-        "locale": "en",
-        "slugs": [
-          "festival",
-          "program",
-          "political-mother-unplugged"
-        ]
-      },
-      {
-        "locale": "it",
-        "slugs": [
-          "festival",
-          "programma",
-          "political-mother-unplugged"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "en",
-        "url": "festival/program/political-mother-unplugged"
-      },
-      {
-        "locale": "it",
-        "url": "festival/programma/political-mother-unplugged"
-      }
-    ]
-  },
-  {
-    "id": "96744568",
-    "slugs": {
-      "en": [
-        "festival",
-        "program",
-        "nobody-nobody-nobody-it-s-ok-not-to-be-ok-installazione"
-      ],
-      "it": [
-        "festival",
-        "programma",
-        "nobody-nobody-nobody-it-s-ok-not-to-be-ok-installazione"
-      ]
-    },
-    "isIndex": false,
-    "indexType": "",
-    "__typename": "event",
-    "group": "festival-events",
-    "paths": [
-      {
-        "locale": "en",
-        "slugs": [
-          "festival",
-          "program",
-          "nobody-nobody-nobody-it-s-ok-not-to-be-ok-installazione"
-        ]
-      },
-      {
-        "locale": "it",
-        "slugs": [
-          "festival",
-          "programma",
-          "nobody-nobody-nobody-it-s-ok-not-to-be-ok-installazione"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "en",
-        "url": "festival/program/nobody-nobody-nobody-it-s-ok-not-to-be-ok-installazione"
-      },
-      {
-        "locale": "it",
-        "url": "festival/programma/nobody-nobody-nobody-it-s-ok-not-to-be-ok-installazione"
-      }
-    ]
-  },
-  {
-    "id": "96753759",
-    "slugs": {
-      "en": [
-        "festival",
-        "program",
-        "diptych-the-missing-door-e-the-lost-room"
-      ],
-      "it": [
-        "festival",
-        "programma",
-        "diptych-the-missing-door-e-the-lost-room"
-      ]
-    },
-    "isIndex": false,
-    "indexType": "",
-    "__typename": "event",
-    "group": "festival-events",
-    "paths": [
-      {
-        "locale": "en",
-        "slugs": [
-          "festival",
-          "program",
-          "diptych-the-missing-door-e-the-lost-room"
-        ]
-      },
-      {
-        "locale": "it",
-        "slugs": [
-          "festival",
-          "programma",
-          "diptych-the-missing-door-e-the-lost-room"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "en",
-        "url": "festival/program/diptych-the-missing-door-e-the-lost-room"
-      },
-      {
-        "locale": "it",
-        "url": "festival/programma/diptych-the-missing-door-e-the-lost-room"
-      }
-    ]
-  },
-  {
-    "id": "96572914",
-    "slugs": {
-      "en": [
-        "festival",
-        "program",
-        "l-europa-della-pandemia-quale-equilibrio-quale-futuro"
-      ],
-      "it": [
-        "festival",
-        "programma",
-        "l-europa-della-pandemia-quale-equilibrio-quale-futuro"
-      ]
-    },
-    "isIndex": false,
-    "indexType": "",
-    "__typename": "event",
-    "group": "festival-events",
-    "paths": [
-      {
-        "locale": "en",
-        "slugs": [
-          "festival",
-          "program",
-          "l-europa-della-pandemia-quale-equilibrio-quale-futuro"
-        ]
-      },
-      {
-        "locale": "it",
-        "slugs": [
-          "festival",
-          "programma",
-          "l-europa-della-pandemia-quale-equilibrio-quale-futuro"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "en",
-        "url": "festival/program/l-europa-della-pandemia-quale-equilibrio-quale-futuro"
-      },
-      {
-        "locale": "it",
-        "url": "festival/programma/l-europa-della-pandemia-quale-equilibrio-quale-futuro"
-      }
-    ]
-  },
-  {
-    "id": "96748477",
-    "slugs": {
-      "en": [
-        "festival",
-        "program",
-        "moby-dick"
-      ],
-      "it": [
-        "festival",
-        "programma",
-        "moby-dick"
-      ]
-    },
-    "isIndex": false,
-    "indexType": "",
-    "__typename": "event",
-    "group": "festival-events",
-    "paths": [
-      {
-        "locale": "en",
-        "slugs": [
-          "festival",
-          "program",
-          "moby-dick"
-        ]
-      },
-      {
-        "locale": "it",
-        "slugs": [
-          "festival",
-          "programma",
-          "moby-dick"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "en",
-        "url": "festival/program/moby-dick"
-      },
-      {
-        "locale": "it",
-        "url": "festival/programma/moby-dick"
-      }
-    ]
-  },
-  {
-    "id": "96290928",
-    "slugs": {
-      "en": [
-        "festival",
-        "program",
-        "paso-doble"
-      ],
-      "it": [
-        "festival",
-        "programma",
-        "paso-doble"
-      ]
-    },
-    "isIndex": false,
-    "indexType": "",
-    "__typename": "event",
-    "group": "festival-events",
-    "paths": [
-      {
-        "locale": "en",
-        "slugs": [
-          "festival",
-          "program",
-          "paso-doble"
-        ]
-      },
-      {
-        "locale": "it",
-        "slugs": [
-          "festival",
-          "programma",
-          "paso-doble"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "en",
-        "url": "festival/program/paso-doble"
-      },
-      {
-        "locale": "it",
-        "url": "festival/programma/paso-doble"
-      }
-    ]
-  },
-  {
-    "id": "96292089",
-    "slugs": {
-      "en": [
-        "festival",
-        "program",
-        "the-queen"
-      ],
-      "it": [
-        "festival",
-        "programma",
-        "the-queen"
-      ]
-    },
-    "isIndex": false,
-    "indexType": "",
-    "__typename": "event",
-    "group": "festival-events",
-    "paths": [
-      {
-        "locale": "en",
-        "slugs": [
-          "festival",
-          "program",
-          "the-queen"
-        ]
-      },
-      {
-        "locale": "it",
-        "slugs": [
-          "festival",
-          "programma",
-          "the-queen"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "en",
-        "url": "festival/program/the-queen"
-      },
-      {
-        "locale": "it",
-        "url": "festival/programma/the-queen"
-      }
-    ]
-  },
-  {
-    "id": "96290473",
-    "slugs": {
-      "en": [
-        "festival",
-        "program",
-        "plonter"
-      ],
-      "it": [
-        "festival",
-        "programma",
-        "plonter"
-      ]
-    },
-    "isIndex": false,
-    "indexType": "",
-    "__typename": "event",
-    "group": "festival-events",
-    "paths": [
-      {
-        "locale": "en",
-        "slugs": [
-          "festival",
-          "program",
-          "plonter"
-        ]
-      },
-      {
-        "locale": "it",
-        "slugs": [
-          "festival",
-          "programma",
-          "plonter"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "en",
-        "url": "festival/program/plonter"
-      },
-      {
-        "locale": "it",
-        "url": "festival/programma/plonter"
-      }
-    ]
-  },
-  {
-    "id": "96101925",
-    "slugs": {
-      "en": [
-        "festival",
-        "program",
-        "keep-in-touch"
-      ],
-      "it": [
-        "festival",
-        "programma",
-        "keep-in-touch"
-      ]
-    },
-    "isIndex": false,
-    "indexType": "",
-    "__typename": "event",
-    "group": "festival-events",
-    "paths": [
-      {
-        "locale": "en",
-        "slugs": [
-          "festival",
-          "program",
-          "keep-in-touch"
-        ]
-      },
-      {
-        "locale": "it",
-        "slugs": [
-          "festival",
-          "programma",
-          "keep-in-touch"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "en",
-        "url": "festival/program/keep-in-touch"
-      },
-      {
-        "locale": "it",
-        "url": "festival/programma/keep-in-touch"
-      }
-    ]
-  },
-  {
-    "id": "96757112",
-    "slugs": {
-      "en": [
-        "festival",
-        "program",
-        "elegia-delle-cose-perdute"
-      ],
-      "it": [
-        "festival",
-        "programma",
-        "elegia-delle-cose-perdute"
-      ]
-    },
-    "isIndex": false,
-    "indexType": "",
-    "__typename": "event",
-    "group": "festival-events",
-    "paths": [
-      {
-        "locale": "en",
-        "slugs": [
-          "festival",
-          "program",
-          "elegia-delle-cose-perdute"
-        ]
-      },
-      {
-        "locale": "it",
-        "slugs": [
-          "festival",
-          "programma",
-          "elegia-delle-cose-perdute"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "en",
-        "url": "festival/program/elegia-delle-cose-perdute"
-      },
-      {
-        "locale": "it",
-        "url": "festival/programma/elegia-delle-cose-perdute"
-      }
-    ]
-  },
-  {
-    "id": "96102035",
-    "slugs": {
-      "en": [
-        "festival",
-        "program",
-        "pastorale"
-      ],
-      "it": [
-        "festival",
-        "programma",
-        "pastorale"
-      ]
-    },
-    "isIndex": false,
-    "indexType": "",
-    "__typename": "event",
-    "group": "festival-events",
-    "paths": [
-      {
-        "locale": "en",
-        "slugs": [
-          "festival",
-          "program",
-          "pastorale"
-        ]
-      },
-      {
-        "locale": "it",
-        "slugs": [
-          "festival",
-          "programma",
-          "pastorale"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "en",
-        "url": "festival/program/pastorale"
-      },
-      {
-        "locale": "it",
-        "url": "festival/programma/pastorale"
-      }
-    ]
-  },
-  {
-    "id": "96548073",
-    "slugs": {
-      "en": [
-        "festival",
-        "program",
-        "osa"
-      ],
-      "it": [
-        "festival",
-        "programma",
-        "osa"
-      ]
-    },
-    "isIndex": false,
-    "indexType": "",
-    "__typename": "event",
-    "group": "festival-events",
-    "paths": [
-      {
-        "locale": "en",
-        "slugs": [
-          "festival",
-          "program",
-          "osa"
-        ]
-      },
-      {
-        "locale": "it",
-        "slugs": [
-          "festival",
-          "programma",
-          "osa"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "en",
-        "url": "festival/program/osa"
-      },
-      {
-        "locale": "it",
-        "url": "festival/programma/osa"
-      }
-    ]
-  },
-  {
-    "id": "96776422",
-    "slugs": {
-      "en": [
-        "festival",
-        "program",
-        "figli-di-un-dio-ubriaco-incursioni-fisiche-sui-madrigali-di-claudio-monteverdi"
-      ],
-      "it": [
-        "festival",
-        "programma",
-        "figli-di-un-dio-ubriaco-incursioni-fisiche-sui-madrigali-di-claudio-monteverdi"
-      ]
-    },
-    "isIndex": false,
-    "indexType": "",
-    "__typename": "event",
-    "group": "festival-events",
-    "paths": [
-      {
-        "locale": "en",
-        "slugs": [
-          "festival",
-          "program",
-          "figli-di-un-dio-ubriaco-incursioni-fisiche-sui-madrigali-di-claudio-monteverdi"
-        ]
-      },
-      {
-        "locale": "it",
-        "slugs": [
-          "festival",
-          "programma",
-          "figli-di-un-dio-ubriaco-incursioni-fisiche-sui-madrigali-di-claudio-monteverdi"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "en",
-        "url": "festival/program/figli-di-un-dio-ubriaco-incursioni-fisiche-sui-madrigali-di-claudio-monteverdi"
-      },
-      {
-        "locale": "it",
-        "url": "festival/programma/figli-di-un-dio-ubriaco-incursioni-fisiche-sui-madrigali-di-claudio-monteverdi"
-      }
-    ]
-  },
-  {
-    "id": "96253900",
-    "slugs": {
-      "en": [
-        "festival",
-        "program",
-        "il-mondo-virato-come-non-cambia-la-competizione-geopolitica"
-      ],
-      "it": [
-        "festival",
-        "programma",
-        "il-mondo-virato-come-non-cambia-la-competizione-geopolitica"
-      ]
-    },
-    "isIndex": false,
-    "indexType": "",
-    "__typename": "event",
-    "group": "festival-events",
-    "paths": [
-      {
-        "locale": "en",
-        "slugs": [
-          "festival",
-          "program",
-          "il-mondo-virato-come-non-cambia-la-competizione-geopolitica"
-        ]
-      },
-      {
-        "locale": "it",
-        "slugs": [
-          "festival",
-          "programma",
-          "il-mondo-virato-come-non-cambia-la-competizione-geopolitica"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "en",
-        "url": "festival/program/il-mondo-virato-come-non-cambia-la-competizione-geopolitica"
-      },
-      {
-        "locale": "it",
-        "url": "festival/programma/il-mondo-virato-come-non-cambia-la-competizione-geopolitica"
-      }
-    ]
-  },
-  {
-    "id": "96315994",
-    "slugs": {
-      "en": [
-        "festival",
-        "program",
-        "cunningham-centennial-solos-oriente-occidente-dance-festival"
-      ],
-      "it": [
-        "festival",
-        "programma",
-        "cunningham-centennial-solos-oriente-occidente-dance-festival"
-      ]
-    },
-    "isIndex": false,
-    "indexType": "",
-    "__typename": "event",
-    "group": "festival-events",
-    "paths": [
-      {
-        "locale": "en",
-        "slugs": [
-          "festival",
-          "program",
-          "cunningham-centennial-solos-oriente-occidente-dance-festival"
-        ]
-      },
-      {
-        "locale": "it",
-        "slugs": [
-          "festival",
-          "programma",
-          "cunningham-centennial-solos-oriente-occidente-dance-festival"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "en",
-        "url": "festival/program/cunningham-centennial-solos-oriente-occidente-dance-festival"
-      },
-      {
-        "locale": "it",
-        "url": "festival/programma/cunningham-centennial-solos-oriente-occidente-dance-festival"
-      }
-    ]
-  },
-  {
-    "id": "96081767",
-    "slugs": {
-      "en": [
-        "festival",
-        "program",
-        "fabrizio-maronta"
-      ],
-      "it": [
-        "festival",
-        "programma",
-        "terra-fabrizio-maronta"
-      ]
-    },
-    "isIndex": false,
-    "indexType": "",
-    "__typename": "event",
-    "group": "festival-events",
-    "paths": [
-      {
-        "locale": "en",
-        "slugs": [
-          "festival",
-          "program",
-          "fabrizio-maronta"
-        ]
-      },
-      {
-        "locale": "it",
-        "slugs": [
-          "festival",
-          "programma",
-          "terra-fabrizio-maronta"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "en",
-        "url": "festival/program/fabrizio-maronta"
-      },
-      {
-        "locale": "it",
-        "url": "festival/programma/terra-fabrizio-maronta"
-      }
-    ]
-  },
-  {
-    "id": "97509936",
-    "slugs": {
-      "en": [
-        "festival",
-        "program",
-        "oltrepassare"
-      ],
-      "it": [
-        "festival",
-        "programma",
-        "oltrepassare"
-      ]
-    },
-    "isIndex": false,
-    "indexType": "",
-    "__typename": "event",
-    "group": "festival-events",
-    "paths": [
-      {
-        "locale": "en",
-        "slugs": [
-          "festival",
-          "program",
-          "oltrepassare"
-        ]
-      },
-      {
-        "locale": "it",
-        "slugs": [
-          "festival",
-          "programma",
-          "oltrepassare"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "en",
-        "url": "festival/program/oltrepassare"
-      },
-      {
-        "locale": "it",
-        "url": "festival/programma/oltrepassare"
-      }
-    ]
-  },
-  {
     "id": "102388104",
     "slugs": {
       "en": [
@@ -4779,6 +4779,53 @@
     ]
   },
   {
+    "id": "99639463",
+    "slugs": {
+      "en": [
+        "people",
+        "projects",
+        "eba-europe-beyond-access"
+      ],
+      "it": [
+        "people",
+        "progetti",
+        "eba-europe-beyond-access"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "project",
+    "group": "projects",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "people",
+          "projects",
+          "eba-europe-beyond-access"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "people",
+          "progetti",
+          "eba-europe-beyond-access"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "people/projects/eba-europe-beyond-access"
+      },
+      {
+        "locale": "it",
+        "url": "people/progetti/eba-europe-beyond-access"
+      }
+    ]
+  },
+  {
     "id": "104438524",
     "slugs": {
       "en": [
@@ -4916,53 +4963,6 @@
       {
         "locale": "it",
         "url": "people/progetti/impart"
-      }
-    ]
-  },
-  {
-    "id": "99639463",
-    "slugs": {
-      "en": [
-        "people",
-        "projects",
-        "eba-europe-beyond-access"
-      ],
-      "it": [
-        "people",
-        "progetti",
-        "eba-europe-beyond-access"
-      ]
-    },
-    "isIndex": false,
-    "indexType": "",
-    "__typename": "project",
-    "group": "projects",
-    "paths": [
-      {
-        "locale": "en",
-        "slugs": [
-          "people",
-          "projects",
-          "eba-europe-beyond-access"
-        ]
-      },
-      {
-        "locale": "it",
-        "slugs": [
-          "people",
-          "progetti",
-          "eba-europe-beyond-access"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "en",
-        "url": "people/projects/eba-europe-beyond-access"
-      },
-      {
-        "locale": "it",
-        "url": "people/progetti/eba-europe-beyond-access"
       }
     ]
   },
@@ -5668,6 +5668,53 @@
       {
         "locale": "it",
         "url": "studio/artisti-associati/daniele-ninarello"
+      }
+    ]
+  },
+  {
+    "id": "105005637",
+    "slugs": {
+      "en": [
+        "studio",
+        "artistic-residences",
+        "sindri-runudde"
+      ],
+      "it": [
+        "studio",
+        "residenze-artistiche",
+        "sindri-runudde"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "artist",
+    "group": "artistic-residences",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "studio",
+          "artistic-residences",
+          "sindri-runudde"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "studio",
+          "residenze-artistiche",
+          "sindri-runudde"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "studio/artistic-residences/sindri-runudde"
+      },
+      {
+        "locale": "it",
+        "url": "studio/residenze-artistiche/sindri-runudde"
       }
     ]
   },
@@ -6514,6 +6561,49 @@
       {
         "locale": "it",
         "url": "studio/residenze-artistiche/lucrezia-gabrieli"
+      }
+    ]
+  },
+  {
+    "id": "105006927",
+    "slugs": {
+      "en": [
+        "news",
+        "studio-or-la-casa-della-danza-di-oriente-occidente"
+      ],
+      "it": [
+        "news",
+        "studio-or-la-casa-della-danza-di-oriente-occidente"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "news",
+    "group": "news-index",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "news",
+          "studio-or-la-casa-della-danza-di-oriente-occidente"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "news",
+          "studio-or-la-casa-della-danza-di-oriente-occidente"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "news/studio-or-la-casa-della-danza-di-oriente-occidente"
+      },
+      {
+        "locale": "it",
+        "url": "news/studio-or-la-casa-della-danza-di-oriente-occidente"
       }
     ]
   },

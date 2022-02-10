@@ -1,6 +1,6 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper";
-import SwiperCore, { Pagination, Navigation } from "swiper";
+import SwiperCore, { Pagination, Navigation, A11y } from "swiper";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
@@ -13,7 +13,7 @@ function Gallery({ slides }) {
   return (
     <div className="relative">
       <Swiper
-        modules={[Autoplay]}
+        modules={[Autoplay, A11y]}
         spaceBetween={0}
         speed={900}
         slidesPerView={1}
@@ -31,7 +31,7 @@ function Gallery({ slides }) {
                   alt={slide.alt}
                   title={slide.title}
                 />
-                <div className="absolute inset-0 z-10 max-w-[1400px] bg-gradient-to-t from-black-transparent to-transparent"></div>
+                <div className="from-black-transparent absolute inset-0 z-10 max-w-[1400px] bg-gradient-to-t to-transparent"></div>
               </div>
             </SwiperSlide>
           );

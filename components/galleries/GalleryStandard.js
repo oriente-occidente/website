@@ -9,11 +9,11 @@ import "swiper/css/effect-fade";
 import { Image as DatoImage } from "react-datocms";
 
 function Gallery({ slides }) {
-  SwiperCore.use([Pagination, Navigation]);
+  SwiperCore.use([Pagination, Navigation, A11y]);
   return (
     <div className="relative">
       <Swiper
-        modules={[Autoplay]}
+        modules={[Autoplay, A11y]}
         speed={900}
         slidesPerView={1}
         pagination={true}

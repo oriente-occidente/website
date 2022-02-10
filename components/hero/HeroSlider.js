@@ -1,6 +1,5 @@
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay } from "swiper";
-import SwiperCore, { Pagination, Navigation } from "swiper";
+import SwiperCore, { Pagination, Navigation, Autoplay, A11y } from "swiper";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
@@ -9,11 +8,11 @@ import "swiper/css/effect-fade";
 import { Image as DatoImage } from "react-datocms";
 
 function HeroSlider({ slides }) {
-  SwiperCore.use([Pagination, Navigation]);
+  SwiperCore.use([Pagination, Navigation, A11y]);
   return (
     <header className="relative overflow-hidden">
       <Swiper
-        modules={[Autoplay]}
+        modules={[Autoplay, A11y]}
         spaceBetween={0}
         speed={900}
         slidesPerView={1}
@@ -27,7 +26,7 @@ function HeroSlider({ slides }) {
           return (
             <SwiperSlide key={id}>
               <DatoImage
-                className="h-80vh object-cover md:h-50vh xl:h-80vh"
+                className="h-80vh md:h-50vh xl:h-80vh object-cover"
                 data={responsiveImage}
                 alt={alt}
                 title={title}
@@ -37,7 +36,7 @@ function HeroSlider({ slides }) {
                   {slide.title}
                 </h2>
               </div>
-              <div className="absolute inset-0 z-10 bg-gradient-to-t from-black-lessTransparent to-transparent"></div>
+              <div className="from-black-lessTransparent absolute inset-0 z-10 bg-gradient-to-t to-transparent"></div>
             </SwiperSlide>
           );
         })}
