@@ -1,14 +1,16 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect } from 'react';
+import translate from 'lib/locales';
 
 const tabs = [
-  { name: "Festival", slug: "all" },
-  { name: "Events", slug: "festivalEvents" },
-  { name: "Workshop", slug: "workshops" },
-  { name: "Courses", slug: "courses" },
+  { name: 'tab_festival', slug: 'all' },
+  { name: 'tab_events', slug: 'festivalEvents' },
+  { name: 'tab_workshops', slug: 'workshops' },
+  // { name: 'tab_courses', slug: 'courses' },
+  // { name: 'tab_talks', slug: 'courses' },
 ];
 
-export default function Tabs({ selected, handleSelect }) {
-  const [current, setCurrent] = useState("festivalEvents");
+export default function Tabs({ selected, handleSelect, locale }) {
+  const [current, setCurrent] = useState('festivalEvents');
   function handleChange(value) {
     if (value && handleSelect) {
       handleSelect(value);
@@ -55,12 +57,12 @@ export default function Tabs({ selected, handleSelect }) {
                   key={slug}
                   className={`${
                     isActive
-                      ? "border-black font-semibold uppercase text-black"
-                      : "border-transparent text-gray-dark hover:border-gray-300 hover:text-black"
+                      ? 'border-black font-semibold uppercase text-black'
+                      : 'border-transparent text-gray-dark hover:border-gray-300 hover:text-black'
                   } whitespace-nowrap border-b-2 py-4 px-1 text-xxs font-medium tracking-wider`}
-                  aria-current={isActive ? "page" : undefined}
+                  aria-current={isActive ? 'page' : undefined}
                 >
-                  {name}
+                  {translate(name, locale)}
                 </button>
               );
             })}

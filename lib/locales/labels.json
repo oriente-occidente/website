@@ -34,7 +34,13 @@
     "dates": "date: ",
     "amount": "costo: ",
     "send": "Invia",
-    "externaLink": "Vai a (link esterno)"
+    "externaLink": "Vai a (link esterno)",
+    "tab_festival": "Festival",
+    "tab_events": "Eventi",
+    "tab_workshops": "Workshops",
+    "tab_talks": "Linguaggi",
+    "tab_courses": "Corsi",
+    "year": "Anno"
   },
   "en": {
     "it": "Italian",
@@ -71,6 +77,12 @@
     "dates": "dates: ",
     "amount": "amount: ",
     "send": "Send",
-    "externaLink": "Go to (external link)"
+    "externaLink": "Go to (external link)",
+    "tab_festival": "Festival",
+    "tab_events": "Events",
+    "tab_workshops": "Workshops",
+    "tab_talks": "Talks",
+    "tab_courses": "Courses",
+    "year": "Year"
   }
 }

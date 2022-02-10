@@ -1,9 +1,10 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect } from 'react';
 // import { useRouter } from 'next/router';
 
-import Tabs from "components/Tabs";
-import PreviewCard from "components/cards/PreviewCard";
-import { useFestivalByDate } from "lib/api/queryHooks";
+import Tabs from 'components/Tabs';
+import PreviewCard from 'components/cards/PreviewCard';
+import { useFestivalByDate } from 'lib/api/queryHooks';
+import translate from 'lib/locales';
 
 function getDatesOfYear(datesOfYear, y) {
   return datesOfYear.find((d) => d.year == y);
@@ -18,7 +19,7 @@ function Filters({ locale, list, datesOfYear }) {
     .sort()
     .reverse();
   const currentYear = years[0];
-  const [typeFilter, setTypeFilter] = useState("festivalEvents");
+  const [typeFilter, setTypeFilter] = useState('festivalEvents');
   const [year, setYear] = useState(currentYear);
   const { data, error, loading } = useFestivalByDate(
     locale,
@@ -39,10 +40,11 @@ function Filters({ locale, list, datesOfYear }) {
   }
   function filterData(data, list, typeFilter) {
     const results = data ? data : list;
-    if (typeFilter === "all") {
+    if (typeFilter === 'all') {
       return Object.keys(results)?.reduce((all, key) => {
         return [...all, ...results[key]];
       }, []);
+      //TODO SORT BY DATE
     } else {
       return results[typeFilter];
     }
@@ -53,6 +55,7 @@ function Filters({ locale, list, datesOfYear }) {
       <div className="border-gray xl:border-b">
         <div className="xl:container xl:mx-auto xl:flex xl:justify-between">
           <Tabs
+            locale={locale}
             selected={typeFilter}
             handleSelect={(value) => setTypeFilter(value)}
           />
@@ -60,7 +63,7 @@ function Filters({ locale, list, datesOfYear }) {
             <div className="px-4 pt-4 md:flex md:justify-between md:px-6 xl:pt-2">
               <div className="relative md:flex md:items-center">
                 <div className="block w-full px-0 text-xxs font-semibold tracking-wider md:mr-3">
-                  YEAR
+                  {translate('year', locale)}
                 </div>
                 <select
                   onChange={(e) => handleChange(e)}
