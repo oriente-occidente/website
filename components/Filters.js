@@ -80,7 +80,8 @@ function Filters({ locale, list, datesOfYear }) {
           </div>
         </div>
       </div>
-      {/* <div className="mt-10">
+      {/*
+      <div className="mt-10">
         <div className="text-md">TYPE: {typeFilter}</div>
         <div className="text-md">YEAR: {year}</div>
       </div> */}
