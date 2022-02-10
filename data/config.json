@@ -325,7 +325,7 @@
             "slugs": [
               {
                 "locale": "en",
-                "value": "artistic-residencies"
+                "value": "artistic-residences"
               },
               {
                 "locale": "it",
@@ -335,7 +335,7 @@
             "titles": [
               {
                 "locale": "en",
-                "value": "Artistic Residencies"
+                "value": "Artistic Residences"
               },
               {
                 "locale": "it",

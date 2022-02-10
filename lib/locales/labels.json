@@ -40,7 +40,9 @@
     "tab_workshops": "Workshops",
     "tab_talks": "Linguaggi",
     "tab_courses": "Corsi",
-    "year": "Anno"
+    "year": "Anno",
+    "previous_events": "Eventi Precedenti",
+    "next_events": "Prossimi Eventi"
   },
   "en": {
     "it": "Italian",
@@ -83,6 +85,8 @@
     "tab_workshops": "Workshops",
     "tab_talks": "Talks",
     "tab_courses": "Courses",
-    "year": "Year"
+    "year": "Year",
+    "previous_events": "Previous Events",
+    "next_events": "Next Events"
   }
 }

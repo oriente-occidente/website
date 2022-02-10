@@ -5,12 +5,13 @@ import Tabs from 'components/Tabs';
 import PreviewCard from 'components/cards/PreviewCard';
 import { useFestivalByDate } from 'lib/api/queryHooks';
 import translate from 'lib/locales';
+import { isFinished, enhanceEvents, sortDesc, sortAsc } from 'lib/utils';
 
 function getDatesOfYear(datesOfYear, y) {
   return datesOfYear.find((d) => d.year == y);
 }
 
-function Filters({ locale, list, datesOfYear }) {
+function Filters({ locale, list = null, datesOfYear }) {
   // const router = useRouter();
   //const currentYear = new Date().getFullYear();
   // const years = [`${currentYear}`, `${currentYear - 1}`, `${currentYear - 2}`];
@@ -39,17 +40,30 @@ function Filters({ locale, list, datesOfYear }) {
     // router.push(`${router.asPath}?year=${value}`);
   }
   function filterData(data, list, typeFilter) {
-    const results = data ? data : list;
+    const results = data ? data : list ? list : null;
+    if (!results) return [];
+
     if (typeFilter === 'all') {
-      return Object.keys(results)?.reduce((all, key) => {
-        return [...all, ...results[key]];
-      }, []);
+      const allResults =
+        Object.keys(results).reduce((all, key) => {
+          return [...all, ...results[key]];
+        }, []) || [];
       //TODO SORT BY DATE
+      return enhanceEvents(allResults);
     } else {
-      return results[typeFilter];
+      return enhanceEvents(results[typeFilter]);
     }
   }
   const resultList = filterData(data, list, typeFilter);
+  const finished = sortDesc(
+    resultList?.filter((e) => e.finished),
+    'startDate'
+  );
+  const active = sortAsc(
+    resultList?.filter((e) => !e.finished),
+    'nextDate'
+  );
+  const showHeaders = finished.length > 0 && active.length > 0;
   return (
     <div className="mt-10">
       <div className="border-gray xl:border-b">
@@ -80,18 +94,39 @@ function Filters({ locale, list, datesOfYear }) {
           </div>
         </div>
       </div>
+
       {/*
       <div className="mt-10">
         <div className="text-md">TYPE: {typeFilter}</div>
         <div className="text-md">YEAR: {year}</div>
-      </div> */}
+      </div>
+      */}
 
-      <div className="my-4">
-        <div className="container lg:grid lg:grid-cols-2 lg:gap-6">
-          {resultList?.map((item) => (
-            <PreviewCard locale={locale} data={item} key={item.id} />
-          ))}
-        </div>
+      <div className="my-4 container">
+        {showHeaders && (
+          <div className="border-b border-black  mt-20 pb-5 font-semibold uppercase text-lg">
+            {translate('next_events', locale)}
+          </div>
+        )}
+        {active.length > 0 && (
+          <div className="lg:grid lg:grid-cols-2 lg:gap-6">
+            {active?.map((item) => (
+              <PreviewCard locale={locale} data={item} key={item.id} />
+            ))}
+          </div>
+        )}
+        {showHeaders && (
+          <div className="border-b border-black  mt-20 pb-5 font-semibold uppercase  text-lg">
+            {translate('previous_events', locale)}
+          </div>
+        )}
+        {finished.length > 0 && (
+          <div className="lg:grid lg:grid-cols-2 lg:gap-6 ">
+            {finished?.map((item) => (
+              <PreviewCard locale={locale} data={item} key={item.id} />
+            ))}
+          </div>
+        )}
       </div>
     </div>
   );

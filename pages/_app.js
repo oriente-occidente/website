@@ -1,11 +1,11 @@
-import Script from "next/script";
-import { useEffect } from "react";
-import TagManager from "react-gtm-module";
-import "styles/globals.css";
-import "styles/base.css";
-import { useRouter } from "next/router";
+import Script from 'next/script';
+import { useEffect } from 'react';
+import TagManager from 'react-gtm-module';
+import 'styles/globals.css';
+import 'styles/base.css';
+import { useRouter } from 'next/router';
 
-import translate from "lib/locales";
+import translate from 'lib/locales';
 
 // import { AppWrapper } from 'lib/ctx';
 
@@ -35,7 +35,7 @@ function MyApp({ Component, pageProps }) {
             "consentOnContinuedBrowsing": true,
             "lang":"${locale}",
             "siteId":${IUBENDA_SITE_ID},
-            "cookiePolicyId":${translate("cookiePolicyId", locale)},
+            "cookiePolicyId":${translate('cookiePolicyId', locale)},
             "perPurposeConsent": true,
             "banner":{
               "acceptButtonDisplay":true,
@@ -55,7 +55,7 @@ function MyApp({ Component, pageProps }) {
             },
             "callback":{
               onPreferenceExpressedOrNotNeeded: function(preference) {
-                console.log("PREFENCE", preference)
+                // console.log("PREFENCE", preference)
                 window.consentIsGiven = preference;
               }
             }};
