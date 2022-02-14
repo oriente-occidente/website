@@ -83,7 +83,7 @@
       "slugs": [
         {
           "locale": "en",
-          "slug": "artistic-residences"
+          "slug": "artistic-residencies"
         },
         {
           "locale": "it",
@@ -107,7 +107,7 @@
       "slugs": [
         {
           "locale": "en",
-          "slug": "workshop"
+          "slug": "workshops"
         },
         {
           "locale": "it",
@@ -338,6 +338,30 @@
   {
     "routes": [
       "info",
+      "trasparenza"
+    ],
+    "link": {
+      "__typename": "PageRecord",
+      "id": "107306138",
+      "slug": "trasparenza",
+      "slugs": [
+        {
+          "locale": "en",
+          "slug": "trasparenza"
+        },
+        {
+          "locale": "it",
+          "slug": "trasparenza"
+        }
+      ],
+      "indexType": "",
+      "isIndex": false
+    },
+    "lang": "it"
+  },
+  {
+    "routes": [
+      "info",
       "sicurezza-covid-19"
     ],
     "link": {
@@ -489,7 +513,7 @@
       "slugs": [
         {
           "locale": "en",
-          "slug": "artistic-residences"
+          "slug": "artistic-residencies"
         },
         {
           "locale": "it",
@@ -513,7 +537,7 @@
       "slugs": [
         {
           "locale": "en",
-          "slug": "workshop"
+          "slug": "workshops"
         },
         {
           "locale": "it",
@@ -734,6 +758,30 @@
         {
           "locale": "it",
           "slug": "partners"
+        }
+      ],
+      "indexType": "",
+      "isIndex": false
+    },
+    "lang": "en"
+  },
+  {
+    "routes": [
+      "info",
+      "accountability"
+    ],
+    "link": {
+      "__typename": "PageRecord",
+      "id": "107306138",
+      "slug": "trasparenza",
+      "slugs": [
+        {
+          "locale": "en",
+          "slug": "trasparenza"
+        },
+        {
+          "locale": "it",
+          "slug": "trasparenza"
         }
       ],
       "indexType": "",

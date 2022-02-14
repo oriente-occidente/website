@@ -325,7 +325,7 @@
             "slugs": [
               {
                 "locale": "en",
-                "value": "artistic-residences"
+                "value": "artistic-residencies"
               },
               {
                 "locale": "it",
@@ -335,7 +335,7 @@
             "titles": [
               {
                 "locale": "en",
-                "value": "Artistic Residences"
+                "value": "Artistic Residencies"
               },
               {
                 "locale": "it",
@@ -347,7 +347,7 @@
             "slugs": [
               {
                 "locale": "en",
-                "value": "workshop"
+                "value": "workshops"
               },
               {
                 "locale": "it",
@@ -357,7 +357,7 @@
             "titles": [
               {
                 "locale": "en",
-                "value": "Workshop"
+                "value": "Workshops"
               },
               {
                 "locale": "it",

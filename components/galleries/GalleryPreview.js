@@ -16,7 +16,6 @@ function GalleryPreview({ slides, locale }) {
         modules={[Autoplay, A11y]}
         spaceBetween={24}
         speed={900}
-        loop={true}
         slidesPerView={1.3}
         centeredSlides={true}
         className="mySwiper"

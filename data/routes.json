@@ -706,6 +706,48 @@
     ]
   },
   {
+    "id": "107306138",
+    "isIndex": false,
+    "indexType": "",
+    "slugs": {
+      "it": [
+        "info",
+        "trasparenza"
+      ],
+      "en": [
+        "info",
+        "accountability"
+      ]
+    },
+    "__typename": "page",
+    "paths": [
+      {
+        "locale": "it",
+        "slugs": [
+          "info",
+          "trasparenza"
+        ]
+      },
+      {
+        "locale": "en",
+        "slugs": [
+          "info",
+          "accountability"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "it",
+        "url": "info/trasparenza"
+      },
+      {
+        "locale": "en",
+        "url": "info/accountability"
+      }
+    ]
+  },
+  {
     "id": "94866658",
     "slugs": {
       "en": [
@@ -4223,17 +4265,17 @@
     ]
   },
   {
-    "id": "104435605",
+    "id": "85752360",
     "slugs": {
       "en": [
         "studio",
         "workshop",
-        "lab-impart"
+        "bus-stop"
       ],
       "it": [
         "studio",
         "workshop",
-        "lab-impart-ripensare-il-palcoscenico"
+        "bus-stop"
       ]
     },
     "isIndex": false,
@@ -4246,7 +4288,7 @@
         "slugs": [
           "studio",
           "workshop",
-          "lab-impart"
+          "bus-stop"
         ]
       },
       {
@@ -4254,33 +4296,33 @@
         "slugs": [
           "studio",
           "workshop",
-          "lab-impart-ripensare-il-palcoscenico"
+          "bus-stop"
         ]
       }
     ],
     "urls": [
       {
         "locale": "en",
-        "url": "studio/workshop/lab-impart"
+        "url": "studio/workshop/bus-stop"
       },
       {
         "locale": "it",
-        "url": "studio/workshop/lab-impart-ripensare-il-palcoscenico"
+        "url": "studio/workshop/bus-stop"
       }
     ]
   },
   {
-    "id": "97514206",
+    "id": "97539633",
     "slugs": {
       "en": [
         "studio",
         "workshop",
-        "tools-for-action-workshop"
+        "masterclass-sidi-larbi-cherkaoui-repertory-fractus-v"
       ],
       "it": [
         "studio",
         "workshop",
-        "tools-for-action-workshop"
+        "masterclass-sidi-larbi-cherkaoui-repertory-fractus-v"
       ]
     },
     "isIndex": false,
@@ -4293,7 +4335,7 @@
         "slugs": [
           "studio",
           "workshop",
-          "tools-for-action-workshop"
+          "masterclass-sidi-larbi-cherkaoui-repertory-fractus-v"
         ]
       },
       {
@@ -4301,18 +4343,18 @@
         "slugs": [
           "studio",
           "workshop",
-          "tools-for-action-workshop"
+          "masterclass-sidi-larbi-cherkaoui-repertory-fractus-v"
         ]
       }
     ],
     "urls": [
       {
         "locale": "en",
-        "url": "studio/workshop/tools-for-action-workshop"
+        "url": "studio/workshop/masterclass-sidi-larbi-cherkaoui-repertory-fractus-v"
       },
       {
         "locale": "it",
-        "url": "studio/workshop/tools-for-action-workshop"
+        "url": "studio/workshop/masterclass-sidi-larbi-cherkaoui-repertory-fractus-v"
       }
     ]
   },
@@ -4411,6 +4453,147 @@
     ]
   },
   {
+    "id": "104460427",
+    "slugs": {
+      "en": [
+        "studio",
+        "workshop",
+        "rizoma-community-workshop"
+      ],
+      "it": [
+        "studio",
+        "workshop",
+        "rizoma-community-workshop"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "workshop",
+    "group": "workshops",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "studio",
+          "workshop",
+          "rizoma-community-workshop"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "studio",
+          "workshop",
+          "rizoma-community-workshop"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "studio/workshop/rizoma-community-workshop"
+      },
+      {
+        "locale": "it",
+        "url": "studio/workshop/rizoma-community-workshop"
+      }
+    ]
+  },
+  {
+    "id": "104435605",
+    "slugs": {
+      "en": [
+        "studio",
+        "workshop",
+        "lab-impart"
+      ],
+      "it": [
+        "studio",
+        "workshop",
+        "lab-impart-ripensare-il-palcoscenico"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "workshop",
+    "group": "workshops",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "studio",
+          "workshop",
+          "lab-impart"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "studio",
+          "workshop",
+          "lab-impart-ripensare-il-palcoscenico"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "studio/workshop/lab-impart"
+      },
+      {
+        "locale": "it",
+        "url": "studio/workshop/lab-impart-ripensare-il-palcoscenico"
+      }
+    ]
+  },
+  {
+    "id": "97514206",
+    "slugs": {
+      "en": [
+        "studio",
+        "workshop",
+        "tools-for-action-workshop"
+      ],
+      "it": [
+        "studio",
+        "workshop",
+        "tools-for-action-workshop"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "workshop",
+    "group": "workshops",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "studio",
+          "workshop",
+          "tools-for-action-workshop"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "studio",
+          "workshop",
+          "tools-for-action-workshop"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "studio/workshop/tools-for-action-workshop"
+      },
+      {
+        "locale": "it",
+        "url": "studio/workshop/tools-for-action-workshop"
+      }
+    ]
+  },
+  {
     "id": "97536012",
     "slugs": {
       "en": [
@@ -4454,147 +4637,6 @@
       {
         "locale": "it",
         "url": "studio/workshop/cunningham-technique-r-workshop"
-      }
-    ]
-  },
-  {
-    "id": "99590685",
-    "slugs": {
-      "en": [
-        "studio",
-        "workshop",
-        "practice-ina"
-      ],
-      "it": [
-        "studio",
-        "workshop",
-        "practice-ina"
-      ]
-    },
-    "isIndex": false,
-    "indexType": "",
-    "__typename": "workshop",
-    "group": "workshops",
-    "paths": [
-      {
-        "locale": "en",
-        "slugs": [
-          "studio",
-          "workshop",
-          "practice-ina"
-        ]
-      },
-      {
-        "locale": "it",
-        "slugs": [
-          "studio",
-          "workshop",
-          "practice-ina"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "en",
-        "url": "studio/workshop/practice-ina"
-      },
-      {
-        "locale": "it",
-        "url": "studio/workshop/practice-ina"
-      }
-    ]
-  },
-  {
-    "id": "85752360",
-    "slugs": {
-      "en": [
-        "studio",
-        "workshop",
-        "bus-stop"
-      ],
-      "it": [
-        "studio",
-        "workshop",
-        "bus-stop"
-      ]
-    },
-    "isIndex": false,
-    "indexType": "",
-    "__typename": "workshop",
-    "group": "workshops",
-    "paths": [
-      {
-        "locale": "en",
-        "slugs": [
-          "studio",
-          "workshop",
-          "bus-stop"
-        ]
-      },
-      {
-        "locale": "it",
-        "slugs": [
-          "studio",
-          "workshop",
-          "bus-stop"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "en",
-        "url": "studio/workshop/bus-stop"
-      },
-      {
-        "locale": "it",
-        "url": "studio/workshop/bus-stop"
-      }
-    ]
-  },
-  {
-    "id": "96815611",
-    "slugs": {
-      "en": [
-        "studio",
-        "workshop",
-        "re-start-laboratorio-di-teatro-fisico"
-      ],
-      "it": [
-        "studio",
-        "workshop",
-        "re-start-laboratorio-di-teatro-fisico"
-      ]
-    },
-    "isIndex": false,
-    "indexType": "",
-    "__typename": "workshop",
-    "group": "workshops",
-    "paths": [
-      {
-        "locale": "en",
-        "slugs": [
-          "studio",
-          "workshop",
-          "re-start-laboratorio-di-teatro-fisico"
-        ]
-      },
-      {
-        "locale": "it",
-        "slugs": [
-          "studio",
-          "workshop",
-          "re-start-laboratorio-di-teatro-fisico"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "en",
-        "url": "studio/workshop/re-start-laboratorio-di-teatro-fisico"
-      },
-      {
-        "locale": "it",
-        "url": "studio/workshop/re-start-laboratorio-di-teatro-fisico"
       }
     ]
   },
@@ -4646,6 +4688,53 @@
     ]
   },
   {
+    "id": "96815611",
+    "slugs": {
+      "en": [
+        "studio",
+        "workshop",
+        "re-start-laboratorio-di-teatro-fisico"
+      ],
+      "it": [
+        "studio",
+        "workshop",
+        "re-start-laboratorio-di-teatro-fisico"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "workshop",
+    "group": "workshops",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "studio",
+          "workshop",
+          "re-start-laboratorio-di-teatro-fisico"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "studio",
+          "workshop",
+          "re-start-laboratorio-di-teatro-fisico"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "studio/workshop/re-start-laboratorio-di-teatro-fisico"
+      },
+      {
+        "locale": "it",
+        "url": "studio/workshop/re-start-laboratorio-di-teatro-fisico"
+      }
+    ]
+  },
+  {
     "id": "99561377",
     "slugs": {
       "en": [
@@ -4693,17 +4782,17 @@
     ]
   },
   {
-    "id": "97539633",
+    "id": "99590685",
     "slugs": {
       "en": [
         "studio",
         "workshop",
-        "masterclass-sidi-larbi-cherkaoui-repertory-fractus-v"
+        "practice-ina"
       ],
       "it": [
         "studio",
         "workshop",
-        "masterclass-sidi-larbi-cherkaoui-repertory-fractus-v"
+        "practice-ina"
       ]
     },
     "isIndex": false,
@@ -4716,7 +4805,7 @@
         "slugs": [
           "studio",
           "workshop",
-          "masterclass-sidi-larbi-cherkaoui-repertory-fractus-v"
+          "practice-ina"
         ]
       },
       {
@@ -4724,57 +4813,65 @@
         "slugs": [
           "studio",
           "workshop",
-          "masterclass-sidi-larbi-cherkaoui-repertory-fractus-v"
+          "practice-ina"
         ]
       }
     ],
     "urls": [
       {
         "locale": "en",
-        "url": "studio/workshop/masterclass-sidi-larbi-cherkaoui-repertory-fractus-v"
+        "url": "studio/workshop/practice-ina"
       },
       {
         "locale": "it",
-        "url": "studio/workshop/masterclass-sidi-larbi-cherkaoui-repertory-fractus-v"
+        "url": "studio/workshop/practice-ina"
       }
     ]
   },
   {
-    "id": "104460427",
+    "id": "99652019",
     "slugs": {
       "en": [
-        "rizoma-community-workshop"
+        "people",
+        "projects",
+        "rete-italiana-europe-beyond-access-2021-2023"
       ],
       "it": [
-        "rizoma-community-workshop"
+        "people",
+        "progetti",
+        "rete-italiana-europe-beyond-access-2021-2023"
       ]
     },
     "isIndex": false,
     "indexType": "",
-    "__typename": "workshop",
-    "group": "courses",
+    "__typename": "project",
+    "group": "projects",
     "paths": [
       {
         "locale": "en",
         "slugs": [
-          "rizoma-community-workshop"
+          "people",
+          "projects",
+          "rete-italiana-europe-beyond-access-2021-2023"
         ]
       },
       {
         "locale": "it",
         "slugs": [
-          "rizoma-community-workshop"
+          "people",
+          "progetti",
+          "rete-italiana-europe-beyond-access-2021-2023"
         ]
       }
     ],
     "urls": [
       {
         "locale": "en",
-        "url": "rizoma-community-workshop"
+        "url": "people/projects/rete-italiana-europe-beyond-access-2021-2023"
       },
       {
         "locale": "it",
-        "url": "rizoma-community-workshop"
+        "url": "people/progetti/rete-italiana-europe-beyond-access-2021-2023"
       }
     ]
   },
@@ -5104,53 +5201,6 @@
       {
         "locale": "it",
         "url": "people/progetti/crossing-the-sea"
-      }
-    ]
-  },
-  {
-    "id": "99652019",
-    "slugs": {
-      "en": [
-        "people",
-        "projects",
-        "rete-italiana-europe-beyond-access-2021-2023"
-      ],
-      "it": [
-        "people",
-        "progetti",
-        "rete-italiana-europe-beyond-access-2021-2023"
-      ]
-    },
-    "isIndex": false,
-    "indexType": "",
-    "__typename": "project",
-    "group": "projects",
-    "paths": [
-      {
-        "locale": "en",
-        "slugs": [
-          "people",
-          "projects",
-          "rete-italiana-europe-beyond-access-2021-2023"
-        ]
-      },
-      {
-        "locale": "it",
-        "slugs": [
-          "people",
-          "progetti",
-          "rete-italiana-europe-beyond-access-2021-2023"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "en",
-        "url": "people/projects/rete-italiana-europe-beyond-access-2021-2023"
-      },
-      {
-        "locale": "it",
-        "url": "people/progetti/rete-italiana-europe-beyond-access-2021-2023"
       }
     ]
   },
