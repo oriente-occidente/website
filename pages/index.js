@@ -21,11 +21,10 @@ function Home({ data, locale, home }) {
       <h1 className="sr-only">Oriente Occidente</h1>
       <HeroSlider slides={homeSlideshow} />
       {homeSections.map((block) => {
-        // console.log('block:', block);
         return (
           <Fragment key={block.id}>
             <div
-              className="container flex items-center justify-between border-t border-gray"
+              className="border-gray container flex items-center justify-between border-t"
               key={block.id}
             >
               <h2 className="title--small py-8 lg:py-16">{block.title}</h2>

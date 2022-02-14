@@ -15,7 +15,7 @@ function Layout({
   return (
     <>
       <div data-datocms-noindex>
-        <Link href="#content">
+        <Link href="#main-content">
           <a className="skip-link">{translate("skipContent", locale)}</a>
         </Link>
         <Link href="#footer">
@@ -23,10 +23,7 @@ function Layout({
         </Link>
       </div>
       <Header locale={locale} data={menu} alts={alts} />
-      <main
-        id="content"
-        className="min-h-[50vh] pt-[70px] md:pt-[80px] lg:pt-[110px]"
-      >
+      <main className="min-h-[50vh] pt-[70px] md:pt-[80px] lg:pt-[110px]">
         {children}
       </main>
       <Footer locale={locale} data={footer} hideNewsletter={hideNewsletter} />

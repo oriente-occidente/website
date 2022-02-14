@@ -81,6 +81,7 @@ function Page({ data, locale }) {
       />
       <Layout footer={footer} menu={menu} locale={locale} alts={pageInfo.urls}>
         <Breadcrumbs
+          id="#main-content"
           background={heroData.layoutHero == "index" ? "gray" : null}
           paths={getBreadcrumbs(pageInfo.slugs[locale], payload.slug, locale)}
           locale={locale}

@@ -39,7 +39,7 @@ function StandardCard({ data, locale, categoryTitle }) {
                 />
               </div>
             ) : null}
-            <div className="absolute bottom-0 left-0 right-0 z-10 h-[65px] bg-gradient-to-t from-black/80 to-transparent md:h-48"></div>
+            <div className="absolute bottom-0 left-0 right-0 z-10 h-[65px] bg-gradient-to-t from-black/80 to-transparent md:h-52"></div>
           </div>
           <div className="absolute top-0 left-0 right-0 z-10 hidden h-48 bg-gradient-to-b from-black/80 to-transparent md:block"></div>
           <div className="z-20 md:absolute md:top-6 md:left-8">
