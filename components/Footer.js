@@ -29,15 +29,15 @@ export default function Footer({ locale, data, hideNewsletter = false }) {
                   />
                 </div>
                 <div className="xl:space-y-4">
-                  <p className="pt-6 text-xxs uppercase text-black xl:pt-0">
+                  <p className="text-xxs pt-6 uppercase text-black xl:pt-0">
                     &copy; {new Date().getFullYear()} Oriente Occidente
                   </p>
                   <div
-                    className="pb-2 text-xxs text-black"
+                    className="text-xxs pb-2 text-black"
                     dangerouslySetInnerHTML={{ __html: data.info }}
                   />
                   <div className="mb-8 border-b border-gray-200 pb-8 md:border-0">
-                    <p className="mb-2 text-xxs uppercase text-black">
+                    <p className="text-xxs mb-2 uppercase text-black">
                       Social Media
                     </p>
                     <div className="flex space-x-3 ">
@@ -83,7 +83,7 @@ export default function Footer({ locale, data, hideNewsletter = false }) {
                             <Link href={resolveLinkById(item.id, locale)}>
                               <a
                                 title={`Link to ${item.title}`}
-                                className="text-xxs tracking-widest text-black-light hover:text-black"
+                                className="text-xxs text-black-light tracking-widest hover:text-black"
                               >
                                 {item.title}
                               </a>
@@ -110,7 +110,7 @@ export default function Footer({ locale, data, hideNewsletter = false }) {
                           title={`${translate("privacyPolicyTitle", locale)}`}
                           target="_blank"
                           rel="noreferrer"
-                          className="iubenda-nostyle no-brand iubenda-embed text-xxs tracking-widest text-black-light hover:text-black"
+                          className="iubenda-nostyle no-brand iubenda-embed text-xxs text-black-light tracking-widest hover:text-black"
                         >
                           Privacy Policy
                         </a>
@@ -127,7 +127,7 @@ export default function Footer({ locale, data, hideNewsletter = false }) {
                           title={`${translate("cookiePolicyTitle", locale)}`}
                           target="_blank"
                           rel="noreferrer"
-                          className="iubenda-nostyle no-brand iubenda-embed text-xxs tracking-widest text-black-light hover:text-black"
+                          className="iubenda-nostyle no-brand iubenda-embed text-xxs text-black-light tracking-widest hover:text-black"
                         >
                           Cookie Policy
                         </a>
@@ -139,7 +139,7 @@ export default function Footer({ locale, data, hideNewsletter = false }) {
                           title={`${translate("creditsTitle", locale)}`}
                           target="_blank"
                           rel="noreferrer"
-                          className="whitespace-nowrap text-xxs tracking-widest text-black-light hover:text-black"
+                          className="text-xxs text-black-light whitespace-nowrap tracking-widest hover:text-black"
                         >
                           Credits
                         </a>
@@ -150,8 +150,8 @@ export default function Footer({ locale, data, hideNewsletter = false }) {
               </div>
             </div>
             <div className="md:mt-8 md:grid md:grid-cols-2 md:gap-4 md:border-t md:border-gray-200">
-              <div className="">
-                <div className="mt-8 mb-4 border-t border-gray-200 pt-8 md:mt-0 md:border-0">
+              {/* <div className=""> */}
+              {/* <div className="mt-8 mb-4 border-t border-gray-200 pt-8 md:mt-0 md:border-0">
                   <p className="text-xs text-gray-dark">
                     {translate("patronage", locale)}
                   </p>
@@ -174,14 +174,14 @@ export default function Footer({ locale, data, hideNewsletter = false }) {
                     objectPosition="left"
                   />
                 </div>
-              </div>
-              <div className="mt-8 mb-4 border-t border-gray-200 pt-8 md:mt-0 md:border-0 lg:flex lg:justify-end">
+              </div> */}
+              <div className="mt-8 mb-4 border-t border-gray-200 pt-8 md:mt-0 md:border-0 lg:flex">
                 {data.links.map((item) => (
                   <div key={item.id} className="inline-block">
                     <Link href={resolveLinkById(item.id, locale)}>
                       <a
                         title={`Link to ${item.title}`}
-                        className="mr-4 text-xs text-gray-dark lg:ml-4 lg:mr-0 xl:text-center"
+                        className="text-gray-dark mr-4 text-xs lg:mr-0 xl:text-center"
                       >
                         {item.title}
                       </a>
