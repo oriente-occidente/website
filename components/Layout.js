@@ -15,12 +15,12 @@ function Layout({
   return (
     <>
       <div data-datocms-noindex>
-        <Link href="#main-content">
-          <a className="skip-link">{translate("skipContent", locale)}</a>
-        </Link>
-        <Link href="#footer">
-          <a className="skip-link">{translate("skipFooter", locale)}</a>
-        </Link>
+        <a className="skip-link" href="#main-content">
+          {translate("skipContent", locale)}
+        </a>
+        <a className="skip-link" href="#footer">
+          {translate("skipFooter", locale)}
+        </a>
       </div>
       <Header locale={locale} data={menu} alts={alts} />
       <main className="min-h-[50vh] pt-[70px] md:pt-[80px] lg:pt-[110px]">
