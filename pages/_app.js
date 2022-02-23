@@ -1,11 +1,9 @@
-import Script from 'next/script';
-import { useEffect } from 'react';
-import TagManager from 'react-gtm-module';
-import 'styles/globals.css';
-import 'styles/base.css';
-import { useRouter } from 'next/router';
+import Script from "next/script";
+import "styles/globals.css";
+import "styles/base.css";
+import { useRouter } from "next/router";
 
-import translate from 'lib/locales';
+import translate from "lib/locales";
 
 // import { AppWrapper } from 'lib/ctx';
 
@@ -16,9 +14,6 @@ const IUBENDA_SITE_ID = process.env.NEXT_PUBLIC_IUBENDA_SITE_ID;
 function MyApp({ Component, pageProps }) {
   const router = useRouter();
   const { locale } = router;
-  useEffect(() => {
-    TagManager.initialize({ gtmId: GTM });
-  }, []);
   return (
     <>
       <Component {...pageProps} />
@@ -35,8 +30,9 @@ function MyApp({ Component, pageProps }) {
             "consentOnContinuedBrowsing": true,
             "lang":"${locale}",
             "siteId":${IUBENDA_SITE_ID},
-            "cookiePolicyId":${translate('cookiePolicyId', locale)},
+            "cookiePolicyId":${translate("cookiePolicyId", locale)},
             "perPurposeConsent": true,
+            purposes: "1, 3, 4",
             "banner":{
               "acceptButtonDisplay":true,
               "customizeButtonDisplay":true,
@@ -60,6 +56,28 @@ function MyApp({ Component, pageProps }) {
               }
             }};
             `,
+        }}
+      />
+      <Script
+        type="plain/text"
+        className="_iub_cs_activate"
+        data-iub-purposes="4"
+        src={`https://www.googletagmanager.com/gtag/js?id=${GTM}`}
+      />
+      <Script
+        id="google-analytics-script"
+        type="plain/text"
+        className="_iub_cs_activate"
+        data-iub-purposes="4"
+        dangerouslySetInnerHTML={{
+          __html: `
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', '${GTM}', {
+          page_path: window.location.pathname,
+        });
+        `,
         }}
       />
     </>
