@@ -787,6 +787,53 @@
     ]
   },
   {
+    "id": "96777762",
+    "slugs": {
+      "en": [
+        "festival",
+        "program",
+        "mixed-doubles"
+      ],
+      "it": [
+        "festival",
+        "programma",
+        "mixed-doubles"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "event",
+    "group": "festival-events",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "festival",
+          "program",
+          "mixed-doubles"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "festival",
+          "programma",
+          "mixed-doubles"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "festival/program/mixed-doubles"
+      },
+      {
+        "locale": "it",
+        "url": "festival/programma/mixed-doubles"
+      }
+    ]
+  },
+  {
     "id": "101323990",
     "slugs": {
       "en": [
@@ -1347,53 +1394,6 @@
       {
         "locale": "it",
         "url": "festival/programma/i-poveri"
-      }
-    ]
-  },
-  {
-    "id": "96777762",
-    "slugs": {
-      "en": [
-        "festival",
-        "program",
-        "mixed-doubles"
-      ],
-      "it": [
-        "festival",
-        "programma",
-        "mixed-doubles"
-      ]
-    },
-    "isIndex": false,
-    "indexType": "",
-    "__typename": "event",
-    "group": "festival-events",
-    "paths": [
-      {
-        "locale": "en",
-        "slugs": [
-          "festival",
-          "program",
-          "mixed-doubles"
-        ]
-      },
-      {
-        "locale": "it",
-        "slugs": [
-          "festival",
-          "programma",
-          "mixed-doubles"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "en",
-        "url": "festival/program/mixed-doubles"
-      },
-      {
-        "locale": "it",
-        "url": "festival/programma/mixed-doubles"
       }
     ]
   },
@@ -4030,6 +4030,147 @@
     ]
   },
   {
+    "id": "102744871",
+    "slugs": {
+      "en": [
+        "people",
+        "events",
+        "oltrepassare-sconfinamenti"
+      ],
+      "it": [
+        "people",
+        "eventi",
+        "oltrepassare-sconfinamenti"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "event",
+    "group": "other-events",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "people",
+          "events",
+          "oltrepassare-sconfinamenti"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "people",
+          "eventi",
+          "oltrepassare-sconfinamenti"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "people/events/oltrepassare-sconfinamenti"
+      },
+      {
+        "locale": "it",
+        "url": "people/eventi/oltrepassare-sconfinamenti"
+      }
+    ]
+  },
+  {
+    "id": "102387137",
+    "slugs": {
+      "en": [
+        "people",
+        "events",
+        "ombelichi-tenui"
+      ],
+      "it": [
+        "people",
+        "eventi",
+        "ombelichi-tenui"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "event",
+    "group": "other-events",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "people",
+          "events",
+          "ombelichi-tenui"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "people",
+          "eventi",
+          "ombelichi-tenui"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "people/events/ombelichi-tenui"
+      },
+      {
+        "locale": "it",
+        "url": "people/eventi/ombelichi-tenui"
+      }
+    ]
+  },
+  {
+    "id": "102389123",
+    "slugs": {
+      "en": [
+        "people",
+        "events",
+        "habitus"
+      ],
+      "it": [
+        "people",
+        "eventi",
+        "habitus"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "event",
+    "group": "other-events",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "people",
+          "events",
+          "habitus"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "people",
+          "eventi",
+          "habitus"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "people/events/habitus"
+      },
+      {
+        "locale": "it",
+        "url": "people/eventi/habitus"
+      }
+    ]
+  },
+  {
     "id": "102388104",
     "slugs": {
       "en": [
@@ -4124,147 +4265,6 @@
     ]
   },
   {
-    "id": "102744871",
-    "slugs": {
-      "en": [
-        "people",
-        "events",
-        "oltrepassare-sconfinamenti"
-      ],
-      "it": [
-        "people",
-        "eventi",
-        "oltrepassare-sconfinamenti"
-      ]
-    },
-    "isIndex": false,
-    "indexType": "",
-    "__typename": "event",
-    "group": "other-events",
-    "paths": [
-      {
-        "locale": "en",
-        "slugs": [
-          "people",
-          "events",
-          "oltrepassare-sconfinamenti"
-        ]
-      },
-      {
-        "locale": "it",
-        "slugs": [
-          "people",
-          "eventi",
-          "oltrepassare-sconfinamenti"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "en",
-        "url": "people/events/oltrepassare-sconfinamenti"
-      },
-      {
-        "locale": "it",
-        "url": "people/eventi/oltrepassare-sconfinamenti"
-      }
-    ]
-  },
-  {
-    "id": "102389123",
-    "slugs": {
-      "en": [
-        "people",
-        "events",
-        "habitus"
-      ],
-      "it": [
-        "people",
-        "eventi",
-        "habitus"
-      ]
-    },
-    "isIndex": false,
-    "indexType": "",
-    "__typename": "event",
-    "group": "other-events",
-    "paths": [
-      {
-        "locale": "en",
-        "slugs": [
-          "people",
-          "events",
-          "habitus"
-        ]
-      },
-      {
-        "locale": "it",
-        "slugs": [
-          "people",
-          "eventi",
-          "habitus"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "en",
-        "url": "people/events/habitus"
-      },
-      {
-        "locale": "it",
-        "url": "people/eventi/habitus"
-      }
-    ]
-  },
-  {
-    "id": "102387137",
-    "slugs": {
-      "en": [
-        "people",
-        "events",
-        "ombelichi-tenui"
-      ],
-      "it": [
-        "people",
-        "eventi",
-        "ombelichi-tenui"
-      ]
-    },
-    "isIndex": false,
-    "indexType": "",
-    "__typename": "event",
-    "group": "other-events",
-    "paths": [
-      {
-        "locale": "en",
-        "slugs": [
-          "people",
-          "events",
-          "ombelichi-tenui"
-        ]
-      },
-      {
-        "locale": "it",
-        "slugs": [
-          "people",
-          "eventi",
-          "ombelichi-tenui"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "en",
-        "url": "people/events/ombelichi-tenui"
-      },
-      {
-        "locale": "it",
-        "url": "people/eventi/ombelichi-tenui"
-      }
-    ]
-  },
-  {
     "id": "85752360",
     "slugs": {
       "en": [
@@ -4308,6 +4308,53 @@
       {
         "locale": "it",
         "url": "studio/workshop/bus-stop"
+      }
+    ]
+  },
+  {
+    "id": "98007460",
+    "slugs": {
+      "en": [
+        "studio",
+        "workshop",
+        "oltre-il-confine-workshop-intensivo-di-teatro-danza"
+      ],
+      "it": [
+        "studio",
+        "workshop",
+        "oltre-il-confine-workshop-intensivo-di-teatro-danza"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "workshop",
+    "group": "workshops",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "studio",
+          "workshop",
+          "oltre-il-confine-workshop-intensivo-di-teatro-danza"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "studio",
+          "workshop",
+          "oltre-il-confine-workshop-intensivo-di-teatro-danza"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "studio/workshop/oltre-il-confine-workshop-intensivo-di-teatro-danza"
+      },
+      {
+        "locale": "it",
+        "url": "studio/workshop/oltre-il-confine-workshop-intensivo-di-teatro-danza"
       }
     ]
   },
@@ -4402,53 +4449,6 @@
       {
         "locale": "it",
         "url": "studio/workshop/laboratorio-di-ricerca-corporea"
-      }
-    ]
-  },
-  {
-    "id": "98007460",
-    "slugs": {
-      "en": [
-        "studio",
-        "workshop",
-        "oltre-il-confine-workshop-intensivo-di-teatro-danza"
-      ],
-      "it": [
-        "studio",
-        "workshop",
-        "oltre-il-confine-workshop-intensivo-di-teatro-danza"
-      ]
-    },
-    "isIndex": false,
-    "indexType": "",
-    "__typename": "workshop",
-    "group": "workshops",
-    "paths": [
-      {
-        "locale": "en",
-        "slugs": [
-          "studio",
-          "workshop",
-          "oltre-il-confine-workshop-intensivo-di-teatro-danza"
-        ]
-      },
-      {
-        "locale": "it",
-        "slugs": [
-          "studio",
-          "workshop",
-          "oltre-il-confine-workshop-intensivo-di-teatro-danza"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "en",
-        "url": "studio/workshop/oltre-il-confine-workshop-intensivo-di-teatro-danza"
-      },
-      {
-        "locale": "it",
-        "url": "studio/workshop/oltre-il-confine-workshop-intensivo-di-teatro-danza"
       }
     ]
   },
@@ -4641,100 +4641,6 @@
     ]
   },
   {
-    "id": "98949094",
-    "slugs": {
-      "en": [
-        "studio",
-        "workshop",
-        "as-far-as-the-imagination-can-reach-using-a-piece-of-string-workshop-2022"
-      ],
-      "it": [
-        "studio",
-        "workshop",
-        "as-far-as-the-imagination-can-reach-using-a-piece-of-string-workshop-2022"
-      ]
-    },
-    "isIndex": false,
-    "indexType": "",
-    "__typename": "workshop",
-    "group": "workshops",
-    "paths": [
-      {
-        "locale": "en",
-        "slugs": [
-          "studio",
-          "workshop",
-          "as-far-as-the-imagination-can-reach-using-a-piece-of-string-workshop-2022"
-        ]
-      },
-      {
-        "locale": "it",
-        "slugs": [
-          "studio",
-          "workshop",
-          "as-far-as-the-imagination-can-reach-using-a-piece-of-string-workshop-2022"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "en",
-        "url": "studio/workshop/as-far-as-the-imagination-can-reach-using-a-piece-of-string-workshop-2022"
-      },
-      {
-        "locale": "it",
-        "url": "studio/workshop/as-far-as-the-imagination-can-reach-using-a-piece-of-string-workshop-2022"
-      }
-    ]
-  },
-  {
-    "id": "96815611",
-    "slugs": {
-      "en": [
-        "studio",
-        "workshop",
-        "re-start-laboratorio-di-teatro-fisico"
-      ],
-      "it": [
-        "studio",
-        "workshop",
-        "re-start-laboratorio-di-teatro-fisico"
-      ]
-    },
-    "isIndex": false,
-    "indexType": "",
-    "__typename": "workshop",
-    "group": "workshops",
-    "paths": [
-      {
-        "locale": "en",
-        "slugs": [
-          "studio",
-          "workshop",
-          "re-start-laboratorio-di-teatro-fisico"
-        ]
-      },
-      {
-        "locale": "it",
-        "slugs": [
-          "studio",
-          "workshop",
-          "re-start-laboratorio-di-teatro-fisico"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "en",
-        "url": "studio/workshop/re-start-laboratorio-di-teatro-fisico"
-      },
-      {
-        "locale": "it",
-        "url": "studio/workshop/re-start-laboratorio-di-teatro-fisico"
-      }
-    ]
-  },
-  {
     "id": "99561377",
     "slugs": {
       "en": [
@@ -4829,147 +4735,6 @@
     ]
   },
   {
-    "id": "99652019",
-    "slugs": {
-      "en": [
-        "people",
-        "projects",
-        "rete-italiana-europe-beyond-access-2021-2023"
-      ],
-      "it": [
-        "people",
-        "progetti",
-        "rete-italiana-europe-beyond-access-2021-2023"
-      ]
-    },
-    "isIndex": false,
-    "indexType": "",
-    "__typename": "project",
-    "group": "projects",
-    "paths": [
-      {
-        "locale": "en",
-        "slugs": [
-          "people",
-          "projects",
-          "rete-italiana-europe-beyond-access-2021-2023"
-        ]
-      },
-      {
-        "locale": "it",
-        "slugs": [
-          "people",
-          "progetti",
-          "rete-italiana-europe-beyond-access-2021-2023"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "en",
-        "url": "people/projects/rete-italiana-europe-beyond-access-2021-2023"
-      },
-      {
-        "locale": "it",
-        "url": "people/progetti/rete-italiana-europe-beyond-access-2021-2023"
-      }
-    ]
-  },
-  {
-    "id": "99639463",
-    "slugs": {
-      "en": [
-        "people",
-        "projects",
-        "eba-europe-beyond-access"
-      ],
-      "it": [
-        "people",
-        "progetti",
-        "eba-europe-beyond-access"
-      ]
-    },
-    "isIndex": false,
-    "indexType": "",
-    "__typename": "project",
-    "group": "projects",
-    "paths": [
-      {
-        "locale": "en",
-        "slugs": [
-          "people",
-          "projects",
-          "eba-europe-beyond-access"
-        ]
-      },
-      {
-        "locale": "it",
-        "slugs": [
-          "people",
-          "progetti",
-          "eba-europe-beyond-access"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "en",
-        "url": "people/projects/eba-europe-beyond-access"
-      },
-      {
-        "locale": "it",
-        "url": "people/progetti/eba-europe-beyond-access"
-      }
-    ]
-  },
-  {
-    "id": "104438524",
-    "slugs": {
-      "en": [
-        "people",
-        "projects",
-        "save-energy-dance-more"
-      ],
-      "it": [
-        "people",
-        "progetti",
-        "save-energy-dance-more"
-      ]
-    },
-    "isIndex": false,
-    "indexType": "",
-    "__typename": "project",
-    "group": "projects",
-    "paths": [
-      {
-        "locale": "en",
-        "slugs": [
-          "people",
-          "projects",
-          "save-energy-dance-more"
-        ]
-      },
-      {
-        "locale": "it",
-        "slugs": [
-          "people",
-          "progetti",
-          "save-energy-dance-more"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "en",
-        "url": "people/projects/save-energy-dance-more"
-      },
-      {
-        "locale": "it",
-        "url": "people/progetti/save-energy-dance-more"
-      }
-    ]
-  },
-  {
     "id": "104436377",
     "slugs": {
       "en": [
@@ -5017,17 +4782,17 @@
     ]
   },
   {
-    "id": "99638384",
+    "id": "102304510",
     "slugs": {
       "en": [
         "people",
         "projects",
-        "impart"
+        "sconfinamenti"
       ],
       "it": [
         "people",
         "progetti",
-        "impart"
+        "sconfinamenti"
       ]
     },
     "isIndex": false,
@@ -5040,7 +4805,7 @@
         "slugs": [
           "people",
           "projects",
-          "impart"
+          "sconfinamenti"
         ]
       },
       {
@@ -5048,159 +4813,18 @@
         "slugs": [
           "people",
           "progetti",
-          "impart"
+          "sconfinamenti"
         ]
       }
     ],
     "urls": [
       {
         "locale": "en",
-        "url": "people/projects/impart"
+        "url": "people/projects/sconfinamenti"
       },
       {
         "locale": "it",
-        "url": "people/progetti/impart"
-      }
-    ]
-  },
-  {
-    "id": "99592452",
-    "slugs": {
-      "en": [
-        "people",
-        "projects",
-        "moving-beyond-inclusion"
-      ],
-      "it": [
-        "people",
-        "progetti",
-        "moving-beyond-inclusion"
-      ]
-    },
-    "isIndex": false,
-    "indexType": "",
-    "__typename": "project",
-    "group": "projects",
-    "paths": [
-      {
-        "locale": "en",
-        "slugs": [
-          "people",
-          "projects",
-          "moving-beyond-inclusion"
-        ]
-      },
-      {
-        "locale": "it",
-        "slugs": [
-          "people",
-          "progetti",
-          "moving-beyond-inclusion"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "en",
-        "url": "people/projects/moving-beyond-inclusion"
-      },
-      {
-        "locale": "it",
-        "url": "people/progetti/moving-beyond-inclusion"
-      }
-    ]
-  },
-  {
-    "id": "99652172",
-    "slugs": {
-      "en": [
-        "people",
-        "projects",
-        "dimmi-cosa-vuoi-vedere"
-      ],
-      "it": [
-        "people",
-        "progetti",
-        "dimmi-cosa-vuoi-vedere"
-      ]
-    },
-    "isIndex": false,
-    "indexType": "",
-    "__typename": "project",
-    "group": "projects",
-    "paths": [
-      {
-        "locale": "en",
-        "slugs": [
-          "people",
-          "projects",
-          "dimmi-cosa-vuoi-vedere"
-        ]
-      },
-      {
-        "locale": "it",
-        "slugs": [
-          "people",
-          "progetti",
-          "dimmi-cosa-vuoi-vedere"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "en",
-        "url": "people/projects/dimmi-cosa-vuoi-vedere"
-      },
-      {
-        "locale": "it",
-        "url": "people/progetti/dimmi-cosa-vuoi-vedere"
-      }
-    ]
-  },
-  {
-    "id": "99641013",
-    "slugs": {
-      "en": [
-        "people",
-        "projects",
-        "crossing-the-sea"
-      ],
-      "it": [
-        "people",
-        "progetti",
-        "crossing-the-sea"
-      ]
-    },
-    "isIndex": false,
-    "indexType": "",
-    "__typename": "project",
-    "group": "projects",
-    "paths": [
-      {
-        "locale": "en",
-        "slugs": [
-          "people",
-          "projects",
-          "crossing-the-sea"
-        ]
-      },
-      {
-        "locale": "it",
-        "slugs": [
-          "people",
-          "progetti",
-          "crossing-the-sea"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "en",
-        "url": "people/projects/crossing-the-sea"
-      },
-      {
-        "locale": "it",
-        "url": "people/progetti/crossing-the-sea"
+        "url": "people/progetti/sconfinamenti"
       }
     ]
   },
@@ -5299,6 +4923,194 @@
     ]
   },
   {
+    "id": "99592452",
+    "slugs": {
+      "en": [
+        "people",
+        "projects",
+        "moving-beyond-inclusion"
+      ],
+      "it": [
+        "people",
+        "progetti",
+        "moving-beyond-inclusion"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "project",
+    "group": "projects",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "people",
+          "projects",
+          "moving-beyond-inclusion"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "people",
+          "progetti",
+          "moving-beyond-inclusion"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "people/projects/moving-beyond-inclusion"
+      },
+      {
+        "locale": "it",
+        "url": "people/progetti/moving-beyond-inclusion"
+      }
+    ]
+  },
+  {
+    "id": "99638384",
+    "slugs": {
+      "en": [
+        "people",
+        "projects",
+        "impart"
+      ],
+      "it": [
+        "people",
+        "progetti",
+        "impart"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "project",
+    "group": "projects",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "people",
+          "projects",
+          "impart"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "people",
+          "progetti",
+          "impart"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "people/projects/impart"
+      },
+      {
+        "locale": "it",
+        "url": "people/progetti/impart"
+      }
+    ]
+  },
+  {
+    "id": "99639463",
+    "slugs": {
+      "en": [
+        "people",
+        "projects",
+        "eba-europe-beyond-access"
+      ],
+      "it": [
+        "people",
+        "progetti",
+        "eba-europe-beyond-access"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "project",
+    "group": "projects",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "people",
+          "projects",
+          "eba-europe-beyond-access"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "people",
+          "progetti",
+          "eba-europe-beyond-access"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "people/projects/eba-europe-beyond-access"
+      },
+      {
+        "locale": "it",
+        "url": "people/progetti/eba-europe-beyond-access"
+      }
+    ]
+  },
+  {
+    "id": "99641013",
+    "slugs": {
+      "en": [
+        "people",
+        "projects",
+        "crossing-the-sea"
+      ],
+      "it": [
+        "people",
+        "progetti",
+        "crossing-the-sea"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "project",
+    "group": "projects",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "people",
+          "projects",
+          "crossing-the-sea"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "people",
+          "progetti",
+          "crossing-the-sea"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "people/projects/crossing-the-sea"
+      },
+      {
+        "locale": "it",
+        "url": "people/progetti/crossing-the-sea"
+      }
+    ]
+  },
+  {
     "id": "99647390",
     "slugs": {
       "en": [
@@ -5346,17 +5158,17 @@
     ]
   },
   {
-    "id": "99652254",
+    "id": "104438524",
     "slugs": {
       "en": [
         "people",
         "projects",
-        "over-limited"
+        "save-energy-dance-more"
       ],
       "it": [
         "people",
         "progetti",
-        "over-limited"
+        "save-energy-dance-more"
       ]
     },
     "isIndex": false,
@@ -5369,7 +5181,7 @@
         "slugs": [
           "people",
           "projects",
-          "over-limited"
+          "save-energy-dance-more"
         ]
       },
       {
@@ -5377,33 +5189,33 @@
         "slugs": [
           "people",
           "progetti",
-          "over-limited"
+          "save-energy-dance-more"
         ]
       }
     ],
     "urls": [
       {
         "locale": "en",
-        "url": "people/projects/over-limited"
+        "url": "people/projects/save-energy-dance-more"
       },
       {
         "locale": "it",
-        "url": "people/progetti/over-limited"
+        "url": "people/progetti/save-energy-dance-more"
       }
     ]
   },
   {
-    "id": "102304510",
+    "id": "99652172",
     "slugs": {
       "en": [
         "people",
         "projects",
-        "sconfinamenti"
+        "dimmi-cosa-vuoi-vedere"
       ],
       "it": [
         "people",
         "progetti",
-        "sconfinamenti"
+        "dimmi-cosa-vuoi-vedere"
       ]
     },
     "isIndex": false,
@@ -5416,7 +5228,7 @@
         "slugs": [
           "people",
           "projects",
-          "sconfinamenti"
+          "dimmi-cosa-vuoi-vedere"
         ]
       },
       {
@@ -5424,18 +5236,65 @@
         "slugs": [
           "people",
           "progetti",
-          "sconfinamenti"
+          "dimmi-cosa-vuoi-vedere"
         ]
       }
     ],
     "urls": [
       {
         "locale": "en",
-        "url": "people/projects/sconfinamenti"
+        "url": "people/projects/dimmi-cosa-vuoi-vedere"
       },
       {
         "locale": "it",
-        "url": "people/progetti/sconfinamenti"
+        "url": "people/progetti/dimmi-cosa-vuoi-vedere"
+      }
+    ]
+  },
+  {
+    "id": "99652019",
+    "slugs": {
+      "en": [
+        "people",
+        "projects",
+        "rete-italiana-europe-beyond-access-2021-2023"
+      ],
+      "it": [
+        "people",
+        "progetti",
+        "rete-italiana-europe-beyond-access-2021-2023"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "project",
+    "group": "projects",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "people",
+          "projects",
+          "rete-italiana-europe-beyond-access-2021-2023"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "people",
+          "progetti",
+          "rete-italiana-europe-beyond-access-2021-2023"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "people/projects/rete-italiana-europe-beyond-access-2021-2023"
+      },
+      {
+        "locale": "it",
+        "url": "people/progetti/rete-italiana-europe-beyond-access-2021-2023"
       }
     ]
   },
@@ -5487,17 +5346,64 @@
     ]
   },
   {
+    "id": "99652254",
+    "slugs": {
+      "en": [
+        "people",
+        "projects",
+        "over-limited"
+      ],
+      "it": [
+        "people",
+        "progetti",
+        "over-limited"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "project",
+    "group": "projects",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "people",
+          "projects",
+          "over-limited"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "people",
+          "progetti",
+          "over-limited"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "people/projects/over-limited"
+      },
+      {
+        "locale": "it",
+        "url": "people/progetti/over-limited"
+      }
+    ]
+  },
+  {
     "id": "102847546",
     "slugs": {
       "en": [
         "studio",
         "associated-artists",
-        "marcus-morau"
+        "marcos-morau"
       ],
       "it": [
         "studio",
         "artisti-associati",
-        "marcus-morau"
+        "marcos-morau"
       ]
     },
     "isIndex": false,
@@ -5510,7 +5416,7 @@
         "slugs": [
           "studio",
           "associated-artists",
-          "marcus-morau"
+          "marcos-morau"
         ]
       },
       {
@@ -5518,18 +5424,18 @@
         "slugs": [
           "studio",
           "artisti-associati",
-          "marcus-morau"
+          "marcos-morau"
         ]
       }
     ],
     "urls": [
       {
         "locale": "en",
-        "url": "studio/associated-artists/marcus-morau"
+        "url": "studio/associated-artists/marcos-morau"
       },
       {
         "locale": "it",
-        "url": "studio/artisti-associati/marcus-morau"
+        "url": "studio/artisti-associati/marcos-morau"
       }
     ]
   },
@@ -5722,194 +5628,6 @@
     ]
   },
   {
-    "id": "105005637",
-    "slugs": {
-      "en": [
-        "studio",
-        "artistic-residences",
-        "sindri-runudde"
-      ],
-      "it": [
-        "studio",
-        "residenze-artistiche",
-        "sindri-runudde"
-      ]
-    },
-    "isIndex": false,
-    "indexType": "",
-    "__typename": "artist",
-    "group": "artistic-residences",
-    "paths": [
-      {
-        "locale": "en",
-        "slugs": [
-          "studio",
-          "artistic-residences",
-          "sindri-runudde"
-        ]
-      },
-      {
-        "locale": "it",
-        "slugs": [
-          "studio",
-          "residenze-artistiche",
-          "sindri-runudde"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "en",
-        "url": "studio/artistic-residences/sindri-runudde"
-      },
-      {
-        "locale": "it",
-        "url": "studio/residenze-artistiche/sindri-runudde"
-      }
-    ]
-  },
-  {
-    "id": "85765727",
-    "slugs": {
-      "en": [
-        "studio",
-        "artistic-residences",
-        "alessio-maria-romano"
-      ],
-      "it": [
-        "studio",
-        "residenze-artistiche",
-        "alessio-maria-romano"
-      ]
-    },
-    "isIndex": false,
-    "indexType": "",
-    "__typename": "artist",
-    "group": "artistic-residences",
-    "paths": [
-      {
-        "locale": "en",
-        "slugs": [
-          "studio",
-          "artistic-residences",
-          "alessio-maria-romano"
-        ]
-      },
-      {
-        "locale": "it",
-        "slugs": [
-          "studio",
-          "residenze-artistiche",
-          "alessio-maria-romano"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "en",
-        "url": "studio/artistic-residences/alessio-maria-romano"
-      },
-      {
-        "locale": "it",
-        "url": "studio/residenze-artistiche/alessio-maria-romano"
-      }
-    ]
-  },
-  {
-    "id": "101880606",
-    "slugs": {
-      "en": [
-        "studio",
-        "artistic-residences",
-        "nicola-galli"
-      ],
-      "it": [
-        "studio",
-        "residenze-artistiche",
-        "nicola-galli"
-      ]
-    },
-    "isIndex": false,
-    "indexType": "",
-    "__typename": "artist",
-    "group": "artistic-residences",
-    "paths": [
-      {
-        "locale": "en",
-        "slugs": [
-          "studio",
-          "artistic-residences",
-          "nicola-galli"
-        ]
-      },
-      {
-        "locale": "it",
-        "slugs": [
-          "studio",
-          "residenze-artistiche",
-          "nicola-galli"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "en",
-        "url": "studio/artistic-residences/nicola-galli"
-      },
-      {
-        "locale": "it",
-        "url": "studio/residenze-artistiche/nicola-galli"
-      }
-    ]
-  },
-  {
-    "id": "103553792",
-    "slugs": {
-      "en": [
-        "studio",
-        "artistic-residences",
-        "annamaria-ajmone"
-      ],
-      "it": [
-        "studio",
-        "residenze-artistiche",
-        "annamaria-ajmone"
-      ]
-    },
-    "isIndex": false,
-    "indexType": "",
-    "__typename": "artist",
-    "group": "artistic-residences",
-    "paths": [
-      {
-        "locale": "en",
-        "slugs": [
-          "studio",
-          "artistic-residences",
-          "annamaria-ajmone"
-        ]
-      },
-      {
-        "locale": "it",
-        "slugs": [
-          "studio",
-          "residenze-artistiche",
-          "annamaria-ajmone"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "en",
-        "url": "studio/artistic-residences/annamaria-ajmone"
-      },
-      {
-        "locale": "it",
-        "url": "studio/residenze-artistiche/annamaria-ajmone"
-      }
-    ]
-  },
-  {
     "id": "103603997",
     "slugs": {
       "en": [
@@ -5953,241 +5671,6 @@
       {
         "locale": "it",
         "url": "studio/residenze-artistiche/alessandra-ferri"
-      }
-    ]
-  },
-  {
-    "id": "103268186",
-    "slugs": {
-      "en": [
-        "studio",
-        "artistic-residences",
-        "martina-gambardella"
-      ],
-      "it": [
-        "studio",
-        "residenze-artistiche",
-        "martina-gambardella"
-      ]
-    },
-    "isIndex": false,
-    "indexType": "",
-    "__typename": "artist",
-    "group": "artistic-residences",
-    "paths": [
-      {
-        "locale": "en",
-        "slugs": [
-          "studio",
-          "artistic-residences",
-          "martina-gambardella"
-        ]
-      },
-      {
-        "locale": "it",
-        "slugs": [
-          "studio",
-          "residenze-artistiche",
-          "martina-gambardella"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "en",
-        "url": "studio/artistic-residences/martina-gambardella"
-      },
-      {
-        "locale": "it",
-        "url": "studio/residenze-artistiche/martina-gambardella"
-      }
-    ]
-  },
-  {
-    "id": "103211835",
-    "slugs": {
-      "en": [
-        "studio",
-        "artistic-residences",
-        "aristide-rontini"
-      ],
-      "it": [
-        "studio",
-        "residenze-artistiche",
-        "aristide-rontini"
-      ]
-    },
-    "isIndex": false,
-    "indexType": "",
-    "__typename": "artist",
-    "group": "artistic-residences",
-    "paths": [
-      {
-        "locale": "en",
-        "slugs": [
-          "studio",
-          "artistic-residences",
-          "aristide-rontini"
-        ]
-      },
-      {
-        "locale": "it",
-        "slugs": [
-          "studio",
-          "residenze-artistiche",
-          "aristide-rontini"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "en",
-        "url": "studio/artistic-residences/aristide-rontini"
-      },
-      {
-        "locale": "it",
-        "url": "studio/residenze-artistiche/aristide-rontini"
-      }
-    ]
-  },
-  {
-    "id": "101878907",
-    "slugs": {
-      "en": [
-        "studio",
-        "artistic-residences",
-        "cie-mf"
-      ],
-      "it": [
-        "studio",
-        "residenze-artistiche",
-        "cie-mf"
-      ]
-    },
-    "isIndex": false,
-    "indexType": "",
-    "__typename": "artist",
-    "group": "artistic-residences",
-    "paths": [
-      {
-        "locale": "en",
-        "slugs": [
-          "studio",
-          "artistic-residences",
-          "cie-mf"
-        ]
-      },
-      {
-        "locale": "it",
-        "slugs": [
-          "studio",
-          "residenze-artistiche",
-          "cie-mf"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "en",
-        "url": "studio/artistic-residences/cie-mf"
-      },
-      {
-        "locale": "it",
-        "url": "studio/residenze-artistiche/cie-mf"
-      }
-    ]
-  },
-  {
-    "id": "102816303",
-    "slugs": {
-      "en": [
-        "studio",
-        "artistic-residences",
-        "honji-wang-and-sebastien-ramirez"
-      ],
-      "it": [
-        "studio",
-        "residenze-artistiche",
-        "honji-wang-and-sebastien-ramirez"
-      ]
-    },
-    "isIndex": false,
-    "indexType": "",
-    "__typename": "artist",
-    "group": "artistic-residences",
-    "paths": [
-      {
-        "locale": "en",
-        "slugs": [
-          "studio",
-          "artistic-residences",
-          "honji-wang-and-sebastien-ramirez"
-        ]
-      },
-      {
-        "locale": "it",
-        "slugs": [
-          "studio",
-          "residenze-artistiche",
-          "honji-wang-and-sebastien-ramirez"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "en",
-        "url": "studio/artistic-residences/honji-wang-and-sebastien-ramirez"
-      },
-      {
-        "locale": "it",
-        "url": "studio/residenze-artistiche/honji-wang-and-sebastien-ramirez"
-      }
-    ]
-  },
-  {
-    "id": "96816225",
-    "slugs": {
-      "en": [
-        "studio",
-        "artistic-residences",
-        "azioni-fuori-posto"
-      ],
-      "it": [
-        "studio",
-        "residenze-artistiche",
-        "azioni-fuori-posto"
-      ]
-    },
-    "isIndex": false,
-    "indexType": "",
-    "__typename": "artist",
-    "group": "artistic-residences",
-    "paths": [
-      {
-        "locale": "en",
-        "slugs": [
-          "studio",
-          "artistic-residences",
-          "azioni-fuori-posto"
-        ]
-      },
-      {
-        "locale": "it",
-        "slugs": [
-          "studio",
-          "residenze-artistiche",
-          "azioni-fuori-posto"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "en",
-        "url": "studio/artistic-residences/azioni-fuori-posto"
-      },
-      {
-        "locale": "it",
-        "url": "studio/residenze-artistiche/azioni-fuori-posto"
       }
     ]
   },
@@ -6239,147 +5722,6 @@
     ]
   },
   {
-    "id": "101319111",
-    "slugs": {
-      "en": [
-        "studio",
-        "artistic-residences",
-        "luna-cenere"
-      ],
-      "it": [
-        "studio",
-        "residenze-artistiche",
-        "luna-cenere"
-      ]
-    },
-    "isIndex": false,
-    "indexType": "",
-    "__typename": "artist",
-    "group": "artistic-residences",
-    "paths": [
-      {
-        "locale": "en",
-        "slugs": [
-          "studio",
-          "artistic-residences",
-          "luna-cenere"
-        ]
-      },
-      {
-        "locale": "it",
-        "slugs": [
-          "studio",
-          "residenze-artistiche",
-          "luna-cenere"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "en",
-        "url": "studio/artistic-residences/luna-cenere"
-      },
-      {
-        "locale": "it",
-        "url": "studio/residenze-artistiche/luna-cenere"
-      }
-    ]
-  },
-  {
-    "id": "101561558",
-    "slugs": {
-      "en": [
-        "studio",
-        "artistic-residences",
-        "pietro-marullo"
-      ],
-      "it": [
-        "studio",
-        "residenze-artistiche",
-        "pietro-marullo"
-      ]
-    },
-    "isIndex": false,
-    "indexType": "",
-    "__typename": "artist",
-    "group": "artistic-residences",
-    "paths": [
-      {
-        "locale": "en",
-        "slugs": [
-          "studio",
-          "artistic-residences",
-          "pietro-marullo"
-        ]
-      },
-      {
-        "locale": "it",
-        "slugs": [
-          "studio",
-          "residenze-artistiche",
-          "pietro-marullo"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "en",
-        "url": "studio/artistic-residences/pietro-marullo"
-      },
-      {
-        "locale": "it",
-        "url": "studio/residenze-artistiche/pietro-marullo"
-      }
-    ]
-  },
-  {
-    "id": "100562859",
-    "slugs": {
-      "en": [
-        "studio",
-        "artistic-residences",
-        "daniele-ninarello"
-      ],
-      "it": [
-        "studio",
-        "residenze-artistiche",
-        "daniele-ninarello"
-      ]
-    },
-    "isIndex": false,
-    "indexType": "",
-    "__typename": "artist",
-    "group": "artistic-residences",
-    "paths": [
-      {
-        "locale": "en",
-        "slugs": [
-          "studio",
-          "artistic-residences",
-          "daniele-ninarello"
-        ]
-      },
-      {
-        "locale": "it",
-        "slugs": [
-          "studio",
-          "residenze-artistiche",
-          "daniele-ninarello"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "en",
-        "url": "studio/artistic-residences/daniele-ninarello"
-      },
-      {
-        "locale": "it",
-        "url": "studio/residenze-artistiche/daniele-ninarello"
-      }
-    ]
-  },
-  {
     "id": "101637072",
     "slugs": {
       "en": [
@@ -6423,6 +5765,241 @@
       {
         "locale": "it",
         "url": "studio/residenze-artistiche/chiara-bersani-and-danskompaniet-spinn"
+      }
+    ]
+  },
+  {
+    "id": "101878907",
+    "slugs": {
+      "en": [
+        "studio",
+        "artistic-residences",
+        "cie-mf"
+      ],
+      "it": [
+        "studio",
+        "residenze-artistiche",
+        "cie-mf"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "artist",
+    "group": "artistic-residences",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "studio",
+          "artistic-residences",
+          "cie-mf"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "studio",
+          "residenze-artistiche",
+          "cie-mf"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "studio/artistic-residences/cie-mf"
+      },
+      {
+        "locale": "it",
+        "url": "studio/residenze-artistiche/cie-mf"
+      }
+    ]
+  },
+  {
+    "id": "105005637",
+    "slugs": {
+      "en": [
+        "studio",
+        "artistic-residences",
+        "sindri-runudde"
+      ],
+      "it": [
+        "studio",
+        "residenze-artistiche",
+        "sindri-runudde"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "artist",
+    "group": "artistic-residences",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "studio",
+          "artistic-residences",
+          "sindri-runudde"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "studio",
+          "residenze-artistiche",
+          "sindri-runudde"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "studio/artistic-residences/sindri-runudde"
+      },
+      {
+        "locale": "it",
+        "url": "studio/residenze-artistiche/sindri-runudde"
+      }
+    ]
+  },
+  {
+    "id": "96816225",
+    "slugs": {
+      "en": [
+        "studio",
+        "artistic-residences",
+        "azioni-fuori-posto"
+      ],
+      "it": [
+        "studio",
+        "residenze-artistiche",
+        "azioni-fuori-posto"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "artist",
+    "group": "artistic-residences",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "studio",
+          "artistic-residences",
+          "azioni-fuori-posto"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "studio",
+          "residenze-artistiche",
+          "azioni-fuori-posto"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "studio/artistic-residences/azioni-fuori-posto"
+      },
+      {
+        "locale": "it",
+        "url": "studio/residenze-artistiche/azioni-fuori-posto"
+      }
+    ]
+  },
+  {
+    "id": "96816267",
+    "slugs": {
+      "en": [
+        "studio",
+        "artistic-residences",
+        "cristina-kristal-rizzo"
+      ],
+      "it": [
+        "studio",
+        "residenze-artistiche",
+        "cristina-kristal-rizzo"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "artist",
+    "group": "artistic-residences",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "studio",
+          "artistic-residences",
+          "cristina-kristal-rizzo"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "studio",
+          "residenze-artistiche",
+          "cristina-kristal-rizzo"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "studio/artistic-residences/cristina-kristal-rizzo"
+      },
+      {
+        "locale": "it",
+        "url": "studio/residenze-artistiche/cristina-kristal-rizzo"
+      }
+    ]
+  },
+  {
+    "id": "101319111",
+    "slugs": {
+      "en": [
+        "studio",
+        "artistic-residences",
+        "luna-cenere"
+      ],
+      "it": [
+        "studio",
+        "residenze-artistiche",
+        "luna-cenere"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "artist",
+    "group": "artistic-residences",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "studio",
+          "artistic-residences",
+          "luna-cenere"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "studio",
+          "residenze-artistiche",
+          "luna-cenere"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "studio/artistic-residences/luna-cenere"
+      },
+      {
+        "locale": "it",
+        "url": "studio/residenze-artistiche/luna-cenere"
       }
     ]
   },
@@ -6521,17 +6098,17 @@
     ]
   },
   {
-    "id": "96816267",
+    "id": "101561558",
     "slugs": {
       "en": [
         "studio",
         "artistic-residences",
-        "cristina-kristal-rizzo"
+        "pietro-marullo"
       ],
       "it": [
         "studio",
         "residenze-artistiche",
-        "cristina-kristal-rizzo"
+        "pietro-marullo"
       ]
     },
     "isIndex": false,
@@ -6544,7 +6121,7 @@
         "slugs": [
           "studio",
           "artistic-residences",
-          "cristina-kristal-rizzo"
+          "pietro-marullo"
         ]
       },
       {
@@ -6552,18 +6129,347 @@
         "slugs": [
           "studio",
           "residenze-artistiche",
-          "cristina-kristal-rizzo"
+          "pietro-marullo"
         ]
       }
     ],
     "urls": [
       {
         "locale": "en",
-        "url": "studio/artistic-residences/cristina-kristal-rizzo"
+        "url": "studio/artistic-residences/pietro-marullo"
       },
       {
         "locale": "it",
-        "url": "studio/residenze-artistiche/cristina-kristal-rizzo"
+        "url": "studio/residenze-artistiche/pietro-marullo"
+      }
+    ]
+  },
+  {
+    "id": "102816303",
+    "slugs": {
+      "en": [
+        "studio",
+        "artistic-residences",
+        "honji-wang-and-sebastien-ramirez"
+      ],
+      "it": [
+        "studio",
+        "residenze-artistiche",
+        "honji-wang-and-sebastien-ramirez"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "artist",
+    "group": "artistic-residences",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "studio",
+          "artistic-residences",
+          "honji-wang-and-sebastien-ramirez"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "studio",
+          "residenze-artistiche",
+          "honji-wang-and-sebastien-ramirez"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "studio/artistic-residences/honji-wang-and-sebastien-ramirez"
+      },
+      {
+        "locale": "it",
+        "url": "studio/residenze-artistiche/honji-wang-and-sebastien-ramirez"
+      }
+    ]
+  },
+  {
+    "id": "85765727",
+    "slugs": {
+      "en": [
+        "studio",
+        "artistic-residences",
+        "alessio-maria-romano"
+      ],
+      "it": [
+        "studio",
+        "residenze-artistiche",
+        "alessio-maria-romano"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "artist",
+    "group": "artistic-residences",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "studio",
+          "artistic-residences",
+          "alessio-maria-romano"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "studio",
+          "residenze-artistiche",
+          "alessio-maria-romano"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "studio/artistic-residences/alessio-maria-romano"
+      },
+      {
+        "locale": "it",
+        "url": "studio/residenze-artistiche/alessio-maria-romano"
+      }
+    ]
+  },
+  {
+    "id": "100562859",
+    "slugs": {
+      "en": [
+        "studio",
+        "artistic-residences",
+        "daniele-ninarello"
+      ],
+      "it": [
+        "studio",
+        "residenze-artistiche",
+        "daniele-ninarello"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "artist",
+    "group": "artistic-residences",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "studio",
+          "artistic-residences",
+          "daniele-ninarello"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "studio",
+          "residenze-artistiche",
+          "daniele-ninarello"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "studio/artistic-residences/daniele-ninarello"
+      },
+      {
+        "locale": "it",
+        "url": "studio/residenze-artistiche/daniele-ninarello"
+      }
+    ]
+  },
+  {
+    "id": "101880606",
+    "slugs": {
+      "en": [
+        "studio",
+        "artistic-residences",
+        "nicola-galli"
+      ],
+      "it": [
+        "studio",
+        "residenze-artistiche",
+        "nicola-galli"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "artist",
+    "group": "artistic-residences",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "studio",
+          "artistic-residences",
+          "nicola-galli"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "studio",
+          "residenze-artistiche",
+          "nicola-galli"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "studio/artistic-residences/nicola-galli"
+      },
+      {
+        "locale": "it",
+        "url": "studio/residenze-artistiche/nicola-galli"
+      }
+    ]
+  },
+  {
+    "id": "103211835",
+    "slugs": {
+      "en": [
+        "studio",
+        "artistic-residences",
+        "aristide-rontini"
+      ],
+      "it": [
+        "studio",
+        "residenze-artistiche",
+        "aristide-rontini"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "artist",
+    "group": "artistic-residences",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "studio",
+          "artistic-residences",
+          "aristide-rontini"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "studio",
+          "residenze-artistiche",
+          "aristide-rontini"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "studio/artistic-residences/aristide-rontini"
+      },
+      {
+        "locale": "it",
+        "url": "studio/residenze-artistiche/aristide-rontini"
+      }
+    ]
+  },
+  {
+    "id": "103268186",
+    "slugs": {
+      "en": [
+        "studio",
+        "artistic-residences",
+        "martina-gambardella"
+      ],
+      "it": [
+        "studio",
+        "residenze-artistiche",
+        "martina-gambardella"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "artist",
+    "group": "artistic-residences",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "studio",
+          "artistic-residences",
+          "martina-gambardella"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "studio",
+          "residenze-artistiche",
+          "martina-gambardella"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "studio/artistic-residences/martina-gambardella"
+      },
+      {
+        "locale": "it",
+        "url": "studio/residenze-artistiche/martina-gambardella"
+      }
+    ]
+  },
+  {
+    "id": "103553792",
+    "slugs": {
+      "en": [
+        "studio",
+        "artistic-residences",
+        "annamaria-ajmone"
+      ],
+      "it": [
+        "studio",
+        "residenze-artistiche",
+        "annamaria-ajmone"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "artist",
+    "group": "artistic-residences",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "studio",
+          "artistic-residences",
+          "annamaria-ajmone"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "studio",
+          "residenze-artistiche",
+          "annamaria-ajmone"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "studio/artistic-residences/annamaria-ajmone"
+      },
+      {
+        "locale": "it",
+        "url": "studio/residenze-artistiche/annamaria-ajmone"
       }
     ]
   },
@@ -6611,6 +6517,49 @@
       {
         "locale": "it",
         "url": "studio/residenze-artistiche/lucrezia-gabrieli"
+      }
+    ]
+  },
+  {
+    "id": "108632420",
+    "slugs": {
+      "en": [
+        "news",
+        "oriente-occidente-nella-rete-edn"
+      ],
+      "it": [
+        "news",
+        "oriente-occidente-nella-rete-edn"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "news",
+    "group": "news-index",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "news",
+          "oriente-occidente-nella-rete-edn"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "news",
+          "oriente-occidente-nella-rete-edn"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "news/oriente-occidente-nella-rete-edn"
+      },
+      {
+        "locale": "it",
+        "url": "news/oriente-occidente-nella-rete-edn"
       }
     ]
   },

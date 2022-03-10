@@ -319,15 +319,15 @@
     "link": {
       "__typename": "PageRecord",
       "id": "79207456",
-      "slug": "partners",
+      "slug": "main-partner",
       "slugs": [
         {
           "locale": "en",
-          "slug": "partners"
+          "slug": "main-partner"
         },
         {
           "locale": "it",
-          "slug": "partners"
+          "slug": "main-partner"
         }
       ],
       "indexType": "",
@@ -749,15 +749,15 @@
     "link": {
       "__typename": "PageRecord",
       "id": "79207456",
-      "slug": "partners",
+      "slug": "main-partner",
       "slugs": [
         {
           "locale": "en",
-          "slug": "partners"
+          "slug": "main-partner"
         },
         {
           "locale": "it",
-          "slug": "partners"
+          "slug": "main-partner"
         }
       ],
       "indexType": "",

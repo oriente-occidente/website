@@ -1,13 +1,13 @@
-import Link from "next/link";
-import { Fragment } from "react";
-import { Popover, Transition, Disclosure } from "@headlessui/react";
-import { ChevronDownIcon } from "@heroicons/react/solid";
+import Link from 'next/link';
+import { Fragment } from 'react';
+import { Popover, Transition, Disclosure } from '@headlessui/react';
+import { ChevronDownIcon } from '@heroicons/react/solid';
 
-import { resolveLinkById } from "lib/utils";
-import LanguageSwitcher from "components/LanguageSwitcher";
+import { resolveLinkById } from 'lib/utils';
+import LanguageSwitcher from 'components/LanguageSwitcher';
 
 function classNames(...classes) {
-  return classes.filter(Boolean).join(" ");
+  return classes.filter(Boolean).join(' ');
 }
 
 function renderMobile(data, locale, alts, handleClose) {
@@ -21,7 +21,7 @@ function renderMobile(data, locale, alts, handleClose) {
                 {item.title.toUpperCase()}
                 <div
                   className={`${
-                    open ? "" : "rotate-180"
+                    open ? '' : 'rotate-180'
                   } h-4 w-4 bg-arrow-small-down duration-300  ease-in md:h-8 md:w-8`}
                 />
               </Disclosure.Button>
@@ -29,7 +29,7 @@ function renderMobile(data, locale, alts, handleClose) {
                 {item.children?.map((child) => (
                   <Link
                     key={child?.id}
-                    href={resolveLinkById(child?.link?.id || "/", locale)}
+                    href={resolveLinkById(child?.link?.id || '/', locale)}
                   >
                     <a
                       onClick={() => handleClose()}
@@ -126,15 +126,15 @@ function Header(props) {
             <Fragment>
               <Popover.Button
                 className={classNames(
-                  open ? "text-black" : "text-black",
-                  "group inline-flex items-center rounded-md text-xxs font-semibold uppercase tracking-widest hover:text-red"
+                  open ? 'text-black' : 'text-black',
+                  'group inline-flex items-center rounded-md text-xxs font-semibold uppercase tracking-widest hover:text-red'
                 )}
               >
                 <span>{item.title}</span>
                 <ChevronDownIcon
                   className={classNames(
-                    open ? "text-black" : "text-black",
-                    "ml-1 h-5 w-5 group-hover:text-red"
+                    open ? 'text-black' : 'text-black',
+                    'ml-1 h-5 w-5 group-hover:text-red'
                   )}
                   aria-hidden="true"
                   focusable="false"
@@ -198,7 +198,7 @@ function Header(props) {
               <div>
                 <Link locale={locale} href="/" passHref>
                   <a href="#" className="flex">
-                    <span className="sr-only">Workflow</span>
+                    <span className="sr-only">Oriente Occidente</span>
                     <img
                       className="h-10 w-auto object-contain sm:h-12 lg:h-16"
                       src="/logo.svg"

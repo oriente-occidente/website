@@ -1,12 +1,12 @@
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay } from "swiper";
-import SwiperCore, { Pagination, Navigation } from "swiper";
-import "swiper/css";
-import "swiper/css/pagination";
-import "swiper/css/navigation";
-import "swiper/css/autoplay";
-import "swiper/css/effect-fade";
-import { Image as DatoImage } from "react-datocms";
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Autoplay } from 'swiper';
+import SwiperCore, { Pagination, Navigation, A11y } from 'swiper';
+import 'swiper/css';
+import 'swiper/css/pagination';
+import 'swiper/css/navigation';
+import 'swiper/css/autoplay';
+import 'swiper/css/effect-fade';
+import { Image as DatoImage } from 'react-datocms';
 
 function Gallery({ slides }) {
   SwiperCore.use([Pagination, Navigation, A11y]);
