@@ -4735,6 +4735,53 @@
     ]
   },
   {
+    "id": "99639463",
+    "slugs": {
+      "en": [
+        "people",
+        "projects",
+        "eba-europe-beyond-access"
+      ],
+      "it": [
+        "people",
+        "progetti",
+        "eba-europe-beyond-access"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "project",
+    "group": "projects",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "people",
+          "projects",
+          "eba-europe-beyond-access"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "people",
+          "progetti",
+          "eba-europe-beyond-access"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "people/projects/eba-europe-beyond-access"
+      },
+      {
+        "locale": "it",
+        "url": "people/progetti/eba-europe-beyond-access"
+      }
+    ]
+  },
+  {
     "id": "104436377",
     "slugs": {
       "en": [
@@ -5017,53 +5064,6 @@
     ]
   },
   {
-    "id": "99639463",
-    "slugs": {
-      "en": [
-        "people",
-        "projects",
-        "eba-europe-beyond-access"
-      ],
-      "it": [
-        "people",
-        "progetti",
-        "eba-europe-beyond-access"
-      ]
-    },
-    "isIndex": false,
-    "indexType": "",
-    "__typename": "project",
-    "group": "projects",
-    "paths": [
-      {
-        "locale": "en",
-        "slugs": [
-          "people",
-          "projects",
-          "eba-europe-beyond-access"
-        ]
-      },
-      {
-        "locale": "it",
-        "slugs": [
-          "people",
-          "progetti",
-          "eba-europe-beyond-access"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "en",
-        "url": "people/projects/eba-europe-beyond-access"
-      },
-      {
-        "locale": "it",
-        "url": "people/progetti/eba-europe-beyond-access"
-      }
-    ]
-  },
-  {
     "id": "99641013",
     "slugs": {
       "en": [
@@ -5248,53 +5248,6 @@
       {
         "locale": "it",
         "url": "people/progetti/dimmi-cosa-vuoi-vedere"
-      }
-    ]
-  },
-  {
-    "id": "99652019",
-    "slugs": {
-      "en": [
-        "people",
-        "projects",
-        "rete-italiana-europe-beyond-access-2021-2023"
-      ],
-      "it": [
-        "people",
-        "progetti",
-        "rete-italiana-europe-beyond-access-2021-2023"
-      ]
-    },
-    "isIndex": false,
-    "indexType": "",
-    "__typename": "project",
-    "group": "projects",
-    "paths": [
-      {
-        "locale": "en",
-        "slugs": [
-          "people",
-          "projects",
-          "rete-italiana-europe-beyond-access-2021-2023"
-        ]
-      },
-      {
-        "locale": "it",
-        "slugs": [
-          "people",
-          "progetti",
-          "rete-italiana-europe-beyond-access-2021-2023"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "en",
-        "url": "people/projects/rete-italiana-europe-beyond-access-2021-2023"
-      },
-      {
-        "locale": "it",
-        "url": "people/progetti/rete-italiana-europe-beyond-access-2021-2023"
       }
     ]
   },
