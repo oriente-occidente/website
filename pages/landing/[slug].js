@@ -71,7 +71,7 @@ export async function getStaticPaths() {
     return [...both, ...slugs];
   }, []);
   console.log('PATHS', paths);
-  return { paths, fallback: true };
+  return { paths, fallback: false };
 }
 
 export async function getStaticProps({ params, locale, preview = false }) {
