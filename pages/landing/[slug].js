@@ -13,7 +13,7 @@ import OtherSections from 'components/contents/OtherSections';
 import HeaderLanding from 'components/HeaderLanding';
 import FooterLanding from 'components/FooterLanding';
 function LandingPage({ data, payload, locale }) {
-  const { site, footer } = data;
+  const { site = null, footer } = data;
   const {
     layoutHero,
     titleHero,
@@ -32,7 +32,7 @@ function LandingPage({ data, payload, locale }) {
   };
   return (
     <Layout locale={locale}>
-      <Seo tags={site?.faviconMetaTags} />
+      {site && <Seo tags={site?.faviconMetaTags} />}
       <HeaderLanding locale={locale} alts={[]} />
       {heroData.layoutHero == 'detail' && imageHero ? (
         <HeroDetail data={heroData} />
