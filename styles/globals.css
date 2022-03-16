@@ -42,8 +42,19 @@
     @apply py-2 lg:py-4;
   }
 
-  .formatted-content li {
+  .formatted-content ol {
+    @apply ml-4 list-decimal py-2 lg:py-4;
+  }
+
+  .formatted-content ol li {
+    @apply relative pl-3 text-sm marker:text-xs lg:pl-4 lg:text-base;
+  }
+
+  .formatted-content ul li {
     @apply relative pl-6 text-sm lg:pl-8 lg:text-base;
+  }
+
+  .formatted-content ul li {
     @apply before:bg-check before:absolute before:top-[4px] before:-left-0 before:h-[15px] before:w-[15px] lg:before:h-[20px] lg:before:w-[20px];
   }
 

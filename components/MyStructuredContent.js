@@ -1,30 +1,30 @@
-import { StructuredText, renderRule } from 'react-datocms';
+import { StructuredText, renderRule } from "react-datocms";
 import {
   isBlockquote,
   isHeading,
   isParagraph,
-} from 'datocms-structured-text-utils';
-import { Image } from 'react-datocms';
-import Link from 'next/link';
+} from "datocms-structured-text-utils";
+import { Image } from "react-datocms";
+import Link from "next/link";
 
-import BlockQuote from 'components/BlockQuote';
-import GalleryStandard from 'components/galleries/GalleryStandard';
-import VideoPlayer from 'components/video/VideoPlayer';
-import VideoEmbedded from 'components/video/VideoEmbedded';
+import BlockQuote from "components/BlockQuote";
+import GalleryStandard from "components/galleries/GalleryStandard";
+import VideoPlayer from "components/video/VideoPlayer";
+import VideoEmbedded from "components/video/VideoEmbedded";
 
-import { resolveLinkById } from 'lib/utils';
+import { resolveLinkById } from "lib/utils";
 
 const StructuredContent = ({ locale, content }) => {
   const renderBlock = (record) => {
     // console.log('block', record.__typename);
     switch (record.__typename) {
-      case 'GalleryRecord':
+      case "GalleryRecord":
         return (
           <div className="py-2 lg:py-10 2xl:py-16" key={record.id}>
             <GalleryStandard slides={record.images} />
           </div>
         );
-      case 'ImageBlockRecord': {
+      case "ImageBlockRecord": {
         if (!record?.image?.responsiveImage) {
           return null;
         }
@@ -38,13 +38,13 @@ const StructuredContent = ({ locale, content }) => {
                 title={record?.image?.title}
               />
             </div>
-            <div className="-mt-2 mb-2 max-w-[800px] px-2 py-1 text-xxs text-black/80 lg:-mt-10 lg:mb-10 2xl:-mt-16 2xl:mb-16">
+            <div className="text-xxs -mt-2 mb-2 max-w-[800px] px-2 py-1 text-black/80 lg:-mt-10 lg:mb-10 2xl:-mt-16 2xl:mb-16">
               {record.image.responsiveImage.alt}
             </div>
           </div>
         );
       }
-      case 'VideoBlockRecord':
+      case "VideoBlockRecord":
         return (
           <div key={record.id}>
             <div className="py-2 lg:py-10 2xl:py-16">
