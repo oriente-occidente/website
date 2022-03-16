@@ -1,13 +1,13 @@
-import Link from 'next/link';
-import { Fragment } from 'react';
-import { Popover, Transition, Disclosure } from '@headlessui/react';
-import { ChevronDownIcon } from '@heroicons/react/solid';
+import Link from "next/link";
+import { Fragment } from "react";
+import { Popover, Transition, Disclosure } from "@headlessui/react";
+import { ChevronDownIcon } from "@heroicons/react/solid";
 
-import { resolveLinkById } from 'lib/utils';
-import LanguageSwitcher from 'components/LanguageSwitcher';
+import { resolveLinkById } from "lib/utils";
+import LanguageSwitcher from "components/LanguageSwitcher";
 
 function classNames(...classes) {
-  return classes.filter(Boolean).join(' ');
+  return classes.filter(Boolean).join(" ");
 }
 
 function renderMobile(data, locale, alts, handleClose) {
@@ -21,19 +21,19 @@ function renderMobile(data, locale, alts, handleClose) {
                 {item.title.toUpperCase()}
                 <div
                   className={`${
-                    open ? '' : 'rotate-180'
-                  } h-4 w-4 bg-arrow-small-down duration-300  ease-in md:h-8 md:w-8`}
+                    open ? "" : "rotate-180"
+                  } bg-arrow-small-down h-4 w-4 duration-300  ease-in md:h-8 md:w-8`}
                 />
               </Disclosure.Button>
               <Disclosure.Panel>
                 {item.children?.map((child) => (
                   <Link
                     key={child?.id}
-                    href={resolveLinkById(child?.link?.id || '/', locale)}
+                    href={resolveLinkById(child?.link?.id || "/", locale)}
                   >
                     <a
                       onClick={() => handleClose()}
-                      className="block text-sm font-normal tracking-wider text-black-light md:py-1 md:text-base"
+                      className="text-black-light block text-sm font-normal tracking-wider md:py-1 md:text-base"
                     >
                       {child.title}
                     </a>
@@ -73,7 +73,7 @@ function renderMobile(data, locale, alts, handleClose) {
         focus
         className="fixed inset-0 z-50 h-full origin-top-left transform transition lg:hidden"
       >
-        <div className="h-full divide-y-2 divide-gray-50 bg-white ring-1 ring-black ring-opacity-5">
+        <div className="h-full divide-y-2 divide-gray-50 bg-white  ">
           <div className="container py-2">
             <div className="flex items-center justify-between">
               <div>
@@ -93,7 +93,7 @@ function renderMobile(data, locale, alts, handleClose) {
                     Close
                   </span>
                   <div
-                    className="ml-2 h-6 w-6 bg-close md:ml-4 md:h-8 md:w-8"
+                    className="bg-close ml-2 h-6 w-6 md:ml-4 md:h-8 md:w-8"
                     aria-hidden="true"
                   />
                 </Popover.Button>
@@ -106,7 +106,7 @@ function renderMobile(data, locale, alts, handleClose) {
                 <Fragment key={item.id}>{renderMobileLink(item)}</Fragment>
               ))}
             </div>
-            <div className="mt-16 border-t border-black pt-4 text-xxs uppercase tracking-widest md:mt-28 md:pt-10 md:text-base">
+            <div className="text-xxs mt-16 border-t border-black pt-4 uppercase tracking-widest md:mt-28 md:pt-10 md:text-base">
               <LanguageSwitcher locale={locale} alts={alts} />
             </div>
           </nav>
@@ -126,15 +126,15 @@ function Header(props) {
             <Fragment>
               <Popover.Button
                 className={classNames(
-                  open ? 'text-black' : 'text-black',
-                  'group inline-flex items-center rounded-md text-xxs font-semibold uppercase tracking-widest hover:text-red'
+                  open ? "text-black" : "text-black",
+                  "group text-xxs hover:text-red inline-flex items-center rounded-md font-semibold uppercase tracking-widest"
                 )}
               >
                 <span>{item.title}</span>
                 <ChevronDownIcon
                   className={classNames(
-                    open ? 'text-black' : 'text-black',
-                    'ml-1 h-5 w-5 group-hover:text-red'
+                    open ? "text-black" : "text-black",
+                    "group-hover:text-red ml-1 h-5 w-5"
                   )}
                   aria-hidden="true"
                   focusable="false"
@@ -151,7 +151,7 @@ function Header(props) {
                 leaveTo="opacity-0 translate-y-1"
               >
                 <Popover.Panel className="absolute left-1/2 z-50 mt-3 w-screen max-w-xs -translate-x-1/2 transform px-2 sm:px-0">
-                  <div className="overflow-hidden rounded-lg shadow-lg ring-1 ring-black ring-opacity-5">
+                  <div className="overflow-hidden rounded-lg shadow-lg  ">
                     <div className="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
                       {item.children.map((child) => (
                         <Link
@@ -162,7 +162,7 @@ function Header(props) {
                             className="-m-3 block rounded-md p-1"
                             onClick={() => close()}
                           >
-                            <p className="text-sm normal-case text-black-light hover:text-red">
+                            <p className="text-black-light hover:text-red text-sm normal-case">
                               {child.title}
                             </p>
                           </a>
@@ -180,7 +180,7 @@ function Header(props) {
       return (
         <div className="relative">
           <Link key={item.id} href={resolveLinkById(item.link?.id, locale)}>
-            <a className="text-xxs font-semibold tracking-widest text-black hover:text-red">
+            <a className="text-xxs hover:text-red font-semibold tracking-widest text-black">
               {item.title}
             </a>
           </Link>
@@ -213,7 +213,7 @@ function Header(props) {
                     Menu
                   </span>
                   <div
-                    className="ml-2 h-6 w-6 bg-open md:ml-4 md:w-8"
+                    className="bg-open ml-2 h-6 w-6 md:ml-4 md:w-8"
                     aria-hidden="true"
                   />
                 </Popover.Button>
@@ -227,7 +227,7 @@ function Header(props) {
                     <Fragment key={item.id}>{renderLink(item)}</Fragment>
                   ))}
                 </Popover.Group>
-                <div className="ml-14 pt-1 text-xxs font-semibold uppercase tracking-widest text-black-light hover:text-red lg:flex">
+                <div className="text-xxs text-black-light hover:text-red ml-14 pt-1 font-semibold uppercase tracking-widest lg:flex">
                   <LanguageSwitcher locale={locale} alts={alts} />
                 </div>
               </div>
