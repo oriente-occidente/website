@@ -18,11 +18,11 @@ function LanguageSwitcherLanding({ locale, alts }) {
           return (
             <Fragment key={l}>
               {i > 0 && (
-                <span className="hover:text-red text-xs text-gray-600 lg:block">
+                <span className="text-xs text-gray-600 hover:text-red lg:block">
                   /
                 </span>
               )}
-              <Link href={`/${link}`} locale={l}>
+              <Link href={`/landing/${link}`} locale={l}>
                 <a
                   className={`${
                     isActive ? "font-semibold" : ""
