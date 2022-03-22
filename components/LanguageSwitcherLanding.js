@@ -22,7 +22,12 @@ function LanguageSwitcherLanding({ locale, alts }) {
                   /
                 </span>
               )}
-              <Link href={`/`} locale={l}>
+              <Link
+                href={`https://presentiaccessibili.orienteoccidente.it/${
+                  l == "en" ? "en" : ""
+                }`}
+                locale={l}
+              >
                 <a
                   className={`${
                     isActive ? "font-semibold" : ""
