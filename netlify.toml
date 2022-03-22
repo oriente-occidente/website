@@ -8,14 +8,14 @@ publish = ".next"
 ## Not needed for static site generators.
 [[redirects]]
   from = "https://presentiaccessibili.orienteoccidente.it/en"
-  to = "https://www.orienteoccidente.it/en/landing/presenti-accessibili-en"
-  status = 300
+  to = "/en/landing/presenti-accessibili-en"
+  status = 301
   force = true
 
 [[redirects]]
   from = "https://presentiaccessibili.orienteoccidente.it"
-  to = "https://www.orienteoccidente.it/landing/presenti-accessibili"
-  status = 300
+  to = "/landing/presenti-accessibili"
+  status = 301
   force = true
 
 ## (optional) Settings for Netlify Dev
