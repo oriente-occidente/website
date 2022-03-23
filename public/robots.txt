@@ -1,6 +1,7 @@
 # *
 User-agent: *
 Allow: /
+Disallow: https://presentiaccessibili.orienteoccidente.it/
 
 # Host
 Host: https://orienteoccidente.netlify.app
