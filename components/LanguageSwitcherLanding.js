@@ -29,7 +29,7 @@ function LanguageSwitcherLanding({ locale, alts }) {
               )} */}
               <Link
                 href={`${l == "it" ? itLanguage.href : enLanguage.href}`}
-                locale={l}
+                // locale={l}
               >
                 <a
                   className={`${
