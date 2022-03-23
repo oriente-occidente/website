@@ -8,11 +8,11 @@ function LanguageSwitcherLanding({ locale, alts }) {
   const { locales } = config.site;
   const itLanguage = {
     show: "en",
-    href: "https://presentiaccessibili.orienteoccidente.it/en",
+    href: "https://www.orienteoccidente.it/en/landing/presenti-accessibili-en",
   };
   const enLanguage = {
     show: "it",
-    href: "https://presentiaccessibili.orienteoccidente.it",
+    href: "https://www.orienteoccidente.it/landing/presenti-accessibili",
   };
   return (
     <>
