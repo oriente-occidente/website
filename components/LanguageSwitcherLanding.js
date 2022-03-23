@@ -6,45 +6,39 @@ import translate from "lib/locales";
 
 function LanguageSwitcherLanding({ locale, alts }) {
   const { locales } = config.site;
+  const itLanguage = {
+    show: "en",
+    href: "https://presentiaccessibili.orienteoccidente.it/en",
+  };
+  const enLanguage = {
+    show: "it",
+    href: "https://presentiaccessibili.orienteoccidente.it",
+  };
   return (
     <>
       {locales &&
         locales.map((l, i) => {
           const isActive = locale === l;
           const link = alts?.find((alt) => alt.locale === l)?.value ?? "";
-          {
-            console.log("alts:", alts);
-          }
           return (
             <Fragment key={l}>
-              {i > 0 && (
-                <span className="hover:text-red text-xs text-gray-600 lg:block">
+              {/* {i > 0 && (
+                <span className="text-xs text-gray-600 hover:text-red lg:block">
                   /
                 </span>
-              )}
+              )} */}
               <Link
-                href={`https://presentiaccessibili.orienteoccidente.it/${
-                  l == "en" ? "en" : ""
-                }`}
+                href={`${l == "it" ? itLanguage.href : enLanguage.href}`}
                 locale={l}
               >
                 <a
                   className={`${
-                    isActive ? "font-semibold" : ""
-                  } hover:text-red lg:block`}
+                    isActive ? "font-semibold" : "hidden"
+                  } hover:text-red`}
                 >
-                  {l}
+                  {`${l == "it" ? itLanguage.show : enLanguage.show}`}
                 </a>
               </Link>
-              {/* <Link href={`/${link}`} locale={l}>
-                <a
-                  className={`${
-                    isActive ? "font-semibold" : ""
-                  } hover:text-red mr-6 lg:hidden`}
-                >
-                  {translate(l, locale)}
-                </a>
-              </Link> */}
             </Fragment>
           );
         })}
