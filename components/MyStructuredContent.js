@@ -38,8 +38,8 @@ const StructuredContent = ({ locale, content }) => {
                 title={record?.image?.title}
               />
             </div>
-            <div className="text-xxs -mt-2 mb-2 max-w-[800px] px-2 py-1 text-black/80 lg:-mt-10 lg:mb-10 2xl:-mt-16 2xl:mb-16">
-              {record.image.responsiveImage.alt}
+            <div className="-mt-2 mb-2 max-w-[800px] px-2 py-1 text-xxs text-black/80 lg:-mt-10 lg:mb-10 2xl:-mt-16 2xl:mb-16">
+              {record.image.responsiveImage.title}
             </div>
           </div>
         );

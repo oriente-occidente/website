@@ -18,7 +18,7 @@ function GalleryPreview({ slides, locale }) {
         speed={900}
         slidesPerView={1.3}
         centeredSlides={true}
-        initialSlide={2}
+        initialSlide={1}
         className="mySwiper"
         breakpoints={{
           1024: {
