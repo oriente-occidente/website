@@ -41,9 +41,10 @@ function Page({ data, locale, thankyouMessage }) {
     }
   }, [eventId]);
 
-  const action = `${locale === 'en' ? '/en' : ''}/forms/thankyou?id=${eventId}${
-    paymentId ? '&cp=' + paymentId : ''
-  }`;
+  // const action = `${locale === 'en' ? '/en' : ''}/forms/thankyou?id=${eventId}${
+  //   paymentId ? '&cp=' + paymentId : ''
+  // }`;
+  const action = `thankyou?id=${eventId}${paymentId ? '&cp=' + paymentId : ''}`;
   const choiche = paymentId
     ? payload.paymentSettings?.find((p) => p.id === paymentId)
     : null;
@@ -77,16 +78,20 @@ function Page({ data, locale, thankyouMessage }) {
     event.preventDefault();
     console.log('SUBMIT', event.target);
     console.log('formData', formData);
-    // fetch('/', {
-    //   method: 'POST',
-    //   headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-    //   body: encode({
-    //     'form-name': event.target.getAttribute('name'),
-    //     ...name,
-    //   }),
-    // })
-    //   .then(() => navigate('/thank-you/'))
-    //   .catch((error) => alert(error));
+    fetch('/', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: encode({
+        'form-name': event.target.getAttribute('name'),
+        ...formData,
+      }),
+    })
+      .then((response) => {
+        if (response) console.log('response', response);
+        console.log('redirecting to', action);
+        // router.push(action);
+      })
+      .catch((error) => alert(error));
   };
 
   return (
@@ -104,9 +109,10 @@ function Page({ data, locale, thankyouMessage }) {
           <form
             name="register"
             method="POST"
-            action={action}
+            // action={action}
             data-netlify="true"
             onSubmit={handleSubmit}
+            netlify
           >
             <input type="hidden" name="form-name" value="register" />
             <input type="hidden" name="locale" value={locale} />
