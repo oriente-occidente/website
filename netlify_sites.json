@@ -1,3 +1,10 @@
-{
-  "siteId": "a868d4ba-abf4-4141-999a-da2013bc5990"
-}
+[
+  {
+    "name": "production",
+    "siteId": "a868d4ba-abf4-4141-999a-da2013bc5990"
+  },
+  {
+    "name": "staging",
+    "siteId": "569109d3-9e87-4717-afe0-92944fbcfb2a"
+  }
+]
