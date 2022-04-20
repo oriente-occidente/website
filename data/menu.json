@@ -6,7 +6,7 @@
     ],
     "link": {
       "__typename": "PageRecord",
-      "id": "79074701",
+      "id": "7228711",
       "slug": "programma",
       "slugs": [
         {
@@ -30,7 +30,7 @@
     ],
     "link": {
       "__typename": "PageRecord",
-      "id": "79196174",
+      "id": "7228700",
       "slug": "box-office",
       "slugs": [
         {
@@ -54,7 +54,7 @@
     ],
     "link": {
       "__typename": "PageRecord",
-      "id": "89012994",
+      "id": "7228708",
       "slug": "artisti-associati",
       "slugs": [
         {
@@ -78,7 +78,7 @@
     ],
     "link": {
       "__typename": "PageRecord",
-      "id": "79182550",
+      "id": "7228702",
       "slug": "residenze-artistiche",
       "slugs": [
         {
@@ -102,7 +102,7 @@
     ],
     "link": {
       "__typename": "PageRecord",
-      "id": "79196175",
+      "id": "7228705",
       "slug": "workshop",
       "slugs": [
         {
@@ -126,7 +126,7 @@
     ],
     "link": {
       "__typename": "PageRecord",
-      "id": "79196189",
+      "id": "7228714",
       "slug": "eventi",
       "slugs": [
         {
@@ -150,7 +150,7 @@
     ],
     "link": {
       "__typename": "PageRecord",
-      "id": "79196191",
+      "id": "7228715",
       "slug": "progetti",
       "slugs": [
         {
@@ -174,7 +174,7 @@
     ],
     "link": {
       "__typename": "PageRecord",
-      "id": "79196196",
+      "id": "7228699",
       "slug": "chi-siamo",
       "slugs": [
         {
@@ -198,7 +198,7 @@
     ],
     "link": {
       "__typename": "PageRecord",
-      "id": "103822814",
+      "id": "7228706",
       "slug": "staff",
       "slugs": [
         {
@@ -222,7 +222,7 @@
     ],
     "link": {
       "__typename": "PageRecord",
-      "id": "102905880",
+      "id": "7228712",
       "slug": "accessibilita",
       "slugs": [
         {
@@ -246,7 +246,7 @@
     ],
     "link": {
       "__typename": "PageRecord",
-      "id": "103091036",
+      "id": "7228701",
       "slug": "sostenibilita",
       "slugs": [
         {
@@ -270,7 +270,7 @@
     ],
     "link": {
       "__typename": "PageRecord",
-      "id": "103872435",
+      "id": "7228707",
       "slug": "collabora-con-noi",
       "slugs": [
         {
@@ -294,7 +294,7 @@
     ],
     "link": {
       "__typename": "PageRecord",
-      "id": "79196203",
+      "id": "7228704",
       "slug": "report",
       "slugs": [
         {
@@ -318,7 +318,7 @@
     ],
     "link": {
       "__typename": "PageRecord",
-      "id": "79207456",
+      "id": "7228698",
       "slug": "main-partner",
       "slugs": [
         {
@@ -342,7 +342,7 @@
     ],
     "link": {
       "__typename": "PageRecord",
-      "id": "107306138",
+      "id": "7228697",
       "slug": "trasparenza",
       "slugs": [
         {
@@ -366,7 +366,7 @@
     ],
     "link": {
       "__typename": "PageRecord",
-      "id": "103172417",
+      "id": "7228710",
       "slug": "sicurezza-covid-19",
       "slugs": [
         {
@@ -389,7 +389,7 @@
     ],
     "link": {
       "__typename": "PageRecord",
-      "id": "79196192",
+      "id": "7228703",
       "slug": "news",
       "slugs": [
         {
@@ -412,7 +412,7 @@
     ],
     "link": {
       "__typename": "PageRecord",
-      "id": "97420129",
+      "id": "7228709",
       "slug": "sostienici",
       "slugs": [
         {
@@ -436,7 +436,7 @@
     ],
     "link": {
       "__typename": "PageRecord",
-      "id": "79074701",
+      "id": "7228711",
       "slug": "programma",
       "slugs": [
         {
@@ -460,7 +460,7 @@
     ],
     "link": {
       "__typename": "PageRecord",
-      "id": "79196174",
+      "id": "7228700",
       "slug": "box-office",
       "slugs": [
         {
@@ -484,7 +484,7 @@
     ],
     "link": {
       "__typename": "PageRecord",
-      "id": "89012994",
+      "id": "7228708",
       "slug": "artisti-associati",
       "slugs": [
         {
@@ -508,7 +508,7 @@
     ],
     "link": {
       "__typename": "PageRecord",
-      "id": "79182550",
+      "id": "7228702",
       "slug": "residenze-artistiche",
       "slugs": [
         {
@@ -532,7 +532,7 @@
     ],
     "link": {
       "__typename": "PageRecord",
-      "id": "79196175",
+      "id": "7228705",
       "slug": "workshop",
       "slugs": [
         {
@@ -556,7 +556,7 @@
     ],
     "link": {
       "__typename": "PageRecord",
-      "id": "79196189",
+      "id": "7228714",
       "slug": "eventi",
       "slugs": [
         {
@@ -580,7 +580,7 @@
     ],
     "link": {
       "__typename": "PageRecord",
-      "id": "79196191",
+      "id": "7228715",
       "slug": "progetti",
       "slugs": [
         {
@@ -604,7 +604,7 @@
     ],
     "link": {
       "__typename": "PageRecord",
-      "id": "79196196",
+      "id": "7228699",
       "slug": "chi-siamo",
       "slugs": [
         {
@@ -628,7 +628,7 @@
     ],
     "link": {
       "__typename": "PageRecord",
-      "id": "103822814",
+      "id": "7228706",
       "slug": "staff",
       "slugs": [
         {
@@ -652,7 +652,7 @@
     ],
     "link": {
       "__typename": "PageRecord",
-      "id": "102905880",
+      "id": "7228712",
       "slug": "accessibilita",
       "slugs": [
         {
@@ -676,7 +676,7 @@
     ],
     "link": {
       "__typename": "PageRecord",
-      "id": "103091036",
+      "id": "7228701",
       "slug": "sostenibilita",
       "slugs": [
         {
@@ -700,7 +700,7 @@
     ],
     "link": {
       "__typename": "PageRecord",
-      "id": "103872435",
+      "id": "7228707",
       "slug": "collabora-con-noi",
       "slugs": [
         {
@@ -724,7 +724,7 @@
     ],
     "link": {
       "__typename": "PageRecord",
-      "id": "79196203",
+      "id": "7228704",
       "slug": "report",
       "slugs": [
         {
@@ -748,7 +748,7 @@
     ],
     "link": {
       "__typename": "PageRecord",
-      "id": "79207456",
+      "id": "7228698",
       "slug": "main-partner",
       "slugs": [
         {
@@ -772,7 +772,7 @@
     ],
     "link": {
       "__typename": "PageRecord",
-      "id": "107306138",
+      "id": "7228697",
       "slug": "trasparenza",
       "slugs": [
         {
@@ -796,7 +796,7 @@
     ],
     "link": {
       "__typename": "PageRecord",
-      "id": "103172417",
+      "id": "7228710",
       "slug": "sicurezza-covid-19",
       "slugs": [
         {
@@ -819,7 +819,7 @@
     ],
     "link": {
       "__typename": "PageRecord",
-      "id": "79196192",
+      "id": "7228703",
       "slug": "news",
       "slugs": [
         {
@@ -842,7 +842,7 @@
     ],
     "link": {
       "__typename": "PageRecord",
-      "id": "97420129",
+      "id": "7228709",
       "slug": "sostienici",
       "slugs": [
         {
