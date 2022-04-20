@@ -283,6 +283,8 @@ function Page({ data, locale, thankyouMessage }) {
 }
 
 export async function getStaticProps({ params, locale }) {
+
+  
   const data = await doQueryById(locale);
   const ty = await fetchData(q.extra_content, { locale });
   const thankyouMessage = ty.extraContent;

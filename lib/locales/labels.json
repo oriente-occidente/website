@@ -42,7 +42,8 @@
     "tab_courses": "Corsi",
     "year": "Anno",
     "previous_events": "Eventi Precedenti",
-    "next_events": "Prossimi Eventi"
+    "next_events": "Prossimi Eventi",
+    "payment": "Pagamento"
   },
   "en": {
     "it": "Italian",
@@ -87,6 +88,7 @@
     "tab_courses": "Courses",
     "year": "Year",
     "previous_events": "Previous Events",
-    "next_events": "Next Events"
+    "next_events": "Next Events",
+    "payment": "Payment"
   }
 }
