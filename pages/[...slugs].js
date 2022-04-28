@@ -1,23 +1,23 @@
 // import { useState } from 'react';
 
-import dynamic from "next/dynamic";
+import dynamic from 'next/dynamic';
 
-import { doQuery, getPaths } from "lib/api";
-import Layout from "components/Layout";
-import Seo from "components/Seo";
-import { camelCase, getBreadcrumbs } from "lib/utils";
-import Breadcrumbs from "components/Breadcrumbs";
-import HeroDetail from "components/hero/HeroDetail";
-import HeroEmpty from "components/hero/HeroEmpty";
-import HeroIndex from "components/hero/HeroIndex";
-import GalleryPreview from "components/galleries/GalleryPreview";
-import ResultsGrid from "components/ResultsGrid";
-import Filters from "components/Filters";
+import { doQuery, getPaths } from 'lib/api';
+import Layout from 'components/Layout';
+import Seo from 'components/Seo';
+import { camelCase, getBreadcrumbs } from 'lib/utils';
+import Breadcrumbs from 'components/Breadcrumbs';
+import HeroDetail from 'components/hero/HeroDetail';
+import HeroEmpty from 'components/hero/HeroEmpty';
+import HeroIndex from 'components/hero/HeroIndex';
+import GalleryPreview from 'components/galleries/GalleryPreview';
+import ResultsGrid from 'components/ResultsGrid';
+import Filters from 'components/Filters';
 
 // import Modal from 'components/Modal';
-import MainContent from "components/contents/MainContent";
-import SectionsParagraphs from "components/contents/SectionsParagraphs";
-import OtherSections from "components/contents/OtherSections";
+import MainContent from 'components/contents/MainContent';
+import SectionsParagraphs from 'components/contents/SectionsParagraphs';
+import OtherSections from 'components/contents/OtherSections';
 
 // import ShareButtons from 'components/ShareButtons';
 
@@ -29,14 +29,14 @@ function Page({ data, locale }) {
   };
   const { __typename: pageType } = pageInfo;
   const payload = rest[pageType];
-  const isPage = pageType === "page";
+  const isPage = pageType === 'page';
   const isIndex = isPage && payload.isIndex;
   const indexType = isIndex && payload.indexType;
-  const showFilters = indexType === "festival-events";
+  const showFilters = indexType === 'festival-events';
   const list =
     isIndex && indexType
       ? showFilters
-        ? pluk(rest, "festivalEvents, otherEvents, courses, workshops")
+        ? pluk(rest, 'festivalEvents, otherEvents, courses, workshops')
         : rest[camelCase(indexType)]
       : [];
   const group = indexType ? indexType : null;
@@ -70,7 +70,7 @@ function Page({ data, locale }) {
   };
 
   const ShareButtons = !isIndex
-    ? dynamic(() => import("components/ShareButtons"), { ssr: false })
+    ? dynamic(() => import('components/ShareButtons'), { ssr: false })
     : null;
 
   return (
@@ -82,13 +82,13 @@ function Page({ data, locale }) {
       <Layout footer={footer} menu={menu} locale={locale} alts={pageInfo.urls}>
         <Breadcrumbs
           id="#main-content"
-          background={heroData.layoutHero == "index" ? "gray" : null}
+          background={heroData.layoutHero == 'index' ? 'gray' : null}
           paths={getBreadcrumbs(pageInfo.slugs[locale], payload.slug, locale)}
           locale={locale}
         />
-        {heroData.layoutHero == "detail" && imageHero ? (
+        {heroData.layoutHero == 'detail' && imageHero ? (
           <HeroDetail data={heroData} />
-        ) : heroData.layoutHero == "index" && imageHero ? (
+        ) : heroData.layoutHero == 'index' && imageHero ? (
           <HeroIndex data={heroData} />
         ) : (
           <HeroEmpty data={heroData} />
@@ -142,7 +142,7 @@ function Page({ data, locale }) {
 }
 export async function getStaticPaths() {
   const paths = getPaths();
-  return { paths, fallback: false };
+  return { paths, fallback: 'blocking' };
 }
 
 export async function getStaticProps({ params, locale, preview = false }) {

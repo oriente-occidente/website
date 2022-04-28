@@ -1,10 +1,10 @@
-const nodeEnv = process.env.NODE_ENV || "develop";
-if (nodeEnv === "develop") {
-  require("dotenv").config({ path: ".env.local" });
+const nodeEnv = process.env.NODE_ENV || 'develop';
+if (nodeEnv === 'develop') {
+  require('dotenv').config({ path: '.env.local' });
 }
-const fs = require("fs");
-const _ = require("lodash");
-const { doQuery, allRecords } = require("./dato");
+const fs = require('fs');
+const _ = require('lodash');
+const { doQuery, allRecords } = require('./dato');
 
 const getLocales = async () => {
   return doQuery(`query locales { site:_site{ locales } }`);
@@ -59,13 +59,16 @@ fragment itemFrag on MenuItemRecord {
 
 function traverse(item, lang, parent = null) {
   const { slugs, link } = item;
-  const slug = slugs.find((s) => s.locale === lang).slug;
+  const slug = slugs.find((s) => s.locale === lang)?.slug;
   // console.log('visiting ' + slug);
+
   let routes = [];
   if (parent?.routes?.length > 0) {
     routes = [...parent.routes];
   }
-  routes.push(slug);
+  if (slug) {
+    routes.push(slug);
+  }
 
   const current = { routes, link, lang };
   if (item.children.length === 0) {
@@ -88,12 +91,12 @@ function getMenupathByLocale(menu, locale) {
 
 function getPrefix(menu, nameToMatch, log = false) {
   if (log) {
-    console.log("getPrefix", nameToMatch);
+    console.log('getPrefix', nameToMatch);
   }
   const item = menu.find((r) => r.indexType === nameToMatch);
 
   if (log) {
-    console.log("slugs", item?.slugs);
+    console.log('slugs', item?.slugs);
   }
   return item?.slugs ?? null;
 }
@@ -105,7 +108,7 @@ function withAlts(list) {
       return { locale, slugs: slugs[locale] };
     });
     const urls = _.keys(slugs).map((locale) => {
-      return { locale, url: slugs[locale].join("/") };
+      return { locale, url: slugs[locale].join('/') };
     });
     return { ...route, paths, urls };
   });
@@ -115,16 +118,16 @@ const getRecords = async (
   list,
   name,
   prefixes,
-  group = "page",
+  group = 'page',
   log = false
 ) => {
   if (log) {
-    console.log("getRecords", name);
-    console.log("prefixes", prefixes);
+    console.log('getRecords', name);
+    console.log('prefixes', prefixes);
   }
 
   const records = list.map((r) => {
-    const { id, slug: slugs, isIndex = false, indexType = "" } = r;
+    const { id, slug: slugs, isIndex = false, indexType = '' } = r;
     const locales = _.keys(slugs);
     let paths = locales.reduce((obj, l) => {
       const path = [slugs[l]];
@@ -138,7 +141,7 @@ const getRecords = async (
       }, {});
     }
     if (log) {
-      console.log("paths", paths);
+      console.log('paths', paths);
     }
 
     return {
@@ -151,7 +154,7 @@ const getRecords = async (
     };
   });
   if (log) {
-    console.log("RECORDS", JSON.stringify(records, null, 2));
+    console.log('RECORDS', JSON.stringify(records, null, 2));
   }
   return records;
 };
@@ -181,7 +184,7 @@ const generateRoutes = async () => {
       return null;
     })
     .filter(Boolean);
-  let menuGrouped = _.groupBy(menuList, "id");
+  let menuGrouped = _.groupBy(menuList, 'id');
 
   const menu = _.values(menuGrouped).map((values) => {
     const slugs = values.reduce((merged, current) => {
@@ -193,82 +196,98 @@ const generateRoutes = async () => {
     }, {});
 
     const { id, isIndex, indexType } = values[0];
-    return { id, isIndex, indexType, slugs, __typename: "page" };
+    return { id, isIndex, indexType, slugs, __typename: 'page' };
   });
 
   //get the pages not in menu
-  const pageList = (await allRecords("page")).filter(
+  const pageList = (await allRecords('page')).filter(
     (r) => !ids.includes(r.id)
   );
-  const pages = await getRecords(pageList, "page");
+  const pages = await getRecords(pageList, 'page');
 
   //get the projects list
-  const pjList = await allRecords("project");
+  const pjList = await allRecords('project');
   const projects = await getRecords(
     pjList,
-    "project",
-    getPrefix(menu, "projects"),
-    "projects"
+    'project',
+    getPrefix(menu, 'projects'),
+    'projects'
+  );
+
+  const ntwList = await allRecords('network');
+  const networks = await getRecords(
+    ntwList,
+    'network',
+    getPrefix(menu, 'networks'),
+    'networks'
+  );
+
+  const lngList = await allRecords('language');
+  const languages = await getRecords(
+    lngList,
+    'language',
+    getPrefix(menu, 'languages'),
+    'languages'
   );
 
   //get the news items
-  const newsList = await allRecords("news");
+  const newsList = await allRecords('news');
   const news = await getRecords(
     newsList,
-    "news",
-    getPrefix(menu, "news-index"),
-    "news-index"
+    'news',
+    getPrefix(menu, 'news-index'),
+    'news-index'
   );
 
   //split artists into groups
-  const artists = await allRecords("artist");
+  const artists = await allRecords('artist');
   const aa = artists.filter((r) => r.associatedArtist?.length > 0);
   const associated = await getRecords(
     aa,
-    "artist",
-    getPrefix(menu, "associated-artists"),
-    "associated-artists"
+    'artist',
+    getPrefix(menu, 'associated-artists'),
+    'associated-artists'
   );
   const ar = artists.filter((r) => r.artisticResidence?.length > 0);
   const residences = await getRecords(
     ar,
-    "artist",
-    getPrefix(menu, "artistic-residences"),
-    "artistic-residences"
+    'artist',
+    getPrefix(menu, 'artistic-residences'),
+    'artistic-residences'
   );
 
   //split events into groups
-  const allEvents = await allRecords("event");
+  const allEvents = await allRecords('event');
   const fe = allEvents.filter((event) => event.isFestival);
   const festival = await getRecords(
     fe,
-    "event",
-    getPrefix(menu, "festival-events"),
-    "festival-events"
+    'event',
+    getPrefix(menu, 'festival-events'),
+    'festival-events'
   );
   const oe = allEvents.filter((event) => !event.isFestival);
   const events = await getRecords(
     oe,
-    "event",
-    getPrefix(menu, "other-events"),
-    "other-events"
+    'event',
+    getPrefix(menu, 'other-events'),
+    'other-events'
   );
 
   //split courses into groups
-  const allWorkshops = await allRecords("workshop");
+  const allWorkshops = await allRecords('workshop');
   const ws = allWorkshops.filter((event) => event.isWorkshop);
   const workshops = await getRecords(
     ws,
-    "workshop",
-    getPrefix(menu, "workshops"),
-    "workshops"
+    'workshop',
+    getPrefix(menu, 'workshops'),
+    'workshops'
   );
   const cs = allWorkshops.filter((event) => !event.isWorkshop);
   const courses = await getRecords(
     cs,
-    "workshop",
-    getPrefix(menu, "courses"),
-    "courses"
+    'workshop',
+    getPrefix(menu, 'courses'),
+    'courses'
   );
 
   const list = withAlts([
@@ -282,15 +301,17 @@ const generateRoutes = async () => {
     ...associated,
     ...residences,
     ...news,
+    ...networks,
+    ...languages,
   ]);
 
   fs.writeFileSync(
-    "data/menu.json",
+    'data/menu.json',
     JSON.stringify(menuRoutes, null, 2),
-    "utf8"
+    'utf8'
   );
-  console.log("routes len", list.length);
-  fs.writeFileSync("data/routes.json", JSON.stringify(list, null, 2), "utf8");
+  console.log('routes len', list.length);
+  fs.writeFileSync('data/routes.json', JSON.stringify(list, null, 2), 'utf8');
 };
 
 // (async () => {

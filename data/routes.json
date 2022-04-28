@@ -748,6 +748,46 @@
     ]
   },
   {
+    "id": "9913479",
+    "isIndex": true,
+    "indexType": "networks",
+    "slugs": {
+      "it": [
+        "people",
+        "reti"
+      ],
+      "en": [
+        "people"
+      ]
+    },
+    "__typename": "page",
+    "paths": [
+      {
+        "locale": "it",
+        "slugs": [
+          "people",
+          "reti"
+        ]
+      },
+      {
+        "locale": "en",
+        "slugs": [
+          "people"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "it",
+        "url": "people/reti"
+      },
+      {
+        "locale": "en",
+        "url": "people"
+      }
+    ]
+  },
+  {
     "id": "7228713",
     "slugs": {
       "en": [
@@ -5017,6 +5057,36 @@
     ]
   },
   {
+    "id": "9949277",
+    "slugs": {
+      "it": [
+        "people",
+        "progetti",
+        "progetto-solo-italiano"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "project",
+    "group": "projects",
+    "paths": [
+      {
+        "locale": "it",
+        "slugs": [
+          "people",
+          "progetti",
+          "progetto-solo-italiano"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "it",
+        "url": "people/progetti/progetto-solo-italiano"
+      }
+    ]
+  },
+  {
     "id": "7228684",
     "slugs": {
       "en": [
@@ -7139,6 +7209,36 @@
       {
         "locale": "it",
         "url": "news/servizio-civile"
+      }
+    ]
+  },
+  {
+    "id": "9949265",
+    "slugs": {
+      "it": [
+        "people",
+        "reti",
+        "pova-rete"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "network",
+    "group": "networks",
+    "paths": [
+      {
+        "locale": "it",
+        "slugs": [
+          "people",
+          "reti",
+          "pova-rete"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "it",
+        "url": "people/reti/pova-rete"
       }
     ]
   }
