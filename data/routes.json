@@ -7213,6 +7213,64 @@
     ]
   },
   {
+    "id": "10258282",
+    "slugs": {
+      "en": [
+        "people",
+        "english-only-network-sample"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "network",
+    "group": "networks",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "people",
+          "english-only-network-sample"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "people/english-only-network-sample"
+      }
+    ]
+  },
+  {
+    "id": "9973357",
+    "slugs": {
+      "it": [
+        "people",
+        "reti",
+        "prova-rete-due-solo-ita"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "network",
+    "group": "networks",
+    "paths": [
+      {
+        "locale": "it",
+        "slugs": [
+          "people",
+          "reti",
+          "prova-rete-due-solo-ita"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "it",
+        "url": "people/reti/prova-rete-due-solo-ita"
+      }
+    ]
+  },
+  {
     "id": "9949265",
     "slugs": {
       "it": [

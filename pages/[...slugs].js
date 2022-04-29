@@ -2,7 +2,7 @@
 
 import dynamic from 'next/dynamic';
 
-import { doQuery, getPaths } from 'lib/api';
+import { doQuery /*, getPaths */, queryRoutesByParams } from 'lib/api';
 import Layout from 'components/Layout';
 import Seo from 'components/Seo';
 import { camelCase, getBreadcrumbs } from 'lib/utils';
@@ -141,12 +141,14 @@ function Page({ data, locale }) {
   );
 }
 export async function getStaticPaths() {
-  const paths = getPaths();
+  const paths = []; //getPaths();
   return { paths, fallback: 'blocking' };
 }
 
 export async function getStaticProps({ params, locale, preview = false }) {
-  const data = await doQuery(locale, params, preview);
+  console.log('PARAMS', params);
+  const routes = queryRoutesByParams(params, locale, preview);
+  const data = await doQuery(routes, locale, params, preview);
   return {
     props: { data, locale, params },
   };
