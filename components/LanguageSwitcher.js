@@ -1,17 +1,17 @@
-import { Fragment } from "react";
-import Link from "next/link";
+import { Fragment } from 'react';
+import Link from 'next/link';
 
-import config from "data/config.json";
-import translate from "lib/locales";
+import { getLocales } from 'lib/utils';
+import translate from 'lib/locales';
 
 function LanguageSwitcher({ locale, alts }) {
-  const { locales } = config.site;
+  const locales = getLocales();
   return (
     <>
       {locales &&
         locales.map((l, i) => {
           const isActive = locale === l;
-          const link = alts?.find((alt) => alt.locale === l)?.url ?? "";
+          const link = alts?.find((alt) => alt.locale === l)?.url ?? '';
           return (
             <Fragment key={l}>
               {i > 0 && (
@@ -22,7 +22,7 @@ function LanguageSwitcher({ locale, alts }) {
               <Link href={`/${link}`} locale={l}>
                 <a
                   className={`${
-                    isActive ? "font-semibold" : ""
+                    isActive ? 'font-semibold' : ''
                   } hidden hover:text-red lg:block`}
                 >
                   {l}
@@ -31,7 +31,7 @@ function LanguageSwitcher({ locale, alts }) {
               <Link href={`/${link}`} locale={l}>
                 <a
                   className={`${
-                    isActive ? "font-semibold" : ""
+                    isActive ? 'font-semibold' : ''
                   } mr-6 hover:text-red lg:hidden`}
                 >
                   {translate(l, locale)}
@@ -45,5 +45,3 @@ function LanguageSwitcher({ locale, alts }) {
 }
 
 export default LanguageSwitcher;
-
-

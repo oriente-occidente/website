@@ -7213,6 +7213,36 @@
     ]
   },
   {
+    "id": "10258389",
+    "slugs": {
+      "it": [
+        "people",
+        "reti",
+        "not-built"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "network",
+    "group": "networks",
+    "paths": [
+      {
+        "locale": "it",
+        "slugs": [
+          "people",
+          "reti",
+          "not-built"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "it",
+        "url": "people/reti/not-built"
+      }
+    ]
+  },
+  {
     "id": "10258282",
     "slugs": {
       "en": [
