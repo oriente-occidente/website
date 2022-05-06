@@ -67,3 +67,7 @@ a {
 strong {
   @apply font-semibold;
 }
+
+.text-shadow {
+  text-shadow: 0 0 4px #000;
+}

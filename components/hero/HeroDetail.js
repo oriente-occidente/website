@@ -87,12 +87,19 @@ function HeroDetail({ data }) {
           {slideshowHero != "" ? (
             <Gallery slides={slideshowHero} />
           ) : imageHero ? (
-            <DatoImage
-              className="max-w-[1400px]"
-              data={imageHero.responsiveImage}
-              alt={imageHero.alt}
-              title={imageHero.title}
-            />
+            <div className="relative">
+              <DatoImage
+                className="max-w-[1400px]"
+                data={imageHero.responsiveImage}
+                alt={imageHero.alt}
+                title={imageHero.title}
+              />
+              {imageHero.title &&
+                <div className="absolute bottom-0 left-0 right-0 z-1 px-4 pt-3 pb-2 text-xxs text-white bg-gradient-to-t from-black/80 text-shadow">
+                  {imageHero.title}
+                </div>
+              }
+            </div>
           ) : null}
         </div>
 
