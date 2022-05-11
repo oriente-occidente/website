@@ -757,7 +757,8 @@
         "reti"
       ],
       "en": [
-        "people"
+        "people",
+        "networks"
       ]
     },
     "__typename": "page",
@@ -772,7 +773,8 @@
       {
         "locale": "en",
         "slugs": [
-          "people"
+          "people",
+          "networks"
         ]
       }
     ],
@@ -783,7 +785,49 @@
       },
       {
         "locale": "en",
-        "url": "people"
+        "url": "people/networks"
+      }
+    ]
+  },
+  {
+    "id": "13710151",
+    "isIndex": true,
+    "indexType": "languages",
+    "slugs": {
+      "it": [
+        "studio",
+        "linguaggi"
+      ],
+      "en": [
+        "studio",
+        "languages"
+      ]
+    },
+    "__typename": "page",
+    "paths": [
+      {
+        "locale": "it",
+        "slugs": [
+          "studio",
+          "linguaggi"
+        ]
+      },
+      {
+        "locale": "en",
+        "slugs": [
+          "studio",
+          "languages"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "it",
+        "url": "studio/linguaggi"
+      },
+      {
+        "locale": "en",
+        "url": "studio/languages"
       }
     ]
   },
@@ -4540,53 +4584,6 @@
     ]
   },
   {
-    "id": "7228716",
-    "slugs": {
-      "en": [
-        "studio",
-        "workshop",
-        "train-the-trainers-train-the-artists"
-      ],
-      "it": [
-        "studio",
-        "workshop",
-        "train-the-trainers-train-the-artists"
-      ]
-    },
-    "isIndex": false,
-    "indexType": "",
-    "__typename": "workshop",
-    "group": "workshops",
-    "paths": [
-      {
-        "locale": "en",
-        "slugs": [
-          "studio",
-          "workshop",
-          "train-the-trainers-train-the-artists"
-        ]
-      },
-      {
-        "locale": "it",
-        "slugs": [
-          "studio",
-          "workshop",
-          "train-the-trainers-train-the-artists"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "en",
-        "url": "studio/workshop/train-the-trainers-train-the-artists"
-      },
-      {
-        "locale": "it",
-        "url": "studio/workshop/train-the-trainers-train-the-artists"
-      }
-    ]
-  },
-  {
     "id": "7228717",
     "slugs": {
       "en": [
@@ -5053,6 +5050,53 @@
       {
         "locale": "it",
         "url": "studio/workshop/practice-ina"
+      }
+    ]
+  },
+  {
+    "id": "7228716",
+    "slugs": {
+      "en": [
+        "studio",
+        "languages",
+        "train-the-trainers-train-the-artists"
+      ],
+      "it": [
+        "studio",
+        "linguaggi",
+        "train-the-trainers-train-the-artists"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "workshop",
+    "group": "languages",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "studio",
+          "languages",
+          "train-the-trainers-train-the-artists"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "studio",
+          "linguaggi",
+          "train-the-trainers-train-the-artists"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "studio/languages/train-the-trainers-train-the-artists"
+      },
+      {
+        "locale": "it",
+        "url": "studio/linguaggi/train-the-trainers-train-the-artists"
       }
     ]
   },
@@ -7247,6 +7291,7 @@
     "slugs": {
       "en": [
         "people",
+        "networks",
         "english-only-network-sample"
       ]
     },
@@ -7259,6 +7304,7 @@
         "locale": "en",
         "slugs": [
           "people",
+          "networks",
           "english-only-network-sample"
         ]
       }
@@ -7266,7 +7312,7 @@
     "urls": [
       {
         "locale": "en",
-        "url": "people/english-only-network-sample"
+        "url": "people/networks/english-only-network-sample"
       }
     ]
   },

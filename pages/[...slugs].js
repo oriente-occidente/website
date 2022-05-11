@@ -27,6 +27,9 @@ function Page({ data, locale }) {
   };
   const { __typename: pageType } = pageInfo;
   const payload = rest[pageType];
+
+  if (!payload) return null; //REDIRECT TO 404
+
   const isPage = pageType === 'page';
   const isIndex = isPage && payload.isIndex;
   const indexType = isIndex && payload.indexType;

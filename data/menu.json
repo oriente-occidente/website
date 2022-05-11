@@ -98,6 +98,30 @@
   {
     "routes": [
       "studio",
+      "linguaggi"
+    ],
+    "link": {
+      "__typename": "PageRecord",
+      "id": "13710151",
+      "slug": "linguaggi",
+      "slugs": [
+        {
+          "locale": "en",
+          "slug": "languages"
+        },
+        {
+          "locale": "it",
+          "slug": "linguaggi"
+        }
+      ],
+      "indexType": "languages",
+      "isIndex": true
+    },
+    "lang": "it"
+  },
+  {
+    "routes": [
+      "studio",
       "workshop"
     ],
     "link": {
@@ -177,6 +201,10 @@
       "id": "9913479",
       "slug": "reti",
       "slugs": [
+        {
+          "locale": "en",
+          "slug": "networks"
+        },
         {
           "locale": "it",
           "slug": "reti"
@@ -548,6 +576,30 @@
   {
     "routes": [
       "studio",
+      "languages"
+    ],
+    "link": {
+      "__typename": "PageRecord",
+      "id": "13710151",
+      "slug": "linguaggi",
+      "slugs": [
+        {
+          "locale": "en",
+          "slug": "languages"
+        },
+        {
+          "locale": "it",
+          "slug": "linguaggi"
+        }
+      ],
+      "indexType": "languages",
+      "isIndex": true
+    },
+    "lang": "en"
+  },
+  {
+    "routes": [
+      "studio",
       "workshop"
     ],
     "link": {
@@ -619,13 +671,18 @@
   },
   {
     "routes": [
-      "people"
+      "people",
+      "networks"
     ],
     "link": {
       "__typename": "PageRecord",
       "id": "9913479",
       "slug": "reti",
       "slugs": [
+        {
+          "locale": "en",
+          "slug": "networks"
+        },
         {
           "locale": "it",
           "slug": "reti"
