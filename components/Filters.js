@@ -1,5 +1,3 @@
-import { useState, useEffect } from 'react';
-
 import { useAppContext } from 'lib/ctx';
 import Tabs from 'components/Tabs';
 import PreviewCard from 'components/cards/PreviewCard';

@@ -222,14 +222,6 @@ const generateRoutes = async () => {
     'networks'
   );
 
-  const lngList = await allRecords('language');
-  const languages = await getRecords(
-    lngList,
-    'language',
-    getPrefix(menu, 'languages'),
-    'languages'
-  );
-
   //get the news items
   const newsList = await allRecords('news');
   const news = await getRecords(
@@ -283,11 +275,11 @@ const generateRoutes = async () => {
     'workshops'
   );
   const cs = allWorkshops.filter((event) => !event.isWorkshop);
-  const courses = await getRecords(
+  const languages = await getRecords(
     cs,
     'workshop',
-    getPrefix(menu, 'courses'),
-    'courses'
+    getPrefix(menu, 'languages'),
+    'languages'
   );
 
   const list = withAlts([
@@ -296,13 +288,12 @@ const generateRoutes = async () => {
     ...festival,
     ...events,
     ...workshops,
-    ...courses,
+    ...languages,
     ...projects,
     ...associated,
     ...residences,
     ...news,
     ...networks,
-    ...languages,
   ]);
 
   fs.writeFileSync(
