@@ -53,7 +53,7 @@ a {
 
 .object-contain img {
   object-fit: contain;
-  object-position: left;
+  object-position: center;
 }
 
 .swiper-slide img {

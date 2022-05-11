@@ -11,6 +11,7 @@ import BlockQuote from "components/BlockQuote";
 import GalleryStandard from "components/galleries/GalleryStandard";
 import VideoPlayer from "components/video/VideoPlayer";
 import VideoEmbedded from "components/video/VideoEmbedded";
+import Partners from "components/Partners";
 
 import { resolveLinkById } from "lib/utils";
 
@@ -57,6 +58,12 @@ const StructuredContent = ({ locale, content }) => {
                 <VideoPlayer {...record} videoFile={record.internalVideo} />
               )}
             </div>
+          </div>
+        );
+      case "PartnerRecord":
+        return (
+          <div className="py-2 lg:py-10 2xl:py-16" key={record.id}>
+            <Partners data={record} />
           </div>
         );
       default:
