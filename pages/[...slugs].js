@@ -1,5 +1,3 @@
-// import { useState } from 'react';
-
 import dynamic from 'next/dynamic';
 
 import { doQuery /*, getPaths */, queryRoutesByParams } from 'lib/api';

@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
-// import { useRouter } from 'next/router';
 
+import { useAppContext } from 'lib/ctx';
 import Tabs from 'components/Tabs';
 import PreviewCard from 'components/cards/PreviewCard';
 import { useFestivalByDate } from 'lib/api/queryHooks';
@@ -12,30 +12,46 @@ function getDatesOfYear(datesOfYear, y) {
 }
 
 function Filters({ locale, list = null, datesOfYear }) {
-  // const router = useRouter();
-  //const currentYear = new Date().getFullYear();
-  // const years = [`${currentYear}`, `${currentYear - 1}`, `${currentYear - 2}`];
+  const { state, dispatch } = useAppContext();
+  const filters = state.filters;
+  console.log('FILTEERS', filters);
+
   const years = datesOfYear
     .map((fd) => fd.year)
     .sort()
     .reverse();
+
   const currentYear = years[0];
-  const [typeFilter, setTypeFilter] = useState('festivalEvents');
-  const [year, setYear] = useState(currentYear);
+
+  // const [typeFilter, setTypeFilter] = useState('festivalEvents');
+  // const [year, setYear] = useState(currentYear);
+  const year = filters?.year || currentYear;
+  const typeFilter = filters?.type || 'festivalEvents';
+
+  function setYear(year) {
+    dispatch({
+      type: 'SET_FILTERS',
+      value: { ...filters, year },
+    });
+  }
+  function setTypeFilter(type) {
+    dispatch({
+      type: 'SET_FILTERS',
+      value: { ...filters, type },
+    });
+  }
+
   const { data, error, loading } = useFestivalByDate(
     locale,
     year,
     getDatesOfYear(datesOfYear, year)
   );
 
-  // useEffect(() => {
-  //   console.log('window', window.location.search);
-  // }, []);
-
   function handleChange(e) {
     const value = e.target?.value;
     if (!value) return;
     setYear(value);
+    dispatch({ type: 'SET_FILTERS', value: { year: value, type: typeFilter } });
     // console.log(router);
     // router.push(`${router.asPath}?year=${value}`);
   }
@@ -94,14 +110,12 @@ function Filters({ locale, list = null, datesOfYear }) {
           </div>
         </div>
       </div>
-
       {/*
       <div className="mt-10">
         <div className="text-md">TYPE: {typeFilter}</div>
         <div className="text-md">YEAR: {year}</div>
       </div>
       */}
-
       <div className="my-4 container">
         {showHeaders && (
           <div className="border-b border-black  mt-20 pb-5 font-semibold uppercase text-lg">

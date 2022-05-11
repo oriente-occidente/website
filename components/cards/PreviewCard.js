@@ -7,7 +7,6 @@ import { useRouter } from 'next/router';
 
 function PreviewCard({ data, locale, group = null, year }) {
   const router = useRouter();
-  console.log('router', router);
   let categoryTitle;
   if (data.category) {
     if (Array.isArray(data.category)) {
@@ -25,7 +24,6 @@ function PreviewCard({ data, locale, group = null, year }) {
 
   const link = resolveLinkById(data.id, locale, group);
   const alternativeLink = `${router.asPath}/${data.slug}`;
-  console.log('alternativeLink', alternativeLink);
   const isRoot = link === '/';
   return (
     <div className="relative py-4">

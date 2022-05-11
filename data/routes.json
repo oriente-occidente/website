@@ -827,6 +827,53 @@
     ]
   },
   {
+    "id": "7228923",
+    "slugs": {
+      "en": [
+        "festival",
+        "program",
+        "nobody-nobody-nobody-it-s-ok-not-to-be-ok-theatre-performance"
+      ],
+      "it": [
+        "festival",
+        "programma",
+        "nobody-nobody-nobody-it-s-ok-not-to-be-ok-theatre-performance"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "event",
+    "group": "festival-events",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "festival",
+          "program",
+          "nobody-nobody-nobody-it-s-ok-not-to-be-ok-theatre-performance"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "festival",
+          "programma",
+          "nobody-nobody-nobody-it-s-ok-not-to-be-ok-theatre-performance"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "festival/program/nobody-nobody-nobody-it-s-ok-not-to-be-ok-theatre-performance"
+      },
+      {
+        "locale": "it",
+        "url": "festival/programma/nobody-nobody-nobody-it-s-ok-not-to-be-ok-theatre-performance"
+      }
+    ]
+  },
+  {
     "id": "7228911",
     "slugs": {
       "en": [
@@ -1293,53 +1340,6 @@
       {
         "locale": "it",
         "url": "festival/programma/hyenas-forme-di-minotauri-contemporanei"
-      }
-    ]
-  },
-  {
-    "id": "7228923",
-    "slugs": {
-      "en": [
-        "festival",
-        "program",
-        "nobody-nobody-nobody-it-s-ok-not-to-be-ok-theatre-performance"
-      ],
-      "it": [
-        "festival",
-        "programma",
-        "nobody-nobody-nobody-it-s-ok-not-to-be-ok-theatre-performance"
-      ]
-    },
-    "isIndex": false,
-    "indexType": "",
-    "__typename": "event",
-    "group": "festival-events",
-    "paths": [
-      {
-        "locale": "en",
-        "slugs": [
-          "festival",
-          "program",
-          "nobody-nobody-nobody-it-s-ok-not-to-be-ok-theatre-performance"
-        ]
-      },
-      {
-        "locale": "it",
-        "slugs": [
-          "festival",
-          "programma",
-          "nobody-nobody-nobody-it-s-ok-not-to-be-ok-theatre-performance"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "en",
-        "url": "festival/program/nobody-nobody-nobody-it-s-ok-not-to-be-ok-theatre-performance"
-      },
-      {
-        "locale": "it",
-        "url": "festival/programma/nobody-nobody-nobody-it-s-ok-not-to-be-ok-theatre-performance"
       }
     ]
   },
