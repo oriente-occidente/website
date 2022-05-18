@@ -35,9 +35,17 @@ function ResultsGrid({ list, locale, group }) {
         const bMax = getMaxYear(b.associatedArtist);
         return bMax > aMax ? 1 : bMax < aMax ? -1 : 0;
       });
+    } else if (group === 'projects') {
+      return list.sort((a, b) => {
+        const p1 = a.position;
+        const p2 = b.position;
+        return p1 > p2 ? 1 : p1 < p2 ? -1 : 0;
+      });
     }
     return list;
   }
+
+  console.log('list', list);
   return (
     <div className="border-color-gray border-t py-6">
       <div className="container lg:grid lg:grid-cols-2 lg:gap-6">
