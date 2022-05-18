@@ -13,6 +13,7 @@ function HeroIndex({ data, locale }) {
     location,
     imageHero,
     isFestival,
+    newsDate,
     dateEvento,
     paymentSettings,
     slideshowHero,
@@ -63,6 +64,14 @@ function HeroIndex({ data, locale }) {
               {descriptionHero}
             </div>
           )}
+          {newsDate &&
+            <div className="px-4 md:pl-10 lg:px-20 lg:pt-2 hidden items-center gap-x-2 md:flex">
+              <CalendarIcon aria-hidden="true" className="h-4 w-4" />
+              <span className="font-light normal-case md:pr-1">
+                {formatDate(newsDate, locale)}
+              </span>
+            </div>
+          }
           {paymentSettings != null && (
             <div className="pt-4 md:pl-6 lg:pl-16">
               <BookButton

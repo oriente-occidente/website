@@ -41,7 +41,7 @@ function Page({ data, locale }) {
         : rest[camelCase(indexType)]
       : [];
   const group = indexType ? indexType : null;
-
+  console.log('pageInfo', pageInfo.group)
   const {
     layoutHero,
     titleHero,
@@ -51,10 +51,13 @@ function Page({ data, locale }) {
     isFestival,
     authors,
     dates: dateEvento,
+    startDate,
     location,
     paymentSettings,
   } = payload;
 
+  const newsDate = pageInfo.group === "news-index" ? startDate : null
+  console.log('newsDate',newsDate)
   const heroData = {
     layoutHero,
     titleHero,
@@ -64,6 +67,7 @@ function Page({ data, locale }) {
     location,
     slideshowHero,
     isFestival,
+    newsDate,
     dateEvento,
     paymentSettings,
     pageId: pageInfo.id,
