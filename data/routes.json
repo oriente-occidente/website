@@ -5208,6 +5208,53 @@
     ]
   },
   {
+    "id": "7228695",
+    "slugs": {
+      "en": [
+        "people",
+        "projects",
+        "nobody-nobody-nobody-it-s-ok-not-to-be-ok-collective-experience"
+      ],
+      "it": [
+        "people",
+        "progetti",
+        "nobody-nobody-nobody-it-s-ok-not-to-be-ok-collective-experience"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "project",
+    "group": "projects",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "people",
+          "projects",
+          "nobody-nobody-nobody-it-s-ok-not-to-be-ok-collective-experience"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "people",
+          "progetti",
+          "nobody-nobody-nobody-it-s-ok-not-to-be-ok-collective-experience"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "people/projects/nobody-nobody-nobody-it-s-ok-not-to-be-ok-collective-experience"
+      },
+      {
+        "locale": "it",
+        "url": "people/progetti/nobody-nobody-nobody-it-s-ok-not-to-be-ok-collective-experience"
+      }
+    ]
+  },
+  {
     "id": "7228685",
     "slugs": {
       "en": [
@@ -5674,53 +5721,6 @@
       {
         "locale": "it",
         "url": "people/progetti/dimmi-cosa-vuoi-vedere"
-      }
-    ]
-  },
-  {
-    "id": "7228695",
-    "slugs": {
-      "en": [
-        "people",
-        "projects",
-        "nobody-nobody-nobody-it-s-ok-not-to-be-ok-collective-experience"
-      ],
-      "it": [
-        "people",
-        "progetti",
-        "nobody-nobody-nobody-it-s-ok-not-to-be-ok-collective-experience"
-      ]
-    },
-    "isIndex": false,
-    "indexType": "",
-    "__typename": "project",
-    "group": "projects",
-    "paths": [
-      {
-        "locale": "en",
-        "slugs": [
-          "people",
-          "projects",
-          "nobody-nobody-nobody-it-s-ok-not-to-be-ok-collective-experience"
-        ]
-      },
-      {
-        "locale": "it",
-        "slugs": [
-          "people",
-          "progetti",
-          "nobody-nobody-nobody-it-s-ok-not-to-be-ok-collective-experience"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "en",
-        "url": "people/projects/nobody-nobody-nobody-it-s-ok-not-to-be-ok-collective-experience"
-      },
-      {
-        "locale": "it",
-        "url": "people/progetti/nobody-nobody-nobody-it-s-ok-not-to-be-ok-collective-experience"
       }
     ]
   },
