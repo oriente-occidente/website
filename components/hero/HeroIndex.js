@@ -32,7 +32,8 @@ function HeroIndex({ data, locale }) {
       <header className="relative overflow-hidden md:grid md:grid-cols-4 md:gap-4 xl:container xl:mx-auto">
         <h1 className="title--big z-20 py-4 px-4 xl:pl-6">{titleHero}</h1>
         <div className="md:border-color-gray relative md:col-span-3 md:col-start-2 md:border-l">
-          <div className=" pl-4 md:pl-0 xl:w-[calc(100%+3rem)] 2xl:w-[calc((100vw-((100vw-1380px)/2))-333px-1rem)]">
+          {/* <div className=" pl-4 md:pl-0 xl:w-[calc(100%+3rem)] 2xl:w-[calc((100vw-((100vw-1380px)/2))-333px-1rem)]"> */}
+          <div className=" pl-4 md:pl-0">
 
             {slideshowHero != "" ? (
               <Gallery slides={slideshowHero} />

@@ -83,7 +83,8 @@ function HeroDetail({ data }) {
           )}
         </div>
 
-        <div className="mt-6 pl-4 md:mt-8 md:pl-0 xl:w-[calc(100%+3rem)] 2xl:w-[calc((100vw-((100vw-1380px)/2))-333px-1rem)]">
+        {/* <div className="mt-6 pl-4 md:mt-8 md:pl-0 xl:w-[calc(100%+3rem)] 2xl:w-[calc((100vw-((100vw-1380px)/2))-333px-1rem)]"> */}
+        <div className="mt-6 pl-4 md:mt-8 md:pl-0 ">
           {slideshowHero != "" ? (
             <Gallery slides={slideshowHero} />
           ) : imageHero ? (
