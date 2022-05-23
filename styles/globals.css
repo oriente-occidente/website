@@ -80,11 +80,13 @@
   }
 }
 
+.swiper .swiper-pagination .swiper-pagination-bullet,
 .swiper-gallery .swiper-pagination .swiper-pagination-bullet,
 .swiper-gallery-standard .swiper-pagination .swiper-pagination-bullet {
   @apply mx-2 h-3 w-3 bg-white md:hidden;
 }
 
+.swiper .swiper-button-prev,
 .swiper-gallery .swiper-button-prev,
 .swiper-gallery-standard .swiper-button-prev {
   @apply top-auto bottom-12 left-16 hidden h-14 w-14 before:absolute before:inset-0
@@ -93,6 +95,7 @@
     2xl:bottom-24;
 }
 
+.swiper .swiper-button-next,
 .swiper-gallery .swiper-button-next,
 .swiper-gallery-standard .swiper-button-next {
   @apply top-auto bottom-12 left-32 hidden h-14 w-14 before:absolute before:inset-0
@@ -113,6 +116,7 @@
   @apply opacity-100;
 } */
 
+.swiper.swiper-button-prev,
 .swiper-gallery .swiper-button-prev {
   @apply left-[-33%] bottom-0 before:border-black
     after:bg-arrow-left-black xl:left-[calc(-33%+1.5rem)]
@@ -120,6 +124,7 @@
     2xl:-left-[333px];
 }
 
+.swiper.swiper-button-next,
 .swiper-gallery .swiper-button-next {
   @apply bottom-0 left-[calc(-33%+3.5rem)]
     before:border-black after:bg-arrow-right-black xl:bottom-8
