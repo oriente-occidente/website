@@ -12,7 +12,6 @@ function getDatesOfYear(datesOfYear, y) {
 function Filters({ locale, list = null, datesOfYear }) {
   const { state, dispatch } = useAppContext();
   const filters = state.filters;
-  console.log('FILTEERS', filters);
 
   const years = datesOfYear
     .map((fd) => fd.year)
@@ -95,7 +94,7 @@ function Filters({ locale, list = null, datesOfYear }) {
                 </div>
                 <select
                   onChange={(e) => handleChange(e)}
-                  defaultValue={currentYear}
+                  defaultValue={year ? year : currentYear}
                 >
                   {years.map((year) => (
                     <option key={year} value={year}>
