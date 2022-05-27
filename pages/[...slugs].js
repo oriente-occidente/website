@@ -10,6 +10,7 @@ import HeroEmpty from 'components/hero/HeroEmpty';
 import HeroIndex from 'components/hero/HeroIndex';
 import GalleryPreview from 'components/galleries/GalleryPreview';
 import ResultsGrid from 'components/ResultsGrid';
+import ResultsGridWorkshop from 'components/ResultsGridWorkshop';
 import Filters from 'components/Filters';
 
 // import Modal from 'components/Modal';
@@ -40,8 +41,9 @@ function Page({ data, locale }) {
         ? pluk(rest, 'festivalEvents, otherEvents, courses, workshops')
         : rest[camelCase(indexType)]
       : [];
+  const isWorkshops = indexType === 'workshops';
   const group = indexType ? indexType : null;
-  console.log('pageInfo', pageInfo.group)
+  console.log('pageInfo', pageInfo.group);
   const {
     layoutHero,
     titleHero,
@@ -56,8 +58,8 @@ function Page({ data, locale }) {
     paymentSettings,
   } = payload;
 
-  const newsDate = pageInfo.group === "news-index" ? startDate : null
-  console.log('newsDate',newsDate)
+  const newsDate = pageInfo.group === 'news-index' ? startDate : null;
+  console.log('newsDate', newsDate);
   const heroData = {
     layoutHero,
     titleHero,
@@ -108,8 +110,11 @@ function Page({ data, locale }) {
         {payload?.otherSections && payload.otherSections.length > 0 && (
           <OtherSections locale={locale} data={payload.otherSections} />
         )}
-        {isIndex && !showFilters && (
+        {isIndex && !showFilters && !isWorkshops && (
           <ResultsGrid list={list} group={group} locale={locale} />
+        )}
+        {isIndex && !showFilters && isWorkshops && (
+          <ResultsGridWorkshop list={list} group={group} locale={locale} />
         )}
         {isIndex && showFilters && (
           <Filters
