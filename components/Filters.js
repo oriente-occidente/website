@@ -59,7 +59,13 @@ function Filters({ locale, list = null, datesOfYear }) {
     if (typeFilter === 'all') {
       const allResults =
         Object.keys(results).reduce((all, key) => {
-          return [...all, ...results[key]];
+          console.log('all', all);
+          console.log('key', key);
+          console.log('results[key]', results[key]);
+          if (results[key]) {
+            all = [...all, ...results[key]];
+          }
+          return all;
         }, []) || [];
       //TODO SORT BY DATE
       return enhanceEvents(allResults);
