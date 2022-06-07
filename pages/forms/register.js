@@ -34,7 +34,6 @@ function Page({ data, locale, thankyouMessage }) {
     if (eventId) {
       doQueryItem(locale, eventId)
         .then((payload) => {
-          // console.log('event data:', payload);
           setPayload(payload);
         })
         .catch((e) => console.log(e));
@@ -44,7 +43,9 @@ function Page({ data, locale, thankyouMessage }) {
   // const action = `${locale === 'en' ? '/en' : ''}/forms/thankyou?id=${eventId}${
   //   paymentId ? '&cp=' + paymentId : ''
   // }`;
-  const action = `thankyou?id=${eventId}${paymentId ? '&cp=' + paymentId : ''}`;
+  const action = `/thankyou?id=${eventId}${
+    paymentId ? '&cp=' + paymentId : ''
+  }`;
   const choiche = paymentId
     ? payload.paymentSettings?.find((p) => p.id === paymentId)
     : null;
@@ -89,7 +90,7 @@ function Page({ data, locale, thankyouMessage }) {
       .then((response) => {
         if (response) console.log('response', response);
         // console.log('redirecting to', action);
-        // router.push(action);
+        router.push(action);
       })
       .catch((error) => alert(error));
   };

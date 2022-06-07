@@ -4584,6 +4584,53 @@
     ]
   },
   {
+    "id": "7228719",
+    "slugs": {
+      "en": [
+        "studio",
+        "workshop",
+        "bus-stop"
+      ],
+      "it": [
+        "studio",
+        "workshop",
+        "bus-stop"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "workshop",
+    "group": "workshops",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "studio",
+          "workshop",
+          "bus-stop"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "studio",
+          "workshop",
+          "bus-stop"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "studio/workshop/bus-stop"
+      },
+      {
+        "locale": "it",
+        "url": "studio/workshop/bus-stop"
+      }
+    ]
+  },
+  {
     "id": "7228716",
     "slugs": {
       "en": [
@@ -4721,53 +4768,6 @@
       {
         "locale": "it",
         "url": "studio/workshop/la-veronal-working-tools"
-      }
-    ]
-  },
-  {
-    "id": "7228719",
-    "slugs": {
-      "en": [
-        "studio",
-        "workshop",
-        "bus-stop"
-      ],
-      "it": [
-        "studio",
-        "workshop",
-        "bus-stop"
-      ]
-    },
-    "isIndex": false,
-    "indexType": "",
-    "__typename": "workshop",
-    "group": "workshops",
-    "paths": [
-      {
-        "locale": "en",
-        "slugs": [
-          "studio",
-          "workshop",
-          "bus-stop"
-        ]
-      },
-      {
-        "locale": "it",
-        "slugs": [
-          "studio",
-          "workshop",
-          "bus-stop"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "en",
-        "url": "studio/workshop/bus-stop"
-      },
-      {
-        "locale": "it",
-        "url": "studio/workshop/bus-stop"
       }
     ]
   },
