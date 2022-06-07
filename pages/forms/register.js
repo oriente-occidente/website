@@ -88,7 +88,7 @@ function Page({ data, locale, thankyouMessage }) {
       .then((response) => {
         if (response) console.log('response', response);
         // console.log('redirecting to', action);
-        router.push('/forms/' + action);
+        router.push(`${locale === 'en' ? '/en' : ''}/forms/${action}`);
       })
       .catch((error) => alert(error));
   };
