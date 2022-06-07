@@ -1,11 +1,11 @@
-import { useRouter } from "next/router";
-import { useState, useEffect } from "react";
+import { useRouter } from 'next/router';
+import { useState, useEffect } from 'react';
 
-import * as q from "lib/queries";
-import fetchData from "lib/api/dato";
-import { doQueryItem, doQueryById } from "lib/api";
-import Layout from "components/Layout";
-import Seo from "components/Seo";
+import * as q from 'lib/queries';
+import fetchData from 'lib/api/dato';
+import { doQueryItem, doQueryById } from 'lib/api';
+import Layout from 'components/Layout';
+import Seo from 'components/Seo';
 
 function Page({ data, locale, thankyouMessage }) {
   const { site, menu, footer } = data;
@@ -16,15 +16,15 @@ function Page({ data, locale, thankyouMessage }) {
     if (id && cp) {
       const data = await doQueryItem(locale, id);
       const choosen = data?.paymentSettings?.find((p) => p.id === cp);
-      // console.log('choiche data:', choosen);
+      console.log('choiche data:', choosen);
       setChoiche(choosen);
     }
   }
   useEffect(() => {
     if (query) {
-      // console.log('QUERY:', query);
+      console.log('QUERY:', query);
       const url = window.location;
-      if (!window.location.search.includes("success=true")) {
+      if (!window.location.search.includes('success=true')) {
         setTimeout(() => {
           window.location.href = `${url}&success=true`;
         }, 1000);
@@ -46,7 +46,7 @@ function Page({ data, locale, thankyouMessage }) {
           <div className="bg-gray-50 p-4">
             <a href={choiche?.paymentLink} target="_blank" rel="noreferrer">
               {`${choiche?.description} ${
-                choiche?.amount ? "- " + choiche.amount + "€" : ""
+                choiche?.amount ? '- ' + choiche.amount + '€' : ''
               }`}
             </a>
           </div>

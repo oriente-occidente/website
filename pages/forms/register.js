@@ -43,9 +43,7 @@ function Page({ data, locale, thankyouMessage }) {
   // const action = `${locale === 'en' ? '/en' : ''}/forms/thankyou?id=${eventId}${
   //   paymentId ? '&cp=' + paymentId : ''
   // }`;
-  const action = `/thankyou?id=${eventId}${
-    paymentId ? '&cp=' + paymentId : ''
-  }`;
+  const action = `thankyou?id=${eventId}${paymentId ? '&cp=' + paymentId : ''}`;
   const choiche = paymentId
     ? payload.paymentSettings?.find((p) => p.id === paymentId)
     : null;
@@ -90,7 +88,7 @@ function Page({ data, locale, thankyouMessage }) {
       .then((response) => {
         if (response) console.log('response', response);
         // console.log('redirecting to', action);
-        router.push(action);
+        router.push('/forms/' + action);
       })
       .catch((error) => alert(error));
   };
