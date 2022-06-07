@@ -19,12 +19,12 @@ function generateNexiPaymentMAc(codTrans, importo) {
   // Calcolo MAC
   const stringMac = `codTrans=${codTrans}divisa=EURimporto=${importo}${secretKey}`;
   const mac = sha1(stringMac);
-  console.log('mac', mac);
+  // console.log('mac', mac);
   return mac;
 }
 
 export default function handler(req, res) {
-  console.log(req.method);
+  // console.log(req.method);
   const { code, amount } = req.body;
   const codTrans = `${code}_${Date.now()}`;
   const importo = Number.parseInt(Number.parseFloat(amount) * 100);

@@ -1,17 +1,17 @@
-import * as q from "lib/queries";
-import fetchData from "lib/api/dato";
-import { doQueryById } from "lib/api";
-import Layout from "components/Layout";
-import Seo from "components/Seo";
-import HeroDetail from "components/hero/HeroDetail";
-import HeroEmpty from "components/hero/HeroEmpty";
-import HeroIndex from "components/hero/HeroIndex";
-import GalleryPreview from "components/galleries/GalleryPreview";
-import MainContent from "components/contents/MainContent";
-import SectionsParagraphs from "components/contents/SectionsParagraphs";
-import OtherSections from "components/contents/OtherSections";
-import HeaderLanding from "components/HeaderLanding";
-import FooterLanding from "components/FooterLanding";
+import * as q from 'lib/queries';
+import fetchData from 'lib/api/dato';
+import { doQueryById } from 'lib/api';
+import Layout from 'components/Layout';
+import Seo from 'components/Seo';
+import HeroDetail from 'components/hero/HeroDetail';
+import HeroEmpty from 'components/hero/HeroEmpty';
+import HeroIndex from 'components/hero/HeroIndex';
+import GalleryPreview from 'components/galleries/GalleryPreview';
+import MainContent from 'components/contents/MainContent';
+import SectionsParagraphs from 'components/contents/SectionsParagraphs';
+import OtherSections from 'components/contents/OtherSections';
+import HeaderLanding from 'components/HeaderLanding';
+import FooterLanding from 'components/FooterLanding';
 function LandingPage({ data, payload, locale }) {
   const { site = null, footer } = data;
   const {
@@ -35,10 +35,9 @@ function LandingPage({ data, payload, locale }) {
     <Layout locale={locale}>
       {site && <Seo tags={site?.faviconMetaTags} />}
       <HeaderLanding locale={locale} alts={alts} />
-      {console.log("data.alts:", alts)}
-      {heroData.layoutHero == "detail" && imageHero ? (
+      {heroData.layoutHero == 'detail' && imageHero ? (
         <HeroDetail data={heroData} />
-      ) : heroData.layoutHero == "index" && imageHero ? (
+      ) : heroData.layoutHero == 'index' && imageHero ? (
         <HeroIndex data={heroData} />
       ) : (
         <HeroEmpty data={heroData} />
@@ -69,14 +68,14 @@ function LandingPage({ data, payload, locale }) {
 
 export async function getStaticPaths() {
   const items = await fetchData(q.landings);
-  console.log("ITEMS", items);
+  // console.log('ITEMS', items);
   const paths = items.landings.reduce((both, landing) => {
     const slugs = landing.slugs.map((item) => {
       return { params: { slug: item.slug }, locale: item.locale };
     });
     return [...both, ...slugs];
   }, []);
-  console.log("PATHS", paths);
+  // console.log('PATHS', paths);
   return { paths, fallback: false };
 }
 

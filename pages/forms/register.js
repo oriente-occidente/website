@@ -34,7 +34,7 @@ function Page({ data, locale, thankyouMessage }) {
     if (eventId) {
       doQueryItem(locale, eventId)
         .then((payload) => {
-          console.log('event data:', payload);
+          // console.log('event data:', payload);
           setPayload(payload);
         })
         .catch((e) => console.log(e));
@@ -76,8 +76,8 @@ function Page({ data, locale, thankyouMessage }) {
   };
   const handleSubmit = (event) => {
     event.preventDefault();
-    console.log('SUBMIT', event.target);
-    console.log('formData', formData);
+    // console.log('SUBMIT', event.target);
+    // console.log('formData', formData);
     fetch('/', {
       method: 'POST',
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
@@ -88,7 +88,7 @@ function Page({ data, locale, thankyouMessage }) {
     })
       .then((response) => {
         if (response) console.log('response', response);
-        console.log('redirecting to', action);
+        // console.log('redirecting to', action);
         // router.push(action);
       })
       .catch((error) => alert(error));
@@ -283,8 +283,6 @@ function Page({ data, locale, thankyouMessage }) {
 }
 
 export async function getStaticProps({ params, locale }) {
-
-  
   const data = await doQueryById(locale);
   const ty = await fetchData(q.extra_content, { locale });
   const thankyouMessage = ty.extraContent;

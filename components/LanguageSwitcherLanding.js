@@ -12,9 +12,6 @@ function LanguageSwitcherLanding({ locale, alts }) {
         locales.map((l, i) => {
           const isActive = locale === l;
           const link = alts?.find((alt) => alt.locale === l)?.value ?? '';
-          {
-            console.log('alts:', alts);
-          }
           return (
             <Fragment key={l}>
               {/* {i > 0 && (

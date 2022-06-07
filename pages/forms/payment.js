@@ -20,7 +20,7 @@ function Page({ data, locale }) {
         body: JSON.stringify({ code: 123, amount: 15 }),
       }).then((r) => r.json());
 
-      console.log('paymentInfo', paymentInfo);
+      // console.log('paymentInfo', paymentInfo);
       setNexi(paymentInfo);
     }
     getData();
@@ -54,7 +54,7 @@ function Page({ data, locale }) {
 }
 
 export async function getStaticProps({ params, locale }) {
-  console.log('params', params);
+  // console.log('params', params);
   // const { id: eventId } = params;
   // const payload = doQueryItem(locale, eventId);
 
