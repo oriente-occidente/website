@@ -3,6 +3,15 @@ const { SiteClient } = require('datocms-client');
 const _ = require('lodash');
 
 const ENV = process.env.NEXT_PUBLIC_DATO_ENV ?? '';
+console.log('ENV', ENV);
+console.log('ENV', ENV);
+console.log('ENV', ENV);
+console.log('ENV', ENV);
+console.log('ENV', ENV);
+console.log('ENV', ENV);
+console.log('ENV', ENV);
+console.log('ENV', ENV);
+console.log('ENV', ENV);
 const DATO_API_KEY = process.env.NEXT_PUBLIC_DATO_API_KEY;
 const options = ENV ? { environment: ENV } : null;
 const client = new SiteClient(DATO_API_KEY, options);
@@ -21,7 +30,7 @@ async function getItemTypesByApiKey() {
 //GRAPHQL
 const doQuery = async (q, v) => {
   const url = `https://graphql.datocms.com${ENV ? '/environments/' + ENV : ''}`;
-  // console.log('doquery', DATO_API_KEY);
+  console.log('doquery', url);
   try {
     const response = await axios({
       url,

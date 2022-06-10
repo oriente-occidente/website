@@ -1,7 +1,3 @@
-const nodeEnv = process.env.NODE_ENV || 'develop';
-if (nodeEnv === 'develop') {
-  require('dotenv').config({ path: '.env.local' });
-}
 const fs = require('fs');
 const _ = require('lodash');
 const { doQuery, allRecords } = require('./dato');

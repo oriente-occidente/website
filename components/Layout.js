@@ -13,6 +13,7 @@ function Layout({
   hideNewsletter = false,
   landing = false,
 }) {
+  console.log('menu', menu);
   return (
     <>
       <div data-datocms-noindex>
@@ -24,6 +25,7 @@ function Layout({
         </a>
       </div>
       {menu && <Header locale={locale} data={menu} alts={alts} />}
+
       <main className="min-h-[50vh] pt-[70px] md:pt-[80px] lg:pt-[110px]">
         {children}
       </main>

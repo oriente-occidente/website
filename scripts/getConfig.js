@@ -1,6 +1,6 @@
-const fs = require("fs");
+const fs = require('fs');
 
-const { doQuery } = require("./dato");
+const { doQuery } = require('./dato');
 
 const getConfig = async () => {
   const q = `
@@ -80,14 +80,12 @@ const getConfig = async () => {
   return doQuery(q);
 };
 
-const outPath = "data/config.json";
 const updateConfig = async () => {
   const data = await getConfig();
-  // console.log(data);
   if (data) {
     const json = JSON.stringify(data, null, 2);
-    fs.writeFileSync(outPath, json);
-    // console.log('Config Updated');
+    fs.writeFileSync('data/config.json', json);
+    console.log('Config Updated');
   }
 };
 
