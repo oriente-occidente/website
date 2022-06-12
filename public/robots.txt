@@ -3,8 +3,8 @@ User-agent: *
 Allow: /
 
 # Host
-Host: https://orienteoccidente.netlify.app
+Host: https://orienteoccidente.it
 
 # Sitemaps
-Sitemap: https://orienteoccidente.netlify.app/sitemap.xml
-Sitemap: https://orienteoccidente.netlify.app/sitemap-0.xml
+Sitemap: https://orienteoccidente.it/sitemap.xml
+Sitemap: https://orienteoccidente.it/sitemap-0.xml

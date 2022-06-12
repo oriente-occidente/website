@@ -1,6 +1,6 @@
 import dynamic from 'next/dynamic';
 
-import { doQuery /*, getPaths */, queryRoutesByParams } from 'lib/api';
+import { doQuery, /*getPaths,*/ queryRoutesByParams } from 'lib/api';
 import Layout from 'components/Layout';
 import Seo from 'components/Seo';
 import { camelCase, getBreadcrumbs } from 'lib/utils';
@@ -151,7 +151,7 @@ function Page({ data, locale }) {
   );
 }
 export async function getStaticPaths() {
-  const paths = []; //getPaths();
+  const paths = []; // getPaths();
   return { paths, fallback: 'blocking' };
 }
 
@@ -159,6 +159,8 @@ export async function getStaticProps({ params, locale, preview = false }) {
   // console.log('PARAMS', params);
   // const routes = queryRoutesByParams(params, locale, preview);
   const data = await doQuery(locale, params, preview);
+
+  // console.log('DATA', JSON.stringify(result.data, null, 2));
   return {
     props: { data, locale, params },
   };

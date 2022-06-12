@@ -1,144 +1,47 @@
 [
   {
     "routes": [
-      "festival",
-      "programma"
+      "news"
     ],
     "link": {
       "__typename": "PageRecord",
-      "id": "7228711",
-      "slug": "programma",
+      "id": "23990844",
+      "slug": "news",
       "slugs": [
         {
           "locale": "en",
-          "slug": "program"
+          "slug": "news"
         },
         {
           "locale": "it",
-          "slug": "programma"
+          "slug": "news"
         }
       ],
-      "indexType": "festival-events",
+      "indexType": "news-index",
       "isIndex": true
     },
     "lang": "it"
   },
   {
     "routes": [
-      "festival",
-      "box-office"
+      "people",
+      "reti"
     ],
     "link": {
       "__typename": "PageRecord",
-      "id": "7228700",
-      "slug": "box-office",
+      "id": "23990836",
+      "slug": "reti",
       "slugs": [
         {
           "locale": "en",
-          "slug": "box-office"
+          "slug": "networks"
         },
         {
           "locale": "it",
-          "slug": "box-office"
+          "slug": "reti"
         }
       ],
-      "indexType": "",
-      "isIndex": false
-    },
-    "lang": "it"
-  },
-  {
-    "routes": [
-      "studio",
-      "artisti-associati"
-    ],
-    "link": {
-      "__typename": "PageRecord",
-      "id": "7228708",
-      "slug": "artisti-associati",
-      "slugs": [
-        {
-          "locale": "en",
-          "slug": "associated-artists"
-        },
-        {
-          "locale": "it",
-          "slug": "artisti-associati"
-        }
-      ],
-      "indexType": "associated-artists",
-      "isIndex": true
-    },
-    "lang": "it"
-  },
-  {
-    "routes": [
-      "studio",
-      "residenze-artistiche"
-    ],
-    "link": {
-      "__typename": "PageRecord",
-      "id": "7228702",
-      "slug": "residenze-artistiche",
-      "slugs": [
-        {
-          "locale": "en",
-          "slug": "artistic-residencies"
-        },
-        {
-          "locale": "it",
-          "slug": "residenze-artistiche"
-        }
-      ],
-      "indexType": "artistic-residences",
-      "isIndex": true
-    },
-    "lang": "it"
-  },
-  {
-    "routes": [
-      "studio",
-      "linguaggi"
-    ],
-    "link": {
-      "__typename": "PageRecord",
-      "id": "13710151",
-      "slug": "linguaggi",
-      "slugs": [
-        {
-          "locale": "en",
-          "slug": "languages"
-        },
-        {
-          "locale": "it",
-          "slug": "linguaggi"
-        }
-      ],
-      "indexType": "languages",
-      "isIndex": true
-    },
-    "lang": "it"
-  },
-  {
-    "routes": [
-      "studio",
-      "workshop"
-    ],
-    "link": {
-      "__typename": "PageRecord",
-      "id": "7228705",
-      "slug": "workshop",
-      "slugs": [
-        {
-          "locale": "en",
-          "slug": "workshops"
-        },
-        {
-          "locale": "it",
-          "slug": "workshop"
-        }
-      ],
-      "indexType": "workshops",
+      "indexType": "networks",
       "isIndex": true
     },
     "lang": "it"
@@ -150,7 +53,7 @@
     ],
     "link": {
       "__typename": "PageRecord",
-      "id": "7228714",
+      "id": "23990854",
       "slug": "eventi",
       "slugs": [
         {
@@ -174,7 +77,7 @@
     ],
     "link": {
       "__typename": "PageRecord",
-      "id": "7228715",
+      "id": "23990855",
       "slug": "progetti",
       "slugs": [
         {
@@ -193,25 +96,169 @@
   },
   {
     "routes": [
-      "people",
-      "reti"
+      "festival",
+      "box-office"
     ],
     "link": {
       "__typename": "PageRecord",
-      "id": "9913479",
-      "slug": "reti",
+      "id": "23990841",
+      "slug": "box-office",
       "slugs": [
         {
           "locale": "en",
-          "slug": "networks"
+          "slug": "box-office"
         },
         {
           "locale": "it",
-          "slug": "reti"
+          "slug": "box-office"
         }
       ],
-      "indexType": "networks",
+      "indexType": "",
+      "isIndex": false
+    },
+    "lang": "it"
+  },
+  {
+    "routes": [
+      "festival",
+      "workshop"
+    ],
+    "link": {
+      "__typename": "PageRecord",
+      "id": "23990846",
+      "slug": "workshop",
+      "slugs": [
+        {
+          "locale": "en",
+          "slug": "workshops"
+        },
+        {
+          "locale": "it",
+          "slug": "workshop"
+        }
+      ],
+      "indexType": "workshops",
       "isIndex": true
+    },
+    "lang": "it"
+  },
+  {
+    "routes": [
+      "festival",
+      "programma"
+    ],
+    "link": {
+      "__typename": "PageRecord",
+      "id": "23990851",
+      "slug": "programma",
+      "slugs": [
+        {
+          "locale": "en",
+          "slug": "program"
+        },
+        {
+          "locale": "it",
+          "slug": "programma"
+        }
+      ],
+      "indexType": "festival-events",
+      "isIndex": true
+    },
+    "lang": "it"
+  },
+  {
+    "routes": [
+      "studio",
+      "artisti-associati"
+    ],
+    "link": {
+      "__typename": "PageRecord",
+      "id": "23990849",
+      "slug": "artisti-associati",
+      "slugs": [
+        {
+          "locale": "en",
+          "slug": "associated-artists"
+        },
+        {
+          "locale": "it",
+          "slug": "artisti-associati"
+        }
+      ],
+      "indexType": "associated-artists",
+      "isIndex": true
+    },
+    "lang": "it"
+  },
+  {
+    "routes": [
+      "studio",
+      "residenze-artistiche"
+    ],
+    "link": {
+      "__typename": "PageRecord",
+      "id": "23990843",
+      "slug": "residenze-artistiche",
+      "slugs": [
+        {
+          "locale": "en",
+          "slug": "artistic-residencies"
+        },
+        {
+          "locale": "it",
+          "slug": "residenze-artistiche"
+        }
+      ],
+      "indexType": "artistic-residences",
+      "isIndex": true
+    },
+    "lang": "it"
+  },
+  {
+    "routes": [
+      "studio",
+      "linguaggi"
+    ],
+    "link": {
+      "__typename": "PageRecord",
+      "id": "23990837",
+      "slug": "linguaggi",
+      "slugs": [
+        {
+          "locale": "en",
+          "slug": "languages"
+        },
+        {
+          "locale": "it",
+          "slug": "linguaggi"
+        }
+      ],
+      "indexType": "languages",
+      "isIndex": true
+    },
+    "lang": "it"
+  },
+  {
+    "routes": [
+      "info",
+      "sicurezza-covid-19"
+    ],
+    "link": {
+      "__typename": "PageRecord",
+      "id": "23990850",
+      "slug": "sicurezza-covid-19",
+      "slugs": [
+        {
+          "locale": "en",
+          "slug": "safety-covid-19"
+        },
+        {
+          "locale": "it",
+          "slug": "sicurezza-covid-19"
+        }
+      ],
+      "indexType": "",
+      "isIndex": false
     },
     "lang": "it"
   },
@@ -222,7 +269,7 @@
     ],
     "link": {
       "__typename": "PageRecord",
-      "id": "7228699",
+      "id": "23990840",
       "slug": "chi-siamo",
       "slugs": [
         {
@@ -246,7 +293,7 @@
     ],
     "link": {
       "__typename": "PageRecord",
-      "id": "7228706",
+      "id": "23990847",
       "slug": "staff",
       "slugs": [
         {
@@ -270,7 +317,7 @@
     ],
     "link": {
       "__typename": "PageRecord",
-      "id": "7228712",
+      "id": "23990852",
       "slug": "accessibilita",
       "slugs": [
         {
@@ -294,7 +341,7 @@
     ],
     "link": {
       "__typename": "PageRecord",
-      "id": "7228701",
+      "id": "23990842",
       "slug": "sostenibilita",
       "slugs": [
         {
@@ -318,7 +365,7 @@
     ],
     "link": {
       "__typename": "PageRecord",
-      "id": "7228707",
+      "id": "23990848",
       "slug": "collabora-con-noi",
       "slugs": [
         {
@@ -342,7 +389,7 @@
     ],
     "link": {
       "__typename": "PageRecord",
-      "id": "7228704",
+      "id": "23990845",
       "slug": "report",
       "slugs": [
         {
@@ -366,7 +413,7 @@
     ],
     "link": {
       "__typename": "PageRecord",
-      "id": "7228698",
+      "id": "23990838",
       "slug": "main-partner",
       "slugs": [
         {
@@ -390,7 +437,7 @@
     ],
     "link": {
       "__typename": "PageRecord",
-      "id": "7228697",
+      "id": "23990839",
       "slug": "trasparenza",
       "slugs": [
         {
@@ -409,58 +456,11 @@
   },
   {
     "routes": [
-      "info",
-      "sicurezza-covid-19"
-    ],
-    "link": {
-      "__typename": "PageRecord",
-      "id": "7228710",
-      "slug": "sicurezza-covid-19",
-      "slugs": [
-        {
-          "locale": "en",
-          "slug": "safety-covid-19"
-        },
-        {
-          "locale": "it",
-          "slug": "sicurezza-covid-19"
-        }
-      ],
-      "indexType": "",
-      "isIndex": false
-    },
-    "lang": "it"
-  },
-  {
-    "routes": [
-      "news"
-    ],
-    "link": {
-      "__typename": "PageRecord",
-      "id": "7228703",
-      "slug": "news",
-      "slugs": [
-        {
-          "locale": "en",
-          "slug": "news"
-        },
-        {
-          "locale": "it",
-          "slug": "news"
-        }
-      ],
-      "indexType": "news-index",
-      "isIndex": true
-    },
-    "lang": "it"
-  },
-  {
-    "routes": [
       "sostienici"
     ],
     "link": {
       "__typename": "PageRecord",
-      "id": "7228709",
+      "id": "23990835",
       "slug": "sostienici",
       "slugs": [
         {
@@ -479,144 +479,47 @@
   },
   {
     "routes": [
-      "festival",
-      "program"
+      "news"
     ],
     "link": {
       "__typename": "PageRecord",
-      "id": "7228711",
-      "slug": "programma",
+      "id": "23990844",
+      "slug": "news",
       "slugs": [
         {
           "locale": "en",
-          "slug": "program"
+          "slug": "news"
         },
         {
           "locale": "it",
-          "slug": "programma"
+          "slug": "news"
         }
       ],
-      "indexType": "festival-events",
+      "indexType": "news-index",
       "isIndex": true
     },
     "lang": "en"
   },
   {
     "routes": [
-      "festival",
-      "box-office"
+      "people",
+      "networks"
     ],
     "link": {
       "__typename": "PageRecord",
-      "id": "7228700",
-      "slug": "box-office",
+      "id": "23990836",
+      "slug": "reti",
       "slugs": [
         {
           "locale": "en",
-          "slug": "box-office"
+          "slug": "networks"
         },
         {
           "locale": "it",
-          "slug": "box-office"
+          "slug": "reti"
         }
       ],
-      "indexType": "",
-      "isIndex": false
-    },
-    "lang": "en"
-  },
-  {
-    "routes": [
-      "studio",
-      "associated-artists"
-    ],
-    "link": {
-      "__typename": "PageRecord",
-      "id": "7228708",
-      "slug": "artisti-associati",
-      "slugs": [
-        {
-          "locale": "en",
-          "slug": "associated-artists"
-        },
-        {
-          "locale": "it",
-          "slug": "artisti-associati"
-        }
-      ],
-      "indexType": "associated-artists",
-      "isIndex": true
-    },
-    "lang": "en"
-  },
-  {
-    "routes": [
-      "studio",
-      "artistic-residences"
-    ],
-    "link": {
-      "__typename": "PageRecord",
-      "id": "7228702",
-      "slug": "residenze-artistiche",
-      "slugs": [
-        {
-          "locale": "en",
-          "slug": "artistic-residencies"
-        },
-        {
-          "locale": "it",
-          "slug": "residenze-artistiche"
-        }
-      ],
-      "indexType": "artistic-residences",
-      "isIndex": true
-    },
-    "lang": "en"
-  },
-  {
-    "routes": [
-      "studio",
-      "languages"
-    ],
-    "link": {
-      "__typename": "PageRecord",
-      "id": "13710151",
-      "slug": "linguaggi",
-      "slugs": [
-        {
-          "locale": "en",
-          "slug": "languages"
-        },
-        {
-          "locale": "it",
-          "slug": "linguaggi"
-        }
-      ],
-      "indexType": "languages",
-      "isIndex": true
-    },
-    "lang": "en"
-  },
-  {
-    "routes": [
-      "studio",
-      "workshop"
-    ],
-    "link": {
-      "__typename": "PageRecord",
-      "id": "7228705",
-      "slug": "workshop",
-      "slugs": [
-        {
-          "locale": "en",
-          "slug": "workshops"
-        },
-        {
-          "locale": "it",
-          "slug": "workshop"
-        }
-      ],
-      "indexType": "workshops",
+      "indexType": "networks",
       "isIndex": true
     },
     "lang": "en"
@@ -628,7 +531,7 @@
     ],
     "link": {
       "__typename": "PageRecord",
-      "id": "7228714",
+      "id": "23990854",
       "slug": "eventi",
       "slugs": [
         {
@@ -652,7 +555,7 @@
     ],
     "link": {
       "__typename": "PageRecord",
-      "id": "7228715",
+      "id": "23990855",
       "slug": "progetti",
       "slugs": [
         {
@@ -671,25 +574,169 @@
   },
   {
     "routes": [
-      "people",
-      "networks"
+      "festival",
+      "box-office"
     ],
     "link": {
       "__typename": "PageRecord",
-      "id": "9913479",
-      "slug": "reti",
+      "id": "23990841",
+      "slug": "box-office",
       "slugs": [
         {
           "locale": "en",
-          "slug": "networks"
+          "slug": "box-office"
         },
         {
           "locale": "it",
-          "slug": "reti"
+          "slug": "box-office"
         }
       ],
-      "indexType": "networks",
+      "indexType": "",
+      "isIndex": false
+    },
+    "lang": "en"
+  },
+  {
+    "routes": [
+      "festival",
+      "workshop"
+    ],
+    "link": {
+      "__typename": "PageRecord",
+      "id": "23990846",
+      "slug": "workshop",
+      "slugs": [
+        {
+          "locale": "en",
+          "slug": "workshops"
+        },
+        {
+          "locale": "it",
+          "slug": "workshop"
+        }
+      ],
+      "indexType": "workshops",
       "isIndex": true
+    },
+    "lang": "en"
+  },
+  {
+    "routes": [
+      "festival",
+      "program"
+    ],
+    "link": {
+      "__typename": "PageRecord",
+      "id": "23990851",
+      "slug": "programma",
+      "slugs": [
+        {
+          "locale": "en",
+          "slug": "program"
+        },
+        {
+          "locale": "it",
+          "slug": "programma"
+        }
+      ],
+      "indexType": "festival-events",
+      "isIndex": true
+    },
+    "lang": "en"
+  },
+  {
+    "routes": [
+      "studio",
+      "associated-artists"
+    ],
+    "link": {
+      "__typename": "PageRecord",
+      "id": "23990849",
+      "slug": "artisti-associati",
+      "slugs": [
+        {
+          "locale": "en",
+          "slug": "associated-artists"
+        },
+        {
+          "locale": "it",
+          "slug": "artisti-associati"
+        }
+      ],
+      "indexType": "associated-artists",
+      "isIndex": true
+    },
+    "lang": "en"
+  },
+  {
+    "routes": [
+      "studio",
+      "artistic-residences"
+    ],
+    "link": {
+      "__typename": "PageRecord",
+      "id": "23990843",
+      "slug": "residenze-artistiche",
+      "slugs": [
+        {
+          "locale": "en",
+          "slug": "artistic-residencies"
+        },
+        {
+          "locale": "it",
+          "slug": "residenze-artistiche"
+        }
+      ],
+      "indexType": "artistic-residences",
+      "isIndex": true
+    },
+    "lang": "en"
+  },
+  {
+    "routes": [
+      "studio",
+      "languages"
+    ],
+    "link": {
+      "__typename": "PageRecord",
+      "id": "23990837",
+      "slug": "linguaggi",
+      "slugs": [
+        {
+          "locale": "en",
+          "slug": "languages"
+        },
+        {
+          "locale": "it",
+          "slug": "linguaggi"
+        }
+      ],
+      "indexType": "languages",
+      "isIndex": true
+    },
+    "lang": "en"
+  },
+  {
+    "routes": [
+      "info",
+      "safety-covid-19"
+    ],
+    "link": {
+      "__typename": "PageRecord",
+      "id": "23990850",
+      "slug": "sicurezza-covid-19",
+      "slugs": [
+        {
+          "locale": "en",
+          "slug": "safety-covid-19"
+        },
+        {
+          "locale": "it",
+          "slug": "sicurezza-covid-19"
+        }
+      ],
+      "indexType": "",
+      "isIndex": false
     },
     "lang": "en"
   },
@@ -700,7 +747,7 @@
     ],
     "link": {
       "__typename": "PageRecord",
-      "id": "7228699",
+      "id": "23990840",
       "slug": "chi-siamo",
       "slugs": [
         {
@@ -724,7 +771,7 @@
     ],
     "link": {
       "__typename": "PageRecord",
-      "id": "7228706",
+      "id": "23990847",
       "slug": "staff",
       "slugs": [
         {
@@ -748,7 +795,7 @@
     ],
     "link": {
       "__typename": "PageRecord",
-      "id": "7228712",
+      "id": "23990852",
       "slug": "accessibilita",
       "slugs": [
         {
@@ -772,7 +819,7 @@
     ],
     "link": {
       "__typename": "PageRecord",
-      "id": "7228701",
+      "id": "23990842",
       "slug": "sostenibilita",
       "slugs": [
         {
@@ -796,7 +843,7 @@
     ],
     "link": {
       "__typename": "PageRecord",
-      "id": "7228707",
+      "id": "23990848",
       "slug": "collabora-con-noi",
       "slugs": [
         {
@@ -820,7 +867,7 @@
     ],
     "link": {
       "__typename": "PageRecord",
-      "id": "7228704",
+      "id": "23990845",
       "slug": "report",
       "slugs": [
         {
@@ -844,7 +891,7 @@
     ],
     "link": {
       "__typename": "PageRecord",
-      "id": "7228698",
+      "id": "23990838",
       "slug": "main-partner",
       "slugs": [
         {
@@ -868,7 +915,7 @@
     ],
     "link": {
       "__typename": "PageRecord",
-      "id": "7228697",
+      "id": "23990839",
       "slug": "trasparenza",
       "slugs": [
         {
@@ -887,58 +934,11 @@
   },
   {
     "routes": [
-      "info",
-      "safety-covid-19"
-    ],
-    "link": {
-      "__typename": "PageRecord",
-      "id": "7228710",
-      "slug": "sicurezza-covid-19",
-      "slugs": [
-        {
-          "locale": "en",
-          "slug": "safety-covid-19"
-        },
-        {
-          "locale": "it",
-          "slug": "sicurezza-covid-19"
-        }
-      ],
-      "indexType": "",
-      "isIndex": false
-    },
-    "lang": "en"
-  },
-  {
-    "routes": [
-      "news"
-    ],
-    "link": {
-      "__typename": "PageRecord",
-      "id": "7228703",
-      "slug": "news",
-      "slugs": [
-        {
-          "locale": "en",
-          "slug": "news"
-        },
-        {
-          "locale": "it",
-          "slug": "news"
-        }
-      ],
-      "indexType": "news-index",
-      "isIndex": true
-    },
-    "lang": "en"
-  },
-  {
-    "routes": [
       "support-us"
     ],
     "link": {
       "__typename": "PageRecord",
-      "id": "7228709",
+      "id": "23990835",
       "slug": "sostienici",
       "slugs": [
         {

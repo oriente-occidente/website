@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
-<url><loc>https://orienteoccidente.netlify.app</loc><changefreq>daily</changefreq><priority>0.7</priority><lastmod>2022-06-10T13:43:44.176Z</lastmod></url>
-<url><loc>https://orienteoccidente.netlify.app/forms/payment</loc><changefreq>daily</changefreq><priority>0.7</priority><lastmod>2022-06-10T13:43:44.176Z</lastmod></url>
-<url><loc>https://orienteoccidente.netlify.app/en/forms/payment</loc><changefreq>daily</changefreq><priority>0.7</priority><lastmod>2022-06-10T13:43:44.176Z</lastmod></url>
-<url><loc>https://orienteoccidente.netlify.app/en</loc><changefreq>daily</changefreq><priority>0.7</priority><lastmod>2022-06-10T13:43:44.176Z</lastmod></url>
-<url><loc>https://orienteoccidente.netlify.app/en/landing/presenti-accessibili-en</loc><changefreq>daily</changefreq><priority>0.7</priority><lastmod>2022-06-10T13:43:44.176Z</lastmod></url>
-<url><loc>https://orienteoccidente.netlify.app/landing/presenti-accessibili</loc><changefreq>daily</changefreq><priority>0.7</priority><lastmod>2022-06-10T13:43:44.176Z</lastmod></url>
+<url><loc>https://orienteoccidente.it</loc><changefreq>daily</changefreq><priority>0.7</priority><lastmod>2022-06-12T13:09:20.575Z</lastmod></url>
+<url><loc>https://orienteoccidente.it/forms/payment</loc><changefreq>daily</changefreq><priority>0.7</priority><lastmod>2022-06-12T13:09:20.576Z</lastmod></url>
+<url><loc>https://orienteoccidente.it/en/forms/payment</loc><changefreq>daily</changefreq><priority>0.7</priority><lastmod>2022-06-12T13:09:20.576Z</lastmod></url>
+<url><loc>https://orienteoccidente.it/en</loc><changefreq>daily</changefreq><priority>0.7</priority><lastmod>2022-06-12T13:09:20.576Z</lastmod></url>
+<url><loc>https://orienteoccidente.it/en/landing/presenti-accessibili-en</loc><changefreq>daily</changefreq><priority>0.7</priority><lastmod>2022-06-12T13:09:20.576Z</lastmod></url>
+<url><loc>https://orienteoccidente.it/landing/presenti-accessibili</loc><changefreq>daily</changefreq><priority>0.7</priority><lastmod>2022-06-12T13:09:20.576Z</lastmod></url>
 </urlset>

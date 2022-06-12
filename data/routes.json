@@ -1,506 +1,6 @@
 [
   {
-    "id": "7228697",
-    "isIndex": false,
-    "indexType": "",
-    "slugs": {
-      "it": [
-        "info",
-        "trasparenza"
-      ],
-      "en": [
-        "info",
-        "accountability"
-      ]
-    },
-    "__typename": "page",
-    "paths": [
-      {
-        "locale": "it",
-        "slugs": [
-          "info",
-          "trasparenza"
-        ]
-      },
-      {
-        "locale": "en",
-        "slugs": [
-          "info",
-          "accountability"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "it",
-        "url": "info/trasparenza"
-      },
-      {
-        "locale": "en",
-        "url": "info/accountability"
-      }
-    ]
-  },
-  {
-    "id": "7228698",
-    "isIndex": false,
-    "indexType": "",
-    "slugs": {
-      "it": [
-        "info",
-        "partners"
-      ],
-      "en": [
-        "info",
-        "partners"
-      ]
-    },
-    "__typename": "page",
-    "paths": [
-      {
-        "locale": "it",
-        "slugs": [
-          "info",
-          "partners"
-        ]
-      },
-      {
-        "locale": "en",
-        "slugs": [
-          "info",
-          "partners"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "it",
-        "url": "info/partners"
-      },
-      {
-        "locale": "en",
-        "url": "info/partners"
-      }
-    ]
-  },
-  {
-    "id": "7228699",
-    "isIndex": false,
-    "indexType": "",
-    "slugs": {
-      "it": [
-        "info",
-        "chi-siamo"
-      ],
-      "en": [
-        "info",
-        "about-us"
-      ]
-    },
-    "__typename": "page",
-    "paths": [
-      {
-        "locale": "it",
-        "slugs": [
-          "info",
-          "chi-siamo"
-        ]
-      },
-      {
-        "locale": "en",
-        "slugs": [
-          "info",
-          "about-us"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "it",
-        "url": "info/chi-siamo"
-      },
-      {
-        "locale": "en",
-        "url": "info/about-us"
-      }
-    ]
-  },
-  {
-    "id": "7228700",
-    "isIndex": false,
-    "indexType": "",
-    "slugs": {
-      "it": [
-        "festival",
-        "box-office"
-      ],
-      "en": [
-        "festival",
-        "box-office"
-      ]
-    },
-    "__typename": "page",
-    "paths": [
-      {
-        "locale": "it",
-        "slugs": [
-          "festival",
-          "box-office"
-        ]
-      },
-      {
-        "locale": "en",
-        "slugs": [
-          "festival",
-          "box-office"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "it",
-        "url": "festival/box-office"
-      },
-      {
-        "locale": "en",
-        "url": "festival/box-office"
-      }
-    ]
-  },
-  {
-    "id": "7228701",
-    "isIndex": false,
-    "indexType": "",
-    "slugs": {
-      "it": [
-        "info",
-        "sostenibilita"
-      ],
-      "en": [
-        "info",
-        "sustainability"
-      ]
-    },
-    "__typename": "page",
-    "paths": [
-      {
-        "locale": "it",
-        "slugs": [
-          "info",
-          "sostenibilita"
-        ]
-      },
-      {
-        "locale": "en",
-        "slugs": [
-          "info",
-          "sustainability"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "it",
-        "url": "info/sostenibilita"
-      },
-      {
-        "locale": "en",
-        "url": "info/sustainability"
-      }
-    ]
-  },
-  {
-    "id": "7228702",
-    "isIndex": true,
-    "indexType": "artistic-residences",
-    "slugs": {
-      "it": [
-        "studio",
-        "residenze-artistiche"
-      ],
-      "en": [
-        "studio",
-        "artistic-residences"
-      ]
-    },
-    "__typename": "page",
-    "paths": [
-      {
-        "locale": "it",
-        "slugs": [
-          "studio",
-          "residenze-artistiche"
-        ]
-      },
-      {
-        "locale": "en",
-        "slugs": [
-          "studio",
-          "artistic-residences"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "it",
-        "url": "studio/residenze-artistiche"
-      },
-      {
-        "locale": "en",
-        "url": "studio/artistic-residences"
-      }
-    ]
-  },
-  {
-    "id": "7228703",
-    "isIndex": true,
-    "indexType": "news-index",
-    "slugs": {
-      "it": [
-        "news"
-      ],
-      "en": [
-        "news"
-      ]
-    },
-    "__typename": "page",
-    "paths": [
-      {
-        "locale": "it",
-        "slugs": [
-          "news"
-        ]
-      },
-      {
-        "locale": "en",
-        "slugs": [
-          "news"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "it",
-        "url": "news"
-      },
-      {
-        "locale": "en",
-        "url": "news"
-      }
-    ]
-  },
-  {
-    "id": "7228704",
-    "isIndex": false,
-    "indexType": "",
-    "slugs": {
-      "it": [
-        "info",
-        "report"
-      ],
-      "en": [
-        "info",
-        "report"
-      ]
-    },
-    "__typename": "page",
-    "paths": [
-      {
-        "locale": "it",
-        "slugs": [
-          "info",
-          "report"
-        ]
-      },
-      {
-        "locale": "en",
-        "slugs": [
-          "info",
-          "report"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "it",
-        "url": "info/report"
-      },
-      {
-        "locale": "en",
-        "url": "info/report"
-      }
-    ]
-  },
-  {
-    "id": "7228705",
-    "isIndex": true,
-    "indexType": "workshops",
-    "slugs": {
-      "it": [
-        "studio",
-        "workshop"
-      ],
-      "en": [
-        "studio",
-        "workshop"
-      ]
-    },
-    "__typename": "page",
-    "paths": [
-      {
-        "locale": "it",
-        "slugs": [
-          "studio",
-          "workshop"
-        ]
-      },
-      {
-        "locale": "en",
-        "slugs": [
-          "studio",
-          "workshop"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "it",
-        "url": "studio/workshop"
-      },
-      {
-        "locale": "en",
-        "url": "studio/workshop"
-      }
-    ]
-  },
-  {
-    "id": "7228706",
-    "isIndex": false,
-    "indexType": "",
-    "slugs": {
-      "it": [
-        "info",
-        "staff"
-      ],
-      "en": [
-        "info",
-        "staff"
-      ]
-    },
-    "__typename": "page",
-    "paths": [
-      {
-        "locale": "it",
-        "slugs": [
-          "info",
-          "staff"
-        ]
-      },
-      {
-        "locale": "en",
-        "slugs": [
-          "info",
-          "staff"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "it",
-        "url": "info/staff"
-      },
-      {
-        "locale": "en",
-        "url": "info/staff"
-      }
-    ]
-  },
-  {
-    "id": "7228707",
-    "isIndex": false,
-    "indexType": "",
-    "slugs": {
-      "it": [
-        "info",
-        "collabora-con-noi"
-      ],
-      "en": [
-        "info",
-        "work-with-us"
-      ]
-    },
-    "__typename": "page",
-    "paths": [
-      {
-        "locale": "it",
-        "slugs": [
-          "info",
-          "collabora-con-noi"
-        ]
-      },
-      {
-        "locale": "en",
-        "slugs": [
-          "info",
-          "work-with-us"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "it",
-        "url": "info/collabora-con-noi"
-      },
-      {
-        "locale": "en",
-        "url": "info/work-with-us"
-      }
-    ]
-  },
-  {
-    "id": "7228708",
-    "isIndex": true,
-    "indexType": "associated-artists",
-    "slugs": {
-      "it": [
-        "studio",
-        "artisti-associati"
-      ],
-      "en": [
-        "studio",
-        "associated-artists"
-      ]
-    },
-    "__typename": "page",
-    "paths": [
-      {
-        "locale": "it",
-        "slugs": [
-          "studio",
-          "artisti-associati"
-        ]
-      },
-      {
-        "locale": "en",
-        "slugs": [
-          "studio",
-          "associated-artists"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "it",
-        "url": "studio/artisti-associati"
-      },
-      {
-        "locale": "en",
-        "url": "studio/associated-artists"
-      }
-    ]
-  },
-  {
-    "id": "7228709",
+    "id": "23990835",
     "isIndex": false,
     "indexType": "",
     "slugs": {
@@ -538,217 +38,7 @@
     ]
   },
   {
-    "id": "7228710",
-    "isIndex": false,
-    "indexType": "",
-    "slugs": {
-      "it": [
-        "info",
-        "sicurezza-covid-19"
-      ],
-      "en": [
-        "info",
-        "safety-covid-19"
-      ]
-    },
-    "__typename": "page",
-    "paths": [
-      {
-        "locale": "it",
-        "slugs": [
-          "info",
-          "sicurezza-covid-19"
-        ]
-      },
-      {
-        "locale": "en",
-        "slugs": [
-          "info",
-          "safety-covid-19"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "it",
-        "url": "info/sicurezza-covid-19"
-      },
-      {
-        "locale": "en",
-        "url": "info/safety-covid-19"
-      }
-    ]
-  },
-  {
-    "id": "7228711",
-    "isIndex": true,
-    "indexType": "festival-events",
-    "slugs": {
-      "it": [
-        "festival",
-        "programma"
-      ],
-      "en": [
-        "festival",
-        "program"
-      ]
-    },
-    "__typename": "page",
-    "paths": [
-      {
-        "locale": "it",
-        "slugs": [
-          "festival",
-          "programma"
-        ]
-      },
-      {
-        "locale": "en",
-        "slugs": [
-          "festival",
-          "program"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "it",
-        "url": "festival/programma"
-      },
-      {
-        "locale": "en",
-        "url": "festival/program"
-      }
-    ]
-  },
-  {
-    "id": "7228712",
-    "isIndex": false,
-    "indexType": "",
-    "slugs": {
-      "it": [
-        "info",
-        "accessibilita"
-      ],
-      "en": [
-        "info",
-        "accessibility"
-      ]
-    },
-    "__typename": "page",
-    "paths": [
-      {
-        "locale": "it",
-        "slugs": [
-          "info",
-          "accessibilita"
-        ]
-      },
-      {
-        "locale": "en",
-        "slugs": [
-          "info",
-          "accessibility"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "it",
-        "url": "info/accessibilita"
-      },
-      {
-        "locale": "en",
-        "url": "info/accessibility"
-      }
-    ]
-  },
-  {
-    "id": "7228714",
-    "isIndex": true,
-    "indexType": "other-events",
-    "slugs": {
-      "it": [
-        "people",
-        "eventi"
-      ],
-      "en": [
-        "people",
-        "events"
-      ]
-    },
-    "__typename": "page",
-    "paths": [
-      {
-        "locale": "it",
-        "slugs": [
-          "people",
-          "eventi"
-        ]
-      },
-      {
-        "locale": "en",
-        "slugs": [
-          "people",
-          "events"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "it",
-        "url": "people/eventi"
-      },
-      {
-        "locale": "en",
-        "url": "people/events"
-      }
-    ]
-  },
-  {
-    "id": "7228715",
-    "isIndex": true,
-    "indexType": "projects",
-    "slugs": {
-      "it": [
-        "people",
-        "progetti"
-      ],
-      "en": [
-        "people",
-        "projects"
-      ]
-    },
-    "__typename": "page",
-    "paths": [
-      {
-        "locale": "it",
-        "slugs": [
-          "people",
-          "progetti"
-        ]
-      },
-      {
-        "locale": "en",
-        "slugs": [
-          "people",
-          "projects"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "it",
-        "url": "people/progetti"
-      },
-      {
-        "locale": "en",
-        "url": "people/projects"
-      }
-    ]
-  },
-  {
-    "id": "9913479",
+    "id": "23990836",
     "isIndex": true,
     "indexType": "networks",
     "slugs": {
@@ -790,7 +80,7 @@
     ]
   },
   {
-    "id": "13710151",
+    "id": "23990837",
     "isIndex": true,
     "indexType": "languages",
     "slugs": {
@@ -832,7 +122,717 @@
     ]
   },
   {
-    "id": "7228713",
+    "id": "23990838",
+    "isIndex": false,
+    "indexType": "",
+    "slugs": {
+      "it": [
+        "info",
+        "partners"
+      ],
+      "en": [
+        "info",
+        "partners"
+      ]
+    },
+    "__typename": "page",
+    "paths": [
+      {
+        "locale": "it",
+        "slugs": [
+          "info",
+          "partners"
+        ]
+      },
+      {
+        "locale": "en",
+        "slugs": [
+          "info",
+          "partners"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "it",
+        "url": "info/partners"
+      },
+      {
+        "locale": "en",
+        "url": "info/partners"
+      }
+    ]
+  },
+  {
+    "id": "23990839",
+    "isIndex": false,
+    "indexType": "",
+    "slugs": {
+      "it": [
+        "info",
+        "trasparenza"
+      ],
+      "en": [
+        "info",
+        "accountability"
+      ]
+    },
+    "__typename": "page",
+    "paths": [
+      {
+        "locale": "it",
+        "slugs": [
+          "info",
+          "trasparenza"
+        ]
+      },
+      {
+        "locale": "en",
+        "slugs": [
+          "info",
+          "accountability"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "it",
+        "url": "info/trasparenza"
+      },
+      {
+        "locale": "en",
+        "url": "info/accountability"
+      }
+    ]
+  },
+  {
+    "id": "23990840",
+    "isIndex": false,
+    "indexType": "",
+    "slugs": {
+      "it": [
+        "info",
+        "chi-siamo"
+      ],
+      "en": [
+        "info",
+        "about-us"
+      ]
+    },
+    "__typename": "page",
+    "paths": [
+      {
+        "locale": "it",
+        "slugs": [
+          "info",
+          "chi-siamo"
+        ]
+      },
+      {
+        "locale": "en",
+        "slugs": [
+          "info",
+          "about-us"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "it",
+        "url": "info/chi-siamo"
+      },
+      {
+        "locale": "en",
+        "url": "info/about-us"
+      }
+    ]
+  },
+  {
+    "id": "23990841",
+    "isIndex": false,
+    "indexType": "",
+    "slugs": {
+      "it": [
+        "festival",
+        "box-office"
+      ],
+      "en": [
+        "festival",
+        "box-office"
+      ]
+    },
+    "__typename": "page",
+    "paths": [
+      {
+        "locale": "it",
+        "slugs": [
+          "festival",
+          "box-office"
+        ]
+      },
+      {
+        "locale": "en",
+        "slugs": [
+          "festival",
+          "box-office"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "it",
+        "url": "festival/box-office"
+      },
+      {
+        "locale": "en",
+        "url": "festival/box-office"
+      }
+    ]
+  },
+  {
+    "id": "23990842",
+    "isIndex": false,
+    "indexType": "",
+    "slugs": {
+      "it": [
+        "info",
+        "sostenibilita"
+      ],
+      "en": [
+        "info",
+        "sustainability"
+      ]
+    },
+    "__typename": "page",
+    "paths": [
+      {
+        "locale": "it",
+        "slugs": [
+          "info",
+          "sostenibilita"
+        ]
+      },
+      {
+        "locale": "en",
+        "slugs": [
+          "info",
+          "sustainability"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "it",
+        "url": "info/sostenibilita"
+      },
+      {
+        "locale": "en",
+        "url": "info/sustainability"
+      }
+    ]
+  },
+  {
+    "id": "23990843",
+    "isIndex": true,
+    "indexType": "artistic-residences",
+    "slugs": {
+      "it": [
+        "studio",
+        "residenze-artistiche"
+      ],
+      "en": [
+        "studio",
+        "artistic-residences"
+      ]
+    },
+    "__typename": "page",
+    "paths": [
+      {
+        "locale": "it",
+        "slugs": [
+          "studio",
+          "residenze-artistiche"
+        ]
+      },
+      {
+        "locale": "en",
+        "slugs": [
+          "studio",
+          "artistic-residences"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "it",
+        "url": "studio/residenze-artistiche"
+      },
+      {
+        "locale": "en",
+        "url": "studio/artistic-residences"
+      }
+    ]
+  },
+  {
+    "id": "23990844",
+    "isIndex": true,
+    "indexType": "news-index",
+    "slugs": {
+      "it": [
+        "news"
+      ],
+      "en": [
+        "news"
+      ]
+    },
+    "__typename": "page",
+    "paths": [
+      {
+        "locale": "it",
+        "slugs": [
+          "news"
+        ]
+      },
+      {
+        "locale": "en",
+        "slugs": [
+          "news"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "it",
+        "url": "news"
+      },
+      {
+        "locale": "en",
+        "url": "news"
+      }
+    ]
+  },
+  {
+    "id": "23990845",
+    "isIndex": false,
+    "indexType": "",
+    "slugs": {
+      "it": [
+        "info",
+        "report"
+      ],
+      "en": [
+        "info",
+        "report"
+      ]
+    },
+    "__typename": "page",
+    "paths": [
+      {
+        "locale": "it",
+        "slugs": [
+          "info",
+          "report"
+        ]
+      },
+      {
+        "locale": "en",
+        "slugs": [
+          "info",
+          "report"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "it",
+        "url": "info/report"
+      },
+      {
+        "locale": "en",
+        "url": "info/report"
+      }
+    ]
+  },
+  {
+    "id": "23990846",
+    "isIndex": true,
+    "indexType": "workshops",
+    "slugs": {
+      "it": [
+        "festival",
+        "workshop"
+      ],
+      "en": [
+        "festival",
+        "workshop"
+      ]
+    },
+    "__typename": "page",
+    "paths": [
+      {
+        "locale": "it",
+        "slugs": [
+          "festival",
+          "workshop"
+        ]
+      },
+      {
+        "locale": "en",
+        "slugs": [
+          "festival",
+          "workshop"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "it",
+        "url": "festival/workshop"
+      },
+      {
+        "locale": "en",
+        "url": "festival/workshop"
+      }
+    ]
+  },
+  {
+    "id": "23990847",
+    "isIndex": false,
+    "indexType": "",
+    "slugs": {
+      "it": [
+        "info",
+        "staff"
+      ],
+      "en": [
+        "info",
+        "staff"
+      ]
+    },
+    "__typename": "page",
+    "paths": [
+      {
+        "locale": "it",
+        "slugs": [
+          "info",
+          "staff"
+        ]
+      },
+      {
+        "locale": "en",
+        "slugs": [
+          "info",
+          "staff"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "it",
+        "url": "info/staff"
+      },
+      {
+        "locale": "en",
+        "url": "info/staff"
+      }
+    ]
+  },
+  {
+    "id": "23990848",
+    "isIndex": false,
+    "indexType": "",
+    "slugs": {
+      "it": [
+        "info",
+        "collabora-con-noi"
+      ],
+      "en": [
+        "info",
+        "work-with-us"
+      ]
+    },
+    "__typename": "page",
+    "paths": [
+      {
+        "locale": "it",
+        "slugs": [
+          "info",
+          "collabora-con-noi"
+        ]
+      },
+      {
+        "locale": "en",
+        "slugs": [
+          "info",
+          "work-with-us"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "it",
+        "url": "info/collabora-con-noi"
+      },
+      {
+        "locale": "en",
+        "url": "info/work-with-us"
+      }
+    ]
+  },
+  {
+    "id": "23990849",
+    "isIndex": true,
+    "indexType": "associated-artists",
+    "slugs": {
+      "it": [
+        "studio",
+        "artisti-associati"
+      ],
+      "en": [
+        "studio",
+        "associated-artists"
+      ]
+    },
+    "__typename": "page",
+    "paths": [
+      {
+        "locale": "it",
+        "slugs": [
+          "studio",
+          "artisti-associati"
+        ]
+      },
+      {
+        "locale": "en",
+        "slugs": [
+          "studio",
+          "associated-artists"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "it",
+        "url": "studio/artisti-associati"
+      },
+      {
+        "locale": "en",
+        "url": "studio/associated-artists"
+      }
+    ]
+  },
+  {
+    "id": "23990850",
+    "isIndex": false,
+    "indexType": "",
+    "slugs": {
+      "it": [
+        "info",
+        "sicurezza-covid-19"
+      ],
+      "en": [
+        "info",
+        "safety-covid-19"
+      ]
+    },
+    "__typename": "page",
+    "paths": [
+      {
+        "locale": "it",
+        "slugs": [
+          "info",
+          "sicurezza-covid-19"
+        ]
+      },
+      {
+        "locale": "en",
+        "slugs": [
+          "info",
+          "safety-covid-19"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "it",
+        "url": "info/sicurezza-covid-19"
+      },
+      {
+        "locale": "en",
+        "url": "info/safety-covid-19"
+      }
+    ]
+  },
+  {
+    "id": "23990851",
+    "isIndex": true,
+    "indexType": "festival-events",
+    "slugs": {
+      "it": [
+        "festival",
+        "programma"
+      ],
+      "en": [
+        "festival",
+        "program"
+      ]
+    },
+    "__typename": "page",
+    "paths": [
+      {
+        "locale": "it",
+        "slugs": [
+          "festival",
+          "programma"
+        ]
+      },
+      {
+        "locale": "en",
+        "slugs": [
+          "festival",
+          "program"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "it",
+        "url": "festival/programma"
+      },
+      {
+        "locale": "en",
+        "url": "festival/program"
+      }
+    ]
+  },
+  {
+    "id": "23990852",
+    "isIndex": false,
+    "indexType": "",
+    "slugs": {
+      "it": [
+        "info",
+        "accessibilita"
+      ],
+      "en": [
+        "info",
+        "accessibility"
+      ]
+    },
+    "__typename": "page",
+    "paths": [
+      {
+        "locale": "it",
+        "slugs": [
+          "info",
+          "accessibilita"
+        ]
+      },
+      {
+        "locale": "en",
+        "slugs": [
+          "info",
+          "accessibility"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "it",
+        "url": "info/accessibilita"
+      },
+      {
+        "locale": "en",
+        "url": "info/accessibility"
+      }
+    ]
+  },
+  {
+    "id": "23990854",
+    "isIndex": true,
+    "indexType": "other-events",
+    "slugs": {
+      "it": [
+        "people",
+        "eventi"
+      ],
+      "en": [
+        "people",
+        "events"
+      ]
+    },
+    "__typename": "page",
+    "paths": [
+      {
+        "locale": "it",
+        "slugs": [
+          "people",
+          "eventi"
+        ]
+      },
+      {
+        "locale": "en",
+        "slugs": [
+          "people",
+          "events"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "it",
+        "url": "people/eventi"
+      },
+      {
+        "locale": "en",
+        "url": "people/events"
+      }
+    ]
+  },
+  {
+    "id": "23990855",
+    "isIndex": true,
+    "indexType": "projects",
+    "slugs": {
+      "it": [
+        "people",
+        "progetti"
+      ],
+      "en": [
+        "people",
+        "projects"
+      ]
+    },
+    "__typename": "page",
+    "paths": [
+      {
+        "locale": "it",
+        "slugs": [
+          "people",
+          "progetti"
+        ]
+      },
+      {
+        "locale": "en",
+        "slugs": [
+          "people",
+          "projects"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "it",
+        "url": "people/progetti"
+      },
+      {
+        "locale": "en",
+        "url": "people/projects"
+      }
+    ]
+  },
+  {
+    "id": "23990853",
     "slugs": {
       "en": [
         "privacy-information"
@@ -871,7 +871,7 @@
     ]
   },
   {
-    "id": "7228923",
+    "id": "23990857",
     "slugs": {
       "en": [
         "festival",
@@ -918,7 +918,7 @@
     ]
   },
   {
-    "id": "7228911",
+    "id": "23990865",
     "slugs": {
       "en": [
         "festival",
@@ -965,7 +965,7 @@
     ]
   },
   {
-    "id": "7228912",
+    "id": "23990866",
     "slugs": {
       "en": [
         "festival",
@@ -1012,7 +1012,7 @@
     ]
   },
   {
-    "id": "7228915",
+    "id": "23990869",
     "slugs": {
       "en": [
         "festival",
@@ -1059,7 +1059,7 @@
     ]
   },
   {
-    "id": "7228916",
+    "id": "23990870",
     "slugs": {
       "en": [
         "festival",
@@ -1106,7 +1106,7 @@
     ]
   },
   {
-    "id": "7228917",
+    "id": "23990871",
     "slugs": {
       "en": [
         "festival",
@@ -1153,7 +1153,7 @@
     ]
   },
   {
-    "id": "7228918",
+    "id": "23990872",
     "slugs": {
       "en": [
         "festival",
@@ -1200,7 +1200,7 @@
     ]
   },
   {
-    "id": "7228919",
+    "id": "23990873",
     "slugs": {
       "en": [
         "festival",
@@ -1247,7 +1247,7 @@
     ]
   },
   {
-    "id": "7228920",
+    "id": "23990874",
     "slugs": {
       "en": [
         "festival",
@@ -1294,7 +1294,7 @@
     ]
   },
   {
-    "id": "7228921",
+    "id": "23990875",
     "slugs": {
       "en": [
         "festival",
@@ -1341,7 +1341,7 @@
     ]
   },
   {
-    "id": "7228922",
+    "id": "23990876",
     "slugs": {
       "en": [
         "festival",
@@ -1388,7 +1388,7 @@
     ]
   },
   {
-    "id": "7228924",
+    "id": "23990877",
     "slugs": {
       "en": [
         "festival",
@@ -1435,7 +1435,7 @@
     ]
   },
   {
-    "id": "7228925",
+    "id": "23990878",
     "slugs": {
       "en": [
         "festival",
@@ -1482,7 +1482,7 @@
     ]
   },
   {
-    "id": "7228926",
+    "id": "23990879",
     "slugs": {
       "en": [
         "festival",
@@ -1529,7 +1529,7 @@
     ]
   },
   {
-    "id": "7228927",
+    "id": "23990880",
     "slugs": {
       "en": [
         "festival",
@@ -1576,7 +1576,7 @@
     ]
   },
   {
-    "id": "7228928",
+    "id": "23990881",
     "slugs": {
       "en": [
         "festival",
@@ -1623,7 +1623,7 @@
     ]
   },
   {
-    "id": "7228929",
+    "id": "23990882",
     "slugs": {
       "en": [
         "festival",
@@ -1670,7 +1670,7 @@
     ]
   },
   {
-    "id": "7228930",
+    "id": "23990883",
     "slugs": {
       "en": [
         "festival",
@@ -1717,7 +1717,7 @@
     ]
   },
   {
-    "id": "7228931",
+    "id": "23990884",
     "slugs": {
       "en": [
         "festival",
@@ -1764,7 +1764,7 @@
     ]
   },
   {
-    "id": "7228932",
+    "id": "23990885",
     "slugs": {
       "en": [
         "festival",
@@ -1811,7 +1811,7 @@
     ]
   },
   {
-    "id": "7228933",
+    "id": "23990886",
     "slugs": {
       "en": [
         "festival",
@@ -1858,7 +1858,7 @@
     ]
   },
   {
-    "id": "7228934",
+    "id": "23990887",
     "slugs": {
       "en": [
         "festival",
@@ -1905,7 +1905,7 @@
     ]
   },
   {
-    "id": "7228935",
+    "id": "23990888",
     "slugs": {
       "en": [
         "festival",
@@ -1952,7 +1952,7 @@
     ]
   },
   {
-    "id": "7228936",
+    "id": "23990889",
     "slugs": {
       "en": [
         "festival",
@@ -1999,7 +1999,7 @@
     ]
   },
   {
-    "id": "7228937",
+    "id": "23990890",
     "slugs": {
       "en": [
         "festival",
@@ -2046,7 +2046,7 @@
     ]
   },
   {
-    "id": "7228938",
+    "id": "23990891",
     "slugs": {
       "en": [
         "festival",
@@ -2093,7 +2093,7 @@
     ]
   },
   {
-    "id": "7228939",
+    "id": "23990892",
     "slugs": {
       "en": [
         "festival",
@@ -2140,7 +2140,7 @@
     ]
   },
   {
-    "id": "7228940",
+    "id": "23990893",
     "slugs": {
       "en": [
         "festival",
@@ -2187,7 +2187,7 @@
     ]
   },
   {
-    "id": "7228941",
+    "id": "23990894",
     "slugs": {
       "en": [
         "festival",
@@ -2234,7 +2234,7 @@
     ]
   },
   {
-    "id": "7228942",
+    "id": "23990895",
     "slugs": {
       "en": [
         "festival",
@@ -2281,7 +2281,7 @@
     ]
   },
   {
-    "id": "7228943",
+    "id": "23990896",
     "slugs": {
       "en": [
         "festival",
@@ -2328,7 +2328,7 @@
     ]
   },
   {
-    "id": "7228944",
+    "id": "23990897",
     "slugs": {
       "en": [
         "festival",
@@ -2375,7 +2375,7 @@
     ]
   },
   {
-    "id": "7228945",
+    "id": "23990898",
     "slugs": {
       "en": [
         "festival",
@@ -2422,7 +2422,7 @@
     ]
   },
   {
-    "id": "7228946",
+    "id": "23990899",
     "slugs": {
       "en": [
         "festival",
@@ -2469,7 +2469,7 @@
     ]
   },
   {
-    "id": "7228947",
+    "id": "23990900",
     "slugs": {
       "en": [
         "festival",
@@ -2516,7 +2516,7 @@
     ]
   },
   {
-    "id": "7228948",
+    "id": "23990901",
     "slugs": {
       "en": [
         "festival",
@@ -2563,7 +2563,7 @@
     ]
   },
   {
-    "id": "7228949",
+    "id": "23990902",
     "slugs": {
       "en": [
         "festival",
@@ -2610,7 +2610,7 @@
     ]
   },
   {
-    "id": "7228950",
+    "id": "23990903",
     "slugs": {
       "en": [
         "festival",
@@ -2657,7 +2657,7 @@
     ]
   },
   {
-    "id": "7228951",
+    "id": "23990904",
     "slugs": {
       "en": [
         "festival",
@@ -2704,7 +2704,7 @@
     ]
   },
   {
-    "id": "7228952",
+    "id": "23990905",
     "slugs": {
       "en": [
         "festival",
@@ -2751,7 +2751,7 @@
     ]
   },
   {
-    "id": "7228953",
+    "id": "23990906",
     "slugs": {
       "en": [
         "festival",
@@ -2798,7 +2798,7 @@
     ]
   },
   {
-    "id": "7228954",
+    "id": "23990907",
     "slugs": {
       "en": [
         "festival",
@@ -2845,7 +2845,7 @@
     ]
   },
   {
-    "id": "7228955",
+    "id": "23990908",
     "slugs": {
       "en": [
         "festival",
@@ -2892,7 +2892,7 @@
     ]
   },
   {
-    "id": "7228956",
+    "id": "23990909",
     "slugs": {
       "en": [
         "festival",
@@ -2939,7 +2939,7 @@
     ]
   },
   {
-    "id": "7228957",
+    "id": "23990910",
     "slugs": {
       "en": [
         "festival",
@@ -2986,7 +2986,7 @@
     ]
   },
   {
-    "id": "7228958",
+    "id": "23990911",
     "slugs": {
       "en": [
         "festival",
@@ -3033,7 +3033,7 @@
     ]
   },
   {
-    "id": "7228959",
+    "id": "23990912",
     "slugs": {
       "en": [
         "festival",
@@ -3080,7 +3080,7 @@
     ]
   },
   {
-    "id": "7228960",
+    "id": "23990913",
     "slugs": {
       "en": [
         "festival",
@@ -3127,7 +3127,7 @@
     ]
   },
   {
-    "id": "7228961",
+    "id": "23990914",
     "slugs": {
       "en": [
         "festival",
@@ -3174,7 +3174,7 @@
     ]
   },
   {
-    "id": "7228962",
+    "id": "23990915",
     "slugs": {
       "en": [
         "festival",
@@ -3221,7 +3221,7 @@
     ]
   },
   {
-    "id": "7228963",
+    "id": "23990916",
     "slugs": {
       "en": [
         "festival",
@@ -3268,7 +3268,7 @@
     ]
   },
   {
-    "id": "7228964",
+    "id": "23990917",
     "slugs": {
       "en": [
         "festival",
@@ -3315,7 +3315,7 @@
     ]
   },
   {
-    "id": "7228965",
+    "id": "23990918",
     "slugs": {
       "en": [
         "festival",
@@ -3362,7 +3362,7 @@
     ]
   },
   {
-    "id": "7228966",
+    "id": "23990919",
     "slugs": {
       "en": [
         "festival",
@@ -3409,7 +3409,7 @@
     ]
   },
   {
-    "id": "7228967",
+    "id": "23990920",
     "slugs": {
       "en": [
         "festival",
@@ -3456,7 +3456,7 @@
     ]
   },
   {
-    "id": "7228968",
+    "id": "23990921",
     "slugs": {
       "en": [
         "festival",
@@ -3503,7 +3503,7 @@
     ]
   },
   {
-    "id": "7228969",
+    "id": "23990922",
     "slugs": {
       "en": [
         "festival",
@@ -3550,7 +3550,7 @@
     ]
   },
   {
-    "id": "7228970",
+    "id": "23990923",
     "slugs": {
       "en": [
         "festival",
@@ -3597,7 +3597,7 @@
     ]
   },
   {
-    "id": "7228971",
+    "id": "23990924",
     "slugs": {
       "en": [
         "festival",
@@ -3644,7 +3644,7 @@
     ]
   },
   {
-    "id": "7228972",
+    "id": "23990925",
     "slugs": {
       "en": [
         "festival",
@@ -3691,7 +3691,7 @@
     ]
   },
   {
-    "id": "7228973",
+    "id": "23990926",
     "slugs": {
       "en": [
         "festival",
@@ -3738,7 +3738,7 @@
     ]
   },
   {
-    "id": "7228974",
+    "id": "23990927",
     "slugs": {
       "en": [
         "festival",
@@ -3785,7 +3785,7 @@
     ]
   },
   {
-    "id": "7228975",
+    "id": "23990928",
     "slugs": {
       "en": [
         "festival",
@@ -3832,7 +3832,7 @@
     ]
   },
   {
-    "id": "7228976",
+    "id": "23990929",
     "slugs": {
       "en": [
         "festival",
@@ -3879,7 +3879,7 @@
     ]
   },
   {
-    "id": "7228977",
+    "id": "23990930",
     "slugs": {
       "en": [
         "festival",
@@ -3926,7 +3926,7 @@
     ]
   },
   {
-    "id": "7228978",
+    "id": "23990931",
     "slugs": {
       "en": [
         "festival",
@@ -3973,7 +3973,7 @@
     ]
   },
   {
-    "id": "7228979",
+    "id": "23990932",
     "slugs": {
       "en": [
         "festival",
@@ -4020,7 +4020,7 @@
     ]
   },
   {
-    "id": "7228980",
+    "id": "23990933",
     "slugs": {
       "en": [
         "festival",
@@ -4067,7 +4067,7 @@
     ]
   },
   {
-    "id": "7228981",
+    "id": "23990934",
     "slugs": {
       "en": [
         "festival",
@@ -4114,7 +4114,7 @@
     ]
   },
   {
-    "id": "7228903",
+    "id": "23990856",
     "slugs": {
       "en": [
         "people",
@@ -4161,7 +4161,7 @@
     ]
   },
   {
-    "id": "7228904",
+    "id": "23990858",
     "slugs": {
       "en": [
         "people",
@@ -4208,7 +4208,7 @@
     ]
   },
   {
-    "id": "7228905",
+    "id": "23990859",
     "slugs": {
       "en": [
         "people",
@@ -4255,7 +4255,7 @@
     ]
   },
   {
-    "id": "7228906",
+    "id": "23990860",
     "slugs": {
       "en": [
         "people",
@@ -4302,7 +4302,7 @@
     ]
   },
   {
-    "id": "7228907",
+    "id": "23990861",
     "slugs": {
       "en": [
         "people",
@@ -4349,7 +4349,7 @@
     ]
   },
   {
-    "id": "7228908",
+    "id": "23990862",
     "slugs": {
       "en": [
         "people",
@@ -4396,7 +4396,7 @@
     ]
   },
   {
-    "id": "7228909",
+    "id": "23990863",
     "slugs": {
       "en": [
         "people",
@@ -4443,7 +4443,7 @@
     ]
   },
   {
-    "id": "7228910",
+    "id": "23990864",
     "slugs": {
       "en": [
         "people",
@@ -4490,7 +4490,7 @@
     ]
   },
   {
-    "id": "7228913",
+    "id": "23990867",
     "slugs": {
       "en": [
         "people",
@@ -4537,7 +4537,7 @@
     ]
   },
   {
-    "id": "7228914",
+    "id": "23990868",
     "slugs": {
       "en": [
         "people",
@@ -4584,15 +4584,15 @@
     ]
   },
   {
-    "id": "7228719",
+    "id": "23990737",
     "slugs": {
       "en": [
-        "studio",
+        "festival",
         "workshop",
         "bus-stop"
       ],
       "it": [
-        "studio",
+        "festival",
         "workshop",
         "bus-stop"
       ]
@@ -4605,7 +4605,7 @@
       {
         "locale": "en",
         "slugs": [
-          "studio",
+          "festival",
           "workshop",
           "bus-stop"
         ]
@@ -4613,7 +4613,7 @@
       {
         "locale": "it",
         "slugs": [
-          "studio",
+          "festival",
           "workshop",
           "bus-stop"
         ]
@@ -4622,24 +4622,24 @@
     "urls": [
       {
         "locale": "en",
-        "url": "studio/workshop/bus-stop"
+        "url": "festival/workshop/bus-stop"
       },
       {
         "locale": "it",
-        "url": "studio/workshop/bus-stop"
+        "url": "festival/workshop/bus-stop"
       }
     ]
   },
   {
-    "id": "7228716",
+    "id": "23990738",
     "slugs": {
       "en": [
-        "studio",
+        "festival",
         "workshop",
         "train-the-trainers-train-the-artists"
       ],
       "it": [
-        "studio",
+        "festival",
         "workshop",
         "train-the-trainers-train-the-artists"
       ]
@@ -4652,7 +4652,7 @@
       {
         "locale": "en",
         "slugs": [
-          "studio",
+          "festival",
           "workshop",
           "train-the-trainers-train-the-artists"
         ]
@@ -4660,7 +4660,7 @@
       {
         "locale": "it",
         "slugs": [
-          "studio",
+          "festival",
           "workshop",
           "train-the-trainers-train-the-artists"
         ]
@@ -4669,24 +4669,24 @@
     "urls": [
       {
         "locale": "en",
-        "url": "studio/workshop/train-the-trainers-train-the-artists"
+        "url": "festival/workshop/train-the-trainers-train-the-artists"
       },
       {
         "locale": "it",
-        "url": "studio/workshop/train-the-trainers-train-the-artists"
+        "url": "festival/workshop/train-the-trainers-train-the-artists"
       }
     ]
   },
   {
-    "id": "7228717",
+    "id": "23990739",
     "slugs": {
       "en": [
-        "studio",
+        "festival",
         "workshop",
         "oltre-il-confine-workshop-intensivo-di-teatro-danza"
       ],
       "it": [
-        "studio",
+        "festival",
         "workshop",
         "oltre-il-confine-workshop-intensivo-di-teatro-danza"
       ]
@@ -4699,7 +4699,7 @@
       {
         "locale": "en",
         "slugs": [
-          "studio",
+          "festival",
           "workshop",
           "oltre-il-confine-workshop-intensivo-di-teatro-danza"
         ]
@@ -4707,7 +4707,7 @@
       {
         "locale": "it",
         "slugs": [
-          "studio",
+          "festival",
           "workshop",
           "oltre-il-confine-workshop-intensivo-di-teatro-danza"
         ]
@@ -4716,24 +4716,24 @@
     "urls": [
       {
         "locale": "en",
-        "url": "studio/workshop/oltre-il-confine-workshop-intensivo-di-teatro-danza"
+        "url": "festival/workshop/oltre-il-confine-workshop-intensivo-di-teatro-danza"
       },
       {
         "locale": "it",
-        "url": "studio/workshop/oltre-il-confine-workshop-intensivo-di-teatro-danza"
+        "url": "festival/workshop/oltre-il-confine-workshop-intensivo-di-teatro-danza"
       }
     ]
   },
   {
-    "id": "7228718",
+    "id": "23990740",
     "slugs": {
       "en": [
-        "studio",
+        "festival",
         "workshop",
         "la-veronal-working-tools"
       ],
       "it": [
-        "studio",
+        "festival",
         "workshop",
         "la-veronal-working-tools"
       ]
@@ -4746,7 +4746,7 @@
       {
         "locale": "en",
         "slugs": [
-          "studio",
+          "festival",
           "workshop",
           "la-veronal-working-tools"
         ]
@@ -4754,7 +4754,7 @@
       {
         "locale": "it",
         "slugs": [
-          "studio",
+          "festival",
           "workshop",
           "la-veronal-working-tools"
         ]
@@ -4763,24 +4763,24 @@
     "urls": [
       {
         "locale": "en",
-        "url": "studio/workshop/la-veronal-working-tools"
+        "url": "festival/workshop/la-veronal-working-tools"
       },
       {
         "locale": "it",
-        "url": "studio/workshop/la-veronal-working-tools"
+        "url": "festival/workshop/la-veronal-working-tools"
       }
     ]
   },
   {
-    "id": "7228720",
+    "id": "23990741",
     "slugs": {
       "en": [
-        "studio",
+        "festival",
         "workshop",
         "masterclass-sidi-larbi-cherkaoui-repertory-fractus-v"
       ],
       "it": [
-        "studio",
+        "festival",
         "workshop",
         "masterclass-sidi-larbi-cherkaoui-repertory-fractus-v"
       ]
@@ -4793,7 +4793,7 @@
       {
         "locale": "en",
         "slugs": [
-          "studio",
+          "festival",
           "workshop",
           "masterclass-sidi-larbi-cherkaoui-repertory-fractus-v"
         ]
@@ -4801,7 +4801,7 @@
       {
         "locale": "it",
         "slugs": [
-          "studio",
+          "festival",
           "workshop",
           "masterclass-sidi-larbi-cherkaoui-repertory-fractus-v"
         ]
@@ -4810,24 +4810,24 @@
     "urls": [
       {
         "locale": "en",
-        "url": "studio/workshop/masterclass-sidi-larbi-cherkaoui-repertory-fractus-v"
+        "url": "festival/workshop/masterclass-sidi-larbi-cherkaoui-repertory-fractus-v"
       },
       {
         "locale": "it",
-        "url": "studio/workshop/masterclass-sidi-larbi-cherkaoui-repertory-fractus-v"
+        "url": "festival/workshop/masterclass-sidi-larbi-cherkaoui-repertory-fractus-v"
       }
     ]
   },
   {
-    "id": "7228721",
+    "id": "23990742",
     "slugs": {
       "en": [
-        "studio",
+        "festival",
         "workshop",
         "laboratorio-di-ricerca-corporea"
       ],
       "it": [
-        "studio",
+        "festival",
         "workshop",
         "laboratorio-di-ricerca-corporea"
       ]
@@ -4840,7 +4840,7 @@
       {
         "locale": "en",
         "slugs": [
-          "studio",
+          "festival",
           "workshop",
           "laboratorio-di-ricerca-corporea"
         ]
@@ -4848,7 +4848,7 @@
       {
         "locale": "it",
         "slugs": [
-          "studio",
+          "festival",
           "workshop",
           "laboratorio-di-ricerca-corporea"
         ]
@@ -4857,24 +4857,24 @@
     "urls": [
       {
         "locale": "en",
-        "url": "studio/workshop/laboratorio-di-ricerca-corporea"
+        "url": "festival/workshop/laboratorio-di-ricerca-corporea"
       },
       {
         "locale": "it",
-        "url": "studio/workshop/laboratorio-di-ricerca-corporea"
+        "url": "festival/workshop/laboratorio-di-ricerca-corporea"
       }
     ]
   },
   {
-    "id": "7228722",
+    "id": "23990743",
     "slugs": {
       "en": [
-        "studio",
+        "festival",
         "workshop",
         "rizoma-community-workshop"
       ],
       "it": [
-        "studio",
+        "festival",
         "workshop",
         "rizoma-community-workshop"
       ]
@@ -4887,7 +4887,7 @@
       {
         "locale": "en",
         "slugs": [
-          "studio",
+          "festival",
           "workshop",
           "rizoma-community-workshop"
         ]
@@ -4895,7 +4895,7 @@
       {
         "locale": "it",
         "slugs": [
-          "studio",
+          "festival",
           "workshop",
           "rizoma-community-workshop"
         ]
@@ -4904,24 +4904,24 @@
     "urls": [
       {
         "locale": "en",
-        "url": "studio/workshop/rizoma-community-workshop"
+        "url": "festival/workshop/rizoma-community-workshop"
       },
       {
         "locale": "it",
-        "url": "studio/workshop/rizoma-community-workshop"
+        "url": "festival/workshop/rizoma-community-workshop"
       }
     ]
   },
   {
-    "id": "7228723",
+    "id": "23990744",
     "slugs": {
       "en": [
-        "studio",
+        "festival",
         "workshop",
         "lab-impart"
       ],
       "it": [
-        "studio",
+        "festival",
         "workshop",
         "lab-impart-ripensare-il-palcoscenico"
       ]
@@ -4934,7 +4934,7 @@
       {
         "locale": "en",
         "slugs": [
-          "studio",
+          "festival",
           "workshop",
           "lab-impart"
         ]
@@ -4942,7 +4942,7 @@
       {
         "locale": "it",
         "slugs": [
-          "studio",
+          "festival",
           "workshop",
           "lab-impart-ripensare-il-palcoscenico"
         ]
@@ -4951,24 +4951,24 @@
     "urls": [
       {
         "locale": "en",
-        "url": "studio/workshop/lab-impart"
+        "url": "festival/workshop/lab-impart"
       },
       {
         "locale": "it",
-        "url": "studio/workshop/lab-impart-ripensare-il-palcoscenico"
+        "url": "festival/workshop/lab-impart-ripensare-il-palcoscenico"
       }
     ]
   },
   {
-    "id": "7228724",
+    "id": "23990745",
     "slugs": {
       "en": [
-        "studio",
+        "festival",
         "workshop",
         "tools-for-action-workshop"
       ],
       "it": [
-        "studio",
+        "festival",
         "workshop",
         "tools-for-action-workshop"
       ]
@@ -4981,7 +4981,7 @@
       {
         "locale": "en",
         "slugs": [
-          "studio",
+          "festival",
           "workshop",
           "tools-for-action-workshop"
         ]
@@ -4989,7 +4989,7 @@
       {
         "locale": "it",
         "slugs": [
-          "studio",
+          "festival",
           "workshop",
           "tools-for-action-workshop"
         ]
@@ -4998,24 +4998,24 @@
     "urls": [
       {
         "locale": "en",
-        "url": "studio/workshop/tools-for-action-workshop"
+        "url": "festival/workshop/tools-for-action-workshop"
       },
       {
         "locale": "it",
-        "url": "studio/workshop/tools-for-action-workshop"
+        "url": "festival/workshop/tools-for-action-workshop"
       }
     ]
   },
   {
-    "id": "7228725",
+    "id": "23990746",
     "slugs": {
       "en": [
-        "studio",
+        "festival",
         "workshop",
         "cunningham-technique-r-workshop"
       ],
       "it": [
-        "studio",
+        "festival",
         "workshop",
         "cunningham-technique-r-workshop"
       ]
@@ -5028,7 +5028,7 @@
       {
         "locale": "en",
         "slugs": [
-          "studio",
+          "festival",
           "workshop",
           "cunningham-technique-r-workshop"
         ]
@@ -5036,7 +5036,7 @@
       {
         "locale": "it",
         "slugs": [
-          "studio",
+          "festival",
           "workshop",
           "cunningham-technique-r-workshop"
         ]
@@ -5045,24 +5045,24 @@
     "urls": [
       {
         "locale": "en",
-        "url": "studio/workshop/cunningham-technique-r-workshop"
+        "url": "festival/workshop/cunningham-technique-r-workshop"
       },
       {
         "locale": "it",
-        "url": "studio/workshop/cunningham-technique-r-workshop"
+        "url": "festival/workshop/cunningham-technique-r-workshop"
       }
     ]
   },
   {
-    "id": "7228726",
+    "id": "23990747",
     "slugs": {
       "en": [
-        "studio",
+        "festival",
         "workshop",
         "practice-ina"
       ],
       "it": [
-        "studio",
+        "festival",
         "workshop",
         "practice-ina"
       ]
@@ -5075,7 +5075,7 @@
       {
         "locale": "en",
         "slugs": [
-          "studio",
+          "festival",
           "workshop",
           "practice-ina"
         ]
@@ -5083,7 +5083,7 @@
       {
         "locale": "it",
         "slugs": [
-          "studio",
+          "festival",
           "workshop",
           "practice-ina"
         ]
@@ -5092,16 +5092,16 @@
     "urls": [
       {
         "locale": "en",
-        "url": "studio/workshop/practice-ina"
+        "url": "festival/workshop/practice-ina"
       },
       {
         "locale": "it",
-        "url": "studio/workshop/practice-ina"
+        "url": "festival/workshop/practice-ina"
       }
     ]
   },
   {
-    "id": "9949277",
+    "id": "23990750",
     "slugs": {
       "it": [
         "people",
@@ -5131,7 +5131,7 @@
     ]
   },
   {
-    "id": "11231656",
+    "id": "23990748",
     "slugs": {
       "en": [
         "people",
@@ -5161,7 +5161,7 @@
     ]
   },
   {
-    "id": "7228684",
+    "id": "23990752",
     "slugs": {
       "en": [
         "people",
@@ -5208,7 +5208,7 @@
     ]
   },
   {
-    "id": "7228695",
+    "id": "23990751",
     "slugs": {
       "en": [
         "people",
@@ -5255,7 +5255,7 @@
     ]
   },
   {
-    "id": "7228685",
+    "id": "23990753",
     "slugs": {
       "en": [
         "people",
@@ -5302,7 +5302,7 @@
     ]
   },
   {
-    "id": "7228686",
+    "id": "23990754",
     "slugs": {
       "en": [
         "people",
@@ -5349,7 +5349,7 @@
     ]
   },
   {
-    "id": "7228687",
+    "id": "23990755",
     "slugs": {
       "en": [
         "people",
@@ -5396,7 +5396,7 @@
     ]
   },
   {
-    "id": "7228688",
+    "id": "23990756",
     "slugs": {
       "en": [
         "people",
@@ -5443,7 +5443,7 @@
     ]
   },
   {
-    "id": "7228689",
+    "id": "23990757",
     "slugs": {
       "en": [
         "people",
@@ -5490,7 +5490,7 @@
     ]
   },
   {
-    "id": "7228690",
+    "id": "23990758",
     "slugs": {
       "en": [
         "people",
@@ -5537,7 +5537,7 @@
     ]
   },
   {
-    "id": "7228691",
+    "id": "23990759",
     "slugs": {
       "en": [
         "people",
@@ -5584,7 +5584,7 @@
     ]
   },
   {
-    "id": "7228692",
+    "id": "23990760",
     "slugs": {
       "en": [
         "people",
@@ -5631,7 +5631,7 @@
     ]
   },
   {
-    "id": "7228693",
+    "id": "23990761",
     "slugs": {
       "en": [
         "people",
@@ -5678,7 +5678,7 @@
     ]
   },
   {
-    "id": "7228694",
+    "id": "23990749",
     "slugs": {
       "en": [
         "people",
@@ -5725,7 +5725,7 @@
     ]
   },
   {
-    "id": "7228696",
+    "id": "23990762",
     "slugs": {
       "en": [
         "people",
@@ -5772,7 +5772,7 @@
     ]
   },
   {
-    "id": "7228058",
+    "id": "23990777",
     "slugs": {
       "en": [
         "studio",
@@ -5819,7 +5819,7 @@
     ]
   },
   {
-    "id": "7228059",
+    "id": "23990778",
     "slugs": {
       "en": [
         "studio",
@@ -5866,7 +5866,7 @@
     ]
   },
   {
-    "id": "7228065",
+    "id": "23990784",
     "slugs": {
       "en": [
         "studio",
@@ -5913,7 +5913,7 @@
     ]
   },
   {
-    "id": "7228068",
+    "id": "23990787",
     "slugs": {
       "en": [
         "studio",
@@ -5960,7 +5960,7 @@
     ]
   },
   {
-    "id": "7228071",
+    "id": "23990790",
     "slugs": {
       "en": [
         "studio",
@@ -6007,7 +6007,7 @@
     ]
   },
   {
-    "id": "7228057",
+    "id": "23990776",
     "slugs": {
       "en": [
         "studio",
@@ -6054,7 +6054,7 @@
     ]
   },
   {
-    "id": "7228059",
+    "id": "23990778",
     "slugs": {
       "en": [
         "studio",
@@ -6101,7 +6101,7 @@
     ]
   },
   {
-    "id": "7228060",
+    "id": "23990779",
     "slugs": {
       "en": [
         "studio",
@@ -6148,7 +6148,7 @@
     ]
   },
   {
-    "id": "7228061",
+    "id": "23990780",
     "slugs": {
       "en": [
         "studio",
@@ -6195,7 +6195,7 @@
     ]
   },
   {
-    "id": "7228062",
+    "id": "23990781",
     "slugs": {
       "en": [
         "studio",
@@ -6242,7 +6242,7 @@
     ]
   },
   {
-    "id": "7228063",
+    "id": "23990782",
     "slugs": {
       "en": [
         "studio",
@@ -6289,7 +6289,7 @@
     ]
   },
   {
-    "id": "7228064",
+    "id": "23990783",
     "slugs": {
       "en": [
         "studio",
@@ -6336,7 +6336,7 @@
     ]
   },
   {
-    "id": "7228065",
+    "id": "23990784",
     "slugs": {
       "en": [
         "studio",
@@ -6383,7 +6383,7 @@
     ]
   },
   {
-    "id": "7228066",
+    "id": "23990785",
     "slugs": {
       "en": [
         "studio",
@@ -6430,7 +6430,7 @@
     ]
   },
   {
-    "id": "7228067",
+    "id": "23990786",
     "slugs": {
       "en": [
         "studio",
@@ -6477,7 +6477,7 @@
     ]
   },
   {
-    "id": "7228068",
+    "id": "23990787",
     "slugs": {
       "en": [
         "studio",
@@ -6524,7 +6524,7 @@
     ]
   },
   {
-    "id": "7228069",
+    "id": "23990788",
     "slugs": {
       "en": [
         "studio",
@@ -6571,7 +6571,7 @@
     ]
   },
   {
-    "id": "7228070",
+    "id": "23990789",
     "slugs": {
       "en": [
         "studio",
@@ -6618,7 +6618,7 @@
     ]
   },
   {
-    "id": "7228071",
+    "id": "23990790",
     "slugs": {
       "en": [
         "studio",
@@ -6665,7 +6665,7 @@
     ]
   },
   {
-    "id": "7228072",
+    "id": "23990791",
     "slugs": {
       "en": [
         "studio",
@@ -6712,7 +6712,7 @@
     ]
   },
   {
-    "id": "7228073",
+    "id": "23990792",
     "slugs": {
       "en": [
         "studio",
@@ -6759,7 +6759,7 @@
     ]
   },
   {
-    "id": "7228074",
+    "id": "23990793",
     "slugs": {
       "en": [
         "studio",
@@ -6806,7 +6806,7 @@
     ]
   },
   {
-    "id": "7228075",
+    "id": "23990794",
     "slugs": {
       "en": [
         "studio",
@@ -6853,7 +6853,7 @@
     ]
   },
   {
-    "id": "7228076",
+    "id": "23990795",
     "slugs": {
       "en": [
         "studio",
@@ -6900,7 +6900,7 @@
     ]
   },
   {
-    "id": "7228982",
+    "id": "23990935",
     "slugs": {
       "en": [
         "news",
@@ -6943,7 +6943,7 @@
     ]
   },
   {
-    "id": "7228983",
+    "id": "23990936",
     "slugs": {
       "en": [
         "news",
@@ -6986,7 +6986,7 @@
     ]
   },
   {
-    "id": "7228984",
+    "id": "23990937",
     "slugs": {
       "en": [
         "news",
@@ -7029,7 +7029,7 @@
     ]
   },
   {
-    "id": "7228985",
+    "id": "23990938",
     "slugs": {
       "en": [
         "news",
@@ -7072,7 +7072,7 @@
     ]
   },
   {
-    "id": "7228986",
+    "id": "23990939",
     "slugs": {
       "en": [
         "news",
@@ -7115,7 +7115,7 @@
     ]
   },
   {
-    "id": "7228987",
+    "id": "23990940",
     "slugs": {
       "en": [
         "news",
@@ -7158,7 +7158,7 @@
     ]
   },
   {
-    "id": "7228988",
+    "id": "23990941",
     "slugs": {
       "en": [
         "news",
@@ -7201,7 +7201,7 @@
     ]
   },
   {
-    "id": "7228989",
+    "id": "23990942",
     "slugs": {
       "en": [
         "news",
@@ -7244,7 +7244,7 @@
     ]
   },
   {
-    "id": "7228990",
+    "id": "23990943",
     "slugs": {
       "en": [
         "news",
@@ -7287,7 +7287,7 @@
     ]
   },
   {
-    "id": "10258282",
+    "id": "23990763",
     "slugs": {
       "en": [
         "people",
@@ -7317,7 +7317,7 @@
     ]
   },
   {
-    "id": "9949265",
+    "id": "23990764",
     "slugs": {
       "it": [
         "people",

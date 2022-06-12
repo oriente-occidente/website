@@ -3,18 +3,9 @@ const { SiteClient } = require('datocms-client');
 const _ = require('lodash');
 
 const ENV = process.env.NEXT_PUBLIC_DATO_ENV ?? '';
-console.log('ENV', ENV);
-console.log('ENV', ENV);
-console.log('ENV', ENV);
-console.log('ENV', ENV);
-console.log('ENV', ENV);
-console.log('ENV', ENV);
-console.log('ENV', ENV);
-console.log('ENV', ENV);
-console.log('ENV', ENV);
-const DATO_API_KEY = process.env.NEXT_PUBLIC_DATO_API_KEY;
+const API_KEY = process.env.NEXT_PUBLIC_DATO_API_KEY;
 const options = ENV ? { environment: ENV } : null;
-const client = new SiteClient(DATO_API_KEY, options);
+const client = new SiteClient(API_KEY, options);
 
 const sleep = (delay) => {
   return new Promise((resolve) => setTimeout(resolve, delay));
@@ -29,17 +20,20 @@ async function getItemTypesByApiKey() {
 
 //GRAPHQL
 const doQuery = async (q, v) => {
-  const url = `https://graphql.datocms.com${ENV ? '/environments/' + ENV : ''}`;
-  console.log('doquery', url);
+  let headers = {
+    'Content-Type': 'application/json',
+    Accept: 'application/json',
+    Authorization: `Bearer ${API_KEY}`,
+  };
+  if (ENV) {
+    headers['X-Environment'] = ENV;
+  }
+  console.log('doQuery', 'ENV', ENV);
   try {
     const response = await axios({
-      url,
+      url: `https://graphql.datocms.com`,
       method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        Accept: 'application/json',
-        Authorization: `Bearer ${DATO_API_KEY}`,
-      },
+      headers,
       data: { query: q, variables: v },
     });
     console.log('status', response?.status);
