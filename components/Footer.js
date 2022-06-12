@@ -7,7 +7,6 @@ import { resolveLinkById } from 'lib/utils';
 import Newsletter from './Newsletter';
 
 export default function Footer({ locale, data, hideNewsletter = false }) {
-  console.log('footer data', JSON.stringify(data, null, 2));
   return (
     <>
       <footer id="footer" data-datocms-noindex aria-labelledby="footer-heading">

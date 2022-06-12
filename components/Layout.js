@@ -13,8 +13,6 @@ function Layout({
   hideNewsletter = false,
   landing = false,
 }) {
-  // console.log('menu', JSON.stringify(menu, null, 2));
-  // console.log('footer', JSON.stringify(footer, null, 2));
   return (
     <>
       <div data-datocms-noindex>
