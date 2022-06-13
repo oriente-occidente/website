@@ -43,7 +43,7 @@ function Page({ data, locale }) {
       : [];
   const isWorkshops = indexType === 'workshops';
   const group = indexType ? indexType : null;
-  console.log('pageInfo', pageInfo.group);
+  // console.log('pageInfo', pageInfo.group);
   const {
     layoutHero,
     titleHero,
@@ -59,7 +59,7 @@ function Page({ data, locale }) {
   } = payload;
 
   const newsDate = pageInfo.group === 'news-index' ? startDate : null;
-  console.log('newsDate', newsDate);
+  // console.log('newsDate', newsDate);
   const heroData = {
     layoutHero,
     titleHero,

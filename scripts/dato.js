@@ -25,13 +25,14 @@ const doQuery = async (q, v) => {
     Accept: 'application/json',
     Authorization: `Bearer ${API_KEY}`,
   };
-  if (ENV) {
-    headers['X-Environment'] = ENV;
-  }
-  console.log('doQuery', 'ENV', ENV);
+  // if (ENV) {
+  //   headers['X-Environment'] = ENV;
+  // }
+
+  const url = `https://graphql.datocms.com${ENV ? '/environments/' + ENV : ''}`;
   try {
     const response = await axios({
-      url: `https://graphql.datocms.com`,
+      url,
       method: 'POST',
       headers,
       data: { query: q, variables: v },
