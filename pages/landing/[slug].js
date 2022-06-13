@@ -1,5 +1,5 @@
 import * as q from 'lib/queries';
-import fetchData from 'lib/api/fetcher';
+import fetchData from 'lib/fetchData';
 import { doQueryById } from 'lib/api';
 import Layout from 'components/Layout';
 import Seo from 'components/Seo';

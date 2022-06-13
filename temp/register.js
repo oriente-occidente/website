@@ -2,7 +2,7 @@ import { useRouter } from 'next/router';
 import { useState, useEffect } from 'react';
 
 import * as q from 'lib/queries';
-import fetchData from 'lib/api/fetcher';
+import fetchData from 'lib/fetchData';
 import { doQueryItem, doQueryById } from 'lib/api';
 import Layout from 'components/Layout';
 import Seo from 'components/Seo';
