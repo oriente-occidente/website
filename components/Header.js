@@ -167,7 +167,7 @@ function Header(props) {
                                 onClick={() => close()}
                               >
                                 <p className="text-black-light hover:text-red text-sm normal-case">
-                                  {child.title} @{child.link?.id}
+                                  {child.title}
                                 </p>
                               </a>
                             </Link>
@@ -187,7 +187,7 @@ function Header(props) {
         <div className="relative">
           <Link key={item.id} href={resolveLinkById(item.link?.id, locale)}>
             <a className="text-xxs hover:text-red font-semibold tracking-widest text-black">
-              {item.title} @{item.link?.id}
+              {item.title}
             </a>
           </Link>
         </div>

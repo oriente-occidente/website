@@ -49,25 +49,24 @@
   },
   {
     "routes": [
-      "studio",
-      "sostienici"
+      "workshop"
     ],
     "link": {
       "__typename": "PageRecord",
-      "id": "24471144",
-      "slug": "sostienici",
+      "id": "24471155",
+      "slug": "workshop",
       "slugs": [
         {
           "locale": "en",
-          "slug": "support-us"
+          "slug": "workshops"
         },
         {
           "locale": "it",
-          "slug": "sostienici"
+          "slug": "workshop"
         }
       ],
-      "indexType": "",
-      "isIndex": false
+      "indexType": "workshops",
+      "isIndex": true
     },
     "lang": "it"
   },
@@ -139,30 +138,6 @@
         }
       ],
       "indexType": "languages",
-      "isIndex": true
-    },
-    "lang": "it"
-  },
-  {
-    "routes": [
-      "studio",
-      "workshop"
-    ],
-    "link": {
-      "__typename": "PageRecord",
-      "id": "24471155",
-      "slug": "workshop",
-      "slugs": [
-        {
-          "locale": "en",
-          "slug": "workshops"
-        },
-        {
-          "locale": "it",
-          "slug": "workshop"
-        }
-      ],
-      "indexType": "workshops",
       "isIndex": true
     },
     "lang": "it"
@@ -457,7 +432,29 @@
   },
   {
     "routes": [
-      "info",
+      "sostienici"
+    ],
+    "link": {
+      "__typename": "PageRecord",
+      "id": "24471144",
+      "slug": "sostienici",
+      "slugs": [
+        {
+          "locale": "en",
+          "slug": "support-us"
+        },
+        {
+          "locale": "it",
+          "slug": "sostienici"
+        }
+      ],
+      "indexType": "",
+      "isIndex": false
+    },
+    "lang": "it"
+  },
+  {
+    "routes": [
       "news"
     ],
     "link": {
@@ -529,25 +526,24 @@
   },
   {
     "routes": [
-      "studio",
-      "support-us"
+      "workshop"
     ],
     "link": {
       "__typename": "PageRecord",
-      "id": "24471144",
-      "slug": "sostienici",
+      "id": "24471155",
+      "slug": "workshop",
       "slugs": [
         {
           "locale": "en",
-          "slug": "support-us"
+          "slug": "workshops"
         },
         {
           "locale": "it",
-          "slug": "sostienici"
+          "slug": "workshop"
         }
       ],
-      "indexType": "",
-      "isIndex": false
+      "indexType": "workshops",
+      "isIndex": true
     },
     "lang": "en"
   },
@@ -619,30 +615,6 @@
         }
       ],
       "indexType": "languages",
-      "isIndex": true
-    },
-    "lang": "en"
-  },
-  {
-    "routes": [
-      "studio",
-      "workshop"
-    ],
-    "link": {
-      "__typename": "PageRecord",
-      "id": "24471155",
-      "slug": "workshop",
-      "slugs": [
-        {
-          "locale": "en",
-          "slug": "workshops"
-        },
-        {
-          "locale": "it",
-          "slug": "workshop"
-        }
-      ],
-      "indexType": "workshops",
       "isIndex": true
     },
     "lang": "en"
@@ -937,7 +909,29 @@
   },
   {
     "routes": [
-      "info",
+      "support-us"
+    ],
+    "link": {
+      "__typename": "PageRecord",
+      "id": "24471144",
+      "slug": "sostienici",
+      "slugs": [
+        {
+          "locale": "en",
+          "slug": "support-us"
+        },
+        {
+          "locale": "it",
+          "slug": "sostienici"
+        }
+      ],
+      "indexType": "",
+      "isIndex": false
+    },
+    "lang": "en"
+  },
+  {
+    "routes": [
       "news"
     ],
     "link": {

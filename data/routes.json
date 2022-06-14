@@ -5,11 +5,9 @@
     "indexType": "",
     "slugs": {
       "it": [
-        "studio",
         "sostienici"
       ],
       "en": [
-        "studio",
         "support-us"
       ]
     },
@@ -18,14 +16,12 @@
       {
         "locale": "it",
         "slugs": [
-          "studio",
           "sostienici"
         ]
       },
       {
         "locale": "en",
         "slugs": [
-          "studio",
           "support-us"
         ]
       }
@@ -33,11 +29,11 @@
     "urls": [
       {
         "locale": "it",
-        "url": "studio/sostienici"
+        "url": "sostienici"
       },
       {
         "locale": "en",
-        "url": "studio/support-us"
+        "url": "support-us"
       }
     ]
   },
@@ -383,11 +379,9 @@
     "indexType": "news-index",
     "slugs": {
       "it": [
-        "info",
         "news"
       ],
       "en": [
-        "info",
         "news"
       ]
     },
@@ -396,14 +390,12 @@
       {
         "locale": "it",
         "slugs": [
-          "info",
           "news"
         ]
       },
       {
         "locale": "en",
         "slugs": [
-          "info",
           "news"
         ]
       }
@@ -411,11 +403,11 @@
     "urls": [
       {
         "locale": "it",
-        "url": "info/news"
+        "url": "news"
       },
       {
         "locale": "en",
-        "url": "info/news"
+        "url": "news"
       }
     ]
   },
@@ -467,11 +459,9 @@
     "indexType": "workshops",
     "slugs": {
       "it": [
-        "studio",
         "workshop"
       ],
       "en": [
-        "studio",
         "workshop"
       ]
     },
@@ -480,14 +470,12 @@
       {
         "locale": "it",
         "slugs": [
-          "studio",
           "workshop"
         ]
       },
       {
         "locale": "en",
         "slugs": [
-          "studio",
           "workshop"
         ]
       }
@@ -495,11 +483,11 @@
     "urls": [
       {
         "locale": "it",
-        "url": "studio/workshop"
+        "url": "workshop"
       },
       {
         "locale": "en",
-        "url": "studio/workshop"
+        "url": "workshop"
       }
     ]
   },
@@ -4122,6 +4110,36 @@
     ]
   },
   {
+    "id": "24496338",
+    "slugs": {
+      "it": [
+        "people",
+        "eventi",
+        "prova"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "event",
+    "group": "other-events",
+    "paths": [
+      {
+        "locale": "it",
+        "slugs": [
+          "people",
+          "eventi",
+          "prova"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "it",
+        "url": "people/eventi/prova"
+      }
+    ]
+  },
+  {
     "id": "24471165",
     "slugs": {
       "en": [
@@ -4595,12 +4613,10 @@
     "id": "24471046",
     "slugs": {
       "en": [
-        "studio",
         "workshop",
         "bus-stop"
       ],
       "it": [
-        "studio",
         "workshop",
         "bus-stop"
       ]
@@ -4613,7 +4629,6 @@
       {
         "locale": "en",
         "slugs": [
-          "studio",
           "workshop",
           "bus-stop"
         ]
@@ -4621,7 +4636,6 @@
       {
         "locale": "it",
         "slugs": [
-          "studio",
           "workshop",
           "bus-stop"
         ]
@@ -4630,11 +4644,11 @@
     "urls": [
       {
         "locale": "en",
-        "url": "studio/workshop/bus-stop"
+        "url": "workshop/bus-stop"
       },
       {
         "locale": "it",
-        "url": "studio/workshop/bus-stop"
+        "url": "workshop/bus-stop"
       }
     ]
   },
@@ -4642,12 +4656,10 @@
     "id": "24471047",
     "slugs": {
       "en": [
-        "studio",
         "workshop",
         "train-the-trainers-train-the-artists"
       ],
       "it": [
-        "studio",
         "workshop",
         "train-the-trainers-train-the-artists"
       ]
@@ -4660,7 +4672,6 @@
       {
         "locale": "en",
         "slugs": [
-          "studio",
           "workshop",
           "train-the-trainers-train-the-artists"
         ]
@@ -4668,7 +4679,6 @@
       {
         "locale": "it",
         "slugs": [
-          "studio",
           "workshop",
           "train-the-trainers-train-the-artists"
         ]
@@ -4677,11 +4687,11 @@
     "urls": [
       {
         "locale": "en",
-        "url": "studio/workshop/train-the-trainers-train-the-artists"
+        "url": "workshop/train-the-trainers-train-the-artists"
       },
       {
         "locale": "it",
-        "url": "studio/workshop/train-the-trainers-train-the-artists"
+        "url": "workshop/train-the-trainers-train-the-artists"
       }
     ]
   },
@@ -4689,12 +4699,10 @@
     "id": "24471048",
     "slugs": {
       "en": [
-        "studio",
         "workshop",
         "oltre-il-confine-workshop-intensivo-di-teatro-danza"
       ],
       "it": [
-        "studio",
         "workshop",
         "oltre-il-confine-workshop-intensivo-di-teatro-danza"
       ]
@@ -4707,7 +4715,6 @@
       {
         "locale": "en",
         "slugs": [
-          "studio",
           "workshop",
           "oltre-il-confine-workshop-intensivo-di-teatro-danza"
         ]
@@ -4715,7 +4722,6 @@
       {
         "locale": "it",
         "slugs": [
-          "studio",
           "workshop",
           "oltre-il-confine-workshop-intensivo-di-teatro-danza"
         ]
@@ -4724,11 +4730,11 @@
     "urls": [
       {
         "locale": "en",
-        "url": "studio/workshop/oltre-il-confine-workshop-intensivo-di-teatro-danza"
+        "url": "workshop/oltre-il-confine-workshop-intensivo-di-teatro-danza"
       },
       {
         "locale": "it",
-        "url": "studio/workshop/oltre-il-confine-workshop-intensivo-di-teatro-danza"
+        "url": "workshop/oltre-il-confine-workshop-intensivo-di-teatro-danza"
       }
     ]
   },
@@ -4736,12 +4742,10 @@
     "id": "24471049",
     "slugs": {
       "en": [
-        "studio",
         "workshop",
         "la-veronal-working-tools"
       ],
       "it": [
-        "studio",
         "workshop",
         "la-veronal-working-tools"
       ]
@@ -4754,7 +4758,6 @@
       {
         "locale": "en",
         "slugs": [
-          "studio",
           "workshop",
           "la-veronal-working-tools"
         ]
@@ -4762,7 +4765,6 @@
       {
         "locale": "it",
         "slugs": [
-          "studio",
           "workshop",
           "la-veronal-working-tools"
         ]
@@ -4771,11 +4773,11 @@
     "urls": [
       {
         "locale": "en",
-        "url": "studio/workshop/la-veronal-working-tools"
+        "url": "workshop/la-veronal-working-tools"
       },
       {
         "locale": "it",
-        "url": "studio/workshop/la-veronal-working-tools"
+        "url": "workshop/la-veronal-working-tools"
       }
     ]
   },
@@ -4783,12 +4785,10 @@
     "id": "24471050",
     "slugs": {
       "en": [
-        "studio",
         "workshop",
         "masterclass-sidi-larbi-cherkaoui-repertory-fractus-v"
       ],
       "it": [
-        "studio",
         "workshop",
         "masterclass-sidi-larbi-cherkaoui-repertory-fractus-v"
       ]
@@ -4801,7 +4801,6 @@
       {
         "locale": "en",
         "slugs": [
-          "studio",
           "workshop",
           "masterclass-sidi-larbi-cherkaoui-repertory-fractus-v"
         ]
@@ -4809,7 +4808,6 @@
       {
         "locale": "it",
         "slugs": [
-          "studio",
           "workshop",
           "masterclass-sidi-larbi-cherkaoui-repertory-fractus-v"
         ]
@@ -4818,11 +4816,11 @@
     "urls": [
       {
         "locale": "en",
-        "url": "studio/workshop/masterclass-sidi-larbi-cherkaoui-repertory-fractus-v"
+        "url": "workshop/masterclass-sidi-larbi-cherkaoui-repertory-fractus-v"
       },
       {
         "locale": "it",
-        "url": "studio/workshop/masterclass-sidi-larbi-cherkaoui-repertory-fractus-v"
+        "url": "workshop/masterclass-sidi-larbi-cherkaoui-repertory-fractus-v"
       }
     ]
   },
@@ -4830,12 +4828,10 @@
     "id": "24471051",
     "slugs": {
       "en": [
-        "studio",
         "workshop",
         "laboratorio-di-ricerca-corporea"
       ],
       "it": [
-        "studio",
         "workshop",
         "laboratorio-di-ricerca-corporea"
       ]
@@ -4848,7 +4844,6 @@
       {
         "locale": "en",
         "slugs": [
-          "studio",
           "workshop",
           "laboratorio-di-ricerca-corporea"
         ]
@@ -4856,7 +4851,6 @@
       {
         "locale": "it",
         "slugs": [
-          "studio",
           "workshop",
           "laboratorio-di-ricerca-corporea"
         ]
@@ -4865,11 +4859,11 @@
     "urls": [
       {
         "locale": "en",
-        "url": "studio/workshop/laboratorio-di-ricerca-corporea"
+        "url": "workshop/laboratorio-di-ricerca-corporea"
       },
       {
         "locale": "it",
-        "url": "studio/workshop/laboratorio-di-ricerca-corporea"
+        "url": "workshop/laboratorio-di-ricerca-corporea"
       }
     ]
   },
@@ -4877,12 +4871,10 @@
     "id": "24471052",
     "slugs": {
       "en": [
-        "studio",
         "workshop",
         "rizoma-community-workshop"
       ],
       "it": [
-        "studio",
         "workshop",
         "rizoma-community-workshop"
       ]
@@ -4895,7 +4887,6 @@
       {
         "locale": "en",
         "slugs": [
-          "studio",
           "workshop",
           "rizoma-community-workshop"
         ]
@@ -4903,7 +4894,6 @@
       {
         "locale": "it",
         "slugs": [
-          "studio",
           "workshop",
           "rizoma-community-workshop"
         ]
@@ -4912,11 +4902,11 @@
     "urls": [
       {
         "locale": "en",
-        "url": "studio/workshop/rizoma-community-workshop"
+        "url": "workshop/rizoma-community-workshop"
       },
       {
         "locale": "it",
-        "url": "studio/workshop/rizoma-community-workshop"
+        "url": "workshop/rizoma-community-workshop"
       }
     ]
   },
@@ -4924,12 +4914,10 @@
     "id": "24471053",
     "slugs": {
       "en": [
-        "studio",
         "workshop",
         "lab-impart"
       ],
       "it": [
-        "studio",
         "workshop",
         "lab-impart-ripensare-il-palcoscenico"
       ]
@@ -4942,7 +4930,6 @@
       {
         "locale": "en",
         "slugs": [
-          "studio",
           "workshop",
           "lab-impart"
         ]
@@ -4950,7 +4937,6 @@
       {
         "locale": "it",
         "slugs": [
-          "studio",
           "workshop",
           "lab-impart-ripensare-il-palcoscenico"
         ]
@@ -4959,11 +4945,11 @@
     "urls": [
       {
         "locale": "en",
-        "url": "studio/workshop/lab-impart"
+        "url": "workshop/lab-impart"
       },
       {
         "locale": "it",
-        "url": "studio/workshop/lab-impart-ripensare-il-palcoscenico"
+        "url": "workshop/lab-impart-ripensare-il-palcoscenico"
       }
     ]
   },
@@ -4971,12 +4957,10 @@
     "id": "24471054",
     "slugs": {
       "en": [
-        "studio",
         "workshop",
         "tools-for-action-workshop"
       ],
       "it": [
-        "studio",
         "workshop",
         "tools-for-action-workshop"
       ]
@@ -4989,7 +4973,6 @@
       {
         "locale": "en",
         "slugs": [
-          "studio",
           "workshop",
           "tools-for-action-workshop"
         ]
@@ -4997,7 +4980,6 @@
       {
         "locale": "it",
         "slugs": [
-          "studio",
           "workshop",
           "tools-for-action-workshop"
         ]
@@ -5006,11 +4988,11 @@
     "urls": [
       {
         "locale": "en",
-        "url": "studio/workshop/tools-for-action-workshop"
+        "url": "workshop/tools-for-action-workshop"
       },
       {
         "locale": "it",
-        "url": "studio/workshop/tools-for-action-workshop"
+        "url": "workshop/tools-for-action-workshop"
       }
     ]
   },
@@ -5018,12 +5000,10 @@
     "id": "24471055",
     "slugs": {
       "en": [
-        "studio",
         "workshop",
         "cunningham-technique-r-workshop"
       ],
       "it": [
-        "studio",
         "workshop",
         "cunningham-technique-r-workshop"
       ]
@@ -5036,7 +5016,6 @@
       {
         "locale": "en",
         "slugs": [
-          "studio",
           "workshop",
           "cunningham-technique-r-workshop"
         ]
@@ -5044,7 +5023,6 @@
       {
         "locale": "it",
         "slugs": [
-          "studio",
           "workshop",
           "cunningham-technique-r-workshop"
         ]
@@ -5053,11 +5031,11 @@
     "urls": [
       {
         "locale": "en",
-        "url": "studio/workshop/cunningham-technique-r-workshop"
+        "url": "workshop/cunningham-technique-r-workshop"
       },
       {
         "locale": "it",
-        "url": "studio/workshop/cunningham-technique-r-workshop"
+        "url": "workshop/cunningham-technique-r-workshop"
       }
     ]
   },
@@ -5065,12 +5043,10 @@
     "id": "24471056",
     "slugs": {
       "en": [
-        "studio",
         "workshop",
         "practice-ina"
       ],
       "it": [
-        "studio",
         "workshop",
         "practice-ina"
       ]
@@ -5083,7 +5059,6 @@
       {
         "locale": "en",
         "slugs": [
-          "studio",
           "workshop",
           "practice-ina"
         ]
@@ -5091,7 +5066,6 @@
       {
         "locale": "it",
         "slugs": [
-          "studio",
           "workshop",
           "practice-ina"
         ]
@@ -5100,11 +5074,11 @@
     "urls": [
       {
         "locale": "en",
-        "url": "studio/workshop/practice-ina"
+        "url": "workshop/practice-ina"
       },
       {
         "locale": "it",
-        "url": "studio/workshop/practice-ina"
+        "url": "workshop/practice-ina"
       }
     ]
   },
@@ -6911,12 +6885,10 @@
     "id": "24471244",
     "slugs": {
       "en": [
-        "info",
         "news",
         "conferenza-stampa"
       ],
       "it": [
-        "info",
         "news",
         "conferenza-stampa"
       ]
@@ -6929,7 +6901,6 @@
       {
         "locale": "en",
         "slugs": [
-          "info",
           "news",
           "conferenza-stampa"
         ]
@@ -6937,7 +6908,6 @@
       {
         "locale": "it",
         "slugs": [
-          "info",
           "news",
           "conferenza-stampa"
         ]
@@ -6946,11 +6916,11 @@
     "urls": [
       {
         "locale": "en",
-        "url": "info/news/conferenza-stampa"
+        "url": "news/conferenza-stampa"
       },
       {
         "locale": "it",
-        "url": "info/news/conferenza-stampa"
+        "url": "news/conferenza-stampa"
       }
     ]
   },
@@ -6958,12 +6928,10 @@
     "id": "24471245",
     "slugs": {
       "en": [
-        "info",
         "news",
         "triple-bill"
       ],
       "it": [
-        "info",
         "news",
         "triple-bill"
       ]
@@ -6976,7 +6944,6 @@
       {
         "locale": "en",
         "slugs": [
-          "info",
           "news",
           "triple-bill"
         ]
@@ -6984,7 +6951,6 @@
       {
         "locale": "it",
         "slugs": [
-          "info",
           "news",
           "triple-bill"
         ]
@@ -6993,11 +6959,11 @@
     "urls": [
       {
         "locale": "en",
-        "url": "info/news/triple-bill"
+        "url": "news/triple-bill"
       },
       {
         "locale": "it",
-        "url": "info/news/triple-bill"
+        "url": "news/triple-bill"
       }
     ]
   },
@@ -7005,12 +6971,10 @@
     "id": "24471246",
     "slugs": {
       "en": [
-        "info",
         "news",
         "presenti-accessibili"
       ],
       "it": [
-        "info",
         "news",
         "presenti-accessibili"
       ]
@@ -7023,7 +6987,6 @@
       {
         "locale": "en",
         "slugs": [
-          "info",
           "news",
           "presenti-accessibili"
         ]
@@ -7031,7 +6994,6 @@
       {
         "locale": "it",
         "slugs": [
-          "info",
           "news",
           "presenti-accessibili"
         ]
@@ -7040,11 +7002,11 @@
     "urls": [
       {
         "locale": "en",
-        "url": "info/news/presenti-accessibili"
+        "url": "news/presenti-accessibili"
       },
       {
         "locale": "it",
-        "url": "info/news/presenti-accessibili"
+        "url": "news/presenti-accessibili"
       }
     ]
   },
@@ -7052,12 +7014,10 @@
     "id": "24471247",
     "slugs": {
       "en": [
-        "info",
         "news",
         "al-di-qua-artists"
       ],
       "it": [
-        "info",
         "news",
         "al-di-qua-artists"
       ]
@@ -7070,7 +7030,6 @@
       {
         "locale": "en",
         "slugs": [
-          "info",
           "news",
           "al-di-qua-artists"
         ]
@@ -7078,7 +7037,6 @@
       {
         "locale": "it",
         "slugs": [
-          "info",
           "news",
           "al-di-qua-artists"
         ]
@@ -7087,11 +7045,11 @@
     "urls": [
       {
         "locale": "en",
-        "url": "info/news/al-di-qua-artists"
+        "url": "news/al-di-qua-artists"
       },
       {
         "locale": "it",
-        "url": "info/news/al-di-qua-artists"
+        "url": "news/al-di-qua-artists"
       }
     ]
   },
@@ -7099,12 +7057,10 @@
     "id": "24471248",
     "slugs": {
       "en": [
-        "info",
         "news",
         "we-are-looking-for-women"
       ],
       "it": [
-        "info",
         "news",
         "aaa-donne-cercasi"
       ]
@@ -7117,7 +7073,6 @@
       {
         "locale": "en",
         "slugs": [
-          "info",
           "news",
           "we-are-looking-for-women"
         ]
@@ -7125,7 +7080,6 @@
       {
         "locale": "it",
         "slugs": [
-          "info",
           "news",
           "aaa-donne-cercasi"
         ]
@@ -7134,11 +7088,11 @@
     "urls": [
       {
         "locale": "en",
-        "url": "info/news/we-are-looking-for-women"
+        "url": "news/we-are-looking-for-women"
       },
       {
         "locale": "it",
-        "url": "info/news/aaa-donne-cercasi"
+        "url": "news/aaa-donne-cercasi"
       }
     ]
   },
@@ -7146,12 +7100,10 @@
     "id": "24471249",
     "slugs": {
       "en": [
-        "info",
         "news",
         "oriente-occidente-nella-rete-edn"
       ],
       "it": [
-        "info",
         "news",
         "oriente-occidente-nella-rete-edn"
       ]
@@ -7164,7 +7116,6 @@
       {
         "locale": "en",
         "slugs": [
-          "info",
           "news",
           "oriente-occidente-nella-rete-edn"
         ]
@@ -7172,7 +7123,6 @@
       {
         "locale": "it",
         "slugs": [
-          "info",
           "news",
           "oriente-occidente-nella-rete-edn"
         ]
@@ -7181,11 +7131,11 @@
     "urls": [
       {
         "locale": "en",
-        "url": "info/news/oriente-occidente-nella-rete-edn"
+        "url": "news/oriente-occidente-nella-rete-edn"
       },
       {
         "locale": "it",
-        "url": "info/news/oriente-occidente-nella-rete-edn"
+        "url": "news/oriente-occidente-nella-rete-edn"
       }
     ]
   },
@@ -7193,12 +7143,10 @@
     "id": "24471250",
     "slugs": {
       "en": [
-        "info",
         "news",
         "studio-or-la-casa-della-danza-di-oriente-occidente"
       ],
       "it": [
-        "info",
         "news",
         "studio-or-la-casa-della-danza-di-oriente-occidente"
       ]
@@ -7211,7 +7159,6 @@
       {
         "locale": "en",
         "slugs": [
-          "info",
           "news",
           "studio-or-la-casa-della-danza-di-oriente-occidente"
         ]
@@ -7219,7 +7166,6 @@
       {
         "locale": "it",
         "slugs": [
-          "info",
           "news",
           "studio-or-la-casa-della-danza-di-oriente-occidente"
         ]
@@ -7228,11 +7174,11 @@
     "urls": [
       {
         "locale": "en",
-        "url": "info/news/studio-or-la-casa-della-danza-di-oriente-occidente"
+        "url": "news/studio-or-la-casa-della-danza-di-oriente-occidente"
       },
       {
         "locale": "it",
-        "url": "info/news/studio-or-la-casa-della-danza-di-oriente-occidente"
+        "url": "news/studio-or-la-casa-della-danza-di-oriente-occidente"
       }
     ]
   },
@@ -7240,12 +7186,10 @@
     "id": "24471251",
     "slugs": {
       "en": [
-        "info",
         "news",
         "ecco-i-vincitori-del-bando-spring"
       ],
       "it": [
-        "info",
         "news",
         "ecco-i-vincitori-del-bando-spring"
       ]
@@ -7258,7 +7202,6 @@
       {
         "locale": "en",
         "slugs": [
-          "info",
           "news",
           "ecco-i-vincitori-del-bando-spring"
         ]
@@ -7266,7 +7209,6 @@
       {
         "locale": "it",
         "slugs": [
-          "info",
           "news",
           "ecco-i-vincitori-del-bando-spring"
         ]
@@ -7275,11 +7217,11 @@
     "urls": [
       {
         "locale": "en",
-        "url": "info/news/ecco-i-vincitori-del-bando-spring"
+        "url": "news/ecco-i-vincitori-del-bando-spring"
       },
       {
         "locale": "it",
-        "url": "info/news/ecco-i-vincitori-del-bando-spring"
+        "url": "news/ecco-i-vincitori-del-bando-spring"
       }
     ]
   },
@@ -7287,12 +7229,10 @@
     "id": "24471252",
     "slugs": {
       "en": [
-        "info",
         "news",
         "sample-news"
       ],
       "it": [
-        "info",
         "news",
         "servizio-civile"
       ]
@@ -7305,7 +7245,6 @@
       {
         "locale": "en",
         "slugs": [
-          "info",
           "news",
           "sample-news"
         ]
@@ -7313,7 +7252,6 @@
       {
         "locale": "it",
         "slugs": [
-          "info",
           "news",
           "servizio-civile"
         ]
@@ -7322,11 +7260,11 @@
     "urls": [
       {
         "locale": "en",
-        "url": "info/news/sample-news"
+        "url": "news/sample-news"
       },
       {
         "locale": "it",
-        "url": "info/news/servizio-civile"
+        "url": "news/servizio-civile"
       }
     ]
   },

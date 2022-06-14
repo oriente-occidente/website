@@ -151,8 +151,8 @@ function Page({ data, locale }) {
   );
 }
 export async function getStaticPaths() {
-  const paths = getPaths();
-  return { paths, fallback: false };
+  const paths = [];
+  return { paths, fallback: 'blocking' };
 }
 
 export async function getStaticProps({ params, locale, preview = false }) {
