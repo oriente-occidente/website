@@ -1,4 +1,5 @@
 import dynamic from 'next/dynamic';
+import { useRouter } from 'next/router';
 
 import { doQuery, getPaths } from 'lib/api';
 import Layout from 'components/Layout';
@@ -21,6 +22,7 @@ import OtherSections from 'components/contents/OtherSections';
 // import ShareButtons from 'components/ShareButtons';
 
 function Page({ data, locale }) {
+  const router = useRouter();
   const { pageInfo, site, menu, footer, ...rest } = data;
   const pluk = (data) => {
     const { festivalEvents, otherEvents, courses, workshops } = data;
@@ -29,8 +31,10 @@ function Page({ data, locale }) {
   const { __typename: pageType } = pageInfo;
   const payload = rest[pageType];
 
-  if (!payload) return null; //REDIRECT TO 404
-
+  if (!payload) {
+    console.log('NO PAYLOAD', pageInfo, rest);
+    router.push('/404'); //REDIRECT TO 404}
+  }
   const isPage = pageType === 'page';
   const isIndex = isPage && payload.isIndex;
   const indexType = isIndex && payload.indexType;

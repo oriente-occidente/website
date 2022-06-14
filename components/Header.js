@@ -182,7 +182,6 @@ function Header(props) {
         </Popover>
       );
     } else {
-      console.log(item);
       return (
         <div className="relative">
           <Link key={item.id} href={resolveLinkById(item.link?.id, locale)}>
