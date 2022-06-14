@@ -85,7 +85,7 @@ function getMenupathByLocale(menu, locale) {
   return routes;
 }
 
-function getPrefix(menu, nameToMatch, log = false) {
+function getPrefix(menu, nameToMatch, log = true) {
   if (log) {
     console.log('getPrefix', nameToMatch);
   }
@@ -110,13 +110,7 @@ function withAlts(list) {
   });
 }
 
-const getRecords = async (
-  list,
-  name,
-  prefixes,
-  group = 'page',
-  log = false
-) => {
+const getRecords = async (list, name, prefixes, group = 'page', log = true) => {
   if (log) {
     console.log('getRecords', name);
     console.log('prefixes', prefixes);

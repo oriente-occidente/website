@@ -3,6 +3,7 @@
   "version": "0.1.2",
   "description": "orienteoccidente",
   "scripts": {
+    "cleanup": "node ./scripts/cleanup.js",
     "data": "node ./scripts/index.js",
     "dev": "next dev",
     "build": "next build",
