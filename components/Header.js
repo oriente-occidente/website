@@ -156,21 +156,23 @@ function Header(props) {
                     <div className="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
                       {item.children
                         .filter((c) => c.slug)
-                        .map((child) => (
-                          <Link
-                            key={child.id}
-                            href={resolveLinkById(child.link?.id, locale)}
-                          >
-                            <a
-                              className="-m-3 block rounded-md p-1"
-                              onClick={() => close()}
+                        .map((child) => {
+                          return (
+                            <Link
+                              key={child.id}
+                              href={resolveLinkById(child.link?.id, locale)}
                             >
-                              <p className="text-black-light hover:text-red text-sm normal-case">
-                                {child.title} @{child.link?.id}
-                              </p>
-                            </a>
-                          </Link>
-                        ))}
+                              <a
+                                className="-m-3 block rounded-md p-1"
+                                onClick={() => close()}
+                              >
+                                <p className="text-black-light hover:text-red text-sm normal-case">
+                                  {child.title} @{child.link?.id}
+                                </p>
+                              </a>
+                            </Link>
+                          );
+                        })}
                     </div>
                   </div>
                 </Popover.Panel>
@@ -180,6 +182,7 @@ function Header(props) {
         </Popover>
       );
     } else {
+      console.log(item);
       return (
         <div className="relative">
           <Link key={item.id} href={resolveLinkById(item.link?.id, locale)}>
