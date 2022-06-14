@@ -33,7 +33,7 @@ function Page({ data, locale, thankyouMessage }) {
     if (eventId) {
       doQueryItem(locale, eventId)
         .then((payload) => {
-          console.log('event data:', payload);
+          // console.log('event data:', payload);
           setPayload(payload);
         })
         .catch((e) => console.log(e));

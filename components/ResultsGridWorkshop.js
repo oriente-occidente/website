@@ -15,8 +15,6 @@ function ResultsGridWorkshop({ list, locale, group }) {
   );
   const showHeaders = finished.length > 0 && active.length > 0;
 
-  console.log('list', resultList);
-
   return (
     <div className="my-4 container">
       {showHeaders && (

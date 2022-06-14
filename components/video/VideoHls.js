@@ -17,7 +17,7 @@ export default function VideoPlayer({ src, autoplay = true, ...other }) {
     });
   }, []);
 
-  console.log('HLS', src);
+  // console.log('HLS', src);
   return (
     <div style={{ width: '100%', minHeight: 500, backgroundColor: 'black' }}>
       <video ref={ref} style={{ width: '100%' }} {...other} />

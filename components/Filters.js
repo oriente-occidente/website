@@ -59,9 +59,9 @@ function Filters({ locale, list = null, datesOfYear }) {
     if (typeFilter === 'all') {
       const allResults =
         Object.keys(results).reduce((all, key) => {
-          console.log('all', all);
-          console.log('key', key);
-          console.log('results[key]', results[key]);
+          // console.log('all', all);
+          // console.log('key', key);
+          // console.log('results[key]', results[key]);
           if (results[key]) {
             all = [...all, ...results[key]];
           }
