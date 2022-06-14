@@ -7,8 +7,7 @@ const getLocales = async () => {
 };
 
 const getData = async () => {
-  const q = `
-query menu  {
+  const q = `query menu  {
   menu: allMenuItems(filter: {parent: {exists: "false"}} ) {
     ...itemFrag
     children {
@@ -48,8 +47,7 @@ fragment itemFrag on MenuItemRecord {
       isIndex
     }
   }
-}
-`;
+}`;
   return doQuery(q);
 };
 
@@ -85,7 +83,7 @@ function getMenupathByLocale(menu, locale) {
   return routes;
 }
 
-function getPrefix(menu, nameToMatch, log = true) {
+function getPrefix(menu, nameToMatch, log = false) {
   if (log) {
     console.log('getPrefix', nameToMatch);
   }
@@ -110,7 +108,13 @@ function withAlts(list) {
   });
 }
 
-const getRecords = async (list, name, prefixes, group = 'page', log = true) => {
+const getRecords = async (
+  list,
+  name,
+  prefixes,
+  group = 'page',
+  log = false
+) => {
   if (log) {
     console.log('getRecords', name);
     console.log('prefixes', prefixes);

@@ -50,6 +50,30 @@
   {
     "routes": [
       "studio",
+      "sostienici"
+    ],
+    "link": {
+      "__typename": "PageRecord",
+      "id": "24471144",
+      "slug": "sostienici",
+      "slugs": [
+        {
+          "locale": "en",
+          "slug": "support-us"
+        },
+        {
+          "locale": "it",
+          "slug": "sostienici"
+        }
+      ],
+      "indexType": "",
+      "isIndex": false
+    },
+    "lang": "it"
+  },
+  {
+    "routes": [
+      "studio",
       "artisti-associati"
     ],
     "link": {
@@ -433,6 +457,7 @@
   },
   {
     "routes": [
+      "info",
       "news"
     ],
     "link": {
@@ -451,29 +476,6 @@
       ],
       "indexType": "news-index",
       "isIndex": true
-    },
-    "lang": "it"
-  },
-  {
-    "routes": [
-      "sostienici"
-    ],
-    "link": {
-      "__typename": "PageRecord",
-      "id": "24471144",
-      "slug": "sostienici",
-      "slugs": [
-        {
-          "locale": "en",
-          "slug": "support-us"
-        },
-        {
-          "locale": "it",
-          "slug": "sostienici"
-        }
-      ],
-      "indexType": "",
-      "isIndex": false
     },
     "lang": "it"
   },
@@ -518,6 +520,30 @@
         {
           "locale": "it",
           "slug": "box-office"
+        }
+      ],
+      "indexType": "",
+      "isIndex": false
+    },
+    "lang": "en"
+  },
+  {
+    "routes": [
+      "studio",
+      "support-us"
+    ],
+    "link": {
+      "__typename": "PageRecord",
+      "id": "24471144",
+      "slug": "sostienici",
+      "slugs": [
+        {
+          "locale": "en",
+          "slug": "support-us"
+        },
+        {
+          "locale": "it",
+          "slug": "sostienici"
         }
       ],
       "indexType": "",
@@ -911,6 +937,7 @@
   },
   {
     "routes": [
+      "info",
       "news"
     ],
     "link": {
@@ -929,29 +956,6 @@
       ],
       "indexType": "news-index",
       "isIndex": true
-    },
-    "lang": "en"
-  },
-  {
-    "routes": [
-      "support-us"
-    ],
-    "link": {
-      "__typename": "PageRecord",
-      "id": "24471144",
-      "slug": "sostienici",
-      "slugs": [
-        {
-          "locale": "en",
-          "slug": "support-us"
-        },
-        {
-          "locale": "it",
-          "slug": "sostienici"
-        }
-      ],
-      "indexType": "",
-      "isIndex": false
     },
     "lang": "en"
   }

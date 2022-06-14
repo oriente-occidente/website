@@ -156,7 +156,6 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params, locale, preview = false }) {
-  console.log('PARAMS', params);
   // const routes = queryRoutesByParams(params, locale, preview);
   const data = await doQuery(locale, params, preview);
   // console.log('DATA', JSON.stringify(result.data, null, 2));

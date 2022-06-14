@@ -5,9 +5,11 @@
     "indexType": "",
     "slugs": {
       "it": [
+        "studio",
         "sostienici"
       ],
       "en": [
+        "studio",
         "support-us"
       ]
     },
@@ -16,12 +18,14 @@
       {
         "locale": "it",
         "slugs": [
+          "studio",
           "sostienici"
         ]
       },
       {
         "locale": "en",
         "slugs": [
+          "studio",
           "support-us"
         ]
       }
@@ -29,11 +33,11 @@
     "urls": [
       {
         "locale": "it",
-        "url": "sostienici"
+        "url": "studio/sostienici"
       },
       {
         "locale": "en",
-        "url": "support-us"
+        "url": "studio/support-us"
       }
     ]
   },
@@ -379,9 +383,11 @@
     "indexType": "news-index",
     "slugs": {
       "it": [
+        "info",
         "news"
       ],
       "en": [
+        "info",
         "news"
       ]
     },
@@ -390,12 +396,14 @@
       {
         "locale": "it",
         "slugs": [
+          "info",
           "news"
         ]
       },
       {
         "locale": "en",
         "slugs": [
+          "info",
           "news"
         ]
       }
@@ -403,11 +411,11 @@
     "urls": [
       {
         "locale": "it",
-        "url": "news"
+        "url": "info/news"
       },
       {
         "locale": "en",
-        "url": "news"
+        "url": "info/news"
       }
     ]
   },
@@ -6903,10 +6911,12 @@
     "id": "24471244",
     "slugs": {
       "en": [
+        "info",
         "news",
         "conferenza-stampa"
       ],
       "it": [
+        "info",
         "news",
         "conferenza-stampa"
       ]
@@ -6919,6 +6929,7 @@
       {
         "locale": "en",
         "slugs": [
+          "info",
           "news",
           "conferenza-stampa"
         ]
@@ -6926,6 +6937,7 @@
       {
         "locale": "it",
         "slugs": [
+          "info",
           "news",
           "conferenza-stampa"
         ]
@@ -6934,11 +6946,11 @@
     "urls": [
       {
         "locale": "en",
-        "url": "news/conferenza-stampa"
+        "url": "info/news/conferenza-stampa"
       },
       {
         "locale": "it",
-        "url": "news/conferenza-stampa"
+        "url": "info/news/conferenza-stampa"
       }
     ]
   },
@@ -6946,10 +6958,12 @@
     "id": "24471245",
     "slugs": {
       "en": [
+        "info",
         "news",
         "triple-bill"
       ],
       "it": [
+        "info",
         "news",
         "triple-bill"
       ]
@@ -6962,6 +6976,7 @@
       {
         "locale": "en",
         "slugs": [
+          "info",
           "news",
           "triple-bill"
         ]
@@ -6969,6 +6984,7 @@
       {
         "locale": "it",
         "slugs": [
+          "info",
           "news",
           "triple-bill"
         ]
@@ -6977,11 +6993,11 @@
     "urls": [
       {
         "locale": "en",
-        "url": "news/triple-bill"
+        "url": "info/news/triple-bill"
       },
       {
         "locale": "it",
-        "url": "news/triple-bill"
+        "url": "info/news/triple-bill"
       }
     ]
   },
@@ -6989,10 +7005,12 @@
     "id": "24471246",
     "slugs": {
       "en": [
+        "info",
         "news",
         "presenti-accessibili"
       ],
       "it": [
+        "info",
         "news",
         "presenti-accessibili"
       ]
@@ -7005,6 +7023,7 @@
       {
         "locale": "en",
         "slugs": [
+          "info",
           "news",
           "presenti-accessibili"
         ]
@@ -7012,6 +7031,7 @@
       {
         "locale": "it",
         "slugs": [
+          "info",
           "news",
           "presenti-accessibili"
         ]
@@ -7020,11 +7040,11 @@
     "urls": [
       {
         "locale": "en",
-        "url": "news/presenti-accessibili"
+        "url": "info/news/presenti-accessibili"
       },
       {
         "locale": "it",
-        "url": "news/presenti-accessibili"
+        "url": "info/news/presenti-accessibili"
       }
     ]
   },
@@ -7032,10 +7052,12 @@
     "id": "24471247",
     "slugs": {
       "en": [
+        "info",
         "news",
         "al-di-qua-artists"
       ],
       "it": [
+        "info",
         "news",
         "al-di-qua-artists"
       ]
@@ -7048,6 +7070,7 @@
       {
         "locale": "en",
         "slugs": [
+          "info",
           "news",
           "al-di-qua-artists"
         ]
@@ -7055,6 +7078,7 @@
       {
         "locale": "it",
         "slugs": [
+          "info",
           "news",
           "al-di-qua-artists"
         ]
@@ -7063,11 +7087,11 @@
     "urls": [
       {
         "locale": "en",
-        "url": "news/al-di-qua-artists"
+        "url": "info/news/al-di-qua-artists"
       },
       {
         "locale": "it",
-        "url": "news/al-di-qua-artists"
+        "url": "info/news/al-di-qua-artists"
       }
     ]
   },
@@ -7075,10 +7099,12 @@
     "id": "24471248",
     "slugs": {
       "en": [
+        "info",
         "news",
         "we-are-looking-for-women"
       ],
       "it": [
+        "info",
         "news",
         "aaa-donne-cercasi"
       ]
@@ -7091,6 +7117,7 @@
       {
         "locale": "en",
         "slugs": [
+          "info",
           "news",
           "we-are-looking-for-women"
         ]
@@ -7098,6 +7125,7 @@
       {
         "locale": "it",
         "slugs": [
+          "info",
           "news",
           "aaa-donne-cercasi"
         ]
@@ -7106,11 +7134,11 @@
     "urls": [
       {
         "locale": "en",
-        "url": "news/we-are-looking-for-women"
+        "url": "info/news/we-are-looking-for-women"
       },
       {
         "locale": "it",
-        "url": "news/aaa-donne-cercasi"
+        "url": "info/news/aaa-donne-cercasi"
       }
     ]
   },
@@ -7118,10 +7146,12 @@
     "id": "24471249",
     "slugs": {
       "en": [
+        "info",
         "news",
         "oriente-occidente-nella-rete-edn"
       ],
       "it": [
+        "info",
         "news",
         "oriente-occidente-nella-rete-edn"
       ]
@@ -7134,6 +7164,7 @@
       {
         "locale": "en",
         "slugs": [
+          "info",
           "news",
           "oriente-occidente-nella-rete-edn"
         ]
@@ -7141,6 +7172,7 @@
       {
         "locale": "it",
         "slugs": [
+          "info",
           "news",
           "oriente-occidente-nella-rete-edn"
         ]
@@ -7149,11 +7181,11 @@
     "urls": [
       {
         "locale": "en",
-        "url": "news/oriente-occidente-nella-rete-edn"
+        "url": "info/news/oriente-occidente-nella-rete-edn"
       },
       {
         "locale": "it",
-        "url": "news/oriente-occidente-nella-rete-edn"
+        "url": "info/news/oriente-occidente-nella-rete-edn"
       }
     ]
   },
@@ -7161,10 +7193,12 @@
     "id": "24471250",
     "slugs": {
       "en": [
+        "info",
         "news",
         "studio-or-la-casa-della-danza-di-oriente-occidente"
       ],
       "it": [
+        "info",
         "news",
         "studio-or-la-casa-della-danza-di-oriente-occidente"
       ]
@@ -7177,6 +7211,7 @@
       {
         "locale": "en",
         "slugs": [
+          "info",
           "news",
           "studio-or-la-casa-della-danza-di-oriente-occidente"
         ]
@@ -7184,6 +7219,7 @@
       {
         "locale": "it",
         "slugs": [
+          "info",
           "news",
           "studio-or-la-casa-della-danza-di-oriente-occidente"
         ]
@@ -7192,11 +7228,11 @@
     "urls": [
       {
         "locale": "en",
-        "url": "news/studio-or-la-casa-della-danza-di-oriente-occidente"
+        "url": "info/news/studio-or-la-casa-della-danza-di-oriente-occidente"
       },
       {
         "locale": "it",
-        "url": "news/studio-or-la-casa-della-danza-di-oriente-occidente"
+        "url": "info/news/studio-or-la-casa-della-danza-di-oriente-occidente"
       }
     ]
   },
@@ -7204,10 +7240,12 @@
     "id": "24471251",
     "slugs": {
       "en": [
+        "info",
         "news",
         "ecco-i-vincitori-del-bando-spring"
       ],
       "it": [
+        "info",
         "news",
         "ecco-i-vincitori-del-bando-spring"
       ]
@@ -7220,6 +7258,7 @@
       {
         "locale": "en",
         "slugs": [
+          "info",
           "news",
           "ecco-i-vincitori-del-bando-spring"
         ]
@@ -7227,6 +7266,7 @@
       {
         "locale": "it",
         "slugs": [
+          "info",
           "news",
           "ecco-i-vincitori-del-bando-spring"
         ]
@@ -7235,11 +7275,11 @@
     "urls": [
       {
         "locale": "en",
-        "url": "news/ecco-i-vincitori-del-bando-spring"
+        "url": "info/news/ecco-i-vincitori-del-bando-spring"
       },
       {
         "locale": "it",
-        "url": "news/ecco-i-vincitori-del-bando-spring"
+        "url": "info/news/ecco-i-vincitori-del-bando-spring"
       }
     ]
   },
@@ -7247,10 +7287,12 @@
     "id": "24471252",
     "slugs": {
       "en": [
+        "info",
         "news",
         "sample-news"
       ],
       "it": [
+        "info",
         "news",
         "servizio-civile"
       ]
@@ -7263,6 +7305,7 @@
       {
         "locale": "en",
         "slugs": [
+          "info",
           "news",
           "sample-news"
         ]
@@ -7270,6 +7313,7 @@
       {
         "locale": "it",
         "slugs": [
+          "info",
           "news",
           "servizio-civile"
         ]
@@ -7278,11 +7322,11 @@
     "urls": [
       {
         "locale": "en",
-        "url": "news/sample-news"
+        "url": "info/news/sample-news"
       },
       {
         "locale": "it",
-        "url": "news/servizio-civile"
+        "url": "info/news/servizio-civile"
       }
     ]
   },
