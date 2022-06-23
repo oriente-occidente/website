@@ -11,7 +11,7 @@ import HeroEmpty from 'components/hero/HeroEmpty';
 import HeroIndex from 'components/hero/HeroIndex';
 import GalleryPreview from 'components/galleries/GalleryPreview';
 import ResultsGrid from 'components/ResultsGrid';
-import ResultsGridWorkshop from 'components/ResultsGridWorkshop';
+import ResultsGridSorted from 'components/ResultsGridSorted';
 import Filters from 'components/Filters';
 
 // import Modal from 'components/Modal';
@@ -45,7 +45,8 @@ function Page({ data, locale }) {
         ? pluk(rest, 'festivalEvents, otherEvents, courses, workshops')
         : rest[camelCase(indexType)]
       : [];
-  const isWorkshops = indexType === 'workshops';
+  // console.log('indexType', indexType);
+  const isSorted = indexType === 'workshops' || indexType === 'other-events';
   const group = indexType ? indexType : null;
   // console.log('pageInfo', pageInfo.group);
   const {
@@ -114,11 +115,11 @@ function Page({ data, locale }) {
         {payload?.otherSections && payload.otherSections.length > 0 && (
           <OtherSections locale={locale} data={payload.otherSections} />
         )}
-        {isIndex && !showFilters && !isWorkshops && (
+        {isIndex && !showFilters && !isSorted && (
           <ResultsGrid list={list} group={group} locale={locale} />
         )}
-        {isIndex && !showFilters && isWorkshops && (
-          <ResultsGridWorkshop list={list} group={group} locale={locale} />
+        {isIndex && !showFilters && isSorted && (
+          <ResultsGridSorted list={list} group={group} locale={locale} />
         )}
         {isIndex && showFilters && (
           <Filters

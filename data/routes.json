@@ -1,170 +1,6 @@
 [
   {
-    "id": "24471144",
-    "isIndex": false,
-    "indexType": "",
-    "slugs": {
-      "it": [
-        "sostienici"
-      ],
-      "en": [
-        "support-us"
-      ]
-    },
-    "__typename": "page",
-    "paths": [
-      {
-        "locale": "it",
-        "slugs": [
-          "sostienici"
-        ]
-      },
-      {
-        "locale": "en",
-        "slugs": [
-          "support-us"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "it",
-        "url": "sostienici"
-      },
-      {
-        "locale": "en",
-        "url": "support-us"
-      }
-    ]
-  },
-  {
-    "id": "24471145",
-    "isIndex": true,
-    "indexType": "networks",
-    "slugs": {
-      "it": [
-        "people",
-        "reti"
-      ],
-      "en": [
-        "people",
-        "networks"
-      ]
-    },
-    "__typename": "page",
-    "paths": [
-      {
-        "locale": "it",
-        "slugs": [
-          "people",
-          "reti"
-        ]
-      },
-      {
-        "locale": "en",
-        "slugs": [
-          "people",
-          "networks"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "it",
-        "url": "people/reti"
-      },
-      {
-        "locale": "en",
-        "url": "people/networks"
-      }
-    ]
-  },
-  {
-    "id": "24471146",
-    "isIndex": true,
-    "indexType": "languages",
-    "slugs": {
-      "it": [
-        "studio",
-        "linguaggi"
-      ],
-      "en": [
-        "studio",
-        "languages"
-      ]
-    },
-    "__typename": "page",
-    "paths": [
-      {
-        "locale": "it",
-        "slugs": [
-          "studio",
-          "linguaggi"
-        ]
-      },
-      {
-        "locale": "en",
-        "slugs": [
-          "studio",
-          "languages"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "it",
-        "url": "studio/linguaggi"
-      },
-      {
-        "locale": "en",
-        "url": "studio/languages"
-      }
-    ]
-  },
-  {
-    "id": "24471147",
-    "isIndex": false,
-    "indexType": "",
-    "slugs": {
-      "it": [
-        "info",
-        "partners"
-      ],
-      "en": [
-        "info",
-        "partners"
-      ]
-    },
-    "__typename": "page",
-    "paths": [
-      {
-        "locale": "it",
-        "slugs": [
-          "info",
-          "partners"
-        ]
-      },
-      {
-        "locale": "en",
-        "slugs": [
-          "info",
-          "partners"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "it",
-        "url": "info/partners"
-      },
-      {
-        "locale": "en",
-        "url": "info/partners"
-      }
-    ]
-  },
-  {
-    "id": "24471148",
+    "id": "7228697",
     "isIndex": false,
     "indexType": "",
     "slugs": {
@@ -206,7 +42,49 @@
     ]
   },
   {
-    "id": "24471149",
+    "id": "7228698",
+    "isIndex": false,
+    "indexType": "",
+    "slugs": {
+      "it": [
+        "info",
+        "partners"
+      ],
+      "en": [
+        "info",
+        "partners"
+      ]
+    },
+    "__typename": "page",
+    "paths": [
+      {
+        "locale": "it",
+        "slugs": [
+          "info",
+          "partners"
+        ]
+      },
+      {
+        "locale": "en",
+        "slugs": [
+          "info",
+          "partners"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "it",
+        "url": "info/partners"
+      },
+      {
+        "locale": "en",
+        "url": "info/partners"
+      }
+    ]
+  },
+  {
+    "id": "7228699",
     "isIndex": false,
     "indexType": "",
     "slugs": {
@@ -248,7 +126,7 @@
     ]
   },
   {
-    "id": "24471150",
+    "id": "7228700",
     "isIndex": false,
     "indexType": "",
     "slugs": {
@@ -290,7 +168,7 @@
     ]
   },
   {
-    "id": "24471151",
+    "id": "7228701",
     "isIndex": false,
     "indexType": "",
     "slugs": {
@@ -332,7 +210,7 @@
     ]
   },
   {
-    "id": "24471152",
+    "id": "7228702",
     "isIndex": true,
     "indexType": "artistic-residences",
     "slugs": {
@@ -374,7 +252,7 @@
     ]
   },
   {
-    "id": "24471153",
+    "id": "7228703",
     "isIndex": true,
     "indexType": "news-index",
     "slugs": {
@@ -412,7 +290,7 @@
     ]
   },
   {
-    "id": "24471154",
+    "id": "7228704",
     "isIndex": false,
     "indexType": "",
     "slugs": {
@@ -454,14 +332,16 @@
     ]
   },
   {
-    "id": "24471155",
+    "id": "7228705",
     "isIndex": true,
     "indexType": "workshops",
     "slugs": {
       "it": [
+        "studio",
         "workshop"
       ],
       "en": [
+        "studio",
         "workshop"
       ]
     },
@@ -470,12 +350,14 @@
       {
         "locale": "it",
         "slugs": [
+          "studio",
           "workshop"
         ]
       },
       {
         "locale": "en",
         "slugs": [
+          "studio",
           "workshop"
         ]
       }
@@ -483,16 +365,16 @@
     "urls": [
       {
         "locale": "it",
-        "url": "workshop"
+        "url": "studio/workshop"
       },
       {
         "locale": "en",
-        "url": "workshop"
+        "url": "studio/workshop"
       }
     ]
   },
   {
-    "id": "24471156",
+    "id": "7228706",
     "isIndex": false,
     "indexType": "",
     "slugs": {
@@ -534,7 +416,7 @@
     ]
   },
   {
-    "id": "24471157",
+    "id": "7228707",
     "isIndex": false,
     "indexType": "",
     "slugs": {
@@ -576,7 +458,7 @@
     ]
   },
   {
-    "id": "24471158",
+    "id": "7228708",
     "isIndex": true,
     "indexType": "associated-artists",
     "slugs": {
@@ -618,17 +500,15 @@
     ]
   },
   {
-    "id": "24471159",
+    "id": "7228709",
     "isIndex": false,
     "indexType": "",
     "slugs": {
       "it": [
-        "info",
-        "sicurezza-covid-19"
+        "sostienici"
       ],
       "en": [
-        "info",
-        "safety-covid-19"
+        "support-us"
       ]
     },
     "__typename": "page",
@@ -636,31 +516,29 @@
       {
         "locale": "it",
         "slugs": [
-          "info",
-          "sicurezza-covid-19"
+          "sostienici"
         ]
       },
       {
         "locale": "en",
         "slugs": [
-          "info",
-          "safety-covid-19"
+          "support-us"
         ]
       }
     ],
     "urls": [
       {
         "locale": "it",
-        "url": "info/sicurezza-covid-19"
+        "url": "sostienici"
       },
       {
         "locale": "en",
-        "url": "info/safety-covid-19"
+        "url": "support-us"
       }
     ]
   },
   {
-    "id": "24471160",
+    "id": "7228711",
     "isIndex": true,
     "indexType": "festival-events",
     "slugs": {
@@ -702,7 +580,7 @@
     ]
   },
   {
-    "id": "24471161",
+    "id": "7228712",
     "isIndex": false,
     "indexType": "",
     "slugs": {
@@ -744,7 +622,7 @@
     ]
   },
   {
-    "id": "24471163",
+    "id": "7228714",
     "isIndex": true,
     "indexType": "other-events",
     "slugs": {
@@ -786,7 +664,7 @@
     ]
   },
   {
-    "id": "24471164",
+    "id": "7228715",
     "isIndex": true,
     "indexType": "projects",
     "slugs": {
@@ -828,7 +706,49 @@
     ]
   },
   {
-    "id": "24471162",
+    "id": "9913479",
+    "isIndex": true,
+    "indexType": "networks",
+    "slugs": {
+      "it": [
+        "people",
+        "reti"
+      ],
+      "en": [
+        "people",
+        "networks"
+      ]
+    },
+    "__typename": "page",
+    "paths": [
+      {
+        "locale": "it",
+        "slugs": [
+          "people",
+          "reti"
+        ]
+      },
+      {
+        "locale": "en",
+        "slugs": [
+          "people",
+          "networks"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "it",
+        "url": "people/reti"
+      },
+      {
+        "locale": "en",
+        "url": "people/networks"
+      }
+    ]
+  },
+  {
+    "id": "7228713",
     "slugs": {
       "en": [
         "privacy-information"
@@ -867,7 +787,226 @@
     ]
   },
   {
-    "id": "24471166",
+    "id": "13710151",
+    "slugs": {
+      "en": [
+        "languages"
+      ],
+      "it": [
+        "linguaggi"
+      ]
+    },
+    "isIndex": true,
+    "indexType": "languages",
+    "__typename": "page",
+    "group": "page",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "languages"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "linguaggi"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "languages"
+      },
+      {
+        "locale": "it",
+        "url": "linguaggi"
+      }
+    ]
+  },
+  {
+    "id": "29192160",
+    "slugs": {
+      "it": [
+        "festival",
+        "programma",
+        "lamenta"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "event",
+    "group": "festival-events",
+    "paths": [
+      {
+        "locale": "it",
+        "slugs": [
+          "festival",
+          "programma",
+          "lamenta"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "it",
+        "url": "festival/programma/lamenta"
+      }
+    ]
+  },
+  {
+    "id": "26303361",
+    "slugs": {
+      "it": [
+        "festival",
+        "programma",
+        "metamorphosis-larva-carlo-massari"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "event",
+    "group": "festival-events",
+    "paths": [
+      {
+        "locale": "it",
+        "slugs": [
+          "festival",
+          "programma",
+          "metamorphosis-larva-carlo-massari"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "it",
+        "url": "festival/programma/metamorphosis-larva-carlo-massari"
+      }
+    ]
+  },
+  {
+    "id": "29189115",
+    "slugs": {
+      "it": [
+        "festival",
+        "programma",
+        "metamorphosis-blatta-carlo-massari"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "event",
+    "group": "festival-events",
+    "paths": [
+      {
+        "locale": "it",
+        "slugs": [
+          "festival",
+          "programma",
+          "metamorphosis-blatta-carlo-massari"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "it",
+        "url": "festival/programma/metamorphosis-blatta-carlo-massari"
+      }
+    ]
+  },
+  {
+    "id": "29189949",
+    "slugs": {
+      "it": [
+        "festival",
+        "programma",
+        "metamorphosis-sapiens-carlo-massari"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "event",
+    "group": "festival-events",
+    "paths": [
+      {
+        "locale": "it",
+        "slugs": [
+          "festival",
+          "programma",
+          "metamorphosis-sapiens-carlo-massari"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "it",
+        "url": "festival/programma/metamorphosis-sapiens-carlo-massari"
+      }
+    ]
+  },
+  {
+    "id": "29151639",
+    "slugs": {
+      "it": [
+        "festival",
+        "programma",
+        "a-touma-ballake-sissoko"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "event",
+    "group": "festival-events",
+    "paths": [
+      {
+        "locale": "it",
+        "slugs": [
+          "festival",
+          "programma",
+          "a-touma-ballake-sissoko"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "it",
+        "url": "festival/programma/a-touma-ballake-sissoko"
+      }
+    ]
+  },
+  {
+    "id": "29155847",
+    "slugs": {
+      "it": [
+        "festival",
+        "programma",
+        "meridiana-canzoniere-grecanico-salentino"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "event",
+    "group": "festival-events",
+    "paths": [
+      {
+        "locale": "it",
+        "slugs": [
+          "festival",
+          "programma",
+          "meridiana-canzoniere-grecanico-salentino"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "it",
+        "url": "festival/programma/meridiana-canzoniere-grecanico-salentino"
+      }
+    ]
+  },
+  {
+    "id": "7228923",
     "slugs": {
       "en": [
         "festival",
@@ -914,242 +1053,7 @@
     ]
   },
   {
-    "id": "24471174",
-    "slugs": {
-      "en": [
-        "festival",
-        "program",
-        "moby-dick"
-      ],
-      "it": [
-        "festival",
-        "programma",
-        "moby-dick"
-      ]
-    },
-    "isIndex": false,
-    "indexType": "",
-    "__typename": "event",
-    "group": "festival-events",
-    "paths": [
-      {
-        "locale": "en",
-        "slugs": [
-          "festival",
-          "program",
-          "moby-dick"
-        ]
-      },
-      {
-        "locale": "it",
-        "slugs": [
-          "festival",
-          "programma",
-          "moby-dick"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "en",
-        "url": "festival/program/moby-dick"
-      },
-      {
-        "locale": "it",
-        "url": "festival/programma/moby-dick"
-      }
-    ]
-  },
-  {
-    "id": "24471175",
-    "slugs": {
-      "en": [
-        "festival",
-        "program",
-        "antonio-vigano-and-michela-lucenti"
-      ],
-      "it": [
-        "festival",
-        "programma",
-        "antonio-vigano-and-michela-lucenti"
-      ]
-    },
-    "isIndex": false,
-    "indexType": "",
-    "__typename": "event",
-    "group": "festival-events",
-    "paths": [
-      {
-        "locale": "en",
-        "slugs": [
-          "festival",
-          "program",
-          "antonio-vigano-and-michela-lucenti"
-        ]
-      },
-      {
-        "locale": "it",
-        "slugs": [
-          "festival",
-          "programma",
-          "antonio-vigano-and-michela-lucenti"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "en",
-        "url": "festival/program/antonio-vigano-and-michela-lucenti"
-      },
-      {
-        "locale": "it",
-        "url": "festival/programma/antonio-vigano-and-michela-lucenti"
-      }
-    ]
-  },
-  {
-    "id": "24471178",
-    "slugs": {
-      "en": [
-        "festival",
-        "program",
-        "mixed-doubles"
-      ],
-      "it": [
-        "festival",
-        "programma",
-        "mixed-doubles"
-      ]
-    },
-    "isIndex": false,
-    "indexType": "",
-    "__typename": "event",
-    "group": "festival-events",
-    "paths": [
-      {
-        "locale": "en",
-        "slugs": [
-          "festival",
-          "program",
-          "mixed-doubles"
-        ]
-      },
-      {
-        "locale": "it",
-        "slugs": [
-          "festival",
-          "programma",
-          "mixed-doubles"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "en",
-        "url": "festival/program/mixed-doubles"
-      },
-      {
-        "locale": "it",
-        "url": "festival/programma/mixed-doubles"
-      }
-    ]
-  },
-  {
-    "id": "24471179",
-    "slugs": {
-      "en": [
-        "festival",
-        "program",
-        "zoe-appunti-sulla-nuda-vita"
-      ],
-      "it": [
-        "festival",
-        "programma",
-        "zoe-appunti-sulla-nuda-vita"
-      ]
-    },
-    "isIndex": false,
-    "indexType": "",
-    "__typename": "event",
-    "group": "festival-events",
-    "paths": [
-      {
-        "locale": "en",
-        "slugs": [
-          "festival",
-          "program",
-          "zoe-appunti-sulla-nuda-vita"
-        ]
-      },
-      {
-        "locale": "it",
-        "slugs": [
-          "festival",
-          "programma",
-          "zoe-appunti-sulla-nuda-vita"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "en",
-        "url": "festival/program/zoe-appunti-sulla-nuda-vita"
-      },
-      {
-        "locale": "it",
-        "url": "festival/programma/zoe-appunti-sulla-nuda-vita"
-      }
-    ]
-  },
-  {
-    "id": "24471180",
-    "slugs": {
-      "en": [
-        "festival",
-        "program",
-        "marcos-morau"
-      ],
-      "it": [
-        "festival",
-        "programma",
-        "marcos-morau"
-      ]
-    },
-    "isIndex": false,
-    "indexType": "",
-    "__typename": "event",
-    "group": "festival-events",
-    "paths": [
-      {
-        "locale": "en",
-        "slugs": [
-          "festival",
-          "program",
-          "marcos-morau"
-        ]
-      },
-      {
-        "locale": "it",
-        "slugs": [
-          "festival",
-          "programma",
-          "marcos-morau"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "en",
-        "url": "festival/program/marcos-morau"
-      },
-      {
-        "locale": "it",
-        "url": "festival/programma/marcos-morau"
-      }
-    ]
-  },
-  {
-    "id": "24471181",
+    "id": "7228918",
     "slugs": {
       "en": [
         "festival",
@@ -1196,7 +1100,272 @@
     ]
   },
   {
-    "id": "24471182",
+    "id": "25176883",
+    "slugs": {
+      "it": [
+        "festival",
+        "programma",
+        "leftovers"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "event",
+    "group": "festival-events",
+    "paths": [
+      {
+        "locale": "it",
+        "slugs": [
+          "festival",
+          "programma",
+          "leftovers"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "it",
+        "url": "festival/programma/leftovers"
+      }
+    ]
+  },
+  {
+    "id": "7228911",
+    "slugs": {
+      "en": [
+        "festival",
+        "program",
+        "moby-dick"
+      ],
+      "it": [
+        "festival",
+        "programma",
+        "moby-dick"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "event",
+    "group": "festival-events",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "festival",
+          "program",
+          "moby-dick"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "festival",
+          "programma",
+          "moby-dick"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "festival/program/moby-dick"
+      },
+      {
+        "locale": "it",
+        "url": "festival/programma/moby-dick"
+      }
+    ]
+  },
+  {
+    "id": "7228912",
+    "slugs": {
+      "en": [
+        "festival",
+        "program",
+        "antonio-vigano-and-michela-lucenti"
+      ],
+      "it": [
+        "festival",
+        "programma",
+        "antonio-vigano-and-michela-lucenti"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "event",
+    "group": "festival-events",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "festival",
+          "program",
+          "antonio-vigano-and-michela-lucenti"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "festival",
+          "programma",
+          "antonio-vigano-and-michela-lucenti"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "festival/program/antonio-vigano-and-michela-lucenti"
+      },
+      {
+        "locale": "it",
+        "url": "festival/programma/antonio-vigano-and-michela-lucenti"
+      }
+    ]
+  },
+  {
+    "id": "7228915",
+    "slugs": {
+      "en": [
+        "festival",
+        "program",
+        "mixed-doubles"
+      ],
+      "it": [
+        "festival",
+        "programma",
+        "mixed-doubles"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "event",
+    "group": "festival-events",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "festival",
+          "program",
+          "mixed-doubles"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "festival",
+          "programma",
+          "mixed-doubles"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "festival/program/mixed-doubles"
+      },
+      {
+        "locale": "it",
+        "url": "festival/programma/mixed-doubles"
+      }
+    ]
+  },
+  {
+    "id": "7228916",
+    "slugs": {
+      "en": [
+        "festival",
+        "program",
+        "zoe-appunti-sulla-nuda-vita"
+      ],
+      "it": [
+        "festival",
+        "programma",
+        "zoe-appunti-sulla-nuda-vita"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "event",
+    "group": "festival-events",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "festival",
+          "program",
+          "zoe-appunti-sulla-nuda-vita"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "festival",
+          "programma",
+          "zoe-appunti-sulla-nuda-vita"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "festival/program/zoe-appunti-sulla-nuda-vita"
+      },
+      {
+        "locale": "it",
+        "url": "festival/programma/zoe-appunti-sulla-nuda-vita"
+      }
+    ]
+  },
+  {
+    "id": "7228917",
+    "slugs": {
+      "en": [
+        "festival",
+        "program",
+        "marcos-morau"
+      ],
+      "it": [
+        "festival",
+        "programma",
+        "marcos-morau"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "event",
+    "group": "festival-events",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "festival",
+          "program",
+          "marcos-morau"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "festival",
+          "programma",
+          "marcos-morau"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "festival/program/marcos-morau"
+      },
+      {
+        "locale": "it",
+        "url": "festival/programma/marcos-morau"
+      }
+    ]
+  },
+  {
+    "id": "7228919",
     "slugs": {
       "en": [
         "festival",
@@ -1243,7 +1412,7 @@
     ]
   },
   {
-    "id": "24471183",
+    "id": "7228920",
     "slugs": {
       "en": [
         "festival",
@@ -1290,7 +1459,7 @@
     ]
   },
   {
-    "id": "24471184",
+    "id": "7228921",
     "slugs": {
       "en": [
         "festival",
@@ -1337,7 +1506,7 @@
     ]
   },
   {
-    "id": "24471185",
+    "id": "7228922",
     "slugs": {
       "en": [
         "festival",
@@ -1384,7 +1553,7 @@
     ]
   },
   {
-    "id": "24471186",
+    "id": "7228924",
     "slugs": {
       "en": [
         "festival",
@@ -1431,7 +1600,7 @@
     ]
   },
   {
-    "id": "24471187",
+    "id": "7228925",
     "slugs": {
       "en": [
         "festival",
@@ -1478,7 +1647,7 @@
     ]
   },
   {
-    "id": "24471188",
+    "id": "7228926",
     "slugs": {
       "en": [
         "festival",
@@ -1525,7 +1694,7 @@
     ]
   },
   {
-    "id": "24471189",
+    "id": "7228927",
     "slugs": {
       "en": [
         "festival",
@@ -1572,7 +1741,7 @@
     ]
   },
   {
-    "id": "24471190",
+    "id": "7228928",
     "slugs": {
       "en": [
         "festival",
@@ -1619,7 +1788,7 @@
     ]
   },
   {
-    "id": "24471191",
+    "id": "7228929",
     "slugs": {
       "en": [
         "festival",
@@ -1666,7 +1835,7 @@
     ]
   },
   {
-    "id": "24471192",
+    "id": "7228930",
     "slugs": {
       "en": [
         "festival",
@@ -1713,7 +1882,7 @@
     ]
   },
   {
-    "id": "24471193",
+    "id": "7228931",
     "slugs": {
       "en": [
         "festival",
@@ -1760,7 +1929,7 @@
     ]
   },
   {
-    "id": "24471194",
+    "id": "7228932",
     "slugs": {
       "en": [
         "festival",
@@ -1807,7 +1976,7 @@
     ]
   },
   {
-    "id": "24471195",
+    "id": "7228933",
     "slugs": {
       "en": [
         "festival",
@@ -1854,7 +2023,7 @@
     ]
   },
   {
-    "id": "24471196",
+    "id": "7228934",
     "slugs": {
       "en": [
         "festival",
@@ -1901,7 +2070,7 @@
     ]
   },
   {
-    "id": "24471197",
+    "id": "7228935",
     "slugs": {
       "en": [
         "festival",
@@ -1948,7 +2117,7 @@
     ]
   },
   {
-    "id": "24471198",
+    "id": "7228936",
     "slugs": {
       "en": [
         "festival",
@@ -1995,7 +2164,7 @@
     ]
   },
   {
-    "id": "24471199",
+    "id": "7228937",
     "slugs": {
       "en": [
         "festival",
@@ -2042,7 +2211,7 @@
     ]
   },
   {
-    "id": "24471200",
+    "id": "7228938",
     "slugs": {
       "en": [
         "festival",
@@ -2089,7 +2258,7 @@
     ]
   },
   {
-    "id": "24471201",
+    "id": "7228939",
     "slugs": {
       "en": [
         "festival",
@@ -2136,7 +2305,7 @@
     ]
   },
   {
-    "id": "24471202",
+    "id": "7228940",
     "slugs": {
       "en": [
         "festival",
@@ -2183,7 +2352,7 @@
     ]
   },
   {
-    "id": "24471203",
+    "id": "7228941",
     "slugs": {
       "en": [
         "festival",
@@ -2230,7 +2399,7 @@
     ]
   },
   {
-    "id": "24471204",
+    "id": "7228942",
     "slugs": {
       "en": [
         "festival",
@@ -2277,7 +2446,7 @@
     ]
   },
   {
-    "id": "24471205",
+    "id": "7228943",
     "slugs": {
       "en": [
         "festival",
@@ -2324,7 +2493,7 @@
     ]
   },
   {
-    "id": "24471206",
+    "id": "7228944",
     "slugs": {
       "en": [
         "festival",
@@ -2371,7 +2540,7 @@
     ]
   },
   {
-    "id": "24471207",
+    "id": "7228945",
     "slugs": {
       "en": [
         "festival",
@@ -2418,7 +2587,7 @@
     ]
   },
   {
-    "id": "24471208",
+    "id": "7228946",
     "slugs": {
       "en": [
         "festival",
@@ -2465,7 +2634,7 @@
     ]
   },
   {
-    "id": "24471209",
+    "id": "7228947",
     "slugs": {
       "en": [
         "festival",
@@ -2512,7 +2681,7 @@
     ]
   },
   {
-    "id": "24471210",
+    "id": "7228948",
     "slugs": {
       "en": [
         "festival",
@@ -2559,7 +2728,7 @@
     ]
   },
   {
-    "id": "24471211",
+    "id": "7228949",
     "slugs": {
       "en": [
         "festival",
@@ -2606,7 +2775,7 @@
     ]
   },
   {
-    "id": "24471212",
+    "id": "7228950",
     "slugs": {
       "en": [
         "festival",
@@ -2653,7 +2822,7 @@
     ]
   },
   {
-    "id": "24471213",
+    "id": "7228951",
     "slugs": {
       "en": [
         "festival",
@@ -2700,7 +2869,7 @@
     ]
   },
   {
-    "id": "24471214",
+    "id": "7228952",
     "slugs": {
       "en": [
         "festival",
@@ -2747,7 +2916,7 @@
     ]
   },
   {
-    "id": "24471215",
+    "id": "7228953",
     "slugs": {
       "en": [
         "festival",
@@ -2794,7 +2963,7 @@
     ]
   },
   {
-    "id": "24471216",
+    "id": "7228954",
     "slugs": {
       "en": [
         "festival",
@@ -2841,7 +3010,7 @@
     ]
   },
   {
-    "id": "24471217",
+    "id": "7228955",
     "slugs": {
       "en": [
         "festival",
@@ -2888,7 +3057,7 @@
     ]
   },
   {
-    "id": "24471218",
+    "id": "7228956",
     "slugs": {
       "en": [
         "festival",
@@ -2935,7 +3104,7 @@
     ]
   },
   {
-    "id": "24471219",
+    "id": "7228957",
     "slugs": {
       "en": [
         "festival",
@@ -2982,7 +3151,7 @@
     ]
   },
   {
-    "id": "24471220",
+    "id": "7228958",
     "slugs": {
       "en": [
         "festival",
@@ -3029,7 +3198,7 @@
     ]
   },
   {
-    "id": "24471221",
+    "id": "7228959",
     "slugs": {
       "en": [
         "festival",
@@ -3076,7 +3245,7 @@
     ]
   },
   {
-    "id": "24471222",
+    "id": "7228960",
     "slugs": {
       "en": [
         "festival",
@@ -3123,7 +3292,7 @@
     ]
   },
   {
-    "id": "24471223",
+    "id": "7228961",
     "slugs": {
       "en": [
         "festival",
@@ -3170,7 +3339,7 @@
     ]
   },
   {
-    "id": "24471224",
+    "id": "7228962",
     "slugs": {
       "en": [
         "festival",
@@ -3217,7 +3386,7 @@
     ]
   },
   {
-    "id": "24471225",
+    "id": "7228963",
     "slugs": {
       "en": [
         "festival",
@@ -3264,7 +3433,7 @@
     ]
   },
   {
-    "id": "24471226",
+    "id": "7228964",
     "slugs": {
       "en": [
         "festival",
@@ -3311,7 +3480,7 @@
     ]
   },
   {
-    "id": "24471227",
+    "id": "7228965",
     "slugs": {
       "en": [
         "festival",
@@ -3358,7 +3527,7 @@
     ]
   },
   {
-    "id": "24471228",
+    "id": "7228966",
     "slugs": {
       "en": [
         "festival",
@@ -3405,7 +3574,7 @@
     ]
   },
   {
-    "id": "24471229",
+    "id": "7228967",
     "slugs": {
       "en": [
         "festival",
@@ -3452,7 +3621,7 @@
     ]
   },
   {
-    "id": "24471230",
+    "id": "7228968",
     "slugs": {
       "en": [
         "festival",
@@ -3499,7 +3668,7 @@
     ]
   },
   {
-    "id": "24471231",
+    "id": "7228969",
     "slugs": {
       "en": [
         "festival",
@@ -3546,7 +3715,7 @@
     ]
   },
   {
-    "id": "24471232",
+    "id": "7228970",
     "slugs": {
       "en": [
         "festival",
@@ -3593,7 +3762,7 @@
     ]
   },
   {
-    "id": "24471233",
+    "id": "7228971",
     "slugs": {
       "en": [
         "festival",
@@ -3640,7 +3809,7 @@
     ]
   },
   {
-    "id": "24471234",
+    "id": "7228972",
     "slugs": {
       "en": [
         "festival",
@@ -3687,7 +3856,7 @@
     ]
   },
   {
-    "id": "24471235",
+    "id": "7228973",
     "slugs": {
       "en": [
         "festival",
@@ -3734,7 +3903,7 @@
     ]
   },
   {
-    "id": "24471236",
+    "id": "7228974",
     "slugs": {
       "en": [
         "festival",
@@ -3781,7 +3950,7 @@
     ]
   },
   {
-    "id": "24471237",
+    "id": "7228975",
     "slugs": {
       "en": [
         "festival",
@@ -3828,7 +3997,7 @@
     ]
   },
   {
-    "id": "24471238",
+    "id": "7228976",
     "slugs": {
       "en": [
         "festival",
@@ -3875,7 +4044,7 @@
     ]
   },
   {
-    "id": "24471239",
+    "id": "7228977",
     "slugs": {
       "en": [
         "festival",
@@ -3922,7 +4091,7 @@
     ]
   },
   {
-    "id": "24471240",
+    "id": "7228978",
     "slugs": {
       "en": [
         "festival",
@@ -3969,7 +4138,7 @@
     ]
   },
   {
-    "id": "24471241",
+    "id": "7228979",
     "slugs": {
       "en": [
         "festival",
@@ -4016,7 +4185,7 @@
     ]
   },
   {
-    "id": "24471242",
+    "id": "7228980",
     "slugs": {
       "en": [
         "festival",
@@ -4063,7 +4232,7 @@
     ]
   },
   {
-    "id": "24471243",
+    "id": "7228981",
     "slugs": {
       "en": [
         "festival",
@@ -4110,37 +4279,7 @@
     ]
   },
   {
-    "id": "24496338",
-    "slugs": {
-      "it": [
-        "people",
-        "eventi",
-        "prova"
-      ]
-    },
-    "isIndex": false,
-    "indexType": "",
-    "__typename": "event",
-    "group": "other-events",
-    "paths": [
-      {
-        "locale": "it",
-        "slugs": [
-          "people",
-          "eventi",
-          "prova"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "it",
-        "url": "people/eventi/prova"
-      }
-    ]
-  },
-  {
-    "id": "24471165",
+    "id": "7228903",
     "slugs": {
       "en": [
         "people",
@@ -4187,54 +4326,7 @@
     ]
   },
   {
-    "id": "24471167",
-    "slugs": {
-      "en": [
-        "people",
-        "events",
-        "to-the-moon-and-back-quando-la-montagna-coincide-con-il-cielo"
-      ],
-      "it": [
-        "people",
-        "eventi",
-        "to-the-moon-and-back-quando-la-montagna-coincide-con-il-cielo"
-      ]
-    },
-    "isIndex": false,
-    "indexType": "",
-    "__typename": "event",
-    "group": "other-events",
-    "paths": [
-      {
-        "locale": "en",
-        "slugs": [
-          "people",
-          "events",
-          "to-the-moon-and-back-quando-la-montagna-coincide-con-il-cielo"
-        ]
-      },
-      {
-        "locale": "it",
-        "slugs": [
-          "people",
-          "eventi",
-          "to-the-moon-and-back-quando-la-montagna-coincide-con-il-cielo"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "en",
-        "url": "people/events/to-the-moon-and-back-quando-la-montagna-coincide-con-il-cielo"
-      },
-      {
-        "locale": "it",
-        "url": "people/eventi/to-the-moon-and-back-quando-la-montagna-coincide-con-il-cielo"
-      }
-    ]
-  },
-  {
-    "id": "24471168",
+    "id": "7228905",
     "slugs": {
       "en": [
         "people",
@@ -4281,7 +4373,54 @@
     ]
   },
   {
-    "id": "24471169",
+    "id": "7228904",
+    "slugs": {
+      "en": [
+        "people",
+        "events",
+        "to-the-moon-and-back-quando-la-montagna-coincide-con-il-cielo"
+      ],
+      "it": [
+        "people",
+        "eventi",
+        "to-the-moon-and-back-quando-la-montagna-coincide-con-il-cielo"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "event",
+    "group": "other-events",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "people",
+          "events",
+          "to-the-moon-and-back-quando-la-montagna-coincide-con-il-cielo"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "people",
+          "eventi",
+          "to-the-moon-and-back-quando-la-montagna-coincide-con-il-cielo"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "people/events/to-the-moon-and-back-quando-la-montagna-coincide-con-il-cielo"
+      },
+      {
+        "locale": "it",
+        "url": "people/eventi/to-the-moon-and-back-quando-la-montagna-coincide-con-il-cielo"
+      }
+    ]
+  },
+  {
+    "id": "7228906",
     "slugs": {
       "en": [
         "people",
@@ -4328,7 +4467,7 @@
     ]
   },
   {
-    "id": "24471170",
+    "id": "7228907",
     "slugs": {
       "en": [
         "people",
@@ -4375,7 +4514,7 @@
     ]
   },
   {
-    "id": "24471171",
+    "id": "7228908",
     "slugs": {
       "en": [
         "people",
@@ -4422,7 +4561,7 @@
     ]
   },
   {
-    "id": "24471172",
+    "id": "7228909",
     "slugs": {
       "en": [
         "people",
@@ -4469,7 +4608,7 @@
     ]
   },
   {
-    "id": "24471173",
+    "id": "7228910",
     "slugs": {
       "en": [
         "people",
@@ -4516,7 +4655,7 @@
     ]
   },
   {
-    "id": "24471176",
+    "id": "7228913",
     "slugs": {
       "en": [
         "people",
@@ -4563,7 +4702,7 @@
     ]
   },
   {
-    "id": "24471177",
+    "id": "7228914",
     "slugs": {
       "en": [
         "people",
@@ -4610,13 +4749,45 @@
     ]
   },
   {
-    "id": "24471046",
+    "id": "26187762",
+    "slugs": {
+      "it": [
+        "studio",
+        "workshop",
+        "artylogica-workshop"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "workshop",
+    "group": "workshops",
+    "paths": [
+      {
+        "locale": "it",
+        "slugs": [
+          "studio",
+          "workshop",
+          "artylogica-workshop"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "it",
+        "url": "studio/workshop/artylogica-workshop"
+      }
+    ]
+  },
+  {
+    "id": "7228719",
     "slugs": {
       "en": [
+        "studio",
         "workshop",
         "bus-stop"
       ],
       "it": [
+        "studio",
         "workshop",
         "bus-stop"
       ]
@@ -4629,6 +4800,7 @@
       {
         "locale": "en",
         "slugs": [
+          "studio",
           "workshop",
           "bus-stop"
         ]
@@ -4636,6 +4808,7 @@
       {
         "locale": "it",
         "slugs": [
+          "studio",
           "workshop",
           "bus-stop"
         ]
@@ -4644,22 +4817,24 @@
     "urls": [
       {
         "locale": "en",
-        "url": "workshop/bus-stop"
+        "url": "studio/workshop/bus-stop"
       },
       {
         "locale": "it",
-        "url": "workshop/bus-stop"
+        "url": "studio/workshop/bus-stop"
       }
     ]
   },
   {
-    "id": "24471047",
+    "id": "7228716",
     "slugs": {
       "en": [
+        "studio",
         "workshop",
         "train-the-trainers-train-the-artists"
       ],
       "it": [
+        "studio",
         "workshop",
         "train-the-trainers-train-the-artists"
       ]
@@ -4672,6 +4847,7 @@
       {
         "locale": "en",
         "slugs": [
+          "studio",
           "workshop",
           "train-the-trainers-train-the-artists"
         ]
@@ -4679,6 +4855,7 @@
       {
         "locale": "it",
         "slugs": [
+          "studio",
           "workshop",
           "train-the-trainers-train-the-artists"
         ]
@@ -4687,22 +4864,24 @@
     "urls": [
       {
         "locale": "en",
-        "url": "workshop/train-the-trainers-train-the-artists"
+        "url": "studio/workshop/train-the-trainers-train-the-artists"
       },
       {
         "locale": "it",
-        "url": "workshop/train-the-trainers-train-the-artists"
+        "url": "studio/workshop/train-the-trainers-train-the-artists"
       }
     ]
   },
   {
-    "id": "24471048",
+    "id": "7228717",
     "slugs": {
       "en": [
+        "studio",
         "workshop",
         "oltre-il-confine-workshop-intensivo-di-teatro-danza"
       ],
       "it": [
+        "studio",
         "workshop",
         "oltre-il-confine-workshop-intensivo-di-teatro-danza"
       ]
@@ -4715,6 +4894,7 @@
       {
         "locale": "en",
         "slugs": [
+          "studio",
           "workshop",
           "oltre-il-confine-workshop-intensivo-di-teatro-danza"
         ]
@@ -4722,6 +4902,7 @@
       {
         "locale": "it",
         "slugs": [
+          "studio",
           "workshop",
           "oltre-il-confine-workshop-intensivo-di-teatro-danza"
         ]
@@ -4730,22 +4911,24 @@
     "urls": [
       {
         "locale": "en",
-        "url": "workshop/oltre-il-confine-workshop-intensivo-di-teatro-danza"
+        "url": "studio/workshop/oltre-il-confine-workshop-intensivo-di-teatro-danza"
       },
       {
         "locale": "it",
-        "url": "workshop/oltre-il-confine-workshop-intensivo-di-teatro-danza"
+        "url": "studio/workshop/oltre-il-confine-workshop-intensivo-di-teatro-danza"
       }
     ]
   },
   {
-    "id": "24471049",
+    "id": "7228718",
     "slugs": {
       "en": [
+        "studio",
         "workshop",
         "la-veronal-working-tools"
       ],
       "it": [
+        "studio",
         "workshop",
         "la-veronal-working-tools"
       ]
@@ -4758,6 +4941,7 @@
       {
         "locale": "en",
         "slugs": [
+          "studio",
           "workshop",
           "la-veronal-working-tools"
         ]
@@ -4765,6 +4949,7 @@
       {
         "locale": "it",
         "slugs": [
+          "studio",
           "workshop",
           "la-veronal-working-tools"
         ]
@@ -4773,22 +4958,24 @@
     "urls": [
       {
         "locale": "en",
-        "url": "workshop/la-veronal-working-tools"
+        "url": "studio/workshop/la-veronal-working-tools"
       },
       {
         "locale": "it",
-        "url": "workshop/la-veronal-working-tools"
+        "url": "studio/workshop/la-veronal-working-tools"
       }
     ]
   },
   {
-    "id": "24471050",
+    "id": "7228720",
     "slugs": {
       "en": [
+        "studio",
         "workshop",
         "masterclass-sidi-larbi-cherkaoui-repertory-fractus-v"
       ],
       "it": [
+        "studio",
         "workshop",
         "masterclass-sidi-larbi-cherkaoui-repertory-fractus-v"
       ]
@@ -4801,6 +4988,7 @@
       {
         "locale": "en",
         "slugs": [
+          "studio",
           "workshop",
           "masterclass-sidi-larbi-cherkaoui-repertory-fractus-v"
         ]
@@ -4808,6 +4996,7 @@
       {
         "locale": "it",
         "slugs": [
+          "studio",
           "workshop",
           "masterclass-sidi-larbi-cherkaoui-repertory-fractus-v"
         ]
@@ -4816,22 +5005,24 @@
     "urls": [
       {
         "locale": "en",
-        "url": "workshop/masterclass-sidi-larbi-cherkaoui-repertory-fractus-v"
+        "url": "studio/workshop/masterclass-sidi-larbi-cherkaoui-repertory-fractus-v"
       },
       {
         "locale": "it",
-        "url": "workshop/masterclass-sidi-larbi-cherkaoui-repertory-fractus-v"
+        "url": "studio/workshop/masterclass-sidi-larbi-cherkaoui-repertory-fractus-v"
       }
     ]
   },
   {
-    "id": "24471051",
+    "id": "7228721",
     "slugs": {
       "en": [
+        "studio",
         "workshop",
         "laboratorio-di-ricerca-corporea"
       ],
       "it": [
+        "studio",
         "workshop",
         "laboratorio-di-ricerca-corporea"
       ]
@@ -4844,6 +5035,7 @@
       {
         "locale": "en",
         "slugs": [
+          "studio",
           "workshop",
           "laboratorio-di-ricerca-corporea"
         ]
@@ -4851,6 +5043,7 @@
       {
         "locale": "it",
         "slugs": [
+          "studio",
           "workshop",
           "laboratorio-di-ricerca-corporea"
         ]
@@ -4859,65 +5052,24 @@
     "urls": [
       {
         "locale": "en",
-        "url": "workshop/laboratorio-di-ricerca-corporea"
+        "url": "studio/workshop/laboratorio-di-ricerca-corporea"
       },
       {
         "locale": "it",
-        "url": "workshop/laboratorio-di-ricerca-corporea"
+        "url": "studio/workshop/laboratorio-di-ricerca-corporea"
       }
     ]
   },
   {
-    "id": "24471052",
+    "id": "7228723",
     "slugs": {
       "en": [
-        "workshop",
-        "rizoma-community-workshop"
-      ],
-      "it": [
-        "workshop",
-        "rizoma-community-workshop"
-      ]
-    },
-    "isIndex": false,
-    "indexType": "",
-    "__typename": "workshop",
-    "group": "workshops",
-    "paths": [
-      {
-        "locale": "en",
-        "slugs": [
-          "workshop",
-          "rizoma-community-workshop"
-        ]
-      },
-      {
-        "locale": "it",
-        "slugs": [
-          "workshop",
-          "rizoma-community-workshop"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "en",
-        "url": "workshop/rizoma-community-workshop"
-      },
-      {
-        "locale": "it",
-        "url": "workshop/rizoma-community-workshop"
-      }
-    ]
-  },
-  {
-    "id": "24471053",
-    "slugs": {
-      "en": [
+        "studio",
         "workshop",
         "lab-impart"
       ],
       "it": [
+        "studio",
         "workshop",
         "lab-impart-ripensare-il-palcoscenico"
       ]
@@ -4930,6 +5082,7 @@
       {
         "locale": "en",
         "slugs": [
+          "studio",
           "workshop",
           "lab-impart"
         ]
@@ -4937,6 +5090,7 @@
       {
         "locale": "it",
         "slugs": [
+          "studio",
           "workshop",
           "lab-impart-ripensare-il-palcoscenico"
         ]
@@ -4945,22 +5099,24 @@
     "urls": [
       {
         "locale": "en",
-        "url": "workshop/lab-impart"
+        "url": "studio/workshop/lab-impart"
       },
       {
         "locale": "it",
-        "url": "workshop/lab-impart-ripensare-il-palcoscenico"
+        "url": "studio/workshop/lab-impart-ripensare-il-palcoscenico"
       }
     ]
   },
   {
-    "id": "24471054",
+    "id": "7228724",
     "slugs": {
       "en": [
+        "studio",
         "workshop",
         "tools-for-action-workshop"
       ],
       "it": [
+        "studio",
         "workshop",
         "tools-for-action-workshop"
       ]
@@ -4973,6 +5129,7 @@
       {
         "locale": "en",
         "slugs": [
+          "studio",
           "workshop",
           "tools-for-action-workshop"
         ]
@@ -4980,6 +5137,7 @@
       {
         "locale": "it",
         "slugs": [
+          "studio",
           "workshop",
           "tools-for-action-workshop"
         ]
@@ -4988,22 +5146,24 @@
     "urls": [
       {
         "locale": "en",
-        "url": "workshop/tools-for-action-workshop"
+        "url": "studio/workshop/tools-for-action-workshop"
       },
       {
         "locale": "it",
-        "url": "workshop/tools-for-action-workshop"
+        "url": "studio/workshop/tools-for-action-workshop"
       }
     ]
   },
   {
-    "id": "24471055",
+    "id": "7228725",
     "slugs": {
       "en": [
+        "studio",
         "workshop",
         "cunningham-technique-r-workshop"
       ],
       "it": [
+        "studio",
         "workshop",
         "cunningham-technique-r-workshop"
       ]
@@ -5016,6 +5176,7 @@
       {
         "locale": "en",
         "slugs": [
+          "studio",
           "workshop",
           "cunningham-technique-r-workshop"
         ]
@@ -5023,6 +5184,7 @@
       {
         "locale": "it",
         "slugs": [
+          "studio",
           "workshop",
           "cunningham-technique-r-workshop"
         ]
@@ -5031,119 +5193,16 @@
     "urls": [
       {
         "locale": "en",
-        "url": "workshop/cunningham-technique-r-workshop"
+        "url": "studio/workshop/cunningham-technique-r-workshop"
       },
       {
         "locale": "it",
-        "url": "workshop/cunningham-technique-r-workshop"
+        "url": "studio/workshop/cunningham-technique-r-workshop"
       }
     ]
   },
   {
-    "id": "24471056",
-    "slugs": {
-      "en": [
-        "workshop",
-        "practice-ina"
-      ],
-      "it": [
-        "workshop",
-        "practice-ina"
-      ]
-    },
-    "isIndex": false,
-    "indexType": "",
-    "__typename": "workshop",
-    "group": "workshops",
-    "paths": [
-      {
-        "locale": "en",
-        "slugs": [
-          "workshop",
-          "practice-ina"
-        ]
-      },
-      {
-        "locale": "it",
-        "slugs": [
-          "workshop",
-          "practice-ina"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "en",
-        "url": "workshop/practice-ina"
-      },
-      {
-        "locale": "it",
-        "url": "workshop/practice-ina"
-      }
-    ]
-  },
-  {
-    "id": "24471059",
-    "slugs": {
-      "it": [
-        "people",
-        "progetti",
-        "progetto-solo-italiano"
-      ]
-    },
-    "isIndex": false,
-    "indexType": "",
-    "__typename": "project",
-    "group": "projects",
-    "paths": [
-      {
-        "locale": "it",
-        "slugs": [
-          "people",
-          "progetti",
-          "progetto-solo-italiano"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "it",
-        "url": "people/progetti/progetto-solo-italiano"
-      }
-    ]
-  },
-  {
-    "id": "24471057",
-    "slugs": {
-      "en": [
-        "people",
-        "projects",
-        "sample-project"
-      ]
-    },
-    "isIndex": false,
-    "indexType": "",
-    "__typename": "project",
-    "group": "projects",
-    "paths": [
-      {
-        "locale": "en",
-        "slugs": [
-          "people",
-          "projects",
-          "sample-project"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "en",
-        "url": "people/projects/sample-project"
-      }
-    ]
-  },
-  {
-    "id": "24471061",
+    "id": "7228684",
     "slugs": {
       "en": [
         "people",
@@ -5190,7 +5249,7 @@
     ]
   },
   {
-    "id": "24471060",
+    "id": "7228695",
     "slugs": {
       "en": [
         "people",
@@ -5237,7 +5296,7 @@
     ]
   },
   {
-    "id": "24471062",
+    "id": "7228685",
     "slugs": {
       "en": [
         "people",
@@ -5284,7 +5343,7 @@
     ]
   },
   {
-    "id": "24471063",
+    "id": "7228686",
     "slugs": {
       "en": [
         "people",
@@ -5331,7 +5390,7 @@
     ]
   },
   {
-    "id": "24471064",
+    "id": "7228687",
     "slugs": {
       "en": [
         "people",
@@ -5378,7 +5437,7 @@
     ]
   },
   {
-    "id": "24471065",
+    "id": "7228688",
     "slugs": {
       "en": [
         "people",
@@ -5425,7 +5484,7 @@
     ]
   },
   {
-    "id": "24471066",
+    "id": "7228689",
     "slugs": {
       "en": [
         "people",
@@ -5472,7 +5531,7 @@
     ]
   },
   {
-    "id": "24471067",
+    "id": "7228690",
     "slugs": {
       "en": [
         "people",
@@ -5519,7 +5578,7 @@
     ]
   },
   {
-    "id": "24471068",
+    "id": "7228691",
     "slugs": {
       "en": [
         "people",
@@ -5566,7 +5625,7 @@
     ]
   },
   {
-    "id": "24471069",
+    "id": "7228692",
     "slugs": {
       "en": [
         "people",
@@ -5613,7 +5672,7 @@
     ]
   },
   {
-    "id": "24471070",
+    "id": "7228693",
     "slugs": {
       "en": [
         "people",
@@ -5660,7 +5719,7 @@
     ]
   },
   {
-    "id": "24471058",
+    "id": "7228694",
     "slugs": {
       "en": [
         "people",
@@ -5707,7 +5766,7 @@
     ]
   },
   {
-    "id": "24471071",
+    "id": "7228696",
     "slugs": {
       "en": [
         "people",
@@ -5754,7 +5813,97 @@
     ]
   },
   {
-    "id": "24471086",
+    "id": "25752004",
+    "slugs": {
+      "it": [
+        "studio",
+        "artisti-associati",
+        "davide-valrosso"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "artist",
+    "group": "associated-artists",
+    "paths": [
+      {
+        "locale": "it",
+        "slugs": [
+          "studio",
+          "artisti-associati",
+          "davide-valrosso"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "it",
+        "url": "studio/artisti-associati/davide-valrosso"
+      }
+    ]
+  },
+  {
+    "id": "25261402",
+    "slugs": {
+      "it": [
+        "studio",
+        "artisti-associati",
+        "irene-russolillo"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "artist",
+    "group": "associated-artists",
+    "paths": [
+      {
+        "locale": "it",
+        "slugs": [
+          "studio",
+          "artisti-associati",
+          "irene-russolillo"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "it",
+        "url": "studio/artisti-associati/irene-russolillo"
+      }
+    ]
+  },
+  {
+    "id": "25256915",
+    "slugs": {
+      "it": [
+        "studio",
+        "artisti-associati",
+        "salvo-lombardo"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "artist",
+    "group": "associated-artists",
+    "paths": [
+      {
+        "locale": "it",
+        "slugs": [
+          "studio",
+          "artisti-associati",
+          "salvo-lombardo"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "it",
+        "url": "studio/artisti-associati/salvo-lombardo"
+      }
+    ]
+  },
+  {
+    "id": "7228058",
     "slugs": {
       "en": [
         "studio",
@@ -5801,7 +5950,7 @@
     ]
   },
   {
-    "id": "24471087",
+    "id": "7228059",
     "slugs": {
       "en": [
         "studio",
@@ -5848,7 +5997,7 @@
     ]
   },
   {
-    "id": "24471093",
+    "id": "7228065",
     "slugs": {
       "en": [
         "studio",
@@ -5895,7 +6044,7 @@
     ]
   },
   {
-    "id": "24471096",
+    "id": "7228068",
     "slugs": {
       "en": [
         "studio",
@@ -5942,7 +6091,7 @@
     ]
   },
   {
-    "id": "24471099",
+    "id": "7228071",
     "slugs": {
       "en": [
         "studio",
@@ -5989,242 +6138,7 @@
     ]
   },
   {
-    "id": "24471085",
-    "slugs": {
-      "en": [
-        "studio",
-        "artistic-residences",
-        "alessandra-ferri"
-      ],
-      "it": [
-        "studio",
-        "residenze-artistiche",
-        "alessandra-ferri"
-      ]
-    },
-    "isIndex": false,
-    "indexType": "",
-    "__typename": "artist",
-    "group": "artistic-residences",
-    "paths": [
-      {
-        "locale": "en",
-        "slugs": [
-          "studio",
-          "artistic-residences",
-          "alessandra-ferri"
-        ]
-      },
-      {
-        "locale": "it",
-        "slugs": [
-          "studio",
-          "residenze-artistiche",
-          "alessandra-ferri"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "en",
-        "url": "studio/artistic-residences/alessandra-ferri"
-      },
-      {
-        "locale": "it",
-        "url": "studio/residenze-artistiche/alessandra-ferri"
-      }
-    ]
-  },
-  {
-    "id": "24471087",
-    "slugs": {
-      "en": [
-        "studio",
-        "artistic-residences",
-        "carlo-massari"
-      ],
-      "it": [
-        "studio",
-        "residenze-artistiche",
-        "carlo-massari"
-      ]
-    },
-    "isIndex": false,
-    "indexType": "",
-    "__typename": "artist",
-    "group": "artistic-residences",
-    "paths": [
-      {
-        "locale": "en",
-        "slugs": [
-          "studio",
-          "artistic-residences",
-          "carlo-massari"
-        ]
-      },
-      {
-        "locale": "it",
-        "slugs": [
-          "studio",
-          "residenze-artistiche",
-          "carlo-massari"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "en",
-        "url": "studio/artistic-residences/carlo-massari"
-      },
-      {
-        "locale": "it",
-        "url": "studio/residenze-artistiche/carlo-massari"
-      }
-    ]
-  },
-  {
-    "id": "24471088",
-    "slugs": {
-      "en": [
-        "studio",
-        "artistic-residences",
-        "chiara-bersani-and-danskompaniet-spinn"
-      ],
-      "it": [
-        "studio",
-        "residenze-artistiche",
-        "chiara-bersani-and-danskompaniet-spinn"
-      ]
-    },
-    "isIndex": false,
-    "indexType": "",
-    "__typename": "artist",
-    "group": "artistic-residences",
-    "paths": [
-      {
-        "locale": "en",
-        "slugs": [
-          "studio",
-          "artistic-residences",
-          "chiara-bersani-and-danskompaniet-spinn"
-        ]
-      },
-      {
-        "locale": "it",
-        "slugs": [
-          "studio",
-          "residenze-artistiche",
-          "chiara-bersani-and-danskompaniet-spinn"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "en",
-        "url": "studio/artistic-residences/chiara-bersani-and-danskompaniet-spinn"
-      },
-      {
-        "locale": "it",
-        "url": "studio/residenze-artistiche/chiara-bersani-and-danskompaniet-spinn"
-      }
-    ]
-  },
-  {
-    "id": "24471089",
-    "slugs": {
-      "en": [
-        "studio",
-        "artistic-residences",
-        "cie-mf"
-      ],
-      "it": [
-        "studio",
-        "residenze-artistiche",
-        "cie-mf"
-      ]
-    },
-    "isIndex": false,
-    "indexType": "",
-    "__typename": "artist",
-    "group": "artistic-residences",
-    "paths": [
-      {
-        "locale": "en",
-        "slugs": [
-          "studio",
-          "artistic-residences",
-          "cie-mf"
-        ]
-      },
-      {
-        "locale": "it",
-        "slugs": [
-          "studio",
-          "residenze-artistiche",
-          "cie-mf"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "en",
-        "url": "studio/artistic-residences/cie-mf"
-      },
-      {
-        "locale": "it",
-        "url": "studio/residenze-artistiche/cie-mf"
-      }
-    ]
-  },
-  {
-    "id": "24471090",
-    "slugs": {
-      "en": [
-        "studio",
-        "artistic-residences",
-        "sindri-runudde"
-      ],
-      "it": [
-        "studio",
-        "residenze-artistiche",
-        "sindri-runudde"
-      ]
-    },
-    "isIndex": false,
-    "indexType": "",
-    "__typename": "artist",
-    "group": "artistic-residences",
-    "paths": [
-      {
-        "locale": "en",
-        "slugs": [
-          "studio",
-          "artistic-residences",
-          "sindri-runudde"
-        ]
-      },
-      {
-        "locale": "it",
-        "slugs": [
-          "studio",
-          "residenze-artistiche",
-          "sindri-runudde"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "en",
-        "url": "studio/artistic-residences/sindri-runudde"
-      },
-      {
-        "locale": "it",
-        "url": "studio/residenze-artistiche/sindri-runudde"
-      }
-    ]
-  },
-  {
-    "id": "24471091",
+    "id": "7228063",
     "slugs": {
       "en": [
         "studio",
@@ -6271,101 +6185,7 @@
     ]
   },
   {
-    "id": "24471092",
-    "slugs": {
-      "en": [
-        "studio",
-        "artistic-residences",
-        "cristina-kristal-rizzo"
-      ],
-      "it": [
-        "studio",
-        "residenze-artistiche",
-        "cristina-kristal-rizzo"
-      ]
-    },
-    "isIndex": false,
-    "indexType": "",
-    "__typename": "artist",
-    "group": "artistic-residences",
-    "paths": [
-      {
-        "locale": "en",
-        "slugs": [
-          "studio",
-          "artistic-residences",
-          "cristina-kristal-rizzo"
-        ]
-      },
-      {
-        "locale": "it",
-        "slugs": [
-          "studio",
-          "residenze-artistiche",
-          "cristina-kristal-rizzo"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "en",
-        "url": "studio/artistic-residences/cristina-kristal-rizzo"
-      },
-      {
-        "locale": "it",
-        "url": "studio/residenze-artistiche/cristina-kristal-rizzo"
-      }
-    ]
-  },
-  {
-    "id": "24471093",
-    "slugs": {
-      "en": [
-        "studio",
-        "artistic-residences",
-        "luna-cenere"
-      ],
-      "it": [
-        "studio",
-        "residenze-artistiche",
-        "luna-cenere"
-      ]
-    },
-    "isIndex": false,
-    "indexType": "",
-    "__typename": "artist",
-    "group": "artistic-residences",
-    "paths": [
-      {
-        "locale": "en",
-        "slugs": [
-          "studio",
-          "artistic-residences",
-          "luna-cenere"
-        ]
-      },
-      {
-        "locale": "it",
-        "slugs": [
-          "studio",
-          "residenze-artistiche",
-          "luna-cenere"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "en",
-        "url": "studio/artistic-residences/luna-cenere"
-      },
-      {
-        "locale": "it",
-        "url": "studio/residenze-artistiche/luna-cenere"
-      }
-    ]
-  },
-  {
-    "id": "24471094",
+    "id": "7228066",
     "slugs": {
       "en": [
         "studio",
@@ -6412,7 +6232,546 @@
     ]
   },
   {
-    "id": "24471095",
+    "id": "25106476",
+    "slugs": {
+      "it": [
+        "studio",
+        "residenze-artistiche",
+        "roberto-tedesco"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "artist",
+    "group": "artistic-residences",
+    "paths": [
+      {
+        "locale": "it",
+        "slugs": [
+          "studio",
+          "residenze-artistiche",
+          "roberto-tedesco"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "it",
+        "url": "studio/residenze-artistiche/roberto-tedesco"
+      }
+    ]
+  },
+  {
+    "id": "25752004",
+    "slugs": {
+      "it": [
+        "studio",
+        "residenze-artistiche",
+        "davide-valrosso"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "artist",
+    "group": "artistic-residences",
+    "paths": [
+      {
+        "locale": "it",
+        "slugs": [
+          "studio",
+          "residenze-artistiche",
+          "davide-valrosso"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "it",
+        "url": "studio/residenze-artistiche/davide-valrosso"
+      }
+    ]
+  },
+  {
+    "id": "25261402",
+    "slugs": {
+      "it": [
+        "studio",
+        "residenze-artistiche",
+        "irene-russolillo"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "artist",
+    "group": "artistic-residences",
+    "paths": [
+      {
+        "locale": "it",
+        "slugs": [
+          "studio",
+          "residenze-artistiche",
+          "irene-russolillo"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "it",
+        "url": "studio/residenze-artistiche/irene-russolillo"
+      }
+    ]
+  },
+  {
+    "id": "25258776",
+    "slugs": {
+      "it": [
+        "studio",
+        "residenze-artistiche",
+        "pablo-tapia-leyton"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "artist",
+    "group": "artistic-residences",
+    "paths": [
+      {
+        "locale": "it",
+        "slugs": [
+          "studio",
+          "residenze-artistiche",
+          "pablo-tapia-leyton"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "it",
+        "url": "studio/residenze-artistiche/pablo-tapia-leyton"
+      }
+    ]
+  },
+  {
+    "id": "25258423",
+    "slugs": {
+      "it": [
+        "studio",
+        "residenze-artistiche",
+        "federica-loredan"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "artist",
+    "group": "artistic-residences",
+    "paths": [
+      {
+        "locale": "it",
+        "slugs": [
+          "studio",
+          "residenze-artistiche",
+          "federica-loredan"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "it",
+        "url": "studio/residenze-artistiche/federica-loredan"
+      }
+    ]
+  },
+  {
+    "id": "25256915",
+    "slugs": {
+      "it": [
+        "studio",
+        "residenze-artistiche",
+        "salvo-lombardo"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "artist",
+    "group": "artistic-residences",
+    "paths": [
+      {
+        "locale": "it",
+        "slugs": [
+          "studio",
+          "residenze-artistiche",
+          "salvo-lombardo"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "it",
+        "url": "studio/residenze-artistiche/salvo-lombardo"
+      }
+    ]
+  },
+  {
+    "id": "25168456",
+    "slugs": {
+      "it": [
+        "studio",
+        "residenze-artistiche",
+        "ludovico-paladini"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "artist",
+    "group": "artistic-residences",
+    "paths": [
+      {
+        "locale": "it",
+        "slugs": [
+          "studio",
+          "residenze-artistiche",
+          "ludovico-paladini"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "it",
+        "url": "studio/residenze-artistiche/ludovico-paladini"
+      }
+    ]
+  },
+  {
+    "id": "7228057",
+    "slugs": {
+      "en": [
+        "studio",
+        "artistic-residences",
+        "alessandra-ferri"
+      ],
+      "it": [
+        "studio",
+        "residenze-artistiche",
+        "alessandra-ferri"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "artist",
+    "group": "artistic-residences",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "studio",
+          "artistic-residences",
+          "alessandra-ferri"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "studio",
+          "residenze-artistiche",
+          "alessandra-ferri"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "studio/artistic-residences/alessandra-ferri"
+      },
+      {
+        "locale": "it",
+        "url": "studio/residenze-artistiche/alessandra-ferri"
+      }
+    ]
+  },
+  {
+    "id": "7228059",
+    "slugs": {
+      "en": [
+        "studio",
+        "artistic-residences",
+        "carlo-massari"
+      ],
+      "it": [
+        "studio",
+        "residenze-artistiche",
+        "carlo-massari"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "artist",
+    "group": "artistic-residences",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "studio",
+          "artistic-residences",
+          "carlo-massari"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "studio",
+          "residenze-artistiche",
+          "carlo-massari"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "studio/artistic-residences/carlo-massari"
+      },
+      {
+        "locale": "it",
+        "url": "studio/residenze-artistiche/carlo-massari"
+      }
+    ]
+  },
+  {
+    "id": "7228060",
+    "slugs": {
+      "en": [
+        "studio",
+        "artistic-residences",
+        "chiara-bersani-and-danskompaniet-spinn"
+      ],
+      "it": [
+        "studio",
+        "residenze-artistiche",
+        "chiara-bersani-and-danskompaniet-spinn"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "artist",
+    "group": "artistic-residences",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "studio",
+          "artistic-residences",
+          "chiara-bersani-and-danskompaniet-spinn"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "studio",
+          "residenze-artistiche",
+          "chiara-bersani-and-danskompaniet-spinn"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "studio/artistic-residences/chiara-bersani-and-danskompaniet-spinn"
+      },
+      {
+        "locale": "it",
+        "url": "studio/residenze-artistiche/chiara-bersani-and-danskompaniet-spinn"
+      }
+    ]
+  },
+  {
+    "id": "7228061",
+    "slugs": {
+      "en": [
+        "studio",
+        "artistic-residences",
+        "cie-mf"
+      ],
+      "it": [
+        "studio",
+        "residenze-artistiche",
+        "cie-mf"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "artist",
+    "group": "artistic-residences",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "studio",
+          "artistic-residences",
+          "cie-mf"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "studio",
+          "residenze-artistiche",
+          "cie-mf"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "studio/artistic-residences/cie-mf"
+      },
+      {
+        "locale": "it",
+        "url": "studio/residenze-artistiche/cie-mf"
+      }
+    ]
+  },
+  {
+    "id": "7228062",
+    "slugs": {
+      "en": [
+        "studio",
+        "artistic-residences",
+        "sindri-runudde"
+      ],
+      "it": [
+        "studio",
+        "residenze-artistiche",
+        "sindri-runudde"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "artist",
+    "group": "artistic-residences",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "studio",
+          "artistic-residences",
+          "sindri-runudde"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "studio",
+          "residenze-artistiche",
+          "sindri-runudde"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "studio/artistic-residences/sindri-runudde"
+      },
+      {
+        "locale": "it",
+        "url": "studio/residenze-artistiche/sindri-runudde"
+      }
+    ]
+  },
+  {
+    "id": "7228064",
+    "slugs": {
+      "en": [
+        "studio",
+        "artistic-residences",
+        "cristina-kristal-rizzo"
+      ],
+      "it": [
+        "studio",
+        "residenze-artistiche",
+        "cristina-kristal-rizzo"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "artist",
+    "group": "artistic-residences",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "studio",
+          "artistic-residences",
+          "cristina-kristal-rizzo"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "studio",
+          "residenze-artistiche",
+          "cristina-kristal-rizzo"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "studio/artistic-residences/cristina-kristal-rizzo"
+      },
+      {
+        "locale": "it",
+        "url": "studio/residenze-artistiche/cristina-kristal-rizzo"
+      }
+    ]
+  },
+  {
+    "id": "7228065",
+    "slugs": {
+      "en": [
+        "studio",
+        "artistic-residences",
+        "luna-cenere"
+      ],
+      "it": [
+        "studio",
+        "residenze-artistiche",
+        "luna-cenere"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "artist",
+    "group": "artistic-residences",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "studio",
+          "artistic-residences",
+          "luna-cenere"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "studio",
+          "residenze-artistiche",
+          "luna-cenere"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "studio/artistic-residences/luna-cenere"
+      },
+      {
+        "locale": "it",
+        "url": "studio/residenze-artistiche/luna-cenere"
+      }
+    ]
+  },
+  {
+    "id": "7228067",
     "slugs": {
       "en": [
         "studio",
@@ -6459,7 +6818,7 @@
     ]
   },
   {
-    "id": "24471096",
+    "id": "7228068",
     "slugs": {
       "en": [
         "studio",
@@ -6506,7 +6865,7 @@
     ]
   },
   {
-    "id": "24471097",
+    "id": "7228069",
     "slugs": {
       "en": [
         "studio",
@@ -6553,7 +6912,7 @@
     ]
   },
   {
-    "id": "24471098",
+    "id": "7228070",
     "slugs": {
       "en": [
         "studio",
@@ -6600,7 +6959,7 @@
     ]
   },
   {
-    "id": "24471099",
+    "id": "7228071",
     "slugs": {
       "en": [
         "studio",
@@ -6647,7 +7006,7 @@
     ]
   },
   {
-    "id": "24471100",
+    "id": "7228072",
     "slugs": {
       "en": [
         "studio",
@@ -6694,7 +7053,7 @@
     ]
   },
   {
-    "id": "24471101",
+    "id": "7228073",
     "slugs": {
       "en": [
         "studio",
@@ -6741,7 +7100,7 @@
     ]
   },
   {
-    "id": "24471102",
+    "id": "7228074",
     "slugs": {
       "en": [
         "studio",
@@ -6788,7 +7147,7 @@
     ]
   },
   {
-    "id": "24471103",
+    "id": "7228075",
     "slugs": {
       "en": [
         "studio",
@@ -6835,7 +7194,7 @@
     ]
   },
   {
-    "id": "24471104",
+    "id": "7228076",
     "slugs": {
       "en": [
         "studio",
@@ -6882,7 +7241,203 @@
     ]
   },
   {
-    "id": "24471244",
+    "id": "25158803",
+    "slugs": {
+      "it": [
+        "news",
+        "oriente-occidente-per-l-ambiente"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "news",
+    "group": "news-index",
+    "paths": [
+      {
+        "locale": "it",
+        "slugs": [
+          "news",
+          "oriente-occidente-per-l-ambiente"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "it",
+        "url": "news/oriente-occidente-per-l-ambiente"
+      }
+    ]
+  },
+  {
+    "id": "25155556",
+    "slugs": {
+      "it": [
+        "news",
+        "nobody-nobody-nobody-it-s-ok-not-to-be-ok-collective-experience"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "news",
+    "group": "news-index",
+    "paths": [
+      {
+        "locale": "it",
+        "slugs": [
+          "news",
+          "nobody-nobody-nobody-it-s-ok-not-to-be-ok-collective-experience"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "it",
+        "url": "news/nobody-nobody-nobody-it-s-ok-not-to-be-ok-collective-experience"
+      }
+    ]
+  },
+  {
+    "id": "25142194",
+    "slugs": {
+      "it": [
+        "news",
+        "bus-stop-game"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "news",
+    "group": "news-index",
+    "paths": [
+      {
+        "locale": "it",
+        "slugs": [
+          "news",
+          "bus-stop-game"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "it",
+        "url": "news/bus-stop-game"
+      }
+    ]
+  },
+  {
+    "id": "25138312",
+    "slugs": {
+      "it": [
+        "news",
+        "we-want-you"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "news",
+    "group": "news-index",
+    "paths": [
+      {
+        "locale": "it",
+        "slugs": [
+          "news",
+          "we-want-you"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "it",
+        "url": "news/we-want-you"
+      }
+    ]
+  },
+  {
+    "id": "25138305",
+    "slugs": {
+      "it": [
+        "news",
+        "jump"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "news",
+    "group": "news-index",
+    "paths": [
+      {
+        "locale": "it",
+        "slugs": [
+          "news",
+          "jump"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "it",
+        "url": "news/jump"
+      }
+    ]
+  },
+  {
+    "id": "25138237",
+    "slugs": {
+      "it": [
+        "news",
+        "come-e-andata"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "news",
+    "group": "news-index",
+    "paths": [
+      {
+        "locale": "it",
+        "slugs": [
+          "news",
+          "come-e-andata"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "it",
+        "url": "news/come-e-andata"
+      }
+    ]
+  },
+  {
+    "id": "25130006",
+    "slugs": {
+      "it": [
+        "news",
+        "hasta-donde"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "news",
+    "group": "news-index",
+    "paths": [
+      {
+        "locale": "it",
+        "slugs": [
+          "news",
+          "hasta-donde"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "it",
+        "url": "news/hasta-donde"
+      }
+    ]
+  },
+  {
+    "id": "7228982",
     "slugs": {
       "en": [
         "news",
@@ -6925,7 +7480,35 @@
     ]
   },
   {
-    "id": "24471245",
+    "id": "25103631",
+    "slugs": {
+      "it": [
+        "news",
+        "decisione-consapevole"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "news",
+    "group": "news-index",
+    "paths": [
+      {
+        "locale": "it",
+        "slugs": [
+          "news",
+          "decisione-consapevole"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "it",
+        "url": "news/decisione-consapevole"
+      }
+    ]
+  },
+  {
+    "id": "7228983",
     "slugs": {
       "en": [
         "news",
@@ -6968,7 +7551,7 @@
     ]
   },
   {
-    "id": "24471246",
+    "id": "7228984",
     "slugs": {
       "en": [
         "news",
@@ -7011,7 +7594,7 @@
     ]
   },
   {
-    "id": "24471247",
+    "id": "7228985",
     "slugs": {
       "en": [
         "news",
@@ -7054,7 +7637,7 @@
     ]
   },
   {
-    "id": "24471248",
+    "id": "7228986",
     "slugs": {
       "en": [
         "news",
@@ -7097,7 +7680,7 @@
     ]
   },
   {
-    "id": "24471249",
+    "id": "7228987",
     "slugs": {
       "en": [
         "news",
@@ -7140,7 +7723,7 @@
     ]
   },
   {
-    "id": "24471250",
+    "id": "7228988",
     "slugs": {
       "en": [
         "news",
@@ -7183,7 +7766,7 @@
     ]
   },
   {
-    "id": "24471251",
+    "id": "7228989",
     "slugs": {
       "en": [
         "news",
@@ -7226,7 +7809,7 @@
     ]
   },
   {
-    "id": "24471252",
+    "id": "7228990",
     "slugs": {
       "en": [
         "news",
@@ -7269,7 +7852,7 @@
     ]
   },
   {
-    "id": "24471072",
+    "id": "10258282",
     "slugs": {
       "en": [
         "people",
@@ -7299,7 +7882,7 @@
     ]
   },
   {
-    "id": "24471073",
+    "id": "9949265",
     "slugs": {
       "it": [
         "people",
