@@ -62,9 +62,7 @@ const StructuredContent = ({ locale, content }) => {
         );
       case "PartnerRecord":
         return (
-          <div className="py-2 lg:py-10 2xl:py-16" key={record.id}>
-            <Partners data={record} />
-          </div>
+          <Partners data={record} />
         );
       default:
         return null;
