@@ -1,18 +1,19 @@
-import Link from "next/link";
-import { Fragment } from "react";
+import Link from 'next/link';
+import { Fragment } from 'react';
 
-import translate from "lib/locales";
-import * as queries from "lib/queries";
-import fetchDato from "lib/api/dato";
-import { resolveLinkById } from "lib/utils";
+import translate from 'lib/locales';
+import * as queries from 'lib/queries';
+import fetchData from 'lib/fetchData';
+import { resolveLinkById } from 'lib/utils';
 
-import Layout from "components/Layout";
-import Seo from "components/Seo";
-import HeroSlider from "components/hero/HeroSlider";
-import GalleryPreview from "components/galleries/GalleryPreview";
-import GalleryHome from "components/galleries/GalleryHome";
+import Layout from 'components/Layout';
+import Seo from 'components/Seo';
+import HeroSlider from 'components/hero/HeroSlider';
+import GalleryPreview from 'components/galleries/GalleryPreview';
+import GalleryHome from 'components/galleries/GalleryHome';
 
 function Home({ data, locale, home }) {
+  if (!data || !home) return null;
   const { homeSlideshow, homeSections, seo } = home;
   const { site, footer, menu } = data;
   return (
@@ -35,20 +36,20 @@ function Home({ data, locale, home }) {
                 <a className="button--with-arrow">{block.sectionLinkLabel}</a>
               </Link>
             </div>
-            {block.layout == "Mission" ? (
+            {block.layout == 'Mission' ? (
               <div className="bg-gray">
                 <div className="title--small container py-8 lg:pb-12 lg:pt-16">
-                  {translate("discoverActivities", locale)}
+                  {translate('discoverActivities', locale)}
                 </div>
               </div>
             ) : null}
             <div>
-              {block.layout == "PrimoPiano" ? (
+              {block.layout == 'PrimoPiano' ? (
                 <GalleryPreview slides={block.slides} locale={locale} />
               ) : (
                 <GalleryHome
                   slides={block.slides}
-                  background={"gray"}
+                  background={'gray'}
                   locale={locale}
                 />
               )}
@@ -61,8 +62,8 @@ function Home({ data, locale, home }) {
 }
 
 export async function getStaticProps({ preview = false, locale }) {
-  const response = await fetchDato(queries.getHomepage, { locale }, preview);
-  const data = await fetchDato(queries.site, { locale }, preview);
+  const response = await fetchData(queries.getHomepage, { locale }, preview);
+  const data = await fetchData(queries.site, { locale }, preview);
   return {
     props: {
       locale,

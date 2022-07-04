@@ -1,10 +1,10 @@
-import { Fragment } from "react";
-import Link from "next/link";
-import Image from "next/image";
+import { Fragment } from 'react';
+import Link from 'next/link';
+import Image from 'next/image';
 
-import translate from "lib/locales";
-import { resolveLinkById } from "lib/utils";
-import Newsletter from "./Newsletter";
+import translate from 'lib/locales';
+import { resolveLinkById } from 'lib/utils';
+import Newsletter from './Newsletter';
 
 export default function Footer({ locale, data, hideNewsletter = false }) {
   return (
@@ -47,7 +47,7 @@ export default function Footer({ locale, data, hideNewsletter = false }) {
                             <Link href={item.link}>
                               <a
                                 target="_blank"
-                                title={`${translate("externaLink", locale)} ${
+                                title={`${translate('externaLink', locale)} ${
                                   item.title
                                 }`}
                                 className="text-black hover:text-gray-400"
@@ -102,12 +102,12 @@ export default function Footer({ locale, data, hideNewsletter = false }) {
                     <li>
                       <Link
                         href={`https://www.iubenda.com/privacy-policy/${translate(
-                          "cookiePolicyId",
+                          'cookiePolicyId',
                           locale
                         )}`}
                       >
                         <a
-                          title={`${translate("privacyPolicyTitle", locale)}`}
+                          title={`${translate('privacyPolicyTitle', locale)}`}
                           target="_blank"
                           rel="noreferrer"
                           className="iubenda-nostyle no-brand iubenda-embed text-xxs text-black-light tracking-widest hover:text-black"
@@ -119,12 +119,12 @@ export default function Footer({ locale, data, hideNewsletter = false }) {
                     <li>
                       <Link
                         href={`https://www.iubenda.com/privacy-policy/${translate(
-                          "cookiePolicyId",
+                          'cookiePolicyId',
                           locale
                         )}/cookie-policy`}
                       >
                         <a
-                          title={`${translate("cookiePolicyTitle", locale)}`}
+                          title={`${translate('cookiePolicyTitle', locale)}`}
                           target="_blank"
                           rel="noreferrer"
                           className="iubenda-nostyle no-brand iubenda-embed text-xxs text-black-light tracking-widest hover:text-black"
@@ -136,7 +136,7 @@ export default function Footer({ locale, data, hideNewsletter = false }) {
                     <li>
                       <Link href="https://www.cantierecreativo.net/">
                         <a
-                          title={`${translate("creditsTitle", locale)}`}
+                          title={`${translate('creditsTitle', locale)}`}
                           target="_blank"
                           rel="noreferrer"
                           className="text-xxs text-black-light whitespace-nowrap tracking-widest hover:text-black"

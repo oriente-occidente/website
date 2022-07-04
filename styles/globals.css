@@ -27,7 +27,7 @@
   }
 
   .formatted-content p {
-    @apply text-black-light mb-2 max-w-[700px] text-xs lg:text-sm;
+    @apply mb-2 max-w-[700px] text-xs text-black-light lg:text-sm;
   }
 
   .formatted-content hr {
@@ -35,7 +35,7 @@
   }
 
   .formatted-content a {
-    @apply hover:text-red font-semibold underline;
+    @apply font-semibold underline hover:text-red;
   }
 
   .formatted-content ul {
@@ -55,7 +55,7 @@
   }
 
   .formatted-content ul li {
-    @apply before:bg-check before:absolute before:top-[4px] before:-left-0 before:h-[15px] before:w-[15px] lg:before:h-[20px] lg:before:w-[20px];
+    @apply before:absolute before:top-[4px] before:-left-0 before:h-[15px] before:w-[15px] before:bg-check lg:before:h-[20px] lg:before:w-[20px];
   }
 
   .formatted-content li p {
@@ -63,8 +63,8 @@
   }
 
   .button--with-arrow {
-    @apply after:bg-arrow-right-black hover:after:bg-arrow-right-red flex items-center font-semibold tracking-wider text-black
-      no-underline after:ml-2 after:inline-block after:h-8 after:w-8 after:duration-300 hover:after:translate-x-2 md:text-xs md:after:h-10 md:after:w-10;
+    @apply flex items-center font-semibold tracking-wider text-black no-underline after:ml-2
+      after:inline-block after:h-8 after:w-8 after:bg-arrow-right-black after:duration-300 hover:after:translate-x-2 hover:after:bg-arrow-right-red md:text-xs md:after:h-10 md:after:w-10;
   }
 
   .title {
@@ -80,59 +80,67 @@
   }
 }
 
-.swiper .swiper-pagination .swiper-pagination-bullet {
+.swiper .swiper-pagination .swiper-pagination-bullet,
+.swiper-gallery .swiper-pagination .swiper-pagination-bullet,
+.swiper-gallery-standard .swiper-pagination .swiper-pagination-bullet {
   @apply mx-2 h-3 w-3 bg-white md:hidden;
 }
 
-.swiper .swiper-button-prev {
-  @apply after:bg-arrow-left top-auto bottom-12 left-16 hidden h-14 w-14 before:absolute
-    before:inset-0 before:scale-0 before:rounded-full before:border before:border-white before:duration-300
-    before:ease-in after:h-full after:w-3/5 after:bg-center after:bg-no-repeat after:text-white hover:before:scale-100 md:flex
+.swiper .swiper-button-prev,
+.swiper-gallery .swiper-button-prev,
+.swiper-gallery-standard .swiper-button-prev {
+  @apply top-auto bottom-12 left-16 hidden h-14 w-14 before:absolute before:inset-0
+    before:scale-0 before:rounded-full before:border before:border-white before:duration-300 before:ease-in
+    after:h-full after:w-3/5 after:bg-arrow-left after:bg-center after:bg-no-repeat after:text-white hover:before:scale-100 md:flex
     2xl:bottom-24;
 }
 
-.swiper .swiper-button-next {
-  @apply after:bg-arrow-right top-auto bottom-12 left-32 hidden h-14 w-14 before:absolute
-    before:inset-0 before:scale-0 before:rounded-full before:border before:border-white before:duration-300
-    before:ease-in after:h-full after:w-3/5 after:bg-center after:bg-no-repeat after:text-white hover:before:scale-100 md:flex
+.swiper .swiper-button-next,
+.swiper-gallery .swiper-button-next,
+.swiper-gallery-standard .swiper-button-next {
+  @apply top-auto bottom-12 left-32 hidden h-14 w-14 before:absolute before:inset-0
+    before:scale-0 before:rounded-full before:border before:border-white before:duration-300 before:ease-in
+    after:h-full after:w-3/5 after:bg-arrow-right after:bg-center after:bg-no-repeat after:text-white hover:before:scale-100 md:flex
     2xl:bottom-24;
 }
 
-.SwiperGallery.swiper {
+/* .SwiperGallery.swiper {
   @apply overflow-visible;
-}
+} */
 
-.SwiperGallery.swiper .swiper-slide {
+/* .SwiperGallery.swiper .swiper-slide {
   @apply opacity-0 transition-all;
 }
 
 .SwiperGallery.swiper .swiper-slide-active {
   @apply opacity-100;
-}
+} */
 
-.SwiperGallery .swiper-button-prev {
-  @apply after:bg-arrow-left-black left-[-33%] bottom-0
-    before:border-black xl:left-[calc(-33%+1.5rem)]
+.swiper.swiper-button-prev,
+.swiper-gallery .swiper-button-prev {
+  @apply left-[-33%] bottom-0 before:border-black
+    after:bg-arrow-left-black xl:left-[calc(-33%+1.5rem)]
     xl:bottom-8
     2xl:-left-[333px];
 }
 
-.SwiperGallery .swiper-button-next {
-  @apply after:bg-arrow-right-black bottom-0
-    left-[calc(-33%+3.5rem)] before:border-black xl:bottom-8
+.swiper.swiper-button-next,
+.swiper-gallery .swiper-button-next {
+  @apply bottom-0 left-[calc(-33%+3.5rem)]
+    before:border-black after:bg-arrow-right-black xl:bottom-8
     xl:left-[calc(-33%+5rem)]
     2xl:-left-[calc(333px-3.5rem)];
 }
 
-.SwiperGalleryStandard .swiper-button-prev {
+.swiper-gallery-standard .swiper-button-prev {
   @apply hidden;
 }
 
-.SwiperGalleryStandard .swiper-button-next {
-  @apply after:bg-arrow-right-black right-0 left-auto top-1/2 hover:before:border-black;
+.swiper-gallery-standard .swiper-button-next {
+  @apply right-0 left-auto top-1/2 after:bg-arrow-right-black hover:before:border-black;
 }
 
-.SwiperGalleryStandard {
+.swiper-gallery-standard {
   @apply relative;
 }
 

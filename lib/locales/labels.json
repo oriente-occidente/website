@@ -24,6 +24,7 @@
     "notes": "Richiesta - Note",
     "privacyAgreement": "Dichiaro di aver preso visione dell'informativa dell' Associazione Incontri Internazionali di Rovereto per il trattamento dei dati personali.",
     "register": "Prenota",
+    "buy": "Acquista",
     "404title": "Pagina non trovata",
     "404text": "Il link è sbagliato o non esiste",
     "404cta": "Torna in homepage",
@@ -38,11 +39,11 @@
     "tab_festival": "Festival",
     "tab_events": "Eventi",
     "tab_workshops": "Workshops",
-    "tab_talks": "Linguaggi",
-    "tab_courses": "Corsi",
+    "tab_languages": "Linguaggi",
     "year": "Anno",
     "previous_events": "Eventi Precedenti",
-    "next_events": "Prossimi Eventi"
+    "next_events": "Prossimi Eventi",
+    "payment": "Pagamento"
   },
   "en": {
     "it": "Italian",
@@ -69,6 +70,7 @@
     "notes": "Request Notes",
     "privacyAgreement": "I acknowledge that I have read and agree the Privacy Information of Associazione Incontri Internazionali of Rovereto about the personal data treatment",
     "register": "Reserve",
+    "buy": "Buy",
     "404title": "Page not found",
     "404text": "The address may be misspelled or may not exist.",
     "404cta": "Back to home",
@@ -83,10 +85,11 @@
     "tab_festival": "Festival",
     "tab_events": "Events",
     "tab_workshops": "Workshops",
-    "tab_talks": "Talks",
+    "tab_languages": "Talks",
     "tab_courses": "Courses",
     "year": "Year",
     "previous_events": "Previous Events",
-    "next_events": "Next Events"
+    "next_events": "Next Events",
+    "payment": "Payment"
   }
 }

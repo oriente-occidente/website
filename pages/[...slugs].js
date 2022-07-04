@@ -1,27 +1,28 @@
-// import { useState } from 'react';
+import dynamic from 'next/dynamic';
+import { useRouter } from 'next/router';
 
-import dynamic from "next/dynamic";
-
-import { doQuery, getPaths } from "lib/api";
-import Layout from "components/Layout";
-import Seo from "components/Seo";
-import { camelCase, getBreadcrumbs } from "lib/utils";
-import Breadcrumbs from "components/Breadcrumbs";
-import HeroDetail from "components/hero/HeroDetail";
-import HeroEmpty from "components/hero/HeroEmpty";
-import HeroIndex from "components/hero/HeroIndex";
-import GalleryPreview from "components/galleries/GalleryPreview";
-import ResultsGrid from "components/ResultsGrid";
-import Filters from "components/Filters";
+import { doQuery, getPaths } from 'lib/api';
+import Layout from 'components/Layout';
+import Seo from 'components/Seo';
+import { camelCase, getBreadcrumbs } from 'lib/utils';
+import Breadcrumbs from 'components/Breadcrumbs';
+import HeroDetail from 'components/hero/HeroDetail';
+import HeroEmpty from 'components/hero/HeroEmpty';
+import HeroIndex from 'components/hero/HeroIndex';
+import GalleryPreview from 'components/galleries/GalleryPreview';
+import ResultsGrid from 'components/ResultsGrid';
+import ResultsGridSorted from 'components/ResultsGridSorted';
+import Filters from 'components/Filters';
 
 // import Modal from 'components/Modal';
-import MainContent from "components/contents/MainContent";
-import SectionsParagraphs from "components/contents/SectionsParagraphs";
-import OtherSections from "components/contents/OtherSections";
+import MainContent from 'components/contents/MainContent';
+import SectionsParagraphs from 'components/contents/SectionsParagraphs';
+import OtherSections from 'components/contents/OtherSections';
 
 // import ShareButtons from 'components/ShareButtons';
 
 function Page({ data, locale }) {
+  const router = useRouter();
   const { pageInfo, site, menu, footer, ...rest } = data;
   const pluk = (data) => {
     const { festivalEvents, otherEvents, courses, workshops } = data;
@@ -29,18 +30,25 @@ function Page({ data, locale }) {
   };
   const { __typename: pageType } = pageInfo;
   const payload = rest[pageType];
-  const isPage = pageType === "page";
+
+  if (!payload) {
+    console.log('NO PAYLOAD', pageInfo, rest);
+    router.push('/404'); //REDIRECT TO 404}
+  }
+  const isPage = pageType === 'page';
   const isIndex = isPage && payload.isIndex;
   const indexType = isIndex && payload.indexType;
-  const showFilters = indexType === "festival-events";
+  const showFilters = indexType === 'festival-events';
   const list =
     isIndex && indexType
       ? showFilters
-        ? pluk(rest, "festivalEvents, otherEvents, courses, workshops")
+        ? pluk(rest, 'festivalEvents, otherEvents, courses, workshops')
         : rest[camelCase(indexType)]
       : [];
+  // console.log('indexType', indexType);
+  const isSorted = indexType === 'workshops' || indexType === 'other-events';
   const group = indexType ? indexType : null;
-
+  // console.log('pageInfo', pageInfo.group);
   const {
     layoutHero,
     titleHero,
@@ -50,10 +58,13 @@ function Page({ data, locale }) {
     isFestival,
     authors,
     dates: dateEvento,
+    startDate,
     location,
     paymentSettings,
   } = payload;
 
+  const newsDate = pageInfo.group === 'news-index' ? startDate : null;
+  // console.log('newsDate', newsDate);
   const heroData = {
     layoutHero,
     titleHero,
@@ -63,14 +74,16 @@ function Page({ data, locale }) {
     location,
     slideshowHero,
     isFestival,
+    newsDate,
     dateEvento,
     paymentSettings,
     pageId: pageInfo.id,
     locale,
+    pageType,
   };
 
   const ShareButtons = !isIndex
-    ? dynamic(() => import("components/ShareButtons"), { ssr: false })
+    ? dynamic(() => import('components/ShareButtons'), { ssr: false })
     : null;
 
   return (
@@ -82,13 +95,13 @@ function Page({ data, locale }) {
       <Layout footer={footer} menu={menu} locale={locale} alts={pageInfo.urls}>
         <Breadcrumbs
           id="#main-content"
-          background={heroData.layoutHero == "index" ? "gray" : null}
+          background={heroData.layoutHero == 'index' ? 'gray' : null}
           paths={getBreadcrumbs(pageInfo.slugs[locale], payload.slug, locale)}
           locale={locale}
         />
-        {heroData.layoutHero == "detail" && imageHero ? (
+        {heroData.layoutHero == 'detail' && imageHero ? (
           <HeroDetail data={heroData} />
-        ) : heroData.layoutHero == "index" && imageHero ? (
+        ) : heroData.layoutHero == 'index' && imageHero ? (
           <HeroIndex data={heroData} />
         ) : (
           <HeroEmpty data={heroData} />
@@ -103,8 +116,11 @@ function Page({ data, locale }) {
         {payload?.otherSections && payload.otherSections.length > 0 && (
           <OtherSections locale={locale} data={payload.otherSections} />
         )}
-        {isIndex && !showFilters && (
+        {isIndex && !showFilters && !isSorted && (
           <ResultsGrid list={list} group={group} locale={locale} />
+        )}
+        {isIndex && !showFilters && isSorted && (
+          <ResultsGridSorted list={list} group={group} locale={locale} />
         )}
         {isIndex && showFilters && (
           <Filters
@@ -141,12 +157,14 @@ function Page({ data, locale }) {
   );
 }
 export async function getStaticPaths() {
-  const paths = getPaths();
-  return { paths, fallback: false };
+  const paths = [];
+  return { paths, fallback: 'blocking' };
 }
 
 export async function getStaticProps({ params, locale, preview = false }) {
+  // const routes = queryRoutesByParams(params, locale, preview);
   const data = await doQuery(locale, params, preview);
+  // console.log('DATA', JSON.stringify(result.data, null, 2));
   return {
     props: { data, locale, params },
   };

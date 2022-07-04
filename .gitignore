@@ -42,4 +42,5 @@ yarn-error.log*
 
 # /data/*.json
 
-.netlify_sites.json
+netlify_sites.json
+temp

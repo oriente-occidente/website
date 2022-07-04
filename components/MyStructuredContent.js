@@ -11,6 +11,7 @@ import BlockQuote from "components/BlockQuote";
 import GalleryStandard from "components/galleries/GalleryStandard";
 import VideoPlayer from "components/video/VideoPlayer";
 import VideoEmbedded from "components/video/VideoEmbedded";
+import Partners from "components/Partners";
 
 import { resolveLinkById } from "lib/utils";
 
@@ -30,16 +31,18 @@ const StructuredContent = ({ locale, content }) => {
         }
         return (
           <div key={record.id}>
-            <div className="py-2 lg:py-10 2xl:py-16">
+            <div className="py-2 lg:py-10 2xl:py-16 relative">
               <Image
                 className="max-w-[800px]"
                 data={record?.image?.responsiveImage}
                 alt={record?.image?.alt}
                 title={record?.image?.title}
               />
-            </div>
-            <div className="-mt-2 mb-2 max-w-[800px] px-2 py-1 text-xxs text-black/80 lg:-mt-10 lg:mb-10 2xl:-mt-16 2xl:mb-16">
-              {record.image.responsiveImage.title}
+              {record.image.responsiveImage.title &&
+                <div className="absolute bottom-0 left-0 right-0 z-1 mt-2 mb-2 max-w-[800px] px-4 pt-3 pb-2 text-xxs text-white lg:-mt-10 lg:mb-10 2xl:-mt-16 2xl:mb-16 bg-gradient-to-t from-black/80 text-shadow">
+                  {record.image.responsiveImage.title}
+                </div>
+              }
             </div>
           </div>
         );
@@ -56,6 +59,10 @@ const StructuredContent = ({ locale, content }) => {
               )}
             </div>
           </div>
+        );
+      case "PartnerRecord":
+        return (
+          <Partners data={record} />
         );
       default:
         return null;

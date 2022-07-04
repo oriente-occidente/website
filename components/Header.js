@@ -1,13 +1,13 @@
-import Link from "next/link";
-import { Fragment } from "react";
-import { Popover, Transition, Disclosure } from "@headlessui/react";
-import { ChevronDownIcon } from "@heroicons/react/solid";
+import Link from 'next/link';
+import { Fragment } from 'react';
+import { Popover, Transition, Disclosure } from '@headlessui/react';
+import { ChevronDownIcon } from '@heroicons/react/solid';
 
-import { resolveLinkById } from "lib/utils";
-import LanguageSwitcher from "components/LanguageSwitcher";
+import { resolveLinkById } from 'lib/utils';
+import LanguageSwitcher from 'components/LanguageSwitcher';
 
 function classNames(...classes) {
-  return classes.filter(Boolean).join(" ");
+  return classes.filter(Boolean).join(' ');
 }
 
 function renderMobile(data, locale, alts, handleClose) {
@@ -21,7 +21,7 @@ function renderMobile(data, locale, alts, handleClose) {
                 {item.title.toUpperCase()}
                 <div
                   className={`${
-                    open ? "" : "rotate-180"
+                    open ? '' : 'rotate-180'
                   } bg-arrow-small-down h-4 w-4 duration-300  ease-in md:h-8 md:w-8`}
                 />
               </Disclosure.Button>
@@ -29,7 +29,7 @@ function renderMobile(data, locale, alts, handleClose) {
                 {item.children?.map((child) => (
                   <Link
                     key={child?.id}
-                    href={resolveLinkById(child?.link?.id || "/", locale)}
+                    href={resolveLinkById(child?.link?.id || '/', locale)}
                   >
                     <a
                       onClick={() => handleClose()}
@@ -118,23 +118,24 @@ function renderMobile(data, locale, alts, handleClose) {
 
 function Header(props) {
   const { data, locale, alts } = props;
+
   function renderLink(item) {
-    if (item.children && item.children.length > 0) {
+    if (item.children && item.children.filter((c) => c.slug).length > 0) {
       return (
         <Popover className="relative">
           {({ open, close }) => (
             <Fragment>
               <Popover.Button
                 className={classNames(
-                  open ? "text-black" : "text-black",
-                  "group text-xxs hover:text-red inline-flex items-center rounded-md font-semibold uppercase tracking-widest"
+                  open ? 'text-black' : 'text-black',
+                  'group text-xxs hover:text-red inline-flex items-center rounded-md font-semibold uppercase tracking-widest'
                 )}
               >
                 <span>{item.title}</span>
                 <ChevronDownIcon
                   className={classNames(
-                    open ? "text-black" : "text-black",
-                    "group-hover:text-red ml-1 h-5 w-5"
+                    open ? 'text-black' : 'text-black',
+                    'group-hover:text-red ml-1 h-5 w-5'
                   )}
                   aria-hidden="true"
                   focusable="false"
@@ -153,21 +154,25 @@ function Header(props) {
                 <Popover.Panel className="absolute left-1/2 z-50 mt-3 w-screen max-w-xs -translate-x-1/2 transform px-2 sm:px-0">
                   <div className="overflow-hidden rounded-lg shadow-lg  ">
                     <div className="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
-                      {item.children.map((child) => (
-                        <Link
-                          key={child.id}
-                          href={resolveLinkById(child.link?.id, locale)}
-                        >
-                          <a
-                            className="-m-3 block rounded-md p-1"
-                            onClick={() => close()}
-                          >
-                            <p className="text-black-light hover:text-red text-sm normal-case">
-                              {child.title}
-                            </p>
-                          </a>
-                        </Link>
-                      ))}
+                      {item.children
+                        .filter((c) => c.slug)
+                        .map((child) => {
+                          return (
+                            <Link
+                              key={child.id}
+                              href={resolveLinkById(child.link?.id, locale)}
+                            >
+                              <a
+                                className="-m-3 block rounded-md p-1"
+                                onClick={() => close()}
+                              >
+                                <p className="text-black-light hover:text-red text-sm normal-case">
+                                  {child.title}
+                                </p>
+                              </a>
+                            </Link>
+                          );
+                        })}
                     </div>
                   </div>
                 </Popover.Panel>

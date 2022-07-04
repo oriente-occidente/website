@@ -5,7 +5,7 @@ const tabs = [
   { name: 'tab_festival', slug: 'all' },
   { name: 'tab_events', slug: 'festivalEvents' },
   { name: 'tab_workshops', slug: 'workshops' },
-  // { name: 'tab_courses', slug: 'courses' },
+  { name: 'tab_languages', slug: 'languages' },
   // { name: 'tab_talks', slug: 'courses' },
 ];
 

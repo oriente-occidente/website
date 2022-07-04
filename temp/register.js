@@ -17,6 +17,7 @@ function Page({ data, locale, thankyouMessage }) {
   const [eventId, setEventId] = useState(null);
   const router = useRouter();
   const { query } = router;
+  const [formData, setFormData] = useState({});
 
   useEffect(() => {
     if (query.id) {
@@ -33,16 +34,16 @@ function Page({ data, locale, thankyouMessage }) {
     if (eventId) {
       doQueryItem(locale, eventId)
         .then((payload) => {
-          // console.log('event data:', payload);
           setPayload(payload);
         })
         .catch((e) => console.log(e));
     }
   }, [eventId]);
 
-  const action = `${locale === 'en' ? '/en' : ''}/forms/thankyou?id=${eventId}${
-    paymentId ? '&cp=' + paymentId : ''
-  }`;
+  // const action = `${locale === 'en' ? '/en' : ''}/forms/thankyou?id=${eventId}${
+  //   paymentId ? '&cp=' + paymentId : ''
+  // }`;
+  const action = `thankyou?id=${eventId}${paymentId ? '&cp=' + paymentId : ''}`;
   const choiche = paymentId
     ? payload.paymentSettings?.find((p) => p.id === paymentId)
     : null;
@@ -56,6 +57,42 @@ function Page({ data, locale, thankyouMessage }) {
     const price = `${amount ? amount + ' €' : ''}`;
     return [description, range, price];
   });
+
+  function encode(data) {
+    return Object.keys(data)
+      .map(
+        (key) => encodeURIComponent(key) + '=' + encodeURIComponent(data[key])
+      )
+      .join('&');
+  }
+
+  const handlInputChange = (e) => {
+    const value = e.target?.value;
+    const name = e.target?.name;
+    setFormData((p) => {
+      return { ...p, [name]: value };
+    });
+  };
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    // console.log('SUBMIT', event.target);
+    // console.log('formData', formData);
+    fetch('/', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: encode({
+        'form-name': event.target.getAttribute('name'),
+        ...formData,
+      }),
+    })
+      .then((response) => {
+        if (response) console.log('response', response);
+        // console.log('redirecting to', action);
+        router.push(`${locale === 'en' ? '/en' : ''}/forms/${action}`);
+      })
+      .catch((error) => alert(error));
+  };
+
   return (
     <Layout footer={footer} menu={menu} locale={locale} hideNewsletter={true}>
       <Seo tags={site.faviconMetaTags} />
@@ -71,8 +108,10 @@ function Page({ data, locale, thankyouMessage }) {
           <form
             name="register"
             method="POST"
-            action={action}
+            // action={action}
             data-netlify="true"
+            onSubmit={handleSubmit}
+            netlify
           >
             <input type="hidden" name="form-name" value="register" />
             <input type="hidden" name="locale" value={locale} />
@@ -110,6 +149,8 @@ function Page({ data, locale, thankyouMessage }) {
                   type="text"
                   maxLength="250"
                   required="required"
+                  onChange={(e) => handlInputChange(e)}
+                  value={formData.firstName}
                 />
               </div>
               <div>
@@ -120,6 +161,8 @@ function Page({ data, locale, thankyouMessage }) {
                   type="text"
                   maxLength="250"
                   required="required"
+                  onChange={(e) => handlInputChange(e)}
+                  value={formData.lastName}
                 />
               </div>
               <div>
@@ -140,6 +183,8 @@ function Page({ data, locale, thankyouMessage }) {
                   type="text"
                   maxLength="250"
                   required="required"
+                  onChange={(e) => handlInputChange(e)}
+                  value={formData.address}
                 />
               </div>
               <div>
@@ -150,6 +195,8 @@ function Page({ data, locale, thankyouMessage }) {
                   type="text"
                   maxLength="250"
                   required="required"
+                  onChange={(e) => handlInputChange(e)}
+                  value={formData.city}
                 />
               </div>
               <div>
@@ -160,6 +207,8 @@ function Page({ data, locale, thankyouMessage }) {
                   type="text"
                   maxLength="250"
                   required="required"
+                  onChange={(e) => handlInputChange(e)}
+                  value={formData.stateCode}
                 />
               </div>
               <div>
@@ -170,6 +219,8 @@ function Page({ data, locale, thankyouMessage }) {
                   type="text"
                   maxLength="250"
                   required="required"
+                  onChange={(e) => handlInputChange(e)}
+                  value={formData.zipCode}
                 />
               </div>
               <div>
@@ -180,6 +231,8 @@ function Page({ data, locale, thankyouMessage }) {
                   type="text"
                   maxLength="250"
                   required="required"
+                  onChange={(e) => handlInputChange(e)}
+                  value={formData.phone}
                 />
               </div>
               <div>
@@ -190,6 +243,8 @@ function Page({ data, locale, thankyouMessage }) {
                   name="notes"
                   type="textarea"
                   maxLength="500"
+                  onChange={(e) => handlInputChange(e)}
+                  value={formData.notes}
                 />
               </div>
 
@@ -199,6 +254,8 @@ function Page({ data, locale, thankyouMessage }) {
                   name="privacy"
                   type="checkbox"
                   required="required"
+                  onChange={(e) => handlInputChange(e)}
+                  value={formData.privacy}
                 />
                 <label
                   className="px-2"

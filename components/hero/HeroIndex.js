@@ -1,9 +1,10 @@
-import { Image as DatoImage } from "react-datocms";
-import { LocationMarkerIcon, CalendarIcon } from "@heroicons/react/outline";
+import { Image as DatoImage } from 'react-datocms';
+import { LocationMarkerIcon, CalendarIcon } from '@heroicons/react/outline';
 // import dynamic from 'next/dynamic';
-import Gallery from "components/galleries/Gallery";
-import BookButton from "components/BookButton";
-import { formatDate } from "lib/utils";
+import Gallery from 'components/galleries/Gallery';
+import BookButton from 'components/BookButton';
+import { formatDate } from 'lib/utils';
+import { exclude } from 'next-sitemap';
 
 function HeroIndex({ data, locale }) {
   const {
@@ -13,10 +14,12 @@ function HeroIndex({ data, locale }) {
     location,
     imageHero,
     isFestival,
+    newsDate,
     dateEvento,
     paymentSettings,
     slideshowHero,
     pageId,
+    pageType,
   } = data;
 
   // let Gallery = () => <div />;
@@ -27,21 +30,30 @@ function HeroIndex({ data, locale }) {
   //   });
   // }
 
+
   return (
     <div className="border-t border-gray bg-gray pb-10 md:border-none md:py-0">
       <header className="relative overflow-hidden md:grid md:grid-cols-4 md:gap-4 xl:container xl:mx-auto">
         <h1 className="title--big z-20 py-4 px-4 xl:pl-6">{titleHero}</h1>
         <div className="md:border-color-gray relative md:col-span-3 md:col-start-2 md:border-l">
-          <div className="pl-4 md:pl-0 xl:w-[calc(100%+3rem)] 2xl:w-[calc((100vw-((100vw-1380px)/2))-333px-1rem)]">
-            {slideshowHero != "" ? (
+          {/* <div className=" pl-4 md:pl-0 xl:w-[calc(100%+3rem)] 2xl:w-[calc((100vw-((100vw-1380px)/2))-333px-1rem)]"> */}
+          <div className=" pl-4 md:pl-0">
+            {slideshowHero != '' ? (
               <Gallery slides={slideshowHero} />
             ) : imageHero ? (
-              <DatoImage
-                className="max-w-[1400px]"
-                data={imageHero.responsiveImage}
-                alt={imageHero.alt}
-                title={imageHero.title}
-              />
+              <div className="relative">
+                <DatoImage
+                  className="max-w-[1400px]"
+                  data={imageHero.responsiveImage}
+                  alt={imageHero.alt}
+                  title={imageHero.title}
+                />
+                {imageHero.title && (
+                  <div className="absolute bottom-0 left-0 right-0 z-1 px-4 pt-3 pb-2 text-xxs text-white bg-gradient-to-t from-black/80 text-shadow">
+                    {imageHero.title}
+                  </div>
+                )}
+              </div>
             ) : null}
           </div>
           <div className="top-0 left-0 right-1/2 z-10 hidden h-full max-w-[1400px] bg-gradient-to-r from-black-transparent to-transparent md:absolute md:bottom-0 md:left-[25%]" />
@@ -52,6 +64,14 @@ function HeroIndex({ data, locale }) {
           {descriptionHero && (
             <div className="px-4 text-sm text-black-light md:pl-10 lg:px-20 lg:pt-2 lg:text-xl lg:font-light lg:text-black">
               {descriptionHero}
+            </div>
+          )}
+          {newsDate && (
+            <div className="px-4 md:pl-10 lg:px-20 lg:pt-2 hidden items-center gap-x-2 md:flex">
+              <CalendarIcon aria-hidden="true" className="h-4 w-4" />
+              <span className="font-light normal-case md:pr-1">
+                {formatDate(newsDate, locale)}
+              </span>
             </div>
           )}
           {paymentSettings != null && (
@@ -65,7 +85,8 @@ function HeroIndex({ data, locale }) {
           )}
           {dateEvento && (
             <div className="px-4 pt-4 md:pl-10 lg:px-20">
-              {dateEvento != null ? (
+              {dateEvento != null &&
+              !['project', 'network'].includes(pageType) ? (
                 <>
                   {dateEvento.map((date) => (
                     <div
@@ -76,7 +97,7 @@ function HeroIndex({ data, locale }) {
                         aria-hidden="true"
                         className="mr-2 h-4 w-4"
                       />
-                      {formatDate(date.startTime, locale || "en", date.isDaily)}
+                      {formatDate(date.startTime, locale || 'en', date.isDaily)}
                     </div>
                   ))}
                 </>

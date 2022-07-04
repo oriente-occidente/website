@@ -11,7 +11,7 @@ import { Image as DatoImage } from 'react-datocms';
 function Gallery({ slides }) {
   SwiperCore.use([Pagination, Navigation, A11y]);
   return (
-    <div className="relative">
+    <div className="relative swiper-gallery-standard">
       <Swiper
         modules={[Autoplay, A11y]}
         speed={900}

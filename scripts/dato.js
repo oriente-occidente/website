@@ -1,11 +1,11 @@
-const axios = require("axios");
-const { SiteClient } = require("datocms-client");
-const _ = require("lodash");
+const axios = require('axios');
+const { SiteClient } = require('datocms-client');
+const _ = require('lodash');
 
-const ENV = process.env.NEXT_PUBLIC_DATO_ENV ?? "";
-const DATO_API_KEY = process.env.NEXT_PUBLIC_DATO_API_KEY;
+const ENV = process.env.NEXT_PUBLIC_DATO_ENV ?? '';
+const API_KEY = process.env.NEXT_PUBLIC_DATO_API_KEY;
 const options = ENV ? { environment: ENV } : null;
-const client = new SiteClient(DATO_API_KEY, options);
+const client = new SiteClient(API_KEY, options);
 
 const sleep = (delay) => {
   return new Promise((resolve) => setTimeout(resolve, delay));
@@ -20,27 +20,27 @@ async function getItemTypesByApiKey() {
 
 //GRAPHQL
 const doQuery = async (q, v) => {
-  const url = `https://graphql.datocms.com${ENV ? "/environments/" + ENV : ""}`;
-  // console.log('doquery', DATO_API_KEY);
+  let headers = {
+    'Content-Type': 'application/json',
+    Accept: 'application/json',
+    Authorization: `Bearer ${API_KEY}`,
+  };
+  const url = `https://graphql.datocms.com${ENV ? '/environments/' + ENV : ''}`;
   try {
     const response = await axios({
       url,
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        Accept: "application/json",
-        Authorization: `Bearer ${DATO_API_KEY}`,
-      },
+      method: 'POST',
+      headers,
       data: { query: q, variables: v },
     });
-    console.log("status", response?.status);
+    console.log('status', response?.status);
     if (response?.data?.errors) {
-      console.log("response ERROR", response?.data?.errors);
+      console.log('response ERROR', response?.data?.errors);
       throw response.data.errors;
     }
     return response?.data?.data;
   } catch (error) {
-    console.log("QUERY ERROR", error, "on query", q);
+    console.log('QUERY ERROR', error, 'on query', q);
     throw error;
   }
 };
@@ -65,9 +65,9 @@ async function createRecordWithDelay(data) {
   try {
     await sleep(2000);
     await client.items.create(data);
-    console.log("SUCCESS");
+    // console.log("SUCCESS");
   } catch (error) {
-    console.log("ERROR");
+    console.log('ERROR');
     console.log(error);
     // throw new Error(error);
   }
@@ -76,17 +76,17 @@ async function createRecordWithDelay(data) {
 async function createRecord(data) {
   try {
     const record = await client.items.create(data);
-    console.log("SUCCESS");
+    // console.log("SUCCESS");
     // console.log(record);
     return record;
   } catch (error) {
-    console.log("ERROR");
+    console.log('ERROR');
     console.log(error);
     // throw new Error(error);
   }
 }
 
-const allRecords = (type = "product") => {
+const allRecords = (type = 'product') => {
   return client.items.all(
     {
       filter: {
@@ -102,8 +102,8 @@ const allRecords = (type = "product") => {
 const getRecordById = (itemId) => {
   client.items
     .find(itemId, {
-      nested: "true",
-      version: "published",
+      nested: 'true',
+      version: 'published',
     })
     .then((item) => {
       console.log(item);
@@ -170,18 +170,18 @@ const createModel = (modelData) => {
   return client.itemTypes
     .create(modelData)
     .then((itemType) => {
-      console.log("SUCCESS");
+      console.log('SUCCESS');
       console.log(itemType);
       return itemType;
     })
     .catch((error) => {
-      console.log("ERROR");
+      console.log('ERROR');
       console.error(error);
       return null;
     });
 };
 
-const getModelId = (apiKey = "product") => {
+const getModelId = (apiKey = 'product') => {
   return client.itemTypes
     .find(apiKey)
     .then((model) => {
@@ -193,7 +193,7 @@ const getModelId = (apiKey = "product") => {
     });
 };
 
-const getModel = (apiKey = "product") => {
+const getModel = (apiKey = 'product') => {
   return client.itemTypes
     .find(apiKey)
     .then((model) => {
@@ -253,11 +253,11 @@ async function updateRecord(itemId, data) {
   try {
     console.log(JSON.stringify(data, null, 2));
     await client.items.update(itemId, data);
-    console.log("ok");
+    console.log('ok');
   } catch (error) {
     console.error(error);
   } finally {
-    console.log("done ");
+    console.log('done ');
   }
 }
 

@@ -1,10 +1,10 @@
-import { Image as DatoImage } from "react-datocms";
-import { LocationMarkerIcon, CalendarIcon } from "@heroicons/react/outline";
+import { Image as DatoImage } from 'react-datocms';
+import { LocationMarkerIcon, CalendarIcon } from '@heroicons/react/outline';
 // import dynamic from 'next/dynamic';
-import Gallery from "components/galleries/Gallery";
-import BookButton from "components/BookButton";
+import Gallery from 'components/galleries/Gallery';
+import BookButton from 'components/BookButton';
 
-import { formatDate } from "lib/utils";
+import { formatDate } from 'lib/utils';
 
 function HeroDetail({ data }) {
   const {
@@ -74,7 +74,8 @@ function HeroDetail({ data }) {
               {descriptionHero}
             </h2>
           </div>
-          {paymentSettings != null && (
+
+          {paymentSettings && (
             <BookButton
               paymentSettings={paymentSettings}
               locale={locale}
@@ -83,16 +84,24 @@ function HeroDetail({ data }) {
           )}
         </div>
 
-        <div className="mt-6 pl-4 md:mt-8 md:pl-0 xl:w-[calc(100%+3rem)] 2xl:w-[calc((100vw-((100vw-1380px)/2))-333px-1rem)]">
-          {slideshowHero != "" ? (
+        {/* <div className="mt-6 pl-4 md:mt-8 md:pl-0 xl:w-[calc(100%+3rem)] 2xl:w-[calc((100vw-((100vw-1380px)/2))-333px-1rem)]"> */}
+        <div className="mt-6 pl-4 md:mt-8 md:pl-0 ">
+          {slideshowHero != '' ? (
             <Gallery slides={slideshowHero} />
           ) : imageHero ? (
-            <DatoImage
-              className="max-w-[1400px]"
-              data={imageHero.responsiveImage}
-              alt={imageHero.alt}
-              title={imageHero.title}
-            />
+            <div className="relative">
+              <DatoImage
+                className="max-w-[1400px]"
+                data={imageHero.responsiveImage}
+                alt={imageHero.alt}
+                title={imageHero.title}
+              />
+              {imageHero.title && (
+                <div className="absolute bottom-0 left-0 right-0 z-1 px-4 pt-3 pb-2 text-xxs text-white bg-gradient-to-t from-black/80 text-shadow">
+                  {imageHero.title}
+                </div>
+              )}
+            </div>
           ) : null}
         </div>
 
