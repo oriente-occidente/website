@@ -25,7 +25,7 @@ function PreviewCard({ data, locale, group = null, year }) {
     }
   }
 
-  if (group === 'projects') {
+  if (group === 'projects' || group === 'networks') {
     year = getYearOfDate(data.startDate);
   }
 

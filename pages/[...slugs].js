@@ -79,6 +79,7 @@ function Page({ data, locale }) {
     paymentSettings,
     pageId: pageInfo.id,
     locale,
+    pageType,
   };
 
   const ShareButtons = !isIndex
