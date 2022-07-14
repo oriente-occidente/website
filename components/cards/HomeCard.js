@@ -12,7 +12,7 @@ function HomeCard({ count, categoryTitle, data, locale }) {
           <div className="relative flex h-full justify-between lg:pl-8 2xl:pl-[calc((100vw-1390px)/2)]">
             <div>
               <div className="relative text-xxs uppercase tracking-wider after:absolute after:top-7 after:left-0 after:h-px after:w-12 after:bg-black md:text-sm md:tracking-wide lg:text-base lg:after:top-12 lg:after:w-40">
-                0{count + 1}/
+                0{count}/
               </div>
               <div className="title--small mt-4 mb-12 hidden md:block lg:py-16">
                 {data.descriptionHero}
