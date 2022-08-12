@@ -23,6 +23,8 @@ module.exports = {
         },
       },
       fontSize: {
+        "4xs": ["11px", "20px"],
+        "3xs": ["12px", "22px"],
         xxs: ["14px", "24px"],
         xs: ["16px", "26px"],
         sm: ["18px", "28px"],
