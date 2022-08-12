@@ -36,12 +36,10 @@ export default function Team({ locale, data }) {
         }
         {data.linkedin &&
           <div className="mt-1 text-4xs text-black-light xl:text-xs inline-block hover:text-red">
-            <Link
-              href={`${data.linkedin}`}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <Link href={`${data.linkedin}`}>
               <a
+                target="_blank"
+                rel="noopener noreferrer"
                 title={`Linkedin ${data.title}`}
                 className="hover:text-red"
               >
