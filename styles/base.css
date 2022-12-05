@@ -47,6 +47,10 @@ a {
   -webkit-tap-highlight-color: var(--secondary);
 }
 
+.object-cover {
+  height: 100%;
+}
+
 .object-cover img {
   object-fit: cover;
 }
