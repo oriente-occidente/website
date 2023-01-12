@@ -48,7 +48,7 @@
     "slugs": {
       "it": [
         "info",
-        "partners"
+        "partner"
       ],
       "en": [
         "info",
@@ -61,7 +61,7 @@
         "locale": "it",
         "slugs": [
           "info",
-          "partners"
+          "partner"
         ]
       },
       {
@@ -75,7 +75,7 @@
     "urls": [
       {
         "locale": "it",
-        "url": "info/partners"
+        "url": "info/partner"
       },
       {
         "locale": "en",
@@ -507,9 +507,7 @@
       "it": [
         "sostienici"
       ],
-      "en": [
-        "support-us"
-      ]
+      "en": []
     },
     "__typename": "page",
     "paths": [
@@ -521,9 +519,7 @@
       },
       {
         "locale": "en",
-        "slugs": [
-          "support-us"
-        ]
+        "slugs": []
       }
     ],
     "urls": [
@@ -533,7 +529,7 @@
       },
       {
         "locale": "en",
-        "url": "support-us"
+        "url": ""
       }
     ]
   },
@@ -748,6 +744,126 @@
     ]
   },
   {
+    "id": "30523587",
+    "isIndex": false,
+    "indexType": "",
+    "slugs": {
+      "it": [
+        "info",
+        "merchandising"
+      ],
+      "en": [
+        "info"
+      ]
+    },
+    "__typename": "page",
+    "paths": [
+      {
+        "locale": "it",
+        "slugs": [
+          "info",
+          "merchandising"
+        ]
+      },
+      {
+        "locale": "en",
+        "slugs": [
+          "info"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "it",
+        "url": "info/merchandising"
+      },
+      {
+        "locale": "en",
+        "url": "info"
+      }
+    ]
+  },
+  {
+    "id": "55711946",
+    "isIndex": false,
+    "indexType": "",
+    "slugs": {
+      "it": [
+        "studio",
+        "gli-spazi"
+      ],
+      "en": [
+        "studio"
+      ]
+    },
+    "__typename": "page",
+    "paths": [
+      {
+        "locale": "it",
+        "slugs": [
+          "studio",
+          "gli-spazi"
+        ]
+      },
+      {
+        "locale": "en",
+        "slugs": [
+          "studio"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "it",
+        "url": "studio/gli-spazi"
+      },
+      {
+        "locale": "en",
+        "url": "studio"
+      }
+    ]
+  },
+  {
+    "id": "92850033",
+    "isIndex": false,
+    "indexType": "",
+    "slugs": {
+      "it": [
+        "studio",
+        "accademy"
+      ],
+      "en": [
+        "studio"
+      ]
+    },
+    "__typename": "page",
+    "paths": [
+      {
+        "locale": "it",
+        "slugs": [
+          "studio",
+          "accademy"
+        ]
+      },
+      {
+        "locale": "en",
+        "slugs": [
+          "studio"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "it",
+        "url": "studio/accademy"
+      },
+      {
+        "locale": "en",
+        "url": "studio"
+      }
+    ]
+  },
+  {
     "id": "7228713",
     "slugs": {
       "en": [
@@ -826,158 +942,13 @@
     ]
   },
   {
-    "id": "29192160",
-    "slugs": {
-      "it": [
-        "festival",
-        "programma",
-        "lamenta"
-      ]
-    },
-    "isIndex": false,
-    "indexType": "",
-    "__typename": "event",
-    "group": "festival-events",
-    "paths": [
-      {
-        "locale": "it",
-        "slugs": [
-          "festival",
-          "programma",
-          "lamenta"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "it",
-        "url": "festival/programma/lamenta"
-      }
-    ]
-  },
-  {
-    "id": "26303361",
-    "slugs": {
-      "it": [
-        "festival",
-        "programma",
-        "metamorphosis-larva-carlo-massari"
-      ]
-    },
-    "isIndex": false,
-    "indexType": "",
-    "__typename": "event",
-    "group": "festival-events",
-    "paths": [
-      {
-        "locale": "it",
-        "slugs": [
-          "festival",
-          "programma",
-          "metamorphosis-larva-carlo-massari"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "it",
-        "url": "festival/programma/metamorphosis-larva-carlo-massari"
-      }
-    ]
-  },
-  {
-    "id": "29189115",
-    "slugs": {
-      "it": [
-        "festival",
-        "programma",
-        "metamorphosis-blatta-carlo-massari"
-      ]
-    },
-    "isIndex": false,
-    "indexType": "",
-    "__typename": "event",
-    "group": "festival-events",
-    "paths": [
-      {
-        "locale": "it",
-        "slugs": [
-          "festival",
-          "programma",
-          "metamorphosis-blatta-carlo-massari"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "it",
-        "url": "festival/programma/metamorphosis-blatta-carlo-massari"
-      }
-    ]
-  },
-  {
-    "id": "29189949",
-    "slugs": {
-      "it": [
-        "festival",
-        "programma",
-        "metamorphosis-sapiens-carlo-massari"
-      ]
-    },
-    "isIndex": false,
-    "indexType": "",
-    "__typename": "event",
-    "group": "festival-events",
-    "paths": [
-      {
-        "locale": "it",
-        "slugs": [
-          "festival",
-          "programma",
-          "metamorphosis-sapiens-carlo-massari"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "it",
-        "url": "festival/programma/metamorphosis-sapiens-carlo-massari"
-      }
-    ]
-  },
-  {
-    "id": "29151639",
-    "slugs": {
-      "it": [
-        "festival",
-        "programma",
-        "a-touma-ballake-sissoko"
-      ]
-    },
-    "isIndex": false,
-    "indexType": "",
-    "__typename": "event",
-    "group": "festival-events",
-    "paths": [
-      {
-        "locale": "it",
-        "slugs": [
-          "festival",
-          "programma",
-          "a-touma-ballake-sissoko"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "it",
-        "url": "festival/programma/a-touma-ballake-sissoko"
-      }
-    ]
-  },
-  {
     "id": "29155847",
     "slugs": {
+      "en": [
+        "festival",
+        "program",
+        "meridiana-canzoniere-grecanico-salentino"
+      ],
       "it": [
         "festival",
         "programma",
@@ -990,6 +961,14 @@
     "group": "festival-events",
     "paths": [
       {
+        "locale": "en",
+        "slugs": [
+          "festival",
+          "program",
+          "meridiana-canzoniere-grecanico-salentino"
+        ]
+      },
+      {
         "locale": "it",
         "slugs": [
           "festival",
@@ -1000,8 +979,1435 @@
     ],
     "urls": [
       {
+        "locale": "en",
+        "url": "festival/program/meridiana-canzoniere-grecanico-salentino"
+      },
+      {
         "locale": "it",
         "url": "festival/programma/meridiana-canzoniere-grecanico-salentino"
+      }
+    ]
+  },
+  {
+    "id": "31321240",
+    "slugs": {
+      "en": [
+        "festival",
+        "program",
+        "silences-we-are-familiar-with-the-dance"
+      ],
+      "it": [
+        "festival",
+        "programma",
+        "silences-we-are-familiar-with-the-dance"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "event",
+    "group": "festival-events",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "festival",
+          "program",
+          "silences-we-are-familiar-with-the-dance"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "festival",
+          "programma",
+          "silences-we-are-familiar-with-the-dance"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "festival/program/silences-we-are-familiar-with-the-dance"
+      },
+      {
+        "locale": "it",
+        "url": "festival/programma/silences-we-are-familiar-with-the-dance"
+      }
+    ]
+  },
+  {
+    "id": "29479740",
+    "slugs": {
+      "en": [
+        "festival",
+        "program",
+        "odes-and-laments-of-peace-from-armenia"
+      ],
+      "it": [
+        "festival",
+        "programma",
+        "odi-e-lamenti-di-pace-dall-armenia-gevorg-dabaghyan"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "event",
+    "group": "festival-events",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "festival",
+          "program",
+          "odes-and-laments-of-peace-from-armenia"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "festival",
+          "programma",
+          "odi-e-lamenti-di-pace-dall-armenia-gevorg-dabaghyan"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "festival/program/odes-and-laments-of-peace-from-armenia"
+      },
+      {
+        "locale": "it",
+        "url": "festival/programma/odi-e-lamenti-di-pace-dall-armenia-gevorg-dabaghyan"
+      }
+    ]
+  },
+  {
+    "id": "29493648",
+    "slugs": {
+      "en": [
+        "festival",
+        "program",
+        "proyecto-x-silere-arts"
+      ],
+      "it": [
+        "festival",
+        "programma",
+        "proyecto-x-silere-arts"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "event",
+    "group": "festival-events",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "festival",
+          "program",
+          "proyecto-x-silere-arts"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "festival",
+          "programma",
+          "proyecto-x-silere-arts"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "festival/program/proyecto-x-silere-arts"
+      },
+      {
+        "locale": "it",
+        "url": "festival/programma/proyecto-x-silere-arts"
+      }
+    ]
+  },
+  {
+    "id": "29497402",
+    "slugs": {
+      "en": [
+        "festival",
+        "program",
+        "made-of-space-guy-nader-maria-campos"
+      ],
+      "it": [
+        "festival",
+        "programma",
+        "made-of-space-guy-nader-maria-campos"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "event",
+    "group": "festival-events",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "festival",
+          "program",
+          "made-of-space-guy-nader-maria-campos"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "festival",
+          "programma",
+          "made-of-space-guy-nader-maria-campos"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "festival/program/made-of-space-guy-nader-maria-campos"
+      },
+      {
+        "locale": "it",
+        "url": "festival/programma/made-of-space-guy-nader-maria-campos"
+      }
+    ]
+  },
+  {
+    "id": "29604820",
+    "slugs": {
+      "en": [
+        "festival",
+        "program",
+        "hermandad-marullo"
+      ],
+      "it": [
+        "festival",
+        "programma",
+        "hermandad-marullo"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "event",
+    "group": "festival-events",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "festival",
+          "program",
+          "hermandad-marullo"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "festival",
+          "programma",
+          "hermandad-marullo"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "festival/program/hermandad-marullo"
+      },
+      {
+        "locale": "it",
+        "url": "festival/programma/hermandad-marullo"
+      }
+    ]
+  },
+  {
+    "id": "26303361",
+    "slugs": {
+      "en": [
+        "festival",
+        "program",
+        "metamorphosis-larva-carlo-massari"
+      ],
+      "it": [
+        "festival",
+        "programma",
+        "metamorphosis-larva-carlo-massari"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "event",
+    "group": "festival-events",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "festival",
+          "program",
+          "metamorphosis-larva-carlo-massari"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "festival",
+          "programma",
+          "metamorphosis-larva-carlo-massari"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "festival/program/metamorphosis-larva-carlo-massari"
+      },
+      {
+        "locale": "it",
+        "url": "festival/programma/metamorphosis-larva-carlo-massari"
+      }
+    ]
+  },
+  {
+    "id": "29151639",
+    "slugs": {
+      "en": [
+        "festival",
+        "program",
+        "a-touma-ballake-sissoko"
+      ],
+      "it": [
+        "festival",
+        "programma",
+        "a-touma-ballake-sissoko"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "event",
+    "group": "festival-events",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "festival",
+          "program",
+          "a-touma-ballake-sissoko"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "festival",
+          "programma",
+          "a-touma-ballake-sissoko"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "festival/program/a-touma-ballake-sissoko"
+      },
+      {
+        "locale": "it",
+        "url": "festival/programma/a-touma-ballake-sissoko"
+      }
+    ]
+  },
+  {
+    "id": "29474593",
+    "slugs": {
+      "en": [
+        "festival",
+        "program",
+        "naufragio-con-spettatore-compagnia-zappala-danza"
+      ],
+      "it": [
+        "festival",
+        "programma",
+        "naufragio-con-spettatore-compagnia-zappala-danza"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "event",
+    "group": "festival-events",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "festival",
+          "program",
+          "naufragio-con-spettatore-compagnia-zappala-danza"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "festival",
+          "programma",
+          "naufragio-con-spettatore-compagnia-zappala-danza"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "festival/program/naufragio-con-spettatore-compagnia-zappala-danza"
+      },
+      {
+        "locale": "it",
+        "url": "festival/programma/naufragio-con-spettatore-compagnia-zappala-danza"
+      }
+    ]
+  },
+  {
+    "id": "29192160",
+    "slugs": {
+      "en": [
+        "festival",
+        "program",
+        "lamenta-cie-siamese"
+      ],
+      "it": [
+        "festival",
+        "programma",
+        "lamenta-cie-siamese"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "event",
+    "group": "festival-events",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "festival",
+          "program",
+          "lamenta-cie-siamese"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "festival",
+          "programma",
+          "lamenta-cie-siamese"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "festival/program/lamenta-cie-siamese"
+      },
+      {
+        "locale": "it",
+        "url": "festival/programma/lamenta-cie-siamese"
+      }
+    ]
+  },
+  {
+    "id": "29493248",
+    "slugs": {
+      "en": [
+        "festival",
+        "program",
+        "encantado-lia-rodrigues"
+      ],
+      "it": [
+        "festival",
+        "programma",
+        "encantado-lia-rodrigues"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "event",
+    "group": "festival-events",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "festival",
+          "program",
+          "encantado-lia-rodrigues"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "festival",
+          "programma",
+          "encantado-lia-rodrigues"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "festival/program/encantado-lia-rodrigues"
+      },
+      {
+        "locale": "it",
+        "url": "festival/programma/encantado-lia-rodrigues"
+      }
+    ]
+  },
+  {
+    "id": "29605407",
+    "slugs": {
+      "en": [
+        "festival",
+        "program",
+        "a-e-r-e-a-proiezione-silver-veiled-panzetti-ticconi"
+      ],
+      "it": [
+        "festival",
+        "programma",
+        "a-e-r-e-a-proiezione-silver-veiled-panzetti-ticconi"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "event",
+    "group": "festival-events",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "festival",
+          "program",
+          "a-e-r-e-a-proiezione-silver-veiled-panzetti-ticconi"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "festival",
+          "programma",
+          "a-e-r-e-a-proiezione-silver-veiled-panzetti-ticconi"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "festival/program/a-e-r-e-a-proiezione-silver-veiled-panzetti-ticconi"
+      },
+      {
+        "locale": "it",
+        "url": "festival/programma/a-e-r-e-a-proiezione-silver-veiled-panzetti-ticconi"
+      }
+    ]
+  },
+  {
+    "id": "29493204",
+    "slugs": {
+      "en": [
+        "festival",
+        "program",
+        "pan_thedancecompany"
+      ],
+      "it": [
+        "festival",
+        "programma",
+        "pan_thedancecompany"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "event",
+    "group": "festival-events",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "festival",
+          "program",
+          "pan_thedancecompany"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "festival",
+          "programma",
+          "pan_thedancecompany"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "festival/program/pan_thedancecompany"
+      },
+      {
+        "locale": "it",
+        "url": "festival/programma/pan_thedancecompany"
+      }
+    ]
+  },
+  {
+    "id": "29493487",
+    "slugs": {
+      "en": [
+        "festival",
+        "program",
+        "if-there-is-no-sun-luca-brinchi-karima-dueg-irene-russolillo"
+      ],
+      "it": [
+        "festival",
+        "programma",
+        "if-there-is-no-sun-luca-brinchi-karima-dueg-irene-russolillo"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "event",
+    "group": "festival-events",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "festival",
+          "program",
+          "if-there-is-no-sun-luca-brinchi-karima-dueg-irene-russolillo"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "festival",
+          "programma",
+          "if-there-is-no-sun-luca-brinchi-karima-dueg-irene-russolillo"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "festival/program/if-there-is-no-sun-luca-brinchi-karima-dueg-irene-russolillo"
+      },
+      {
+        "locale": "it",
+        "url": "festival/programma/if-there-is-no-sun-luca-brinchi-karima-dueg-irene-russolillo"
+      }
+    ]
+  },
+  {
+    "id": "29555723",
+    "slugs": {
+      "en": [
+        "festival",
+        "program",
+        "zephyr-mourad-merzouki-ccn-compagnie-kafig"
+      ],
+      "it": [
+        "festival",
+        "programma",
+        "zephyr-mourad-merzouki-ccn-compagnie-kafig"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "event",
+    "group": "festival-events",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "festival",
+          "program",
+          "zephyr-mourad-merzouki-ccn-compagnie-kafig"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "festival",
+          "programma",
+          "zephyr-mourad-merzouki-ccn-compagnie-kafig"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "festival/program/zephyr-mourad-merzouki-ccn-compagnie-kafig"
+      },
+      {
+        "locale": "it",
+        "url": "festival/programma/zephyr-mourad-merzouki-ccn-compagnie-kafig"
+      }
+    ]
+  },
+  {
+    "id": "29485772",
+    "slugs": {
+      "en": [
+        "festival",
+        "program",
+        "ariadna_rafaela-carrasco"
+      ],
+      "it": [
+        "festival",
+        "programma",
+        "ariadna_rafaela-carrasco"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "event",
+    "group": "festival-events",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "festival",
+          "program",
+          "ariadna_rafaela-carrasco"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "festival",
+          "programma",
+          "ariadna_rafaela-carrasco"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "festival/program/ariadna_rafaela-carrasco"
+      },
+      {
+        "locale": "it",
+        "url": "festival/programma/ariadna_rafaela-carrasco"
+      }
+    ]
+  },
+  {
+    "id": "29597213",
+    "slugs": {
+      "en": [
+        "festival",
+        "program",
+        "arance-avoid-shooting-blacks"
+      ],
+      "it": [
+        "festival",
+        "programma",
+        "arance-avoid-shooting-blacks"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "event",
+    "group": "festival-events",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "festival",
+          "program",
+          "arance-avoid-shooting-blacks"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "festival",
+          "programma",
+          "arance-avoid-shooting-blacks"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "festival/program/arance-avoid-shooting-blacks"
+      },
+      {
+        "locale": "it",
+        "url": "festival/programma/arance-avoid-shooting-blacks"
+      }
+    ]
+  },
+  {
+    "id": "29490902",
+    "slugs": {
+      "en": [
+        "festival",
+        "program",
+        "manbuhsona-ivona"
+      ],
+      "it": [
+        "festival",
+        "programma",
+        "manbuhsona-ivona"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "event",
+    "group": "festival-events",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "festival",
+          "program",
+          "manbuhsona-ivona"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "festival",
+          "programma",
+          "manbuhsona-ivona"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "festival/program/manbuhsona-ivona"
+      },
+      {
+        "locale": "it",
+        "url": "festival/programma/manbuhsona-ivona"
+      }
+    ]
+  },
+  {
+    "id": "29487713",
+    "slugs": {
+      "en": [
+        "festival",
+        "program",
+        "oum-cie-massala"
+      ],
+      "it": [
+        "festival",
+        "programma",
+        "oum-cie-massala"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "event",
+    "group": "festival-events",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "festival",
+          "program",
+          "oum-cie-massala"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "festival",
+          "programma",
+          "oum-cie-massala"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "festival/program/oum-cie-massala"
+      },
+      {
+        "locale": "it",
+        "url": "festival/programma/oum-cie-massala"
+      }
+    ]
+  },
+  {
+    "id": "29189949",
+    "slugs": {
+      "en": [
+        "festival",
+        "program",
+        "metamorphosis-sapiens-carlo-massari"
+      ],
+      "it": [
+        "festival",
+        "programma",
+        "metamorphosis-sapiens-carlo-massari"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "event",
+    "group": "festival-events",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "festival",
+          "program",
+          "metamorphosis-sapiens-carlo-massari"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "festival",
+          "programma",
+          "metamorphosis-sapiens-carlo-massari"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "festival/program/metamorphosis-sapiens-carlo-massari"
+      },
+      {
+        "locale": "it",
+        "url": "festival/programma/metamorphosis-sapiens-carlo-massari"
+      }
+    ]
+  },
+  {
+    "id": "29189115",
+    "slugs": {
+      "en": [
+        "festival",
+        "program",
+        "metamorphosis-blatta-carlo-massari"
+      ],
+      "it": [
+        "festival",
+        "programma",
+        "metamorphosis-blatta-carlo-massari"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "event",
+    "group": "festival-events",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "festival",
+          "program",
+          "metamorphosis-blatta-carlo-massari"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "festival",
+          "programma",
+          "metamorphosis-blatta-carlo-massari"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "festival/program/metamorphosis-blatta-carlo-massari"
+      },
+      {
+        "locale": "it",
+        "url": "festival/programma/metamorphosis-blatta-carlo-massari"
+      }
+    ]
+  },
+  {
+    "id": "29194214",
+    "slugs": {
+      "en": [
+        "festival",
+        "program",
+        "chouf-le-ciel-colokolo"
+      ],
+      "it": [
+        "festival",
+        "programma",
+        "chouf-le-ciel-colokolo"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "event",
+    "group": "festival-events",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "festival",
+          "program",
+          "chouf-le-ciel-colokolo"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "festival",
+          "programma",
+          "chouf-le-ciel-colokolo"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "festival/program/chouf-le-ciel-colokolo"
+      },
+      {
+        "locale": "it",
+        "url": "festival/programma/chouf-le-ciel-colokolo"
+      }
+    ]
+  },
+  {
+    "id": "31131817",
+    "slugs": {
+      "it": [
+        "festival",
+        "programma",
+        "le-guerre-degli-altri-roberto-travan"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "event",
+    "group": "festival-events",
+    "paths": [
+      {
+        "locale": "it",
+        "slugs": [
+          "festival",
+          "programma",
+          "le-guerre-degli-altri-roberto-travan"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "it",
+        "url": "festival/programma/le-guerre-degli-altri-roberto-travan"
+      }
+    ]
+  },
+  {
+    "id": "7228919",
+    "slugs": {
+      "en": [
+        "festival",
+        "program",
+        "cunningham-centennial-solos-oriente-occidente-dance-festival"
+      ],
+      "it": [
+        "festival",
+        "programma",
+        "cunningham-centennial-solos-oriente-occidente-dance-festival"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "event",
+    "group": "festival-events",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "festival",
+          "program",
+          "cunningham-centennial-solos-oriente-occidente-dance-festival"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "festival",
+          "programma",
+          "cunningham-centennial-solos-oriente-occidente-dance-festival"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "festival/program/cunningham-centennial-solos-oriente-occidente-dance-festival"
+      },
+      {
+        "locale": "it",
+        "url": "festival/programma/cunningham-centennial-solos-oriente-occidente-dance-festival"
+      }
+    ]
+  },
+  {
+    "id": "7228920",
+    "slugs": {
+      "en": [
+        "festival",
+        "program",
+        "sognare-la-terra"
+      ],
+      "it": [
+        "festival",
+        "programma",
+        "sognare-la-terra"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "event",
+    "group": "festival-events",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "festival",
+          "program",
+          "sognare-la-terra"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "festival",
+          "programma",
+          "sognare-la-terra"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "festival/program/sognare-la-terra"
+      },
+      {
+        "locale": "it",
+        "url": "festival/programma/sognare-la-terra"
+      }
+    ]
+  },
+  {
+    "id": "7228921",
+    "slugs": {
+      "en": [
+        "festival",
+        "program",
+        "over-the-rainbow"
+      ],
+      "it": [
+        "festival",
+        "programma",
+        "over-the-rainbow"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "event",
+    "group": "festival-events",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "festival",
+          "program",
+          "over-the-rainbow"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "festival",
+          "programma",
+          "over-the-rainbow"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "festival/program/over-the-rainbow"
+      },
+      {
+        "locale": "it",
+        "url": "festival/programma/over-the-rainbow"
+      }
+    ]
+  },
+  {
+    "id": "7228922",
+    "slugs": {
+      "en": [
+        "festival",
+        "program",
+        "hyenas-forme-di-minotauri-contemporanei"
+      ],
+      "it": [
+        "festival",
+        "programma",
+        "hyenas-forme-di-minotauri-contemporanei"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "event",
+    "group": "festival-events",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "festival",
+          "program",
+          "hyenas-forme-di-minotauri-contemporanei"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "festival",
+          "programma",
+          "hyenas-forme-di-minotauri-contemporanei"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "festival/program/hyenas-forme-di-minotauri-contemporanei"
+      },
+      {
+        "locale": "it",
+        "url": "festival/programma/hyenas-forme-di-minotauri-contemporanei"
+      }
+    ]
+  },
+  {
+    "id": "7228925",
+    "slugs": {
+      "en": [
+        "festival",
+        "program",
+        "diptych-the-missing-door-e-the-lost-room"
+      ],
+      "it": [
+        "festival",
+        "programma",
+        "diptych-the-missing-door-e-the-lost-room"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "event",
+    "group": "festival-events",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "festival",
+          "program",
+          "diptych-the-missing-door-e-the-lost-room"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "festival",
+          "programma",
+          "diptych-the-missing-door-e-the-lost-room"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "festival/program/diptych-the-missing-door-e-the-lost-room"
+      },
+      {
+        "locale": "it",
+        "url": "festival/programma/diptych-the-missing-door-e-the-lost-room"
+      }
+    ]
+  },
+  {
+    "id": "7228926",
+    "slugs": {
+      "en": [
+        "festival",
+        "program",
+        "i-poveri"
+      ],
+      "it": [
+        "festival",
+        "programma",
+        "i-poveri"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "event",
+    "group": "festival-events",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "festival",
+          "program",
+          "i-poveri"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "festival",
+          "programma",
+          "i-poveri"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "festival/program/i-poveri"
+      },
+      {
+        "locale": "it",
+        "url": "festival/programma/i-poveri"
+      }
+    ]
+  },
+  {
+    "id": "7228927",
+    "slugs": {
+      "en": [
+        "festival",
+        "program",
+        "elegia-delle-cose-perdute"
+      ],
+      "it": [
+        "festival",
+        "programma",
+        "elegia-delle-cose-perdute"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "event",
+    "group": "festival-events",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "festival",
+          "program",
+          "elegia-delle-cose-perdute"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "festival",
+          "programma",
+          "elegia-delle-cose-perdute"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "festival/program/elegia-delle-cose-perdute"
+      },
+      {
+        "locale": "it",
+        "url": "festival/programma/elegia-delle-cose-perdute"
+      }
+    ]
+  },
+  {
+    "id": "7228924",
+    "slugs": {
+      "en": [
+        "festival",
+        "program",
+        "nobody-nobody-nobody-it-s-ok-not-to-be-ok-installazione"
+      ],
+      "it": [
+        "festival",
+        "programma",
+        "nobody-nobody-nobody-it-s-ok-not-to-be-ok-installazione"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "event",
+    "group": "festival-events",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "festival",
+          "program",
+          "nobody-nobody-nobody-it-s-ok-not-to-be-ok-installazione"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "festival",
+          "programma",
+          "nobody-nobody-nobody-it-s-ok-not-to-be-ok-installazione"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "festival/program/nobody-nobody-nobody-it-s-ok-not-to-be-ok-installazione"
+      },
+      {
+        "locale": "it",
+        "url": "festival/programma/nobody-nobody-nobody-it-s-ok-not-to-be-ok-installazione"
+      }
+    ]
+  },
+  {
+    "id": "31131487",
+    "slugs": {
+      "it": [
+        "festival",
+        "programma",
+        "inaspettate-connessioni"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "event",
+    "group": "festival-events",
+    "paths": [
+      {
+        "locale": "it",
+        "slugs": [
+          "festival",
+          "programma",
+          "inaspettate-connessioni"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "it",
+        "url": "festival/programma/inaspettate-connessioni"
       }
     ]
   },
@@ -1096,36 +2502,6 @@
       {
         "locale": "it",
         "url": "festival/programma/cunningham-centennial-solos-oriente-occidente-dance-festival-site-specific"
-      }
-    ]
-  },
-  {
-    "id": "25176883",
-    "slugs": {
-      "it": [
-        "festival",
-        "programma",
-        "leftovers"
-      ]
-    },
-    "isIndex": false,
-    "indexType": "",
-    "__typename": "event",
-    "group": "festival-events",
-    "paths": [
-      {
-        "locale": "it",
-        "slugs": [
-          "festival",
-          "programma",
-          "leftovers"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "it",
-        "url": "festival/programma/leftovers"
       }
     ]
   },
@@ -1361,382 +2737,6 @@
       {
         "locale": "it",
         "url": "festival/programma/marcos-morau"
-      }
-    ]
-  },
-  {
-    "id": "7228919",
-    "slugs": {
-      "en": [
-        "festival",
-        "program",
-        "cunningham-centennial-solos-oriente-occidente-dance-festival"
-      ],
-      "it": [
-        "festival",
-        "programma",
-        "cunningham-centennial-solos-oriente-occidente-dance-festival"
-      ]
-    },
-    "isIndex": false,
-    "indexType": "",
-    "__typename": "event",
-    "group": "festival-events",
-    "paths": [
-      {
-        "locale": "en",
-        "slugs": [
-          "festival",
-          "program",
-          "cunningham-centennial-solos-oriente-occidente-dance-festival"
-        ]
-      },
-      {
-        "locale": "it",
-        "slugs": [
-          "festival",
-          "programma",
-          "cunningham-centennial-solos-oriente-occidente-dance-festival"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "en",
-        "url": "festival/program/cunningham-centennial-solos-oriente-occidente-dance-festival"
-      },
-      {
-        "locale": "it",
-        "url": "festival/programma/cunningham-centennial-solos-oriente-occidente-dance-festival"
-      }
-    ]
-  },
-  {
-    "id": "7228920",
-    "slugs": {
-      "en": [
-        "festival",
-        "program",
-        "sognare-la-terra"
-      ],
-      "it": [
-        "festival",
-        "programma",
-        "sognare-la-terra"
-      ]
-    },
-    "isIndex": false,
-    "indexType": "",
-    "__typename": "event",
-    "group": "festival-events",
-    "paths": [
-      {
-        "locale": "en",
-        "slugs": [
-          "festival",
-          "program",
-          "sognare-la-terra"
-        ]
-      },
-      {
-        "locale": "it",
-        "slugs": [
-          "festival",
-          "programma",
-          "sognare-la-terra"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "en",
-        "url": "festival/program/sognare-la-terra"
-      },
-      {
-        "locale": "it",
-        "url": "festival/programma/sognare-la-terra"
-      }
-    ]
-  },
-  {
-    "id": "7228921",
-    "slugs": {
-      "en": [
-        "festival",
-        "program",
-        "over-the-rainbow"
-      ],
-      "it": [
-        "festival",
-        "programma",
-        "over-the-rainbow"
-      ]
-    },
-    "isIndex": false,
-    "indexType": "",
-    "__typename": "event",
-    "group": "festival-events",
-    "paths": [
-      {
-        "locale": "en",
-        "slugs": [
-          "festival",
-          "program",
-          "over-the-rainbow"
-        ]
-      },
-      {
-        "locale": "it",
-        "slugs": [
-          "festival",
-          "programma",
-          "over-the-rainbow"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "en",
-        "url": "festival/program/over-the-rainbow"
-      },
-      {
-        "locale": "it",
-        "url": "festival/programma/over-the-rainbow"
-      }
-    ]
-  },
-  {
-    "id": "7228922",
-    "slugs": {
-      "en": [
-        "festival",
-        "program",
-        "hyenas-forme-di-minotauri-contemporanei"
-      ],
-      "it": [
-        "festival",
-        "programma",
-        "hyenas-forme-di-minotauri-contemporanei"
-      ]
-    },
-    "isIndex": false,
-    "indexType": "",
-    "__typename": "event",
-    "group": "festival-events",
-    "paths": [
-      {
-        "locale": "en",
-        "slugs": [
-          "festival",
-          "program",
-          "hyenas-forme-di-minotauri-contemporanei"
-        ]
-      },
-      {
-        "locale": "it",
-        "slugs": [
-          "festival",
-          "programma",
-          "hyenas-forme-di-minotauri-contemporanei"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "en",
-        "url": "festival/program/hyenas-forme-di-minotauri-contemporanei"
-      },
-      {
-        "locale": "it",
-        "url": "festival/programma/hyenas-forme-di-minotauri-contemporanei"
-      }
-    ]
-  },
-  {
-    "id": "7228924",
-    "slugs": {
-      "en": [
-        "festival",
-        "program",
-        "nobody-nobody-nobody-it-s-ok-not-to-be-ok-installazione"
-      ],
-      "it": [
-        "festival",
-        "programma",
-        "nobody-nobody-nobody-it-s-ok-not-to-be-ok-installazione"
-      ]
-    },
-    "isIndex": false,
-    "indexType": "",
-    "__typename": "event",
-    "group": "festival-events",
-    "paths": [
-      {
-        "locale": "en",
-        "slugs": [
-          "festival",
-          "program",
-          "nobody-nobody-nobody-it-s-ok-not-to-be-ok-installazione"
-        ]
-      },
-      {
-        "locale": "it",
-        "slugs": [
-          "festival",
-          "programma",
-          "nobody-nobody-nobody-it-s-ok-not-to-be-ok-installazione"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "en",
-        "url": "festival/program/nobody-nobody-nobody-it-s-ok-not-to-be-ok-installazione"
-      },
-      {
-        "locale": "it",
-        "url": "festival/programma/nobody-nobody-nobody-it-s-ok-not-to-be-ok-installazione"
-      }
-    ]
-  },
-  {
-    "id": "7228925",
-    "slugs": {
-      "en": [
-        "festival",
-        "program",
-        "diptych-the-missing-door-e-the-lost-room"
-      ],
-      "it": [
-        "festival",
-        "programma",
-        "diptych-the-missing-door-e-the-lost-room"
-      ]
-    },
-    "isIndex": false,
-    "indexType": "",
-    "__typename": "event",
-    "group": "festival-events",
-    "paths": [
-      {
-        "locale": "en",
-        "slugs": [
-          "festival",
-          "program",
-          "diptych-the-missing-door-e-the-lost-room"
-        ]
-      },
-      {
-        "locale": "it",
-        "slugs": [
-          "festival",
-          "programma",
-          "diptych-the-missing-door-e-the-lost-room"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "en",
-        "url": "festival/program/diptych-the-missing-door-e-the-lost-room"
-      },
-      {
-        "locale": "it",
-        "url": "festival/programma/diptych-the-missing-door-e-the-lost-room"
-      }
-    ]
-  },
-  {
-    "id": "7228926",
-    "slugs": {
-      "en": [
-        "festival",
-        "program",
-        "i-poveri"
-      ],
-      "it": [
-        "festival",
-        "programma",
-        "i-poveri"
-      ]
-    },
-    "isIndex": false,
-    "indexType": "",
-    "__typename": "event",
-    "group": "festival-events",
-    "paths": [
-      {
-        "locale": "en",
-        "slugs": [
-          "festival",
-          "program",
-          "i-poveri"
-        ]
-      },
-      {
-        "locale": "it",
-        "slugs": [
-          "festival",
-          "programma",
-          "i-poveri"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "en",
-        "url": "festival/program/i-poveri"
-      },
-      {
-        "locale": "it",
-        "url": "festival/programma/i-poveri"
-      }
-    ]
-  },
-  {
-    "id": "7228927",
-    "slugs": {
-      "en": [
-        "festival",
-        "program",
-        "elegia-delle-cose-perdute"
-      ],
-      "it": [
-        "festival",
-        "programma",
-        "elegia-delle-cose-perdute"
-      ]
-    },
-    "isIndex": false,
-    "indexType": "",
-    "__typename": "event",
-    "group": "festival-events",
-    "paths": [
-      {
-        "locale": "en",
-        "slugs": [
-          "festival",
-          "program",
-          "elegia-delle-cose-perdute"
-        ]
-      },
-      {
-        "locale": "it",
-        "slugs": [
-          "festival",
-          "programma",
-          "elegia-delle-cose-perdute"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "en",
-        "url": "festival/program/elegia-delle-cose-perdute"
-      },
-      {
-        "locale": "it",
-        "url": "festival/programma/elegia-delle-cose-perdute"
       }
     ]
   },
@@ -4326,17 +5326,47 @@
     ]
   },
   {
-    "id": "7228905",
+    "id": "55598265",
+    "slugs": {
+      "it": [
+        "people",
+        "eventi",
+        "alla-ricerca-delle-origini"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "event",
+    "group": "other-events",
+    "paths": [
+      {
+        "locale": "it",
+        "slugs": [
+          "people",
+          "eventi",
+          "alla-ricerca-delle-origini"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "it",
+        "url": "people/eventi/alla-ricerca-delle-origini"
+      }
+    ]
+  },
+  {
+    "id": "55516384",
     "slugs": {
       "en": [
         "people",
         "events",
-        "la-moa"
+        "the-colors-of-my-life"
       ],
       "it": [
         "people",
         "eventi",
-        "la-moa"
+        "the-colors-of-my-life"
       ]
     },
     "isIndex": false,
@@ -4349,7 +5379,7 @@
         "slugs": [
           "people",
           "events",
-          "la-moa"
+          "the-colors-of-my-life"
         ]
       },
       {
@@ -4357,18 +5387,18 @@
         "slugs": [
           "people",
           "eventi",
-          "la-moa"
+          "the-colors-of-my-life"
         ]
       }
     ],
     "urls": [
       {
         "locale": "en",
-        "url": "people/events/la-moa"
+        "url": "people/events/the-colors-of-my-life"
       },
       {
         "locale": "it",
-        "url": "people/eventi/la-moa"
+        "url": "people/eventi/the-colors-of-my-life"
       }
     ]
   },
@@ -4420,6 +5450,36 @@
     ]
   },
   {
+    "id": "25176883",
+    "slugs": {
+      "it": [
+        "people",
+        "eventi",
+        "leftovers"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "event",
+    "group": "other-events",
+    "paths": [
+      {
+        "locale": "it",
+        "slugs": [
+          "people",
+          "eventi",
+          "leftovers"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "it",
+        "url": "people/eventi/leftovers"
+      }
+    ]
+  },
+  {
     "id": "7228906",
     "slugs": {
       "en": [
@@ -4463,6 +5523,53 @@
       {
         "locale": "it",
         "url": "people/eventi/hasta-donde"
+      }
+    ]
+  },
+  {
+    "id": "7228905",
+    "slugs": {
+      "en": [
+        "people",
+        "events",
+        "la-moa"
+      ],
+      "it": [
+        "people",
+        "eventi",
+        "la-moa"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "event",
+    "group": "other-events",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "people",
+          "events",
+          "la-moa"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "people",
+          "eventi",
+          "la-moa"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "people/events/la-moa"
+      },
+      {
+        "locale": "it",
+        "url": "people/eventi/la-moa"
       }
     ]
   },
@@ -4749,12 +5856,17 @@
     ]
   },
   {
-    "id": "26187762",
+    "id": "63223128",
     "slugs": {
+      "en": [
+        "studio",
+        "workshop",
+        "workshop-diversita-in-scena"
+      ],
       "it": [
         "studio",
         "workshop",
-        "artylogica-workshop"
+        "workshop-diversita-in-scena"
       ]
     },
     "isIndex": false,
@@ -4763,18 +5875,406 @@
     "group": "workshops",
     "paths": [
       {
+        "locale": "en",
+        "slugs": [
+          "studio",
+          "workshop",
+          "workshop-diversita-in-scena"
+        ]
+      },
+      {
         "locale": "it",
         "slugs": [
           "studio",
           "workshop",
-          "artylogica-workshop"
+          "workshop-diversita-in-scena"
         ]
       }
     ],
     "urls": [
       {
+        "locale": "en",
+        "url": "studio/workshop/workshop-diversita-in-scena"
+      },
+      {
         "locale": "it",
-        "url": "studio/workshop/artylogica-workshop"
+        "url": "studio/workshop/workshop-diversita-in-scena"
+      }
+    ]
+  },
+  {
+    "id": "33637920",
+    "slugs": {
+      "en": [
+        "studio",
+        "workshop",
+        "workshop-sul-tarantismo-canzoniere-gracanico-salentino"
+      ],
+      "it": [
+        "studio",
+        "workshop",
+        "workshop-sul-tarantismo-canzoniere-gracanico-salentino"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "workshop",
+    "group": "workshops",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "studio",
+          "workshop",
+          "workshop-sul-tarantismo-canzoniere-gracanico-salentino"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "studio",
+          "workshop",
+          "workshop-sul-tarantismo-canzoniere-gracanico-salentino"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "studio/workshop/workshop-sul-tarantismo-canzoniere-gracanico-salentino"
+      },
+      {
+        "locale": "it",
+        "url": "studio/workshop/workshop-sul-tarantismo-canzoniere-gracanico-salentino"
+      }
+    ]
+  },
+  {
+    "id": "32713867",
+    "slugs": {
+      "en": [
+        "studio",
+        "workshop",
+        "lim-workshop-adi-salant"
+      ],
+      "it": [
+        "studio",
+        "workshop",
+        "lim-workshop"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "workshop",
+    "group": "workshops",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "studio",
+          "workshop",
+          "lim-workshop-adi-salant"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "studio",
+          "workshop",
+          "lim-workshop"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "studio/workshop/lim-workshop-adi-salant"
+      },
+      {
+        "locale": "it",
+        "url": "studio/workshop/lim-workshop"
+      }
+    ]
+  },
+  {
+    "id": "33619852",
+    "slugs": {
+      "en": [
+        "studio",
+        "workshop",
+        "le-phare-workshop-cie-massala"
+      ],
+      "it": [
+        "studio",
+        "workshop",
+        "le-phare-workshop-cie-massala"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "workshop",
+    "group": "workshops",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "studio",
+          "workshop",
+          "le-phare-workshop-cie-massala"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "studio",
+          "workshop",
+          "le-phare-workshop-cie-massala"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "studio/workshop/le-phare-workshop-cie-massala"
+      },
+      {
+        "locale": "it",
+        "url": "studio/workshop/le-phare-workshop-cie-massala"
+      }
+    ]
+  },
+  {
+    "id": "54188606",
+    "slugs": {
+      "en": [
+        "studio",
+        "workshop",
+        "re-start-physical-theatre-workshop"
+      ],
+      "it": [
+        "studio",
+        "workshop",
+        "re-start-laboratorio-di-teatro-fisico"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "workshop",
+    "group": "workshops",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "studio",
+          "workshop",
+          "re-start-physical-theatre-workshop"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "studio",
+          "workshop",
+          "re-start-laboratorio-di-teatro-fisico"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "studio/workshop/re-start-physical-theatre-workshop"
+      },
+      {
+        "locale": "it",
+        "url": "studio/workshop/re-start-laboratorio-di-teatro-fisico"
+      }
+    ]
+  },
+  {
+    "id": "32680296",
+    "slugs": {
+      "en": [
+        "studio",
+        "workshop",
+        "artylogica-workshop-vittoria-de-ferrari-sapetto"
+      ],
+      "it": [
+        "studio",
+        "workshop",
+        "artylogica-workshop-vittoria-de-ferrari-sapetto"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "workshop",
+    "group": "workshops",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "studio",
+          "workshop",
+          "artylogica-workshop-vittoria-de-ferrari-sapetto"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "studio",
+          "workshop",
+          "artylogica-workshop-vittoria-de-ferrari-sapetto"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "studio/workshop/artylogica-workshop-vittoria-de-ferrari-sapetto"
+      },
+      {
+        "locale": "it",
+        "url": "studio/workshop/artylogica-workshop-vittoria-de-ferrari-sapetto"
+      }
+    ]
+  },
+  {
+    "id": "32693104",
+    "slugs": {
+      "en": [
+        "studio",
+        "workshop",
+        "workshop-di-danza-contemporanea-philippe-kratz"
+      ],
+      "it": [
+        "studio",
+        "workshop",
+        "workshop-di-danza-contemporanea-philippe-kratz"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "workshop",
+    "group": "workshops",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "studio",
+          "workshop",
+          "workshop-di-danza-contemporanea-philippe-kratz"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "studio",
+          "workshop",
+          "workshop-di-danza-contemporanea-philippe-kratz"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "studio/workshop/workshop-di-danza-contemporanea-philippe-kratz"
+      },
+      {
+        "locale": "it",
+        "url": "studio/workshop/workshop-di-danza-contemporanea-philippe-kratz"
+      }
+    ]
+  },
+  {
+    "id": "32686926",
+    "slugs": {
+      "en": [
+        "studio",
+        "workshop",
+        "workshop-with-sorimi-amada"
+      ],
+      "it": [
+        "studio",
+        "workshop",
+        "workshop-con-sorimi-amada"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "workshop",
+    "group": "workshops",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "studio",
+          "workshop",
+          "workshop-with-sorimi-amada"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "studio",
+          "workshop",
+          "workshop-con-sorimi-amada"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "studio/workshop/workshop-with-sorimi-amada"
+      },
+      {
+        "locale": "it",
+        "url": "studio/workshop/workshop-con-sorimi-amada"
+      }
+    ]
+  },
+  {
+    "id": "32684821",
+    "slugs": {
+      "en": [
+        "studio",
+        "workshop",
+        "contemporary-dance-workshop"
+      ],
+      "it": [
+        "studio",
+        "workshop",
+        "workshop-di-danza-contemporanea"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "workshop",
+    "group": "workshops",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "studio",
+          "workshop",
+          "contemporary-dance-workshop"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "studio",
+          "workshop",
+          "workshop-di-danza-contemporanea"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "studio/workshop/contemporary-dance-workshop"
+      },
+      {
+        "locale": "it",
+        "url": "studio/workshop/workshop-di-danza-contemporanea"
       }
     ]
   },
@@ -5202,6 +6702,363 @@
     ]
   },
   {
+    "id": "31133530",
+    "slugs": {
+      "it": [
+        "napoli-e-marsiglia-citta-mediterranee"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "workshop",
+    "group": "languages",
+    "paths": [
+      {
+        "locale": "it",
+        "slugs": [
+          "napoli-e-marsiglia-citta-mediterranee"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "it",
+        "url": "napoli-e-marsiglia-citta-mediterranee"
+      }
+    ]
+  },
+  {
+    "id": "31130050",
+    "slugs": {
+      "it": [
+        "la-geopoetica-del-mondo-arabo"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "workshop",
+    "group": "languages",
+    "paths": [
+      {
+        "locale": "it",
+        "slugs": [
+          "la-geopoetica-del-mondo-arabo"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "it",
+        "url": "la-geopoetica-del-mondo-arabo"
+      }
+    ]
+  },
+  {
+    "id": "31132055",
+    "slugs": {
+      "it": [
+        "il-mediterraneo-come-medioceano-lorenzo-noto"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "workshop",
+    "group": "languages",
+    "paths": [
+      {
+        "locale": "it",
+        "slugs": [
+          "il-mediterraneo-come-medioceano-lorenzo-noto"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "it",
+        "url": "il-mediterraneo-come-medioceano-lorenzo-noto"
+      }
+    ]
+  },
+  {
+    "id": "31130418",
+    "slugs": {
+      "it": [
+        "mar-mediterraneo-sud-occidentale-laura-canali"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "workshop",
+    "group": "languages",
+    "paths": [
+      {
+        "locale": "it",
+        "slugs": [
+          "mar-mediterraneo-sud-occidentale-laura-canali"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "it",
+        "url": "mar-mediterraneo-sud-occidentale-laura-canali"
+      }
+    ]
+  },
+  {
+    "id": "31118280",
+    "slugs": {
+      "it": [
+        "in-viaggio-nella-repubblica-di-venezia"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "workshop",
+    "group": "languages",
+    "paths": [
+      {
+        "locale": "it",
+        "slugs": [
+          "in-viaggio-nella-repubblica-di-venezia"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "it",
+        "url": "in-viaggio-nella-repubblica-di-venezia"
+      }
+    ]
+  },
+  {
+    "id": "31118133",
+    "slugs": {
+      "it": [
+        "nagorno-karabakh-la-contesa-infinita-nel-cuore-del-caucaso"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "workshop",
+    "group": "languages",
+    "paths": [
+      {
+        "locale": "it",
+        "slugs": [
+          "nagorno-karabakh-la-contesa-infinita-nel-cuore-del-caucaso"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "it",
+        "url": "nagorno-karabakh-la-contesa-infinita-nel-cuore-del-caucaso"
+      }
+    ]
+  },
+  {
+    "id": "63903852",
+    "slugs": {
+      "it": [
+        "people",
+        "progetti",
+        "creature-selvagge"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "project",
+    "group": "projects",
+    "paths": [
+      {
+        "locale": "it",
+        "slugs": [
+          "people",
+          "progetti",
+          "creature-selvagge"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "it",
+        "url": "people/progetti/creature-selvagge"
+      }
+    ]
+  },
+  {
+    "id": "56008498",
+    "slugs": {
+      "it": [
+        "people",
+        "progetti",
+        "altri-quadri-artisti-e-immagini-in-movimento"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "project",
+    "group": "projects",
+    "paths": [
+      {
+        "locale": "it",
+        "slugs": [
+          "people",
+          "progetti",
+          "altri-quadri-artisti-e-immagini-in-movimento"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "it",
+        "url": "people/progetti/altri-quadri-artisti-e-immagini-in-movimento"
+      }
+    ]
+  },
+  {
+    "id": "7228686",
+    "slugs": {
+      "en": [
+        "people",
+        "projects",
+        "eba-europe-beyond-access"
+      ],
+      "it": [
+        "people",
+        "progetti",
+        "eba-europe-beyond-access"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "project",
+    "group": "projects",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "people",
+          "projects",
+          "eba-europe-beyond-access"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "people",
+          "progetti",
+          "eba-europe-beyond-access"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "people/projects/eba-europe-beyond-access"
+      },
+      {
+        "locale": "it",
+        "url": "people/progetti/eba-europe-beyond-access"
+      }
+    ]
+  },
+  {
+    "id": "40009887",
+    "slugs": {
+      "en": [
+        "people",
+        "projects",
+        "diversity-on-stage-a-training-between-italy-and-the-uk"
+      ],
+      "it": [
+        "people",
+        "progetti",
+        "diversita-in-scena-un-percorso-di-formazione-tra-italia-e-regno-unito"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "project",
+    "group": "projects",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "people",
+          "projects",
+          "diversity-on-stage-a-training-between-italy-and-the-uk"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "people",
+          "progetti",
+          "diversita-in-scena-un-percorso-di-formazione-tra-italia-e-regno-unito"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "people/projects/diversity-on-stage-a-training-between-italy-and-the-uk"
+      },
+      {
+        "locale": "it",
+        "url": "people/progetti/diversita-in-scena-un-percorso-di-formazione-tra-italia-e-regno-unito"
+      }
+    ]
+  },
+  {
+    "id": "7228691",
+    "slugs": {
+      "en": [
+        "people",
+        "projects",
+        "crossing-the-sea"
+      ],
+      "it": [
+        "people",
+        "progetti",
+        "crossing-the-sea"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "project",
+    "group": "projects",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "people",
+          "projects",
+          "crossing-the-sea"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "people",
+          "progetti",
+          "crossing-the-sea"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "people/projects/crossing-the-sea"
+      },
+      {
+        "locale": "it",
+        "url": "people/progetti/crossing-the-sea"
+      }
+    ]
+  },
+  {
     "id": "7228684",
     "slugs": {
       "en": [
@@ -5343,53 +7200,6 @@
     ]
   },
   {
-    "id": "7228686",
-    "slugs": {
-      "en": [
-        "people",
-        "projects",
-        "eba-europe-beyond-access"
-      ],
-      "it": [
-        "people",
-        "progetti",
-        "eba-europe-beyond-access"
-      ]
-    },
-    "isIndex": false,
-    "indexType": "",
-    "__typename": "project",
-    "group": "projects",
-    "paths": [
-      {
-        "locale": "en",
-        "slugs": [
-          "people",
-          "projects",
-          "eba-europe-beyond-access"
-        ]
-      },
-      {
-        "locale": "it",
-        "slugs": [
-          "people",
-          "progetti",
-          "eba-europe-beyond-access"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "en",
-        "url": "people/projects/eba-europe-beyond-access"
-      },
-      {
-        "locale": "it",
-        "url": "people/progetti/eba-europe-beyond-access"
-      }
-    ]
-  },
-  {
     "id": "7228687",
     "slugs": {
       "en": [
@@ -5437,17 +7247,17 @@
     ]
   },
   {
-    "id": "7228688",
+    "id": "31869607",
     "slugs": {
       "en": [
         "people",
         "projects",
-        "spark"
+        "incontrarsi-attraverso-di-me"
       ],
       "it": [
         "people",
         "progetti",
-        "spark"
+        "incontrarsi-attraverso-di-me"
       ]
     },
     "isIndex": false,
@@ -5460,7 +7270,7 @@
         "slugs": [
           "people",
           "projects",
-          "spark"
+          "incontrarsi-attraverso-di-me"
         ]
       },
       {
@@ -5468,253 +7278,18 @@
         "slugs": [
           "people",
           "progetti",
-          "spark"
+          "incontrarsi-attraverso-di-me"
         ]
       }
     ],
     "urls": [
       {
         "locale": "en",
-        "url": "people/projects/spark"
+        "url": "people/projects/incontrarsi-attraverso-di-me"
       },
       {
         "locale": "it",
-        "url": "people/progetti/spark"
-      }
-    ]
-  },
-  {
-    "id": "7228689",
-    "slugs": {
-      "en": [
-        "people",
-        "projects",
-        "moving-beyond-inclusion"
-      ],
-      "it": [
-        "people",
-        "progetti",
-        "moving-beyond-inclusion"
-      ]
-    },
-    "isIndex": false,
-    "indexType": "",
-    "__typename": "project",
-    "group": "projects",
-    "paths": [
-      {
-        "locale": "en",
-        "slugs": [
-          "people",
-          "projects",
-          "moving-beyond-inclusion"
-        ]
-      },
-      {
-        "locale": "it",
-        "slugs": [
-          "people",
-          "progetti",
-          "moving-beyond-inclusion"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "en",
-        "url": "people/projects/moving-beyond-inclusion"
-      },
-      {
-        "locale": "it",
-        "url": "people/progetti/moving-beyond-inclusion"
-      }
-    ]
-  },
-  {
-    "id": "7228690",
-    "slugs": {
-      "en": [
-        "people",
-        "projects",
-        "impart"
-      ],
-      "it": [
-        "people",
-        "progetti",
-        "impart"
-      ]
-    },
-    "isIndex": false,
-    "indexType": "",
-    "__typename": "project",
-    "group": "projects",
-    "paths": [
-      {
-        "locale": "en",
-        "slugs": [
-          "people",
-          "projects",
-          "impart"
-        ]
-      },
-      {
-        "locale": "it",
-        "slugs": [
-          "people",
-          "progetti",
-          "impart"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "en",
-        "url": "people/projects/impart"
-      },
-      {
-        "locale": "it",
-        "url": "people/progetti/impart"
-      }
-    ]
-  },
-  {
-    "id": "7228691",
-    "slugs": {
-      "en": [
-        "people",
-        "projects",
-        "crossing-the-sea"
-      ],
-      "it": [
-        "people",
-        "progetti",
-        "crossing-the-sea"
-      ]
-    },
-    "isIndex": false,
-    "indexType": "",
-    "__typename": "project",
-    "group": "projects",
-    "paths": [
-      {
-        "locale": "en",
-        "slugs": [
-          "people",
-          "projects",
-          "crossing-the-sea"
-        ]
-      },
-      {
-        "locale": "it",
-        "slugs": [
-          "people",
-          "progetti",
-          "crossing-the-sea"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "en",
-        "url": "people/projects/crossing-the-sea"
-      },
-      {
-        "locale": "it",
-        "url": "people/progetti/crossing-the-sea"
-      }
-    ]
-  },
-  {
-    "id": "7228692",
-    "slugs": {
-      "en": [
-        "people",
-        "projects",
-        "movimento-libero"
-      ],
-      "it": [
-        "people",
-        "progetti",
-        "movimento-libero"
-      ]
-    },
-    "isIndex": false,
-    "indexType": "",
-    "__typename": "project",
-    "group": "projects",
-    "paths": [
-      {
-        "locale": "en",
-        "slugs": [
-          "people",
-          "projects",
-          "movimento-libero"
-        ]
-      },
-      {
-        "locale": "it",
-        "slugs": [
-          "people",
-          "progetti",
-          "movimento-libero"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "en",
-        "url": "people/projects/movimento-libero"
-      },
-      {
-        "locale": "it",
-        "url": "people/progetti/movimento-libero"
-      }
-    ]
-  },
-  {
-    "id": "7228693",
-    "slugs": {
-      "en": [
-        "people",
-        "projects",
-        "save-energy-dance-more"
-      ],
-      "it": [
-        "people",
-        "progetti",
-        "save-energy-dance-more"
-      ]
-    },
-    "isIndex": false,
-    "indexType": "",
-    "__typename": "project",
-    "group": "projects",
-    "paths": [
-      {
-        "locale": "en",
-        "slugs": [
-          "people",
-          "projects",
-          "save-energy-dance-more"
-        ]
-      },
-      {
-        "locale": "it",
-        "slugs": [
-          "people",
-          "progetti",
-          "save-energy-dance-more"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "en",
-        "url": "people/projects/save-energy-dance-more"
-      },
-      {
-        "locale": "it",
-        "url": "people/progetti/save-energy-dance-more"
+        "url": "people/progetti/incontrarsi-attraverso-di-me"
       }
     ]
   },
@@ -5766,6 +7341,53 @@
     ]
   },
   {
+    "id": "7228693",
+    "slugs": {
+      "en": [
+        "people",
+        "projects",
+        "save-energy-dance-more"
+      ],
+      "it": [
+        "people",
+        "progetti",
+        "save-energy-dance-more"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "project",
+    "group": "projects",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "people",
+          "projects",
+          "save-energy-dance-more"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "people",
+          "progetti",
+          "save-energy-dance-more"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "people/projects/save-energy-dance-more"
+      },
+      {
+        "locale": "it",
+        "url": "people/progetti/save-energy-dance-more"
+      }
+    ]
+  },
+  {
     "id": "7228696",
     "slugs": {
       "en": [
@@ -5813,139 +7435,190 @@
     ]
   },
   {
-    "id": "25752004",
-    "slugs": {
-      "it": [
-        "studio",
-        "artisti-associati",
-        "davide-valrosso"
-      ]
-    },
-    "isIndex": false,
-    "indexType": "",
-    "__typename": "artist",
-    "group": "associated-artists",
-    "paths": [
-      {
-        "locale": "it",
-        "slugs": [
-          "studio",
-          "artisti-associati",
-          "davide-valrosso"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "it",
-        "url": "studio/artisti-associati/davide-valrosso"
-      }
-    ]
-  },
-  {
-    "id": "25261402",
-    "slugs": {
-      "it": [
-        "studio",
-        "artisti-associati",
-        "irene-russolillo"
-      ]
-    },
-    "isIndex": false,
-    "indexType": "",
-    "__typename": "artist",
-    "group": "associated-artists",
-    "paths": [
-      {
-        "locale": "it",
-        "slugs": [
-          "studio",
-          "artisti-associati",
-          "irene-russolillo"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "it",
-        "url": "studio/artisti-associati/irene-russolillo"
-      }
-    ]
-  },
-  {
-    "id": "25256915",
-    "slugs": {
-      "it": [
-        "studio",
-        "artisti-associati",
-        "salvo-lombardo"
-      ]
-    },
-    "isIndex": false,
-    "indexType": "",
-    "__typename": "artist",
-    "group": "associated-artists",
-    "paths": [
-      {
-        "locale": "it",
-        "slugs": [
-          "studio",
-          "artisti-associati",
-          "salvo-lombardo"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "it",
-        "url": "studio/artisti-associati/salvo-lombardo"
-      }
-    ]
-  },
-  {
-    "id": "7228058",
+    "id": "7228688",
     "slugs": {
       "en": [
-        "studio",
-        "associated-artists",
-        "marcos-morau"
+        "people",
+        "projects",
+        "spark"
       ],
       "it": [
-        "studio",
-        "artisti-associati",
-        "marcos-morau"
+        "people",
+        "progetti",
+        "spark"
       ]
     },
     "isIndex": false,
     "indexType": "",
-    "__typename": "artist",
-    "group": "associated-artists",
+    "__typename": "project",
+    "group": "projects",
     "paths": [
       {
         "locale": "en",
         "slugs": [
-          "studio",
-          "associated-artists",
-          "marcos-morau"
+          "people",
+          "projects",
+          "spark"
         ]
       },
       {
         "locale": "it",
         "slugs": [
-          "studio",
-          "artisti-associati",
-          "marcos-morau"
+          "people",
+          "progetti",
+          "spark"
         ]
       }
     ],
     "urls": [
       {
         "locale": "en",
-        "url": "studio/associated-artists/marcos-morau"
+        "url": "people/projects/spark"
       },
       {
         "locale": "it",
-        "url": "studio/artisti-associati/marcos-morau"
+        "url": "people/progetti/spark"
+      }
+    ]
+  },
+  {
+    "id": "7228692",
+    "slugs": {
+      "en": [
+        "people",
+        "projects",
+        "movimento-libero"
+      ],
+      "it": [
+        "people",
+        "progetti",
+        "movimento-libero"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "project",
+    "group": "projects",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "people",
+          "projects",
+          "movimento-libero"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "people",
+          "progetti",
+          "movimento-libero"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "people/projects/movimento-libero"
+      },
+      {
+        "locale": "it",
+        "url": "people/progetti/movimento-libero"
+      }
+    ]
+  },
+  {
+    "id": "7228690",
+    "slugs": {
+      "en": [
+        "people",
+        "projects",
+        "impart"
+      ],
+      "it": [
+        "people",
+        "progetti",
+        "impart"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "project",
+    "group": "projects",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "people",
+          "projects",
+          "impart"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "people",
+          "progetti",
+          "impart"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "people/projects/impart"
+      },
+      {
+        "locale": "it",
+        "url": "people/progetti/impart"
+      }
+    ]
+  },
+  {
+    "id": "7228689",
+    "slugs": {
+      "en": [
+        "people",
+        "projects",
+        "moving-beyond-inclusion"
+      ],
+      "it": [
+        "people",
+        "progetti",
+        "moving-beyond-inclusion"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "project",
+    "group": "projects",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "people",
+          "projects",
+          "moving-beyond-inclusion"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "people",
+          "progetti",
+          "moving-beyond-inclusion"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "people/projects/moving-beyond-inclusion"
+      },
+      {
+        "locale": "it",
+        "url": "people/progetti/moving-beyond-inclusion"
       }
     ]
   },
@@ -5993,6 +7666,288 @@
       {
         "locale": "it",
         "url": "studio/artisti-associati/carlo-massari"
+      }
+    ]
+  },
+  {
+    "id": "7228071",
+    "slugs": {
+      "en": [
+        "studio",
+        "associated-artists",
+        "daniele-ninarello"
+      ],
+      "it": [
+        "studio",
+        "artisti-associati",
+        "daniele-ninarello"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "artist",
+    "group": "associated-artists",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "studio",
+          "associated-artists",
+          "daniele-ninarello"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "studio",
+          "artisti-associati",
+          "daniele-ninarello"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "studio/associated-artists/daniele-ninarello"
+      },
+      {
+        "locale": "it",
+        "url": "studio/artisti-associati/daniele-ninarello"
+      }
+    ]
+  },
+  {
+    "id": "39164322",
+    "slugs": {
+      "en": [
+        "studio",
+        "associated-artists",
+        "ginevra-panzetti-e-enrico-ticconi"
+      ],
+      "it": [
+        "studio",
+        "artisti-associati",
+        "ginevra-panzetti-e-enrico-ticconi"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "artist",
+    "group": "associated-artists",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "studio",
+          "associated-artists",
+          "ginevra-panzetti-e-enrico-ticconi"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "studio",
+          "artisti-associati",
+          "ginevra-panzetti-e-enrico-ticconi"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "studio/associated-artists/ginevra-panzetti-e-enrico-ticconi"
+      },
+      {
+        "locale": "it",
+        "url": "studio/artisti-associati/ginevra-panzetti-e-enrico-ticconi"
+      }
+    ]
+  },
+  {
+    "id": "25256915",
+    "slugs": {
+      "en": [
+        "studio",
+        "associated-artists",
+        "salvo-lombardo"
+      ],
+      "it": [
+        "studio",
+        "artisti-associati",
+        "salvo-lombardo"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "artist",
+    "group": "associated-artists",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "studio",
+          "associated-artists",
+          "salvo-lombardo"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "studio",
+          "artisti-associati",
+          "salvo-lombardo"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "studio/associated-artists/salvo-lombardo"
+      },
+      {
+        "locale": "it",
+        "url": "studio/artisti-associati/salvo-lombardo"
+      }
+    ]
+  },
+  {
+    "id": "25261402",
+    "slugs": {
+      "en": [
+        "studio",
+        "associated-artists",
+        "irene-russolillo"
+      ],
+      "it": [
+        "studio",
+        "artisti-associati",
+        "irene-russolillo"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "artist",
+    "group": "associated-artists",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "studio",
+          "associated-artists",
+          "irene-russolillo"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "studio",
+          "artisti-associati",
+          "irene-russolillo"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "studio/associated-artists/irene-russolillo"
+      },
+      {
+        "locale": "it",
+        "url": "studio/artisti-associati/irene-russolillo"
+      }
+    ]
+  },
+  {
+    "id": "25752004",
+    "slugs": {
+      "en": [
+        "studio",
+        "associated-artists",
+        "davide-valrosso"
+      ],
+      "it": [
+        "studio",
+        "artisti-associati",
+        "davide-valrosso"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "artist",
+    "group": "associated-artists",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "studio",
+          "associated-artists",
+          "davide-valrosso"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "studio",
+          "artisti-associati",
+          "davide-valrosso"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "studio/associated-artists/davide-valrosso"
+      },
+      {
+        "locale": "it",
+        "url": "studio/artisti-associati/davide-valrosso"
+      }
+    ]
+  },
+  {
+    "id": "7228058",
+    "slugs": {
+      "en": [
+        "studio",
+        "associated-artists",
+        "marcos-morau"
+      ],
+      "it": [
+        "studio",
+        "artisti-associati",
+        "marcos-morau"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "artist",
+    "group": "associated-artists",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "studio",
+          "associated-artists",
+          "marcos-morau"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "studio",
+          "artisti-associati",
+          "marcos-morau"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "studio/associated-artists/marcos-morau"
+      },
+      {
+        "locale": "it",
+        "url": "studio/artisti-associati/marcos-morau"
       }
     ]
   },
@@ -6091,29 +8046,405 @@
     ]
   },
   {
+    "id": "56107265",
+    "slugs": {
+      "en": [
+        "studio",
+        "artistic-residences",
+        "lorenzo-morandini"
+      ],
+      "it": [
+        "studio",
+        "residenze-artistiche",
+        "lorenzo-morandini"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "artist",
+    "group": "artistic-residences",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "studio",
+          "artistic-residences",
+          "lorenzo-morandini"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "studio",
+          "residenze-artistiche",
+          "lorenzo-morandini"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "studio/artistic-residences/lorenzo-morandini"
+      },
+      {
+        "locale": "it",
+        "url": "studio/residenze-artistiche/lorenzo-morandini"
+      }
+    ]
+  },
+  {
+    "id": "55513804",
+    "slugs": {
+      "en": [
+        "studio",
+        "artistic-residences",
+        "vahan-badalyan"
+      ],
+      "it": [
+        "studio",
+        "residenze-artistiche",
+        "vahan-badalyan"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "artist",
+    "group": "artistic-residences",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "studio",
+          "artistic-residences",
+          "vahan-badalyan"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "studio",
+          "residenze-artistiche",
+          "vahan-badalyan"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "studio/artistic-residences/vahan-badalyan"
+      },
+      {
+        "locale": "it",
+        "url": "studio/residenze-artistiche/vahan-badalyan"
+      }
+    ]
+  },
+  {
+    "id": "7228059",
+    "slugs": {
+      "en": [
+        "studio",
+        "artistic-residences",
+        "carlo-massari"
+      ],
+      "it": [
+        "studio",
+        "residenze-artistiche",
+        "carlo-massari"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "artist",
+    "group": "artistic-residences",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "studio",
+          "artistic-residences",
+          "carlo-massari"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "studio",
+          "residenze-artistiche",
+          "carlo-massari"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "studio/artistic-residences/carlo-massari"
+      },
+      {
+        "locale": "it",
+        "url": "studio/residenze-artistiche/carlo-massari"
+      }
+    ]
+  },
+  {
+    "id": "25168456",
+    "slugs": {
+      "en": [
+        "studio",
+        "artistic-residences",
+        "ludovico-paladini"
+      ],
+      "it": [
+        "studio",
+        "residenze-artistiche",
+        "ludovico-paladini"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "artist",
+    "group": "artistic-residences",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "studio",
+          "artistic-residences",
+          "ludovico-paladini"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "studio",
+          "residenze-artistiche",
+          "ludovico-paladini"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "studio/artistic-residences/ludovico-paladini"
+      },
+      {
+        "locale": "it",
+        "url": "studio/residenze-artistiche/ludovico-paladini"
+      }
+    ]
+  },
+  {
+    "id": "7228073",
+    "slugs": {
+      "en": [
+        "studio",
+        "artistic-residences",
+        "aristide-rontini"
+      ],
+      "it": [
+        "studio",
+        "residenze-artistiche",
+        "aristide-rontini"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "artist",
+    "group": "artistic-residences",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "studio",
+          "artistic-residences",
+          "aristide-rontini"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "studio",
+          "residenze-artistiche",
+          "aristide-rontini"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "studio/artistic-residences/aristide-rontini"
+      },
+      {
+        "locale": "it",
+        "url": "studio/residenze-artistiche/aristide-rontini"
+      }
+    ]
+  },
+  {
+    "id": "7228070",
+    "slugs": {
+      "en": [
+        "studio",
+        "artistic-residences",
+        "alessio-maria-romano"
+      ],
+      "it": [
+        "studio",
+        "residenze-artistiche",
+        "alessio-maria-romano"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "artist",
+    "group": "artistic-residences",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "studio",
+          "artistic-residences",
+          "alessio-maria-romano"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "studio",
+          "residenze-artistiche",
+          "alessio-maria-romano"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "studio/artistic-residences/alessio-maria-romano"
+      },
+      {
+        "locale": "it",
+        "url": "studio/residenze-artistiche/alessio-maria-romano"
+      }
+    ]
+  },
+  {
+    "id": "7228072",
+    "slugs": {
+      "en": [
+        "studio",
+        "artistic-residences",
+        "nicola-galli"
+      ],
+      "it": [
+        "studio",
+        "residenze-artistiche",
+        "nicola-galli"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "artist",
+    "group": "artistic-residences",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "studio",
+          "artistic-residences",
+          "nicola-galli"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "studio",
+          "residenze-artistiche",
+          "nicola-galli"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "studio/artistic-residences/nicola-galli"
+      },
+      {
+        "locale": "it",
+        "url": "studio/residenze-artistiche/nicola-galli"
+      }
+    ]
+  },
+  {
+    "id": "7228069",
+    "slugs": {
+      "en": [
+        "studio",
+        "artistic-residences",
+        "honji-wang-and-sebastien-ramirez"
+      ],
+      "it": [
+        "studio",
+        "residenze-artistiche",
+        "honji-wang-and-sebastien-ramirez"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "artist",
+    "group": "artistic-residences",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "studio",
+          "artistic-residences",
+          "honji-wang-and-sebastien-ramirez"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "studio",
+          "residenze-artistiche",
+          "honji-wang-and-sebastien-ramirez"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "studio/artistic-residences/honji-wang-and-sebastien-ramirez"
+      },
+      {
+        "locale": "it",
+        "url": "studio/residenze-artistiche/honji-wang-and-sebastien-ramirez"
+      }
+    ]
+  },
+  {
     "id": "7228071",
     "slugs": {
       "en": [
         "studio",
-        "associated-artists",
+        "artistic-residences",
         "daniele-ninarello"
       ],
       "it": [
         "studio",
-        "artisti-associati",
+        "residenze-artistiche",
         "daniele-ninarello"
       ]
     },
     "isIndex": false,
     "indexType": "",
     "__typename": "artist",
-    "group": "associated-artists",
+    "group": "artistic-residences",
     "paths": [
       {
         "locale": "en",
         "slugs": [
           "studio",
-          "associated-artists",
+          "artistic-residences",
           "daniele-ninarello"
         ]
       },
@@ -6121,7 +8452,7 @@
         "locale": "it",
         "slugs": [
           "studio",
-          "artisti-associati",
+          "residenze-artistiche",
           "daniele-ninarello"
         ]
       }
@@ -6129,11 +8460,387 @@
     "urls": [
       {
         "locale": "en",
-        "url": "studio/associated-artists/daniele-ninarello"
+        "url": "studio/artistic-residences/daniele-ninarello"
       },
       {
         "locale": "it",
-        "url": "studio/artisti-associati/daniele-ninarello"
+        "url": "studio/residenze-artistiche/daniele-ninarello"
+      }
+    ]
+  },
+  {
+    "id": "7228074",
+    "slugs": {
+      "en": [
+        "studio",
+        "artistic-residences",
+        "martina-gambardella"
+      ],
+      "it": [
+        "studio",
+        "residenze-artistiche",
+        "martina-gambardella"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "artist",
+    "group": "artistic-residences",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "studio",
+          "artistic-residences",
+          "martina-gambardella"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "studio",
+          "residenze-artistiche",
+          "martina-gambardella"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "studio/artistic-residences/martina-gambardella"
+      },
+      {
+        "locale": "it",
+        "url": "studio/residenze-artistiche/martina-gambardella"
+      }
+    ]
+  },
+  {
+    "id": "7228075",
+    "slugs": {
+      "en": [
+        "studio",
+        "artistic-residences",
+        "annamaria-ajmone"
+      ],
+      "it": [
+        "studio",
+        "residenze-artistiche",
+        "annamaria-ajmone"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "artist",
+    "group": "artistic-residences",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "studio",
+          "artistic-residences",
+          "annamaria-ajmone"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "studio",
+          "residenze-artistiche",
+          "annamaria-ajmone"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "studio/artistic-residences/annamaria-ajmone"
+      },
+      {
+        "locale": "it",
+        "url": "studio/residenze-artistiche/annamaria-ajmone"
+      }
+    ]
+  },
+  {
+    "id": "25256915",
+    "slugs": {
+      "en": [
+        "studio",
+        "artistic-residences",
+        "salvo-lombardo"
+      ],
+      "it": [
+        "studio",
+        "residenze-artistiche",
+        "salvo-lombardo"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "artist",
+    "group": "artistic-residences",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "studio",
+          "artistic-residences",
+          "salvo-lombardo"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "studio",
+          "residenze-artistiche",
+          "salvo-lombardo"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "studio/artistic-residences/salvo-lombardo"
+      },
+      {
+        "locale": "it",
+        "url": "studio/residenze-artistiche/salvo-lombardo"
+      }
+    ]
+  },
+  {
+    "id": "25258423",
+    "slugs": {
+      "en": [
+        "studio",
+        "artistic-residences",
+        "federica-loredan"
+      ],
+      "it": [
+        "studio",
+        "residenze-artistiche",
+        "federica-loredan"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "artist",
+    "group": "artistic-residences",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "studio",
+          "artistic-residences",
+          "federica-loredan"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "studio",
+          "residenze-artistiche",
+          "federica-loredan"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "studio/artistic-residences/federica-loredan"
+      },
+      {
+        "locale": "it",
+        "url": "studio/residenze-artistiche/federica-loredan"
+      }
+    ]
+  },
+  {
+    "id": "25258776",
+    "slugs": {
+      "en": [
+        "studio",
+        "artistic-residences",
+        "pablo-tapia-leyton"
+      ],
+      "it": [
+        "studio",
+        "residenze-artistiche",
+        "pablo-tapia-leyton"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "artist",
+    "group": "artistic-residences",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "studio",
+          "artistic-residences",
+          "pablo-tapia-leyton"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "studio",
+          "residenze-artistiche",
+          "pablo-tapia-leyton"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "studio/artistic-residences/pablo-tapia-leyton"
+      },
+      {
+        "locale": "it",
+        "url": "studio/residenze-artistiche/pablo-tapia-leyton"
+      }
+    ]
+  },
+  {
+    "id": "25261402",
+    "slugs": {
+      "en": [
+        "studio",
+        "artistic-residences",
+        "irene-russolillo"
+      ],
+      "it": [
+        "studio",
+        "residenze-artistiche",
+        "irene-russolillo"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "artist",
+    "group": "artistic-residences",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "studio",
+          "artistic-residences",
+          "irene-russolillo"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "studio",
+          "residenze-artistiche",
+          "irene-russolillo"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "studio/artistic-residences/irene-russolillo"
+      },
+      {
+        "locale": "it",
+        "url": "studio/residenze-artistiche/irene-russolillo"
+      }
+    ]
+  },
+  {
+    "id": "25752004",
+    "slugs": {
+      "en": [
+        "studio",
+        "artistic-residences",
+        "davide-valrosso"
+      ],
+      "it": [
+        "studio",
+        "residenze-artistiche",
+        "davide-valrosso"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "artist",
+    "group": "artistic-residences",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "studio",
+          "artistic-residences",
+          "davide-valrosso"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "studio",
+          "residenze-artistiche",
+          "davide-valrosso"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "studio/artistic-residences/davide-valrosso"
+      },
+      {
+        "locale": "it",
+        "url": "studio/residenze-artistiche/davide-valrosso"
+      }
+    ]
+  },
+  {
+    "id": "25106476",
+    "slugs": {
+      "en": [
+        "studio",
+        "artistic-residences",
+        "roberto-tedesco"
+      ],
+      "it": [
+        "studio",
+        "residenze-artistiche",
+        "roberto-tedesco"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "artist",
+    "group": "artistic-residences",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "studio",
+          "artistic-residences",
+          "roberto-tedesco"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "studio",
+          "residenze-artistiche",
+          "roberto-tedesco"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "studio/artistic-residences/roberto-tedesco"
+      },
+      {
+        "locale": "it",
+        "url": "studio/residenze-artistiche/roberto-tedesco"
       }
     ]
   },
@@ -6232,216 +8939,6 @@
     ]
   },
   {
-    "id": "25106476",
-    "slugs": {
-      "it": [
-        "studio",
-        "residenze-artistiche",
-        "roberto-tedesco"
-      ]
-    },
-    "isIndex": false,
-    "indexType": "",
-    "__typename": "artist",
-    "group": "artistic-residences",
-    "paths": [
-      {
-        "locale": "it",
-        "slugs": [
-          "studio",
-          "residenze-artistiche",
-          "roberto-tedesco"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "it",
-        "url": "studio/residenze-artistiche/roberto-tedesco"
-      }
-    ]
-  },
-  {
-    "id": "25752004",
-    "slugs": {
-      "it": [
-        "studio",
-        "residenze-artistiche",
-        "davide-valrosso"
-      ]
-    },
-    "isIndex": false,
-    "indexType": "",
-    "__typename": "artist",
-    "group": "artistic-residences",
-    "paths": [
-      {
-        "locale": "it",
-        "slugs": [
-          "studio",
-          "residenze-artistiche",
-          "davide-valrosso"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "it",
-        "url": "studio/residenze-artistiche/davide-valrosso"
-      }
-    ]
-  },
-  {
-    "id": "25261402",
-    "slugs": {
-      "it": [
-        "studio",
-        "residenze-artistiche",
-        "irene-russolillo"
-      ]
-    },
-    "isIndex": false,
-    "indexType": "",
-    "__typename": "artist",
-    "group": "artistic-residences",
-    "paths": [
-      {
-        "locale": "it",
-        "slugs": [
-          "studio",
-          "residenze-artistiche",
-          "irene-russolillo"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "it",
-        "url": "studio/residenze-artistiche/irene-russolillo"
-      }
-    ]
-  },
-  {
-    "id": "25258776",
-    "slugs": {
-      "it": [
-        "studio",
-        "residenze-artistiche",
-        "pablo-tapia-leyton"
-      ]
-    },
-    "isIndex": false,
-    "indexType": "",
-    "__typename": "artist",
-    "group": "artistic-residences",
-    "paths": [
-      {
-        "locale": "it",
-        "slugs": [
-          "studio",
-          "residenze-artistiche",
-          "pablo-tapia-leyton"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "it",
-        "url": "studio/residenze-artistiche/pablo-tapia-leyton"
-      }
-    ]
-  },
-  {
-    "id": "25258423",
-    "slugs": {
-      "it": [
-        "studio",
-        "residenze-artistiche",
-        "federica-loredan"
-      ]
-    },
-    "isIndex": false,
-    "indexType": "",
-    "__typename": "artist",
-    "group": "artistic-residences",
-    "paths": [
-      {
-        "locale": "it",
-        "slugs": [
-          "studio",
-          "residenze-artistiche",
-          "federica-loredan"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "it",
-        "url": "studio/residenze-artistiche/federica-loredan"
-      }
-    ]
-  },
-  {
-    "id": "25256915",
-    "slugs": {
-      "it": [
-        "studio",
-        "residenze-artistiche",
-        "salvo-lombardo"
-      ]
-    },
-    "isIndex": false,
-    "indexType": "",
-    "__typename": "artist",
-    "group": "artistic-residences",
-    "paths": [
-      {
-        "locale": "it",
-        "slugs": [
-          "studio",
-          "residenze-artistiche",
-          "salvo-lombardo"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "it",
-        "url": "studio/residenze-artistiche/salvo-lombardo"
-      }
-    ]
-  },
-  {
-    "id": "25168456",
-    "slugs": {
-      "it": [
-        "studio",
-        "residenze-artistiche",
-        "ludovico-paladini"
-      ]
-    },
-    "isIndex": false,
-    "indexType": "",
-    "__typename": "artist",
-    "group": "artistic-residences",
-    "paths": [
-      {
-        "locale": "it",
-        "slugs": [
-          "studio",
-          "residenze-artistiche",
-          "ludovico-paladini"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "it",
-        "url": "studio/residenze-artistiche/ludovico-paladini"
-      }
-    ]
-  },
-  {
     "id": "7228057",
     "slugs": {
       "en": [
@@ -6485,53 +8982,6 @@
       {
         "locale": "it",
         "url": "studio/residenze-artistiche/alessandra-ferri"
-      }
-    ]
-  },
-  {
-    "id": "7228059",
-    "slugs": {
-      "en": [
-        "studio",
-        "artistic-residences",
-        "carlo-massari"
-      ],
-      "it": [
-        "studio",
-        "residenze-artistiche",
-        "carlo-massari"
-      ]
-    },
-    "isIndex": false,
-    "indexType": "",
-    "__typename": "artist",
-    "group": "artistic-residences",
-    "paths": [
-      {
-        "locale": "en",
-        "slugs": [
-          "studio",
-          "artistic-residences",
-          "carlo-massari"
-        ]
-      },
-      {
-        "locale": "it",
-        "slugs": [
-          "studio",
-          "residenze-artistiche",
-          "carlo-massari"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "en",
-        "url": "studio/artistic-residences/carlo-massari"
-      },
-      {
-        "locale": "it",
-        "url": "studio/residenze-artistiche/carlo-massari"
       }
     ]
   },
@@ -6865,335 +9315,6 @@
     ]
   },
   {
-    "id": "7228069",
-    "slugs": {
-      "en": [
-        "studio",
-        "artistic-residences",
-        "honji-wang-and-sebastien-ramirez"
-      ],
-      "it": [
-        "studio",
-        "residenze-artistiche",
-        "honji-wang-and-sebastien-ramirez"
-      ]
-    },
-    "isIndex": false,
-    "indexType": "",
-    "__typename": "artist",
-    "group": "artistic-residences",
-    "paths": [
-      {
-        "locale": "en",
-        "slugs": [
-          "studio",
-          "artistic-residences",
-          "honji-wang-and-sebastien-ramirez"
-        ]
-      },
-      {
-        "locale": "it",
-        "slugs": [
-          "studio",
-          "residenze-artistiche",
-          "honji-wang-and-sebastien-ramirez"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "en",
-        "url": "studio/artistic-residences/honji-wang-and-sebastien-ramirez"
-      },
-      {
-        "locale": "it",
-        "url": "studio/residenze-artistiche/honji-wang-and-sebastien-ramirez"
-      }
-    ]
-  },
-  {
-    "id": "7228070",
-    "slugs": {
-      "en": [
-        "studio",
-        "artistic-residences",
-        "alessio-maria-romano"
-      ],
-      "it": [
-        "studio",
-        "residenze-artistiche",
-        "alessio-maria-romano"
-      ]
-    },
-    "isIndex": false,
-    "indexType": "",
-    "__typename": "artist",
-    "group": "artistic-residences",
-    "paths": [
-      {
-        "locale": "en",
-        "slugs": [
-          "studio",
-          "artistic-residences",
-          "alessio-maria-romano"
-        ]
-      },
-      {
-        "locale": "it",
-        "slugs": [
-          "studio",
-          "residenze-artistiche",
-          "alessio-maria-romano"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "en",
-        "url": "studio/artistic-residences/alessio-maria-romano"
-      },
-      {
-        "locale": "it",
-        "url": "studio/residenze-artistiche/alessio-maria-romano"
-      }
-    ]
-  },
-  {
-    "id": "7228071",
-    "slugs": {
-      "en": [
-        "studio",
-        "artistic-residences",
-        "daniele-ninarello"
-      ],
-      "it": [
-        "studio",
-        "residenze-artistiche",
-        "daniele-ninarello"
-      ]
-    },
-    "isIndex": false,
-    "indexType": "",
-    "__typename": "artist",
-    "group": "artistic-residences",
-    "paths": [
-      {
-        "locale": "en",
-        "slugs": [
-          "studio",
-          "artistic-residences",
-          "daniele-ninarello"
-        ]
-      },
-      {
-        "locale": "it",
-        "slugs": [
-          "studio",
-          "residenze-artistiche",
-          "daniele-ninarello"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "en",
-        "url": "studio/artistic-residences/daniele-ninarello"
-      },
-      {
-        "locale": "it",
-        "url": "studio/residenze-artistiche/daniele-ninarello"
-      }
-    ]
-  },
-  {
-    "id": "7228072",
-    "slugs": {
-      "en": [
-        "studio",
-        "artistic-residences",
-        "nicola-galli"
-      ],
-      "it": [
-        "studio",
-        "residenze-artistiche",
-        "nicola-galli"
-      ]
-    },
-    "isIndex": false,
-    "indexType": "",
-    "__typename": "artist",
-    "group": "artistic-residences",
-    "paths": [
-      {
-        "locale": "en",
-        "slugs": [
-          "studio",
-          "artistic-residences",
-          "nicola-galli"
-        ]
-      },
-      {
-        "locale": "it",
-        "slugs": [
-          "studio",
-          "residenze-artistiche",
-          "nicola-galli"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "en",
-        "url": "studio/artistic-residences/nicola-galli"
-      },
-      {
-        "locale": "it",
-        "url": "studio/residenze-artistiche/nicola-galli"
-      }
-    ]
-  },
-  {
-    "id": "7228073",
-    "slugs": {
-      "en": [
-        "studio",
-        "artistic-residences",
-        "aristide-rontini"
-      ],
-      "it": [
-        "studio",
-        "residenze-artistiche",
-        "aristide-rontini"
-      ]
-    },
-    "isIndex": false,
-    "indexType": "",
-    "__typename": "artist",
-    "group": "artistic-residences",
-    "paths": [
-      {
-        "locale": "en",
-        "slugs": [
-          "studio",
-          "artistic-residences",
-          "aristide-rontini"
-        ]
-      },
-      {
-        "locale": "it",
-        "slugs": [
-          "studio",
-          "residenze-artistiche",
-          "aristide-rontini"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "en",
-        "url": "studio/artistic-residences/aristide-rontini"
-      },
-      {
-        "locale": "it",
-        "url": "studio/residenze-artistiche/aristide-rontini"
-      }
-    ]
-  },
-  {
-    "id": "7228074",
-    "slugs": {
-      "en": [
-        "studio",
-        "artistic-residences",
-        "martina-gambardella"
-      ],
-      "it": [
-        "studio",
-        "residenze-artistiche",
-        "martina-gambardella"
-      ]
-    },
-    "isIndex": false,
-    "indexType": "",
-    "__typename": "artist",
-    "group": "artistic-residences",
-    "paths": [
-      {
-        "locale": "en",
-        "slugs": [
-          "studio",
-          "artistic-residences",
-          "martina-gambardella"
-        ]
-      },
-      {
-        "locale": "it",
-        "slugs": [
-          "studio",
-          "residenze-artistiche",
-          "martina-gambardella"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "en",
-        "url": "studio/artistic-residences/martina-gambardella"
-      },
-      {
-        "locale": "it",
-        "url": "studio/residenze-artistiche/martina-gambardella"
-      }
-    ]
-  },
-  {
-    "id": "7228075",
-    "slugs": {
-      "en": [
-        "studio",
-        "artistic-residences",
-        "annamaria-ajmone"
-      ],
-      "it": [
-        "studio",
-        "residenze-artistiche",
-        "annamaria-ajmone"
-      ]
-    },
-    "isIndex": false,
-    "indexType": "",
-    "__typename": "artist",
-    "group": "artistic-residences",
-    "paths": [
-      {
-        "locale": "en",
-        "slugs": [
-          "studio",
-          "artistic-residences",
-          "annamaria-ajmone"
-        ]
-      },
-      {
-        "locale": "it",
-        "slugs": [
-          "studio",
-          "residenze-artistiche",
-          "annamaria-ajmone"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "en",
-        "url": "studio/artistic-residences/annamaria-ajmone"
-      },
-      {
-        "locale": "it",
-        "url": "studio/residenze-artistiche/annamaria-ajmone"
-      }
-    ]
-  },
-  {
     "id": "7228076",
     "slugs": {
       "en": [
@@ -7237,6 +9358,891 @@
       {
         "locale": "it",
         "url": "studio/residenze-artistiche/lucrezia-gabrieli"
+      }
+    ]
+  },
+  {
+    "id": "63837705",
+    "slugs": {
+      "it": [
+        "news",
+        "servizio-civile-a-oriente-occidente"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "news",
+    "group": "news-index",
+    "paths": [
+      {
+        "locale": "it",
+        "slugs": [
+          "news",
+          "servizio-civile-a-oriente-occidente"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "it",
+        "url": "news/servizio-civile-a-oriente-occidente"
+      }
+    ]
+  },
+  {
+    "id": "63816555",
+    "slugs": {
+      "it": [
+        "news",
+        "residenze-artistiche-2023-ecco-i-selezionati"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "news",
+    "group": "news-index",
+    "paths": [
+      {
+        "locale": "it",
+        "slugs": [
+          "news",
+          "residenze-artistiche-2023-ecco-i-selezionati"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "it",
+        "url": "news/residenze-artistiche-2023-ecco-i-selezionati"
+      }
+    ]
+  },
+  {
+    "id": "63796029",
+    "slugs": {
+      "it": [
+        "news",
+        "studio-la-seconda-stagione"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "news",
+    "group": "news-index",
+    "paths": [
+      {
+        "locale": "it",
+        "slugs": [
+          "news",
+          "studio-la-seconda-stagione"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "it",
+        "url": "news/studio-la-seconda-stagione"
+      }
+    ]
+  },
+  {
+    "id": "63751385",
+    "slugs": {
+      "it": [
+        "news",
+        "un-bando-ministeriale-su-arti-performative-e-disabilita"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "news",
+    "group": "news-index",
+    "paths": [
+      {
+        "locale": "it",
+        "slugs": [
+          "news",
+          "un-bando-ministeriale-su-arti-performative-e-disabilita"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "it",
+        "url": "news/un-bando-ministeriale-su-arti-performative-e-disabilita"
+      }
+    ]
+  },
+  {
+    "id": "56051517",
+    "slugs": {
+      "it": [
+        "news",
+        "linguaggi-2022-diventa-podcast"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "news",
+    "group": "news-index",
+    "paths": [
+      {
+        "locale": "it",
+        "slugs": [
+          "news",
+          "linguaggi-2022-diventa-podcast"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "it",
+        "url": "news/linguaggi-2022-diventa-podcast"
+      }
+    ]
+  },
+  {
+    "id": "58925658",
+    "slugs": {
+      "it": [
+        "news",
+        "how-can-we-move"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "news",
+    "group": "news-index",
+    "paths": [
+      {
+        "locale": "it",
+        "slugs": [
+          "news",
+          "how-can-we-move"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "it",
+        "url": "news/how-can-we-move"
+      }
+    ]
+  },
+  {
+    "id": "56558843",
+    "slugs": {
+      "it": [
+        "news",
+        "progetto-coreografico-s"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "news",
+    "group": "news-index",
+    "paths": [
+      {
+        "locale": "it",
+        "slugs": [
+          "news",
+          "progetto-coreografico-s"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "it",
+        "url": "news/progetto-coreografico-s"
+      }
+    ]
+  },
+  {
+    "id": "56051488",
+    "slugs": {
+      "it": [
+        "news",
+        "residenze-artistiche-open-call"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "news",
+    "group": "news-index",
+    "paths": [
+      {
+        "locale": "it",
+        "slugs": [
+          "news",
+          "residenze-artistiche-open-call"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "it",
+        "url": "news/residenze-artistiche-open-call"
+      }
+    ]
+  },
+  {
+    "id": "55484080",
+    "slugs": {
+      "it": [
+        "news",
+        "oriente-occidente-da-sold-out"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "news",
+    "group": "news-index",
+    "paths": [
+      {
+        "locale": "it",
+        "slugs": [
+          "news",
+          "oriente-occidente-da-sold-out"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "it",
+        "url": "news/oriente-occidente-da-sold-out"
+      }
+    ]
+  },
+  {
+    "id": "55515036",
+    "slugs": {
+      "it": [
+        "news",
+        "sconfinamenti-2022"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "news",
+    "group": "news-index",
+    "paths": [
+      {
+        "locale": "it",
+        "slugs": [
+          "news",
+          "sconfinamenti-2022"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "it",
+        "url": "news/sconfinamenti-2022"
+      }
+    ]
+  },
+  {
+    "id": "55312084",
+    "slugs": {
+      "it": [
+        "news",
+        "la-nostra-notte-della-taranta"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "news",
+    "group": "news-index",
+    "paths": [
+      {
+        "locale": "it",
+        "slugs": [
+          "news",
+          "la-nostra-notte-della-taranta"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "it",
+        "url": "news/la-nostra-notte-della-taranta"
+      }
+    ]
+  },
+  {
+    "id": "55459642",
+    "slugs": {
+      "it": [
+        "news",
+        "lorenzo-noto"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "news",
+    "group": "news-index",
+    "paths": [
+      {
+        "locale": "it",
+        "slugs": [
+          "news",
+          "lorenzo-noto"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "it",
+        "url": "news/lorenzo-noto"
+      }
+    ]
+  },
+  {
+    "id": "45353736",
+    "slugs": {
+      "it": [
+        "news",
+        "linguaggi"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "news",
+    "group": "news-index",
+    "paths": [
+      {
+        "locale": "it",
+        "slugs": [
+          "news",
+          "linguaggi"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "it",
+        "url": "news/linguaggi"
+      }
+    ]
+  },
+  {
+    "id": "55447343",
+    "slugs": {
+      "it": [
+        "news",
+        "laila-sit-aboha"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "news",
+    "group": "news-index",
+    "paths": [
+      {
+        "locale": "it",
+        "slugs": [
+          "news",
+          "laila-sit-aboha"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "it",
+        "url": "news/laila-sit-aboha"
+      }
+    ]
+  },
+  {
+    "id": "55444033",
+    "slugs": {
+      "it": [
+        "news",
+        "egidio-ivetic"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "news",
+    "group": "news-index",
+    "paths": [
+      {
+        "locale": "it",
+        "slugs": [
+          "news",
+          "egidio-ivetic"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "it",
+        "url": "news/egidio-ivetic"
+      }
+    ]
+  },
+  {
+    "id": "55425844",
+    "slugs": {
+      "it": [
+        "news",
+        "giovanni-vale"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "news",
+    "group": "news-index",
+    "paths": [
+      {
+        "locale": "it",
+        "slugs": [
+          "news",
+          "giovanni-vale"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "it",
+        "url": "news/giovanni-vale"
+      }
+    ]
+  },
+  {
+    "id": "55423318",
+    "slugs": {
+      "it": [
+        "news",
+        "roberto-travan"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "news",
+    "group": "news-index",
+    "paths": [
+      {
+        "locale": "it",
+        "slugs": [
+          "news",
+          "roberto-travan"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "it",
+        "url": "news/roberto-travan"
+      }
+    ]
+  },
+  {
+    "id": "47740814",
+    "slugs": {
+      "it": [
+        "news",
+        "tributo-all-armenia"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "news",
+    "group": "news-index",
+    "paths": [
+      {
+        "locale": "it",
+        "slugs": [
+          "news",
+          "tributo-all-armenia"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "it",
+        "url": "news/tributo-all-armenia"
+      }
+    ]
+  },
+  {
+    "id": "54266797",
+    "slugs": {
+      "it": [
+        "news",
+        "un-festival-accessibile"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "news",
+    "group": "news-index",
+    "paths": [
+      {
+        "locale": "it",
+        "slugs": [
+          "news",
+          "un-festival-accessibile"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "it",
+        "url": "news/un-festival-accessibile"
+      }
+    ]
+  },
+  {
+    "id": "46215165",
+    "slugs": {
+      "it": [
+        "news",
+        "la-mappa-di-mediterranei"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "news",
+    "group": "news-index",
+    "paths": [
+      {
+        "locale": "it",
+        "slugs": [
+          "news",
+          "la-mappa-di-mediterranei"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "it",
+        "url": "news/la-mappa-di-mediterranei"
+      }
+    ]
+  },
+  {
+    "id": "44715776",
+    "slugs": {
+      "it": [
+        "news",
+        "il-vocabolario-di-presenti-accessibili"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "news",
+    "group": "news-index",
+    "paths": [
+      {
+        "locale": "it",
+        "slugs": [
+          "news",
+          "il-vocabolario-di-presenti-accessibili"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "it",
+        "url": "news/il-vocabolario-di-presenti-accessibili"
+      }
+    ]
+  },
+  {
+    "id": "7228988",
+    "slugs": {
+      "it": [
+        "news",
+        "studio-or-la-casa-della-danza-di-oriente-occidente"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "news",
+    "group": "news-index",
+    "paths": [
+      {
+        "locale": "it",
+        "slugs": [
+          "news",
+          "studio-or-la-casa-della-danza-di-oriente-occidente"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "it",
+        "url": "news/studio-or-la-casa-della-danza-di-oriente-occidente"
+      }
+    ]
+  },
+  {
+    "id": "7228989",
+    "slugs": {
+      "it": [
+        "news",
+        "ecco-i-vincitori-del-bando-spring"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "news",
+    "group": "news-index",
+    "paths": [
+      {
+        "locale": "it",
+        "slugs": [
+          "news",
+          "ecco-i-vincitori-del-bando-spring"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "it",
+        "url": "news/ecco-i-vincitori-del-bando-spring"
+      }
+    ]
+  },
+  {
+    "id": "7228990",
+    "slugs": {
+      "it": [
+        "news",
+        "servizio-civile"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "news",
+    "group": "news-index",
+    "paths": [
+      {
+        "locale": "it",
+        "slugs": [
+          "news",
+          "servizio-civile"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "it",
+        "url": "news/servizio-civile"
+      }
+    ]
+  },
+  {
+    "id": "7228987",
+    "slugs": {
+      "en": [
+        "news",
+        "oriente-occidente-is-an-european-dancehouse"
+      ],
+      "it": [
+        "news",
+        "oriente-occidente-nella-rete-edn"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "news",
+    "group": "news-index",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "news",
+          "oriente-occidente-is-an-european-dancehouse"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "news",
+          "oriente-occidente-nella-rete-edn"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "news/oriente-occidente-is-an-european-dancehouse"
+      },
+      {
+        "locale": "it",
+        "url": "news/oriente-occidente-nella-rete-edn"
+      }
+    ]
+  },
+  {
+    "id": "7228986",
+    "slugs": {
+      "it": [
+        "news",
+        "aaa-donne-cercasi"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "news",
+    "group": "news-index",
+    "paths": [
+      {
+        "locale": "it",
+        "slugs": [
+          "news",
+          "aaa-donne-cercasi"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "it",
+        "url": "news/aaa-donne-cercasi"
+      }
+    ]
+  },
+  {
+    "id": "7228984",
+    "slugs": {
+      "en": [
+        "news",
+        "presenti-accessibili"
+      ],
+      "it": [
+        "news",
+        "presenti-accessibili"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "news",
+    "group": "news-index",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "news",
+          "presenti-accessibili"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "news",
+          "presenti-accessibili"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "news/presenti-accessibili"
+      },
+      {
+        "locale": "it",
+        "url": "news/presenti-accessibili"
+      }
+    ]
+  },
+  {
+    "id": "7228982",
+    "slugs": {
+      "it": [
+        "news",
+        "conferenza-stampa"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "news",
+    "group": "news-index",
+    "paths": [
+      {
+        "locale": "it",
+        "slugs": [
+          "news",
+          "conferenza-stampa"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "it",
+        "url": "news/conferenza-stampa"
+      }
+    ]
+  },
+  {
+    "id": "35742358",
+    "slugs": {
+      "en": [
+        "news",
+        "oriente-occidente-dance-festival-3-10-settmebre-2022"
+      ],
+      "it": [
+        "news",
+        "oriente-occidente-dance-festival-3-10-settmebre-2022"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "news",
+    "group": "news-index",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "news",
+          "oriente-occidente-dance-festival-3-10-settmebre-2022"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "news",
+          "oriente-occidente-dance-festival-3-10-settmebre-2022"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "news/oriente-occidente-dance-festival-3-10-settmebre-2022"
+      },
+      {
+        "locale": "it",
+        "url": "news/oriente-occidente-dance-festival-3-10-settmebre-2022"
+      }
+    ]
+  },
+  {
+    "id": "25138305",
+    "slugs": {
+      "it": [
+        "news",
+        "jump"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "news",
+    "group": "news-index",
+    "paths": [
+      {
+        "locale": "it",
+        "slugs": [
+          "news",
+          "jump"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "it",
+        "url": "news/jump"
       }
     ]
   },
@@ -7353,34 +10359,6 @@
     ]
   },
   {
-    "id": "25138305",
-    "slugs": {
-      "it": [
-        "news",
-        "jump"
-      ]
-    },
-    "isIndex": false,
-    "indexType": "",
-    "__typename": "news",
-    "group": "news-index",
-    "paths": [
-      {
-        "locale": "it",
-        "slugs": [
-          "news",
-          "jump"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "it",
-        "url": "news/jump"
-      }
-    ]
-  },
-  {
     "id": "25138237",
     "slugs": {
       "it": [
@@ -7433,49 +10411,6 @@
       {
         "locale": "it",
         "url": "news/hasta-donde"
-      }
-    ]
-  },
-  {
-    "id": "7228982",
-    "slugs": {
-      "en": [
-        "news",
-        "conferenza-stampa"
-      ],
-      "it": [
-        "news",
-        "conferenza-stampa"
-      ]
-    },
-    "isIndex": false,
-    "indexType": "",
-    "__typename": "news",
-    "group": "news-index",
-    "paths": [
-      {
-        "locale": "en",
-        "slugs": [
-          "news",
-          "conferenza-stampa"
-        ]
-      },
-      {
-        "locale": "it",
-        "slugs": [
-          "news",
-          "conferenza-stampa"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "en",
-        "url": "news/conferenza-stampa"
-      },
-      {
-        "locale": "it",
-        "url": "news/conferenza-stampa"
       }
     ]
   },
@@ -7551,49 +10486,6 @@
     ]
   },
   {
-    "id": "7228984",
-    "slugs": {
-      "en": [
-        "news",
-        "presenti-accessibili"
-      ],
-      "it": [
-        "news",
-        "presenti-accessibili"
-      ]
-    },
-    "isIndex": false,
-    "indexType": "",
-    "__typename": "news",
-    "group": "news-index",
-    "paths": [
-      {
-        "locale": "en",
-        "slugs": [
-          "news",
-          "presenti-accessibili"
-        ]
-      },
-      {
-        "locale": "it",
-        "slugs": [
-          "news",
-          "presenti-accessibili"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "en",
-        "url": "news/presenti-accessibili"
-      },
-      {
-        "locale": "it",
-        "url": "news/presenti-accessibili"
-      }
-    ]
-  },
-  {
     "id": "7228985",
     "slugs": {
       "en": [
@@ -7637,257 +10529,12 @@
     ]
   },
   {
-    "id": "7228986",
-    "slugs": {
-      "en": [
-        "news",
-        "we-are-looking-for-women"
-      ],
-      "it": [
-        "news",
-        "aaa-donne-cercasi"
-      ]
-    },
-    "isIndex": false,
-    "indexType": "",
-    "__typename": "news",
-    "group": "news-index",
-    "paths": [
-      {
-        "locale": "en",
-        "slugs": [
-          "news",
-          "we-are-looking-for-women"
-        ]
-      },
-      {
-        "locale": "it",
-        "slugs": [
-          "news",
-          "aaa-donne-cercasi"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "en",
-        "url": "news/we-are-looking-for-women"
-      },
-      {
-        "locale": "it",
-        "url": "news/aaa-donne-cercasi"
-      }
-    ]
-  },
-  {
-    "id": "7228987",
-    "slugs": {
-      "en": [
-        "news",
-        "oriente-occidente-nella-rete-edn"
-      ],
-      "it": [
-        "news",
-        "oriente-occidente-nella-rete-edn"
-      ]
-    },
-    "isIndex": false,
-    "indexType": "",
-    "__typename": "news",
-    "group": "news-index",
-    "paths": [
-      {
-        "locale": "en",
-        "slugs": [
-          "news",
-          "oriente-occidente-nella-rete-edn"
-        ]
-      },
-      {
-        "locale": "it",
-        "slugs": [
-          "news",
-          "oriente-occidente-nella-rete-edn"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "en",
-        "url": "news/oriente-occidente-nella-rete-edn"
-      },
-      {
-        "locale": "it",
-        "url": "news/oriente-occidente-nella-rete-edn"
-      }
-    ]
-  },
-  {
-    "id": "7228988",
-    "slugs": {
-      "en": [
-        "news",
-        "studio-or-la-casa-della-danza-di-oriente-occidente"
-      ],
-      "it": [
-        "news",
-        "studio-or-la-casa-della-danza-di-oriente-occidente"
-      ]
-    },
-    "isIndex": false,
-    "indexType": "",
-    "__typename": "news",
-    "group": "news-index",
-    "paths": [
-      {
-        "locale": "en",
-        "slugs": [
-          "news",
-          "studio-or-la-casa-della-danza-di-oriente-occidente"
-        ]
-      },
-      {
-        "locale": "it",
-        "slugs": [
-          "news",
-          "studio-or-la-casa-della-danza-di-oriente-occidente"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "en",
-        "url": "news/studio-or-la-casa-della-danza-di-oriente-occidente"
-      },
-      {
-        "locale": "it",
-        "url": "news/studio-or-la-casa-della-danza-di-oriente-occidente"
-      }
-    ]
-  },
-  {
-    "id": "7228989",
-    "slugs": {
-      "en": [
-        "news",
-        "ecco-i-vincitori-del-bando-spring"
-      ],
-      "it": [
-        "news",
-        "ecco-i-vincitori-del-bando-spring"
-      ]
-    },
-    "isIndex": false,
-    "indexType": "",
-    "__typename": "news",
-    "group": "news-index",
-    "paths": [
-      {
-        "locale": "en",
-        "slugs": [
-          "news",
-          "ecco-i-vincitori-del-bando-spring"
-        ]
-      },
-      {
-        "locale": "it",
-        "slugs": [
-          "news",
-          "ecco-i-vincitori-del-bando-spring"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "en",
-        "url": "news/ecco-i-vincitori-del-bando-spring"
-      },
-      {
-        "locale": "it",
-        "url": "news/ecco-i-vincitori-del-bando-spring"
-      }
-    ]
-  },
-  {
-    "id": "7228990",
-    "slugs": {
-      "en": [
-        "news",
-        "sample-news"
-      ],
-      "it": [
-        "news",
-        "servizio-civile"
-      ]
-    },
-    "isIndex": false,
-    "indexType": "",
-    "__typename": "news",
-    "group": "news-index",
-    "paths": [
-      {
-        "locale": "en",
-        "slugs": [
-          "news",
-          "sample-news"
-        ]
-      },
-      {
-        "locale": "it",
-        "slugs": [
-          "news",
-          "servizio-civile"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "en",
-        "url": "news/sample-news"
-      },
-      {
-        "locale": "it",
-        "url": "news/servizio-civile"
-      }
-    ]
-  },
-  {
-    "id": "10258282",
-    "slugs": {
-      "en": [
-        "people",
-        "networks",
-        "english-only-network-sample"
-      ]
-    },
-    "isIndex": false,
-    "indexType": "",
-    "__typename": "network",
-    "group": "networks",
-    "paths": [
-      {
-        "locale": "en",
-        "slugs": [
-          "people",
-          "networks",
-          "english-only-network-sample"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "en",
-        "url": "people/networks/english-only-network-sample"
-      }
-    ]
-  },
-  {
-    "id": "9949265",
+    "id": "33693309",
     "slugs": {
       "it": [
         "people",
         "reti",
-        "pova-rete"
+        "europe-beyond-access"
       ]
     },
     "isIndex": false,
@@ -7900,14 +10547,134 @@
         "slugs": [
           "people",
           "reti",
-          "pova-rete"
+          "europe-beyond-access"
         ]
       }
     ],
     "urls": [
       {
         "locale": "it",
-        "url": "people/reti/pova-rete"
+        "url": "people/reti/europe-beyond-access"
+      }
+    ]
+  },
+  {
+    "id": "33748054",
+    "slugs": {
+      "it": [
+        "people",
+        "reti",
+        "passo-nord"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "network",
+    "group": "networks",
+    "paths": [
+      {
+        "locale": "it",
+        "slugs": [
+          "people",
+          "reti",
+          "passo-nord"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "it",
+        "url": "people/reti/passo-nord"
+      }
+    ]
+  },
+  {
+    "id": "39177132",
+    "slugs": {
+      "it": [
+        "people",
+        "reti",
+        "jump"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "network",
+    "group": "networks",
+    "paths": [
+      {
+        "locale": "it",
+        "slugs": [
+          "people",
+          "reti",
+          "jump"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "it",
+        "url": "people/reti/jump"
+      }
+    ]
+  },
+  {
+    "id": "33659059",
+    "slugs": {
+      "it": [
+        "people",
+        "reti",
+        "network-anticorpi-xl"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "network",
+    "group": "networks",
+    "paths": [
+      {
+        "locale": "it",
+        "slugs": [
+          "people",
+          "reti",
+          "network-anticorpi-xl"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "it",
+        "url": "people/reti/network-anticorpi-xl"
+      }
+    ]
+  },
+  {
+    "id": "9949265",
+    "slugs": {
+      "it": [
+        "people",
+        "reti",
+        "edn"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "network",
+    "group": "networks",
+    "paths": [
+      {
+        "locale": "it",
+        "slugs": [
+          "people",
+          "reti",
+          "edn"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "it",
+        "url": "people/reti/edn"
       }
     ]
   }

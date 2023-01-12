@@ -12,7 +12,7 @@
           "sizes": "16x16",
           "type": "image/png",
           "rel": "icon",
-          "href": "https://www.datocms-assets.com/55129/1639999966-android-chrome-512x512.png?h=16&w=16"
+          "href": "https://www.datocms-assets.com/55129/1639999966-android-chrome-512x512.png?auto=format&h=16&w=16"
         }
       },
       {
@@ -22,7 +22,7 @@
           "sizes": "32x32",
           "type": "image/png",
           "rel": "icon",
-          "href": "https://www.datocms-assets.com/55129/1639999966-android-chrome-512x512.png?h=32&w=32"
+          "href": "https://www.datocms-assets.com/55129/1639999966-android-chrome-512x512.png?auto=format&h=32&w=32"
         }
       },
       {
@@ -32,7 +32,7 @@
           "sizes": "96x96",
           "type": "image/png",
           "rel": "icon",
-          "href": "https://www.datocms-assets.com/55129/1639999966-android-chrome-512x512.png?h=96&w=96"
+          "href": "https://www.datocms-assets.com/55129/1639999966-android-chrome-512x512.png?auto=format&h=96&w=96"
         }
       },
       {
@@ -42,7 +42,7 @@
           "sizes": "192x192",
           "type": "image/png",
           "rel": "icon",
-          "href": "https://www.datocms-assets.com/55129/1639999966-android-chrome-512x512.png?h=192&w=192"
+          "href": "https://www.datocms-assets.com/55129/1639999966-android-chrome-512x512.png?auto=format&h=192&w=192"
         }
       }
     ]
@@ -185,19 +185,11 @@
       "id": "7228509",
       "titles": [
         {
-          "locale": "en",
-          "title": "Support Us"
-        },
-        {
           "locale": "it",
           "title": "Sostienici"
         }
       ],
       "slugs": [
-        {
-          "locale": "en",
-          "slug": "support-us"
-        },
         {
           "locale": "it",
           "slug": "sostienici"
@@ -214,7 +206,7 @@
     }
   ],
   "footer": {
-    "info": "<p>Corso Rosmini 58 <a title=\"Link to call +39 0464 431660\" class=\"block\" href=\"tel:+390464431660\">tel +39 0464 431660</a> <a title=\"Link to send email to festival@orienteoccidente.it\" class=\"block\" href=\"mailto:festival@orienteoccidente.it\">info@orienteoccidente.it</a> p.iva 00993860220</p>",
+    "info": "<p>Oriente Occidente Impresa Sociale - Ets <br />Corso Rosmini 58 <a title=\"Link to call +39 0464 431660\" class=\"block\" href=\"tel:+390464431660\">tel +39 0464 431660</a> <a title=\"Link to send email to festival@orienteoccidente.it\" class=\"block\" href=\"mailto:festival@orienteoccidente.it\">info@orienteoccidente.it</a> p.iva 00993860220</p>",
     "logo": {
       "responsiveImage": {
         "src": "https://www.datocms-assets.com/55129/1639999903-oomarchiosinistra.jpeg?auto=format&max-w=600"
@@ -325,39 +317,17 @@
             "slugs": [
               {
                 "locale": "en",
-                "value": "artistic-residencies"
-              },
-              {
-                "locale": "it",
-                "value": "residenze-artistiche"
-              }
-            ],
-            "titles": [
-              {
-                "locale": "en",
-                "value": "Artistic Residencies"
-              },
-              {
-                "locale": "it",
-                "value": "Residenze artistiche"
-              }
-            ]
-          },
-          {
-            "slugs": [
-              {
-                "locale": "en",
-                "value": "workshops"
-              },
-              {
-                "locale": "it",
                 "value": "workshop"
+              },
+              {
+                "locale": "it",
+                "value": "formazione"
               }
             ],
             "titles": [
               {
                 "locale": "en",
-                "value": "Workshops"
+                "value": "Workshop"
               },
               {
                 "locale": "it",
