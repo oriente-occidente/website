@@ -20,7 +20,7 @@ export default function Footer({ locale, data, hideNewsletter = false }) {
               <div className="space-y-4 xl:grid xl:grid-cols-2 xl:gap-4 xl:space-y-0">
                 <div>
                   <Image
-                    src="/logo.svg"
+                    src="/new-logo.svg"
                     alt="Oriente Occidente"
                     objectFit="contain"
                     objectPosition="left"

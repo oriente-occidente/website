@@ -21,7 +21,7 @@ export default function Footer({ locale, data, hideNewsletter = false }) {
                 <div>
                   <img
                     className="h-[50px] w-[170px]"
-                    src="/logo.svg"
+                    src="/new-logo.svg"
                     alt="Oriente Occidente"
                   />
                 </div>

@@ -830,7 +830,7 @@
     "slugs": {
       "it": [
         "studio",
-        "accademy"
+        "academy"
       ],
       "en": [
         "studio"
@@ -842,7 +842,7 @@
         "locale": "it",
         "slugs": [
           "studio",
-          "accademy"
+          "academy"
         ]
       },
       {
@@ -855,7 +855,7 @@
     "urls": [
       {
         "locale": "it",
-        "url": "studio/accademy"
+        "url": "studio/academy"
       },
       {
         "locale": "en",

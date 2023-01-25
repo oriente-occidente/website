@@ -74,7 +74,7 @@
   {
     "routes": [
       "studio",
-      "accademy"
+      "academy"
     ],
     "link": {
       "__typename": "PageRecord",
