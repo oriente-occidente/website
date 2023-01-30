@@ -36,8 +36,8 @@ module.exports = {
         "4xl": ["140px", "150px"],
       },
       fontFamily: {
-        serif: ["Poppins", "sans-serif"],
-        sans: ["Poppins", "sans-serif"],
+        serif: ["Work Sans", "sans-serif"],
+        sans: ["Work Sans", "sans-serif"],
       },
       height: {
         "50vh": "50vh",
