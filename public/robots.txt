@@ -3,8 +3,8 @@ User-agent: *
 Allow: /
 
 # Host
-Host: https://orienteoccidente.it
+Host: https://www.orienteoccidente.it/
 
 # Sitemaps
-Sitemap: https://orienteoccidente.it/sitemap.xml
-Sitemap: https://orienteoccidente.it/sitemap-0.xml
+Sitemap: https://www.orienteoccidente.it/sitemap.xml
+Sitemap: https://www.orienteoccidente.it/sitemap-0.xml

@@ -39,7 +39,7 @@ html {
 html,
 body {
   color: var(--text-primary);
-  font-family: "Work Sans";
+  /* font-family: "Work Sans"; */
 }
 
 a {
