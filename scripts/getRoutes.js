@@ -312,7 +312,10 @@ const generateRoutes = async () => {
 
   const testPaths = await getPaths(list);
   const urls = testPaths
-    .map((p) => `${p.locale}/${p.params.slugs.join('/')}`)
+    .map(
+      (p) =>
+        `${p.locale != 'it' ? '/' + p.locale : ''}/${p.params.slugs.join('/')}`
+    )
     .sort();
   fs.writeFileSync('data/urls.json', JSON.stringify(urls, null, 2), 'utf8');
 };
