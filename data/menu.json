@@ -74,27 +74,7 @@
   {
     "routes": [
       "studio",
-      "academy"
-    ],
-    "link": {
-      "__typename": "PageRecord",
-      "id": "92850033",
-      "slug": "accademy",
-      "slugs": [
-        {
-          "locale": "it",
-          "slug": "accademy"
-        }
-      ],
-      "indexType": "",
-      "isIndex": false
-    },
-    "lang": "it"
-  },
-  {
-    "routes": [
-      "studio",
-      "workshop"
+      "formazione"
     ],
     "link": {
       "__typename": "PageRecord",
@@ -557,25 +537,6 @@
         {
           "locale": "it",
           "slug": "gli-spazi"
-        }
-      ],
-      "indexType": "",
-      "isIndex": false
-    },
-    "lang": "en"
-  },
-  {
-    "routes": [
-      "studio"
-    ],
-    "link": {
-      "__typename": "PageRecord",
-      "id": "92850033",
-      "slug": "accademy",
-      "slugs": [
-        {
-          "locale": "it",
-          "slug": "accademy"
         }
       ],
       "indexType": "",

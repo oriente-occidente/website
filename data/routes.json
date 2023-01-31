@@ -338,7 +338,7 @@
     "slugs": {
       "it": [
         "studio",
-        "workshop"
+        "formazione"
       ],
       "en": [
         "studio",
@@ -351,7 +351,7 @@
         "locale": "it",
         "slugs": [
           "studio",
-          "workshop"
+          "formazione"
         ]
       },
       {
@@ -365,7 +365,7 @@
     "urls": [
       {
         "locale": "it",
-        "url": "studio/workshop"
+        "url": "studio/formazione"
       },
       {
         "locale": "en",
@@ -816,46 +816,6 @@
       {
         "locale": "it",
         "url": "studio/gli-spazi"
-      },
-      {
-        "locale": "en",
-        "url": "studio"
-      }
-    ]
-  },
-  {
-    "id": "92850033",
-    "isIndex": false,
-    "indexType": "",
-    "slugs": {
-      "it": [
-        "studio",
-        "academy"
-      ],
-      "en": [
-        "studio"
-      ]
-    },
-    "__typename": "page",
-    "paths": [
-      {
-        "locale": "it",
-        "slugs": [
-          "studio",
-          "academy"
-        ]
-      },
-      {
-        "locale": "en",
-        "slugs": [
-          "studio"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "it",
-        "url": "studio/academy"
       },
       {
         "locale": "en",
@@ -5279,6 +5239,143 @@
     ]
   },
   {
+    "id": "64007149",
+    "slugs": {
+      "it": [
+        "people",
+        "eventi",
+        "decisione-consapevole"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "event",
+    "group": "other-events",
+    "paths": [
+      {
+        "locale": "it",
+        "slugs": [
+          "people",
+          "eventi",
+          "decisione-consapevole"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "it",
+        "url": "people/eventi/decisione-consapevole"
+      }
+    ]
+  },
+  {
+    "id": "55516384",
+    "slugs": {
+      "en": [
+        "people",
+        "events",
+        "the-colors-of-my-life"
+      ],
+      "it": [
+        "people",
+        "eventi",
+        "the-colors-of-my-life"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "event",
+    "group": "other-events",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "people",
+          "events",
+          "the-colors-of-my-life"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "people",
+          "eventi",
+          "the-colors-of-my-life"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "people/events/the-colors-of-my-life"
+      },
+      {
+        "locale": "it",
+        "url": "people/eventi/the-colors-of-my-life"
+      }
+    ]
+  },
+  {
+    "id": "64007093",
+    "slugs": {
+      "it": [
+        "people",
+        "eventi",
+        "i-am-a-problem"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "event",
+    "group": "other-events",
+    "paths": [
+      {
+        "locale": "it",
+        "slugs": [
+          "people",
+          "eventi",
+          "i-am-a-problem"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "it",
+        "url": "people/eventi/i-am-a-problem"
+      }
+    ]
+  },
+  {
+    "id": "64007185",
+    "slugs": {
+      "it": [
+        "people",
+        "eventi",
+        "s"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "event",
+    "group": "other-events",
+    "paths": [
+      {
+        "locale": "it",
+        "slugs": [
+          "people",
+          "eventi",
+          "s"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "it",
+        "url": "people/eventi/s"
+      }
+    ]
+  },
+  {
     "id": "7228903",
     "slugs": {
       "en": [
@@ -5352,53 +5449,6 @@
       {
         "locale": "it",
         "url": "people/eventi/alla-ricerca-delle-origini"
-      }
-    ]
-  },
-  {
-    "id": "55516384",
-    "slugs": {
-      "en": [
-        "people",
-        "events",
-        "the-colors-of-my-life"
-      ],
-      "it": [
-        "people",
-        "eventi",
-        "the-colors-of-my-life"
-      ]
-    },
-    "isIndex": false,
-    "indexType": "",
-    "__typename": "event",
-    "group": "other-events",
-    "paths": [
-      {
-        "locale": "en",
-        "slugs": [
-          "people",
-          "events",
-          "the-colors-of-my-life"
-        ]
-      },
-      {
-        "locale": "it",
-        "slugs": [
-          "people",
-          "eventi",
-          "the-colors-of-my-life"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "en",
-        "url": "people/events/the-colors-of-my-life"
-      },
-      {
-        "locale": "it",
-        "url": "people/eventi/the-colors-of-my-life"
       }
     ]
   },
@@ -5865,7 +5915,7 @@
       ],
       "it": [
         "studio",
-        "workshop",
+        "formazione",
         "workshop-diversita-in-scena"
       ]
     },
@@ -5886,7 +5936,7 @@
         "locale": "it",
         "slugs": [
           "studio",
-          "workshop",
+          "formazione",
           "workshop-diversita-in-scena"
         ]
       }
@@ -5898,7 +5948,7 @@
       },
       {
         "locale": "it",
-        "url": "studio/workshop/workshop-diversita-in-scena"
+        "url": "studio/formazione/workshop-diversita-in-scena"
       }
     ]
   },
@@ -5912,7 +5962,7 @@
       ],
       "it": [
         "studio",
-        "workshop",
+        "formazione",
         "workshop-sul-tarantismo-canzoniere-gracanico-salentino"
       ]
     },
@@ -5933,7 +5983,7 @@
         "locale": "it",
         "slugs": [
           "studio",
-          "workshop",
+          "formazione",
           "workshop-sul-tarantismo-canzoniere-gracanico-salentino"
         ]
       }
@@ -5945,7 +5995,7 @@
       },
       {
         "locale": "it",
-        "url": "studio/workshop/workshop-sul-tarantismo-canzoniere-gracanico-salentino"
+        "url": "studio/formazione/workshop-sul-tarantismo-canzoniere-gracanico-salentino"
       }
     ]
   },
@@ -5959,7 +6009,7 @@
       ],
       "it": [
         "studio",
-        "workshop",
+        "formazione",
         "lim-workshop"
       ]
     },
@@ -5980,7 +6030,7 @@
         "locale": "it",
         "slugs": [
           "studio",
-          "workshop",
+          "formazione",
           "lim-workshop"
         ]
       }
@@ -5992,7 +6042,7 @@
       },
       {
         "locale": "it",
-        "url": "studio/workshop/lim-workshop"
+        "url": "studio/formazione/lim-workshop"
       }
     ]
   },
@@ -6006,7 +6056,7 @@
       ],
       "it": [
         "studio",
-        "workshop",
+        "formazione",
         "le-phare-workshop-cie-massala"
       ]
     },
@@ -6027,7 +6077,7 @@
         "locale": "it",
         "slugs": [
           "studio",
-          "workshop",
+          "formazione",
           "le-phare-workshop-cie-massala"
         ]
       }
@@ -6039,7 +6089,7 @@
       },
       {
         "locale": "it",
-        "url": "studio/workshop/le-phare-workshop-cie-massala"
+        "url": "studio/formazione/le-phare-workshop-cie-massala"
       }
     ]
   },
@@ -6053,7 +6103,7 @@
       ],
       "it": [
         "studio",
-        "workshop",
+        "formazione",
         "re-start-laboratorio-di-teatro-fisico"
       ]
     },
@@ -6074,7 +6124,7 @@
         "locale": "it",
         "slugs": [
           "studio",
-          "workshop",
+          "formazione",
           "re-start-laboratorio-di-teatro-fisico"
         ]
       }
@@ -6086,7 +6136,7 @@
       },
       {
         "locale": "it",
-        "url": "studio/workshop/re-start-laboratorio-di-teatro-fisico"
+        "url": "studio/formazione/re-start-laboratorio-di-teatro-fisico"
       }
     ]
   },
@@ -6100,7 +6150,7 @@
       ],
       "it": [
         "studio",
-        "workshop",
+        "formazione",
         "artylogica-workshop-vittoria-de-ferrari-sapetto"
       ]
     },
@@ -6121,7 +6171,7 @@
         "locale": "it",
         "slugs": [
           "studio",
-          "workshop",
+          "formazione",
           "artylogica-workshop-vittoria-de-ferrari-sapetto"
         ]
       }
@@ -6133,7 +6183,7 @@
       },
       {
         "locale": "it",
-        "url": "studio/workshop/artylogica-workshop-vittoria-de-ferrari-sapetto"
+        "url": "studio/formazione/artylogica-workshop-vittoria-de-ferrari-sapetto"
       }
     ]
   },
@@ -6147,7 +6197,7 @@
       ],
       "it": [
         "studio",
-        "workshop",
+        "formazione",
         "workshop-di-danza-contemporanea-philippe-kratz"
       ]
     },
@@ -6168,7 +6218,7 @@
         "locale": "it",
         "slugs": [
           "studio",
-          "workshop",
+          "formazione",
           "workshop-di-danza-contemporanea-philippe-kratz"
         ]
       }
@@ -6180,7 +6230,7 @@
       },
       {
         "locale": "it",
-        "url": "studio/workshop/workshop-di-danza-contemporanea-philippe-kratz"
+        "url": "studio/formazione/workshop-di-danza-contemporanea-philippe-kratz"
       }
     ]
   },
@@ -6194,7 +6244,7 @@
       ],
       "it": [
         "studio",
-        "workshop",
+        "formazione",
         "workshop-con-sorimi-amada"
       ]
     },
@@ -6215,7 +6265,7 @@
         "locale": "it",
         "slugs": [
           "studio",
-          "workshop",
+          "formazione",
           "workshop-con-sorimi-amada"
         ]
       }
@@ -6227,7 +6277,7 @@
       },
       {
         "locale": "it",
-        "url": "studio/workshop/workshop-con-sorimi-amada"
+        "url": "studio/formazione/workshop-con-sorimi-amada"
       }
     ]
   },
@@ -6241,7 +6291,7 @@
       ],
       "it": [
         "studio",
-        "workshop",
+        "formazione",
         "workshop-di-danza-contemporanea"
       ]
     },
@@ -6262,7 +6312,7 @@
         "locale": "it",
         "slugs": [
           "studio",
-          "workshop",
+          "formazione",
           "workshop-di-danza-contemporanea"
         ]
       }
@@ -6274,7 +6324,7 @@
       },
       {
         "locale": "it",
-        "url": "studio/workshop/workshop-di-danza-contemporanea"
+        "url": "studio/formazione/workshop-di-danza-contemporanea"
       }
     ]
   },
@@ -6288,7 +6338,7 @@
       ],
       "it": [
         "studio",
-        "workshop",
+        "formazione",
         "bus-stop"
       ]
     },
@@ -6309,7 +6359,7 @@
         "locale": "it",
         "slugs": [
           "studio",
-          "workshop",
+          "formazione",
           "bus-stop"
         ]
       }
@@ -6321,7 +6371,7 @@
       },
       {
         "locale": "it",
-        "url": "studio/workshop/bus-stop"
+        "url": "studio/formazione/bus-stop"
       }
     ]
   },
@@ -6335,7 +6385,7 @@
       ],
       "it": [
         "studio",
-        "workshop",
+        "formazione",
         "train-the-trainers-train-the-artists"
       ]
     },
@@ -6356,7 +6406,7 @@
         "locale": "it",
         "slugs": [
           "studio",
-          "workshop",
+          "formazione",
           "train-the-trainers-train-the-artists"
         ]
       }
@@ -6368,7 +6418,7 @@
       },
       {
         "locale": "it",
-        "url": "studio/workshop/train-the-trainers-train-the-artists"
+        "url": "studio/formazione/train-the-trainers-train-the-artists"
       }
     ]
   },
@@ -6382,7 +6432,7 @@
       ],
       "it": [
         "studio",
-        "workshop",
+        "formazione",
         "oltre-il-confine-workshop-intensivo-di-teatro-danza"
       ]
     },
@@ -6403,7 +6453,7 @@
         "locale": "it",
         "slugs": [
           "studio",
-          "workshop",
+          "formazione",
           "oltre-il-confine-workshop-intensivo-di-teatro-danza"
         ]
       }
@@ -6415,7 +6465,7 @@
       },
       {
         "locale": "it",
-        "url": "studio/workshop/oltre-il-confine-workshop-intensivo-di-teatro-danza"
+        "url": "studio/formazione/oltre-il-confine-workshop-intensivo-di-teatro-danza"
       }
     ]
   },
@@ -6429,7 +6479,7 @@
       ],
       "it": [
         "studio",
-        "workshop",
+        "formazione",
         "la-veronal-working-tools"
       ]
     },
@@ -6450,7 +6500,7 @@
         "locale": "it",
         "slugs": [
           "studio",
-          "workshop",
+          "formazione",
           "la-veronal-working-tools"
         ]
       }
@@ -6462,7 +6512,7 @@
       },
       {
         "locale": "it",
-        "url": "studio/workshop/la-veronal-working-tools"
+        "url": "studio/formazione/la-veronal-working-tools"
       }
     ]
   },
@@ -6476,7 +6526,7 @@
       ],
       "it": [
         "studio",
-        "workshop",
+        "formazione",
         "masterclass-sidi-larbi-cherkaoui-repertory-fractus-v"
       ]
     },
@@ -6497,7 +6547,7 @@
         "locale": "it",
         "slugs": [
           "studio",
-          "workshop",
+          "formazione",
           "masterclass-sidi-larbi-cherkaoui-repertory-fractus-v"
         ]
       }
@@ -6509,7 +6559,7 @@
       },
       {
         "locale": "it",
-        "url": "studio/workshop/masterclass-sidi-larbi-cherkaoui-repertory-fractus-v"
+        "url": "studio/formazione/masterclass-sidi-larbi-cherkaoui-repertory-fractus-v"
       }
     ]
   },
@@ -6523,7 +6573,7 @@
       ],
       "it": [
         "studio",
-        "workshop",
+        "formazione",
         "laboratorio-di-ricerca-corporea"
       ]
     },
@@ -6544,7 +6594,7 @@
         "locale": "it",
         "slugs": [
           "studio",
-          "workshop",
+          "formazione",
           "laboratorio-di-ricerca-corporea"
         ]
       }
@@ -6556,7 +6606,7 @@
       },
       {
         "locale": "it",
-        "url": "studio/workshop/laboratorio-di-ricerca-corporea"
+        "url": "studio/formazione/laboratorio-di-ricerca-corporea"
       }
     ]
   },
@@ -6570,7 +6620,7 @@
       ],
       "it": [
         "studio",
-        "workshop",
+        "formazione",
         "lab-impart-ripensare-il-palcoscenico"
       ]
     },
@@ -6591,7 +6641,7 @@
         "locale": "it",
         "slugs": [
           "studio",
-          "workshop",
+          "formazione",
           "lab-impart-ripensare-il-palcoscenico"
         ]
       }
@@ -6603,7 +6653,7 @@
       },
       {
         "locale": "it",
-        "url": "studio/workshop/lab-impart-ripensare-il-palcoscenico"
+        "url": "studio/formazione/lab-impart-ripensare-il-palcoscenico"
       }
     ]
   },
@@ -6617,7 +6667,7 @@
       ],
       "it": [
         "studio",
-        "workshop",
+        "formazione",
         "tools-for-action-workshop"
       ]
     },
@@ -6638,7 +6688,7 @@
         "locale": "it",
         "slugs": [
           "studio",
-          "workshop",
+          "formazione",
           "tools-for-action-workshop"
         ]
       }
@@ -6650,7 +6700,7 @@
       },
       {
         "locale": "it",
-        "url": "studio/workshop/tools-for-action-workshop"
+        "url": "studio/formazione/tools-for-action-workshop"
       }
     ]
   },
@@ -6664,7 +6714,7 @@
       ],
       "it": [
         "studio",
-        "workshop",
+        "formazione",
         "cunningham-technique-r-workshop"
       ]
     },
@@ -6685,7 +6735,7 @@
         "locale": "it",
         "slugs": [
           "studio",
-          "workshop",
+          "formazione",
           "cunningham-technique-r-workshop"
         ]
       }
@@ -6697,7 +6747,7 @@
       },
       {
         "locale": "it",
-        "url": "studio/workshop/cunningham-technique-r-workshop"
+        "url": "studio/formazione/cunningham-technique-r-workshop"
       }
     ]
   },
@@ -8046,6 +8096,53 @@
     ]
   },
   {
+    "id": "63991719",
+    "slugs": {
+      "en": [
+        "studio",
+        "artistic-residences",
+        "simone-donati"
+      ],
+      "it": [
+        "studio",
+        "residenze-artistiche",
+        "simone-donati"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "artist",
+    "group": "artistic-residences",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "studio",
+          "artistic-residences",
+          "simone-donati"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "studio",
+          "residenze-artistiche",
+          "simone-donati"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "studio/artistic-residences/simone-donati"
+      },
+      {
+        "locale": "it",
+        "url": "studio/residenze-artistiche/simone-donati"
+      }
+    ]
+  },
+  {
     "id": "56107265",
     "slugs": {
       "en": [
@@ -9390,11 +9487,11 @@
     ]
   },
   {
-    "id": "63816555",
+    "id": "64010549",
     "slugs": {
       "it": [
         "news",
-        "residenze-artistiche-2023-ecco-i-selezionati"
+        "the-international-dance-village"
       ]
     },
     "isIndex": false,
@@ -9406,14 +9503,14 @@
         "locale": "it",
         "slugs": [
           "news",
-          "residenze-artistiche-2023-ecco-i-selezionati"
+          "the-international-dance-village"
         ]
       }
     ],
     "urls": [
       {
         "locale": "it",
-        "url": "news/residenze-artistiche-2023-ecco-i-selezionati"
+        "url": "news/the-international-dance-village"
       }
     ]
   },
@@ -9442,6 +9539,34 @@
       {
         "locale": "it",
         "url": "news/studio-la-seconda-stagione"
+      }
+    ]
+  },
+  {
+    "id": "63816555",
+    "slugs": {
+      "it": [
+        "news",
+        "residenze-artistiche-2023-ecco-i-selezionati"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "news",
+    "group": "news-index",
+    "paths": [
+      {
+        "locale": "it",
+        "slugs": [
+          "news",
+          "residenze-artistiche-2023-ecco-i-selezionati"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "it",
+        "url": "news/residenze-artistiche-2023-ecco-i-selezionati"
       }
     ]
   },
@@ -9526,34 +9651,6 @@
       {
         "locale": "it",
         "url": "news/how-can-we-move"
-      }
-    ]
-  },
-  {
-    "id": "56558843",
-    "slugs": {
-      "it": [
-        "news",
-        "progetto-coreografico-s"
-      ]
-    },
-    "isIndex": false,
-    "indexType": "",
-    "__typename": "news",
-    "group": "news-index",
-    "paths": [
-      {
-        "locale": "it",
-        "slugs": [
-          "news",
-          "progetto-coreografico-s"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "it",
-        "url": "news/progetto-coreografico-s"
       }
     ]
   },
@@ -10411,34 +10508,6 @@
       {
         "locale": "it",
         "url": "news/hasta-donde"
-      }
-    ]
-  },
-  {
-    "id": "25103631",
-    "slugs": {
-      "it": [
-        "news",
-        "decisione-consapevole"
-      ]
-    },
-    "isIndex": false,
-    "indexType": "",
-    "__typename": "news",
-    "group": "news-index",
-    "paths": [
-      {
-        "locale": "it",
-        "slugs": [
-          "news",
-          "decisione-consapevole"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "it",
-        "url": "news/decisione-consapevole"
       }
     ]
   },

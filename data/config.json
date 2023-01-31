@@ -209,7 +209,7 @@
     "info": "<p>Oriente Occidente Impresa Sociale - Ets <br />Corso Rosmini 58 <a title=\"Link to call +39 0464 431660\" class=\"block\" href=\"tel:+390464431660\">tel +39 0464 431660</a> <a title=\"Link to send email to festival@orienteoccidente.it\" class=\"block\" href=\"mailto:festival@orienteoccidente.it\">info@orienteoccidente.it</a> p.iva 00993860220</p>",
     "logo": {
       "responsiveImage": {
-        "src": "https://www.datocms-assets.com/55129/1639999903-oomarchiosinistra.jpeg?auto=format&max-w=600"
+        "src": "https://www.datocms-assets.com/55129/1674656667-01-colore-payoff.png?auto=format&max-w=600"
       }
     },
     "socials": [
@@ -310,28 +310,6 @@
               {
                 "locale": "it",
                 "value": "Artisti Associati"
-              }
-            ]
-          },
-          {
-            "slugs": [
-              {
-                "locale": "en",
-                "value": "workshop"
-              },
-              {
-                "locale": "it",
-                "value": "formazione"
-              }
-            ],
-            "titles": [
-              {
-                "locale": "en",
-                "value": "Workshop"
-              },
-              {
-                "locale": "it",
-                "value": "Formazione"
               }
             ]
           }

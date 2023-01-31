@@ -63,6 +63,7 @@ function Home({ data, locale, home }) {
 
 export async function getStaticProps({ preview = false, locale }) {
   const response = await fetchData(queries.getHomepage, { locale }, preview);
+  console.log(response);
   const data = await fetchData(queries.site, { locale }, preview);
   return {
     props: {

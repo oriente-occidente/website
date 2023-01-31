@@ -224,12 +224,12 @@ function Page({ data, locale, thankyouMessage }) {
   );
 }
 
-export async function getStaticProps({ params, locale }) {
+export async function getStaticProps({ params, locale, preview = true }) {
   const data = await doQueryById(locale);
-  const ty = await fetchData(q.extra_content, { locale });
+  const ty = await fetchData(q.extra_content, { locale }, preview);
   const thankyouMessage = ty.extraContent;
   return {
-    props: { data, locale, thankyouMessage },
+    props: { data, locale, thankyouMessage, preview },
   };
 }
 export default Page;

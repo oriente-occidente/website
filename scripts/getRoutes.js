@@ -153,6 +153,18 @@ const getRecords = async (
   return records;
 };
 
+const getPaths = (routes) => {
+  const paths = routes.reduce((all, r) => {
+    const routePaths = r.paths.map((p) => {
+      const { slugs, locale } = p;
+      return { params: { slugs }, locale };
+    });
+    return [...all, ...routePaths];
+  }, []);
+  console.log('paths', paths);
+  return paths;
+};
+
 const generateRoutes = async () => {
   const locales = (await getLocales()).site.locales;
   // console.log('locales', locales);
@@ -297,6 +309,12 @@ const generateRoutes = async () => {
   );
   console.log('routes len', list.length);
   fs.writeFileSync('data/routes.json', JSON.stringify(list, null, 2), 'utf8');
+
+  const testPaths = await getPaths(list);
+  const urls = testPaths
+    .map((p) => `${p.locale}/${p.params.slugs.join('/')}`)
+    .sort();
+  fs.writeFileSync('data/urls.json', JSON.stringify(urls, null, 2), 'utf8');
 };
 
 // (async () => {
