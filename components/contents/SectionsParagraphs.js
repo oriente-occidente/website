@@ -7,21 +7,25 @@ export default function SectionsParagraphs({ sections, locale, layout = "" }) {
     <div className="md:container md:mx-auto md:grid md:grid-cols-4 md:gap-4">
       <div className="hidden px-4 md:block">
         <div
-          className={`${layout == "no-space" ? "top-6" : "top-20"} sticky py-2`}
+          className={`${layout == "no-space" ? "top-6" : "top-24"} sticky py-2`}
         >
           {sections.map((section) => (
-            <div key={section.id}>
-              <Link href={`#${section.id}`}>
-                <a
-                  className={`${layout == "no-space" ? "" : "-top-20"}`}
-                  title={`Link to ${section.title}`}
-                >
-                  <h2 className="text-xxs hover:text-red mb-1 uppercase tracking-wider">
-                    {section.title}
-                  </h2>
-                </a>
-              </Link>
-            </div>
+            <>
+              {section.title &&
+                <div key={section.id}>
+                  <Link href={`#${section.id}`}>
+                    <a
+                      className={`${layout == "no-space" ? "" : "-top-20"}`}
+                      title={`Link to ${section.title}`}
+                    >
+                      <h2 className="text-xxs hover:text-red mb-1 uppercase tracking-wider">
+                        {section.title}
+                      </h2>
+                    </a>
+                  </Link>
+                </div>
+              }
+            </>
           ))}
         </div>
       </div>

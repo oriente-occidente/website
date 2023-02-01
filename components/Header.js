@@ -81,7 +81,7 @@ function renderMobile(data, locale, alts, handleClose) {
                   <a title="homepage">
                     <img
                       className="h-10 w-auto sm:h-12 lg:h-16"
-                      src="/logo.svg"
+                      src="/new-logo.svg"
                       alt="Oriente Occidente"
                     />
                   </a>
@@ -206,7 +206,7 @@ function Header(props) {
                     <span className="sr-only">Oriente Occidente</span>
                     <img
                       className="h-10 w-auto object-contain sm:h-12 lg:h-16"
-                      src="/logo.svg"
+                      src="/new-logo.svg"
                       alt="Oriente Occidente"
                     />
                   </a>

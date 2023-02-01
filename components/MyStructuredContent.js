@@ -1,31 +1,38 @@
-import { StructuredText, renderRule } from "react-datocms";
+import { StructuredText, renderRule } from 'react-datocms';
 import {
   isBlockquote,
   isHeading,
   isParagraph,
-} from "datocms-structured-text-utils";
-import { Image } from "react-datocms";
-import Link from "next/link";
+} from 'datocms-structured-text-utils';
+import { Image } from 'react-datocms';
+import Link from 'next/link';
 
-import BlockQuote from "components/BlockQuote";
-import GalleryStandard from "components/galleries/GalleryStandard";
-import VideoPlayer from "components/video/VideoPlayer";
-import VideoEmbedded from "components/video/VideoEmbedded";
-import Partners from "components/Partners";
+import BlockQuote from 'components/BlockQuote';
+import GalleryStandard from 'components/galleries/GalleryStandard';
+import VideoPlayer from 'components/video/VideoPlayer';
+import VideoEmbedded from 'components/video/VideoEmbedded';
+import Partners from 'components/Partners';
 
-import { resolveLinkById } from "lib/utils";
+import { resolveLinkById } from 'lib/utils';
 
 const StructuredContent = ({ locale, content }) => {
   const renderBlock = (record) => {
     // console.log('block', record.__typename);
     switch (record.__typename) {
-      case "GalleryRecord":
+      case 'WorkshopGalleryBlockRecord':
+        return (
+          <div className="py-2 lg:py-10 2xl:py-16" key={record.id}>
+            <h1>CATEGORIE DI WORKSHOP</h1>
+          </div>
+        );
+
+      case 'GalleryRecord':
         return (
           <div className="py-2 lg:py-10 2xl:py-16" key={record.id}>
             <GalleryStandard slides={record.images} />
           </div>
         );
-      case "ImageBlockRecord": {
+      case 'ImageBlockRecord': {
         if (!record?.image?.responsiveImage) {
           return null;
         }
@@ -38,16 +45,16 @@ const StructuredContent = ({ locale, content }) => {
                 alt={record?.image?.alt}
                 title={record?.image?.title}
               />
-              {record.image.responsiveImage.title &&
+              {record.image.responsiveImage.title && (
                 <div className="absolute bottom-0 left-0 right-0 z-1 mt-2 mb-2 max-w-[800px] px-4 pt-3 pb-2 text-xxs text-white lg:-mt-10 lg:mb-10 2xl:-mt-16 2xl:mb-16 bg-gradient-to-t from-black/80 text-shadow">
                   {record.image.responsiveImage.title}
                 </div>
-              }
+              )}
             </div>
           </div>
         );
       }
-      case "VideoBlockRecord":
+      case 'VideoBlockRecord':
         return (
           <div key={record.id}>
             <div className="py-2 lg:py-10 2xl:py-16">
@@ -60,10 +67,8 @@ const StructuredContent = ({ locale, content }) => {
             </div>
           </div>
         );
-      case "PartnerRecord":
-        return (
-          <Partners data={record} />
-        );
+      case 'PartnerRecord':
+        return <Partners data={record} />;
       default:
         return null;
     }

@@ -1,8 +1,8 @@
-import { Image as DatoImage } from "react-datocms";
-import Link from "next/link";
-import { LocationMarkerIcon, CalendarIcon } from "@heroicons/react/outline";
+import { Image as DatoImage } from 'react-datocms';
+import Link from 'next/link';
+import { LocationMarkerIcon, CalendarIcon } from '@heroicons/react/outline';
 
-import { resolveLinkById, groupDatesByDay } from "lib/utils";
+import { resolveLinkById, groupDatesByDay } from 'lib/utils';
 
 function StandardCard({ data, locale, categoryTitle }) {
   const image = data.imageHero;
@@ -66,7 +66,7 @@ function StandardCard({ data, locale, categoryTitle }) {
           {datesGrouped.map((d) => (
             <div
               className="flex items-center gap-1 md:hidden"
-              key={"descr_" + d}
+              key={'descr_' + d}
             >
               <CalendarIcon
                 aria-hidden="true"

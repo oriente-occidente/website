@@ -1,5 +1,6 @@
 import dynamic from 'next/dynamic';
-import { useRouter } from 'next/router';
+// import { useRouter } from 'next/router';
+import { useEffect } from 'react';
 
 import { doQuery, getPaths } from 'lib/api';
 import Layout from 'components/Layout';
@@ -20,10 +21,16 @@ import SectionsParagraphs from 'components/contents/SectionsParagraphs';
 import OtherSections from 'components/contents/OtherSections';
 
 // import ShareButtons from 'components/ShareButtons';
-
 function Page({ data, locale }) {
-  const router = useRouter();
+  // const router = useRouter();
   const { pageInfo, site, menu, footer, ...rest } = data;
+  // useEffect(() => {
+  //   if ((router && !pageInfo) || !pageInfo.__typename) {
+  //     console.log('NO PAYLOAD');
+  //     router.push('/404'); //REDIRECT TO 404}
+  //   }
+  // }, [pageInfo, router]);
+
   const pluk = (data) => {
     const { festivalEvents, otherEvents, courses, workshops } = data;
     return { festivalEvents, otherEvents, courses, workshops };
@@ -32,9 +39,9 @@ function Page({ data, locale }) {
   const payload = rest[pageType];
 
   if (!payload) {
-    console.log('NO PAYLOAD', pageInfo, rest);
-    router.push('/404'); //REDIRECT TO 404}
+    return <div>404</div>;
   }
+
   const isPage = pageType === 'page';
   const isIndex = isPage && payload.isIndex;
   const indexType = isIndex && payload.indexType;
@@ -164,7 +171,14 @@ export async function getStaticPaths() {
 export async function getStaticProps({ params, locale, preview = false }) {
   // const routes = queryRoutesByParams(params, locale, preview);
   const data = await doQuery(locale, params, preview);
-  // console.log('DATA', JSON.stringify(result.data, null, 2));
+  // console.log('DATA', JSON.stringify(data, null, 2));
+  if (!data?.pageInfo?.__typename) {
+    console.log('ERROR no PageInfo', data?.pageInfo);
+    return {
+      redirect: { destination: '/404', permanent: false },
+    };
+  }
+
   return {
     props: { data, locale, params },
   };

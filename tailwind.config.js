@@ -23,6 +23,8 @@ module.exports = {
         },
       },
       fontSize: {
+        "4xs": ["11px", "20px"],
+        "3xs": ["12px", "22px"],
         xxs: ["14px", "24px"],
         xs: ["16px", "26px"],
         sm: ["18px", "28px"],
@@ -34,8 +36,8 @@ module.exports = {
         "4xl": ["140px", "150px"],
       },
       fontFamily: {
-        serif: ["Poppins", "sans-serif"],
-        sans: ["Poppins", "sans-serif"],
+        serif: ["Work Sans", "sans-serif"],
+        sans: ["Work Sans", "sans-serif"],
       },
       height: {
         "50vh": "50vh",

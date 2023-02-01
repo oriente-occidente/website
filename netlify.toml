@@ -1,6 +1,6 @@
 # example netlify.toml
 [build]
-command = "yarn data && yarn data && next build"
+command = "yarn data && next build"
 functions = "netlify/functions"
 publish = ".next"
 

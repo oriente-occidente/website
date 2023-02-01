@@ -50,23 +50,91 @@
   {
     "routes": [
       "studio",
-      "artisti-associati"
+      "academy"
     ],
     "link": {
       "__typename": "PageRecord",
-      "id": "7228708",
-      "slug": "artisti-associati",
+      "id": "109327534",
+      "slug": "academy",
+      "slugs": [
+        {
+          "locale": "it",
+          "slug": "academy"
+        }
+      ],
+      "indexType": "",
+      "isIndex": false
+    },
+    "lang": "it"
+  },
+  {
+    "routes": [
+      "studio",
+      "workshop"
+    ],
+    "link": {
+      "__typename": "PageRecord",
+      "id": "109336246",
+      "slug": "workshop",
       "slugs": [
         {
           "locale": "en",
-          "slug": "associated-artists"
+          "slug": "workshops"
         },
         {
           "locale": "it",
-          "slug": "artisti-associati"
+          "slug": "workshop"
         }
       ],
-      "indexType": "associated-artists",
+      "indexType": "workshops",
+      "isIndex": true
+    },
+    "lang": "it"
+  },
+  {
+    "routes": [
+      "studio",
+      "gli-spazi"
+    ],
+    "link": {
+      "__typename": "PageRecord",
+      "id": "55711946",
+      "slug": "gli-spazi",
+      "slugs": [
+        {
+          "locale": "en",
+          "slug": "gli-spazi"
+        },
+        {
+          "locale": "it",
+          "slug": "gli-spazi"
+        }
+      ],
+      "indexType": "",
+      "isIndex": false
+    },
+    "lang": "it"
+  },
+  {
+    "routes": [
+      "studio",
+      "formazione"
+    ],
+    "link": {
+      "__typename": "PageRecord",
+      "id": "7228705",
+      "slug": "formazione",
+      "slugs": [
+        {
+          "locale": "en",
+          "slug": "workshop"
+        },
+        {
+          "locale": "it",
+          "slug": "formazione"
+        }
+      ],
+      "indexType": "workshops",
       "isIndex": true
     },
     "lang": "it"
@@ -98,23 +166,23 @@
   {
     "routes": [
       "studio",
-      "workshop"
+      "artisti-associati"
     ],
     "link": {
       "__typename": "PageRecord",
-      "id": "7228705",
-      "slug": "workshop",
+      "id": "7228708",
+      "slug": "artisti-associati",
       "slugs": [
         {
           "locale": "en",
-          "slug": "workshops"
+          "slug": "associated-artists"
         },
         {
           "locale": "it",
-          "slug": "workshop"
+          "slug": "artisti-associati"
         }
       ],
-      "indexType": "workshops",
+      "indexType": "associated-artists",
       "isIndex": true
     },
     "lang": "it"
@@ -338,12 +406,12 @@
   {
     "routes": [
       "info",
-      "partners"
+      "partner"
     ],
     "link": {
       "__typename": "PageRecord",
       "id": "7228698",
-      "slug": "main-partner",
+      "slug": "partner",
       "slugs": [
         {
           "locale": "en",
@@ -351,7 +419,7 @@
         },
         {
           "locale": "it",
-          "slug": "main-partner"
+          "slug": "partner"
         }
       ],
       "indexType": "",
@@ -376,6 +444,30 @@
         {
           "locale": "it",
           "slug": "trasparenza"
+        }
+      ],
+      "indexType": "",
+      "isIndex": false
+    },
+    "lang": "it"
+  },
+  {
+    "routes": [
+      "info",
+      "merchandising"
+    ],
+    "link": {
+      "__typename": "PageRecord",
+      "id": "30523587",
+      "slug": "merchandising",
+      "slugs": [
+        {
+          "locale": "en",
+          "slug": "merchandising"
+        },
+        {
+          "locale": "it",
+          "slug": "merchandising"
         }
       ],
       "indexType": "",
@@ -415,10 +507,6 @@
       "id": "7228709",
       "slug": "sostienici",
       "slugs": [
-        {
-          "locale": "en",
-          "slug": "support-us"
-        },
         {
           "locale": "it",
           "slug": "sostienici"
@@ -480,23 +568,90 @@
   {
     "routes": [
       "studio",
-      "associated-artists"
+      "academy"
     ],
     "link": {
       "__typename": "PageRecord",
-      "id": "7228708",
-      "slug": "artisti-associati",
+      "id": "109327534",
+      "slug": "academy",
+      "slugs": [
+        {
+          "locale": "it",
+          "slug": "academy"
+        }
+      ],
+      "indexType": "",
+      "isIndex": false
+    },
+    "lang": "en"
+  },
+  {
+    "routes": [
+      "studio",
+      "workshop"
+    ],
+    "link": {
+      "__typename": "PageRecord",
+      "id": "109336246",
+      "slug": "workshop",
       "slugs": [
         {
           "locale": "en",
-          "slug": "associated-artists"
+          "slug": "workshops"
         },
         {
           "locale": "it",
-          "slug": "artisti-associati"
+          "slug": "workshop"
         }
       ],
-      "indexType": "associated-artists",
+      "indexType": "workshops",
+      "isIndex": true
+    },
+    "lang": "en"
+  },
+  {
+    "routes": [
+      "studio"
+    ],
+    "link": {
+      "__typename": "PageRecord",
+      "id": "55711946",
+      "slug": "gli-spazi",
+      "slugs": [
+        {
+          "locale": "en",
+          "slug": "gli-spazi"
+        },
+        {
+          "locale": "it",
+          "slug": "gli-spazi"
+        }
+      ],
+      "indexType": "",
+      "isIndex": false
+    },
+    "lang": "en"
+  },
+  {
+    "routes": [
+      "studio",
+      "workshop"
+    ],
+    "link": {
+      "__typename": "PageRecord",
+      "id": "7228705",
+      "slug": "formazione",
+      "slugs": [
+        {
+          "locale": "en",
+          "slug": "workshop"
+        },
+        {
+          "locale": "it",
+          "slug": "formazione"
+        }
+      ],
+      "indexType": "workshops",
       "isIndex": true
     },
     "lang": "en"
@@ -528,23 +683,23 @@
   {
     "routes": [
       "studio",
-      "workshop"
+      "associated-artists"
     ],
     "link": {
       "__typename": "PageRecord",
-      "id": "7228705",
-      "slug": "workshop",
+      "id": "7228708",
+      "slug": "artisti-associati",
       "slugs": [
         {
           "locale": "en",
-          "slug": "workshops"
+          "slug": "associated-artists"
         },
         {
           "locale": "it",
-          "slug": "workshop"
+          "slug": "artisti-associati"
         }
       ],
-      "indexType": "workshops",
+      "indexType": "associated-artists",
       "isIndex": true
     },
     "lang": "en"
@@ -773,7 +928,7 @@
     "link": {
       "__typename": "PageRecord",
       "id": "7228698",
-      "slug": "main-partner",
+      "slug": "partner",
       "slugs": [
         {
           "locale": "en",
@@ -781,7 +936,7 @@
         },
         {
           "locale": "it",
-          "slug": "main-partner"
+          "slug": "partner"
         }
       ],
       "indexType": "",
@@ -815,6 +970,29 @@
   },
   {
     "routes": [
+      "info"
+    ],
+    "link": {
+      "__typename": "PageRecord",
+      "id": "30523587",
+      "slug": "merchandising",
+      "slugs": [
+        {
+          "locale": "en",
+          "slug": "merchandising"
+        },
+        {
+          "locale": "it",
+          "slug": "merchandising"
+        }
+      ],
+      "indexType": "",
+      "isIndex": false
+    },
+    "lang": "en"
+  },
+  {
+    "routes": [
       "news"
     ],
     "link": {
@@ -837,18 +1015,12 @@
     "lang": "en"
   },
   {
-    "routes": [
-      "support-us"
-    ],
+    "routes": [],
     "link": {
       "__typename": "PageRecord",
       "id": "7228709",
       "slug": "sostienici",
       "slugs": [
-        {
-          "locale": "en",
-          "slug": "support-us"
-        },
         {
           "locale": "it",
           "slug": "sostienici"

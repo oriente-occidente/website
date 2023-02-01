@@ -13,7 +13,7 @@ function HeaderLanding(props) {
               <span className="sr-only">Oriente Occidente</span>
               <img
                 className="h-10 w-auto object-contain sm:h-12 lg:h-16"
-                src="/logo.svg"
+                src="/new-logo.svg"
                 alt="Oriente Occidente"
               />
             </a>
