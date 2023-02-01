@@ -163,6 +163,7 @@ function Page({ data, locale }) {
     </>
   );
 }
+
 export async function getStaticPaths() {
   const paths = [];
   return { paths, fallback: 'blocking' };
