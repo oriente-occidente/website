@@ -5,14 +5,14 @@ if (nodeEnv === "develop") {
 
 const getConfig = require("./getConfig");
 const getRoutes = require("./getRoutes");
-const getSitemap = require("./getSitemap");
+const generateSitemap = require("./generateSitemap");
 
 (async () => {
   try {
     const start = Date.now();
     await getRoutes();
     await getConfig();
-    getSitemap();
+    generateSitemap();
 
     const elapsed = (Date.now() - start) / 1000;
     console.log(`script done in ${elapsed.toFixed(2)} sec`);
