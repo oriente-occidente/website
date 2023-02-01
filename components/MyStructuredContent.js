@@ -17,7 +17,7 @@ import { resolveLinkById } from 'lib/utils';
 
 const StructuredContent = ({ locale, content }) => {
   const renderBlock = (record) => {
-    // console.log('block', record.__typename);
+    console.log('block', record.__typename);
     switch (record.__typename) {
       case 'WorkshopCategoriesBlockRecord':
         return (

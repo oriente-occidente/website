@@ -11,6 +11,9 @@ const getRoutes = require('./getRoutes');
     const start = Date.now();
     await getRoutes();
     await getConfig();
+
+    // generatesitemap
+
     const elapsed = (Date.now() - start) / 1000;
     console.log(`script done in ${elapsed.toFixed(2)} sec`);
   } catch (error) {
