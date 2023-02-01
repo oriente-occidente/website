@@ -19,13 +19,12 @@ const StructuredContent = ({ locale, content }) => {
   const renderBlock = (record) => {
     // console.log('block', record.__typename);
     switch (record.__typename) {
-      case 'WorkshopGalleryBlockRecord':
+      case 'WorkshopCategoriesBlockRecord':
         return (
           <div className="py-2 lg:py-10 2xl:py-16" key={record.id}>
             <h1>CATEGORIE DI WORKSHOP</h1>
           </div>
         );
-
       case 'GalleryRecord':
         return (
           <div className="py-2 lg:py-10 2xl:py-16" key={record.id}>
