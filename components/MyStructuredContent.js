@@ -1,43 +1,48 @@
-import { StructuredText, renderRule } from 'react-datocms';
-import {
-  isBlockquote,
-  isHeading,
-  isParagraph,
-} from 'datocms-structured-text-utils';
-import { Image } from 'react-datocms';
-import Link from 'next/link';
+import { StructuredText, renderRule } from "react-datocms";
+import { isBlockquote, isHeading, isParagraph } from "datocms-structured-text-utils";
+import { Image } from "react-datocms";
+import Link from "next/link";
 
-import BlockQuote from 'components/BlockQuote';
-import GalleryStandard from 'components/galleries/GalleryStandard';
-import VideoPlayer from 'components/video/VideoPlayer';
-import VideoEmbedded from 'components/video/VideoEmbedded';
-import Partners from 'components/Partners';
+import BlockQuote from "components/BlockQuote";
+import GalleryStandard from "components/galleries/GalleryStandard";
+import VideoPlayer from "components/video/VideoPlayer";
+import VideoEmbedded from "components/video/VideoEmbedded";
+import Partners from "components/Partners";
 
-import { resolveLinkById } from 'lib/utils';
+import { resolveLinkById } from "lib/utils";
 
 const StructuredContent = ({ locale, content }) => {
   const renderBlock = (record) => {
-    console.log('block', record.__typename);
+    console.log("block", record.category);
     switch (record.__typename) {
-      case 'WorkshopCategoriesBlockRecord':
+      case "WorkshopCategoriesBlockRecord":
         return (
           <div className="py-2 lg:py-10 2xl:py-16" key={record.id}>
-            <h1>CATEGORIE DI WORKSHOP</h1>
+            {record.category.map((cat, id) => {
+              return (
+                <div key={id}>
+                  <h1 className="title" style={{ color: cat.color.hex }}>
+                    {cat.title}
+                  </h1>
+                  <p>{cat.description}</p>
+                </div>
+              );
+            })}
           </div>
         );
-      case 'GalleryRecord':
+      case "GalleryRecord":
         return (
           <div className="py-2 lg:py-10 2xl:py-16" key={record.id}>
             <GalleryStandard slides={record.images} />
           </div>
         );
-      case 'ImageBlockRecord': {
+      case "ImageBlockRecord": {
         if (!record?.image?.responsiveImage) {
           return null;
         }
         return (
           <div key={record.id}>
-            <div className="py-2 lg:py-10 2xl:py-16 relative">
+            <div className="relative py-2 lg:py-10 2xl:py-16">
               <Image
                 className="max-w-[800px]"
                 data={record?.image?.responsiveImage}
@@ -45,7 +50,7 @@ const StructuredContent = ({ locale, content }) => {
                 title={record?.image?.title}
               />
               {record.image.responsiveImage.title && (
-                <div className="absolute bottom-0 left-0 right-0 z-1 mt-2 mb-2 max-w-[800px] px-4 pt-3 pb-2 text-xxs text-white lg:-mt-10 lg:mb-10 2xl:-mt-16 2xl:mb-16 bg-gradient-to-t from-black/80 text-shadow">
+                <div className="z-1 text-shadow absolute bottom-0 left-0 right-0 mt-2 mb-2 max-w-[800px] bg-gradient-to-t from-black/80 px-4 pt-3 pb-2 text-xxs text-white lg:-mt-10 lg:mb-10 2xl:-mt-16 2xl:mb-16">
                   {record.image.responsiveImage.title}
                 </div>
               )}
@@ -53,7 +58,7 @@ const StructuredContent = ({ locale, content }) => {
           </div>
         );
       }
-      case 'VideoBlockRecord':
+      case "VideoBlockRecord":
         return (
           <div key={record.id}>
             <div className="py-2 lg:py-10 2xl:py-16">
@@ -66,7 +71,7 @@ const StructuredContent = ({ locale, content }) => {
             </div>
           </div>
         );
-      case 'PartnerRecord':
+      case "PartnerRecord":
         return <Partners data={record} />;
       default:
         return null;
@@ -90,12 +95,7 @@ const StructuredContent = ({ locale, content }) => {
           // console.log('link', record.__typename);
           const resolved = resolveLinkById(record.id, locale);
           return (
-            <Link
-              {...transformedMeta}
-              href={resolved}
-              key={record.id}
-              locale={locale}
-            >
+            <Link {...transformedMeta} href={resolved} key={record.id} locale={locale}>
               <a className="underline">{children}</a>
             </Link>
           );
