@@ -7,4 +7,3 @@ Host: https://orienteoccidente.it
 
 # Sitemaps
 Sitemap: https://orienteoccidente.it/sitemap.xml
-Sitemap: https://orienteoccidente.it/sitemap-0.xml
