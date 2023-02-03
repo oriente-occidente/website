@@ -1,10 +1,8 @@
 import { Image as DatoImage } from 'react-datocms';
 import { LocationMarkerIcon, CalendarIcon } from '@heroicons/react/outline';
-// import dynamic from 'next/dynamic';
 import Gallery from 'components/galleries/Gallery';
 import BookButton from 'components/BookButton';
 import { formatDate } from 'lib/utils';
-import { exclude } from 'next-sitemap';
 
 function HeroIndex({ data, locale }) {
   const {
@@ -29,7 +27,6 @@ function HeroIndex({ data, locale }) {
   //     ssr: false,
   //   });
   // }
-
 
   return (
     <div className="border-t border-gray bg-gray pb-10 md:border-none md:py-0">
