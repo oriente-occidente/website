@@ -17,7 +17,7 @@ const StructuredContent = ({ locale, content }) => {
     switch (record.__typename) {
       case "WorkshopCategoriesBlockRecord":
         return (
-          <div className="py-2 lg:py-10 2xl:py-16" key={record.id}>
+          <div className="lg:py-12 2xl:py-16" key={record.id}>
             {record.category.map((cat, id) => {
               return (
                 <div
@@ -41,10 +41,16 @@ const StructuredContent = ({ locale, content }) => {
             })}
           </div>
         );
-      case "PromotionBlockRecord":
+      case "PromozioniRecord":
         return (
           <div className="py-2 lg:py-10 2xl:py-16" key={record.id}>
-            test
+            {record.promo.map((promo, id) => {
+              return (
+                <div key={id}>
+                  <div className="" dangerouslySetInnerHTML={{ __html: promo.text }} />
+                </div>
+              );
+            })}
           </div>
         );
       case "GalleryRecord":
