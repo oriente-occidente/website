@@ -4,27 +4,25 @@ import StructuredContent from "components/MyStructuredContent";
 
 export default function SectionsParagraphs({ sections, locale, layout = "" }) {
   return (
-    <div className="md:container md:mx-auto md:grid md:grid-cols-4 md:gap-4">
+    <div className="md:mx-auto md:container md:grid md:grid-cols-4 md:gap-4">
       <div className="hidden px-4 md:block">
-        <div
-          className={`${layout == "no-space" ? "top-6" : "top-24"} sticky py-2`}
-        >
+        <div className={`${layout == "no-space" ? "top-6" : "top-24"} sticky py-2`}>
           {sections.map((section) => (
             <>
-              {section.title &&
+              {section.title && (
                 <div key={section.id}>
                   <Link href={`#${section.id}`}>
                     <a
                       className={`${layout == "no-space" ? "" : "-top-20"}`}
                       title={`Link to ${section.title}`}
                     >
-                      <h2 className="text-xxs hover:text-red mb-1 uppercase tracking-wider">
+                      <h2 className="mb-1 text-xxs uppercase tracking-wider hover:text-red">
                         {section.title}
                       </h2>
                     </a>
                   </Link>
                 </div>
-              }
+              )}
             </>
           ))}
         </div>

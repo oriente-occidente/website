@@ -13,21 +13,38 @@ import { resolveLinkById } from "lib/utils";
 
 const StructuredContent = ({ locale, content }) => {
   const renderBlock = (record) => {
-    console.log("block", record.category);
+    console.log("block", record);
     switch (record.__typename) {
       case "WorkshopCategoriesBlockRecord":
         return (
           <div className="py-2 lg:py-10 2xl:py-16" key={record.id}>
             {record.category.map((cat, id) => {
               return (
-                <div key={id}>
-                  <h1 className="title" style={{ color: cat.color.hex }}>
-                    {cat.title}
-                  </h1>
-                  <p>{cat.description}</p>
+                <div
+                  key={id}
+                  className={`flex items-center overflow-hidden border-b ${
+                    id === 0 && "border-t"
+                  } border-gray py-5`}
+                >
+                  <div>
+                    <svg height="58" width="58">
+                      <circle cx="29" cy="29" r="29" fill={cat.color.hex} />
+                    </svg>
+                  </div>
+                  <div className="px-6 lg:text-2xl">{cat.title.toUpperCase()} </div>
+                  <div className="hidden h-[38px] w-[38px] bg-arrow-small-right lg:block" />
+                  <div className="ml-auto w-[356px] flex-none text-xxs">
+                    {cat.description}
+                  </div>
                 </div>
               );
             })}
+          </div>
+        );
+      case "PromotionBlockRecord":
+        return (
+          <div className="py-2 lg:py-10 2xl:py-16" key={record.id}>
+            test
           </div>
         );
       case "GalleryRecord":
