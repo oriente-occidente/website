@@ -32,7 +32,7 @@ const StructuredContent = ({ locale, content }) => {
                     </svg>
                   </div>
                   <div className="px-6 lg:text-2xl">{cat.title.toUpperCase()} </div>
-                  <div className="hidden h-[38px] w-[38px] bg-arrow-small-right lg:block" />
+                  <div className="hidden h-[38px] w-[38px] lg:block lg:bg-arrow-small-right" />
                   <div className="ml-auto w-[356px] flex-none text-xxs">
                     {cat.description}
                   </div>
@@ -46,8 +46,17 @@ const StructuredContent = ({ locale, content }) => {
           <div className="py-2 lg:py-10 2xl:py-16" key={record.id}>
             {record.promo.map((promo, id) => {
               return (
-                <div key={id}>
-                  <div className="" dangerouslySetInnerHTML={{ __html: promo.text }} />
+                <div key={id} className="mb-6 border p-3">
+                  <div className="mb-3 bg-gray-light p-6">
+                    <div className="text-xxs">{promo.subtitle.toUpperCase()}</div>
+                    <div className="text-base font-semibold">
+                      {promo.title.toUpperCase()}
+                    </div>
+                  </div>
+                  <div
+                    className="promobox pl-2 pb-2"
+                    dangerouslySetInnerHTML={{ __html: promo.text }}
+                  />
                 </div>
               );
             })}

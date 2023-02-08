@@ -63,6 +63,20 @@
     @apply py-0 text-[20px];
   }
 
+  /* PROMOZIONI */
+
+  .formatted-content .promobox p {
+    @apply text-xs;
+  }
+
+  .formatted-content .promobox ul {
+    @apply space-y-2 py-0 lg:py-0;
+  }
+
+  .formatted-content .promobox ul li {
+    @apply list-inside list-disc pl-3 text-xs before:bg-none;
+  }
+
   .button--with-arrow {
     @apply flex items-center font-semibold tracking-wider text-black no-underline after:ml-2
       after:inline-block after:h-8 after:w-8 after:bg-arrow-right-black after:duration-300 hover:after:translate-x-2 hover:after:bg-arrow-right-red md:text-xs md:after:h-10 md:after:w-10;
