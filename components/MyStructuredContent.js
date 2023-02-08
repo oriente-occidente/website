@@ -24,7 +24,7 @@ const StructuredContent = ({ locale, content }) => {
                   key={id}
                   className={`flex items-center overflow-hidden border-b ${
                     id === 0 && "border-t"
-                  } border-gray py-5`}
+                  } border-gray py-8`}
                 >
                   <div>
                     <svg height="58" width="58">
@@ -48,13 +48,13 @@ const StructuredContent = ({ locale, content }) => {
               return (
                 <div key={id} className="mb-6 border p-3">
                   <div className="mb-3 bg-gray-light p-6">
-                    <div className="text-xxs">{promo.subtitle.toUpperCase()}</div>
+                    <div className="pb-2 text-xxs">{promo.subtitle.toUpperCase()}</div>
                     <div className="text-base font-semibold">
                       {promo.title.toUpperCase()}
                     </div>
                   </div>
                   <div
-                    className="promobox pl-2 pb-2"
+                    className="promobox pl-6 pb-2"
                     dangerouslySetInnerHTML={{ __html: promo.text }}
                   />
                 </div>
