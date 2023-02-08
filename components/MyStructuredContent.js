@@ -41,10 +41,10 @@ const StructuredContent = ({ locale, content }) => {
             })}
           </div>
         );
-      case "PromozioniRecord":
+      case "PromozioniBlockRecord":
         return (
           <div className="py-2 lg:py-10 2xl:py-16" key={record.id}>
-            {record.promo.map((promo, id) => {
+            {record.promozione.map((promo, id) => {
               return (
                 <div key={id} className="mb-6 border p-3">
                   <div className="mb-3 bg-gray-light p-6">
