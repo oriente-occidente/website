@@ -12,18 +12,23 @@ function WorkshopByCategory({ list, locale, group }) {
   // const [cat, setCat] = useState(cat);
   // useEffect(() => {}, [router.query]);
 
-  const resultList = enhanceEvents(list);
-  const finished = sortDesc(
-    resultList?.filter((e) => e.finished),
-    'startDate'
-  );
-  const active = sortAsc(
-    resultList?.filter((e) => !e.finished),
-    'nextDate'
-  );
+  let finished = [];
+  let active = [];
+  if (cat) {
+    // const listByCategory = list.filter((e) => e.category === cat);
+    const resultList = enhanceEvents(list);
+    finished = sortDesc(
+      resultList?.filter((e) => e.finished),
+      'startDate'
+    );
+    active = sortAsc(
+      resultList?.filter((e) => !e.finished),
+      'nextDate'
+    );
+  }
   const showHeaders = finished.length > 0 && active.length > 0;
 
-  if (!cat) return <div>loading...</div>;
+  console.log('render');
 
   return (
     <div className="my-4 container">
