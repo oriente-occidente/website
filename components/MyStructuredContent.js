@@ -18,7 +18,7 @@ const StructuredContent = ({ locale, content }) => {
       case "WorkshopCategoriesBlockRecord":
         return (
           <div className="lg:py-12 2xl:py-16" key={record.id}>
-            {record.category.map((cat, id) => {
+            {record.category.map(({ title, description, color }, id) => {
               return (
                 <div
                   key={id}
@@ -28,13 +28,13 @@ const StructuredContent = ({ locale, content }) => {
                 >
                   <div>
                     <svg height="58" width="58">
-                      <circle cx="29" cy="29" r="29" fill={cat.color.hex} />
+                      <circle cx="29" cy="29" r="29" fill={color.hex} />
                     </svg>
                   </div>
-                  <div className="px-6 lg:text-2xl">{cat.title.toUpperCase()} </div>
+                  <div className="px-6 lg:text-2xl">{title.toUpperCase()} </div>
                   <div className="hidden h-[38px] w-[38px] lg:block lg:bg-arrow-small-right" />
                   <div className="ml-auto w-[356px] flex-none text-xxs">
-                    {cat.description}
+                    {description}
                   </div>
                 </div>
               );
@@ -44,18 +44,22 @@ const StructuredContent = ({ locale, content }) => {
       case "PromozioniBlockRecord":
         return (
           <div className="py-2 lg:py-10 2xl:py-16" key={record.id}>
-            {record.promozione.map((promo, id) => {
+            {record.promozione.map(({ headerColor, title, subtitle, link, text }, id) => {
               return (
                 <div key={id} className="mb-6 border p-3">
-                  <div className="mb-3 bg-gray-light p-6">
-                    <div className="pb-2 text-xxs">{promo.subtitle.toUpperCase()}</div>
-                    <div className="text-base font-semibold">
-                      {promo.title.toUpperCase()}
-                    </div>
+                  <div
+                    className={`mb-3 ${
+                      headerColor
+                        ? "bg-gray-light"
+                        : "bg-black-lessTransparent text-white"
+                    } p-6`}
+                  >
+                    <div className="pb-2 text-xxs">{subtitle.toUpperCase()}</div>
+                    <div className="text-base font-semibold">{title.toUpperCase()}</div>
                   </div>
                   <div
                     className="promobox pl-6 pb-2"
-                    dangerouslySetInnerHTML={{ __html: promo.text }}
+                    dangerouslySetInnerHTML={{ __html: text }}
                   />
                 </div>
               );

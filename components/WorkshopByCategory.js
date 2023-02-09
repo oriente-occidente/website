@@ -1,8 +1,8 @@
-import translate from 'lib/locales';
-import { isFinished, enhanceEvents, sortDesc, sortAsc } from 'lib/utils';
-import PreviewCard from 'components/cards/PreviewCard';
-import { useEffect } from 'react';
-import { useRouter } from 'next/router';
+import translate from "lib/locales";
+import { isFinished, enhanceEvents, sortDesc, sortAsc } from "lib/utils";
+import PreviewCard from "components/cards/PreviewCard";
+import { useEffect } from "react";
+import { useRouter } from "next/router";
 
 const MAX = 6;
 function WorkshopByCategory({ list, locale, group }) {
@@ -19,25 +19,23 @@ function WorkshopByCategory({ list, locale, group }) {
     const resultList = enhanceEvents(list);
     finished = sortDesc(
       resultList?.filter((e) => e.finished),
-      'startDate'
+      "startDate"
     );
     active = sortAsc(
       resultList?.filter((e) => !e.finished),
-      'nextDate'
+      "nextDate"
     );
   }
   const showHeaders = finished.length > 0 && active.length > 0;
 
-  console.log('render');
-
   return (
-    <div className="my-4 container">
+    <div className="container my-4">
       <h1>WORKSHOPS !!! </h1>
       <h1>CATEGORY ? {cat}</h1>
 
       {showHeaders && (
-        <div className="border-b border-black  mt-20 pb-5 font-semibold uppercase text-lg">
-          {translate('next_events', locale)}
+        <div className="mt-20 border-b  border-black pb-5 text-lg font-semibold uppercase">
+          {translate("next_events", locale)}
         </div>
       )}
       {active.length > 0 && (
@@ -48,8 +46,8 @@ function WorkshopByCategory({ list, locale, group }) {
         </div>
       )}
       {showHeaders && (
-        <div className="border-b border-black  mt-20 pb-5 font-semibold uppercase  text-lg">
-          {translate('previous_events', locale)}
+        <div className="mt-20 border-b  border-black pb-5 text-lg font-semibold  uppercase">
+          {translate("previous_events", locale)}
         </div>
       )}
       {finished.length > 0 && (
