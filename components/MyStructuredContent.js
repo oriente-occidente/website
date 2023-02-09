@@ -22,7 +22,7 @@ const StructuredContent = ({ locale, content }) => {
               return (
                 <div
                   key={id}
-                  className={`flex items-center overflow-hidden border-b ${
+                  className={`flex flex-wrap items-center overflow-hidden border-b ${
                     id === 0 && "border-t"
                   } border-gray py-8`}
                 >
@@ -31,7 +31,7 @@ const StructuredContent = ({ locale, content }) => {
                       <circle cx="29" cy="29" r="29" fill={color.hex} />
                     </svg>
                   </div>
-                  <div className="px-6 lg:text-2xl">{title.toUpperCase()} </div>
+                  <div className="px-6 text-lg lg:text-2xl">{title.toUpperCase()} </div>
                   <div className="hidden h-[38px] w-[38px] lg:block lg:bg-arrow-small-right" />
                   <div className="ml-auto w-[356px] flex-none text-xxs">
                     {description}
@@ -49,16 +49,14 @@ const StructuredContent = ({ locale, content }) => {
                 <div key={id} className="mb-6 border p-3">
                   <div
                     className={`mb-3 ${
-                      headerColor
-                        ? "bg-gray-light"
-                        : "bg-black-lessTransparent text-white"
+                      headerColor ? "bg-gray-light" : "bg-black/70 text-white"
                     } p-6`}
                   >
-                    <div className="pb-2 text-xxs">{subtitle.toUpperCase()}</div>
+                    <div className="pb-2 text-xxs ">{subtitle.toUpperCase()}</div>
                     <div className="text-base font-semibold">{title.toUpperCase()}</div>
                   </div>
                   <div
-                    className="promobox pl-6 pb-2"
+                    className="promobox pb-2 sm:pl-3 lg:pl-6"
                     dangerouslySetInnerHTML={{ __html: text }}
                   />
                 </div>

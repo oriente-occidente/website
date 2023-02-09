@@ -1,22 +1,37 @@
 import translate from "lib/locales";
 import { isFinished, enhanceEvents, sortDesc, sortAsc } from "lib/utils";
 import PreviewCard from "components/cards/PreviewCard";
-import { useEffect } from "react";
+import { useState, useEffect } from "react";
 import { useRouter } from "next/router";
 
 const MAX = 6;
 function WorkshopByCategory({ list, locale, group }) {
+  console.log("list", list);
   const router = useRouter();
   const { cat } = router.query;
 
-  // const [cat, setCat] = useState(cat);
-  // useEffect(() => {}, [router.query]);
+  // useEffect(() => {
+  //   const urlParams = new URLSearchParams(window.location.search);
+  //   const cat = urlParams.get("cat");
+  //   // console.log("cat!", urlParams.get("cat"));
+  //   if (cat) setWorkshopCat(cat);
+  // }, []);
+
+  const [workshopCat, setWorkshopCat] = useState();
+  useEffect(() => {
+    console.log("cat", cat);
+    if (cat) setWorkshopCat(cat);
+  }, [router.query, cat]);
 
   let finished = [];
   let active = [];
-  if (cat) {
-    // const listByCategory = list.filter((e) => e.category === cat);
-    const resultList = enhanceEvents(list);
+  let filterByCategory = null;
+  if (workshopCat && workshopCat !== "all") {
+    filterByCategory = list.filter(({ workshopCategory }) =>
+      workshopCategory.some(({ slug }) => slug == workshopCat)
+    );
+
+    const resultList = enhanceEvents(filterByCategory || list);
     finished = sortDesc(
       resultList?.filter((e) => e.finished),
       "startDate"
@@ -25,13 +40,14 @@ function WorkshopByCategory({ list, locale, group }) {
       resultList?.filter((e) => !e.finished),
       "nextDate"
     );
+  } else {
+    return <div>Loading...</div>;
   }
   const showHeaders = finished.length > 0 && active.length > 0;
 
   return (
     <div className="container my-4">
-      <h1>WORKSHOPS !!! </h1>
-      <h1>CATEGORY ? {cat}</h1>
+      <h1 className="title">{workshopCat !== "all" && workshopCat}</h1>
 
       {showHeaders && (
         <div className="mt-20 border-b  border-black pb-5 text-lg font-semibold uppercase">

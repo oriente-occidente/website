@@ -1,31 +1,26 @@
-import { Image as DatoImage } from 'react-datocms';
-import Link from 'next/link';
-import { LocationMarkerIcon, CalendarIcon } from '@heroicons/react/outline';
+import { Image as DatoImage } from "react-datocms";
+import Link from "next/link";
+import { LocationMarkerIcon, CalendarIcon } from "@heroicons/react/outline";
 
-import {
-  resolveLinkById,
-  formatDate,
-  groupDatesByDay,
-  getYearOfDate,
-} from 'lib/utils';
-import { useRouter } from 'next/router';
+import { resolveLinkById, formatDate, groupDatesByDay, getYearOfDate } from "lib/utils";
+import { useRouter } from "next/router";
 
 function PreviewCard({ data, locale, group = null, year }) {
   const router = useRouter();
   let categoryTitle;
-  if (data.category) {
-    if (Array.isArray(data.category)) {
-      categoryTitle = data.category
+  if (data.workshopCategory) {
+    if (Array.isArray(data.workshopCategory)) {
+      categoryTitle = data.workshopCategory
         .map((cat) => {
           return cat.title;
         })
-        .join(', ');
+        .join(", ");
     } else {
-      categoryTitle = data.category.title;
+      categoryTitle = data.workshopCategory.title;
     }
   }
 
-  if (group === 'projects' || group === 'networks') {
+  if (group === "projects" || group === "networks") {
     year = getYearOfDate(data.startDate);
   }
 
@@ -33,13 +28,13 @@ function PreviewCard({ data, locale, group = null, year }) {
 
   const link = resolveLinkById(data.id, locale, group);
   const alternativeLink = `${router.asPath}/${data.slug}`;
-  const isRoot = link === '/';
+  const isRoot = link === "/";
   return (
     <div className="relative py-4">
       <Link href={isRoot ? alternativeLink : link}>
         <a title={data.title} className="group">
           <div className="relative">
-            <div className="text-xxs absolute left-4 bottom-2 top-auto z-20 font-semibold uppercase text-white md:left-8 md:bottom-8 md:text-xs ">
+            <div className="absolute left-4 bottom-2 top-auto z-20 text-xxs font-semibold uppercase text-white md:left-8 md:bottom-8 md:text-xs ">
               {datesGrouped.map((str) => (
                 <div className="hidden items-center gap-x-2 md:flex" key={str}>
                   <CalendarIcon aria-hidden="true" className="h-4 w-4" />
@@ -57,9 +52,7 @@ function PreviewCard({ data, locale, group = null, year }) {
               {data.location && (
                 <div className="hidden items-center gap-x-2 md:flex">
                   <LocationMarkerIcon aria-hidden="true" className="h-4 w-4" />
-                  <span className="font-light normal-case md:pr-1">
-                    {data.location}
-                  </span>
+                  <span className="font-light normal-case md:pr-1">{data.location}</span>
                 </div>
               )}
               {year && (
@@ -81,10 +74,8 @@ function PreviewCard({ data, locale, group = null, year }) {
           </div>
           <div className="z-20  mt-2">
             {data.title &&
-              (data.authors ||
-                !data.titleHero ||
-                data.titleHero !== data.title) && (
-                <h2 className="text-black-light text-sm uppercase md:text-base">
+              (data.authors || !data.titleHero || data.titleHero !== data.title) && (
+                <h2 className="text-sm uppercase text-black-light md:text-base">
                   {data.title}
                 </h2>
               )}
@@ -100,14 +91,8 @@ function PreviewCard({ data, locale, group = null, year }) {
             )}
           </div>
           {datesGrouped.map((d) => (
-            <div
-              className="flex items-center gap-1 md:hidden"
-              key={'descr_' + d}
-            >
-              <CalendarIcon
-                aria-hidden="true"
-                className="mr-1 h-4 w-3 text-black"
-              />
+            <div className="flex items-center gap-1 md:hidden" key={"descr_" + d}>
+              <CalendarIcon aria-hidden="true" className="mr-1 h-4 w-3 text-black" />
               <div className="text-xxs capitalize">{d}</div>
             </div>
           ))}

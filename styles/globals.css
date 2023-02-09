@@ -66,7 +66,7 @@
   /* PROMOZIONI */
 
   .formatted-content .promobox p {
-    @apply text-xs;
+    @apply text-xs sm:text-xxs;
   }
 
   .formatted-content .promobox ul {
@@ -74,7 +74,7 @@
   }
 
   .formatted-content .promobox ul li {
-    @apply list-inside list-disc pl-3 text-xs before:bg-none;
+    @apply list-inside list-disc pl-3 text-xs before:bg-none sm:text-xxs;
   }
 
   .button--with-arrow {
