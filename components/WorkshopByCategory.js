@@ -8,7 +8,8 @@ const MAX = 6;
 function WorkshopByCategory({ list, locale, group }) {
   console.log("list", list);
   const router = useRouter();
-  const { cat } = router.query;
+
+  const [workshopCat, setWorkshopCat] = useState();
 
   // useEffect(() => {
   //   const urlParams = new URLSearchParams(window.location.search);
@@ -17,11 +18,10 @@ function WorkshopByCategory({ list, locale, group }) {
   //   if (cat) setWorkshopCat(cat);
   // }, []);
 
-  const [workshopCat, setWorkshopCat] = useState();
   useEffect(() => {
-    console.log("cat", cat);
+    const { cat } = router.query;
     if (cat) setWorkshopCat(cat);
-  }, [router.query, cat]);
+  }, [router.query]);
 
   let finished = [];
   let active = [];
@@ -30,19 +30,16 @@ function WorkshopByCategory({ list, locale, group }) {
     filterByCategory = list.filter(({ workshopCategory }) =>
       workshopCategory.some(({ slug }) => slug == workshopCat)
     );
-
-    const resultList = enhanceEvents(filterByCategory || list);
-    finished = sortDesc(
-      resultList?.filter((e) => e.finished),
-      "startDate"
-    );
-    active = sortAsc(
-      resultList?.filter((e) => !e.finished),
-      "nextDate"
-    );
-  } else {
-    return <div>Loading...</div>;
   }
+  const resultList = enhanceEvents(filterByCategory || list);
+  finished = sortDesc(
+    resultList?.filter((e) => e.finished),
+    "startDate"
+  );
+  active = sortAsc(
+    resultList?.filter((e) => !e.finished),
+    "nextDate"
+  );
   const showHeaders = finished.length > 0 && active.length > 0;
 
   return (
