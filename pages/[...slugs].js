@@ -13,6 +13,7 @@ import HeroIndex from "components/hero/HeroIndex";
 import GalleryPreview from "components/galleries/GalleryPreview";
 import ResultsGrid from "components/ResultsGrid";
 import ResultsGridSorted from "components/ResultsGridSorted";
+import WorkshopByCategory from "components/WorkshopByCategory";
 import Filters from "components/Filters";
 
 // import Modal from 'components/Modal';
@@ -122,7 +123,13 @@ function Page({ data, locale }) {
           <ResultsGrid list={list} group={group} locale={locale} />
         )}
         {isIndex && !showFilters && isSorted && (
-          <ResultsGridSorted list={list} group={group} locale={locale} />
+          <>
+            {indexType === "workshops" ? (
+              <WorkshopByCategory list={list} group={group} locale={locale} />
+            ) : (
+              <ResultsGridSorted list={list} group={group} locale={locale} />
+            )}
+          </>
         )}
         {isIndex && showFilters && (
           <Filters
