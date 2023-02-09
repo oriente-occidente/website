@@ -1,24 +1,24 @@
-import dynamic from "next/dynamic";
+import dynamic from 'next/dynamic';
 // import { useRouter } from 'next/router';
-import { useEffect } from "react";
+import { useEffect } from 'react';
 
-import { doQuery, getPaths } from "lib/api";
-import Layout from "components/Layout";
-import Seo from "components/Seo";
-import { camelCase, getBreadcrumbs } from "lib/utils";
-import Breadcrumbs from "components/Breadcrumbs";
-import HeroDetail from "components/hero/HeroDetail";
-import HeroEmpty from "components/hero/HeroEmpty";
-import HeroIndex from "components/hero/HeroIndex";
-import GalleryPreview from "components/galleries/GalleryPreview";
-import ResultsGrid from "components/ResultsGrid";
-import ResultsGridSorted from "components/ResultsGridSorted";
-import Filters from "components/Filters";
+import { doQuery, getPaths } from 'lib/api';
+import Layout from 'components/Layout';
+import Seo from 'components/Seo';
+import { camelCase, getBreadcrumbs } from 'lib/utils';
+import Breadcrumbs from 'components/Breadcrumbs';
+import HeroDetail from 'components/hero/HeroDetail';
+import HeroEmpty from 'components/hero/HeroEmpty';
+import HeroIndex from 'components/hero/HeroIndex';
+import GalleryPreview from 'components/galleries/GalleryPreview';
+import ResultsGrid from 'components/ResultsGrid';
+import ResultsGridSorted from 'components/ResultsGridSorted';
+import Filters from 'components/Filters';
 
 // import Modal from 'components/Modal';
-import MainContent from "components/contents/MainContent";
-import SectionsParagraphs from "components/contents/SectionsParagraphs";
-import OtherSections from "components/contents/OtherSections";
+import MainContent from 'components/contents/MainContent';
+import SectionsParagraphs from 'components/contents/SectionsParagraphs';
+import OtherSections from 'components/contents/OtherSections';
 
 // import ShareButtons from 'components/ShareButtons';
 function Page({ data, locale }) {
@@ -37,23 +37,23 @@ function Page({ data, locale }) {
   };
   const { __typename: pageType } = pageInfo;
   const payload = rest[pageType];
-  console.log("payload", payload);
+  console.log('payload', payload);
   if (!payload) {
     return <div>404</div>;
   }
 
-  const isPage = pageType === "page";
+  const isPage = pageType === 'page';
   const isIndex = isPage && payload.isIndex;
   const indexType = isIndex && payload.indexType;
-  const showFilters = indexType === "festival-events";
+  const showFilters = indexType === 'festival-events';
   const list =
     isIndex && indexType
       ? showFilters
-        ? pluk(rest, "festivalEvents, otherEvents, courses, workshops")
+        ? pluk(rest, 'festivalEvents, otherEvents, courses, workshops')
         : rest[camelCase(indexType)]
       : [];
   // console.log('indexType', indexType);
-  const isSorted = indexType === "workshops" || indexType === "other-events";
+  const isSorted = indexType === 'workshops' || indexType === 'other-events';
   const group = indexType ? indexType : null;
   // console.log('pageInfo', pageInfo.group);
   const {
@@ -70,7 +70,7 @@ function Page({ data, locale }) {
     paymentSettings,
   } = payload;
 
-  const newsDate = pageInfo.group === "news-index" ? startDate : null;
+  const newsDate = pageInfo.group === 'news-index' ? startDate : null;
   // console.log('newsDate', newsDate);
   const heroData = {
     layoutHero,
@@ -90,28 +90,33 @@ function Page({ data, locale }) {
   };
 
   const ShareButtons = !isIndex
-    ? dynamic(() => import("components/ShareButtons"), { ssr: false })
+    ? dynamic(() => import('components/ShareButtons'), { ssr: false })
     : null;
 
   return (
     <>
-      <Seo tags={[...site.faviconMetaTags, ...payload.seo]} alt={pageInfo.urls} />
+      <Seo
+        tags={[...site.faviconMetaTags, ...payload.seo]}
+        alt={pageInfo.urls}
+      />
       <Layout footer={footer} menu={menu} locale={locale} alts={pageInfo.urls}>
         <Breadcrumbs
           id="#main-content"
-          background={heroData.layoutHero == "index" ? "gray" : null}
+          background={heroData.layoutHero == 'index' ? 'gray' : null}
           paths={getBreadcrumbs(pageInfo.slugs[locale], payload.slug, locale)}
           locale={locale}
         />
-        {heroData.layoutHero == "detail" && imageHero ? (
+        {heroData.layoutHero == 'detail' && imageHero ? (
           <HeroDetail data={heroData} />
-        ) : heroData.layoutHero == "index" && imageHero ? (
+        ) : heroData.layoutHero == 'index' && imageHero ? (
           <HeroIndex data={heroData} />
         ) : (
           <HeroEmpty data={heroData} />
         )}
 
-        {payload?.content && <MainContent locale={locale} data={payload.content} />}
+        {payload?.content && (
+          <MainContent locale={locale} data={payload.content} />
+        )}
         {payload?.sections && payload.sections.length > 0 && (
           <SectionsParagraphs lcoale={locale} sections={payload.sections} />
         )}
@@ -128,7 +133,9 @@ function Page({ data, locale }) {
           <Filters
             list={list}
             locale={locale}
-            datesOfYear={rest?.festivalDates?.datesOfYear.filter((d) => d.active)}
+            datesOfYear={rest?.festivalDates?.datesOfYear.filter(
+              (d) => d.active
+            )}
           />
         )}
         {payload.relatedContents?.length > 0 && (
@@ -158,8 +165,9 @@ function Page({ data, locale }) {
 }
 
 export async function getStaticPaths() {
-  const paths = [];
-  return { paths, fallback: "blocking" };
+  // const paths = [];
+  const paths = getPaths();
+  return { paths, fallback: false };
 }
 
 export async function getStaticProps({ params, locale, preview = false }) {
@@ -167,9 +175,9 @@ export async function getStaticProps({ params, locale, preview = false }) {
   const data = await doQuery(locale, params, preview);
   // console.log('DATA', JSON.stringify(data, null, 2));
   if (!data?.pageInfo?.__typename) {
-    console.log("ERROR no PageInfo", data?.pageInfo);
+    console.log('ERROR no PageInfo', data?.pageInfo);
     return {
-      redirect: { destination: "/404", permanent: false },
+      redirect: { destination: '/404', permanent: false },
     };
   }
 
