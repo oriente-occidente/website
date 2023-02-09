@@ -866,48 +866,6 @@
     ]
   },
   {
-    "id": "109336246",
-    "isIndex": true,
-    "indexType": "workshops",
-    "slugs": {
-      "it": [
-        "studio",
-        "workshop"
-      ],
-      "en": [
-        "studio",
-        "workshop"
-      ]
-    },
-    "__typename": "page",
-    "paths": [
-      {
-        "locale": "it",
-        "slugs": [
-          "studio",
-          "workshop"
-        ]
-      },
-      {
-        "locale": "en",
-        "slugs": [
-          "studio",
-          "workshop"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "it",
-        "url": "studio/workshop"
-      },
-      {
-        "locale": "en",
-        "url": "studio/workshop"
-      }
-    ]
-  },
-  {
     "id": "7228713",
     "slugs": {
       "en": [
@@ -982,6 +940,45 @@
       {
         "locale": "it",
         "url": "linguaggi"
+      }
+    ]
+  },
+  {
+    "id": "109336246",
+    "slugs": {
+      "en": [
+        "workshops"
+      ],
+      "it": [
+        "workshop"
+      ]
+    },
+    "isIndex": true,
+    "indexType": "workshops",
+    "__typename": "page",
+    "group": "page",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "workshops"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "workshop"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "workshops"
+      },
+      {
+        "locale": "it",
+        "url": "workshop"
       }
     ]
   },

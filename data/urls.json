@@ -182,7 +182,6 @@
   "/en/studio/associated-artists/pietro-marullo",
   "/en/studio/associated-artists/salvo-lombardo",
   "/en/studio/workshop",
-  "/en/studio/workshop",
   "/en/studio/workshop/artylogica-workshop-vittoria-de-ferrari-sapetto",
   "/en/studio/workshop/bus-stop",
   "/en/studio/workshop/contemporary-dance-workshop",
@@ -201,6 +200,7 @@
   "/en/studio/workshop/workshop-diversita-in-scena",
   "/en/studio/workshop/workshop-sul-tarantismo-canzoniere-gracanico-salentino",
   "/en/studio/workshop/workshop-with-sorimi-amada",
+  "/en/workshops",
   "/festival/box-office",
   "/festival/programma",
   "/festival/programma/20-di-versi-madrigali-contemporanei",
@@ -455,5 +455,5 @@
   "/studio/residenze-artistiche/simone-donati",
   "/studio/residenze-artistiche/sindri-runudde",
   "/studio/residenze-artistiche/vahan-badalyan",
-  "/studio/workshop"
+  "/workshop"
 ]

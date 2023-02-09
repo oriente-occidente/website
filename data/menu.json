@@ -58,6 +58,10 @@
       "slug": "academy",
       "slugs": [
         {
+          "locale": "en",
+          "slug": "academy"
+        },
+        {
           "locale": "it",
           "slug": "academy"
         }
@@ -70,20 +74,20 @@
   {
     "routes": [
       "studio",
-      "workshop"
+      "formazione"
     ],
     "link": {
       "__typename": "PageRecord",
-      "id": "109336246",
-      "slug": "workshop",
+      "id": "7228705",
+      "slug": "formazione",
       "slugs": [
         {
           "locale": "en",
-          "slug": "workshops"
+          "slug": "workshop"
         },
         {
           "locale": "it",
-          "slug": "workshop"
+          "slug": "formazione"
         }
       ],
       "indexType": "workshops",
@@ -576,6 +580,10 @@
       "slug": "academy",
       "slugs": [
         {
+          "locale": "en",
+          "slug": "academy"
+        },
+        {
           "locale": "it",
           "slug": "academy"
         }
@@ -592,16 +600,16 @@
     ],
     "link": {
       "__typename": "PageRecord",
-      "id": "109336246",
-      "slug": "workshop",
+      "id": "7228705",
+      "slug": "formazione",
       "slugs": [
         {
           "locale": "en",
-          "slug": "workshops"
+          "slug": "workshop"
         },
         {
           "locale": "it",
-          "slug": "workshop"
+          "slug": "formazione"
         }
       ],
       "indexType": "workshops",
