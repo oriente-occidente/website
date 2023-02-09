@@ -18,25 +18,27 @@ const StructuredContent = ({ locale, content }) => {
       case "WorkshopCategoriesBlockRecord":
         return (
           <div className="lg:py-12 2xl:py-16" key={record.id}>
-            {record.category.map(({ title, description, color }, id) => {
+            {record.category.map(({ title, description, color, slug }, id) => {
+              console.log("slug", slug);
               return (
-                <div
-                  key={id}
-                  className={`flex flex-wrap items-center overflow-hidden border-b ${
-                    id === 0 && "border-t"
-                  } border-gray py-8`}
-                >
-                  <div>
-                    <svg height="58" width="58">
-                      <circle cx="29" cy="29" r="29" fill={color.hex} />
-                    </svg>
+                <Link key={slug} href={`/formazione?cat=${slug}`} passHref>
+                  <div
+                    className={`flex flex-wrap items-center overflow-hidden border-b ${
+                      id === 0 && "border-t"
+                    } border-gray py-8`}
+                  >
+                    <div>
+                      <svg height="58" width="58">
+                        <circle cx="29" cy="29" r="29" fill={color.hex} />
+                      </svg>
+                    </div>
+                    <div className="px-6 text-lg lg:text-2xl">{title.toUpperCase()} </div>
+                    <div className="hidden h-[38px] w-[38px] lg:block lg:bg-arrow-small-right" />
+                    <div className="ml-auto w-[356px] flex-none text-xxs">
+                      {description}
+                    </div>
                   </div>
-                  <div className="px-6 text-lg lg:text-2xl">{title.toUpperCase()} </div>
-                  <div className="hidden h-[38px] w-[38px] lg:block lg:bg-arrow-small-right" />
-                  <div className="ml-auto w-[356px] flex-none text-xxs">
-                    {description}
-                  </div>
-                </div>
+                </Link>
               );
             })}
           </div>

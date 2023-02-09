@@ -13,15 +13,9 @@ function WorkshopByCategory({ list, locale, group }) {
 
   useEffect(() => {
     const urlParams = new URLSearchParams(window.location.search);
-    const cat = urlParams.get("cat");
-    // console.log("cat!", urlParams.get("cat"));
+    const cat = urlParams.get("cat").toLowerCase();
     if (cat) setWorkshopCat(cat);
   }, []);
-
-  // useEffect(() => {
-  //   const { cat } = router.query;
-  //   if (cat) setWorkshopCat(cat);
-  // }, [router.query]);
 
   let finished = [];
   let active = [];
