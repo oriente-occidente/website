@@ -13,29 +13,32 @@ import { resolveLinkById } from "lib/utils";
 
 const StructuredContent = ({ locale, content }) => {
   const renderBlock = (record) => {
-    console.log("block", record);
     switch (record.__typename) {
       case "WorkshopCategoriesBlockRecord":
         return (
-          <div className="lg:py-12 2xl:py-16" key={record.id}>
+          <div className="py-6 lg:py-12 2xl:py-16" key={record.id}>
             {record.category.map(({ title, description, color, slug }, id) => {
-              console.log("slug", slug);
               return (
                 <Link key={slug} href={`/formazione?cat=${slug}`} passHref>
                   {/* <a title={title} className="no-underline"> */}
                   <div
                     className={`flex cursor-pointer flex-wrap items-center overflow-hidden border-b ${
                       id === 0 && "border-t"
-                    } border-gray py-8`}
+                    } border-gray py-4 xl:py-8`}
                   >
                     <div>
-                      <svg height="58" width="58">
+                      <svg
+                        className="h-[28px] w-[28px] xl:h-[58px] xl:w-[58px]"
+                        viewBox="0 0 58 58"
+                      >
                         <circle cx="29" cy="29" r="29" fill={color.hex} />
                       </svg>
                     </div>
-                    <div className="px-6 text-lg lg:text-2xl">{title.toUpperCase()} </div>
+                    <div className="px-3 text-lg lg:text-2xl xl:px-6">
+                      {title.toUpperCase()}{" "}
+                    </div>
                     <div className="hidden h-[38px] w-[38px] lg:block lg:bg-arrow-small-right" />
-                    <div className="ml-auto w-[356px] flex-none text-xxs">
+                    <div className="w-[356px] flex-none pt-3 text-xxs xl:ml-auto xl:pt-0">
                       {description}
                     </div>
                   </div>
