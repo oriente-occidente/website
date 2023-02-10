@@ -22,8 +22,9 @@ const StructuredContent = ({ locale, content }) => {
               console.log("slug", slug);
               return (
                 <Link key={slug} href={`/formazione?cat=${slug}`} passHref>
+                  {/* <a title={title} className="no-underline"> */}
                   <div
-                    className={`flex flex-wrap items-center overflow-hidden border-b ${
+                    className={`flex cursor-pointer flex-wrap items-center overflow-hidden border-b ${
                       id === 0 && "border-t"
                     } border-gray py-8`}
                   >
@@ -38,6 +39,7 @@ const StructuredContent = ({ locale, content }) => {
                       {description}
                     </div>
                   </div>
+                  {/* </a> */}
                 </Link>
               );
             })}
