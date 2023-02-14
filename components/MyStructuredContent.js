@@ -22,23 +22,26 @@ const StructuredContent = ({ locale, content }) => {
                 <Link key={slug} href={`/formazione?cat=${slug}`} passHref>
                   {/* <a title={title} className="no-underline"> */}
                   <div
-                    className={`flex cursor-pointer flex-wrap items-center overflow-hidden border-b ${
+                    className={`flex cursor-pointer flex-col overflow-hidden  border-b xl:flex-row xl:items-center ${
                       id === 0 && "border-t"
                     } border-gray py-4 xl:py-8`}
                   >
-                    <div>
+                    <div className="flex items-center">
                       <svg
-                        className="h-[28px] w-[28px] xl:h-[58px] xl:w-[58px]"
+                        className="h-[18px] w-[18px] sm:h-[28px] sm:w-[28px] xl:h-[58px] xl:w-[58px]"
                         viewBox="0 0 58 58"
                       >
                         <circle cx="29" cy="29" r="29" fill={color.hex} />
                       </svg>
+                      <div className="flex items-center sm:flex-none">
+                        <div className="px-2 pt-1 text-base sm:px-3 sm:pt-0 sm:text-lg lg:text-2xl xl:px-6">
+                          {title.toUpperCase()}{" "}
+                        </div>
+
+                        <div className="ml-auto h-[28px] w-[28px] bg-arrow-small-right lg:h-[38px] lg:w-[38px] xl:block" />
+                      </div>
                     </div>
-                    <div className="px-3 text-lg lg:text-2xl xl:px-6">
-                      {title.toUpperCase()}{" "}
-                    </div>
-                    <div className="hidden h-[38px] w-[38px] lg:block lg:bg-arrow-small-right" />
-                    <div className="w-[356px] flex-none pt-3 text-xxs xl:ml-auto xl:pt-0">
+                    <div className="pt-3 text-xxs lg:w-[356px] xl:ml-auto xl:pt-0">
                       {description}
                     </div>
                   </div>
@@ -60,7 +63,9 @@ const StructuredContent = ({ locale, content }) => {
                     } p-6`}
                   >
                     <div className="pb-2 text-xxs ">{subtitle.toUpperCase()}</div>
-                    <div className="text-base font-semibold">{title.toUpperCase()}</div>
+                    <div className="text-sm font-semibold lg:text-base">
+                      {title.toUpperCase()}
+                    </div>
                   </div>
                   <div
                     className="promobox pb-2 sm:pl-3 lg:pl-6"
