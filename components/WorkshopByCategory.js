@@ -1,26 +1,31 @@
-import translate from "lib/locales";
-import { isFinished, enhanceEvents, sortDesc, sortAsc } from "lib/utils";
-import PreviewCard from "components/cards/PreviewCard";
-import { useState, useEffect } from "react";
-import { useRouter } from "next/router";
+import translate from 'lib/locales';
+import { isFinished, enhanceEvents, sortDesc, sortAsc } from 'lib/utils';
+import PreviewCard from 'components/cards/PreviewCard';
+import { useState, useEffect } from 'react';
+import { useRouter } from 'next/router';
 
 const MAX = 6;
 function WorkshopByCategory({ list, locale, group }) {
-  console.log("list", list);
+  console.log('list', list);
   const router = useRouter();
 
-  const [workshopCat, setWorkshopCat] = useState();
+  const [workshopCat, setWorkshopCat] = useState('');
 
   useEffect(() => {
     const urlParams = new URLSearchParams(window.location.search);
-    const cat = urlParams.get("cat").toLowerCase();
-    if (cat) setWorkshopCat(cat);
+    let catParam = urlParams.get('cat');
+    if (catParam) {
+      const cat = urlParams.get('cat').toLowerCase();
+      if (cat) setWorkshopCat(cat);
+    } else {
+      setWorkshopCat('');
+    }
   }, []);
 
   let finished = [];
   let active = [];
   let filterByCategory = null;
-  if (workshopCat && workshopCat !== "all") {
+  if (workshopCat && workshopCat !== 'all') {
     filterByCategory = list.filter(({ workshopCategory }) =>
       workshopCategory.some(({ slug }) => slug == workshopCat)
     );
@@ -28,21 +33,21 @@ function WorkshopByCategory({ list, locale, group }) {
   const resultList = enhanceEvents(filterByCategory || list);
   finished = sortDesc(
     resultList?.filter((e) => e.finished),
-    "startDate"
+    'startDate'
   );
   active = sortAsc(
     resultList?.filter((e) => !e.finished),
-    "nextDate"
+    'nextDate'
   );
   const showHeaders = finished.length > 0 && active.length > 0;
 
   return (
     <div className="container my-4">
-      <h1 className="title">{workshopCat !== "all" && workshopCat}</h1>
+      <h1 className="title">{workshopCat !== 'all' && workshopCat}</h1>
 
       {showHeaders && (
         <div className="mt-20 border-b  border-black pb-5 text-lg font-semibold uppercase">
-          {translate("next_events", locale)}
+          {translate('next_events', locale)}
         </div>
       )}
       {active.length > 0 && (
@@ -54,7 +59,7 @@ function WorkshopByCategory({ list, locale, group }) {
       )}
       {showHeaders && (
         <div className="mt-20 border-b  border-black pb-5 text-lg font-semibold  uppercase">
-          {translate("previous_events", locale)}
+          {translate('previous_events', locale)}
         </div>
       )}
       {finished.length > 0 && (

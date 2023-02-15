@@ -824,48 +824,6 @@
     ]
   },
   {
-    "id": "109327534",
-    "isIndex": false,
-    "indexType": "",
-    "slugs": {
-      "it": [
-        "studio",
-        "academy"
-      ],
-      "en": [
-        "studio",
-        "academy"
-      ]
-    },
-    "__typename": "page",
-    "paths": [
-      {
-        "locale": "it",
-        "slugs": [
-          "studio",
-          "academy"
-        ]
-      },
-      {
-        "locale": "en",
-        "slugs": [
-          "studio",
-          "academy"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "it",
-        "url": "studio/academy"
-      },
-      {
-        "locale": "en",
-        "url": "studio/academy"
-      }
-    ]
-  },
-  {
     "id": "7228713",
     "slugs": {
       "en": [
@@ -940,45 +898,6 @@
       {
         "locale": "it",
         "url": "linguaggi"
-      }
-    ]
-  },
-  {
-    "id": "109336246",
-    "slugs": {
-      "en": [
-        "workshops"
-      ],
-      "it": [
-        "workshop"
-      ]
-    },
-    "isIndex": true,
-    "indexType": "workshops",
-    "__typename": "page",
-    "group": "page",
-    "paths": [
-      {
-        "locale": "en",
-        "slugs": [
-          "workshops"
-        ]
-      },
-      {
-        "locale": "it",
-        "slugs": [
-          "workshop"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "en",
-        "url": "workshops"
-      },
-      {
-        "locale": "it",
-        "url": "workshop"
       }
     ]
   },
@@ -5457,6 +5376,36 @@
     ]
   },
   {
+    "id": "64007392",
+    "slugs": {
+      "it": [
+        "people",
+        "eventi",
+        "dance-improvisation-resilienza-e-supporto-in-tempi-difficili"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "event",
+    "group": "other-events",
+    "paths": [
+      {
+        "locale": "it",
+        "slugs": [
+          "people",
+          "eventi",
+          "dance-improvisation-resilienza-e-supporto-in-tempi-difficili"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "it",
+        "url": "people/eventi/dance-improvisation-resilienza-e-supporto-in-tempi-difficili"
+      }
+    ]
+  },
+  {
     "id": "7228903",
     "slugs": {
       "en": [
@@ -5983,6 +5932,318 @@
       {
         "locale": "it",
         "url": "people/eventi/il-mondo-altrove"
+      }
+    ]
+  },
+  {
+    "id": "63996343",
+    "slugs": {
+      "it": [
+        "studio",
+        "formazione",
+        "bus-stop-domandarsi"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "workshop",
+    "group": "workshops",
+    "paths": [
+      {
+        "locale": "it",
+        "slugs": [
+          "studio",
+          "formazione",
+          "bus-stop-domandarsi"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "it",
+        "url": "studio/formazione/bus-stop-domandarsi"
+      }
+    ]
+  },
+  {
+    "id": "64004165",
+    "slugs": {
+      "en": [
+        "studio",
+        "workshop",
+        "il-sistema-laban-bartenieff"
+      ],
+      "it": [
+        "studio",
+        "formazione",
+        "il-sistema-laban-bartenieff"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "workshop",
+    "group": "workshops",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "studio",
+          "workshop",
+          "il-sistema-laban-bartenieff"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "studio",
+          "formazione",
+          "il-sistema-laban-bartenieff"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "studio/workshop/il-sistema-laban-bartenieff"
+      },
+      {
+        "locale": "it",
+        "url": "studio/formazione/il-sistema-laban-bartenieff"
+      }
+    ]
+  },
+  {
+    "id": "64000618",
+    "slugs": {
+      "en": [
+        "studio",
+        "workshop",
+        "atelier-coreografico"
+      ],
+      "it": [
+        "studio",
+        "formazione",
+        "atelier-coreografico"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "workshop",
+    "group": "workshops",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "studio",
+          "workshop",
+          "atelier-coreografico"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "studio",
+          "formazione",
+          "atelier-coreografico"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "studio/workshop/atelier-coreografico"
+      },
+      {
+        "locale": "it",
+        "url": "studio/formazione/atelier-coreografico"
+      }
+    ]
+  },
+  {
+    "id": "63998632",
+    "slugs": {
+      "en": [
+        "studio",
+        "workshop",
+        "countertechnique-r-workshop"
+      ],
+      "it": [
+        "studio",
+        "formazione",
+        "countertechnique-r-workshop"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "workshop",
+    "group": "workshops",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "studio",
+          "workshop",
+          "countertechnique-r-workshop"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "studio",
+          "formazione",
+          "countertechnique-r-workshop"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "studio/workshop/countertechnique-r-workshop"
+      },
+      {
+        "locale": "it",
+        "url": "studio/formazione/countertechnique-r-workshop"
+      }
+    ]
+  },
+  {
+    "id": "63998813",
+    "slugs": {
+      "en": [
+        "studio",
+        "workshop",
+        "studi-sul-movimento"
+      ],
+      "it": [
+        "studio",
+        "formazione",
+        "studi-sul-movimento"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "workshop",
+    "group": "workshops",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "studio",
+          "workshop",
+          "studi-sul-movimento"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "studio",
+          "formazione",
+          "studi-sul-movimento"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "studio/workshop/studi-sul-movimento"
+      },
+      {
+        "locale": "it",
+        "url": "studio/formazione/studi-sul-movimento"
+      }
+    ]
+  },
+  {
+    "id": "64000879",
+    "slugs": {
+      "en": [
+        "studio",
+        "workshop",
+        "beamish-mind-body-balancing"
+      ],
+      "it": [
+        "studio",
+        "formazione",
+        "beamish-mind-body-balancing"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "workshop",
+    "group": "workshops",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "studio",
+          "workshop",
+          "beamish-mind-body-balancing"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "studio",
+          "formazione",
+          "beamish-mind-body-balancing"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "studio/workshop/beamish-mind-body-balancing"
+      },
+      {
+        "locale": "it",
+        "url": "studio/formazione/beamish-mind-body-balancing"
+      }
+    ]
+  },
+  {
+    "id": "64005217",
+    "slugs": {
+      "en": [
+        "studio",
+        "workshop",
+        "atelier-coreografico-splash"
+      ],
+      "it": [
+        "studio",
+        "formazione",
+        "atelier-coreografico-splash"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "workshop",
+    "group": "workshops",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "studio",
+          "workshop",
+          "atelier-coreografico-splash"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "studio",
+          "formazione",
+          "atelier-coreografico-splash"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "studio/workshop/atelier-coreografico-splash"
+      },
+      {
+        "locale": "it",
+        "url": "studio/formazione/atelier-coreografico-splash"
       }
     ]
   },
@@ -6833,32 +7094,6 @@
     ]
   },
   {
-    "id": "31133530",
-    "slugs": {
-      "it": [
-        "napoli-e-marsiglia-citta-mediterranee"
-      ]
-    },
-    "isIndex": false,
-    "indexType": "",
-    "__typename": "workshop",
-    "group": "languages",
-    "paths": [
-      {
-        "locale": "it",
-        "slugs": [
-          "napoli-e-marsiglia-citta-mediterranee"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "it",
-        "url": "napoli-e-marsiglia-citta-mediterranee"
-      }
-    ]
-  },
-  {
     "id": "31130050",
     "slugs": {
       "it": [
@@ -6881,6 +7116,32 @@
       {
         "locale": "it",
         "url": "la-geopoetica-del-mondo-arabo"
+      }
+    ]
+  },
+  {
+    "id": "31133530",
+    "slugs": {
+      "it": [
+        "napoli-e-marsiglia-citta-mediterranee"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "workshop",
+    "group": "languages",
+    "paths": [
+      {
+        "locale": "it",
+        "slugs": [
+          "napoli-e-marsiglia-citta-mediterranee"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "it",
+        "url": "napoli-e-marsiglia-citta-mediterranee"
       }
     ]
   },
@@ -8173,6 +8434,53 @@
       {
         "locale": "it",
         "url": "studio/artisti-associati/pietro-marullo"
+      }
+    ]
+  },
+  {
+    "id": "64083378",
+    "slugs": {
+      "en": [
+        "studio",
+        "artistic-residences",
+        "giselda-ranieri"
+      ],
+      "it": [
+        "studio",
+        "residenze-artistiche",
+        "giselda-ranieri"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "artist",
+    "group": "artistic-residences",
+    "paths": [
+      {
+        "locale": "en",
+        "slugs": [
+          "studio",
+          "artistic-residences",
+          "giselda-ranieri"
+        ]
+      },
+      {
+        "locale": "it",
+        "slugs": [
+          "studio",
+          "residenze-artistiche",
+          "giselda-ranieri"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "en",
+        "url": "studio/artistic-residences/giselda-ranieri"
+      },
+      {
+        "locale": "it",
+        "url": "studio/residenze-artistiche/giselda-ranieri"
       }
     ]
   },
@@ -9540,6 +9848,118 @@
     ]
   },
   {
+    "id": "55447343",
+    "slugs": {
+      "it": [
+        "news",
+        "jamila"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "news",
+    "group": "news-index",
+    "paths": [
+      {
+        "locale": "it",
+        "slugs": [
+          "news",
+          "jamila"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "it",
+        "url": "news/jamila"
+      }
+    ]
+  },
+  {
+    "id": "45353736",
+    "slugs": {
+      "it": [
+        "news",
+        "linguaggi"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "news",
+    "group": "news-index",
+    "paths": [
+      {
+        "locale": "it",
+        "slugs": [
+          "news",
+          "linguaggi"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "it",
+        "url": "news/linguaggi"
+      }
+    ]
+  },
+  {
+    "id": "56051517",
+    "slugs": {
+      "it": [
+        "news",
+        "linguaggi-2022-diventa-podcast"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "news",
+    "group": "news-index",
+    "paths": [
+      {
+        "locale": "it",
+        "slugs": [
+          "news",
+          "linguaggi-2022-diventa-podcast"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "it",
+        "url": "news/linguaggi-2022-diventa-podcast"
+      }
+    ]
+  },
+  {
+    "id": "64031513",
+    "slugs": {
+      "it": [
+        "news",
+        "oriente-occidente-2023"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "news",
+    "group": "news-index",
+    "paths": [
+      {
+        "locale": "it",
+        "slugs": [
+          "news",
+          "oriente-occidente-2023"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "it",
+        "url": "news/oriente-occidente-2023"
+      }
+    ]
+  },
+  {
     "id": "63837705",
     "slugs": {
       "it": [
@@ -9676,34 +10096,6 @@
       {
         "locale": "it",
         "url": "news/un-bando-ministeriale-su-arti-performative-e-disabilita"
-      }
-    ]
-  },
-  {
-    "id": "56051517",
-    "slugs": {
-      "it": [
-        "news",
-        "linguaggi-2022-diventa-podcast"
-      ]
-    },
-    "isIndex": false,
-    "indexType": "",
-    "__typename": "news",
-    "group": "news-index",
-    "paths": [
-      {
-        "locale": "it",
-        "slugs": [
-          "news",
-          "linguaggi-2022-diventa-podcast"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "it",
-        "url": "news/linguaggi-2022-diventa-podcast"
       }
     ]
   },
@@ -9872,62 +10264,6 @@
       {
         "locale": "it",
         "url": "news/lorenzo-noto"
-      }
-    ]
-  },
-  {
-    "id": "45353736",
-    "slugs": {
-      "it": [
-        "news",
-        "linguaggi"
-      ]
-    },
-    "isIndex": false,
-    "indexType": "",
-    "__typename": "news",
-    "group": "news-index",
-    "paths": [
-      {
-        "locale": "it",
-        "slugs": [
-          "news",
-          "linguaggi"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "it",
-        "url": "news/linguaggi"
-      }
-    ]
-  },
-  {
-    "id": "55447343",
-    "slugs": {
-      "it": [
-        "news",
-        "laila-sit-aboha"
-      ]
-    },
-    "isIndex": false,
-    "indexType": "",
-    "__typename": "news",
-    "group": "news-index",
-    "paths": [
-      {
-        "locale": "it",
-        "slugs": [
-          "news",
-          "laila-sit-aboha"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "it",
-        "url": "news/laila-sit-aboha"
       }
     ]
   },

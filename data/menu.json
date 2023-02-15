@@ -50,54 +50,6 @@
   {
     "routes": [
       "studio",
-      "academy"
-    ],
-    "link": {
-      "__typename": "PageRecord",
-      "id": "109327534",
-      "slug": "academy",
-      "slugs": [
-        {
-          "locale": "en",
-          "slug": "academy"
-        },
-        {
-          "locale": "it",
-          "slug": "academy"
-        }
-      ],
-      "indexType": "",
-      "isIndex": false
-    },
-    "lang": "it"
-  },
-  {
-    "routes": [
-      "studio",
-      "formazione"
-    ],
-    "link": {
-      "__typename": "PageRecord",
-      "id": "7228705",
-      "slug": "formazione",
-      "slugs": [
-        {
-          "locale": "en",
-          "slug": "workshop"
-        },
-        {
-          "locale": "it",
-          "slug": "formazione"
-        }
-      ],
-      "indexType": "workshops",
-      "isIndex": true
-    },
-    "lang": "it"
-  },
-  {
-    "routes": [
-      "studio",
       "gli-spazi"
     ],
     "link": {
@@ -566,54 +518,6 @@
       ],
       "indexType": "",
       "isIndex": false
-    },
-    "lang": "en"
-  },
-  {
-    "routes": [
-      "studio",
-      "academy"
-    ],
-    "link": {
-      "__typename": "PageRecord",
-      "id": "109327534",
-      "slug": "academy",
-      "slugs": [
-        {
-          "locale": "en",
-          "slug": "academy"
-        },
-        {
-          "locale": "it",
-          "slug": "academy"
-        }
-      ],
-      "indexType": "",
-      "isIndex": false
-    },
-    "lang": "en"
-  },
-  {
-    "routes": [
-      "studio",
-      "workshop"
-    ],
-    "link": {
-      "__typename": "PageRecord",
-      "id": "7228705",
-      "slug": "formazione",
-      "slugs": [
-        {
-          "locale": "en",
-          "slug": "workshop"
-        },
-        {
-          "locale": "it",
-          "slug": "formazione"
-        }
-      ],
-      "indexType": "workshops",
-      "isIndex": true
     },
     "lang": "en"
   },
