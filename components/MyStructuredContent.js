@@ -17,15 +17,16 @@ const StructuredContent = ({ locale, content }) => {
       case "WorkshopCategoriesBlockRecord":
         return (
           <div className="py-6 lg:py-12 2xl:py-16" key={record.id}>
-            {record.category.map(({ title, description, color, slug }, id) => {
+            {record.category.map(({ title, description, color, slug, overImage }, id) => {
               return (
                 <Link key={slug} href={`/formazione?cat=${slug}`} passHref>
                   {/* <a title={title} className="no-underline"> */}
                   <div
-                    className={`flex cursor-pointer flex-col overflow-hidden  border-b xl:flex-row xl:items-center ${
-                      id === 0 && "border-t"
+                    className={`relative flex cursor-pointer flex-col overflow-hidden border-b hover:bg-black hover:bg-opacity-50 xl:flex-row xl:items-center ${
+                      id === 0 && "border-t "
                     } border-gray py-4 xl:py-8`}
                   >
+                    <div className="w-100 h-100 absolute hover:bg-red" />
                     <div className="flex items-center">
                       <svg
                         className="h-[18px] w-[18px] sm:h-[28px] sm:w-[28px] xl:h-[58px] xl:w-[58px]"
