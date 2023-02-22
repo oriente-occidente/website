@@ -43,13 +43,13 @@ function WorkshopByCategory({ list, locale, group }) {
 
   return (
     <div className="container my-4">
-      {workshopCat !== "all" && (
+      {workshopCat && workshopCat !== "all" && (
         <div className="pt-1 lg:flex lg:justify-between lg:pt-0">
           <div>
             <h1 className="title">{workshopCat}</h1>
           </div>
 
-          <Link href="studio/academy" locale={locale}>
+          <Link href="studio/formazione" locale={locale}>
             <a className="hover:text-red">
               <div className="flex items-center">
                 <div className="mr-4 h-5 w-5 flex-none bg-arrow-left-black" />

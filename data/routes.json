@@ -338,7 +338,7 @@
     "slugs": {
       "it": [
         "studio",
-        "formazione"
+        "workshop"
       ],
       "en": [
         "studio",
@@ -351,7 +351,7 @@
         "locale": "it",
         "slugs": [
           "studio",
-          "formazione"
+          "workshop"
         ]
       },
       {
@@ -365,7 +365,7 @@
     "urls": [
       {
         "locale": "it",
-        "url": "studio/formazione"
+        "url": "studio/workshop"
       },
       {
         "locale": "en",
@@ -820,6 +820,48 @@
       {
         "locale": "en",
         "url": "studio"
+      }
+    ]
+  },
+  {
+    "id": "122733981",
+    "isIndex": false,
+    "indexType": "",
+    "slugs": {
+      "it": [
+        "studio",
+        "formazione"
+      ],
+      "en": [
+        "studio",
+        "academy"
+      ]
+    },
+    "__typename": "page",
+    "paths": [
+      {
+        "locale": "it",
+        "slugs": [
+          "studio",
+          "formazione"
+        ]
+      },
+      {
+        "locale": "en",
+        "slugs": [
+          "studio",
+          "academy"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "it",
+        "url": "studio/formazione"
+      },
+      {
+        "locale": "en",
+        "url": "studio/academy"
       }
     ]
   },
@@ -5936,36 +5978,6 @@
     ]
   },
   {
-    "id": "63996343",
-    "slugs": {
-      "it": [
-        "studio",
-        "formazione",
-        "bus-stop-domandarsi"
-      ]
-    },
-    "isIndex": false,
-    "indexType": "",
-    "__typename": "workshop",
-    "group": "workshops",
-    "paths": [
-      {
-        "locale": "it",
-        "slugs": [
-          "studio",
-          "formazione",
-          "bus-stop-domandarsi"
-        ]
-      }
-    ],
-    "urls": [
-      {
-        "locale": "it",
-        "url": "studio/formazione/bus-stop-domandarsi"
-      }
-    ]
-  },
-  {
     "id": "64004165",
     "slugs": {
       "en": [
@@ -5975,7 +5987,7 @@
       ],
       "it": [
         "studio",
-        "formazione",
+        "workshop",
         "il-sistema-laban-bartenieff"
       ]
     },
@@ -5996,7 +6008,7 @@
         "locale": "it",
         "slugs": [
           "studio",
-          "formazione",
+          "workshop",
           "il-sistema-laban-bartenieff"
         ]
       }
@@ -6008,7 +6020,37 @@
       },
       {
         "locale": "it",
-        "url": "studio/formazione/il-sistema-laban-bartenieff"
+        "url": "studio/workshop/il-sistema-laban-bartenieff"
+      }
+    ]
+  },
+  {
+    "id": "63996343",
+    "slugs": {
+      "it": [
+        "studio",
+        "workshop",
+        "bus-stop-domandarsi"
+      ]
+    },
+    "isIndex": false,
+    "indexType": "",
+    "__typename": "workshop",
+    "group": "workshops",
+    "paths": [
+      {
+        "locale": "it",
+        "slugs": [
+          "studio",
+          "workshop",
+          "bus-stop-domandarsi"
+        ]
+      }
+    ],
+    "urls": [
+      {
+        "locale": "it",
+        "url": "studio/workshop/bus-stop-domandarsi"
       }
     ]
   },
@@ -6022,7 +6064,7 @@
       ],
       "it": [
         "studio",
-        "formazione",
+        "workshop",
         "atelier-coreografico"
       ]
     },
@@ -6043,7 +6085,7 @@
         "locale": "it",
         "slugs": [
           "studio",
-          "formazione",
+          "workshop",
           "atelier-coreografico"
         ]
       }
@@ -6055,7 +6097,7 @@
       },
       {
         "locale": "it",
-        "url": "studio/formazione/atelier-coreografico"
+        "url": "studio/workshop/atelier-coreografico"
       }
     ]
   },
@@ -6069,7 +6111,7 @@
       ],
       "it": [
         "studio",
-        "formazione",
+        "workshop",
         "countertechnique-r-workshop"
       ]
     },
@@ -6090,7 +6132,7 @@
         "locale": "it",
         "slugs": [
           "studio",
-          "formazione",
+          "workshop",
           "countertechnique-r-workshop"
         ]
       }
@@ -6102,7 +6144,7 @@
       },
       {
         "locale": "it",
-        "url": "studio/formazione/countertechnique-r-workshop"
+        "url": "studio/workshop/countertechnique-r-workshop"
       }
     ]
   },
@@ -6116,7 +6158,7 @@
       ],
       "it": [
         "studio",
-        "formazione",
+        "workshop",
         "studi-sul-movimento"
       ]
     },
@@ -6137,7 +6179,7 @@
         "locale": "it",
         "slugs": [
           "studio",
-          "formazione",
+          "workshop",
           "studi-sul-movimento"
         ]
       }
@@ -6149,7 +6191,7 @@
       },
       {
         "locale": "it",
-        "url": "studio/formazione/studi-sul-movimento"
+        "url": "studio/workshop/studi-sul-movimento"
       }
     ]
   },
@@ -6163,7 +6205,7 @@
       ],
       "it": [
         "studio",
-        "formazione",
+        "workshop",
         "beamish-mind-body-balancing"
       ]
     },
@@ -6184,7 +6226,7 @@
         "locale": "it",
         "slugs": [
           "studio",
-          "formazione",
+          "workshop",
           "beamish-mind-body-balancing"
         ]
       }
@@ -6196,7 +6238,7 @@
       },
       {
         "locale": "it",
-        "url": "studio/formazione/beamish-mind-body-balancing"
+        "url": "studio/workshop/beamish-mind-body-balancing"
       }
     ]
   },
@@ -6210,7 +6252,7 @@
       ],
       "it": [
         "studio",
-        "formazione",
+        "workshop",
         "atelier-coreografico-splash"
       ]
     },
@@ -6231,7 +6273,7 @@
         "locale": "it",
         "slugs": [
           "studio",
-          "formazione",
+          "workshop",
           "atelier-coreografico-splash"
         ]
       }
@@ -6243,7 +6285,7 @@
       },
       {
         "locale": "it",
-        "url": "studio/formazione/atelier-coreografico-splash"
+        "url": "studio/workshop/atelier-coreografico-splash"
       }
     ]
   },
@@ -6257,7 +6299,7 @@
       ],
       "it": [
         "studio",
-        "formazione",
+        "workshop",
         "workshop-diversita-in-scena"
       ]
     },
@@ -6278,7 +6320,7 @@
         "locale": "it",
         "slugs": [
           "studio",
-          "formazione",
+          "workshop",
           "workshop-diversita-in-scena"
         ]
       }
@@ -6290,7 +6332,7 @@
       },
       {
         "locale": "it",
-        "url": "studio/formazione/workshop-diversita-in-scena"
+        "url": "studio/workshop/workshop-diversita-in-scena"
       }
     ]
   },
@@ -6304,7 +6346,7 @@
       ],
       "it": [
         "studio",
-        "formazione",
+        "workshop",
         "workshop-sul-tarantismo-canzoniere-gracanico-salentino"
       ]
     },
@@ -6325,7 +6367,7 @@
         "locale": "it",
         "slugs": [
           "studio",
-          "formazione",
+          "workshop",
           "workshop-sul-tarantismo-canzoniere-gracanico-salentino"
         ]
       }
@@ -6337,7 +6379,7 @@
       },
       {
         "locale": "it",
-        "url": "studio/formazione/workshop-sul-tarantismo-canzoniere-gracanico-salentino"
+        "url": "studio/workshop/workshop-sul-tarantismo-canzoniere-gracanico-salentino"
       }
     ]
   },
@@ -6351,7 +6393,7 @@
       ],
       "it": [
         "studio",
-        "formazione",
+        "workshop",
         "lim-workshop"
       ]
     },
@@ -6372,7 +6414,7 @@
         "locale": "it",
         "slugs": [
           "studio",
-          "formazione",
+          "workshop",
           "lim-workshop"
         ]
       }
@@ -6384,7 +6426,7 @@
       },
       {
         "locale": "it",
-        "url": "studio/formazione/lim-workshop"
+        "url": "studio/workshop/lim-workshop"
       }
     ]
   },
@@ -6398,7 +6440,7 @@
       ],
       "it": [
         "studio",
-        "formazione",
+        "workshop",
         "le-phare-workshop-cie-massala"
       ]
     },
@@ -6419,7 +6461,7 @@
         "locale": "it",
         "slugs": [
           "studio",
-          "formazione",
+          "workshop",
           "le-phare-workshop-cie-massala"
         ]
       }
@@ -6431,7 +6473,7 @@
       },
       {
         "locale": "it",
-        "url": "studio/formazione/le-phare-workshop-cie-massala"
+        "url": "studio/workshop/le-phare-workshop-cie-massala"
       }
     ]
   },
@@ -6445,7 +6487,7 @@
       ],
       "it": [
         "studio",
-        "formazione",
+        "workshop",
         "re-start-laboratorio-di-teatro-fisico"
       ]
     },
@@ -6466,7 +6508,7 @@
         "locale": "it",
         "slugs": [
           "studio",
-          "formazione",
+          "workshop",
           "re-start-laboratorio-di-teatro-fisico"
         ]
       }
@@ -6478,7 +6520,7 @@
       },
       {
         "locale": "it",
-        "url": "studio/formazione/re-start-laboratorio-di-teatro-fisico"
+        "url": "studio/workshop/re-start-laboratorio-di-teatro-fisico"
       }
     ]
   },
@@ -6492,7 +6534,7 @@
       ],
       "it": [
         "studio",
-        "formazione",
+        "workshop",
         "artylogica-workshop-vittoria-de-ferrari-sapetto"
       ]
     },
@@ -6513,7 +6555,7 @@
         "locale": "it",
         "slugs": [
           "studio",
-          "formazione",
+          "workshop",
           "artylogica-workshop-vittoria-de-ferrari-sapetto"
         ]
       }
@@ -6525,7 +6567,7 @@
       },
       {
         "locale": "it",
-        "url": "studio/formazione/artylogica-workshop-vittoria-de-ferrari-sapetto"
+        "url": "studio/workshop/artylogica-workshop-vittoria-de-ferrari-sapetto"
       }
     ]
   },
@@ -6539,7 +6581,7 @@
       ],
       "it": [
         "studio",
-        "formazione",
+        "workshop",
         "workshop-di-danza-contemporanea-philippe-kratz"
       ]
     },
@@ -6560,7 +6602,7 @@
         "locale": "it",
         "slugs": [
           "studio",
-          "formazione",
+          "workshop",
           "workshop-di-danza-contemporanea-philippe-kratz"
         ]
       }
@@ -6572,7 +6614,7 @@
       },
       {
         "locale": "it",
-        "url": "studio/formazione/workshop-di-danza-contemporanea-philippe-kratz"
+        "url": "studio/workshop/workshop-di-danza-contemporanea-philippe-kratz"
       }
     ]
   },
@@ -6586,7 +6628,7 @@
       ],
       "it": [
         "studio",
-        "formazione",
+        "workshop",
         "workshop-con-sorimi-amada"
       ]
     },
@@ -6607,7 +6649,7 @@
         "locale": "it",
         "slugs": [
           "studio",
-          "formazione",
+          "workshop",
           "workshop-con-sorimi-amada"
         ]
       }
@@ -6619,7 +6661,7 @@
       },
       {
         "locale": "it",
-        "url": "studio/formazione/workshop-con-sorimi-amada"
+        "url": "studio/workshop/workshop-con-sorimi-amada"
       }
     ]
   },
@@ -6633,7 +6675,7 @@
       ],
       "it": [
         "studio",
-        "formazione",
+        "workshop",
         "workshop-di-danza-contemporanea"
       ]
     },
@@ -6654,7 +6696,7 @@
         "locale": "it",
         "slugs": [
           "studio",
-          "formazione",
+          "workshop",
           "workshop-di-danza-contemporanea"
         ]
       }
@@ -6666,7 +6708,7 @@
       },
       {
         "locale": "it",
-        "url": "studio/formazione/workshop-di-danza-contemporanea"
+        "url": "studio/workshop/workshop-di-danza-contemporanea"
       }
     ]
   },
@@ -6680,7 +6722,7 @@
       ],
       "it": [
         "studio",
-        "formazione",
+        "workshop",
         "bus-stop"
       ]
     },
@@ -6701,7 +6743,7 @@
         "locale": "it",
         "slugs": [
           "studio",
-          "formazione",
+          "workshop",
           "bus-stop"
         ]
       }
@@ -6713,7 +6755,7 @@
       },
       {
         "locale": "it",
-        "url": "studio/formazione/bus-stop"
+        "url": "studio/workshop/bus-stop"
       }
     ]
   },
@@ -6727,7 +6769,7 @@
       ],
       "it": [
         "studio",
-        "formazione",
+        "workshop",
         "train-the-trainers-train-the-artists"
       ]
     },
@@ -6748,7 +6790,7 @@
         "locale": "it",
         "slugs": [
           "studio",
-          "formazione",
+          "workshop",
           "train-the-trainers-train-the-artists"
         ]
       }
@@ -6760,7 +6802,7 @@
       },
       {
         "locale": "it",
-        "url": "studio/formazione/train-the-trainers-train-the-artists"
+        "url": "studio/workshop/train-the-trainers-train-the-artists"
       }
     ]
   },
@@ -6774,7 +6816,7 @@
       ],
       "it": [
         "studio",
-        "formazione",
+        "workshop",
         "oltre-il-confine-workshop-intensivo-di-teatro-danza"
       ]
     },
@@ -6795,7 +6837,7 @@
         "locale": "it",
         "slugs": [
           "studio",
-          "formazione",
+          "workshop",
           "oltre-il-confine-workshop-intensivo-di-teatro-danza"
         ]
       }
@@ -6807,7 +6849,7 @@
       },
       {
         "locale": "it",
-        "url": "studio/formazione/oltre-il-confine-workshop-intensivo-di-teatro-danza"
+        "url": "studio/workshop/oltre-il-confine-workshop-intensivo-di-teatro-danza"
       }
     ]
   },
@@ -6821,7 +6863,7 @@
       ],
       "it": [
         "studio",
-        "formazione",
+        "workshop",
         "la-veronal-working-tools"
       ]
     },
@@ -6842,7 +6884,7 @@
         "locale": "it",
         "slugs": [
           "studio",
-          "formazione",
+          "workshop",
           "la-veronal-working-tools"
         ]
       }
@@ -6854,7 +6896,7 @@
       },
       {
         "locale": "it",
-        "url": "studio/formazione/la-veronal-working-tools"
+        "url": "studio/workshop/la-veronal-working-tools"
       }
     ]
   },
@@ -6868,7 +6910,7 @@
       ],
       "it": [
         "studio",
-        "formazione",
+        "workshop",
         "masterclass-sidi-larbi-cherkaoui-repertory-fractus-v"
       ]
     },
@@ -6889,7 +6931,7 @@
         "locale": "it",
         "slugs": [
           "studio",
-          "formazione",
+          "workshop",
           "masterclass-sidi-larbi-cherkaoui-repertory-fractus-v"
         ]
       }
@@ -6901,7 +6943,7 @@
       },
       {
         "locale": "it",
-        "url": "studio/formazione/masterclass-sidi-larbi-cherkaoui-repertory-fractus-v"
+        "url": "studio/workshop/masterclass-sidi-larbi-cherkaoui-repertory-fractus-v"
       }
     ]
   },
@@ -6915,7 +6957,7 @@
       ],
       "it": [
         "studio",
-        "formazione",
+        "workshop",
         "laboratorio-di-ricerca-corporea"
       ]
     },
@@ -6936,7 +6978,7 @@
         "locale": "it",
         "slugs": [
           "studio",
-          "formazione",
+          "workshop",
           "laboratorio-di-ricerca-corporea"
         ]
       }
@@ -6948,7 +6990,7 @@
       },
       {
         "locale": "it",
-        "url": "studio/formazione/laboratorio-di-ricerca-corporea"
+        "url": "studio/workshop/laboratorio-di-ricerca-corporea"
       }
     ]
   },
@@ -6962,7 +7004,7 @@
       ],
       "it": [
         "studio",
-        "formazione",
+        "workshop",
         "lab-impart-ripensare-il-palcoscenico"
       ]
     },
@@ -6983,7 +7025,7 @@
         "locale": "it",
         "slugs": [
           "studio",
-          "formazione",
+          "workshop",
           "lab-impart-ripensare-il-palcoscenico"
         ]
       }
@@ -6995,7 +7037,7 @@
       },
       {
         "locale": "it",
-        "url": "studio/formazione/lab-impart-ripensare-il-palcoscenico"
+        "url": "studio/workshop/lab-impart-ripensare-il-palcoscenico"
       }
     ]
   },
@@ -7009,7 +7051,7 @@
       ],
       "it": [
         "studio",
-        "formazione",
+        "workshop",
         "tools-for-action-workshop"
       ]
     },
@@ -7030,7 +7072,7 @@
         "locale": "it",
         "slugs": [
           "studio",
-          "formazione",
+          "workshop",
           "tools-for-action-workshop"
         ]
       }
@@ -7042,7 +7084,7 @@
       },
       {
         "locale": "it",
-        "url": "studio/formazione/tools-for-action-workshop"
+        "url": "studio/workshop/tools-for-action-workshop"
       }
     ]
   },
@@ -7056,7 +7098,7 @@
       ],
       "it": [
         "studio",
-        "formazione",
+        "workshop",
         "cunningham-technique-r-workshop"
       ]
     },
@@ -7077,7 +7119,7 @@
         "locale": "it",
         "slugs": [
           "studio",
-          "formazione",
+          "workshop",
           "cunningham-technique-r-workshop"
         ]
       }
@@ -7089,7 +7131,7 @@
       },
       {
         "locale": "it",
-        "url": "studio/formazione/cunningham-technique-r-workshop"
+        "url": "studio/workshop/cunningham-technique-r-workshop"
       }
     ]
   },

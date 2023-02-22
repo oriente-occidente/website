@@ -1,5 +1,6 @@
 import Link from "next/link";
 export default function Breadcrumbs({ background, paths, locale }) {
+  console.log("paths", paths);
   return (
     <nav
       className={`hidden md:block bg-${background} border-y border-y-gray py-2 xl:py-5`}
