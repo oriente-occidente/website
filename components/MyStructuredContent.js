@@ -18,14 +18,13 @@ const StructuredContent = ({ locale, content }) => {
         return (
           <div className="py-6 lg:py-12 2xl:py-16" key={record.id}>
             {record.category.map(({ title, description, color, slug, overImage }, id) => {
-              console.log("over", overImage);
               return (
                 <Link key={slug} href={`/formazione?cat=${slug}`} passHref>
                   {/* <a title={title} className="no-underline"> */}
                   <div
                     className={`group relative flex cursor-pointer flex-col overflow-hidden border-b  xl:flex-row xl:items-center ${
                       id === 0 && "border-t "
-                    } border-gray py-4 hover:text-white xl:py-8`}
+                    } border-gray py-4  ease-in hover:text-white xl:py-8`}
                   >
                     {/* <div className="w-100 h-100 absolute hover:bg-red" /> */}
                     <div className={`z-40 flex items-center  pl-2`}>
@@ -56,13 +55,14 @@ const StructuredContent = ({ locale, content }) => {
                     <div className="z-40 pt-3 pr-1 text-xxs lg:w-[356px] xl:ml-auto xl:pt-0">
                       {description}
                     </div>
-
-                    <div className="w-100 h-100 absolute z-10 group-hover:bg-gray-dark">
-                      <img
-                        className="opacity-0 group-hover:opacity-30"
-                        src={overImage.url}
-                      />
-                    </div>
+                    <div className="absolute top-0 left-0 right-0 z-10 hidden h-full bg-gray-dark/70 group-hover:block"></div>
+                    <Image
+                      className="hidden group-hover:block"
+                      layout="fill"
+                      objectFit="cover"
+                      objectPosition="50% 50%"
+                      data={overImage.responsiveImage}
+                    />
                   </div>
                   {/* </a> */}
                 </Link>
