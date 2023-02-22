@@ -43,7 +43,8 @@
     "year": "Anno",
     "previous_events": "Eventi Precedenti",
     "next_events": "Prossimi Eventi",
-    "payment": "Pagamento"
+    "payment": "Pagamento",
+    "view_all": "Vedi tutti"
   },
   "en": {
     "it": "Italian",
@@ -90,6 +91,7 @@
     "year": "Year",
     "previous_events": "Previous Events",
     "next_events": "Next Events",
-    "payment": "Payment"
+    "payment": "Payment",
+    "view_all": "View all"
   }
 }
