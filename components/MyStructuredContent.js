@@ -22,27 +22,37 @@ const StructuredContent = ({ locale, content }) => {
                 <Link key={slug} href={`/formazione?cat=${slug}`} passHref>
                   {/* <a title={title} className="no-underline"> */}
                   <div
-                    className={`relative flex cursor-pointer flex-col overflow-hidden border-b hover:bg-black hover:bg-opacity-50 xl:flex-row xl:items-center ${
+                    className={`group flex cursor-pointer flex-col overflow-hidden border-b hover:bg-black hover:bg-opacity-20 xl:flex-row xl:items-center ${
                       id === 0 && "border-t "
-                    } border-gray py-4 xl:py-8`}
+                    } border-gray py-4 hover:text-white xl:py-8`}
                   >
-                    <div className="w-100 h-100 absolute hover:bg-red" />
-                    <div className="flex items-center">
+                    {/* <div className="w-100 h-100 absolute hover:bg-red" /> */}
+                    <div className={`flex items-center pl-2`}>
                       <svg
-                        className="h-[18px] w-[18px] sm:h-[28px] sm:w-[28px] xl:h-[58px] xl:w-[58px]"
+                        className="h-[18px] w-[18px] group-hover:w-0 group-hover:opacity-0 sm:h-[28px] sm:w-[28px] xl:h-[58px] xl:w-[58px]"
                         viewBox="0 0 58 58"
                       >
                         <circle cx="29" cy="29" r="29" fill={color.hex} />
                       </svg>
-                      <div className="flex items-center sm:flex-none">
+                      <div
+                        className={`flex items-center group-hover:hidden sm:flex-none`}
+                      >
                         <div className="px-2 pt-1 text-base sm:px-3 sm:pt-0 sm:text-lg lg:text-2xl xl:px-6">
                           {title.toUpperCase()}{" "}
                         </div>
-
-                        <div className="ml-auto h-[28px] w-[28px] bg-arrow-small-right lg:h-[38px] lg:w-[38px] xl:block" />
+                        <div className="ml-auto h-[28px] w-[28px] bg-arrow-small-right group-hover:bg-arrow-right lg:h-[38px] lg:w-[38px] xl:block" />
+                      </div>
+                      <div
+                        style={{ backgroundColor: color.hex }}
+                        className={`hidden items-center rounded-full px-5 group-hover:flex sm:flex-none`}
+                      >
+                        <div className="px-2 pt-1 text-base sm:px-3 sm:pt-0 sm:text-lg lg:text-2xl xl:px-6">
+                          {title.toUpperCase()}{" "}
+                        </div>
+                        <div className="ml-auto h-[28px] w-[28px] bg-arrow-small-right group-hover:bg-arrow-small-right-white lg:h-[38px] lg:w-[38px] xl:block" />
                       </div>
                     </div>
-                    <div className="pt-3 text-xxs lg:w-[356px] xl:ml-auto xl:pt-0">
+                    <div className="pt-3 pr-1 text-xxs lg:w-[356px] xl:ml-auto xl:pt-0">
                       {description}
                     </div>
                   </div>

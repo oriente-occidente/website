@@ -48,6 +48,7 @@ module.exports = {
         "arrow-left": "url('/icone/arrow_long_left.svg')",
         "arrow-left-black": "url('/icone/arrow_long_left_black.svg')",
         "arrow-small-right": "url('/icone/arrow_small_right.svg')",
+        "arrow-small-right-white": "url('/icone/arrow_small_right_white.svg')",
         check: "url('/icone/check.svg')",
         "arrow-small-down": "url('/icone/arrow_small_down.svg')",
         open: "url('/icone/open.svg')",
