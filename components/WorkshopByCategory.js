@@ -44,7 +44,7 @@ function WorkshopByCategory({ list, locale, group }) {
   return (
     <div className="container my-4">
       {workshopCat !== "all" && (
-        <div className="flex justify-between">
+        <div className="pt-1 lg:flex lg:justify-between lg:pt-0">
           <div>
             <h1 className="title">{workshopCat}</h1>
           </div>

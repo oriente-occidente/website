@@ -56,11 +56,16 @@ const StructuredContent = ({ locale, content }) => {
                       {description}
                     </div>
                     <div className="absolute top-0 left-0 right-0 z-10 hidden h-full bg-gray-dark/70 group-hover:block"></div>
+                    {/* <img
+                      className="w-100 h-100 absolute hidden group-hover:block"
+                      src={overImage.url}
+                    /> */}
                     <Image
                       className="hidden group-hover:block"
                       layout="fill"
                       objectFit="cover"
                       objectPosition="50% 50%"
+                      lazyLoad={false}
                       data={overImage.responsiveImage}
                     />
                   </div>
