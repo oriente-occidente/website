@@ -18,16 +18,17 @@ const StructuredContent = ({ locale, content }) => {
         return (
           <div className="py-6 lg:py-12 2xl:py-16" key={record.id}>
             {record.category.map(({ title, description, color, slug, overImage }, id) => {
+              console.log("over", overImage);
               return (
                 <Link key={slug} href={`/formazione?cat=${slug}`} passHref>
                   {/* <a title={title} className="no-underline"> */}
                   <div
-                    className={`group flex cursor-pointer flex-col overflow-hidden border-b hover:bg-black hover:bg-opacity-20 xl:flex-row xl:items-center ${
+                    className={`group relative flex cursor-pointer flex-col overflow-hidden border-b  xl:flex-row xl:items-center ${
                       id === 0 && "border-t "
                     } border-gray py-4 hover:text-white xl:py-8`}
                   >
                     {/* <div className="w-100 h-100 absolute hover:bg-red" /> */}
-                    <div className={`flex items-center pl-2`}>
+                    <div className={`z-40 flex items-center  pl-2`}>
                       <svg
                         className="h-[18px] w-[18px] group-hover:w-0 group-hover:opacity-0 sm:h-[28px] sm:w-[28px] xl:h-[58px] xl:w-[58px]"
                         viewBox="0 0 58 58"
@@ -52,8 +53,15 @@ const StructuredContent = ({ locale, content }) => {
                         <div className="ml-auto h-[28px] w-[28px] bg-arrow-small-right group-hover:bg-arrow-small-right-white lg:h-[38px] lg:w-[38px] xl:block" />
                       </div>
                     </div>
-                    <div className="pt-3 pr-1 text-xxs lg:w-[356px] xl:ml-auto xl:pt-0">
+                    <div className="z-40 pt-3 pr-1 text-xxs lg:w-[356px] xl:ml-auto xl:pt-0">
                       {description}
+                    </div>
+
+                    <div className="w-100 h-100 absolute z-10 group-hover:bg-gray-dark">
+                      <img
+                        className="opacity-0 group-hover:opacity-30"
+                        src={overImage.url}
+                      />
                     </div>
                   </div>
                   {/* </a> */}
