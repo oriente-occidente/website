@@ -19,12 +19,12 @@ const StructuredContent = ({ locale, content }) => {
           <div className="py-6 lg:py-12 2xl:py-16" key={record.id}>
             {record.category.map(({ title, description, color, slug, overImage }, id) => {
               return (
-                <Link key={slug} href={`/formazione?cat=${slug}`} passHref>
+                <Link key={slug} href={`/workshop?cat=${slug}`} passHref>
                   {/* <a title={title} className="no-underline"> */}
                   <div
                     className={`group relative flex cursor-pointer flex-col overflow-hidden border-b  xl:flex-row xl:items-center ${
                       id === 0 && "border-t "
-                    } border-gray py-4  ease-in hover:text-white xl:py-8`}
+                    } border-gray py-4 ease-in hover:text-white xl:py-8`}
                   >
                     {/* <div className="w-100 h-100 absolute hover:bg-red" /> */}
                     <div className={`z-40 flex items-center  pl-2`}>
