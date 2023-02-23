@@ -44,7 +44,8 @@
     "previous_events": "Eventi Precedenti",
     "next_events": "Prossimi Eventi",
     "payment": "Pagamento",
-    "view_all": "Vedi tutti"
+    "view_all": "Vedi tutti",
+    "back": "Torna indietro"
   },
   "en": {
     "it": "Italian",
@@ -92,6 +93,7 @@
     "previous_events": "Previous Events",
     "next_events": "Next Events",
     "payment": "Payment",
-    "view_all": "View all"
+    "view_all": "View all",
+    "back": "Back"
   }
 }
