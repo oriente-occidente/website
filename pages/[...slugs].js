@@ -90,6 +90,24 @@ function Page({ data, locale }) {
     pageType,
   };
 
+  if (indexType === "workshops") {
+    let allBoh = list.reduce((all, { workshopCategory, id }) => {
+      if (workshopCategory.length > 0) {
+        console.log("all", all);
+        workshopCategory.map(({ slug }) => {
+          if (all[slug]) {
+            all[slug].push(id);
+          } else {
+            all[slug] = [id];
+          }
+        });
+      }
+      return all;
+      // console.log("all", all);
+    }, {});
+    console.log("alboh", allBoh);
+  }
+
   const ShareButtons = !isIndex
     ? dynamic(() => import("components/ShareButtons"), { ssr: false })
     : null;
