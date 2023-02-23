@@ -6,9 +6,9 @@ import Head from "next/head";
 import Link from "next/link";
 
 const MAX = 6;
-function WorkshopByCategory({ list, locale, group }) {
+function WorkshopByCategory({ list, locale, categoriesList, heroData }) {
   const [workshopCat, setWorkshopCat] = useState("");
-
+  const { titleHero, descriptionHero } = heroData;
   useEffect(() => {
     const urlParams = new URLSearchParams(window.location.search);
     let catParam = urlParams.get("cat");
@@ -42,35 +42,59 @@ function WorkshopByCategory({ list, locale, group }) {
   return (
     <>
       <Head>
-        <title>{`Worksop ${
-          workshopCat.charAt(0).toUpperCase() + workshopCat.slice(1)
-        } - Oriente Occidente`}</title>
+        <title>
+          {titleHero +
+            ` ${
+              workshopCat.charAt(0).toUpperCase() + workshopCat.slice(1)
+            } - Oriente Occidente`}
+        </title>
       </Head>
-      <div className="container my-4">
-        {workshopCat && workshopCat !== "all" && (
+      <header className="overflow-hidden border-t border-gray py-5 md:border-t-0 md:border-b">
+        <div className="container">
           <div className="pt-1 lg:flex lg:justify-between lg:pt-0">
             <div>
-              <h1 className="title">{workshopCat}</h1>
+              {workshopCat && workshopCat !== "all" ? (
+                <h1 className="title">{titleHero + " - " + workshopCat}</h1>
+              ) : (
+                <h1 className="title">{titleHero}</h1>
+              )}
             </div>
 
-            <div className="flex items-center">
-              <Link className="" href="studio/formazione" locale={locale}>
-                <a className="flex items-center hover:text-red">
-                  <div className="mr-4 h-5 w-5 flex-none bg-arrow-left-black" />
-                  <span className="">{translate("back", locale)} |</span>
-                </a>
-              </Link>
-              <div className="pl-1">
-                <Link className="" href="/workshop" locale={locale}>
+            {workshopCat && workshopCat !== "all" && (
+              <div className="flex items-center">
+                <Link className="" href="studio/formazione" locale={locale}>
                   <a className="flex items-center hover:text-red">
-                    {translate("view_all", locale)}
+                    <div className="mr-4 h-5 w-5 flex-none bg-arrow-left-black" />
+                    <span className="">{translate("back", locale)} |</span>
                   </a>
                 </Link>
+                <div className="pl-1">
+                  {/* <Link className="" href="/workshop?cat=all" locale={locale}> */}
+                  <a
+                    href="/workshop?cat=all"
+                    className="flex items-center hover:text-red"
+                  >
+                    {translate("view_all", locale)}
+                  </a>
+                  {/* </Link> */}
+                </div>
+              </div>
+            )}
+          </div>
+          <h2 className="text-black-light md:mt-1 md:text-sm">{descriptionHero}</h2>
+        </div>
+      </header>
+
+      <div className="container my-4">
+        {workshopCat &&
+          workshopCat !== "all" &&
+          (!filterByCategory || filterByCategory.length == 0 || list.length == 0) && (
+            <div>
+              <div className="mt-20 pb-5 text-lg font-semibold">
+                {translate("no_events", locale)}
               </div>
             </div>
-          </div>
-        )}
-
+          )}
         {showHeaders && (
           <div className="mt-20 border-b  border-black pb-5 text-lg font-semibold uppercase">
             {translate("next_events", locale)}
@@ -98,22 +122,6 @@ function WorkshopByCategory({ list, locale, group }) {
       </div>
     </>
   );
-
-  // return (
-  //   <div className="border-color-gray border-t py-6">
-  //     <div className="container lg:grid lg:grid-cols-2 lg:gap-6">
-  //       {sortList(list, group).map((item) => (
-  //         <PreviewCard
-  //           locale={locale}
-  //           data={item}
-  //           key={item.id}
-  //           group={group}
-  //           year={[].join(', ')}
-  //         />
-  //       ))}
-  //     </div>
-  //   </div>
-  // );
 }
 
 export default WorkshopByCategory;

@@ -5,7 +5,7 @@ import { useEffect } from "react";
 import { doQuery, getPaths } from "lib/api";
 import Layout from "components/Layout";
 import Seo from "components/Seo";
-import { camelCase, getBreadcrumbs } from "lib/utils";
+import { camelCase, getBreadcrumbs, getCategoriesList } from "lib/utils";
 import Breadcrumbs from "components/Breadcrumbs";
 import HeroDetail from "components/hero/HeroDetail";
 import HeroEmpty from "components/hero/HeroEmpty";
@@ -90,24 +90,6 @@ function Page({ data, locale }) {
     pageType,
   };
 
-  if (indexType === "workshops") {
-    let allBoh = list.reduce((all, { workshopCategory, id }) => {
-      if (workshopCategory.length > 0) {
-        console.log("all", all);
-        workshopCategory.map(({ slug }) => {
-          if (all[slug]) {
-            all[slug].push(id);
-          } else {
-            all[slug] = [id];
-          }
-        });
-      }
-      return all;
-      // console.log("all", all);
-    }, {});
-    console.log("alboh", allBoh);
-  }
-
   const ShareButtons = !isIndex
     ? dynamic(() => import("components/ShareButtons"), { ssr: false })
     : null;
@@ -127,7 +109,7 @@ function Page({ data, locale }) {
         ) : heroData.layoutHero == "index" && imageHero ? (
           <HeroIndex data={heroData} />
         ) : (
-          <HeroEmpty data={heroData} />
+          indexType !== "workshops" && <HeroEmpty data={heroData} />
         )}
 
         {payload?.content && <MainContent locale={locale} data={payload.content} />}
@@ -143,7 +125,13 @@ function Page({ data, locale }) {
         {isIndex && !showFilters && isSorted && (
           <>
             {indexType === "workshops" ? (
-              <WorkshopByCategory list={list} group={group} locale={locale} />
+              <WorkshopByCategory
+                list={list}
+                group={group}
+                locale={locale}
+                heroData={heroData}
+                categoriesList={getCategoriesList(list)}
+              />
             ) : (
               <ResultsGridSorted list={list} group={group} locale={locale} />
             )}

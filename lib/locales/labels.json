@@ -45,7 +45,8 @@
     "next_events": "Prossimi Eventi",
     "payment": "Pagamento",
     "view_all": "Vedi tutti",
-    "back": "Torna indietro"
+    "back": "Torna indietro",
+    "no_events": "Nessun workshop trovato in questa categoria"
   },
   "en": {
     "it": "Italian",
@@ -94,6 +95,7 @@
     "next_events": "Next Events",
     "payment": "Payment",
     "view_all": "View all",
-    "back": "Back"
+    "back": "Back",
+    "no_events": "No workshops found in this category"
   }
 }
