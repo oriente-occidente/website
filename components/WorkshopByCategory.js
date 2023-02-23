@@ -7,8 +7,6 @@ import Link from "next/link";
 
 const MAX = 6;
 function WorkshopByCategory({ list, locale, group }) {
-  const router = useRouter();
-
   const [workshopCat, setWorkshopCat] = useState("");
 
   useEffect(() => {
