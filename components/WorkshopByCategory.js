@@ -1,29 +1,35 @@
-import translate from "lib/locales";
-import { enhanceEvents, sortDesc, sortAsc } from "lib/utils";
-import PreviewCard from "components/cards/PreviewCard";
-import { useState, useEffect } from "react";
-import Head from "next/head";
-import Link from "next/link";
+import translate from 'lib/locales';
+import { enhanceEvents, sortDesc, sortAsc } from 'lib/utils';
+import PreviewCard from 'components/cards/PreviewCard';
+import { useState, useEffect } from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
+import { useRouter } from 'next/router';
+import { route } from 'next/dist/server/router';
 
 const MAX = 6;
 function WorkshopByCategory({ list, locale, categoriesList, heroData }) {
-  const [workshopCat, setWorkshopCat] = useState("");
+  const router = useRouter();
+  const [workshopCat, setWorkshopCat] = useState('');
   const { titleHero, descriptionHero } = heroData;
+
   useEffect(() => {
-    const urlParams = new URLSearchParams(window.location.search);
-    let catParam = urlParams.get("cat");
-    if (catParam) {
-      const cat = urlParams.get("cat").toLowerCase();
-      if (cat) setWorkshopCat(cat);
-    } else {
-      setWorkshopCat("");
+    if (router.query) {
+      const urlParams = new URLSearchParams(window.location.search);
+      let catParam = urlParams.get('cat');
+      if (catParam) {
+        const cat = urlParams.get('cat').toLowerCase();
+        if (cat) setWorkshopCat(cat);
+      } else {
+        setWorkshopCat('');
+      }
     }
-  }, []);
+  }, [router.query]);
 
   let finished = [];
   let active = [];
   let filterByCategory = null;
-  if (workshopCat && workshopCat !== "all") {
+  if (workshopCat && workshopCat !== 'all') {
     filterByCategory = list.filter(({ workshopCategory }) =>
       workshopCategory.some(({ slug }) => slug == workshopCat)
     );
@@ -31,11 +37,11 @@ function WorkshopByCategory({ list, locale, categoriesList, heroData }) {
   const resultList = enhanceEvents(filterByCategory || list);
   finished = sortDesc(
     resultList?.filter((e) => e.finished),
-    "startDate"
+    'startDate'
   );
   active = sortAsc(
     resultList?.filter((e) => !e.finished),
-    "nextDate"
+    'nextDate'
   );
   const showHeaders = finished.length > 0 && active.length > 0;
 
@@ -53,19 +59,19 @@ function WorkshopByCategory({ list, locale, categoriesList, heroData }) {
         <div className="container">
           <div className="pt-1 lg:flex lg:justify-between lg:pt-0">
             <div>
-              {workshopCat && workshopCat !== "all" ? (
-                <h1 className="title">{titleHero + " - " + workshopCat}</h1>
+              {workshopCat && workshopCat !== 'all' ? (
+                <h1 className="title">{titleHero + ' - ' + workshopCat}</h1>
               ) : (
                 <h1 className="title">{titleHero}</h1>
               )}
             </div>
 
-            {workshopCat && workshopCat !== "all" && (
+            {workshopCat && workshopCat !== 'all' && (
               <div className="flex items-center">
                 <Link className="" href="studio/formazione" locale={locale}>
                   <a className="flex items-center hover:text-red">
                     <div className="mr-4 h-5 w-5 flex-none bg-arrow-left-black" />
-                    <span className="">{translate("back", locale)} |</span>
+                    <span className="">{translate('back', locale)} |</span>
                   </a>
                 </Link>
                 <div className="pl-1">
@@ -74,30 +80,34 @@ function WorkshopByCategory({ list, locale, categoriesList, heroData }) {
                     href="/workshop?cat=all"
                     className="flex items-center hover:text-red"
                   >
-                    {translate("view_all", locale)}
+                    {translate('view_all', locale)}
                   </a>
                   {/* </Link> */}
                 </div>
               </div>
             )}
           </div>
-          <h2 className="text-black-light md:mt-1 md:text-sm">{descriptionHero}</h2>
+          <h2 className="text-black-light md:mt-1 md:text-sm">
+            {descriptionHero}
+          </h2>
         </div>
       </header>
 
       <div className="container my-4">
         {workshopCat &&
-          workshopCat !== "all" &&
-          (!filterByCategory || filterByCategory.length == 0 || list.length == 0) && (
+          workshopCat !== 'all' &&
+          (!filterByCategory ||
+            filterByCategory.length == 0 ||
+            list.length == 0) && (
             <div>
               <div className="mt-20 pb-5 text-lg font-semibold">
-                {translate("no_events", locale)}
+                {translate('no_events', locale)}
               </div>
             </div>
           )}
         {showHeaders && (
           <div className="mt-20 border-b  border-black pb-5 text-lg font-semibold uppercase">
-            {translate("next_events", locale)}
+            {translate('next_events', locale)}
           </div>
         )}
         {active.length > 0 && (
@@ -109,7 +119,7 @@ function WorkshopByCategory({ list, locale, categoriesList, heroData }) {
         )}
         {showHeaders && (
           <div className="mt-20 border-b  border-black pb-5 text-lg font-semibold  uppercase">
-            {translate("previous_events", locale)}
+            {translate('previous_events', locale)}
           </div>
         )}
         {finished.length > 0 && (
