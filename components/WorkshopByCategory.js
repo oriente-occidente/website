@@ -5,7 +5,6 @@ import { useState, useEffect } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-import { route } from 'next/dist/server/router';
 
 const MAX = 6;
 function WorkshopByCategory({ list, locale, categoriesList, heroData }) {
