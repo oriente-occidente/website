@@ -26,7 +26,7 @@ const StructuredContent = ({ locale, content }) => {
                 return (
                   <Link
                     key={slug}
-                    href={`/${
+                    href={`/studio//${
                       locale === 'en' ? 'workshops' : 'workshop'
                     }?cat=${slug}`}
                     passHref
