@@ -10,7 +10,7 @@ import { route } from 'next/dist/server/router';
 const MAX = 6;
 function WorkshopByCategory({ list, locale, categoriesList, heroData }) {
   const router = useRouter();
-  const [workshopCat, setWorkshopCat] = useState(null);
+  const [workshopCat, setWorkshopCat] = useState('');
   const { titleHero, descriptionHero } = heroData;
 
   useEffect(() => {
