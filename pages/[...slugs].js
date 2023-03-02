@@ -114,7 +114,7 @@ function Page({ data, locale }) {
 
         {payload?.content && <MainContent locale={locale} data={payload.content} />}
         {payload?.sections && payload.sections.length > 0 && (
-          <SectionsParagraphs lcoale={locale} sections={payload.sections} />
+          <SectionsParagraphs locale={locale} sections={payload.sections} />
         )}
         {payload?.otherSections && payload.otherSections.length > 0 && (
           <OtherSections locale={locale} data={payload.otherSections} />
