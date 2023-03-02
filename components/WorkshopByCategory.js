@@ -18,6 +18,16 @@ function WorkshopByCategory({ list, locale, categoriesList, heroData }) {
     }
   }
 
+  function getLink(locale) {
+    let href;
+    if (locale == "en") {
+      href = "/en/studio/workshops?cat=all";
+    } else {
+      href = "/studio/workshop?cat=all";
+    }
+    return href;
+  }
+
   useEffect(() => {
     if (router.query) {
       const urlParams = new URLSearchParams(window.location.search);
@@ -83,10 +93,7 @@ function WorkshopByCategory({ list, locale, categoriesList, heroData }) {
 
                 <div className="pl-1">
                   {/* <Link className="" href="/workshop?cat=all" locale={locale}> */}
-                  <a
-                    href="/workshop?cat=all"
-                    className="flex items-center hover:text-red"
-                  >
+                  <a href={getLink(locale)} className="flex items-center hover:text-red">
                     {translate("view_all", locale)}
                   </a>
                   {/* </Link> */}
