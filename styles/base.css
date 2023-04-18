@@ -46,15 +46,15 @@ a {
   -webkit-tap-highlight-color: var(--secondary);
 }
 
-.object-cover {
+.custom-object-cover {
   height: 100%;
 }
 
-.object-cover img {
+.custom-object-cover img {
   object-fit: cover;
 }
 
-.object-contain img {
+.custom-object-contain img {
   object-fit: contain;
   object-position: center;
 }
