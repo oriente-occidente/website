@@ -44,8 +44,6 @@ function HeroIndex({ data, locale }) {
                   data={imageHero.responsiveImage}
                   alt={imageHero.alt}
                   title={imageHero.title}
-                  layout="fill"
-                  objectFit="cover"
                 />
                 {imageHero.title && (
                   <div className="absolute bottom-0 left-0 right-0 z-1 px-4 pt-3 pb-2 text-xxs text-white bg-gradient-to-t from-black/80 text-shadow">
