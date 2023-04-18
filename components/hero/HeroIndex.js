@@ -38,7 +38,7 @@ function HeroIndex({ data, locale }) {
             {slideshowHero != '' ? (
               <Gallery slides={slideshowHero} />
             ) : imageHero ? (
-              <div className="relative">
+              <div className="relative z-1">
                 <DatoImage
                   className="max-w-[1400px]"
                   data={imageHero.responsiveImage}
