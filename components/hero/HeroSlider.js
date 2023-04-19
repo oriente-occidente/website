@@ -26,7 +26,7 @@ function HeroSlider({ slides }) {
           return (
             <SwiperSlide key={id}>
               <DatoImage
-                className="relative w-full h-80vh md:h-50vh xl:h-80vh object-cover"
+                className="relative w-full h-80vh md:h-50vh xl:h-80vh dato-image-cover"
                 data={responsiveImage}
                 alt={alt}
                 title={title}
