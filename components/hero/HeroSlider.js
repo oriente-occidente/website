@@ -18,7 +18,7 @@ function HeroSlider({ slides }) {
         slidesPerView={1}
         pagination={true}
         navigation={true}
-        className="mySwiper"
+        className="mySwiper relative h-80vh md:h-50vh xl:h-80vh"
       >
         {slides.map((slide) => {
           const { image } = slide;
@@ -26,7 +26,7 @@ function HeroSlider({ slides }) {
           return (
             <SwiperSlide key={id}>
               <DatoImage
-                className="relative w-full h-80vh md:h-50vh xl:h-80vh dato-image-cover"
+                className="dato-image-cover"
                 data={responsiveImage}
                 alt={alt}
                 title={title}

@@ -72,7 +72,7 @@ function PreviewCard({ data, locale, group = null, year }) {
             </div>
             <div className="relative h-[220px] overflow-hidden md:h-[360px]">
               <DatoImage
-                className="object-cover duration-300 group-hover:scale-105"
+                className="dato-image-cover duration-300 group-hover:scale-105"
                 data={data.imageHero.responsiveImage}
                 alt={data.imageHero.alt}
                 title={data.imageHero.title}
