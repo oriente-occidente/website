@@ -18,7 +18,7 @@ function HeroSlider({ slides }) {
         slidesPerView={1}
         pagination={true}
         navigation={true}
-        className="mySwiper relative h-80vh md:h-50vh xl:h-80vh"
+        className="mySwiper relative h-[40vh] md:h-[60vh] xl:h-[70vh]"
       >
         {slides.map((slide) => {
           const { image } = slide;
