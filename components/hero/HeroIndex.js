@@ -40,7 +40,7 @@ function HeroIndex({ data, locale }) {
             ) : imageHero ? (
               <div className="relative z-1">
                 <DatoImage
-                  className="max-w-[1400px]"
+                  className="max-w-[1400px] min-w-full"
                   data={imageHero.responsiveImage}
                   alt={imageHero.alt}
                   title={imageHero.title}
