@@ -3,6 +3,11 @@ module.exports = {
   content: ["./pages/**/*.{js,ts,jsx,tsx}", "./components/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
+      boxShadow: {
+        'title': '5px 0 0 white, -5px 0 0 white',
+        'title-lg': '10px 0 0 white, -10px 0 0 white',
+        'title-xl': '15px 0 0 white, -15px 0 0 white',
+      },
       colors: {
         green: "#81845C",
         red: "#e64011",
@@ -29,7 +34,7 @@ module.exports = {
         lg: ["30px", "40px"],
         xl: ["35px", "43px"],
         "2xl": ["40px", "52px"],
-        "3xl": ["100px", "110px"],
+        "3xl": ["80px", "90px"],
         "4xl": ["140px", "150px"],
       },
       fontFamily: {
