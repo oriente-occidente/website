@@ -3,7 +3,7 @@
 CLONE THE PROJECT
 
 ```bash
-git clone git@gitlab.com:cantiere-creativo/oriente-occidente.git
+git clone git@github.com:oriente-occidente/website.git
 ```
 
 SETUP ENVS
