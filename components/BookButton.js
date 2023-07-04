@@ -39,7 +39,8 @@ export default function BookButton({ locale, paymentSettings, id }) {
           className="button--with-arrow"
           onClick={() => handleRegistration(id)}
         >
-          {translate('register', locale)}
+          {/* {translate('register', locale)} */}
+          {translate('booking', locale)}
         </button>
       ) : (
         <a
@@ -48,7 +49,8 @@ export default function BookButton({ locale, paymentSettings, id }) {
           target="_blank"
           rel="noreferrer"
         >
-          {translate('buy', locale)}
+          {/* {translate('buy', locale)} */}
+          {translate('booking', locale)}
         </a>
       )}
     </div>
