@@ -9,7 +9,7 @@ const tabs = [
   // { name: 'tab_talks', slug: 'courses' },
 ];
 
-export default function Tabs({ selected, handleSelect, locale }) {
+export default function Tabs({ selected, handleSelect, locale, catLengths }) {
   const [current, setCurrent] = useState('festivalEvents');
   function handleChange(value) {
     if (value && handleSelect) {
@@ -23,6 +23,7 @@ export default function Tabs({ selected, handleSelect, locale }) {
     }
   }, [selected]);
 
+  const filteredTabs = tabs.filter(tab => tab.slug === 'all' || catLengths[tab.slug] > 0);
   return (
     <div>
       <div aria-hidden className="px-4 sm:hidden">
@@ -37,18 +38,21 @@ export default function Tabs({ selected, handleSelect, locale }) {
             defaultValue={current}
             onChange={(e) => handleChange(e.target.value)}
           >
-            {tabs.map((tab) => (
-              <option key={tab.slug} value={tab.slug}>
-                {tab.name}
-              </option>
-            ))}
+            {filteredTabs.map((tab) => {
+              const { slug, name } = tab;
+              return (
+                <option key={slug} value={slug}>
+                  {translate(name, locale)}
+                </option>
+              )
+            })}
           </select>
         </div>
       </div>
       <div className="hidden border-gray sm:block md:border-b xl:border-none">
         <div className="px-4 md:px-6">
           <nav className="-mb-px flex space-x-8" aria-label="Tabs">
-            {tabs.map((tab) => {
+            {filteredTabs.map((tab) => {
               const { slug, name } = tab;
               const isActive = slug === current;
               return (

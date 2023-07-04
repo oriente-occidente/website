@@ -83,6 +83,15 @@ function Filters({ locale, list = null, datesOfYear }) {
     'nextDate'
   );
   const showHeaders = finished.length > 0 && active.length > 0;
+
+  const catLengths = {};
+
+  for (const key in data) {
+    if (Array.isArray(data[key])) {
+      catLengths[key] = data[key].length;
+    }
+  }
+
   return (
     <div className="mt-10">
       <div className="border-gray xl:border-b">
@@ -91,6 +100,7 @@ function Filters({ locale, list = null, datesOfYear }) {
             locale={locale}
             selected={typeFilter}
             handleSelect={(value) => setTypeFilter(value)}
+            catLengths={catLengths}
           />
           <div className="md:border-b md:border-gray md:pt-4 md:pb-8 xl:border-none xl:pt-0 xl:pb-0">
             <div className="px-4 pt-4 md:flex md:justify-between md:px-6 xl:pt-2">
