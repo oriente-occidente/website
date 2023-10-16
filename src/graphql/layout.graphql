@@ -1,0 +1,72 @@
+query layoutQuery {
+  site: _site {
+    locales
+    faviconMetaTags {
+      tag
+      content
+      attributes
+    }
+  }
+  menu: allMenuItems(filter: { parent: { exists: "false" } }) {
+    ...menuItemFrag
+    parent {
+      ...menuItemFrag
+      parent {
+        ...menuItemFrag
+      }
+    }
+  }
+  footer {
+    info
+    logo {
+      responsiveImage(imgixParams: { auto: format, maxW: "600" }) {
+        src
+      }
+    }
+    socials {
+      id
+      link
+      title
+      image {
+        url(imgixParams: { auto: format, h: "80" })
+      }
+    }
+    sections {
+      id
+      links {
+        slugs: _allSlugLocales {
+          locale
+          value
+        }
+        titles: _allTitleLocales {
+          locale
+          value
+        }
+      }
+    }
+  }
+}
+fragment menuItemFrag on MenuItemRecord {
+  id
+  titles: _allTitleLocales {
+    locale
+    title: value
+  }
+  slugs: _allSlugLocales {
+    locale
+    slug: value
+  }
+  link {
+    __typename
+    ... on HomeRecord {
+      id
+    }
+    ... on PageRecord {
+      id
+      slug
+      title
+      indexType
+      isIndex
+    }
+  }
+}

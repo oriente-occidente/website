@@ -1,27 +1,97 @@
+/* @import "./form.css"; */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+@layer base {
+  html {
+    font-family: "Work Sans", sans-serif;
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+@layer components {
+  .h1 {
+    @apply py-2 text-base font-semibold uppercase lg:py-4 lg:text-2xl;
+  }
+
+  .h2 {
+    @apply py-2 text-base lg:py-4 lg:text-xl;
+  }
+
+  .h3,
+  .h4,
+  .h5,
+  .h6 {
+    @apply py-2 text-sm lg:py-4 lg:text-base;
+  }
+
+  .formatted-content strong {
+    @apply font-semibold;
+  }
+
+  .formatted-content p {
+    @apply mb-2 max-w-[700px] text-xs text-black-light lg:text-sm;
+  }
+
+  .formatted-content hr {
+    @apply my-4 lg:my-6;
+  }
+
+  .formatted-content a {
+    @apply font-semibold underline hover:text-red;
+  }
+
+  .formatted-content ul {
+    @apply py-2 lg:py-4;
+  }
+
+  .formatted-content ol {
+    @apply ml-4 list-decimal py-2 lg:py-4;
+  }
+
+  .formatted-content ol li {
+    @apply relative pl-3 text-sm marker:text-xs lg:pl-4 lg:text-base;
+  }
+
+  .formatted-content ul li {
+    @apply relative pl-6 text-sm lg:pl-8 lg:text-base;
+  }
+
+  .formatted-content ul li {
+    @apply before:absolute before:top-[4px] before:-left-0 before:h-[15px] before:w-[15px] before:bg-check lg:before:h-[20px] lg:before:w-[20px];
+  }
+
+  .formatted-content li p {
+    @apply py-0 text-[20px];
+  }
+
+  /* PROMOZIONI */
+
+  .formatted-content .promobox p {
+    @apply text-xs sm:text-xxs;
+  }
+
+  .formatted-content .promobox ul {
+    @apply space-y-2 py-0 lg:py-0;
+  }
+
+  .formatted-content .promobox ul li {
+    @apply list-inside list-disc pl-3 text-xs before:bg-none sm:text-xxs;
+  }
+
+  .button--with-arrow {
+    @apply flex items-center font-semibold tracking-wider text-black no-underline after:ml-2 after:inline-block after:h-8 after:w-8 after:bg-arrow-right-black after:duration-300 hover:after:translate-x-2 hover:after:bg-arrow-right-red md:text-xs md:after:h-10 md:after:w-10;
+  }
+
+  .title {
+    @apply text-base font-semibold uppercase md:text-2xl;
+  }
+
+  .title--big {
+    @apply z-20 text-lg font-semibold uppercase md:absolute md:top-1/2 md:w-1/2 md:-translate-y-2/4 md:text-2xl 2xl:text-3xl;
+  }
+
+  .title--small {
+    @apply text-xxs uppercase md:text-sm md:tracking-wide lg:text-base;
+  }
 }

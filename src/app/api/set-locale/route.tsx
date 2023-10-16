@@ -7,7 +7,7 @@ export async function GET(request: NextRequest) {
   const locale = searchParams.get("lang");
   cookies().set({
     name: "locale",
-    value: locale ? locale : "mah",
+    value: locale ? locale : "it",
   });
 
   // return new Response(JSON.stringify({ locale }), {

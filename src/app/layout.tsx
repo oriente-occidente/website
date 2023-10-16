@@ -1,9 +1,15 @@
-import "@/style/globals.css";
-import type { Metadata } from "next";
-import type { LayoutParams } from "@/types";
 import React from "react";
 import { cookies } from "next/headers";
+import type { Metadata } from "next";
+import { notFound } from "next/navigation";
+import { draftMode } from "next/headers";
+
 import { LanguageSwitcher } from "@/components/LanguageSwitcher";
+import { LayoutQueryDocument } from "@/gql/graphql";
+import type { LayoutParams } from "@/types";
+
+import "@/style/globals.css";
+import queryDatoCMS from "@/lib/fetchDato";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -17,7 +23,8 @@ const languages = ["it", "en"];
 //     language;
 //   });
 // }
-export default function RootLayout({
+
+export default async function RootLayout({
   children,
 }: // params: { locale },
 LayoutParams) {
@@ -28,6 +35,10 @@ LayoutParams) {
   }
   let locale = cookie ? cookie.value : "it";
   console.log("LAYOUT LOCALE", locale);
+  const { isEnabled } = draftMode();
+  const data = await queryDatoCMS(LayoutQueryDocument, {}, isEnabled);
+
+  if (!data.site) notFound();
 
   return (
     <html lang={locale}>
@@ -36,6 +47,9 @@ LayoutParams) {
         {/* {React.cloneElement(children as any, {
           locale: "CIAO",
         })} */}
+        <div>
+          <pre>{JSON.stringify(data.menu)}</pre>
+        </div>
         <div className="p-4"> {children}</div>
       </body>
     </html>
