@@ -73,8 +73,8 @@ within(async () => {
     //GET ROUTE FILES of root
     let allfiles = await glob([
       "**/*",
-      "!api/*",
-      `!${lang}/*`,
+      "!**/api",
+      // `!${lang}/*`,
       "!layout.tsx",
       "!not-found.tsx",
       "!error.tsx",

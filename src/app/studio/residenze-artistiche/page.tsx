@@ -1,5 +1,6 @@
 import { BasicSlugPageProps } from "@/types";
-export default function Page({ preview, locale }: BasicSlugPageProps) {
+const locale = "it";
+export default function Page({ preview }: BasicSlugPageProps) {
   return (
     <div>
       <div className="text-xl">My index page</div>
