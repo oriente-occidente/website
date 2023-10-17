@@ -1,14 +1,12 @@
 import { draftMode } from "next/headers";
 import type { BasicSlugPageProps } from "@/types";
-
+const locale = 'en';
 export default function Page({ params }: BasicSlugPageProps) {
-  const locale = "it";
-  const { isEnabled } = draftMode();
+  const { isEnabled: preview } = draftMode();
   return (
     <div>
       <div className="text-xl">
-        My slug page: {params.slug} - {locale} [{isEnabled ? "draft mode" : "-"}
-        ]
+        My slug page: {params.slug} - {locale} [{preview}]
       </div>
       <div>LOCALE:{locale}</div>
     </div>
