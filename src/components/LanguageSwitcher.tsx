@@ -5,9 +5,9 @@ export function LanguageSwitcher({ currentLocale }: { currentLocale: string }) {
   // function setLocale(value: string) {
   //   fetch(`/api/setlocale?lang=${value}`);
   // }
-  const url = `/api/setlocale?lang=`;
+  const url = `/api/set-locale?lang=`;
   return (
-    <div className="p-4 bg-gray-900">
+    <div className="p-4 bg-gray-100">
       <div className="flex">
         <Link className="px-2" href={`${url}it`}>
           IT
