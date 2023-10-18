@@ -10,9 +10,9 @@ import type { LayoutParams } from "@/types";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import translate from "@/lib/locales";
+import queryDatoCMS from "@/lib/fetchDato";
 
 import "@/style/globals.css";
-import queryDatoCMS from "@/lib/fetchDato";
 
 export const metadata: Metadata = {
   title: "Create Next App",
