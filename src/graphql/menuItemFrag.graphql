@@ -1,0 +1,16 @@
+fragment menuItemFrag on MenuItemRecord {
+  id
+  title
+  slug
+  link {
+    __typename
+    ... on HomeRecord {
+      id
+    }
+    ... on PageRecord {
+      id
+      slug
+      title
+    }
+  }
+}

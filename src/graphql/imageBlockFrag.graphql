@@ -1,0 +1,11 @@
+fragment imageBlockFrag on ImageBlockRecord {
+  id
+  image {
+    responsiveImage(
+      sizes: "100vw"
+      imgixParams: { auto: [format, compress], h: 800, w: 1200, fit: crop }
+    ) {
+      ...imgFrag
+    }
+  }
+}

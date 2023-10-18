@@ -1,5 +1,4 @@
 @tailwind base;
-@import "form.css";
 @layer base {
   html {
     font-family: "Work Sans", sans-serif;
@@ -21,6 +20,10 @@
   .h5,
   .h6 {
     @apply py-2 text-sm lg:py-4 lg:text-base;
+  }
+
+  .form__input {
+    @apply block w-full rounded-md border border-gray px-3 py-4 text-xs text-black-light placeholder:text-black-light;
   }
 
   .formatted-content strong {

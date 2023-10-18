@@ -1,26 +1,25 @@
-query layoutQuery {
-  site: _site {
-    locales
+query layout($locale: SiteLocale) {
+  site: _site(locale: $locale) {
     faviconMetaTags {
       tag
       content
       attributes
     }
   }
-  menu: allMenuItems(filter: { parent: { exists: "false" } }) {
+  menu: allMenuItems(filter: { parent: { exists: "false" } }, locale: $locale) {
     ...menuItemFrag
-    parent {
+    children {
       ...menuItemFrag
-      parent {
+      children {
         ...menuItemFrag
       }
     }
   }
-  footer {
+  footer(locale: $locale) {
     info
     logo {
       responsiveImage(imgixParams: { auto: format, maxW: "600" }) {
-        src
+        ...imgFrag
       }
     }
     socials {
@@ -33,40 +32,18 @@ query layoutQuery {
     }
     sections {
       id
+      title
       links {
-        slugs: _allSlugLocales {
-          locale
-          value
-        }
-        titles: _allTitleLocales {
-          locale
-          value
-        }
+        id
+        slug
+        title
       }
     }
-  }
-}
-fragment menuItemFrag on MenuItemRecord {
-  id
-  titles: _allTitleLocales {
-    locale
-    title: value
-  }
-  slugs: _allSlugLocales {
-    locale
-    slug: value
-  }
-  link {
-    __typename
-    ... on HomeRecord {
+    links {
       id
-    }
-    ... on PageRecord {
-      id
-      slug
       title
-      indexType
-      isIndex
     }
+    newsletterSubscriptionMessage
+    newsletterListUrl
   }
 }

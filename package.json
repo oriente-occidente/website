@@ -7,14 +7,14 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "codegen": "graphql-codegen --config codegen.ts",
     "fix": "node ./scripts/dedupe-generated-types.mjs",
+    "codegen": "graphql-codegen --config codegen.ts && npm run fix",
     "locales": "zx ./scripts/locales.mjs"
   },
   "dependencies": {
     "@datocms/cma-client-node": "^2.2.6",
-    "@headlessui/react": "^1.7.8",
-    "@heroicons/react": "^1",
+    "@headlessui/react": "^1.7.17",
+    "@heroicons/react": "^2.0.18",
     "axios": "^1.5.1",
     "datocms-structured-text-to-plain-text": "^2.0.4",
     "datocms-structured-text-utils": "^2.0.4",

@@ -4,9 +4,12 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { draftMode } from "next/headers";
 
-import { LanguageSwitcher } from "@/components/LanguageSwitcher";
-import { LayoutQueryDocument } from "@/graphql/generated";
+import { LayoutDocument, SiteLocale } from "@/graphql/generated";
 import type { LayoutParams } from "@/types";
+
+import Header from "@/components/layout/Header";
+import Footer from "@/components/layout/Footer";
+import translate from "@/lib/locales";
 
 import "@/style/globals.css";
 import queryDatoCMS from "@/lib/fetchDato";
@@ -28,18 +31,31 @@ LayoutParams) {
   let locale = cookie ? cookie.value : "it";
   console.log("LAYOUT LOCALE", locale);
   const { isEnabled } = draftMode();
-  const data = await queryDatoCMS(LayoutQueryDocument, {}, isEnabled);
+  const siteLocale = locale as SiteLocale;
+  const data = await queryDatoCMS(
+    LayoutDocument,
+    { locale: siteLocale },
+    isEnabled
+  );
 
   if (!data.site) notFound();
 
   return (
     <html lang={locale}>
       <body>
-        <LanguageSwitcher currentLocale={locale} />
-        <div>
-          <pre>{JSON.stringify(data.menu)}</pre>
+        <div data-datocms-noindex>
+          <a className="skip-link" href="#main-content">
+            {translate("skipContent", locale)}
+          </a>
+          <a className="skip-link" href="#footer">
+            {translate("skipFooter", locale)}
+          </a>
         </div>
-        <div className="p-4"> {children}</div>
+        <Header locale={locale} data={data.menu} />
+        <main className="min-h-[50vh] pt-[70px] md:pt-[80px] lg:pt-[110px]">
+          <div className="container">{children}</div>
+        </main>
+        <Footer locale={locale} data={data.footer} hideNewsletter={false} />
       </body>
     </html>
   );

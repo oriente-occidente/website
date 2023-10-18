@@ -1,0 +1,17 @@
+fragment wsCatsFrag on WorkshopCategoriesBlockRecord {
+  id
+  category {
+    id
+    slug
+    title
+    hoverImage {
+      url
+      responsiveImage(
+        sizes: "(max-width: 1023px) 50vw, (min-width: 1024px) 30vw, 300px"
+      ) {
+        ...imgFrag
+      }
+    }
+    description
+  }
+}
