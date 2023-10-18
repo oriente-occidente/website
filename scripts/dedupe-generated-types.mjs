@@ -13,7 +13,7 @@ async function replaceInFile(sourceFile, destFile, toReplace, replacement) {
 }
 
 (async () => {
-  const filePath = "./src/gql/graphql.ts";
+  const filePath = "./src/graphql/generated.ts";
   const list = [
     `CreatedAtAsc = '_createdAt_ASC'`,
     `CreatedAtDesc = '_createdAt_DESC'`,

@@ -5,7 +5,7 @@ import { notFound } from "next/navigation";
 import { draftMode } from "next/headers";
 
 import { LanguageSwitcher } from "@/components/LanguageSwitcher";
-import { LayoutQueryDocument } from "@/gql/graphql";
+import { LayoutQueryDocument } from "@/graphql/generated";
 import type { LayoutParams } from "@/types";
 
 import "@/style/globals.css";

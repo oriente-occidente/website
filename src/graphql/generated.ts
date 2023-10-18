@@ -1,4 +1,3 @@
-/* eslint-disable */
 import { TypedDocumentNode as DocumentNode } from '@graphql-typed-document-node/core';
 export type Maybe<T> = T | null;
 export type InputMaybe<T> = Maybe<T>;
@@ -14,21 +13,16 @@ export type Scalars = {
   Boolean: { input: boolean; output: boolean; }
   Int: { input: number; output: number; }
   Float: { input: number; output: number; }
-  /** Represents `true` or `false` values. */
-  BooleanType: { input: any; output: any; }
-  CustomData: { input: any; output: any; }
-  /** A ISO 8601 compliant date value */
-  Date: { input: any; output: any; }
-  /** A ISO 8601 compliant datetime value */
-  DateTime: { input: any; output: any; }
-  /** Represents signed double-precision fractional values as specified by [IEEE 754](http://en.wikipedia.org/wiki/IEEE_floating_point). */
-  FloatType: { input: any; output: any; }
-  /** Represents non-fractional signed whole numeric values. Int can represent values between -(2^31) and 2^31 - 1. */
-  IntType: { input: any; output: any; }
-  ItemId: { input: any; output: any; }
-  JsonField: { input: any; output: any; }
-  MetaTagAttributes: { input: any; output: any; }
-  UploadId: { input: any; output: any; }
+  BooleanType: { input: boolean; output: boolean; }
+  CustomData: { input: Record<string, unknown>; output: Record<string, unknown>; }
+  Date: { input: string; output: string; }
+  DateTime: { input: string; output: string; }
+  FloatType: { input: number; output: number; }
+  IntType: { input: number; output: number; }
+  ItemId: { input: string; output: string; }
+  JsonField: { input: unknown; output: unknown; }
+  MetaTagAttributes: { input: Record<string, string>; output: Record<string, string>; }
+  UploadId: { input: string; output: string; }
 };
 
 /** Record of type Archivio Attività (activities_archive) */
@@ -308,8 +302,8 @@ export type ArtistModelFilter = {
 };
 
 export enum ArtistModelOrderBy {
-  _CreatedAtAsc = '_createdAt_ASC',
-  _CreatedAtDesc = '_createdAt_DESC',
+  CreatedAtAsc = '_createdAt_ASC',
+  CreatedAtDesc = '_createdAt_DESC',
   FirstPublishedAtAsc = '_firstPublishedAt_ASC',
   FirstPublishedAtDesc = '_firstPublishedAt_DESC',
   IsValidAsc = '_isValid_ASC',
@@ -322,8 +316,8 @@ export enum ArtistModelOrderBy {
   StatusDesc = '_status_DESC',
   UnpublishingScheduledAtAsc = '_unpublishingScheduledAt_ASC',
   UnpublishingScheduledAtDesc = '_unpublishingScheduledAt_DESC',
-  _UpdatedAtAsc = '_updatedAt_ASC',
-  _UpdatedAtDesc = '_updatedAt_DESC',
+  UpdatedAtAsc = '_updatedAt_ASC',
+  UpdatedAtDesc = '_updatedAt_DESC',
   CreatedAtAsc = 'createdAt_ASC',
   CreatedAtDesc = 'createdAt_DESC',
   DescriptionHeroAsc = 'descriptionHero_ASC',
@@ -1021,8 +1015,8 @@ export type ArtisticResidecyModelFilter = {
 };
 
 export enum ArtisticResidecyModelOrderBy {
-  _CreatedAtAsc = '_createdAt_ASC',
-  _CreatedAtDesc = '_createdAt_DESC',
+  CreatedAtAsc = '_createdAt_ASC',
+  CreatedAtDesc = '_createdAt_DESC',
   FirstPublishedAtAsc = '_firstPublishedAt_ASC',
   FirstPublishedAtDesc = '_firstPublishedAt_DESC',
   IsValidAsc = '_isValid_ASC',
@@ -1035,8 +1029,8 @@ export enum ArtisticResidecyModelOrderBy {
   StatusDesc = '_status_DESC',
   UnpublishingScheduledAtAsc = '_unpublishingScheduledAt_ASC',
   UnpublishingScheduledAtDesc = '_unpublishingScheduledAt_DESC',
-  _UpdatedAtAsc = '_updatedAt_ASC',
-  _UpdatedAtDesc = '_updatedAt_DESC',
+  UpdatedAtAsc = '_updatedAt_ASC',
+  UpdatedAtDesc = '_updatedAt_DESC',
   CreatedAtAsc = 'createdAt_ASC',
   CreatedAtDesc = 'createdAt_DESC',
   DescriptionHeroAsc = 'descriptionHero_ASC',
@@ -1459,8 +1453,8 @@ export type ArtisticResidenciesIndexModelFilter = {
 };
 
 export enum ArtisticResidenciesIndexModelOrderBy {
-  _CreatedAtAsc = '_createdAt_ASC',
-  _CreatedAtDesc = '_createdAt_DESC',
+  CreatedAtAsc = '_createdAt_ASC',
+  CreatedAtDesc = '_createdAt_DESC',
   FirstPublishedAtAsc = '_firstPublishedAt_ASC',
   FirstPublishedAtDesc = '_firstPublishedAt_DESC',
   IsValidAsc = '_isValid_ASC',
@@ -1473,8 +1467,8 @@ export enum ArtisticResidenciesIndexModelOrderBy {
   StatusDesc = '_status_DESC',
   UnpublishingScheduledAtAsc = '_unpublishingScheduledAt_ASC',
   UnpublishingScheduledAtDesc = '_unpublishingScheduledAt_DESC',
-  _UpdatedAtAsc = '_updatedAt_ASC',
-  _UpdatedAtDesc = '_updatedAt_DESC',
+  UpdatedAtAsc = '_updatedAt_ASC',
+  UpdatedAtDesc = '_updatedAt_DESC',
   CreatedAtAsc = 'createdAt_ASC',
   CreatedAtDesc = 'createdAt_DESC',
   DescriptionHeroAsc = 'descriptionHero_ASC',
@@ -1748,8 +1742,8 @@ export type ArtistsIndexModelFilter = {
 };
 
 export enum ArtistsIndexModelOrderBy {
-  _CreatedAtAsc = '_createdAt_ASC',
-  _CreatedAtDesc = '_createdAt_DESC',
+  CreatedAtAsc = '_createdAt_ASC',
+  CreatedAtDesc = '_createdAt_DESC',
   FirstPublishedAtAsc = '_firstPublishedAt_ASC',
   FirstPublishedAtDesc = '_firstPublishedAt_DESC',
   IsValidAsc = '_isValid_ASC',
@@ -1762,8 +1756,8 @@ export enum ArtistsIndexModelOrderBy {
   StatusDesc = '_status_DESC',
   UnpublishingScheduledAtAsc = '_unpublishingScheduledAt_ASC',
   UnpublishingScheduledAtDesc = '_unpublishingScheduledAt_DESC',
-  _UpdatedAtAsc = '_updatedAt_ASC',
-  _UpdatedAtDesc = '_updatedAt_DESC',
+  UpdatedAtAsc = '_updatedAt_ASC',
+  UpdatedAtDesc = '_updatedAt_DESC',
   CreatedAtAsc = 'createdAt_ASC',
   CreatedAtDesc = 'createdAt_DESC',
   DescriptionHeroAsc = 'descriptionHero_ASC',
@@ -2053,8 +2047,8 @@ export type CompanyModelFilter = {
 };
 
 export enum CompanyModelOrderBy {
-  _CreatedAtAsc = '_createdAt_ASC',
-  _CreatedAtDesc = '_createdAt_DESC',
+  CreatedAtAsc = '_createdAt_ASC',
+  CreatedAtDesc = '_createdAt_DESC',
   FirstPublishedAtAsc = '_firstPublishedAt_ASC',
   FirstPublishedAtDesc = '_firstPublishedAt_DESC',
   IsValidAsc = '_isValid_ASC',
@@ -2067,8 +2061,8 @@ export enum CompanyModelOrderBy {
   StatusDesc = '_status_DESC',
   UnpublishingScheduledAtAsc = '_unpublishingScheduledAt_ASC',
   UnpublishingScheduledAtDesc = '_unpublishingScheduledAt_DESC',
-  _UpdatedAtAsc = '_updatedAt_ASC',
-  _UpdatedAtDesc = '_updatedAt_DESC',
+  UpdatedAtAsc = '_updatedAt_ASC',
+  UpdatedAtDesc = '_updatedAt_DESC',
   CreatedAtAsc = 'createdAt_ASC',
   CreatedAtDesc = 'createdAt_DESC',
   DescriptionHeroAsc = 'descriptionHero_ASC',
@@ -2420,8 +2414,8 @@ export type CountryModelFilter = {
 };
 
 export enum CountryModelOrderBy {
-  _CreatedAtAsc = '_createdAt_ASC',
-  _CreatedAtDesc = '_createdAt_DESC',
+  CreatedAtAsc = '_createdAt_ASC',
+  CreatedAtDesc = '_createdAt_DESC',
   FirstPublishedAtAsc = '_firstPublishedAt_ASC',
   FirstPublishedAtDesc = '_firstPublishedAt_DESC',
   IsValidAsc = '_isValid_ASC',
@@ -2434,8 +2428,8 @@ export enum CountryModelOrderBy {
   StatusDesc = '_status_DESC',
   UnpublishingScheduledAtAsc = '_unpublishingScheduledAt_ASC',
   UnpublishingScheduledAtDesc = '_unpublishingScheduledAt_DESC',
-  _UpdatedAtAsc = '_updatedAt_ASC',
-  _UpdatedAtDesc = '_updatedAt_DESC',
+  UpdatedAtAsc = '_updatedAt_ASC',
+  UpdatedAtDesc = '_updatedAt_DESC',
   CreatedAtAsc = 'createdAt_ASC',
   CreatedAtDesc = 'createdAt_DESC',
   IdAsc = 'id_ASC',
@@ -2594,8 +2588,8 @@ export type EducationPageModelFilter = {
 };
 
 export enum EducationPageModelOrderBy {
-  _CreatedAtAsc = '_createdAt_ASC',
-  _CreatedAtDesc = '_createdAt_DESC',
+  CreatedAtAsc = '_createdAt_ASC',
+  CreatedAtDesc = '_createdAt_DESC',
   FirstPublishedAtAsc = '_firstPublishedAt_ASC',
   FirstPublishedAtDesc = '_firstPublishedAt_DESC',
   IsValidAsc = '_isValid_ASC',
@@ -2608,8 +2602,8 @@ export enum EducationPageModelOrderBy {
   StatusDesc = '_status_DESC',
   UnpublishingScheduledAtAsc = '_unpublishingScheduledAt_ASC',
   UnpublishingScheduledAtDesc = '_unpublishingScheduledAt_DESC',
-  _UpdatedAtAsc = '_updatedAt_ASC',
-  _UpdatedAtDesc = '_updatedAt_DESC',
+  UpdatedAtAsc = '_updatedAt_ASC',
+  UpdatedAtDesc = '_updatedAt_DESC',
   CreatedAtAsc = 'createdAt_ASC',
   CreatedAtDesc = 'createdAt_DESC',
   DescriptionHeroAsc = 'descriptionHero_ASC',
@@ -2911,8 +2905,8 @@ export type EventModelFilter = {
 };
 
 export enum EventModelOrderBy {
-  _CreatedAtAsc = '_createdAt_ASC',
-  _CreatedAtDesc = '_createdAt_DESC',
+  CreatedAtAsc = '_createdAt_ASC',
+  CreatedAtDesc = '_createdAt_DESC',
   FirstPublishedAtAsc = '_firstPublishedAt_ASC',
   FirstPublishedAtDesc = '_firstPublishedAt_DESC',
   IsValidAsc = '_isValid_ASC',
@@ -2925,8 +2919,8 @@ export enum EventModelOrderBy {
   StatusDesc = '_status_DESC',
   UnpublishingScheduledAtAsc = '_unpublishingScheduledAt_ASC',
   UnpublishingScheduledAtDesc = '_unpublishingScheduledAt_DESC',
-  _UpdatedAtAsc = '_updatedAt_ASC',
-  _UpdatedAtDesc = '_updatedAt_DESC',
+  UpdatedAtAsc = '_updatedAt_ASC',
+  UpdatedAtDesc = '_updatedAt_DESC',
   AuthorsAsc = 'authors_ASC',
   AuthorsDesc = 'authors_DESC',
   CreatedAtAsc = 'createdAt_ASC',
@@ -3827,8 +3821,8 @@ export type FestivalEditionModelFilter = {
 };
 
 export enum FestivalEditionModelOrderBy {
-  _CreatedAtAsc = '_createdAt_ASC',
-  _CreatedAtDesc = '_createdAt_DESC',
+  CreatedAtAsc = '_createdAt_ASC',
+  CreatedAtDesc = '_createdAt_DESC',
   FirstPublishedAtAsc = '_firstPublishedAt_ASC',
   FirstPublishedAtDesc = '_firstPublishedAt_DESC',
   IsValidAsc = '_isValid_ASC',
@@ -3841,8 +3835,8 @@ export enum FestivalEditionModelOrderBy {
   StatusDesc = '_status_DESC',
   UnpublishingScheduledAtAsc = '_unpublishingScheduledAt_ASC',
   UnpublishingScheduledAtDesc = '_unpublishingScheduledAt_DESC',
-  _UpdatedAtAsc = '_updatedAt_ASC',
-  _UpdatedAtDesc = '_updatedAt_DESC',
+  UpdatedAtAsc = '_updatedAt_ASC',
+  UpdatedAtDesc = '_updatedAt_DESC',
   CreatedAtAsc = 'createdAt_ASC',
   CreatedAtDesc = 'createdAt_DESC',
   EndDateAsc = 'endDate_ASC',
@@ -4661,8 +4655,8 @@ export type HomeModelFilter = {
 };
 
 export enum HomeModelOrderBy {
-  _CreatedAtAsc = '_createdAt_ASC',
-  _CreatedAtDesc = '_createdAt_DESC',
+  CreatedAtAsc = '_createdAt_ASC',
+  CreatedAtDesc = '_createdAt_DESC',
   FirstPublishedAtAsc = '_firstPublishedAt_ASC',
   FirstPublishedAtDesc = '_firstPublishedAt_DESC',
   IsValidAsc = '_isValid_ASC',
@@ -4675,8 +4669,8 @@ export enum HomeModelOrderBy {
   StatusDesc = '_status_DESC',
   UnpublishingScheduledAtAsc = '_unpublishingScheduledAt_ASC',
   UnpublishingScheduledAtDesc = '_unpublishingScheduledAt_DESC',
-  _UpdatedAtAsc = '_updatedAt_ASC',
-  _UpdatedAtDesc = '_updatedAt_DESC',
+  UpdatedAtAsc = '_updatedAt_ASC',
+  UpdatedAtDesc = '_updatedAt_DESC',
   CreatedAtAsc = 'createdAt_ASC',
   CreatedAtDesc = 'createdAt_DESC',
   IdAsc = 'id_ASC',
@@ -9259,8 +9253,8 @@ export type LandingModelFilter = {
 };
 
 export enum LandingModelOrderBy {
-  _CreatedAtAsc = '_createdAt_ASC',
-  _CreatedAtDesc = '_createdAt_DESC',
+  CreatedAtAsc = '_createdAt_ASC',
+  CreatedAtDesc = '_createdAt_DESC',
   FirstPublishedAtAsc = '_firstPublishedAt_ASC',
   FirstPublishedAtDesc = '_firstPublishedAt_DESC',
   IsValidAsc = '_isValid_ASC',
@@ -9273,8 +9267,8 @@ export enum LandingModelOrderBy {
   StatusDesc = '_status_DESC',
   UnpublishingScheduledAtAsc = '_unpublishingScheduledAt_ASC',
   UnpublishingScheduledAtDesc = '_unpublishingScheduledAt_DESC',
-  _UpdatedAtAsc = '_updatedAt_ASC',
-  _UpdatedAtDesc = '_updatedAt_DESC',
+  UpdatedAtAsc = '_updatedAt_ASC',
+  UpdatedAtDesc = '_updatedAt_DESC',
   CreatedAtAsc = 'createdAt_ASC',
   CreatedAtDesc = 'createdAt_DESC',
   DescriptionHeroAsc = 'descriptionHero_ASC',
@@ -9600,8 +9594,8 @@ export type MediaAudioCategoryModelFilter = {
 };
 
 export enum MediaAudioCategoryModelOrderBy {
-  _CreatedAtAsc = '_createdAt_ASC',
-  _CreatedAtDesc = '_createdAt_DESC',
+  CreatedAtAsc = '_createdAt_ASC',
+  CreatedAtDesc = '_createdAt_DESC',
   FirstPublishedAtAsc = '_firstPublishedAt_ASC',
   FirstPublishedAtDesc = '_firstPublishedAt_DESC',
   IsValidAsc = '_isValid_ASC',
@@ -9614,8 +9608,8 @@ export enum MediaAudioCategoryModelOrderBy {
   StatusDesc = '_status_DESC',
   UnpublishingScheduledAtAsc = '_unpublishingScheduledAt_ASC',
   UnpublishingScheduledAtDesc = '_unpublishingScheduledAt_DESC',
-  _UpdatedAtAsc = '_updatedAt_ASC',
-  _UpdatedAtDesc = '_updatedAt_DESC',
+  UpdatedAtAsc = '_updatedAt_ASC',
+  UpdatedAtDesc = '_updatedAt_DESC',
   CreatedAtAsc = 'createdAt_ASC',
   CreatedAtDesc = 'createdAt_DESC',
   IdAsc = 'id_ASC',
@@ -9761,8 +9755,8 @@ export type MediaAudioModelFilter = {
 };
 
 export enum MediaAudioModelOrderBy {
-  _CreatedAtAsc = '_createdAt_ASC',
-  _CreatedAtDesc = '_createdAt_DESC',
+  CreatedAtAsc = '_createdAt_ASC',
+  CreatedAtDesc = '_createdAt_DESC',
   FirstPublishedAtAsc = '_firstPublishedAt_ASC',
   FirstPublishedAtDesc = '_firstPublishedAt_DESC',
   IsValidAsc = '_isValid_ASC',
@@ -9775,8 +9769,8 @@ export enum MediaAudioModelOrderBy {
   StatusDesc = '_status_DESC',
   UnpublishingScheduledAtAsc = '_unpublishingScheduledAt_ASC',
   UnpublishingScheduledAtDesc = '_unpublishingScheduledAt_DESC',
-  _UpdatedAtAsc = '_updatedAt_ASC',
-  _UpdatedAtDesc = '_updatedAt_DESC',
+  UpdatedAtAsc = '_updatedAt_ASC',
+  UpdatedAtDesc = '_updatedAt_DESC',
   CreatedAtAsc = 'createdAt_ASC',
   CreatedAtDesc = 'createdAt_DESC',
   DescriptionAsc = 'description_ASC',
@@ -9920,8 +9914,8 @@ export type MediaAuthorModelFilter = {
 };
 
 export enum MediaAuthorModelOrderBy {
-  _CreatedAtAsc = '_createdAt_ASC',
-  _CreatedAtDesc = '_createdAt_DESC',
+  CreatedAtAsc = '_createdAt_ASC',
+  CreatedAtDesc = '_createdAt_DESC',
   FirstPublishedAtAsc = '_firstPublishedAt_ASC',
   FirstPublishedAtDesc = '_firstPublishedAt_DESC',
   IsValidAsc = '_isValid_ASC',
@@ -9934,8 +9928,8 @@ export enum MediaAuthorModelOrderBy {
   StatusDesc = '_status_DESC',
   UnpublishingScheduledAtAsc = '_unpublishingScheduledAt_ASC',
   UnpublishingScheduledAtDesc = '_unpublishingScheduledAt_DESC',
-  _UpdatedAtAsc = '_updatedAt_ASC',
-  _UpdatedAtDesc = '_updatedAt_DESC',
+  UpdatedAtAsc = '_updatedAt_ASC',
+  UpdatedAtDesc = '_updatedAt_DESC',
   ContentAsc = 'content_ASC',
   ContentDesc = 'content_DESC',
   CreatedAtAsc = 'createdAt_ASC',
@@ -10143,8 +10137,8 @@ export type MediaDocumentCategoryModelFilter = {
 };
 
 export enum MediaDocumentCategoryModelOrderBy {
-  _CreatedAtAsc = '_createdAt_ASC',
-  _CreatedAtDesc = '_createdAt_DESC',
+  CreatedAtAsc = '_createdAt_ASC',
+  CreatedAtDesc = '_createdAt_DESC',
   FirstPublishedAtAsc = '_firstPublishedAt_ASC',
   FirstPublishedAtDesc = '_firstPublishedAt_DESC',
   IsValidAsc = '_isValid_ASC',
@@ -10157,8 +10151,8 @@ export enum MediaDocumentCategoryModelOrderBy {
   StatusDesc = '_status_DESC',
   UnpublishingScheduledAtAsc = '_unpublishingScheduledAt_ASC',
   UnpublishingScheduledAtDesc = '_unpublishingScheduledAt_DESC',
-  _UpdatedAtAsc = '_updatedAt_ASC',
-  _UpdatedAtDesc = '_updatedAt_DESC',
+  UpdatedAtAsc = '_updatedAt_ASC',
+  UpdatedAtDesc = '_updatedAt_DESC',
   CreatedAtAsc = 'createdAt_ASC',
   CreatedAtDesc = 'createdAt_DESC',
   IdAsc = 'id_ASC',
@@ -10303,8 +10297,8 @@ export type MediaDocumentModelFilter = {
 };
 
 export enum MediaDocumentModelOrderBy {
-  _CreatedAtAsc = '_createdAt_ASC',
-  _CreatedAtDesc = '_createdAt_DESC',
+  CreatedAtAsc = '_createdAt_ASC',
+  CreatedAtDesc = '_createdAt_DESC',
   FirstPublishedAtAsc = '_firstPublishedAt_ASC',
   FirstPublishedAtDesc = '_firstPublishedAt_DESC',
   IsValidAsc = '_isValid_ASC',
@@ -10317,8 +10311,8 @@ export enum MediaDocumentModelOrderBy {
   StatusDesc = '_status_DESC',
   UnpublishingScheduledAtAsc = '_unpublishingScheduledAt_ASC',
   UnpublishingScheduledAtDesc = '_unpublishingScheduledAt_DESC',
-  _UpdatedAtAsc = '_updatedAt_ASC',
-  _UpdatedAtDesc = '_updatedAt_DESC',
+  UpdatedAtAsc = '_updatedAt_ASC',
+  UpdatedAtDesc = '_updatedAt_DESC',
   CreatedAtAsc = 'createdAt_ASC',
   CreatedAtDesc = 'createdAt_DESC',
   DescriptionAsc = 'description_ASC',
@@ -10493,8 +10487,8 @@ export type MediaPhotoCategoryModelFilter = {
 };
 
 export enum MediaPhotoCategoryModelOrderBy {
-  _CreatedAtAsc = '_createdAt_ASC',
-  _CreatedAtDesc = '_createdAt_DESC',
+  CreatedAtAsc = '_createdAt_ASC',
+  CreatedAtDesc = '_createdAt_DESC',
   FirstPublishedAtAsc = '_firstPublishedAt_ASC',
   FirstPublishedAtDesc = '_firstPublishedAt_DESC',
   IsValidAsc = '_isValid_ASC',
@@ -10507,8 +10501,8 @@ export enum MediaPhotoCategoryModelOrderBy {
   StatusDesc = '_status_DESC',
   UnpublishingScheduledAtAsc = '_unpublishingScheduledAt_ASC',
   UnpublishingScheduledAtDesc = '_unpublishingScheduledAt_DESC',
-  _UpdatedAtAsc = '_updatedAt_ASC',
-  _UpdatedAtDesc = '_updatedAt_DESC',
+  UpdatedAtAsc = '_updatedAt_ASC',
+  UpdatedAtDesc = '_updatedAt_DESC',
   CreatedAtAsc = 'createdAt_ASC',
   CreatedAtDesc = 'createdAt_DESC',
   IdAsc = 'id_ASC',
@@ -10701,8 +10695,8 @@ export type MediaPhotoModelFilter = {
 };
 
 export enum MediaPhotoModelOrderBy {
-  _CreatedAtAsc = '_createdAt_ASC',
-  _CreatedAtDesc = '_createdAt_DESC',
+  CreatedAtAsc = '_createdAt_ASC',
+  CreatedAtDesc = '_createdAt_DESC',
   FirstPublishedAtAsc = '_firstPublishedAt_ASC',
   FirstPublishedAtDesc = '_firstPublishedAt_DESC',
   IsValidAsc = '_isValid_ASC',
@@ -10715,8 +10709,8 @@ export enum MediaPhotoModelOrderBy {
   StatusDesc = '_status_DESC',
   UnpublishingScheduledAtAsc = '_unpublishingScheduledAt_ASC',
   UnpublishingScheduledAtDesc = '_unpublishingScheduledAt_DESC',
-  _UpdatedAtAsc = '_updatedAt_ASC',
-  _UpdatedAtDesc = '_updatedAt_DESC',
+  UpdatedAtAsc = '_updatedAt_ASC',
+  UpdatedAtDesc = '_updatedAt_DESC',
   CreatedAtAsc = 'createdAt_ASC',
   CreatedAtDesc = 'createdAt_DESC',
   DescriptionAsc = 'description_ASC',
@@ -10818,8 +10812,8 @@ export type MediaVideoCategoryModelFilter = {
 };
 
 export enum MediaVideoCategoryModelOrderBy {
-  _CreatedAtAsc = '_createdAt_ASC',
-  _CreatedAtDesc = '_createdAt_DESC',
+  CreatedAtAsc = '_createdAt_ASC',
+  CreatedAtDesc = '_createdAt_DESC',
   FirstPublishedAtAsc = '_firstPublishedAt_ASC',
   FirstPublishedAtDesc = '_firstPublishedAt_DESC',
   IsValidAsc = '_isValid_ASC',
@@ -10832,8 +10826,8 @@ export enum MediaVideoCategoryModelOrderBy {
   StatusDesc = '_status_DESC',
   UnpublishingScheduledAtAsc = '_unpublishingScheduledAt_ASC',
   UnpublishingScheduledAtDesc = '_unpublishingScheduledAt_DESC',
-  _UpdatedAtAsc = '_updatedAt_ASC',
-  _UpdatedAtDesc = '_updatedAt_DESC',
+  UpdatedAtAsc = '_updatedAt_ASC',
+  UpdatedAtDesc = '_updatedAt_DESC',
   CreatedAtAsc = 'createdAt_ASC',
   CreatedAtDesc = 'createdAt_DESC',
   IdAsc = 'id_ASC',
@@ -10986,8 +10980,8 @@ export type MediaVideoModelFilter = {
 };
 
 export enum MediaVideoModelOrderBy {
-  _CreatedAtAsc = '_createdAt_ASC',
-  _CreatedAtDesc = '_createdAt_DESC',
+  CreatedAtAsc = '_createdAt_ASC',
+  CreatedAtDesc = '_createdAt_DESC',
   FirstPublishedAtAsc = '_firstPublishedAt_ASC',
   FirstPublishedAtDesc = '_firstPublishedAt_DESC',
   IsValidAsc = '_isValid_ASC',
@@ -11000,8 +10994,8 @@ export enum MediaVideoModelOrderBy {
   StatusDesc = '_status_DESC',
   UnpublishingScheduledAtAsc = '_unpublishingScheduledAt_ASC',
   UnpublishingScheduledAtDesc = '_unpublishingScheduledAt_DESC',
-  _UpdatedAtAsc = '_updatedAt_ASC',
-  _UpdatedAtDesc = '_updatedAt_DESC',
+  UpdatedAtAsc = '_updatedAt_ASC',
+  UpdatedAtDesc = '_updatedAt_DESC',
   CreatedAtAsc = 'createdAt_ASC',
   CreatedAtDesc = 'createdAt_DESC',
   DescriptionAsc = 'description_ASC',
@@ -11191,8 +11185,8 @@ export type MenuItemModelFilter = {
 export type MenuItemModelLinkField = HomeRecord | PageRecord;
 
 export enum MenuItemModelOrderBy {
-  _CreatedAtAsc = '_createdAt_ASC',
-  _CreatedAtDesc = '_createdAt_DESC',
+  CreatedAtAsc = '_createdAt_ASC',
+  CreatedAtDesc = '_createdAt_DESC',
   FirstPublishedAtAsc = '_firstPublishedAt_ASC',
   FirstPublishedAtDesc = '_firstPublishedAt_DESC',
   IsValidAsc = '_isValid_ASC',
@@ -11205,8 +11199,8 @@ export enum MenuItemModelOrderBy {
   StatusDesc = '_status_DESC',
   UnpublishingScheduledAtAsc = '_unpublishingScheduledAt_ASC',
   UnpublishingScheduledAtDesc = '_unpublishingScheduledAt_DESC',
-  _UpdatedAtAsc = '_updatedAt_ASC',
-  _UpdatedAtDesc = '_updatedAt_DESC',
+  UpdatedAtAsc = '_updatedAt_ASC',
+  UpdatedAtDesc = '_updatedAt_DESC',
   CreatedAtAsc = 'createdAt_ASC',
   CreatedAtDesc = 'createdAt_DESC',
   IdAsc = 'id_ASC',
@@ -11409,8 +11403,8 @@ export type NetworkModelFilter = {
 };
 
 export enum NetworkModelOrderBy {
-  _CreatedAtAsc = '_createdAt_ASC',
-  _CreatedAtDesc = '_createdAt_DESC',
+  CreatedAtAsc = '_createdAt_ASC',
+  CreatedAtDesc = '_createdAt_DESC',
   FirstPublishedAtAsc = '_firstPublishedAt_ASC',
   FirstPublishedAtDesc = '_firstPublishedAt_DESC',
   IsValidAsc = '_isValid_ASC',
@@ -11423,8 +11417,8 @@ export enum NetworkModelOrderBy {
   StatusDesc = '_status_DESC',
   UnpublishingScheduledAtAsc = '_unpublishingScheduledAt_ASC',
   UnpublishingScheduledAtDesc = '_unpublishingScheduledAt_DESC',
-  _UpdatedAtAsc = '_updatedAt_ASC',
-  _UpdatedAtDesc = '_updatedAt_DESC',
+  UpdatedAtAsc = '_updatedAt_ASC',
+  UpdatedAtDesc = '_updatedAt_DESC',
   AuthorsAsc = 'authors_ASC',
   AuthorsDesc = 'authors_DESC',
   CreatedAtAsc = 'createdAt_ASC',
@@ -12218,8 +12212,8 @@ export type NewsModelFilter = {
 };
 
 export enum NewsModelOrderBy {
-  _CreatedAtAsc = '_createdAt_ASC',
-  _CreatedAtDesc = '_createdAt_DESC',
+  CreatedAtAsc = '_createdAt_ASC',
+  CreatedAtDesc = '_createdAt_DESC',
   FirstPublishedAtAsc = '_firstPublishedAt_ASC',
   FirstPublishedAtDesc = '_firstPublishedAt_DESC',
   IsValidAsc = '_isValid_ASC',
@@ -12232,8 +12226,8 @@ export enum NewsModelOrderBy {
   StatusDesc = '_status_DESC',
   UnpublishingScheduledAtAsc = '_unpublishingScheduledAt_ASC',
   UnpublishingScheduledAtDesc = '_unpublishingScheduledAt_DESC',
-  _UpdatedAtAsc = '_updatedAt_ASC',
-  _UpdatedAtDesc = '_updatedAt_DESC',
+  UpdatedAtAsc = '_updatedAt_ASC',
+  UpdatedAtDesc = '_updatedAt_DESC',
   CreatedAtAsc = 'createdAt_ASC',
   CreatedAtDesc = 'createdAt_DESC',
   DescriptionHeroAsc = 'descriptionHero_ASC',
@@ -12999,8 +12993,8 @@ export type PageModelFilter = {
 };
 
 export enum PageModelOrderBy {
-  _CreatedAtAsc = '_createdAt_ASC',
-  _CreatedAtDesc = '_createdAt_DESC',
+  CreatedAtAsc = '_createdAt_ASC',
+  CreatedAtDesc = '_createdAt_DESC',
   FirstPublishedAtAsc = '_firstPublishedAt_ASC',
   FirstPublishedAtDesc = '_firstPublishedAt_DESC',
   IsValidAsc = '_isValid_ASC',
@@ -13013,8 +13007,8 @@ export enum PageModelOrderBy {
   StatusDesc = '_status_DESC',
   UnpublishingScheduledAtAsc = '_unpublishingScheduledAt_ASC',
   UnpublishingScheduledAtDesc = '_unpublishingScheduledAt_DESC',
-  _UpdatedAtAsc = '_updatedAt_ASC',
-  _UpdatedAtDesc = '_updatedAt_DESC',
+  UpdatedAtAsc = '_updatedAt_ASC',
+  UpdatedAtDesc = '_updatedAt_DESC',
   CreatedAtAsc = 'createdAt_ASC',
   CreatedAtDesc = 'createdAt_DESC',
   DescriptionHeroAsc = 'descriptionHero_ASC',
@@ -13360,8 +13354,8 @@ export type PartnerModelFilter = {
 };
 
 export enum PartnerModelOrderBy {
-  _CreatedAtAsc = '_createdAt_ASC',
-  _CreatedAtDesc = '_createdAt_DESC',
+  CreatedAtAsc = '_createdAt_ASC',
+  CreatedAtDesc = '_createdAt_DESC',
   FirstPublishedAtAsc = '_firstPublishedAt_ASC',
   FirstPublishedAtDesc = '_firstPublishedAt_DESC',
   IsValidAsc = '_isValid_ASC',
@@ -13374,8 +13368,8 @@ export enum PartnerModelOrderBy {
   StatusDesc = '_status_DESC',
   UnpublishingScheduledAtAsc = '_unpublishingScheduledAt_ASC',
   UnpublishingScheduledAtDesc = '_unpublishingScheduledAt_DESC',
-  _UpdatedAtAsc = '_updatedAt_ASC',
-  _UpdatedAtDesc = '_updatedAt_DESC',
+  UpdatedAtAsc = '_updatedAt_ASC',
+  UpdatedAtDesc = '_updatedAt_DESC',
   CreatedAtAsc = 'createdAt_ASC',
   CreatedAtDesc = 'createdAt_DESC',
   DescriptionHeroAsc = 'descriptionHero_ASC',
@@ -13741,8 +13735,8 @@ export type ProjectModelFilter = {
 };
 
 export enum ProjectModelOrderBy {
-  _CreatedAtAsc = '_createdAt_ASC',
-  _CreatedAtDesc = '_createdAt_DESC',
+  CreatedAtAsc = '_createdAt_ASC',
+  CreatedAtDesc = '_createdAt_DESC',
   FirstPublishedAtAsc = '_firstPublishedAt_ASC',
   FirstPublishedAtDesc = '_firstPublishedAt_DESC',
   IsValidAsc = '_isValid_ASC',
@@ -13755,8 +13749,8 @@ export enum ProjectModelOrderBy {
   StatusDesc = '_status_DESC',
   UnpublishingScheduledAtAsc = '_unpublishingScheduledAt_ASC',
   UnpublishingScheduledAtDesc = '_unpublishingScheduledAt_DESC',
-  _UpdatedAtAsc = '_updatedAt_ASC',
-  _UpdatedAtDesc = '_updatedAt_DESC',
+  UpdatedAtAsc = '_updatedAt_ASC',
+  UpdatedAtDesc = '_updatedAt_DESC',
   AuthorsAsc = 'authors_ASC',
   AuthorsDesc = 'authors_DESC',
   CreatedAtAsc = 'createdAt_ASC',
@@ -14513,8 +14507,8 @@ export type PromoboxModelFilter = {
 };
 
 export enum PromoboxModelOrderBy {
-  _CreatedAtAsc = '_createdAt_ASC',
-  _CreatedAtDesc = '_createdAt_DESC',
+  CreatedAtAsc = '_createdAt_ASC',
+  CreatedAtDesc = '_createdAt_DESC',
   FirstPublishedAtAsc = '_firstPublishedAt_ASC',
   FirstPublishedAtDesc = '_firstPublishedAt_DESC',
   IsValidAsc = '_isValid_ASC',
@@ -14527,8 +14521,8 @@ export enum PromoboxModelOrderBy {
   StatusDesc = '_status_DESC',
   UnpublishingScheduledAtAsc = '_unpublishingScheduledAt_ASC',
   UnpublishingScheduledAtDesc = '_unpublishingScheduledAt_DESC',
-  _UpdatedAtAsc = '_updatedAt_ASC',
-  _UpdatedAtDesc = '_updatedAt_DESC',
+  UpdatedAtAsc = '_updatedAt_ASC',
+  UpdatedAtDesc = '_updatedAt_DESC',
   CreatedAtAsc = 'createdAt_ASC',
   CreatedAtDesc = 'createdAt_DESC',
   HeaderColorAsc = 'headerColor_ASC',
@@ -14762,8 +14756,8 @@ export type PublicationModelFilter = {
 };
 
 export enum PublicationModelOrderBy {
-  _CreatedAtAsc = '_createdAt_ASC',
-  _CreatedAtDesc = '_createdAt_DESC',
+  CreatedAtAsc = '_createdAt_ASC',
+  CreatedAtDesc = '_createdAt_DESC',
   FirstPublishedAtAsc = '_firstPublishedAt_ASC',
   FirstPublishedAtDesc = '_firstPublishedAt_DESC',
   IsValidAsc = '_isValid_ASC',
@@ -14776,8 +14770,8 @@ export enum PublicationModelOrderBy {
   StatusDesc = '_status_DESC',
   UnpublishingScheduledAtAsc = '_unpublishingScheduledAt_ASC',
   UnpublishingScheduledAtDesc = '_unpublishingScheduledAt_DESC',
-  _UpdatedAtAsc = '_updatedAt_ASC',
-  _UpdatedAtDesc = '_updatedAt_DESC',
+  UpdatedAtAsc = '_updatedAt_ASC',
+  UpdatedAtDesc = '_updatedAt_DESC',
   CreatedAtAsc = 'createdAt_ASC',
   CreatedAtDesc = 'createdAt_DESC',
   DescriptionHeroAsc = 'descriptionHero_ASC',
@@ -16329,8 +16323,8 @@ export type SchemaMigrationModelFilter = {
 };
 
 export enum SchemaMigrationModelOrderBy {
-  _CreatedAtAsc = '_createdAt_ASC',
-  _CreatedAtDesc = '_createdAt_DESC',
+  CreatedAtAsc = '_createdAt_ASC',
+  CreatedAtDesc = '_createdAt_DESC',
   FirstPublishedAtAsc = '_firstPublishedAt_ASC',
   FirstPublishedAtDesc = '_firstPublishedAt_DESC',
   IsValidAsc = '_isValid_ASC',
@@ -16343,8 +16337,8 @@ export enum SchemaMigrationModelOrderBy {
   StatusDesc = '_status_DESC',
   UnpublishingScheduledAtAsc = '_unpublishingScheduledAt_ASC',
   UnpublishingScheduledAtDesc = '_unpublishingScheduledAt_DESC',
-  _UpdatedAtAsc = '_updatedAt_ASC',
-  _UpdatedAtDesc = '_updatedAt_DESC',
+  UpdatedAtAsc = '_updatedAt_ASC',
+  UpdatedAtDesc = '_updatedAt_DESC',
   CreatedAtAsc = 'createdAt_ASC',
   CreatedAtDesc = 'createdAt_DESC',
   IdAsc = 'id_ASC',
@@ -16596,8 +16590,8 @@ export type TagModelFilter = {
 };
 
 export enum TagModelOrderBy {
-  _CreatedAtAsc = '_createdAt_ASC',
-  _CreatedAtDesc = '_createdAt_DESC',
+  CreatedAtAsc = '_createdAt_ASC',
+  CreatedAtDesc = '_createdAt_DESC',
   FirstPublishedAtAsc = '_firstPublishedAt_ASC',
   FirstPublishedAtDesc = '_firstPublishedAt_DESC',
   IsValidAsc = '_isValid_ASC',
@@ -16610,8 +16604,8 @@ export enum TagModelOrderBy {
   StatusDesc = '_status_DESC',
   UnpublishingScheduledAtAsc = '_unpublishingScheduledAt_ASC',
   UnpublishingScheduledAtDesc = '_unpublishingScheduledAt_DESC',
-  _UpdatedAtAsc = '_updatedAt_ASC',
-  _UpdatedAtDesc = '_updatedAt_DESC',
+  UpdatedAtAsc = '_updatedAt_ASC',
+  UpdatedAtDesc = '_updatedAt_DESC',
   CreatedAtAsc = 'createdAt_ASC',
   CreatedAtDesc = 'createdAt_DESC',
   IdAsc = 'id_ASC',
@@ -16933,10 +16927,10 @@ export type UploadNotesFilter = {
 };
 
 export enum UploadOrderBy {
-  _CreatedAtAsc = '_createdAt_ASC',
-  _CreatedAtDesc = '_createdAt_DESC',
-  _UpdatedAtAsc = '_updatedAt_ASC',
-  _UpdatedAtDesc = '_updatedAt_DESC',
+  CreatedAtAsc = '_createdAt_ASC',
+  CreatedAtDesc = '_createdAt_DESC',
+  UpdatedAtAsc = '_updatedAt_ASC',
+  UpdatedAtDesc = '_updatedAt_DESC',
   BasenameAsc = 'basename_ASC',
   BasenameDesc = 'basename_DESC',
   FilenameAsc = 'filename_ASC',
@@ -17231,8 +17225,8 @@ export type WorkshopCategoryModelFilter = {
 };
 
 export enum WorkshopCategoryModelOrderBy {
-  _CreatedAtAsc = '_createdAt_ASC',
-  _CreatedAtDesc = '_createdAt_DESC',
+  CreatedAtAsc = '_createdAt_ASC',
+  CreatedAtDesc = '_createdAt_DESC',
   FirstPublishedAtAsc = '_firstPublishedAt_ASC',
   FirstPublishedAtDesc = '_firstPublishedAt_DESC',
   IsValidAsc = '_isValid_ASC',
@@ -17245,8 +17239,8 @@ export enum WorkshopCategoryModelOrderBy {
   StatusDesc = '_status_DESC',
   UnpublishingScheduledAtAsc = '_unpublishingScheduledAt_ASC',
   UnpublishingScheduledAtDesc = '_unpublishingScheduledAt_DESC',
-  _UpdatedAtAsc = '_updatedAt_ASC',
-  _UpdatedAtDesc = '_updatedAt_DESC',
+  UpdatedAtAsc = '_updatedAt_ASC',
+  UpdatedAtDesc = '_updatedAt_DESC',
   CreatedAtAsc = 'createdAt_ASC',
   CreatedAtDesc = 'createdAt_DESC',
   DescriptionAsc = 'description_ASC',
@@ -17484,8 +17478,8 @@ export type WorkshopModelFilter = {
 };
 
 export enum WorkshopModelOrderBy {
-  _CreatedAtAsc = '_createdAt_ASC',
-  _CreatedAtDesc = '_createdAt_DESC',
+  CreatedAtAsc = '_createdAt_ASC',
+  CreatedAtDesc = '_createdAt_DESC',
   FirstPublishedAtAsc = '_firstPublishedAt_ASC',
   FirstPublishedAtDesc = '_firstPublishedAt_DESC',
   IsValidAsc = '_isValid_ASC',
@@ -17498,8 +17492,8 @@ export enum WorkshopModelOrderBy {
   StatusDesc = '_status_DESC',
   UnpublishingScheduledAtAsc = '_unpublishingScheduledAt_ASC',
   UnpublishingScheduledAtDesc = '_unpublishingScheduledAt_DESC',
-  _UpdatedAtAsc = '_updatedAt_ASC',
-  _UpdatedAtDesc = '_updatedAt_DESC',
+  UpdatedAtAsc = '_updatedAt_ASC',
+  UpdatedAtDesc = '_updatedAt_DESC',
   AuthorsAsc = 'authors_ASC',
   AuthorsDesc = 'authors_DESC',
   CreatedAtAsc = 'createdAt_ASC',
@@ -18258,8 +18252,8 @@ export type YearModelFilter = {
 };
 
 export enum YearModelOrderBy {
-  _CreatedAtAsc = '_createdAt_ASC',
-  _CreatedAtDesc = '_createdAt_DESC',
+  CreatedAtAsc = '_createdAt_ASC',
+  CreatedAtDesc = '_createdAt_DESC',
   FirstPublishedAtAsc = '_firstPublishedAt_ASC',
   FirstPublishedAtDesc = '_firstPublishedAt_DESC',
   IsValidAsc = '_isValid_ASC',
@@ -18272,8 +18266,8 @@ export enum YearModelOrderBy {
   StatusDesc = '_status_DESC',
   UnpublishingScheduledAtAsc = '_unpublishingScheduledAt_ASC',
   UnpublishingScheduledAtDesc = '_unpublishingScheduledAt_DESC',
-  _UpdatedAtAsc = '_updatedAt_ASC',
-  _UpdatedAtDesc = '_updatedAt_DESC',
+  UpdatedAtAsc = '_updatedAt_ASC',
+  UpdatedAtDesc = '_updatedAt_DESC',
   CreatedAtAsc = 'createdAt_ASC',
   CreatedAtDesc = 'createdAt_DESC',
   IdAsc = 'id_ASC',
@@ -18693,18 +18687,9 @@ export type FocalPoint = {
 export type LayoutQueryQueryVariables = Exact<{ [key: string]: never; }>;
 
 
-export type LayoutQueryQuery = { __typename?: 'Query', site: { __typename?: 'Site', locales: Array<SiteLocale>, faviconMetaTags: Array<{ __typename?: 'Tag', tag: string, content?: string | null, attributes?: any | null }> }, menu: Array<(
-    { __typename?: 'MenuItemRecord', parent?: (
-      { __typename?: 'MenuItemRecord', parent?: (
-        { __typename?: 'MenuItemRecord' }
-        & { ' $fragmentRefs'?: { 'MenuItemFragFragment': MenuItemFragFragment } }
-      ) | null }
-      & { ' $fragmentRefs'?: { 'MenuItemFragFragment': MenuItemFragFragment } }
-    ) | null }
-    & { ' $fragmentRefs'?: { 'MenuItemFragFragment': MenuItemFragFragment } }
-  )>, footer?: { __typename?: 'FooterRecord', info?: string | null, logo?: { __typename?: 'FileField', responsiveImage?: { __typename?: 'ResponsiveImage', src: string } | null } | null, socials: Array<{ __typename?: 'SocialLinkRecord', id: any, link: string, title: string, image: { __typename?: 'FileField', url: string } }>, sections: Array<{ __typename?: 'FooterSectionRecord', id: any, links: Array<{ __typename?: 'PageRecord', slugs?: Array<{ __typename?: 'StringNonNullMultiLocaleField', locale?: SiteLocale | null, value: string }> | null, titles?: Array<{ __typename?: 'StringNonNullMultiLocaleField', locale?: SiteLocale | null, value: string }> | null }> }> } | null };
+export type LayoutQueryQuery = { __typename?: 'Query', site: { __typename?: 'Site', locales: Array<SiteLocale>, faviconMetaTags: Array<{ __typename?: 'Tag', tag: string, content?: string | null, attributes?: Record<string, string> | null }> }, menu: Array<{ __typename?: 'MenuItemRecord', id: string, parent?: { __typename?: 'MenuItemRecord', id: string, parent?: { __typename?: 'MenuItemRecord', id: string, titles?: Array<{ __typename?: 'StringNonNullMultiLocaleField', locale?: SiteLocale | null, title: string }> | null, slugs?: Array<{ __typename?: 'StringNonNullMultiLocaleField', locale?: SiteLocale | null, slug: string }> | null, link?: { __typename: 'HomeRecord', id: string } | { __typename: 'PageRecord', id: string, slug: string, title: string, indexType?: string | null, isIndex?: boolean | null } | null } | null, titles?: Array<{ __typename?: 'StringNonNullMultiLocaleField', locale?: SiteLocale | null, title: string }> | null, slugs?: Array<{ __typename?: 'StringNonNullMultiLocaleField', locale?: SiteLocale | null, slug: string }> | null, link?: { __typename: 'HomeRecord', id: string } | { __typename: 'PageRecord', id: string, slug: string, title: string, indexType?: string | null, isIndex?: boolean | null } | null } | null, titles?: Array<{ __typename?: 'StringNonNullMultiLocaleField', locale?: SiteLocale | null, title: string }> | null, slugs?: Array<{ __typename?: 'StringNonNullMultiLocaleField', locale?: SiteLocale | null, slug: string }> | null, link?: { __typename: 'HomeRecord', id: string } | { __typename: 'PageRecord', id: string, slug: string, title: string, indexType?: string | null, isIndex?: boolean | null } | null }>, footer?: { __typename?: 'FooterRecord', info?: string | null, logo?: { __typename?: 'FileField', responsiveImage?: { __typename?: 'ResponsiveImage', src: string } | null } | null, socials: Array<{ __typename?: 'SocialLinkRecord', id: string, link: string, title: string, image: { __typename?: 'FileField', url: string } }>, sections: Array<{ __typename?: 'FooterSectionRecord', id: string, links: Array<{ __typename?: 'PageRecord', slugs?: Array<{ __typename?: 'StringNonNullMultiLocaleField', locale?: SiteLocale | null, value: string }> | null, titles?: Array<{ __typename?: 'StringNonNullMultiLocaleField', locale?: SiteLocale | null, value: string }> | null }> }> } | null };
 
-export type MenuItemFragFragment = { __typename?: 'MenuItemRecord', id: any, titles?: Array<{ __typename?: 'StringNonNullMultiLocaleField', locale?: SiteLocale | null, title: string }> | null, slugs?: Array<{ __typename?: 'StringNonNullMultiLocaleField', locale?: SiteLocale | null, slug: string }> | null, link?: { __typename: 'HomeRecord', id: any } | { __typename: 'PageRecord', id: any, slug: string, title: string, indexType?: string | null, isIndex?: any | null } | null } & { ' $fragmentName'?: 'MenuItemFragFragment' };
+export type MenuItemFragFragment = { __typename?: 'MenuItemRecord', id: string, titles?: Array<{ __typename?: 'StringNonNullMultiLocaleField', locale?: SiteLocale | null, title: string }> | null, slugs?: Array<{ __typename?: 'StringNonNullMultiLocaleField', locale?: SiteLocale | null, slug: string }> | null, link?: { __typename: 'HomeRecord', id: string } | { __typename: 'PageRecord', id: string, slug: string, title: string, indexType?: string | null, isIndex?: boolean | null } | null };
 
 export const MenuItemFragFragmentDoc = {"kind":"Document","definitions":[{"kind":"FragmentDefinition","name":{"kind":"Name","value":"menuItemFrag"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"MenuItemRecord"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"id"}},{"kind":"Field","alias":{"kind":"Name","value":"titles"},"name":{"kind":"Name","value":"_allTitleLocales"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"locale"}},{"kind":"Field","alias":{"kind":"Name","value":"title"},"name":{"kind":"Name","value":"value"}}]}},{"kind":"Field","alias":{"kind":"Name","value":"slugs"},"name":{"kind":"Name","value":"_allSlugLocales"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"locale"}},{"kind":"Field","alias":{"kind":"Name","value":"slug"},"name":{"kind":"Name","value":"value"}}]}},{"kind":"Field","name":{"kind":"Name","value":"link"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"__typename"}},{"kind":"InlineFragment","typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"HomeRecord"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"id"}}]}},{"kind":"InlineFragment","typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"PageRecord"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"id"}},{"kind":"Field","name":{"kind":"Name","value":"slug"}},{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"indexType"}},{"kind":"Field","name":{"kind":"Name","value":"isIndex"}}]}}]}}]}}]} as unknown as DocumentNode<MenuItemFragFragment, unknown>;
 export const LayoutQueryDocument = {"kind":"Document","definitions":[{"kind":"OperationDefinition","operation":"query","name":{"kind":"Name","value":"layoutQuery"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","alias":{"kind":"Name","value":"site"},"name":{"kind":"Name","value":"_site"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"locales"}},{"kind":"Field","name":{"kind":"Name","value":"faviconMetaTags"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"tag"}},{"kind":"Field","name":{"kind":"Name","value":"content"}},{"kind":"Field","name":{"kind":"Name","value":"attributes"}}]}}]}},{"kind":"Field","alias":{"kind":"Name","value":"menu"},"name":{"kind":"Name","value":"allMenuItems"},"arguments":[{"kind":"Argument","name":{"kind":"Name","value":"filter"},"value":{"kind":"ObjectValue","fields":[{"kind":"ObjectField","name":{"kind":"Name","value":"parent"},"value":{"kind":"ObjectValue","fields":[{"kind":"ObjectField","name":{"kind":"Name","value":"exists"},"value":{"kind":"StringValue","value":"false","block":false}}]}}]}}],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"menuItemFrag"}},{"kind":"Field","name":{"kind":"Name","value":"parent"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"menuItemFrag"}},{"kind":"Field","name":{"kind":"Name","value":"parent"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"menuItemFrag"}}]}}]}}]}},{"kind":"Field","name":{"kind":"Name","value":"footer"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"info"}},{"kind":"Field","name":{"kind":"Name","value":"logo"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"responsiveImage"},"arguments":[{"kind":"Argument","name":{"kind":"Name","value":"imgixParams"},"value":{"kind":"ObjectValue","fields":[{"kind":"ObjectField","name":{"kind":"Name","value":"auto"},"value":{"kind":"EnumValue","value":"format"}},{"kind":"ObjectField","name":{"kind":"Name","value":"maxW"},"value":{"kind":"StringValue","value":"600","block":false}}]}}],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"src"}}]}}]}},{"kind":"Field","name":{"kind":"Name","value":"socials"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"id"}},{"kind":"Field","name":{"kind":"Name","value":"link"}},{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"image"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"url"},"arguments":[{"kind":"Argument","name":{"kind":"Name","value":"imgixParams"},"value":{"kind":"ObjectValue","fields":[{"kind":"ObjectField","name":{"kind":"Name","value":"auto"},"value":{"kind":"EnumValue","value":"format"}},{"kind":"ObjectField","name":{"kind":"Name","value":"h"},"value":{"kind":"StringValue","value":"80","block":false}}]}}]}]}}]}},{"kind":"Field","name":{"kind":"Name","value":"sections"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"id"}},{"kind":"Field","name":{"kind":"Name","value":"links"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","alias":{"kind":"Name","value":"slugs"},"name":{"kind":"Name","value":"_allSlugLocales"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"locale"}},{"kind":"Field","name":{"kind":"Name","value":"value"}}]}},{"kind":"Field","alias":{"kind":"Name","value":"titles"},"name":{"kind":"Name","value":"_allTitleLocales"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"locale"}},{"kind":"Field","name":{"kind":"Name","value":"value"}}]}}]}}]}}]}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"menuItemFrag"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"MenuItemRecord"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"id"}},{"kind":"Field","alias":{"kind":"Name","value":"titles"},"name":{"kind":"Name","value":"_allTitleLocales"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"locale"}},{"kind":"Field","alias":{"kind":"Name","value":"title"},"name":{"kind":"Name","value":"value"}}]}},{"kind":"Field","alias":{"kind":"Name","value":"slugs"},"name":{"kind":"Name","value":"_allSlugLocales"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"locale"}},{"kind":"Field","alias":{"kind":"Name","value":"slug"},"name":{"kind":"Name","value":"value"}}]}},{"kind":"Field","name":{"kind":"Name","value":"link"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"__typename"}},{"kind":"InlineFragment","typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"HomeRecord"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"id"}}]}},{"kind":"InlineFragment","typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"PageRecord"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"id"}},{"kind":"Field","name":{"kind":"Name","value":"slug"}},{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"indexType"}},{"kind":"Field","name":{"kind":"Name","value":"isIndex"}}]}}]}}]}}]} as unknown as DocumentNode<LayoutQueryQuery, LayoutQueryQueryVariables>;

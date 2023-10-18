@@ -15,10 +15,9 @@ const config: CodegenConfig = {
   },
   documents: ["./src/graphql/*.graphql"],
   generates: {
-    "src/gql/": {
-      preset: "client",
-      presetConfig: {
-        fragmentMasking: { unmaskFunctionName: "getFragmentData" },
+    "src/graphql/generated.ts": {
+      plugins: ["typescript", "typescript-operations", "typed-document-node"],
+      config: {
         strictScalars: true,
         scalars: {
           BooleanType: "boolean",
