@@ -1,0 +1,9 @@
+fragment imageHeroFrag on FileFieldInterface {
+  id
+  responsiveImage(
+    sizes: "(max-width: 1024px) 80vw, (min-width: 1025px) 45vw, 600px"
+    imgixParams: { auto: [format, compress], ar: "5:4", fit: crop }
+  ) {
+    ...imgFrag
+  }
+}

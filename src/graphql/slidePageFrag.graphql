@@ -1,0 +1,6 @@
+fragment slidePageFrag on PageRecord {
+  id
+  slug
+  title
+  titleHero
+}

@@ -1,0 +1,11 @@
+fragment promoFrag on PromozioniBlockRecord {
+  id
+  promozione {
+    title
+    text
+    headerColor
+    subtitle
+    link
+    id
+  }
+}

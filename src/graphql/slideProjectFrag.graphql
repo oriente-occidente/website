@@ -1,0 +1,17 @@
+fragment slideProjectFrag on ProjectRecord {
+  id
+  slug
+  title
+  titleHero
+  authors
+  location
+  startDate
+  dates {
+    startTime
+    isDaily
+    endTime
+  }
+  imageHero {
+    ...imageHeroFrag
+  }
+}

@@ -1,0 +1,93 @@
+query home($locale: SiteLocale!) {
+  home(locale: $locale) {
+    slug
+    titleHero
+    homeSlideshow {
+      __typename
+      id
+      title
+      image {
+        id
+        responsiveImage(
+          sizes: "100vw"
+          imgixParams: {
+            auto: [format, compress]
+            ar: "16:9"
+            fit: crop
+            crop: top
+          }
+        ) {
+          ...imgFrag
+        }
+      }
+    }
+    homeSections {
+      id
+      layout
+      title
+      sectionLinkLabel
+      sectionLink {
+        __typename
+        ... on ArtistRecord {
+          id
+          slug
+          title
+        }
+        ... on EventRecord {
+          id
+          slug
+          title
+        }
+        ... on NewsRecord {
+          id
+          slug
+          title
+        }
+        ... on NetworkRecord {
+          id
+          slug
+          title
+        }
+        ... on PageRecord {
+          id
+          slug
+          title
+        }
+        ... on ProjectRecord {
+          id
+          slug
+          title
+        }
+        ... on WorkshopRecord {
+          id
+          slug
+          title
+        }
+      }
+      slides {
+        __typename
+        ... on ArtistRecord {
+          ...slideArtirstFrag
+        }
+        ... on EventRecord {
+          ...slideEventFrag
+        }
+        ... on NewsRecord {
+          ...slideNewsFrag
+        }
+        ... on PageRecord {
+          ...slidePageFrag
+        }
+        ... on ProjectRecord {
+          ...slideProjectFrag
+        }
+        ... on WorkshopRecord {
+          ...slideWorkshopFrag
+        }
+      }
+    }
+    seo: _seoMetaTags {
+      ...tagFrag
+    }
+  }
+}

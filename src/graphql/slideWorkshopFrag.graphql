@@ -1,0 +1,17 @@
+fragment slideWorkshopFrag on WorkshopRecord {
+  id
+  slug
+  title
+  titleHero
+  authors
+  location
+  startDate
+  dates {
+    startTime
+    isDaily
+    endTime
+  }
+  imageHero {
+    ...imageHeroFrag
+  }
+}

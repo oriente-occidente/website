@@ -1,0 +1,28 @@
+fragment videoFrag on VideoBlockRecord {
+  id
+  autoPlay
+  controls
+  loop
+  muted
+  poster {
+    url(imgixParams: { maxW: "600" })
+  }
+  externalVideo {
+    url
+    height
+    width
+    title
+    provider
+    providerUid
+    thumbnailUrl
+  }
+  internalVideo {
+    height
+    width
+    title
+    url
+    video {
+      mp4Url
+    }
+  }
+}

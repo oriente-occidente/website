@@ -1,0 +1,11 @@
+fragment slideNewsFrag on NewsRecord {
+  id
+  slug
+  title
+  titleHero
+  _createdAt
+  startDate
+  imageHero {
+    ...imageHeroFrag
+  }
+}
