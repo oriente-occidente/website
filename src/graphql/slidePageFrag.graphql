@@ -3,4 +3,7 @@ fragment slidePageFrag on PageRecord {
   slug
   title
   titleHero
+  imageHero {
+    ...imageHeroFrag
+  }
 }
