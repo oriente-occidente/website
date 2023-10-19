@@ -4,7 +4,7 @@ const ROOT_FOLDER = "./src/app";
 
 let labels = null;
 async function getConfig() {
-  const json = await fs.readFile("./src/data/data.json", "utf8");
+  const json = await fs.readFile("./src/data/config.json", "utf8");
   labels = JSON.parse(json);
 }
 await getConfig();

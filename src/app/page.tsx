@@ -5,6 +5,11 @@ import { notFound } from "next/navigation";
 import { HomeDocument, SiteLocale } from "@/graphql/generated";
 import translate from "@/lib/locales";
 import queryDatoCMS from "@/lib/fetchDato";
+import HeroSlider from "@/components/hero/HeroSlider";
+import GalleryHome from "@/components/galleries/GalleryHome";
+import GalleryPreview from "@/components/galleries/GalleryPreview";
+import Link from "next/link";
+import { resolveLinkById } from "@/lib/utils";
 
 const locale = "it";
 export default async function Home() {
@@ -17,13 +22,11 @@ export default async function Home() {
   );
 
   if (!data.home) notFound();
-
   const { homeSlideshow, homeSections, seo } = data.home;
-
   return (
     <div>
       <h1 className="sr-only">Oriente Occidente</h1>
-      {/* <HeroSlider slides={homeSlideshow} /> */}
+      <HeroSlider slides={homeSlideshow} />
       {homeSections.map((block: any) => {
         return (
           <Fragment key={block.id}>
@@ -32,13 +35,13 @@ export default async function Home() {
               key={block.id}
             >
               <h2 className="title--small py-8 lg:py-16">{block.title}</h2>
-              {/* <Link
+              <Link
                 href={resolveLinkById(block.sectionLink.id, locale)}
                 locale={locale}
                 className="button--with-arrow"
               >
                 {block.sectionLinkLabel}
-              </Link> */}
+              </Link>
             </div>
             {block.layout == "Mission" ? (
               <div className="bg-gray">
@@ -48,7 +51,7 @@ export default async function Home() {
               </div>
             ) : null}
             <div>
-              {/* {block.layout == "PrimoPiano" ? (
+              {block.layout == "PrimoPiano" ? (
                 <GalleryPreview slides={block.slides} locale={locale} />
               ) : (
                 <GalleryHome
@@ -56,7 +59,7 @@ export default async function Home() {
                   background={"gray"}
                   locale={locale}
                 />
-              )} */}
+              )}
             </div>
           </Fragment>
         );

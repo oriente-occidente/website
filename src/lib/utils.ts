@@ -39,8 +39,11 @@ export function getCategoriesList(list: any[]) {
   }, {});
 }
 
+export function resolveLinkById(id: string, locale = "it", group = null) {
+  return locale === config.defaultLocale ? "/" : `/${locale}/`;
+}
 // ROUTES
-// return locale === config.defaultLocale ? "/" : `/${locale}/`;
+//
 // export function resolveLinkById(id: string, locale = "it", group = null) {
 //   const route = group
 //     ? routes.find((r) => r.id === id && r.group == group)

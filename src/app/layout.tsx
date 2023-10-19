@@ -3,15 +3,20 @@ import { cookies } from "next/headers";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { draftMode } from "next/headers";
-
 import { LayoutDocument, SiteLocale } from "@/graphql/generated";
 import type { LayoutParams } from "@/types";
-
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import translate from "@/lib/locales";
 import queryDatoCMS from "@/lib/fetchDato";
 
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import "swiper/css/autoplay";
+import "swiper/css/effect-fade";
+// import "swiper/css/scrollbar";
 import "@/style/globals.css";
 
 export const metadata: Metadata = {
@@ -38,8 +43,7 @@ LayoutParams) {
     isEnabled
   );
 
-  if (!data.site) notFound();
-
+  if (!data) return null;
   return (
     <html lang={locale}>
       <body>
@@ -53,7 +57,7 @@ LayoutParams) {
         </div>
         <Header locale={locale} data={data.menu} />
         <main className="min-h-[50vh] pt-[70px] md:pt-[80px] lg:pt-[110px]">
-          <div className="container">{children}</div>
+          <div>{children}</div>
         </main>
         <Footer locale={locale} data={data.footer} hideNewsletter={false} />
       </body>
