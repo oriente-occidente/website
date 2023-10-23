@@ -12,7 +12,7 @@ import Link from "next/link";
 import { resolveLinkById } from "@/lib/utils";
 
 const locale = "it";
-export default async function Home() {
+async function Home() {
   const { isEnabled } = draftMode();
   const siteLocale = locale as SiteLocale;
   const data = await queryDatoCMS(
@@ -67,3 +67,5 @@ export default async function Home() {
     </div>
   );
 }
+
+export default Home;
