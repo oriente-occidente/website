@@ -105,7 +105,7 @@ function renderMobile(data: any, locale: string, handleClose: () => void) {
 }
 
 function Header(props: any) {
-  const { data, locale, alts } = props;
+  const { data, locale } = props;
 
   function renderLink(item: any) {
     if (item.children && item.children.filter((c: any) => c.slug).length > 0) {

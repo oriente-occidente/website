@@ -9,7 +9,7 @@ export function t(section: string, locale: string) {
 
 export default function resolveLink({
   slug,
-  apiKey,
+  _modelApiKey,
   section,
   locale,
 }: ResolveLinkProps): string {
@@ -20,7 +20,7 @@ export default function resolveLink({
   //localized section, used for pages section
   const ls = s ? t(`${s}`, locale) : "";
 
-  switch (apiKey) {
+  switch (_modelApiKey) {
     case "page":
       if (!s) {
         return `${lp}/${slug}`;

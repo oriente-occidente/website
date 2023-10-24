@@ -4,7 +4,7 @@ describe("Resolve link for model Page", () => {
   it("resolve a root page link", () => {
     const locale = "it";
     const item = {
-      apiKey: "page",
+      _modelApiKey: "page",
       slug: "supportaci",
       section: "",
     };
@@ -16,7 +16,7 @@ describe("Resolve link for model Page", () => {
   it("resolve a festivaò page link", () => {
     const locale = "en";
     const item = {
-      apiKey: "page",
+      _modelApiKey: "page",
       slug: "tickets",
       section: "festival",
     };
@@ -28,7 +28,7 @@ describe("Resolve link for model Page", () => {
   it("resolve a festivaò page link", () => {
     const locale = "it";
     const item = {
-      apiKey: "page",
+      _modelApiKey: "page",
       slug: "sostenibilita",
       section: "info",
     };

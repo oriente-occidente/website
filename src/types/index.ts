@@ -6,7 +6,7 @@ export type LayoutParams = {
 };
 export type ResolveLinkProps = {
   slug: string;
-  apiKey: string;
+  _modelApiKey: string;
   locale: string;
   section?: string;
 };

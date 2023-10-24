@@ -37,11 +37,14 @@ query layout($locale: SiteLocale) {
         id
         slug
         title
+        section
       }
     }
     links {
       id
+      slug
       title
+      section
     }
     newsletterSubscriptionMessage
     newsletterListUrl

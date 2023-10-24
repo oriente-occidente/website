@@ -6,11 +6,20 @@ fragment menuItemFrag on MenuItemRecord {
     __typename
     ... on HomeRecord {
       id
+      _modelApiKey
     }
     ... on PageRecord {
       id
-      slug
       title
+      _modelApiKey
+      slug
+      section
+    }
+    ... on FestivalEditionRecord {
+      id
+      title
+      _modelApiKey
+      slug
     }
   }
 }
