@@ -1,0 +1,113 @@
+query page($locale: SiteLocale!, $slug: String) {
+  page(filter: { slug: { eq: $slug } }, locale: $locale) {
+    id
+    slug
+    title
+    isIndex
+    indexType
+    seo: _seoMetaTags {
+      ...tagFrag
+    }
+    sections {
+      id
+      title
+      body {
+        value
+        links {
+          __typename
+          ... on ArtistRecord {
+            id
+            slug
+            title
+          }
+          ... on EventRecord {
+            id
+            slug
+            title
+          }
+          ... on NewsRecord {
+            id
+            slug
+            title
+          }
+          ... on NetworkRecord {
+            id
+            slug
+            title
+          }
+          ... on PageRecord {
+            id
+            slug
+            title
+          }
+          ... on ProjectRecord {
+            id
+            slug
+            title
+          }
+          ... on WorkshopRecord {
+            id
+            slug
+            title
+          }
+        }
+        blocks {
+          __typename
+          ... on GalleryRecord {
+            ...galleryFrag
+          }
+          ... on ImageBlockRecord {
+            ...imageBlockFrag
+          }
+          ... on VideoBlockRecord {
+            ...videoFrag
+          }
+          ... on PartnerBlockRecord {
+            id
+            title
+            image {
+              responsiveImage(imgixParams: { auto: format, maxW: "300" }) {
+                ...imgFrag
+              }
+            }
+            url
+          }
+          ... on WorkshopCategoriesBlockRecord {
+            ...wsCatsFrag
+          }
+          ... on PromozioniBlockRecord {
+            ...promoFrag
+          }
+        }
+      }
+    }
+    otherSections {
+      __typename
+      ... on TeamRecord {
+        id
+        teamTitle: title
+        role
+        email
+        linkedin
+        image {
+          responsiveImage(
+            sizes: "(max-width: 1023px) 50vw, (min-width: 1024px) 30vw, 300px"
+            imgixParams: { auto: [format, compress], ar: "1:1", fit: crop, crop: top }
+          ) {
+            ...imgFrag
+          }
+        }
+      }
+      ... on PartnerBlockRecord {
+        id
+        title
+        image {
+          responsiveImage(imgixParams: { auto: format, maxW: "300" }) {
+            ...imgFrag
+          }
+        }
+        url
+      }
+    }
+  }
+}
