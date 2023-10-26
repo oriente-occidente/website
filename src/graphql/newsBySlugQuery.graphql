@@ -1,0 +1,94 @@
+query news($slug: String!, $locale: SiteLocale) {
+  news(locale: $locale, filter: { slug: { eq: $slug } }) {
+    id
+    slug
+    seo: _seoMetaTags {
+      attributes
+      content
+      tag
+    }
+    title
+    layoutHero
+    titleHero
+    descriptionHero
+    imageHero {
+      id
+      title
+      responsiveImage(
+        sizes: "(max-width: 1023px) 100vw, (min-width: 1024px) 80vw, 1400px"
+        imgixParams: { auto: [format, compress], ar: "14:8", fit: crop }
+      ) {
+        ...imgFrag
+      }
+    }
+    slideshowHero {
+      id
+      title
+      responsiveImage(
+        sizes: "(max-width: 1023px) 100vw, (min-width: 1024px) 80vw, 1400px"
+        imgixParams: { auto: [format, compress], ar: "14:8", fit: crop }
+      ) {
+        ...imgFrag
+      }
+    }
+    content {
+      value
+      links {
+        __typename
+        ... on ArtistRecord {
+          id
+          slug
+          title
+        }
+        ... on EventRecord {
+          id
+          slug
+          title
+        }
+        ... on NewsRecord {
+          id
+          slug
+          title
+        }
+        ... on NetworkRecord {
+          id
+          slug
+          title
+        }
+        ... on PageRecord {
+          id
+          slug
+          title
+        }
+        ... on ProjectRecord {
+          id
+          slug
+          title
+        }
+        ... on WorkshopRecord {
+          id
+          slug
+          title
+        }
+      }
+      blocks {
+        __typename
+        ... on GalleryRecord {
+          ...galleryFrag
+        }
+        ... on ImageBlockRecord {
+          ...imageBlockFrag
+        }
+        ... on VideoBlockRecord {
+          ...videoFrag
+        }
+      }
+    }
+    startDate
+    tags {
+      id
+      slug
+      title
+    }
+  }
+}
