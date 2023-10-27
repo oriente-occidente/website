@@ -2,7 +2,6 @@ import { draftMode } from "next/headers";
 import type { BasicSlugPageProps } from "@/types";
 import { NewsDocument, SiteLocale } from "@/graphql/generated";
 import queryDatoCMS from "@/lib/fetchDato";
-import HeroIndex from "@/components/hero/HeroIndex";
 import MainContent from "@/components/contents/MainContent";
 
 const locale = "it";
@@ -26,7 +25,6 @@ export default async function Page({ params }: BasicSlugPageProps) {
 
   return (
     <div>
-      {/* <HeroIndex data={heroData} locale={locale} /> */}
       <MainContent locale={locale} data={data.news?.content} />
     </div>
   );

@@ -3,6 +3,8 @@ fragment slideEventFrag on EventRecord {
   slug
   title
   titleHero
+  layoutHero
+  descriptionHero
   authors
   location
   startDate
@@ -13,5 +15,15 @@ fragment slideEventFrag on EventRecord {
   }
   imageHero {
     ...imageHeroFrag
+  }
+  slideshowHero {
+    id
+    title
+    responsiveImage(
+      sizes: "(max-width: 1023px) 100vw, (min-width: 1024px) 80vw, 1400px"
+      imgixParams: { auto: [format, compress], ar: "14:8", fit: crop }
+    ) {
+      ...imgFrag
+    }
   }
 }

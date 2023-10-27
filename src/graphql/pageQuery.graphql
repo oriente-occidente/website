@@ -1,18 +1,155 @@
 query page($locale: SiteLocale!, $slug: String) {
   page(filter: { slug: { eq: $slug } }, locale: $locale) {
-    id
-    slug
-    title
+    ...slidePageFrag
     isIndex
     indexType
     seo: _seoMetaTags {
       ...tagFrag
+    }
+    relatedContents {
+      __typename
+      ... on ArtistRecord {
+        ...slideArtirstFrag
+      }
+      ... on NewsRecord {
+        ...slideNewsFrag
+        _createdAt
+        startDate
+        tags {
+          title
+          slug
+        }
+      }
+      ... on PageRecord {
+        ...slidePageFrag
+      }
+      ... on EventRecord {
+        ...slideEventFrag
+        tags {
+          title
+        }
+      }
+      ... on ProjectRecord {
+        ...slideProjectFrag
+        tags {
+          title
+        }
+      }
+      ... on WorkshopRecord {
+        ...slideWorkshopFrag
+        tags {
+          title
+        }
+      }
+    }
+    layoutHero
+    titleHero
+    descriptionHero
+
+    slideshowHero {
+      id
+      title
+      responsiveImage(
+        sizes: "(max-width: 1023px) 100vw, (min-width: 1024px) 80vw, 1400px"
+        imgixParams: { auto: [format, compress], ar: "14:8", fit: crop }
+      ) {
+        ...imgFrag
+      }
+    }
+    content {
+      value
+      links {
+        __typename
+        ... on ArtistRecord {
+          id
+          slug
+          title
+        }
+        ... on EventRecord {
+          id
+          slug
+          title
+        }
+        ... on NewsRecord {
+          id
+          slug
+          title
+        }
+        ... on NetworkRecord {
+          id
+          slug
+          title
+        }
+        ... on PageRecord {
+          id
+          slug
+          title
+        }
+        ... on ProjectRecord {
+          id
+          slug
+          title
+        }
+        ... on WorkshopRecord {
+          id
+          slug
+          title
+        }
+      }
+      blocks {
+        __typename
+        ... on GalleryRecord {
+          ...galleryFrag
+        }
+        ... on ImageBlockRecord {
+          ...imageBlockFrag
+        }
+        ... on VideoBlockRecord {
+          ...videoFrag
+        }
+      }
     }
     sections {
       id
       title
       body {
         value
+        blocks {
+          __typename
+          ... on GalleryRecord {
+            id
+            images {
+              responsiveImage(
+                sizes: "100vw"
+                imgixParams: { auto: [format, compress], h: 800, w: 1200, fit: crop }
+              ) {
+                ...imgFrag
+              }
+            }
+          }
+          ... on ImageBlockRecord {
+            ...imageBlockFrag
+          }
+          ... on VideoBlockRecord {
+            ...videoFrag
+          }
+          ... on PartnerBlockRecord {
+            id
+            title
+            image {
+              responsiveImage(imgixParams: { auto: format, maxW: "300" }) {
+                ...imgFrag
+              }
+            }
+            url
+          }
+          ... on WorkshopCategoriesBlockRecord {
+            ...wsCatsFrag
+          }
+          ... on PromozioniBlockRecord {
+            ...promoFrag
+          }
+        }
         links {
           __typename
           ... on ArtistRecord {

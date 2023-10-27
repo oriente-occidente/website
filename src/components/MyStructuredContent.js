@@ -142,6 +142,7 @@ const StructuredContent = ({ locale, content }) => {
           </div>
         );
       case "PartnerRecord":
+      case "PartnerBlockRecord":
         return <Partners data={record} />;
       default:
         return null;
