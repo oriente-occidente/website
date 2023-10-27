@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@200;400;600;700&display=swap");
+
 @tailwind base;
 @layer base {
   html {
@@ -6,7 +8,6 @@
 }
 @tailwind components;
 @layer components {
-
   .h1 {
     @apply py-2 text-base font-semibold uppercase lg:py-4 lg:text-2xl;
   }
@@ -96,30 +97,78 @@
     @apply text-xxs uppercase md:text-sm md:tracking-wide lg:text-base;
   }
 
+  .dato-image-contain,
+  .dato-image-cover {
+    height: 100%;
+    max-width: 100% !important;
+  }
+  img.dato-image-contain,
+  img.dato-image-cover,
+  .dato-image-contain picture,
+  .dato-image-cover picture {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+  }
+  img.dato-image-cover,
+  .dato-image-cover picture img {
+    object-fit: cover;
+    object-position: center;
+  }
+  img.dato-image-contain,
+  .dato-image-contain picture img {
+    object-fit: contain;
+    object-position: center;
+  }
 
-.swiper .swiper-pagination .swiper-pagination-bullet,
-.swiper-gallery .swiper-pagination .swiper-pagination-bullet,
-.swiper-gallery-standard .swiper-pagination .swiper-pagination-bullet {
-  @apply mx-2 h-3 w-3 bg-white md:hidden;
-}
+  .container {
+    @apply mx-auto my-0 px-4 md:px-6;
+  }
 
-.swiper .swiper-button-prev,
-.swiper-gallery .swiper-button-prev,
-.swiper-gallery-standard .swiper-button-prev {
-  @apply top-auto bottom-12 left-16 hidden h-14 w-14 before:absolute before:inset-0 before:scale-0 before:rounded-full before:border before:border-white before:duration-300 before:ease-in after:h-full after:w-3/5 after:bg-arrow-left after:bg-center after:bg-no-repeat after:text-white hover:before:scale-100 md:flex 2xl:bottom-24;
-}
+  .swiper .swiper-pagination .swiper-pagination-bullet,
+  .swiper-gallery .swiper-pagination .swiper-pagination-bullet,
+  .swiper-gallery-standard .swiper-pagination .swiper-pagination-bullet {
+    @apply mx-2 h-3 w-3 bg-white md:hidden;
+  }
+  .swiper .swiper-pagination .swiper-pagination-bullet,
+  .swiper-gallery .swiper-pagination .swiper-pagination-bullet,
+  .swiper-gallery-standard .swiper-pagination .swiper-pagination-bullet {
+    @apply mx-2 h-3 w-3 bg-white md:hidden;
+  }
 
-.swiper .swiper-button-next,
-.swiper-gallery .swiper-button-next,
-.swiper-gallery-standard .swiper-button-next {
-  @apply top-auto bottom-12 left-32 hidden h-14 w-14 before:absolute before:inset-0 before:scale-0 before:rounded-full before:border before:border-white before:duration-300 before:ease-in after:h-full after:w-3/5 after:bg-arrow-right after:bg-center after:bg-no-repeat after:text-white hover:before:scale-100 md:flex 2xl:bottom-24;
-}
+  .swiper .swiper-button-prev,
+  .swiper-gallery .swiper-button-prev,
+  .swiper-gallery-standard .swiper-button-prev {
+    @apply top-auto bottom-12 left-16 hidden h-14 w-14 before:absolute before:inset-0 before:scale-0 before:rounded-full before:border before:border-white before:duration-300 before:ease-in after:h-full after:w-3/5 after:bg-arrow-left after:bg-center after:bg-no-repeat after:text-white hover:before:scale-100 md:flex 2xl:bottom-24;
+  }
+  .swiper .swiper-button-prev,
+  .swiper-gallery .swiper-button-prev,
+  .swiper-gallery-standard .swiper-button-prev {
+    @apply top-auto bottom-12 left-16 hidden h-14 w-14 before:absolute before:inset-0 before:scale-0 before:rounded-full before:border before:border-white before:duration-300 before:ease-in after:h-full after:w-3/5 after:bg-arrow-left after:bg-center after:bg-no-repeat after:text-white hover:before:scale-100 md:flex 2xl:bottom-24;
+  }
 
-/* .SwiperGallery.swiper {
+  .swiper .swiper-button-next,
+  .swiper-gallery .swiper-button-next,
+  .swiper-gallery-standard .swiper-button-next {
+    @apply top-auto bottom-12 left-32 hidden h-14 w-14 before:absolute before:inset-0 before:scale-0 before:rounded-full before:border before:border-white before:duration-300 before:ease-in after:h-full after:w-3/5 after:bg-arrow-right after:bg-center after:bg-no-repeat after:text-white hover:before:scale-100 md:flex 2xl:bottom-24;
+  }
+  .swiper .swiper-button-next,
+  .swiper-gallery .swiper-button-next,
+  .swiper-gallery-standard .swiper-button-next {
+    @apply top-auto bottom-12 left-32 hidden h-14 w-14 before:absolute before:inset-0 before:scale-0 before:rounded-full before:border before:border-white before:duration-300 before:ease-in after:h-full after:w-3/5 after:bg-arrow-right after:bg-center after:bg-no-repeat after:text-white hover:before:scale-100 md:flex 2xl:bottom-24;
+  }
+
+  /* .SwiperGallery.swiper {
+  /* .SwiperGallery.swiper {
   @apply overflow-visible;
 } */
 
-/* .SwiperGallery.swiper .swiper-slide {
+  /* .SwiperGallery.swiper .swiper-slide {
+  /* .SwiperGallery.swiper .swiper-slide {
   @apply opacity-0 transition-all;
 }
 
@@ -127,59 +176,97 @@
   @apply opacity-100;
 } */
 
-.swiper.swiper-button-prev,
-.swiper-gallery .swiper-button-prev {
-  @apply left-[-33%] bottom-0 before:border-black after:bg-arrow-left-black xl:left-[calc(-33%+1.5rem)] xl:bottom-8 2xl:-left-[333px];
-}
-
-.swiper.swiper-button-next,
-.swiper-gallery .swiper-button-next {
-  @apply bottom-0 left-[calc(-33%+3.5rem)] before:border-black after:bg-arrow-right-black xl:bottom-8 xl:left-[calc(-33%+5rem)] 2xl:-left-[calc(333px-3.5rem)];
-}
-
-.swiper-gallery-standard .swiper-button-prev {
-  @apply hidden;
-}
-
-.swiper-gallery-standard .swiper-button-next {
-  @apply right-0 left-auto top-1/2 after:bg-arrow-right-black hover:before:border-black;
-}
-
-.swiper-gallery-standard {
-  @apply relative;
-}
-
-@media (min-width: 1536px) {
-  .mySwiper .swiper-button-prev {
-    left: calc((100vw - 1380px) / 2);
+  .swiper.swiper-button-prev,
+  .swiper-gallery .swiper-button-prev {
+    @apply left-[-33%] bottom-0 before:border-black after:bg-arrow-left-black xl:left-[calc(-33%+1.5rem)] xl:bottom-8 2xl:-left-[333px];
+  }
+  .swiper.swiper-button-prev,
+  .swiper-gallery .swiper-button-prev {
+    @apply left-[-33%] bottom-0 before:border-black after:bg-arrow-left-black xl:left-[calc(-33%+1.5rem)] xl:bottom-8 2xl:-left-[333px];
   }
 
-  .mySwiper .swiper-button-next {
-    left: calc(((100vw - 1380px) / 2) + 70px);
+  .swiper.swiper-button-next,
+  .swiper-gallery .swiper-button-next {
+    @apply bottom-0 left-[calc(-33%+3.5rem)] before:border-black after:bg-arrow-right-black xl:bottom-8 xl:left-[calc(-33%+5rem)] 2xl:-left-[calc(333px-3.5rem)];
   }
-}
-.swiper-notification {
-  @apply sr-only;
-}
-@media (max-width: 1023px) {
-  .custom-nth-child:nth-child(even) {
-    margin-left: 2%;
-  }
-}
-
-@media (min-width: 1024px) {
-  .custom-nth-child {
-    margin-left: 2%;
+  .swiper.swiper-button-next,
+  .swiper-gallery .swiper-button-next {
+    @apply bottom-0 left-[calc(-33%+3.5rem)] before:border-black after:bg-arrow-right-black xl:bottom-8 xl:left-[calc(-33%+5rem)] 2xl:-left-[calc(333px-3.5rem)];
   }
 
-  .custom-nth-child:nth-child(3n + 1) {
-    margin-left: 0;
+  .swiper-gallery-standard .swiper-button-prev {
+    @apply hidden;
   }
-}
-.skip-link {
-  @apply absolute left-1/2 z-50 -translate-x-1/2 -translate-y-full bg-black px-3 py-2 text-white duration-500 hover:bg-gray-dark focus:translate-y-0;
-}
+  .swiper-gallery-standard .swiper-button-prev {
+    @apply hidden;
+  }
 
+  .swiper-gallery-standard .swiper-button-next {
+    @apply right-0 left-auto top-1/2 after:bg-arrow-right-black hover:before:border-black;
+  }
+  .swiper-gallery-standard .swiper-button-next {
+    @apply right-0 left-auto top-1/2 after:bg-arrow-right-black hover:before:border-black;
+  }
+
+  .swiper-gallery-standard {
+    @apply relative;
+  }
+  .swiper-gallery-standard {
+    @apply relative;
+  }
+
+  @media (min-width: 1536px) {
+    .mySwiper .swiper-button-prev {
+      left: calc((100vw - 1380px) / 2);
+    }
+  @media (min-width: 1536px) {
+    .mySwiper .swiper-button-prev {
+      left: calc((100vw - 1380px) / 2);
+    }
+
+    .mySwiper .swiper-button-next {
+      left: calc(((100vw - 1380px) / 2) + 70px);
+    }
+  }
+  .swiper-notification {
+    @apply sr-only;
+  }
+  @media (max-width: 1023px) {
+    .custom-nth-child:nth-child(even) {
+      margin-left: 2%;
+    }
+  }
+    .mySwiper .swiper-button-next {
+      left: calc(((100vw - 1380px) / 2) + 70px);
+    }
+  }
+  .swiper-notification {
+    @apply sr-only;
+  }
+  @media (max-width: 1023px) {
+    .custom-nth-child:nth-child(even) {
+      margin-left: 2%;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .custom-nth-child {
+      margin-left: 2%;
+    }
+  @media (min-width: 1024px) {
+    .custom-nth-child {
+      margin-left: 2%;
+    }
+
+    .custom-nth-child:nth-child(3n + 1) {
+      margin-left: 0;
+    }
+  }
+  .skip-link {
+    @apply absolute left-1/2 z-50 -translate-x-1/2 -translate-y-full bg-black px-3 py-2 text-white duration-500 hover:bg-gray-dark focus:translate-y-0;
+  }
+  .swiper-notification {
+    @apply sr-only;
+  }
 }
 @tailwind utilities;
-
