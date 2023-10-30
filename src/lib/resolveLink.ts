@@ -19,9 +19,8 @@ export default function resolveLink({
   const s = section?.toLowerCase() || "";
   //localized section, used for pages section
   const ls = s ? t(`${s}`, locale) : "";
-  console.log("_modelApiKey", _modelApiKey);
   if (!_modelApiKey) {
-    return "/error";
+    return "#";
   }
   switch (_modelApiKey) {
     case "page":

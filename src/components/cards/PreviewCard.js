@@ -1,7 +1,7 @@
 "use client";
 import { Image as DatoImage } from "react-datocms";
 import Link from "next/link";
-import { LocationMarkerIcon, CalendarIcon } from "@heroicons/react/24/outline";
+import { MapPinIcon, CalendarIcon } from "@heroicons/react/24/outline";
 import {
   resolveLinkById,
   formatDate,
@@ -67,7 +67,7 @@ function PreviewCard({ data, locale, group = null, year }) {
             )}
             {data.location && (
               <div className="hidden items-center gap-x-2 md:flex">
-                <LocationMarkerIcon aria-hidden="true" className="h-4 w-4" />
+                <MapPinIcon aria-hidden="true" className="h-4 w-4" />
                 <span className="font-light normal-case md:pr-1">
                   {data.location}
                 </span>
@@ -121,7 +121,7 @@ function PreviewCard({ data, locale, group = null, year }) {
         ))}
         {data.location && (
           <div className="flex items-center gap-1 md:hidden">
-            <LocationMarkerIcon
+            <MapPinIcon
               aria-hidden="true"
               className="mr-1 h-4 w-3 text-black"
             />

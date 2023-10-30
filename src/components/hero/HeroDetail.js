@@ -1,5 +1,5 @@
 import { Image as DatoImage } from "react-datocms";
-import { LocationMarkerIcon, CalendarIcon } from "@heroicons/react/24/outline";
+import { MapPinIcon, CalendarIcon } from "@heroicons/react/24/outline";
 // import dynamic from 'next/dynamic';
 import Gallery from "@/components/galleries/Gallery";
 import BookButton from "@/components/BookButton";
@@ -53,7 +53,7 @@ function HeroDetail({ data }) {
           ) : null}
           {location && (
             <h2 className="mt-1 flex items-center text-xxs text-black-light">
-              <LocationMarkerIcon aria-hidden="true" className="mr-2 h-4 w-4" />
+              <MapPinIcon aria-hidden="true" className="mr-2 h-4 w-4" />
               {location}
             </h2>
           )}
@@ -62,17 +62,25 @@ function HeroDetail({ data }) {
       <div className="md:border-color-gray relative md:col-span-3 md:col-start-2 md:border-l lg:w-full xl:pt-4">
         <div className="md:items-flex-start px-4 pt-4 md:flex md:justify-between md:px-12">
           <div className="">
-            <h1 className="pt-1 pb-1 text-base uppercase lg:text-xl">{titleHero}</h1>
+            <h1 className="pt-1 pb-1 text-base uppercase lg:text-xl">
+              {titleHero}
+            </h1>
             {authors && (
               <h2 className="mb-1 text-base font-semibold uppercase lg:text-xl">
                 {authors}
               </h2>
             )}
-            <h2 className="text-base font-semibold uppercase">{descriptionHero}</h2>
+            <h2 className="text-base font-semibold uppercase">
+              {descriptionHero}
+            </h2>
           </div>
 
           {paymentSettings && (
-            <BookButton paymentSettings={paymentSettings} locale={locale} id={pageId} />
+            <BookButton
+              paymentSettings={paymentSettings}
+              locale={locale}
+              id={pageId}
+            />
           )}
         </div>
 
