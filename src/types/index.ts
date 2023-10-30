@@ -25,3 +25,8 @@ export type MobileNavProps = {
   locale: string;
   handleClose: () => void;
 };
+
+export type NewsCardProps = {
+  data: any;
+  locale: string;
+};
