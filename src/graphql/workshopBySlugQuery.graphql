@@ -1,0 +1,241 @@
+query workshop($slug: String!, $locale: SiteLocale) {
+  workshop(locale: $locale, filter: { slug: { eq: $slug } }) {
+    id
+    slug
+    seo: _seoMetaTags {
+      ...tagFrag
+    }
+    title
+    layoutHero
+    titleHero
+    descriptionHero
+    imageHero {
+      id
+      title
+      responsiveImage(
+        sizes: "(max-width: 1023px) 100vw, (min-width: 1024px) 80vw, 1400px"
+        imgixParams: { auto: [format, compress], ar: "14:8", fit: crop }
+      ) {
+        ...imgFrag
+      }
+    }
+    slideshowHero {
+      id
+      title
+      responsiveImage(
+        sizes: "(max-width: 1023px) 100vw, (min-width: 1024px) 80vw, 1400px"
+        imgixParams: { auto: [format, compress], ar: "14:8", fit: crop }
+      ) {
+        ...imgFrag
+      }
+    }
+    relatedContents {
+      __typename
+      ... on ArtistRecord {
+        ...slideArtirstFrag
+      }
+      ... on NewsRecord {
+        ...slideNewsFrag
+        _createdAt
+        startDate
+        tags {
+          title
+          slug
+        }
+      }
+      ... on PageRecord {
+        ...slidePageFrag
+      }
+      ... on EventRecord {
+        ...slideEventFrag
+        tags {
+          title
+        }
+      }
+      ... on ProjectRecord {
+        ...slideProjectFrag
+        tags {
+          title
+        }
+      }
+      ... on WorkshopRecord {
+        ...slideWorkshopFrag
+        tags {
+          title
+        }
+      }
+    }
+    content {
+      value
+      links {
+        __typename
+        ... on ArtistRecord {
+          id
+          slug
+          title
+        }
+        ... on EventRecord {
+          id
+          slug
+          title
+        }
+        ... on NewsRecord {
+          id
+          slug
+          title
+        }
+        ... on NetworkRecord {
+          id
+          slug
+          title
+        }
+        ... on PageRecord {
+          id
+          slug
+          title
+        }
+        ... on ProjectRecord {
+          id
+          slug
+          title
+        }
+        ... on WorkshopRecord {
+          id
+          slug
+          title
+        }
+      }
+      blocks {
+        __typename
+        ... on GalleryRecord {
+          ...galleryFrag
+        }
+        ... on ImageBlockRecord {
+          ...imageBlockFrag
+        }
+        ... on VideoBlockRecord {
+          ...videoFrag
+        }
+      }
+    }
+    sections {
+      id
+      title
+      body {
+        value
+        links {
+          __typename
+          ... on ArtistRecord {
+            id
+            slug
+            title
+          }
+          ... on EventRecord {
+            id
+            slug
+            title
+          }
+          ... on NewsRecord {
+            id
+            slug
+            title
+          }
+          ... on NetworkRecord {
+            id
+            slug
+            title
+          }
+          ... on PageRecord {
+            id
+            slug
+            title
+          }
+          ... on ProjectRecord {
+            id
+            slug
+            title
+          }
+          ... on WorkshopRecord {
+            id
+            slug
+            title
+          }
+        }
+        blocks {
+          __typename
+          ... on GalleryRecord {
+            ...galleryFrag
+          }
+          ... on ImageBlockRecord {
+            ...imageBlockFrag
+          }
+          ... on VideoBlockRecord {
+            ...videoFrag
+          }
+          ... on PartnerBlockRecord {
+            id
+            title
+            image {
+              responsiveImage(imgixParams: { auto: format, maxW: "300" }) {
+                ...imgFrag
+              }
+            }
+            url
+          }
+          ... on WorkshopCategoriesBlockRecord {
+            ...wsCatsFrag
+          }
+          ... on PromozioniBlockRecord {
+            ...promoFrag
+          }
+        }
+      }
+    }
+    isWorkshop
+    paymentSettings {
+      id
+      description
+      startDate
+      endDate
+      bookable
+      amount
+      paymentLink
+    }
+    tags {
+      id
+      slug
+      title
+    }
+    workshopCategories {
+      id
+      seo {
+        description
+        title
+        twitterCard
+        image {
+          responsiveImage {
+            ...imgFrag
+          }
+        }
+      }
+      slug
+      title
+      hoverImage {
+        id
+        responsiveImage {
+          ...imgFrag
+        }
+      }
+      description
+    }
+    startDate
+    dates {
+      id
+      isDaily
+      startTime
+      endTime
+    }
+    location
+    authors
+  }
+}
