@@ -19,3 +19,9 @@ export type NewsletterProps = {
   locale: string;
   data?: any;
 };
+
+export type MobileNavProps = {
+  data: any;
+  locale: string;
+  handleClose: () => void;
+};

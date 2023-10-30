@@ -2,6 +2,7 @@ fragment menuItemFrag on MenuItemRecord {
   id
   title
   slug
+  _modelApiKey
   link {
     __typename
     ... on HomeRecord {
