@@ -10,7 +10,7 @@ export default function LanguageSwitcher({
   currentLocale: string;
 }) {
   const { locales } = config;
-  const url = `/api/set-locale?lang=`;
+  // const url = `/api/set-locale?lang=`;
   return (
     <>
       {locales.map((l, i) => {
@@ -22,7 +22,7 @@ export default function LanguageSwitcher({
             )}
             <div>
               <Link
-                href={`${url}${l}`}
+                href={`${l === "it" ? "/" : "/en"}`}
                 className={`${
                   isActive ? "font-semibold" : ""
                 } mx-2 lg:mx hover:text-red  `}

@@ -31,9 +31,9 @@ LayoutParams) {
   //   cookie = cookies().get("locale");
   //   console.log("cookie", cookie);
   // }
-  // let locale = cookie ? cookie.value : "it";
+  // let locale = cookie ? cookie.value : 'en';
 
-  const locale = "it";
+  const locale = 'en';
   console.log("LAYOUT LOCALE", locale);
   const { isEnabled } = draftMode();
   const siteLocale = locale as SiteLocale;

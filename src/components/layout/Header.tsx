@@ -1,6 +1,6 @@
 "use client";
 import Link from "next/link";
-import { Fragment, useEffect, useState } from "react";
+import { Fragment } from "react";
 import { Popover, Transition } from "@headlessui/react";
 import { ChevronDownIcon } from "@heroicons/react/20/solid";
 
@@ -90,17 +90,6 @@ function renderLink(item: any, locale: string) {
 
 function Header(props: any) {
   const { data, locale } = props;
-  const [lang, setLang] = useState(locale);
-
-  useEffect(() => {
-    if (locale) {
-      setLang(locale);
-    }
-  }, [locale]);
-
-  if (!lang) {
-    return null;
-  }
   return (
     <header>
       <Popover className="t-0 fixed inset-x-0 z-40 h-[70px] bg-white/80 md:h-[80px] lg:h-[110px]">
@@ -116,7 +105,6 @@ function Header(props: any) {
                     alt="Oriente Occidente"
                   />
                 </Link>
-                {locale}
               </div>
               <div className="-my-2 -mr-2 lg:hidden">
                 <Popover.Button className="focus:primary inline-flex items-center justify-center bg-transparent p-2 text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset">
@@ -135,7 +123,9 @@ function Header(props: any) {
                   className="flex space-x-4 uppercase xl:space-x-10"
                 >
                   {data?.map((item: any) => (
-                    <Fragment key={item.id}>{renderLink(item, lang)}</Fragment>
+                    <Fragment key={item.id}>
+                      {renderLink(item, locale)}
+                    </Fragment>
                   ))}
                 </Popover.Group>
                 <div className="text-xxs text-black-light  ml-14 pt-1 font-semibold uppercase tracking-widest lg:flex">
@@ -143,7 +133,7 @@ function Header(props: any) {
                 </div>
               </div>
             </div>
-            <MobileNav data={data} locale={lang} handleClose={handleClose} />
+            <MobileNav data={data} locale={locale} handleClose={handleClose} />
           </>
         )}
       </Popover>

@@ -1,8 +1,8 @@
 #!/usr/bin/env zx
 const { promises: fsPromises } = require("fs");
-const ROOT_FOLDER = "./src/app";
-const BASE_FOLDER = "./src/app/(base)";
-const LANG_FOLDER = "../(lang)";
+const ROOT_FOLDER = "./src/app/";
+const BASE_FOLDER = "(base)";
+const LANG_FOLDER = "(lang)";
 
 let labels = null;
 async function getConfig() {
@@ -54,7 +54,7 @@ function getTranslation(source, lang) {
 
 //MOVE TO PAGES DIRECTORY
 
-await cd(BASE_FOLDER);
+await cd(`${ROOT_FOLDER}${BASE_FOLDER}`);
 await $`pwd`;
 
 //GET ROUTE FILES of root
@@ -70,7 +70,7 @@ console.info("allfiles", allfiles);
 
 //MOVE TO LANG DIRECTORY
 
-await cd(LANG_FOLDER);
+await cd(`../${LANG_FOLDER}`);
 await $`pwd`;
 
 within(async () => {
@@ -112,7 +112,12 @@ within(async () => {
         const { folder, file, source } = destination;
         const dest = `${lang}/${folder}/${file}`;
 
-        return replaceInFile(source, dest, lang, defaultLocale);
+        return replaceInFile(
+          `../${BASE_FOLDER}/${source}`,
+          dest,
+          lang,
+          defaultLocale
+        );
 
         // await $`touch ${dest}`;
         // await fs.copy(source, dest);
