@@ -1,6 +1,7 @@
 #!/usr/bin/env zx
 const { promises: fsPromises } = require("fs");
 const ROOT_FOLDER = "./src/app";
+const BASE_FOLDER = "./src/app/(base)";
 
 let labels = null;
 async function getConfig() {
@@ -52,7 +53,7 @@ function getTranslation(source, lang) {
 
 //MOVE TO PAGES DIRECTORY
 
-await cd(ROOT_FOLDER);
+await cd(BASE_FOLDER);
 const pwd = await $`pwd`;
 await $`echo Current folder is ${pwd}.`;
 
@@ -73,11 +74,11 @@ within(async () => {
     //GET ROUTE FILES of root
     let allfiles = await glob([
       "**/*",
-      "!**/api",
+      // "!**/api",
       // `!${lang}/*`,
-      "!layout.tsx",
-      "!not-found.tsx",
-      "!error.tsx",
+      // "!layout.tsx",
+      // "!not-found.tsx",
+      // "!error.tsx",
     ]);
     // console.info('allfiles', allfiles);
     const destinations = allfiles.map((f) => getTranslation(f, lang));

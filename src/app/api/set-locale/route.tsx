@@ -5,6 +5,7 @@ import { NextRequest } from "next/server";
 export async function GET(request: NextRequest) {
   const { searchParams } = new URL(request.url);
   const locale = searchParams.get("lang");
+
   cookies().set({
     name: "locale",
     value: locale ? locale : "it",
@@ -14,6 +15,6 @@ export async function GET(request: NextRequest) {
   //   status: 200,
   // });
 
-  const url = locale == `it` ? "/" : "/en";
+  const url = locale == `it` ? "/" : "/en/";
   redirect(url);
 }

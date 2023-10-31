@@ -1,7 +1,6 @@
 import React from "react";
-import { cookies } from "next/headers";
+// import { cookies } from "next/headers";
 import type { Metadata } from "next";
-import { notFound } from "next/navigation";
 import { draftMode } from "next/headers";
 import { LayoutDocument, SiteLocale } from "@/graphql/generated";
 import type { LayoutParams } from "@/types";
@@ -28,12 +27,14 @@ export default async function RootLayout({
   children,
 }: // params: { locale },
 LayoutParams) {
-  let cookie;
-  if (cookies().has("locale")) {
-    cookie = cookies().get("locale");
-    console.log("cookie", cookie);
-  }
-  let locale = cookie ? cookie.value : "it";
+  // let cookie;
+  // if (cookies().has("locale")) {
+  //   cookie = cookies().get("locale");
+  //   console.log("cookie", cookie);
+  // }
+  // let locale = cookie ? cookie.value : "it";
+
+  const locale = "it";
   console.log("LAYOUT LOCALE", locale);
   const { isEnabled } = draftMode();
   const siteLocale = locale as SiteLocale;

@@ -1,7 +1,7 @@
 "use client";
 import Link from "next/link";
-import { Fragment } from "react";
-import { Popover, Transition, Disclosure } from "@headlessui/react";
+import { Fragment, useEffect, useState } from "react";
+import { Popover, Transition } from "@headlessui/react";
 import { ChevronDownIcon } from "@heroicons/react/20/solid";
 
 import resolveLink from "@/lib/resolveLink";
@@ -11,87 +11,100 @@ import MobileNav from "@/components/layout/nav/MobileNav";
 function classNames(...classes: any) {
   return classes.filter(Boolean).join(" ");
 }
+function renderLink(item: any, locale: string) {
+  if (item.children && item.children.filter((c: any) => c.link).length > 0) {
+    return (
+      <Popover className="relative">
+        {({ open, close }) => (
+          <Fragment>
+            <Popover.Button
+              className={classNames(
+                open ? "text-black" : "text-black",
+                "group text-xxs hover:text-red inline-flex items-center rounded-md font-semibold uppercase tracking-widest"
+              )}
+            >
+              <span>{item.title}</span>
+              <ChevronDownIcon
+                className={classNames(
+                  open ? "text-black" : "text-black",
+                  "group-hover:text-red ml-1 h-5 w-5"
+                )}
+                aria-hidden="true"
+                focusable="false"
+              />
+            </Popover.Button>
+
+            <Transition
+              as={Fragment}
+              enter="transition ease-out duration-200"
+              enterFrom="opacity-0 translate-y-1"
+              enterTo="opacity-100 translate-y-0"
+              leave="transition ease-in duration-150"
+              leaveFrom="opacity-100 translate-y-0"
+              leaveTo="opacity-0 translate-y-1"
+            >
+              <Popover.Panel className="absolute left-1/2 z-50 mt-3 w-screen max-w-xs -translate-x-1/2 transform px-2 sm:px-0">
+                <div className="overflow-hidden rounded-lg shadow-lg">
+                  <div className="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
+                    {item.children
+                      .filter((c: any) => c.link)
+                      .map((child: any) => {
+                        return (
+                          <Link
+                            key={child.id}
+                            href={resolveLink({
+                              ...child.link,
+                              locale,
+                            })}
+                            className="-m-3 block rounded-md p-1"
+                            onClick={() => close()}
+                          >
+                            <p className="text-black-light hover:text-red text-sm normal-case">
+                              {child.title || "+"}
+                            </p>
+                          </Link>
+                        );
+                      })}
+                  </div>
+                </div>
+              </Popover.Panel>
+            </Transition>
+          </Fragment>
+        )}
+      </Popover>
+    );
+  } else {
+    return (
+      <div className="relative">
+        <Link
+          key={item.id}
+          href={resolveLink({ ...item.link, locale })}
+          className="text-xxs hover:text-red font-semibold tracking-widest text-black"
+        >
+          {item.title || "#"}
+        </Link>
+      </div>
+    );
+  }
+}
 
 function Header(props: any) {
   const { data, locale } = props;
+  const [lang, setLang] = useState(locale);
 
-  function renderLink(item: any) {
-    if (item.children && item.children.filter((c: any) => c.link).length > 0) {
-      return (
-        <Popover className="relative">
-          {({ open, close }) => (
-            <Fragment>
-              <Popover.Button
-                className={classNames(
-                  open ? "text-black" : "text-black",
-                  "group text-xxs hover:text-red inline-flex items-center rounded-md font-semibold uppercase tracking-widest"
-                )}
-              >
-                <span>{item.title}</span>
-                <ChevronDownIcon
-                  className={classNames(
-                    open ? "text-black" : "text-black",
-                    "group-hover:text-red ml-1 h-5 w-5"
-                  )}
-                  aria-hidden="true"
-                  focusable="false"
-                />
-              </Popover.Button>
-
-              <Transition
-                as={Fragment}
-                enter="transition ease-out duration-200"
-                enterFrom="opacity-0 translate-y-1"
-                enterTo="opacity-100 translate-y-0"
-                leave="transition ease-in duration-150"
-                leaveFrom="opacity-100 translate-y-0"
-                leaveTo="opacity-0 translate-y-1"
-              >
-                <Popover.Panel className="absolute left-1/2 z-50 mt-3 w-screen max-w-xs -translate-x-1/2 transform px-2 sm:px-0">
-                  <div className="overflow-hidden rounded-lg shadow-lg">
-                    <div className="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
-                      {item.children
-                        .filter((c: any) => c.link)
-                        .map((child: any) => {
-                          return (
-                            <Link
-                              key={child.id}
-                              href={resolveLink({ ...child.link, locale })}
-                              className="-m-3 block rounded-md p-1"
-                              onClick={() => close()}
-                            >
-                              <p className="text-black-light hover:text-red text-sm normal-case">
-                                {child.title || "+"}
-                              </p>
-                            </Link>
-                          );
-                        })}
-                    </div>
-                  </div>
-                </Popover.Panel>
-              </Transition>
-            </Fragment>
-          )}
-        </Popover>
-      );
-    } else {
-      return (
-        <div className="relative">
-          <Link
-            key={item.id}
-            href={resolveLink({ ...item.link, locale })}
-            className="text-xxs hover:text-red font-semibold tracking-widest text-black"
-          >
-            {item.title || "#"}
-          </Link>
-        </div>
-      );
+  useEffect(() => {
+    if (locale) {
+      setLang(locale);
     }
+  }, [locale]);
+
+  if (!lang) {
+    return null;
   }
   return (
     <header>
       <Popover className="t-0 fixed inset-x-0 z-40 h-[70px] bg-white/80 md:h-[80px] lg:h-[110px]">
-        {({ open, close: handleClose }) => (
+        {({ close: handleClose }) => (
           <>
             <div className="container flex h-full items-center justify-between py-2 sm:px-6 lg:justify-start lg:space-x-10 lg:py-3">
               <div>
@@ -103,6 +116,7 @@ function Header(props: any) {
                     alt="Oriente Occidente"
                   />
                 </Link>
+                {locale}
               </div>
               <div className="-my-2 -mr-2 lg:hidden">
                 <Popover.Button className="focus:primary inline-flex items-center justify-center bg-transparent p-2 text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset">
@@ -121,7 +135,7 @@ function Header(props: any) {
                   className="flex space-x-4 uppercase xl:space-x-10"
                 >
                   {data?.map((item: any) => (
-                    <Fragment key={item.id}>{renderLink(item)}</Fragment>
+                    <Fragment key={item.id}>{renderLink(item, lang)}</Fragment>
                   ))}
                 </Popover.Group>
                 <div className="text-xxs text-black-light  ml-14 pt-1 font-semibold uppercase tracking-widest lg:flex">
@@ -129,7 +143,7 @@ function Header(props: any) {
                 </div>
               </div>
             </div>
-            <MobileNav data={data} locale={locale} handleClose={handleClose} />
+            <MobileNav data={data} locale={lang} handleClose={handleClose} />
           </>
         )}
       </Popover>

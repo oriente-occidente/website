@@ -94,6 +94,6 @@ export default function resolveLink({
     case "years_archive":
       return `${lp}/${t(`archivio`, locale)}/${t(`timeline`, locale)}`;
     default:
-      return "/";
+      return `${lp}/${slug ? slug : ""}`;
   }
 }
