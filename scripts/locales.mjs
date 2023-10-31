@@ -2,6 +2,7 @@
 const { promises: fsPromises } = require("fs");
 const ROOT_FOLDER = "./src/app";
 const BASE_FOLDER = "./src/app/(base)";
+const LANG_FOLDER = "./src/app/(lang)";
 
 let labels = null;
 async function getConfig() {
@@ -54,7 +55,24 @@ function getTranslation(source, lang) {
 //MOVE TO PAGES DIRECTORY
 
 await cd(BASE_FOLDER);
-const pwd = await $`pwd`;
+let pwd = await $`pwd`;
+await $`echo Current folder is ${pwd}.`;
+
+//GET ROUTE FILES of root
+let allfiles = await glob([
+  "**/*",
+  // "!**/api",
+  // `!${lang}/*`,
+  // "!layout.tsx",
+  // "!not-found.tsx",
+  // "!error.tsx",
+]);
+console.info("allfiles", allfiles);
+
+//MOVE TO LANG DIRECTORY
+
+await cd(".."); //back to root
+pwd = await $`pwd`;
 await $`echo Current folder is ${pwd}.`;
 
 within(async () => {
@@ -71,16 +89,6 @@ within(async () => {
       console.info(error);
     }
 
-    //GET ROUTE FILES of root
-    let allfiles = await glob([
-      "**/*",
-      // "!**/api",
-      // `!${lang}/*`,
-      // "!layout.tsx",
-      // "!not-found.tsx",
-      // "!error.tsx",
-    ]);
-    // console.info('allfiles', allfiles);
     const destinations = allfiles.map((f) => getTranslation(f, lang));
     console.info("destinations", destinations);
 
