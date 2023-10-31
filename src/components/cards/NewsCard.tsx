@@ -2,15 +2,15 @@
 import { Image as DatoImage } from "react-datocms";
 import Link from "next/link";
 import { MapPinIcon, CalendarIcon } from "@heroicons/react/24/outline";
-import { formatDate } from "@/lib/utils";
+import { categoryColorClass, formatDate } from "@/lib/utils";
 import { NewsCardProps } from "@/types";
 import resolveLink from "@/lib/resolveLink";
 
 export default function NewsCard({ data, locale }: NewsCardProps) {
-  console.log("data", data);
+  // console.log("data", data.tags);
   let categoryTitle;
-  if (data.category) {
-    const catToShow = data.category;
+  if (data.tags) {
+    const catToShow = data.tags;
     if (Array.isArray(catToShow)) {
       categoryTitle = catToShow
         .map((cat) => {
@@ -22,56 +22,55 @@ export default function NewsCard({ data, locale }: NewsCardProps) {
     }
   }
   const link = resolveLink({ ...data, locale });
+
   return (
     <div className="relative py-4">
       <Link href={link} title={data.title} className="group">
-        <div className="relative">
-          <div className="absolute left-4 bottom-2 top-auto z-20 text-xxs font-semibold uppercase text-white md:left-8 md:bottom-8 md:text-xs ">
-            {data.startDate && (
-              <div className="hidden items-center gap-x-2 md:flex">
-                <CalendarIcon aria-hidden="true" className="h-4 w-4" />
-                <span className="font-light normal-case md:pr-1">
-                  {formatDate(data.startDate, locale)}
-                </span>
-              </div>
-            )}
-            {data.location && (
-              <div className="hidden items-center gap-x-2 md:flex">
-                <MapPinIcon aria-hidden="true" className="h-4 w-4" />
-                <span className="font-light normal-case md:pr-1">
-                  {data.location}
-                </span>
-              </div>
-            )}
-            <span>{categoryTitle}</span>
-          </div>
-          <div className="relative h-[220px] overflow-hidden md:h-[360px]">
-            <DatoImage
-              className="dato-image-cover duration-300 group-hover:scale-105"
-              data={data.imageHero.responsiveImage}
-            />
-          </div>
-          <div className="absolute top-auto bottom-0 left-0 right-0 z-10 h-[65px] bg-gradient-to-t from-black/80 to-transparent md:h-[180px]"></div>
+        <div className="relative h-[220px] overflow-hidden md:h-[360px]">
+          <DatoImage
+            className="dato-image-cover duration-300 group-hover:scale-105"
+            data={data.imageHero.responsiveImage}
+          />
         </div>
-        <div className="z-20  mt-2">
+
+        <div className="z-20">
+          <div className="mt-4 mb-3">
+            {categoryTitle && (
+              <span
+                className={`px-2 py-1 font-semibold uppercase ${categoryColorClass(
+                  categoryTitle
+                )}`}
+              >
+                {categoryTitle}
+              </span>
+            )}
+            {data.startDate && (
+              <span className="font-semibold text-xs uppercase md:ml-2">
+                {formatDate(data.startDate, locale)}
+              </span>
+            )}
+          </div>
           {data.title &&
             (data.authors ||
               !data.titleHero ||
               data.titleHero !== data.title) && (
-              <h2 className="text-sm uppercase text-black-light md:text-base">
+              <h2 className="text-base font-semibold uppercase text-black md:text-lg group-hover:underline">
                 {data.title}
               </h2>
             )}
           {data.titleHero && !data.authors && (
-            <h3 className="text-sm font-semibold uppercase text-black md:text-base ">
-              {data.titleHero}
-            </h3>
+            <h3 className="text-xs text-black ">{data.titleHero}</h3>
           )}
           {data.authors && (
             <div className="text-sm font-semibold uppercase text-black md:text-base ">
               {data.authors}
             </div>
           )}
+
+          <div className="mt-3 uppercase font-semibold text-xxs flex items-center">
+            <div>Vai al contenuto</div>
+            <div className=" hidden h-[20px] w-[20px] bg-arrow-right-black lg:block ml-3 group-hover:ml-5 motion-safe:duration-200" />
+          </div>
         </div>
         {data.location && (
           <div className="flex items-center gap-1 md:hidden">

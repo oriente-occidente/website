@@ -20,5 +20,10 @@ query newsIndex($locale: SiteLocale!, $archived: BooleanType) {
       }
     }
     startDate
+    tags {
+      title
+      slug
+      id
+    }
   }
 }
