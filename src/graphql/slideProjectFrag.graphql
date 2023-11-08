@@ -1,6 +1,7 @@
 fragment slideProjectFrag on ProjectRecord {
   id
   slug
+  _modelApiKey
   title
   titleHero
   authors

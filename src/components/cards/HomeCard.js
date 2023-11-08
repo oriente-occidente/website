@@ -1,13 +1,13 @@
 "use client";
 import { Image as DatoImage } from "react-datocms";
 import translate from "@/lib/locales";
-import { resolveLinkById } from "@/lib/utils";
+import resolveLink from "@/lib/resolveLink";
 import Link from "next/link";
 
 function HomeCard({ count, categoryTitle, data, locale }) {
   return (
     <Link
-      href={resolveLinkById(data.id, locale)}
+      href={resolveLink({ ...data, locale })}
       locale={locale}
       title={data.titleHero}
       className="group"

@@ -2,6 +2,7 @@ query workshop($slug: String!, $locale: SiteLocale) {
   workshop(locale: $locale, filter: { slug: { eq: $slug } }) {
     id
     slug
+    _modelApiKey
     seo: _seoMetaTags {
       ...tagFrag
     }
@@ -129,36 +130,43 @@ query workshop($slug: String!, $locale: SiteLocale) {
             id
             slug
             title
+            _modelApiKey
           }
           ... on EventRecord {
             id
             slug
             title
+            _modelApiKey
           }
           ... on NewsRecord {
             id
             slug
             title
+            _modelApiKey
           }
           ... on NetworkRecord {
             id
             slug
             title
+            _modelApiKey
           }
           ... on PageRecord {
             id
             slug
             title
+            _modelApiKey
           }
           ... on ProjectRecord {
             id
             slug
             title
+            _modelApiKey
           }
           ... on WorkshopRecord {
             id
             slug
             title
+            _modelApiKey
           }
         }
         blocks {

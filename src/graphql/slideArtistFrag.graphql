@@ -2,6 +2,7 @@ fragment slideArtirstFrag on ArtistRecord {
   _firstPublishedAt
   id
   slug
+  _modelApiKey
   title
   titleHero
   imageHero {

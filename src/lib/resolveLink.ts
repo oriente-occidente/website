@@ -34,33 +34,33 @@ export default function resolveLink({
     case "festival_edition":
       return `${lp}/${t(`festival`, locale)}/${slug}`;
     case "education_page":
-      return `${lp}/${t(`formazione`, locale)}/`;
+      return `${lp}/studio/${t(`formazione`, locale)}/`;
     case "workshops_category":
-      return `${lp}/${t(`formazione`, locale)}/c/${slug}`;
+      return `${lp}/studio/${t(`formazione`, locale)}/c/${slug}`;
     case "workshop":
-      return `${lp}/${t(`formazione`, locale)}/${slug}`;
+      return `${lp}/studio/${t(`formazione`, locale)}/${slug}`;
     case "artistic_residencies_index":
-      return `${lp}/${t(`residenze-artistiche`, locale)}/`;
+      return `${lp}/studio/${t(`residenze-artistiche`, locale)}/`;
     case "artistic_residecy":
-      return `${lp}/${t(`residenze-artistiche`, locale)}/${slug}`;
+      return `${lp}/studio/${t(`residenze-artistiche`, locale)}/${slug}`;
     case "artists_index":
-      return `${lp}/${t(`artisti-associati`, locale)}/`;
+      return `${lp}/studio/${t(`artisti-associati`, locale)}/`;
     case "artist":
-      return `${lp}/${t(`artisti-associati`, locale)}/${slug}`;
+      return `${lp}/studio/${t(`artisti-associati`, locale)}/${slug}`;
     case "company":
-      return `${lp}/${t(`compagnie`, locale)}/${slug}`;
+      return `${lp}/studio/${t(`compagnie`, locale)}/${slug}`;
     case "events_index":
-      return `${lp}/${t(`eventi`, locale)}/`;
+      return `${lp}/people/${t(`eventi`, locale)}/`;
     case "event":
-      return `${lp}/${t(`eventi`, locale)}/${slug}`;
+      return `${lp}/people/${t(`eventi`, locale)}/${slug}`;
     case "projects_index":
-      return `${lp}/${t(`progetti`, locale)}/`;
+      return `${lp}/people/${t(`progetti`, locale)}/`;
     case "project":
-      return `${lp}/${t(`progetti`, locale)}/${slug}`;
+      return `${lp}/people/${t(`progetti`, locale)}/${slug}`;
     case "networks_index":
-      return `${lp}/${t(`reti`, locale)}/`;
+      return `${lp}/people/${t(`reti`, locale)}/`;
     case "network":
-      return `${lp}/${t(`reti`, locale)}/${slug}`;
+      return `${lp}/people/${t(`reti`, locale)}/${slug}`;
     case "news_index":
       return `${lp}/${t(`news`, locale)}/`;
     case "news":

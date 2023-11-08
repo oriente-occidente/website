@@ -4,6 +4,7 @@ fragment wsCatsFrag on WorkshopCategoriesBlockRecord {
     id
     slug
     title
+    _modelApiKey
     hoverImage {
       url
       responsiveImage(

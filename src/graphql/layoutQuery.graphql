@@ -36,6 +36,7 @@ query layout($locale: SiteLocale) {
       links {
         id
         slug
+        _modelApiKey
         title
         section
       }
@@ -43,6 +44,7 @@ query layout($locale: SiteLocale) {
     links {
       id
       slug
+      _modelApiKey
       title
       section
     }

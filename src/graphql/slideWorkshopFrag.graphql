@@ -1,6 +1,7 @@
 fragment slideWorkshopFrag on WorkshopRecord {
   id
   slug
+  _modelApiKey
   title
   titleHero
   authors

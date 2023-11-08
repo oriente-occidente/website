@@ -1,6 +1,7 @@
 fragment slideEventFrag on EventRecord {
   id
   slug
+  _modelApiKey
   title
   titleHero
   layoutHero

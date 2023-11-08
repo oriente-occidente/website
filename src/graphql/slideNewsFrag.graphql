@@ -1,6 +1,7 @@
 fragment slideNewsFrag on NewsRecord {
   id
   slug
+  _modelApiKey
   title
   titleHero
   _createdAt

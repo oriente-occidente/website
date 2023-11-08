@@ -1,7 +1,7 @@
 "use client";
 import { Image as DatoImage } from "react-datocms";
 import Link from "next/link";
-import { resolveLinkById } from "@/lib/utils";
+import resolveLink from "@/lib/resolveLink";
 
 function CardTextArrow({ locale, data }) {
   return (

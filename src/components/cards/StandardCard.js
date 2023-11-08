@@ -2,7 +2,8 @@
 import { Image as DatoImage } from "react-datocms";
 import Link from "next/link";
 import { MapPinIcon, CalendarIcon } from "@heroicons/react/24/outline";
-import { resolveLinkById, groupDatesByDay } from "@/lib/utils";
+import { groupDatesByDay } from "@/lib/utils";
+import resolveLink from "@/lib/resolveLink";
 
 function StandardCard({ data, locale, categoryTitle }) {
   const image = data.imageHero;
@@ -10,7 +11,7 @@ function StandardCard({ data, locale, categoryTitle }) {
   return (
     <div className="pb-8 md:pb-0">
       <Link
-        href={resolveLinkById(data.id, locale)}
+        href={resolveLink({ ...data, locale })}
         locale={locale}
         title={data.title}
         className="group"

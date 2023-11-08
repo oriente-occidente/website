@@ -9,7 +9,7 @@ import HeroSlider from "@/components/hero/HeroSlider";
 import GalleryHome from "@/components/galleries/GalleryHome";
 import GalleryPreview from "@/components/galleries/GalleryPreview";
 import Link from "next/link";
-import { resolveLinkById } from "@/lib/utils";
+import resolveLink from "@/lib/resolveLink";
 
 const locale = 'en';
 async function Home() {
@@ -36,7 +36,7 @@ async function Home() {
             >
               <h2 className="title--small py-8 lg:py-16">{block.title}</h2>
               <Link
-                href={resolveLinkById(block.sectionLink.id, locale)}
+                href={resolveLink({ ...block.sectionLink, locale })}
                 locale={locale}
                 className="button--with-arrow"
               >
