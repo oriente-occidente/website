@@ -39,6 +39,7 @@ export type GenericPageProps = {
     seo: any;
     sections?: any[];
     relatedContents?: any[];
+    otherSections?: any[];
   };
   locale: string;
 };

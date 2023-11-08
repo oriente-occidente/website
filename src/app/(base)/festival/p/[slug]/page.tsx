@@ -1,19 +1,16 @@
 import { draftMode } from "next/headers";
 import type { BasicSlugPageProps } from "@/types";
+import PageTemplate from '@/components/templates/PageTemplate';
 const locale = "it";
 
 export default function Page({ params }: BasicSlugPageProps) {
-  const { isEnabled: preview } = draftMode();
+  const { isEnabled } = draftMode();
+  const pageData ={
+    hero:null,
+    content: null
+  }
   return (
-    <div className="text-xl">
-      My slug page: {params.slug} - {locale} [{preview}]
-    </div>
+    <PageTemplate data={pageData} locale={locale}>
   );
 }
 
-// export async function generateStaticParams() {
-//   const posts: any = []; //await fetch("https://.../posts").then((res) => res.json());
-//   return posts.map((post: any) => ({
-//     slug: post.slug,
-//   }));
-// }
