@@ -1,12 +1,6 @@
 import { draftMode } from "next/headers";
-import {
-  ProjectsIndexDocument,
-  ProgramDocument,
-  ProjectsDocument,
-} from "@/graphql/generated";
-import HeroEmpty from "@/components/hero/HeroEmpty";
+import { ProjectsIndexDocument, ProjectsDocument } from "@/graphql/generated";
 import { SiteLocale } from "@/graphql/generated";
-import Breadcrumbs from "@/components/Breadcrumbs";
 import fetchDato from "@/lib/fetchDato";
 import IndexPageTemplate from "@/components/templates/IndexPageTemplate";
 

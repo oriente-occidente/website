@@ -57,6 +57,7 @@ query home($locale: SiteLocale!) {
           slug
           title
           _modelApiKey
+          section
         }
         ... on ProjectRecord {
           id

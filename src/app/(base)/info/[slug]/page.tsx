@@ -2,13 +2,8 @@ import { draftMode } from "next/headers";
 import { notFound } from "next/navigation";
 import type { BasicSlugPageProps } from "@/types";
 import queryDatoCMS from "@/lib/fetchDato";
-import { PageDocument, ProgramDocument, SiteLocale } from "@/graphql/generated";
-import HeroIndex from "@/components/hero/HeroIndex";
-import HeroDetail from "@/components/hero/HeroDetail";
-import HeroEmpty from "@/components/hero/HeroEmpty";
-import MainContent from "@/components/contents/MainContent";
-import OtherSections from "@/components/contents/OtherSections";
-import SectionsParagraphs from "@/components/contents/SectionsParagraphs";
+import { PageDocument, SiteLocale } from "@/graphql/generated";
+import PageTemplate from "@/components/templates/PageTemplate";
 
 const locale = "it";
 export default async function Page({ params }: BasicSlugPageProps) {
@@ -23,23 +18,19 @@ export default async function Page({ params }: BasicSlugPageProps) {
   );
 
   if (!data.page) notFound();
-  const { content, sections, otherSections } = data.page;
-  return (
-    <div>
-      {data.page.layoutHero == "detail" && data.page.imageHero ? (
-        <HeroDetail data={data.page} />
-      ) : data.page.layoutHero == "index" && data.page.imageHero ? (
-        <HeroIndex data={data.page} locale={locale} />
-      ) : (
-        data.page.indexType !== "workshops" && <HeroEmpty data={data.page} />
-      )}
-      {content && <MainContent locale={locale} data={content} />}
-      {sections && sections.length > 0 && (
-        <SectionsParagraphs locale={locale} sections={sections} />
-      )}
-      {otherSections && otherSections.length > 0 && (
-        <OtherSections locale={locale} data={otherSections} />
-      )}
-    </div>
-  );
+  const heroData: any = {
+    layoutHero: data?.page?.layoutHero,
+    titleHero: data?.page?.titleHero,
+    descriptionHero: data?.page?.descriptionHero,
+    imageHero: data?.page?.imageHero,
+    slideshowHero: data?.page?.slideshowHero,
+  };
+  const pageData = {
+    seo: null,
+    hero: heroData,
+    content: data.page?.content,
+    sections: data.page?.sections,
+    relatedContents: data.page?.relatedContents,
+  };
+  return <PageTemplate data={pageData} locale={locale} />;
 }

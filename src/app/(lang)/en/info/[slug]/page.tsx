@@ -5,7 +5,7 @@ import queryDatoCMS from "@/lib/fetchDato";
 import { PageDocument, SiteLocale } from "@/graphql/generated";
 import PageTemplate from "@/components/templates/PageTemplate";
 
-const locale = "en";
+const locale = 'en';
 export default async function Page({ params }: BasicSlugPageProps) {
   const { slug } = params;
 

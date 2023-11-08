@@ -1,9 +1,5 @@
 import { draftMode } from "next/headers";
-const locale = "en";
+const locale = 'en';
 export default function Page() {
-  return (
-    <div>
-      My index page - {locale} ({preview})
-    </div>
-  );
+  return <div>My index page - {locale}</div>;
 }

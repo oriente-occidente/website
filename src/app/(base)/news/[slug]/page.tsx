@@ -15,28 +15,17 @@ export default async function Page({ params }: BasicSlugPageProps) {
     { locale: siteLocale, slug },
     isEnabled
   );
-  const {
-    layoutHero,
-    titleHero,
-    descriptionHero,
-    imageHero,
-    slideshowHero,
-    startDate,
-  } = data?.news || {};
-
-  // console.log('newsDate', newsDate);
   const heroData: any = {
-    layoutHero,
-    titleHero,
-    descriptionHero,
-    imageHero,
-    slideshowHero,
+    layoutHero: data?.news?.layoutHero,
+    titleHero: data?.news?.titleHero,
+    descriptionHero: data?.news?.descriptionHero,
+    imageHero: data?.news?.imageHero,
+    slideshowHero: data?.news?.slideshowHero,
   };
-
   const pageData = {
+    seo: null,
     hero: heroData,
     content: data.news?.content,
   };
-
   return <PageTemplate data={pageData} locale={locale} />;
 }

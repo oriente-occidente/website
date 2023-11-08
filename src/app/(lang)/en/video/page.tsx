@@ -1,5 +1,5 @@
 import { draftMode } from "next/headers";
-const locale = "en";
+const locale = 'en';
 export default function Page() {
   //
   return (

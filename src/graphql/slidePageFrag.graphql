@@ -2,6 +2,7 @@ fragment slidePageFrag on PageRecord {
   id
   slug
   _modelApiKey
+  section
   title
   titleHero
   imageHero {
