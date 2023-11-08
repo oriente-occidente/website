@@ -1,0 +1,28 @@
+query projects($locale: SiteLocale) {
+  projects: allProjects(
+    locale: $locale
+    orderBy: position_ASC
+    filter: { slug: { neq: null } }
+  ) {
+    id
+    slug
+    title
+    titleHero
+    imageHero {
+      id
+      responsiveImage(
+        sizes: "(max-width: 1024px) 80vw, (min-width: 1025px) 45vw, 600px"
+        imgixParams: { auto: [format, compress], ar: "5:4", fit: crop }
+      ) {
+        ...imgFrag
+      }
+    }
+    startDate
+    position
+    tags {
+      id
+      slug
+      title
+    }
+  }
+}

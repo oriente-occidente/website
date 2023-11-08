@@ -1,7 +1,7 @@
 "use client";
 import translate from "@/lib/locales";
 import { enhanceEvents, sortDesc, sortAsc } from "@/lib/utils";
-import PreviewCard from "components/cards/PreviewCard";
+import PreviewCard from "@/components/cards/PreviewCard";
 
 const MAX = 6;
 function ResultsGridWorkshop({ list, locale, group }) {

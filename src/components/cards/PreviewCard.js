@@ -2,12 +2,7 @@
 import { Image as DatoImage } from "react-datocms";
 import Link from "next/link";
 import { MapPinIcon, CalendarIcon } from "@heroicons/react/24/outline";
-import {
-  resolveLinkById,
-  formatDate,
-  groupDatesByDay,
-  getYearOfDate,
-} from "@/lib/utils";
+import { resolveLinkById, formatDate, groupDatesByDay, getYearOfDate } from "@/lib/utils";
 import { useRouter } from "next/router";
 
 function PreviewCard({ data, locale, group = null, year }) {
@@ -35,7 +30,7 @@ function PreviewCard({ data, locale, group = null, year }) {
 
   const link = resolveLinkById(data.id, locale, group);
 
-  let path = router.asPath;
+  let path = router?.asPath;
   if (path.includes("?")) {
     path = path.split("?")[0];
   }
@@ -44,11 +39,7 @@ function PreviewCard({ data, locale, group = null, year }) {
   const isRoot = link === "/";
   return (
     <div className="relative py-4">
-      <Link
-        href={isRoot ? alternativeLink : link}
-        title={data.title}
-        className="group"
-      >
+      <Link href={isRoot ? alternativeLink : link} title={data.title} className="group">
         <div className="relative">
           <div className="absolute left-4 bottom-2 top-auto z-20 text-xxs font-semibold uppercase text-white md:left-8 md:bottom-8 md:text-xs ">
             {datesGrouped.map((str) => (
@@ -68,9 +59,7 @@ function PreviewCard({ data, locale, group = null, year }) {
             {data.location && (
               <div className="hidden items-center gap-x-2 md:flex">
                 <MapPinIcon aria-hidden="true" className="h-4 w-4" />
-                <span className="font-light normal-case md:pr-1">
-                  {data.location}
-                </span>
+                <span className="font-light normal-case md:pr-1">{data.location}</span>
               </div>
             )}
             {year && (
@@ -92,9 +81,7 @@ function PreviewCard({ data, locale, group = null, year }) {
         </div>
         <div className="z-20  mt-2">
           {data.title &&
-            (data.authors ||
-              !data.titleHero ||
-              data.titleHero !== data.title) && (
+            (data.authors || !data.titleHero || data.titleHero !== data.title) && (
               <h2 className="text-sm uppercase text-black-light md:text-base">
                 {data.title}
               </h2>
@@ -112,19 +99,13 @@ function PreviewCard({ data, locale, group = null, year }) {
         </div>
         {datesGrouped.map((d) => (
           <div className="flex items-center gap-1 md:hidden" key={"descr_" + d}>
-            <CalendarIcon
-              aria-hidden="true"
-              className="mr-1 h-4 w-3 text-black"
-            />
+            <CalendarIcon aria-hidden="true" className="mr-1 h-4 w-3 text-black" />
             <div className="text-xxs capitalize">{d}</div>
           </div>
         ))}
         {data.location && (
           <div className="flex items-center gap-1 md:hidden">
-            <MapPinIcon
-              aria-hidden="true"
-              className="mr-1 h-4 w-3 text-black"
-            />
+            <MapPinIcon aria-hidden="true" className="mr-1 h-4 w-3 text-black" />
             <div className="text-xxs">{data.location}</div>
           </div>
         )}

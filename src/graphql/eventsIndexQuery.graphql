@@ -1,0 +1,12 @@
+query eventsIndex($locale: SiteLocale!) {
+  eventsIndex(locale: $locale) {
+    id
+    title
+    description
+    _modelApiKey
+    __typename
+    seo: _seoMetaTags {
+      ...tagFrag
+    }
+  }
+}
