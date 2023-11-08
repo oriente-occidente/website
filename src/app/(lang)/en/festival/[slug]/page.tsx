@@ -10,13 +10,17 @@ import MainContent from "@/components/contents/MainContent";
 import OtherSections from "@/components/contents/OtherSections";
 import SectionsParagraphs from "@/components/contents/SectionsParagraphs";
 
-const locale = 'en';
+const locale = "en";
 export default async function Page({ params }: BasicSlugPageProps) {
   const { slug } = params;
-  const { isEnabled: preview } = draftMode();
+
   const { isEnabled } = draftMode();
   const siteLocale = locale as SiteLocale;
-  const data = await queryDatoCMS(PageDocument, { locale: siteLocale, slug }, isEnabled);
+  const data = await queryDatoCMS(
+    PageDocument,
+    { locale: siteLocale, slug },
+    isEnabled
+  );
 
   if (!data.page) notFound();
   const { content, sections, otherSections } = data.page;

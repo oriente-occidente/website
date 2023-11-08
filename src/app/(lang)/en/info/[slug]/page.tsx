@@ -10,32 +10,32 @@ import MainContent from "@/components/contents/MainContent";
 import OtherSections from "@/components/contents/OtherSections";
 import SectionsParagraphs from "@/components/contents/SectionsParagraphs";
 
-const locale = 'en';
+const locale = "en";
 export default async function Page({ params }: BasicSlugPageProps) {
   const { slug } = params;
-  const { isEnabled: preview } = draftMode();
+
   const { isEnabled } = draftMode();
   const siteLocale = locale as SiteLocale;
-  const data = await queryDatoCMS(PageDocument, { locale: siteLocale, slug }, isEnabled);
+  const data = await queryDatoCMS(
+    PageDocument,
+    { locale: siteLocale, slug },
+    isEnabled
+  );
 
   if (!data.page) notFound();
-  const { content, sections, otherSections } = data.page;
-  return (
-    <div>
-      {data.page.layoutHero == "detail" && data.page.imageHero ? (
-        <HeroDetail data={data.page} />
-      ) : data.page.layoutHero == "index" && data.page.imageHero ? (
-        <HeroIndex data={data.page} locale={locale} />
-      ) : (
-        data.page.indexType !== "workshops" && <HeroEmpty data={data.page} />
-      )}
-      {content && <MainContent locale={locale} data={content} />}
-      {sections && sections.length > 0 && (
-        <SectionsParagraphs locale={locale} sections={sections} />
-      )}
-      {otherSections && otherSections.length > 0 && (
-        <OtherSections locale={locale} data={otherSections} />
-      )}
-    </div>
-  );
+  const heroData: any = {
+    layoutHero: data?.page?.layoutHero,
+    titleHero: data?.page?.titleHero,
+    descriptionHero: data?.page?.descriptionHero,
+    imageHero: data?.page?.imageHero,
+    slideshowHero: data?.page?.slideshowHero,
+  };
+  const pageData = {
+    seo: null,
+    hero: heroData,
+    content: data.page?.content,
+    sections: data.page?.sections,
+    relatedContents: data.page?.relatedContents,
+  };
+  return <PageTemplate data={pageData} locale={locale} />;
 }
