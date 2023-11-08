@@ -1,14 +1,19 @@
 "use client";
 import { useRef } from "react";
-import { Navigation, Pagination, Autoplay, A11y } from "swiper/modules";
-import { Swiper, SwiperSlide } from "swiper/react";
 import { Image as DatoImage } from "react-datocms";
+import { Swiper, SwiperSlide } from "swiper/react";
+import {
+  Autoplay,
+  A11y,
+  Parallax,
+  Pagination,
+  Navigation,
+} from "swiper/modules";
 
 function Gallery({ slides }) {
   const prevRef = useRef(null);
   const nextRef = useRef(null);
 
-  SwiperCore.use([Pagination, Navigation]);
   const showArrows =
     slides.length > 1
       ? {
@@ -28,15 +33,15 @@ function Gallery({ slides }) {
         className="SwiperGallery"
         effect="fade"
         parallax={true}
-        onSwiper={(swiper) => {
-          setTimeout(() => {
-            swiper.params.navigation.prevEl = prevRef.current;
-            swiper.params.navigation.nextEl = nextRef.current;
-            swiper.navigation.destroy();
-            swiper.navigation.init();
-            swiper.navigation.update();
-          });
-        }}
+        // onSwiper={(swiper) => {
+        //   setTimeout(() => {
+        //     swiper?.params?.navigation?.prevEl = prevRef.current;
+        //     swiper?.params?.navigation?.nextEl = nextRef.current;
+        //     swiper.navigation.destroy();
+        //     swiper.navigation.init();
+        //     swiper.navigation.update();
+        //   });
+        // }}
       >
         {slides?.map((slide) => {
           return (

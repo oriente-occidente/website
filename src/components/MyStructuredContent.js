@@ -1,11 +1,7 @@
 "use client";
 import { Fragment } from "react";
 import { StructuredText, renderRule } from "react-datocms";
-import {
-  isBlockquote,
-  isHeading,
-  isParagraph,
-} from "datocms-structured-text-utils";
+import { isBlockquote, isHeading } from "datocms-structured-text-utils";
 import { Image } from "react-datocms";
 import Link from "next/link";
 import BlockQuote from "@/components/BlockQuote";
