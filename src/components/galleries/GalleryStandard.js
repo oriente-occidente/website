@@ -1,5 +1,12 @@
 "use client";
-import { Navigation, Pagination, Autoplay, A11y } from "swiper/modules";
+import {
+  Navigation,
+  Pagination,
+  Autoplay,
+  A11y,
+  EffectFade,
+  Parallax,
+} from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Image as DatoImage } from "react-datocms";
 
@@ -7,7 +14,7 @@ function Gallery({ slides }) {
   return (
     <div className="relative swiper-gallery-standard">
       <Swiper
-        modules={[Autoplay, A11y, EffectFade, Parallax, Pagination, Navigation]}
+        modules={[Autoplay, A11y, Pagination, Navigation, EffectFade, Parallax]}
         speed={900}
         slidesPerView={1}
         pagination={true}

@@ -2,13 +2,8 @@ import { draftMode } from "next/headers";
 import { notFound } from "next/navigation";
 import type { BasicSlugPageProps } from "@/types";
 import queryDatoCMS from "@/lib/fetchDato";
-import { PageDocument, ProgramDocument, SiteLocale } from "@/graphql/generated";
-import HeroIndex from "@/components/hero/HeroIndex";
-import HeroDetail from "@/components/hero/HeroDetail";
-import HeroEmpty from "@/components/hero/HeroEmpty";
-import MainContent from "@/components/contents/MainContent";
-import OtherSections from "@/components/contents/OtherSections";
-import SectionsParagraphs from "@/components/contents/SectionsParagraphs";
+import { PageDocument, SiteLocale } from "@/graphql/generated";
+import PageTemplate from "@/components/templates/PageTemplate";
 
 const locale = "en";
 export default async function Page({ params }: BasicSlugPageProps) {
