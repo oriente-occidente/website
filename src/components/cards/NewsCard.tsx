@@ -3,10 +3,10 @@ import { Image as DatoImage } from "react-datocms";
 import Link from "next/link";
 import { MapPinIcon, CalendarIcon } from "@heroicons/react/24/outline";
 import { categoryColorClass, formatDate } from "@/lib/utils";
-import { NewsCardProps } from "@/types";
+import { GenericCardProps } from "@/types";
 import resolveLink from "@/lib/resolveLink";
 
-export default function NewsCard({ data, locale }: NewsCardProps) {
+export default function NewsCard({ data, locale }: GenericCardProps) {
   // console.log("data", data.tags);
   let categoryTitle;
   if (data.tags) {

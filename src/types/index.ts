@@ -26,7 +26,27 @@ export type MobileNavProps = {
   handleClose: () => void;
 };
 
-export type NewsCardProps = {
+export type GenericCardProps = {
+  data: any;
+  locale: string;
+  categoryTitle?: string;
+};
+
+export type GenericPageProps = {
+  data: { content: any; hero: any; seo: any };
+  locale: string;
+};
+
+export type GenericIndexPageProps = {
+  data: {
+    list: any[];
+    seo?: any;
+    hero?: any;
+  };
+  locale: string;
+};
+
+export type GenericProps = {
   data: any;
   locale: string;
 };

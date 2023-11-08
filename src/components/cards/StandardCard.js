@@ -5,7 +5,7 @@ import { MapPinIcon, CalendarIcon } from "@heroicons/react/24/outline";
 import { groupDatesByDay } from "@/lib/utils";
 import resolveLink from "@/lib/resolveLink";
 
-function StandardCard({ data, locale, categoryTitle }) {
+function StandardCard({ data, locale, categoryTitle = "" }) {
   const image = data.imageHero;
   const datesGrouped = data.dates ? groupDatesByDay(data.dates, locale) : [];
   return (

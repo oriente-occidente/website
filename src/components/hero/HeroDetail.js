@@ -6,7 +6,7 @@ import BookButton from "@/components/BookButton";
 
 import { formatDate } from "@/lib/utils";
 
-function HeroDetail({ data }) {
+function HeroDetail({ data, locale }) {
   const {
     titleHero,
     descriptionHero,
@@ -18,7 +18,6 @@ function HeroDetail({ data }) {
     paymentSettings,
     slideshowHero,
     pageId,
-    locale,
   } = data;
 
   // let Gallery = () => <div />;
