@@ -33,7 +33,13 @@ export type GenericCardProps = {
 };
 
 export type GenericPageProps = {
-  data: { content: any; hero: any; seo: any };
+  data: {
+    content: any;
+    hero: any;
+    seo: any;
+    sections?: any[];
+    relatedContents?: any[];
+  };
   locale: string;
 };
 

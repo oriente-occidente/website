@@ -1,4 +1,5 @@
 "use client";
+import { Fragment } from "react";
 import { StructuredText, renderRule } from "react-datocms";
 import {
   isBlockquote,
@@ -196,7 +197,11 @@ const StructuredContent = ({ locale, content }) => {
         customRules={[
           renderRule(isBlockquote, ({ node, children, key }) => {
             const props = { node, children, key };
-            return <BlockQuote {...props} />;
+            return (
+              <Fragment key={key}>
+                <BlockQuote {...props} />
+              </Fragment>
+            );
           }),
           renderRule(isHeading, ({ node, children, key }) => {
             if (!children) return null;
