@@ -5,8 +5,7 @@ import type { LayoutParams } from "@/types";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import translate from "@/lib/locales";
-import queryDatoCMS from "@/lib/fetchDato";
-import { Metadata, ResolvingMetadata } from "next";
+import fetchDato from "@/lib/fetchDato";
 
 // Import Swiper styles
 import "swiper/css";
@@ -21,11 +20,7 @@ const locale = "it";
 
 export async function generateMetadata() {
   const siteLocale = locale as SiteLocale;
-  const data = await queryDatoCMS(
-    LayoutDocument,
-    { locale: siteLocale },
-    false
-  );
+  const data = await fetchDato(LayoutDocument, { locale: siteLocale }, false);
   const globalSeo = data._site.globalSeo || null;
   const fallbackSeo = globalSeo?.fallbackSeo;
   const icon = toNextMetadata(data._site.faviconMetaTags);
@@ -42,16 +37,14 @@ export async function generateMetadata() {
       type: "website",
     },
   };
-
-  console.log(metaObject);
   return metaObject;
 }
 
 export default async function RootLayout({ children }: LayoutParams) {
-  console.log("LAYOUT LOCALE", locale);
+  // console.log("LAYOUT LOCALE", locale);
   const { isEnabled } = draftMode();
   const siteLocale = locale as SiteLocale;
-  const data = await queryDatoCMS(
+  const data = await fetchDato(
     LayoutDocument,
     { locale: siteLocale },
     isEnabled

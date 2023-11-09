@@ -86,12 +86,12 @@ export type LocaleValue = {
 export type AltsProps = {
   slugs?: LocaleValue[];
   titles: LocaleValue[];
-  _modelApikey?: string;
+  _modelApiKey?: string;
   section?: string;
 };
 
 export type PageSeoProps = {
-  _modelApikey?: string;
+  _modelApiKey?: string;
   seo?: SeoMetaFragmentFragment[];
   titles?: LocaleValue[];
   slugs?: LocaleValue[];

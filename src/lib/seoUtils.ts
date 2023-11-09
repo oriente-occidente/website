@@ -3,7 +3,7 @@ import { LocaleValue, AltsProps, PageSeoProps } from "@/types";
 export function getAlts({
   titles,
   slugs,
-  _modelApikey,
+  _modelApiKey,
   section,
 }: Partial<PageSeoProps>) {
   const alts = titles?.map((item: LocaleValue) => {
@@ -13,7 +13,7 @@ export function getAlts({
         ? slugs.find((s: LocaleValue) => s.locale === locale)?.value
         : "";
     const title = value;
-    return { slug, title: `${title}`, locale, _modelApikey, section };
+    return { slug, title: `${title}`, locale, _modelApiKey, section };
   });
   return alts;
 }
@@ -21,5 +21,6 @@ export function getAlts({
 export default function getPageSeo(page: PageSeoProps) {
   const tags = page?.seo || [];
   const alts = getAlts(page);
-  return { tags, alts, page };
+  const obj = { tags, alts, page };
+  return obj;
 }

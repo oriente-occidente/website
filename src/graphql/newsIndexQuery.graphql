@@ -1,4 +1,4 @@
-query newsIndex($locale: SiteLocale!, $archived: BooleanType) {
+query newsIndex($locale: SiteLocale!) {
   newsIndex(locale: $locale) {
     id
     title

@@ -1,23 +1,24 @@
 import { draftMode } from "next/headers";
 
-import fetchDato from "@/lib/fetchDato";
 import { NewsIndexDocument, AllNewsDocument } from "@/graphql/generated";
 import { SiteLocale } from "@/graphql/generated";
 import IndexPageTemplate from "@/components/templates/IndexPageTemplate";
 import { toNextMetadata } from "react-datocms";
 import seoUtils from "@/lib/seoUtils";
-import { PageProps } from "../../../../.next/types/app/(base)/layout";
 import resolveLink from "@/lib/resolveLink";
-const locale = "it";
+import fetchDato from "@/lib/fetchDato";
 
 export async function generateMetadata() {
+  const locale = "it";
   const siteLocale = locale as SiteLocale;
-  const page = await fetchDato(
+  const data = await fetchDato(
     NewsIndexDocument,
     { locale: siteLocale },
     false
   );
+  const page = data?.newsIndex || null;
   const seoData = seoUtils(page as any);
+  console.log("seoData", seoData);
   const tags = toNextMetadata(seoData?.tags || []);
 
   //  const links =
@@ -36,17 +37,15 @@ export async function generateMetadata() {
   //        );
   //      });
   //    }
-  const metaObject = {
-    ...tags,
-  };
-  console.log(metaObject);
-  return metaObject;
+
+  return tags;
 }
 
 export default async function Page() {
+  const locale = "it";
   const { isEnabled } = draftMode();
   const siteLocale = locale as SiteLocale;
-  const page = await fetchDato(
+  const data = await fetchDato(
     NewsIndexDocument,
     { locale: siteLocale },
     isEnabled
@@ -60,7 +59,7 @@ export default async function Page() {
   const pageData: any = {
     list: res.allNews || [],
     hero: null,
-    page,
+    page: data?.newsIndex,
   };
   return <IndexPageTemplate data={pageData} locale={locale} />;
 }
