@@ -1,0 +1,214 @@
+query educationPageQuery($locale: SiteLocale!) {
+  educationPage(locale: $locale) {
+    title
+    id
+    _modelApiKey
+    seo: _seoMetaTags {
+      ...seoMetaFragment
+    }
+    layoutHero
+    titleHero
+    descriptionHero
+    imageHero {
+      id
+      responsiveImage(
+        sizes: "(max-width: 1024px) 80vw, (min-width: 1025px) 45vw, 600px"
+        imgixParams: { auto: [format, compress], ar: "5:4", fit: crop }
+      ) {
+        ...imgFrag
+      }
+    }
+    slideshowHero {
+      id
+      title
+      responsiveImage(
+        sizes: "(max-width: 1023px) 100vw, (min-width: 1024px) 80vw, 1400px"
+        imgixParams: { auto: [format, compress], ar: "14:8", fit: crop }
+      ) {
+        ...imgFrag
+      }
+    }
+    content {
+      value
+      links {
+        __typename
+        ... on ArtistRecord {
+          id
+          slug
+          title
+          _modelApiKey
+        }
+        ... on EventRecord {
+          id
+          slug
+          title
+          _modelApiKey
+        }
+        ... on NewsRecord {
+          id
+          slug
+          title
+          _modelApiKey
+        }
+        ... on NetworkRecord {
+          id
+          slug
+          title
+          _modelApiKey
+        }
+        ... on PageRecord {
+          id
+          slug
+          title
+          _modelApiKey
+        }
+        ... on ProjectRecord {
+          id
+          slug
+          title
+          _modelApiKey
+        }
+        ... on WorkshopRecord {
+          id
+          slug
+          title
+          _modelApiKey
+        }
+      }
+      blocks {
+        __typename
+        ... on GalleryRecord {
+          ...galleryFrag
+        }
+        ... on ImageBlockRecord {
+          ...imageBlockFrag
+        }
+        ... on VideoBlockRecord {
+          ...videoFrag
+        }
+        ... on PromozioniBlockRecord {
+          ...promoFrag
+        }
+        ... on WorkshopCategoriesBlockRecord {
+          ...wsCatsFrag
+        }
+      }
+    }
+    sections {
+      id
+      title
+      body {
+        value
+        blocks {
+          __typename
+          ... on GalleryRecord {
+            id
+            images {
+              responsiveImage(
+                sizes: "100vw"
+                imgixParams: { auto: [format, compress], h: 800, w: 1200, fit: crop }
+              ) {
+                ...imgFrag
+              }
+            }
+          }
+          ... on ImageBlockRecord {
+            ...imageBlockFrag
+          }
+          ... on VideoBlockRecord {
+            ...videoFrag
+          }
+          ... on PartnerBlockRecord {
+            id
+            title
+            image {
+              responsiveImage(imgixParams: { auto: format, maxW: "300" }) {
+                ...imgFrag
+              }
+            }
+            url
+          }
+          ... on WorkshopCategoriesBlockRecord {
+            ...wsCatsFrag
+          }
+          ... on PromozioniBlockRecord {
+            ...promoFrag
+          }
+        }
+        links {
+          __typename
+          ... on ArtistRecord {
+            id
+            slug
+            title
+            _modelApiKey
+          }
+          ... on EventRecord {
+            id
+            slug
+            title
+            _modelApiKey
+          }
+          ... on NewsRecord {
+            id
+            slug
+            title
+            _modelApiKey
+          }
+          ... on NetworkRecord {
+            id
+            slug
+            title
+            _modelApiKey
+          }
+          ... on PageRecord {
+            id
+            slug
+            title
+            _modelApiKey
+          }
+          ... on ProjectRecord {
+            id
+            slug
+            title
+            _modelApiKey
+          }
+          ... on WorkshopRecord {
+            id
+            slug
+            title
+            _modelApiKey
+          }
+        }
+        blocks {
+          __typename
+          ... on GalleryRecord {
+            ...galleryFrag
+          }
+          ... on ImageBlockRecord {
+            ...imageBlockFrag
+          }
+          ... on VideoBlockRecord {
+            ...videoFrag
+          }
+          ... on PartnerBlockRecord {
+            id
+            title
+            image {
+              responsiveImage(imgixParams: { auto: format, maxW: "300" }) {
+                ...imgFrag
+              }
+            }
+            url
+          }
+          ... on WorkshopCategoriesBlockRecord {
+            ...wsCatsFrag
+          }
+          ... on PromozioniBlockRecord {
+            ...promoFrag
+          }
+        }
+      }
+    }
+  }
+}
