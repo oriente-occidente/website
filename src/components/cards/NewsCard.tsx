@@ -21,9 +21,23 @@ export default function NewsCard({ data, locale }: GenericCardProps) {
       categoryTitle = catToShow.title;
     }
   }
+  const categoryColorClasses: any = {
+    news: "bg-cat-news text-black",
+    eventi: "bg-cat-eventi text-black",
+    linguaggi: "bg-cat-linguaggi text-black",
+    workshop: "bg-cat-workshop text-black",
+    artisti: "bg-cat-artisti text-black",
+    compagnie: "bg-cat-compagnie text-black",
+    residenze: "bg-cat-residenze text-black",
+    progetto: "bg-cat-progetto text-black",
+    pubblicazioni: "bg-cat-pubblicazioni text-black",
+    reti: "bg-cat-reti text-black",
+    partner: "bg-cat-partner text-black",
+    festival: "bg-cat-festival text-black",
+  };
+  const categoryClasses = categoryColorClasses[categoryTitle.toLowerCase()];
+
   const link = resolveLink({ ...data, locale });
-  const categoryClasses = categoryColorClass(categoryTitle)
-  console.log(categoryClasses)
 
   return (
     <div className="relative py-4">
