@@ -8,16 +8,8 @@ const locale = "it";
 export default async function Page() {
   const siteLocale = locale as SiteLocale;
   const { isEnabled } = draftMode();
-  const page = await fetchDato(
-    ProjectsIndexDocument,
-    { locale: siteLocale },
-    isEnabled
-  );
-  const res = await fetchDato(
-    ProjectsDocument,
-    { locale: siteLocale },
-    isEnabled
-  );
+  const page = await fetchDato(ProjectsIndexDocument, { locale: siteLocale }, isEnabled);
+  const res = await fetchDato(ProjectsDocument, { locale: siteLocale }, isEnabled);
   let list: any = [];
 
   if (res.projects) {
@@ -29,5 +21,5 @@ export default async function Page() {
     hero: null,
     page,
   };
-  return <IndexPageTemplate data={pageData} locale={locale} />;
+  return <></>;
 }
