@@ -10,9 +10,7 @@ export default function IndexPageTemplate({
   locale,
 }: GenericIndexPageProps) {
   const { list, hero, page } = data;
-  console.log("PAGE", page);
   const seoData: any = resolveSeo(page);
-  console.log("seoData", seoData);
   return (
     <div>
       <Seo data={seoData} />

@@ -8,7 +8,6 @@ import { ResolveLinkProps, SeoProps } from "@/types";
 const dl = config.defaultLocale;
 const SEO = ({ data }: { data: SeoProps }) => {
   const { tags, alts = [], page } = data;
-  console.log("SEO", data);
   return (
     <Head>
       {tags && renderMetaTags(tags)}

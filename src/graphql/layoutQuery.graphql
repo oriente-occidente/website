@@ -1,9 +1,25 @@
 query layout($locale: SiteLocale) {
-  site: _site(locale: $locale) {
+  _site(locale: $locale) {
     faviconMetaTags {
       tag
       content
       attributes
+    }
+    globalSeo(locale: $locale) {
+      siteName
+      titleSuffix
+      twitterAccount
+      facebookPageUrl
+      fallbackSeo {
+        title
+        twitterCard
+        description
+        image {
+          url(imgixParams: { auto: [compress, format] })
+          width
+          height
+        }
+      }
     }
   }
   menu: allMenuItems(filter: { parent: { exists: "false" } }, locale: $locale) {
