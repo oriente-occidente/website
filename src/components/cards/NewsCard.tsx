@@ -22,6 +22,8 @@ export default function NewsCard({ data, locale }: GenericCardProps) {
     }
   }
   const link = resolveLink({ ...data, locale });
+  const categoryClasses = categoryColorClass(categoryTitle)
+  console.log(categoryClasses)
 
   return (
     <div className="relative py-4">
@@ -37,9 +39,7 @@ export default function NewsCard({ data, locale }: GenericCardProps) {
           <div className="mt-4 mb-3">
             {categoryTitle && (
               <span
-                className={`px-2 py-1 font-semibold uppercase ${categoryColorClass(
-                  categoryTitle
-                )}`}
+                className={`px-2 py-1 font-semibold uppercase mr-2 ${categoryClasses}`}
               >
                 {categoryTitle}
               </span>
