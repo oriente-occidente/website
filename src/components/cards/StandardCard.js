@@ -9,8 +9,6 @@ function StandardCard({ data, locale, categoryTitle = "" }) {
   const image = data.imageHero;
   const datesGrouped = data.dates ? groupDatesByDay(data.dates, locale) : [];
 
-  console.log(data)
-
   return (
     <div className="relative py-4">
       <Link
@@ -35,7 +33,7 @@ function StandardCard({ data, locale, categoryTitle = "" }) {
                 </span>
               </div>
             )}
-            {data.tags && data.tags.map((tag)=><div>{tag.title}</div>)}
+            {data.tags && data.tags.map((tag)=><div key={tag.id}>{tag.title}</div>)}
           </div>
           {image != null ? (
             <div className="relative h-[220px] overflow-hidden md:h-[360px]">
