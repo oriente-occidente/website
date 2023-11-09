@@ -20,6 +20,8 @@ export default async function Page({ params }: BasicSlugPageProps) {
     descriptionHero: data?.event?.descriptionHero,
     imageHero: data?.event?.imageHero,
     slideshowHero: data?.event?.slideshowHero,
+    dateEvento: data?.event?.dates,
+    location: data?.event?.location,
   };
   const pageData: any = {
     hero: heroData,
