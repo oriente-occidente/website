@@ -13,25 +13,4 @@ query newsIndex($locale: SiteLocale!, $archived: BooleanType) {
     description
     __typename
   }
-  news: allNews(
-    locale: $locale
-    orderBy: startDate_DESC
-    filter: { slug: { neq: null }, showInArchive: { eq: $archived } }
-    first: "100"
-  ) {
-    id
-    slug
-    title
-    _modelApiKey
-    titleHero
-    imageHero {
-      ...imageHeroFrag
-    }
-    startDate
-    tags {
-      title
-      slug
-      id
-    }
-  }
 }

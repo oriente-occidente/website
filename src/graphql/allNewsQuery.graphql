@@ -1,0 +1,23 @@
+query allNews($locale: SiteLocale) {
+  allNews(
+    locale: $locale
+    orderBy: startDate_DESC
+    filter: { slug: { neq: null } }
+    first: "100"
+  ) {
+    id
+    slug
+    title
+    _modelApiKey
+    titleHero
+    imageHero {
+      ...imageHeroFrag
+    }
+    startDate
+    tags {
+      title
+      slug
+      id
+    }
+  }
+}

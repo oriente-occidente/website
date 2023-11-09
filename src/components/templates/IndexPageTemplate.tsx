@@ -10,10 +10,10 @@ export default function IndexPageTemplate({
   locale,
 }: GenericIndexPageProps) {
   const { list, hero, page } = data;
-  const seoData: any = resolveSeo(page);
+
   return (
     <div>
-      <Seo data={seoData} />
+
       <GenericHero data={hero} locale={locale} />
       <div className="border-color-gray border-t py-6">
         <div className="container lg:grid lg:grid-cols-2 lg:gap-6">
