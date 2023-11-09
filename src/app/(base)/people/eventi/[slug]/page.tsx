@@ -21,30 +21,9 @@ export default async function Page({ params }: BasicSlugPageProps) {
     imageHero: data?.event?.imageHero,
     slideshowHero: data?.event?.slideshowHero,
   };
-  const pageData = {
-    seo: null,
+  const pageData: any = {
     hero: heroData,
-    content: data.event?.content,
-    sections: data.event?.sections,
-    relatedContents: data.event?.relatedContents,
+    ...data.event,
   };
   return <PageTemplate data={pageData} locale={locale} />;
-
-  // return (
-  //   <div>
-  //     <MainContent locale={locale} data={data.event?.content} />
-  //     {data.event?.sections && data.event?.sections.length > 0 && (
-  //       <SectionsParagraphs locale={locale} sections={data.event?.sections} />
-  //     )}
-  //     {data.event?.relatedContents?.length &&
-  //       data.event?.relatedContents?.length > 0 && (
-  //         <div className="mt-20 mb-6">
-  //           <GalleryPreview
-  //             slides={data.event?.relatedContents}
-  //             locale={locale}
-  //           />
-  //         </div>
-  //       )}
-  //   </div>
-  // );
 }

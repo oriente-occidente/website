@@ -22,10 +22,9 @@ export default async function Page({ params }: BasicSlugPageProps) {
     imageHero: data?.news?.imageHero,
     slideshowHero: data?.news?.slideshowHero,
   };
-  const pageData = {
-    seo: null,
+  const pageData: any = {
     hero: heroData,
-    content: data.news?.content,
+    ...data.news,
   };
   return <PageTemplate data={pageData} locale={locale} />;
 }
