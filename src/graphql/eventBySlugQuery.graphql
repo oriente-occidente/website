@@ -188,6 +188,10 @@ query event($slug: String!, $locale: SiteLocale) {
         }
       }
     }
+    tags{
+      title
+      slug
+    }
     paymentSettings {
       id
       description
