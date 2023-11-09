@@ -7,6 +7,7 @@ import IndexPageTemplate from "@/components/templates/IndexPageTemplate";
 import { toNextMetadata } from "react-datocms";
 import seoUtils from "@/lib/seoUtils";
 import { PageProps } from "../../../../.next/types/app/(base)/layout";
+import resolveLink from "@/lib/resolveLink";
 const locale = "it";
 
 export async function generateMetadata() {
@@ -19,22 +20,22 @@ export async function generateMetadata() {
   const seoData = seoUtils(page as any);
   const tags = toNextMetadata(seoData?.tags || []);
 
- const links =
-     seoData?.alts?.map((a: any) => {
-       const { locale, title } = a;
-       const url = resolveLink({ ...a, locale });
-       return (
-         <link
-           key={url}
-           href={"https://www.uffizi.it" + url}
-           hrefLang={locale}
-           title={title}
-           rel={dl === locale ? "canonical" : "alternate"}
-           type="text/html"
-         />
-       );
-     });
-   }
+  //  const links =
+  //      seoData?.alts?.map((a: any) => {
+  //        const { locale, title } = a;
+  //        const url = resolveLink({ ...a, locale });
+  //        return (
+  //          <link
+  //            key={url}
+  //            href={"https://www.uffizi.it" + url}
+  //            hrefLang={locale}
+  //            title={title}
+  //            rel={dl === locale ? "canonical" : "alternate"}
+  //            type="text/html"
+  //          />
+  //        );
+  //      });
+  //    }
   const metaObject = {
     ...tags,
   };
