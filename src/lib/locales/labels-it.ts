@@ -48,5 +48,15 @@ const labels_it = {
   view_all: "Vedi tutti",
   back: "Torna indietro",
   no_events: "Nessun workshop trovato in questa categoria",
+  festival: "Festival",
+  company: "Compagnia", 
+  residence: "Residenza",
+  author:"Autore", 
+  document: "Documento",
+  audio: "Audio",
+  video: "Video",
+  reservedTextLineOne: "Questo video non è consultabile pubblicamente.",
+  reservedTextLineTwo: "Per chiederne l’accesso scrivere all’indirizzo",
+  zoom: "Ingrandisci"
 };
 export default labels_it;
