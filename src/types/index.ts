@@ -1,3 +1,5 @@
+import { SeoMetaFragmentFragment, Site } from "@/graphql/generated";
+
 export type BasicSlugPageProps = {
   params: { slug: string };
 };
@@ -40,6 +42,10 @@ export type GenericPageProps = {
     sections?: any[];
     relatedContents?: any[];
     otherSections?: any[];
+    titles?: LocaleValue;
+    slugs?: LocaleValue;
+    _modelApiKey: string;
+    section?: string;
   };
   locale: string;
 };
@@ -49,6 +55,9 @@ export type GenericIndexPageProps = {
     list: any[];
     seo?: any;
     hero?: any;
+    titles?: LocaleValue;
+    slugs?: LocaleValue;
+    _modelApiKey: string;
   };
   locale: string;
 };
@@ -56,4 +65,38 @@ export type GenericIndexPageProps = {
 export type GenericProps = {
   data: any;
   locale: string;
+};
+
+export type AltType = {
+  slug: string;
+  title: string;
+  locale: string;
+  _modelApiKey: string;
+  section?: string;
+};
+
+export type SeoProps = {
+  page?: PageSeoProps;
+  tags?: SeoMetaFragmentFragment[];
+  alts?: AltType[];
+};
+
+export type LocaleValue = {
+  locale: string;
+  value: string;
+};
+
+export type AltsProps = {
+  slugs?: LocaleValue[];
+  titles: LocaleValue[];
+  _modelApikey?: string;
+  section?: string;
+};
+
+export type PageSeoProps = {
+  _modelApikey?: string;
+  seo?: SeoMetaFragmentFragment[];
+  titles?: LocaleValue[];
+  slugs?: LocaleValue[];
+  section?: string;
 };

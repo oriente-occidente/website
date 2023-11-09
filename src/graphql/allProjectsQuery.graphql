@@ -8,6 +8,18 @@ query projects($locale: SiteLocale) {
     slug
     title
     titleHero
+    _modelApiKey
+    seo: _seoMetaTags {
+      ...seoMetaFragment
+    }
+    titles: _allTitleLocales {
+      locale
+      value
+    }
+    slugs: _allSlugLocales {
+      locale
+      value
+    }
     imageHero {
       id
       responsiveImage(

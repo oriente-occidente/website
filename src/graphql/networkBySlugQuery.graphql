@@ -2,8 +2,17 @@ query network($slug: String!, $locale: SiteLocale) {
   network(locale: $locale, filter: { slug: { eq: $slug } }) {
     id
     slug
+    _modelApiKey
     seo: _seoMetaTags {
-      ...tagFrag
+      ...seoMetaFragment
+    }
+    titles: _allTitleLocales {
+      locale
+      value
+    }
+    slugs: _allSlugLocales {
+      locale
+      value
     }
     title
     layoutHero

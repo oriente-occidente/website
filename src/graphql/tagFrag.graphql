@@ -1,5 +1,0 @@
-fragment tagFrag on Tag {
-  attributes
-  content
-  tag
-}

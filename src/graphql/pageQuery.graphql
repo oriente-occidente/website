@@ -3,9 +3,19 @@ query page($locale: SiteLocale!, $slug: String) {
     ...slidePageFrag
     isIndex
     indexType
+    _modelApiKey
     seo: _seoMetaTags {
-      ...tagFrag
+      ...seoMetaFragment
     }
+    titles: _allTitleLocales {
+      locale
+      value
+    }
+    slugs: _allSlugLocales {
+      locale
+      value
+    }
+    section
     relatedContents {
       __typename
       ... on ArtistRecord {

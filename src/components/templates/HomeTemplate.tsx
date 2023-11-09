@@ -5,6 +5,8 @@ import GalleryHome from "@/components/galleries/GalleryHome";
 import GalleryPreview from "@/components/galleries/GalleryPreview";
 import Link from "next/link";
 import resolveLink from "@/lib/resolveLink";
+import resolveSeo from "@/lib/seoUtils";
+import Seo from "@/components/layout/Seo";
 
 export default function HomeTemplate({
   data,
@@ -13,9 +15,10 @@ export default function HomeTemplate({
   data: any;
   locale: string;
 }) {
-  const { homeSlideshow, homeSections, seo } = data;
+  const { homeSlideshow, homeSections } = data;
   return (
     <div>
+      <Seo data={resolveSeo(data) as any} />
       <h1 className="sr-only">Oriente Occidente</h1>
       <HeroSlider slides={homeSlideshow} />
       {homeSections.map((block: any) => {

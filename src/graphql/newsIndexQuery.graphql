@@ -7,8 +7,19 @@ query newsIndex($locale: SiteLocale!, $archived: BooleanType) {
   ) {
     id
     slug
-    _modelApiKey
     title
+    _modelApiKey
+    seo: _seoMetaTags {
+      ...seoMetaFragment
+    }
+    titles: _allTitleLocales {
+      locale
+      value
+    }
+    slugs: _allSlugLocales {
+      locale
+      value
+    }
     titleHero
     imageHero {
       id

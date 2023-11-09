@@ -2,11 +2,15 @@ query projectsIndex($locale: SiteLocale!) {
   projectsIndex(locale: $locale) {
     id
     title
-    description
     _modelApiKey
-    __typename
     seo: _seoMetaTags {
-      ...tagFrag
+      ...seoMetaFragment
     }
+    titles: _allTitleLocales {
+      locale
+      value
+    }
+    description
+    __typename
   }
 }

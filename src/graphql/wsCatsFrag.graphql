@@ -3,6 +3,9 @@ fragment wsCatsFrag on WorkshopCategoriesBlockRecord {
   category {
     id
     slug
+    seo: _seoMetaTags {
+      ...seoMetaFragment
+    }
     title
     _modelApiKey
     hoverImage {

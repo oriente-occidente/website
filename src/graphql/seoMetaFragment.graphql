@@ -1,0 +1,5 @@
+fragment seoMetaFragment on Tag {
+  attributes
+  content
+  tag
+}

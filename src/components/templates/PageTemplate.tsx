@@ -4,14 +4,17 @@ import GalleryPreview from "@/components/galleries/GalleryPreview";
 import SectionsParagraphs from "@/components/contents/SectionsParagraphs";
 import OtherSections from "@/components/contents/OtherSections";
 import { GenericPageProps } from "../../types";
+import resolveSeo from "@/lib/seoUtils";
+import Seo from "@/components/layout/Seo";
 
 export default function PageTemplate({ data, locale }: GenericPageProps) {
-  const { hero, content, seo } = data;
+  const { hero, content } = data;
   const sections = data.sections || [];
   const relatedContents = data.relatedContents || [];
   const otherSections = data.otherSections || [];
   return (
     <div>
+      <Seo data={resolveSeo(data) as any} />
       <GenericHero data={hero} locale={locale} />
       <MainContent data={content} locale={locale} />
       {sections.length > 0 && (

@@ -2,10 +2,17 @@ query news($slug: String!, $locale: SiteLocale) {
   news(locale: $locale, filter: { slug: { eq: $slug } }) {
     id
     slug
+    _modelApiKey
     seo: _seoMetaTags {
-      attributes
-      content
-      tag
+      ...seoMetaFragment
+    }
+    titles: _allTitleLocales {
+      locale
+      value
+    }
+    slugs: _allSlugLocales {
+      locale
+      value
     }
     title
     layoutHero

@@ -1,6 +1,9 @@
 query home($locale: SiteLocale!) {
   home(locale: $locale) {
-    slug
+    _modelApiKey
+    seo: _seoMetaTags {
+      ...seoMetaFragment
+    }
     titleHero
     homeSlideshow {
       __typename
@@ -93,9 +96,6 @@ query home($locale: SiteLocale!) {
           ...slideWorkshopFrag
         }
       }
-    }
-    seo: _seoMetaTags {
-      ...tagFrag
     }
   }
 }

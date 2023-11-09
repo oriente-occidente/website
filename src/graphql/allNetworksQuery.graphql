@@ -6,6 +6,18 @@ query networks($locale: SiteLocale) {
   ) {
     id
     slug
+    _modelApiKey
+    seo: _seoMetaTags {
+      ...seoMetaFragment
+    }
+    titles: _allTitleLocales {
+      locale
+      value
+    }
+    slugs: _allSlugLocales {
+      locale
+      value
+    }
     title
     titleHero
     imageHero {

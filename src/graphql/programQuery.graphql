@@ -91,6 +91,7 @@ query program($locale: SiteLocale, $start: Date, $end: Date) {
   ) {
     id
     slug
+    _modelApiKey
     title
     titleHero
     imageHero {
@@ -127,6 +128,7 @@ query program($locale: SiteLocale, $start: Date, $end: Date) {
     id
     slug
     title
+    _modelApiKey
     titleHero
     imageHero {
       id

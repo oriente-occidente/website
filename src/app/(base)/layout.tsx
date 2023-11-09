@@ -16,6 +16,7 @@ import "swiper/css/autoplay";
 import "swiper/css/effect-fade";
 // import "swiper/css/scrollbar";
 import "@/style/globals.css";
+import { renderMetaTags } from "react-datocms";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -46,6 +47,7 @@ LayoutParams) {
   if (!data) return null;
   return (
     <html lang={locale}>
+      <head>{renderMetaTags(data.site?.faviconMetaTags || [])}</head>
       <body>
         <div data-datocms-noindex>
           <a className="skip-link" href="#main-content">

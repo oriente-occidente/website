@@ -1,5 +1,5 @@
-query eventsIndex($locale: SiteLocale!) {
-  eventsIndex(locale: $locale) {
+query audiosIndex($locale: SiteLocale!) {
+  audiosIndex(locale: $locale) {
     id
     title
     _modelApiKey

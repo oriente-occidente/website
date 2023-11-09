@@ -1,5 +1,5 @@
-query eventsIndex($locale: SiteLocale!) {
-  eventsIndex(locale: $locale) {
+query videosIndex($locale: SiteLocale!) {
+  videosIndex(locale: $locale) {
     id
     title
     _modelApiKey

@@ -2,8 +2,17 @@ query artist($slug: String!, $locale: SiteLocale) {
   artist(locale: $locale, filter: { slug: { eq: $slug } }) {
     id
     slug
+    _modelApiKey
     seo: _seoMetaTags {
-      ...tagFrag
+      ...seoMetaFragment
+    }
+    titles: _allTitleLocales {
+      locale
+      value
+    }
+    slugs: _allSlugLocales {
+      locale
+      value
     }
     title
     #  layoutHero

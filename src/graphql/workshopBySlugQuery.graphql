@@ -4,7 +4,15 @@ query workshop($slug: String!, $locale: SiteLocale) {
     slug
     _modelApiKey
     seo: _seoMetaTags {
-      ...tagFrag
+      ...seoMetaFragment
+    }
+    titles: _allTitleLocales {
+      locale
+      value
+    }
+    slugs: _allSlugLocales {
+      locale
+      value
     }
     title
     layoutHero
