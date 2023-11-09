@@ -1,9 +1,6 @@
 import { draftMode } from "next/headers";
 import { EventsIndexDocument, ProgramDocument } from "@/graphql/generated";
-import ResultsGridWorkshop from "@/components/ResultsGridSorted";
-import HeroEmpty from "@/components/hero/HeroEmpty";
 import { SiteLocale } from "@/graphql/generated";
-import Breadcrumbs from "@/components/Breadcrumbs";
 import fetchDato from "@/lib/fetchDato";
 import IndexPageTemplate from "@/components/templates/IndexPageTemplate";
 
@@ -31,18 +28,11 @@ export default async function Page() {
     titleHero: page?.eventsIndex?.title || "",
     descriptionHero: page?.eventsIndex?.description || "",
   };
-  const dummyPaths = [
-    {
-      name: page?.eventsIndex?.title || "",
-      href: "#",
-      current: false,
-    },
-  ];
 
-  const pageData = {
+  const pageData: any = {
     list,
-    seo: null,
     hero: heroData,
+    page,
   };
   return <IndexPageTemplate data={pageData} locale={locale} />;
   // return (

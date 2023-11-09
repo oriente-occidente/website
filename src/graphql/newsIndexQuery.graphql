@@ -1,12 +1,6 @@
 query newsIndex($locale: SiteLocale!, $archived: BooleanType) {
-  newsIndex: allNews(
-    locale: $locale
-    orderBy: startDate_DESC
-    filter: { slug: { neq: null }, showInArchive: { eq: $archived } }
-    first: "100"
-  ) {
+  newsIndex(locale: $locale) {
     id
-    slug
     title
     _modelApiKey
     seo: _seoMetaTags {
@@ -16,19 +10,22 @@ query newsIndex($locale: SiteLocale!, $archived: BooleanType) {
       locale
       value
     }
-    slugs: _allSlugLocales {
-      locale
-      value
-    }
+    description
+    __typename
+  }
+  news: allNews(
+    locale: $locale
+    orderBy: startDate_DESC
+    filter: { slug: { neq: null }, showInArchive: { eq: $archived } }
+    first: "100"
+  ) {
+    id
+    slug
+    title
+    _modelApiKey
     titleHero
     imageHero {
-      id
-      responsiveImage(
-        sizes: "(max-width: 1024px) 80vw, (min-width: 1025px) 45vw, 600px"
-        imgixParams: { auto: [format, compress], ar: "5:4", fit: crop }
-      ) {
-        ...imgFrag
-      }
+      ...imageHeroFrag
     }
     startDate
     tags {

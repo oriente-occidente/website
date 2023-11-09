@@ -1,0 +1,24 @@
+query artisticResidenciesIndex($locale: SiteLocale!) {
+  artisticResidenciesIndex(locale: $locale) {
+    id
+    title
+    _modelApiKey
+    seo: _seoMetaTags {
+      ...seoMetaFragment
+    }
+    titles: _allTitleLocales {
+      locale
+      value
+    }
+    layoutHero
+    titleHero
+    descriptionHero
+    imageHero {
+      ...imageHeroFrag
+    }
+    slideshowHero {
+      ...slideShowHeroFrag
+    }
+    __typename
+  }
+}

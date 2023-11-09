@@ -18,20 +18,11 @@ export default async function Page() {
     { locale: siteLocale },
     isEnabled
   );
-  let list: any = [];
-
-  if (res.networks) {
-    list = [...res.networks];
-  }
-
-  const heroData = {
-    titleHero: page?.networksIndex?.title || "",
-    descriptionHero: page?.networksIndex?.description || "",
-  };
-  const pageData = {
-    seo: null,
+  let list: any = res?.networks || [];
+  const pageData: any = {
     list,
-    hero: heroData,
+    hero: null,
+    page,
   };
   return <IndexPageTemplate data={pageData} locale={locale} />;
 }

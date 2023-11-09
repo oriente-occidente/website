@@ -12,9 +12,11 @@ export default function PageTemplate({ data, locale }: GenericPageProps) {
   const sections = data.sections || [];
   const relatedContents = data.relatedContents || [];
   const otherSections = data.otherSections || [];
+
+  const seoData: any = resolveSeo(data as any);
   return (
     <div>
-      <Seo data={resolveSeo(data) as any} />
+      <Seo data={seoData} />
       <GenericHero data={hero} locale={locale} />
       <MainContent data={content} locale={locale} />
       {sections.length > 0 && (

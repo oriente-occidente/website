@@ -15,11 +15,13 @@ export default async function Page() {
     { locale: siteLocale, archived: false },
     isEnabled
   );
-  const list = data.newsIndex || [];
-
-  const pageData = {
+  const list = data.news || [];
+  const page = data.newsIndex;
+  const pageData: any = {
     list,
-    seo: null,
+    hero: null,
+    page,
   };
+
   return <IndexPageTemplate data={pageData} locale={locale} />;
 }

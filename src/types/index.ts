@@ -53,11 +53,8 @@ export type GenericPageProps = {
 export type GenericIndexPageProps = {
   data: {
     list: any[];
-    seo?: any;
     hero?: any;
-    titles?: LocaleValue;
-    slugs?: LocaleValue;
-    _modelApiKey: string;
+    page: PageSeoProps;
   };
   locale: string;
 };

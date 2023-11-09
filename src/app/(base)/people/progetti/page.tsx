@@ -24,21 +24,10 @@ export default async function Page() {
     list = [...res.projects];
   }
 
-  const heroData = {
-    titleHero: page?.projectsIndex?.title || "",
-    descriptionHero: page?.projectsIndex?.description || "",
-  };
-  const dummyPaths = [
-    {
-      name: page?.projectsIndex?.title || "",
-      href: "#",
-      current: false,
-    },
-  ];
-
-  const pageData = {
+  const pageData: any = {
     list,
-    seo: null,
+    hero: null,
+    page,
   };
   return <IndexPageTemplate data={pageData} locale={locale} />;
 }

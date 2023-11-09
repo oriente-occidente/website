@@ -25,12 +25,9 @@ export default async function Page({ params }: BasicSlugPageProps) {
     imageHero: data?.page?.imageHero,
     slideshowHero: data?.page?.slideshowHero,
   };
-  const pageData = {
-    seo: null,
+  const pageData: any = {
     hero: heroData,
-    content: data.page?.content,
-    sections: data.page?.sections,
-    relatedContents: data.page?.relatedContents,
+    ...data.page,
   };
   return <PageTemplate data={pageData} locale={locale} />;
 }
