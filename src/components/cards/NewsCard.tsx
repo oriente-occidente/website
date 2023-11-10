@@ -38,8 +38,6 @@ export default function NewsCard({ data, locale }: GenericCardProps) {
   const categoryClasses = categoryColorClasses[categoryTitle.toLowerCase()];
 
   const link = resolveLink({ ...data, locale });
-  // const categoryClasses = categoryColorClass(categoryTitle);
-  // console.log(categoryClasses)
 
   return (
     <div className="relative py-4">

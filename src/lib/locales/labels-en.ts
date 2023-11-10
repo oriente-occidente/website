@@ -58,6 +58,7 @@ const labels_en = {
   video: "Video",
   reservedTextLineOne: "This video is not publicly available.",
   reservedTextLineTwo: "To request access, send an email to",
-  zoom: "Zoom"
+  zoom: "Zoom",
+  goToContents: "Go to content"
 };
 export default labels_en;

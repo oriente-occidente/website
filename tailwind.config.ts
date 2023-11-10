@@ -14,7 +14,10 @@ const config: Config = {
       },
       colors: {
         green: "#81845C",
-        red: "#e64011",
+        red: {
+          DEFAULT: "#e64011",
+          alt: "#D83D35"
+        },
         black: {
           DEFAULT: "#000000",
           light: "#424242",
@@ -39,7 +42,7 @@ const config: Config = {
           pubblicazioni: "#BFE9C6",
           reti: "#F2CEBF",
           partner: "#F285B5",
-          festival: "#181818",
+          festival: "#F26123",
         },
       },
       fontSize: {
