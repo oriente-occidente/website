@@ -22,6 +22,7 @@ export async function generateMetadata({ params }: BasicSlugPageProps) {
 
   return tags;
 }
+
 export default async function Page({ params }: BasicSlugPageProps) {
   const { slug } = params;
 

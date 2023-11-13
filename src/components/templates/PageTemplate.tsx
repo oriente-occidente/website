@@ -12,12 +12,8 @@ export default function PageTemplate({ data, locale }: GenericPageProps) {
   const sections = data.sections || [];
   const relatedContents = data.relatedContents || [];
   const otherSections = data.otherSections || [];
-
-  // const seoData: any = resolveSeo(data as any);
-  // console.log("SEO", seoData);
   return (
     <div>
-      {/* <Seo data={seoData} /> */}
       <GenericHero data={hero} locale={locale} />
       <MainContent data={content} locale={locale} />
       {sections.length > 0 && (

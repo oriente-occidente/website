@@ -35,16 +35,4 @@ export default async function Page() {
     page,
   };
   return <IndexPageTemplate data={pageData} locale={locale} />;
-  // return (
-  //   <div>
-  //     <Breadcrumbs
-  //       // id="#main-content"
-  //       background="gray"
-  //       paths={dummyPaths}
-  //       locale={locale}
-  //     />
-  //     <HeroEmpty data={heroData} />
-  //     <pre>{JSON.stringify(list, null, 2)}</pre>
-  //   </div>
-  // );
 }
