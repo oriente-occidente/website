@@ -4,7 +4,7 @@ import type { BasicSlugPageProps } from "@/types";
 import { NewsDocument, SiteLocale } from "@/graphql/generated";
 import PageTemplate from "@/components/templates/PageTemplate";
 import fetchDato from "@/lib/fetchDato";
-import seoUtils from "@/lib/seoUtils";
+import getSeoMeta from "@/lib/seoUtils";
 
 const locale = "it";
 
@@ -16,11 +16,9 @@ export async function generateMetadata({ params }: BasicSlugPageProps) {
     { locale: siteLocale, slug },
     false
   );
-  const page = data.news || null;
-  const seoData = seoUtils(page as any);
-  const tags = toNextMetadata(seoData?.tags || []);
-
-  return tags;
+  const page: any = data?.news || null;
+  const meta = getSeoMeta(page);
+  return meta;
 }
 
 export default async function Page({ params }: BasicSlugPageProps) {

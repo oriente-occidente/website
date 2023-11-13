@@ -3,9 +3,8 @@ import { draftMode } from "next/headers";
 import { NewsIndexDocument, AllNewsDocument } from "@/graphql/generated";
 import { SiteLocale } from "@/graphql/generated";
 import IndexPageTemplate from "@/components/templates/IndexPageTemplate";
-import { toNextMetadata } from "react-datocms";
-import seoUtils from "@/lib/seoUtils";
-import resolveLink from "@/lib/resolveLink";
+import getSeoMeta from "@/lib/seoUtils";
+
 import fetchDato from "@/lib/fetchDato";
 
 export async function generateMetadata() {
@@ -16,29 +15,9 @@ export async function generateMetadata() {
     { locale: siteLocale },
     false
   );
-  const page = data?.newsIndex || null;
-  const seoData = seoUtils(page as any);
-  console.log("seoData", seoData);
-  const tags = toNextMetadata(seoData?.tags || []);
-
-  //  const links =
-  //      seoData?.alts?.map((a: any) => {
-  //        const { locale, title } = a;
-  //        const url = resolveLink({ ...a, locale });
-  //        return (
-  //          <link
-  //            key={url}
-  //            href={"https://www.uffizi.it" + url}
-  //            hrefLang={locale}
-  //            title={title}
-  //            rel={dl === locale ? "canonical" : "alternate"}
-  //            type="text/html"
-  //          />
-  //        );
-  //      });
-  //    }
-
-  return tags;
+  const page: any = data?.newsIndex || null;
+  const meta = getSeoMeta(page);
+  return meta;
 }
 
 export default async function Page() {
