@@ -20,13 +20,8 @@ const StructuredContent = ({ locale, content }) => {
             {record.category.map(
               ({ title, description, colorData, slug, overImage }, id) => {
                 return (
-                  <Link
-                    key={slug}
-                    href={`/studio/${
-                      locale === "en" ? "workshops" : "workshop"
-                    }?cat=${slug}`}
-                    passHref
-                  >
+                  <Link key={slug} href={`/studio/formazione/${slug}`} passHref>
+                    {/* <a title={title} className="no-underline"> */}
                     <div
                       className={`group transition-all duration-700 ease-out relative flex cursor-pointer flex-col overflow-hidden border-b  xl:flex-row xl:items-center ${
                         id === 0 && "border-t "
@@ -85,30 +80,26 @@ const StructuredContent = ({ locale, content }) => {
       case "PromozioniBlockRecord":
         return (
           <div className="py-2 lg:py-10 2xl:py-16" key={record.id}>
-            {record.promozione.map(
-              ({ headerColor, title, subtitle, link, text }, id) => {
-                return (
-                  <div key={id} className="mb-6 border p-3">
-                    <div
-                      className={`mb-3 ${
-                        headerColor ? "bg-gray-light" : "bg-black/70 text-white"
-                      } p-6`}
-                    >
-                      <div className="pb-2 text-xxs ">
-                        {subtitle.toUpperCase()}
-                      </div>
-                      <div className="text-sm font-semibold lg:text-base">
-                        {title.toUpperCase()}
-                      </div>
+            {record.promozione.map(({ headerColor, title, subtitle, link, text }, id) => {
+              return (
+                <div key={id} className="mb-6 border p-3">
+                  <div
+                    className={`mb-3 ${
+                      headerColor ? "bg-gray-light" : "bg-black/70 text-white"
+                    } p-6`}
+                  >
+                    <div className="pb-2 text-xxs ">{subtitle.toUpperCase()}</div>
+                    <div className="text-sm font-semibold lg:text-base">
+                      {title.toUpperCase()}
                     </div>
-                    <div
-                      className="promobox pb-2 sm:pl-3 lg:pl-6"
-                      dangerouslySetInnerHTML={{ __html: text }}
-                    />
                   </div>
-                );
-              }
-            )}
+                  <div
+                    className="promobox pb-2 sm:pl-3 lg:pl-6"
+                    dangerouslySetInnerHTML={{ __html: text }}
+                  />
+                </div>
+              );
+            })}
           </div>
         );
       case "GalleryRecord":
@@ -168,12 +159,7 @@ const StructuredContent = ({ locale, content }) => {
           // console.log('inline', record.__typename);
           const resolved = resolveLink({ ...record, locale });
           return (
-            <Link
-              href={resolved}
-              key={record.id}
-              locale={locale}
-              className="underline"
-            >
+            <Link href={resolved} key={record.id} locale={locale} className="underline">
               {record.title}
             </Link>
           );
