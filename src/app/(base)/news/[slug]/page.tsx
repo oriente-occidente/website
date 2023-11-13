@@ -1,4 +1,3 @@
-import { toNextMetadata } from "react-datocms";
 import { draftMode } from "next/headers";
 import type { BasicSlugPageProps } from "@/types";
 import { NewsDocument, SiteLocale } from "@/graphql/generated";
