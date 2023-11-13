@@ -23,23 +23,25 @@ export default function CategoryCard({ data, locale }: GenericCardProps) {
     }
   }
   const categoryColorClasses: any = {
-    news: "bg-cat-news text-black",
-    eventi: "bg-cat-eventi text-black",
-    linguaggi: "bg-cat-linguaggi text-black",
-    workshop: "bg-cat-workshop text-black",
-    artisti: "bg-cat-artisti text-black",
-    compagnie: "bg-cat-compagnie text-black",
-    residenze: "bg-cat-residenze text-black",
-    progetto: "bg-cat-progetto text-black",
-    pubblicazioni: "bg-cat-pubblicazioni text-black",
-    reti: "bg-cat-reti text-black",
-    partner: "bg-cat-partner text-black",
-    festival: "bg-cat-festival text-black",
+    news: "bg-cat-news",
+    eventi: "bg-cat-eventi",
+    linguaggi: "bg-cat-linguaggi",
+    workshop: "bg-cat-workshop",
+    artisti: "bg-cat-artisti",
+    compagnie: "bg-cat-compagnie",
+    residenze: "bg-cat-residenze",
+    progetto: "bg-cat-progetto",
+    pubblicazioni: "bg-cat-pubblicazioni",
+    reti: "bg-cat-reti",
+    partner: "bg-cat-partner",
+    festival: "bg-cat-festival",
   };
 
-  const categoryClasses = Object.keys(categoryColorClasses).includes(categoryTitle.toLowerCase())
+  const categoryClasses = Object.keys(categoryColorClasses).includes(
+    categoryTitle.toLowerCase()
+  )
     ? categoryColorClasses[categoryTitle.toLowerCase()]
-    : "bg-white text-black";
+    : "bg-white";
 
   const link = resolveLink({ ...data, locale });
 
@@ -51,16 +53,17 @@ export default function CategoryCard({ data, locale }: GenericCardProps) {
             {data.title &&
               (data.authors ||
                 !data.titleHero ||
-                data.titleHero !== data.title) && (categoryTitle!="artisti") && (
+                data.titleHero !== data.title) &&
+              categoryTitle != "artisti" && (
                 <h2
-                  className={`text-xs md:text-base xl:text-lg font-semibold uppercase ${categoryClasses}  px-10 mb-2 duration-300 group-hover:-rotate-[1deg]`}
+                  className={`text-xs md:text-base xl:text-lg font-semibold uppercase ${categoryClasses} text-black px-10 mb-2 duration-300 group-hover:-rotate-[1deg]`}
                 >
                   {data.title}
                 </h2>
               )}
             {data.authors && (
               <div
-                className={`text-xs md:text-base xl:text-lg font-semibold uppercase  px-10 duration-300 group-hover:rotate-[1deg] ${categoryClasses}`}
+                className={`text-xs md:text-base xl:text-lg font-semibold uppercase  px-10 duration-300 group-hover:rotate-[1deg] ${categoryClasses} text-black`}
               >
                 {data.authors}
               </div>
@@ -74,15 +77,15 @@ export default function CategoryCard({ data, locale }: GenericCardProps) {
 
         <div className="z-20">
           <div className="mt-4 mb-3">
-            {categoryTitle && (categoryTitle!="artisti") && (
+            {categoryTitle && categoryTitle != "artisti" && (
               <span
-                className={`px-2 py-1 font-semibold uppercase mr-2 ${categoryClasses}`}
+                className={`px-2 py-1 font-semibold uppercase mr-2 ${categoryClasses} text-black`}
               >
                 {categoryTitle}
               </span>
             )}
           </div>
-          {data.location &&  (categoryTitle!="artisti") && (
+          {data.location && categoryTitle != "artisti" && (
             <div className="flex items-center gap-1 text-red-alt">
               <MapPinIcon
                 aria-hidden="true"
@@ -93,16 +96,19 @@ export default function CategoryCard({ data, locale }: GenericCardProps) {
               </div>
             </div>
           )}
-          { (categoryTitle!="artisti") && datesGrouped.map((str) => (
-            <div
-              className="items-center gap-x-2 flex text-red-alt"
-              key={str}
-            >
-              <CalendarIcon aria-hidden="true" className="h-4 w-4" />
-              <span className="text-xxs inline-block normal-case">{str}</span>
-            </div>
-          ))}
-          {categoryTitle=="artisti" && data.artisticResidence?.map((year: any, index: number)=> <div className="inline-flex">{index==0? `${year}` : `| ${year}`}&nbsp;</div>)}
+          {categoryTitle != "artisti" &&
+            datesGrouped.map((str) => (
+              <div className="items-center gap-x-2 flex text-red-alt" key={str}>
+                <CalendarIcon aria-hidden="true" className="h-4 w-4" />
+                <span className="text-xxs inline-block normal-case">{str}</span>
+              </div>
+            ))}
+          {categoryTitle == "artisti" &&
+            data.artisticResidence?.map((year: any, index: number) => (
+              <div className="inline-flex" key={index}>
+                {index == 0 ? `${year}` : `| ${year}`}&nbsp;
+              </div>
+            ))}
           <div className="mt-3 uppercase font-semibold text-xxs flex items-center">
             <div>{translate("goToContents", locale)}</div>
             <div className=" h-[20px] w-[20px] bg-arrow-right-black ml-3 group-hover:ml-5 motion-safe:duration-200" />

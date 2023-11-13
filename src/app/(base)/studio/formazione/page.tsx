@@ -1,12 +1,11 @@
 import { draftMode } from "next/headers";
 import { notFound } from "next/navigation";
-import { toNextMetadata } from "react-datocms";
 
 import fetchDato from "@/lib/fetchDato";
 import { SiteLocale } from "@/graphql/generated";
 import { EducationPageQueryDocument } from "@/graphql/generated";
 import PageTemplate from "@/components/templates/PageTemplate";
-import seoUtils from "@/lib/seoUtils";
+import getSeoMeta from "@/lib/seoUtils";
 
 const locale = "it";
 
@@ -17,12 +16,9 @@ export async function generateMetadata() {
     { locale: siteLocale },
     false
   );
-  const page = data.educationPage || null;
-  const seoData = seoUtils(page as any);
-  console.log("seoData", JSON.stringify(seoData, null, 2));
-  const tags = toNextMetadata(seoData?.tags || []);
-
-  return tags;
+  const page: any = data.educationPage || null;
+  const meta = getSeoMeta(page);
+  return meta;
 }
 
 export default async function Page() {

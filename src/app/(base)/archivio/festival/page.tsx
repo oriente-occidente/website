@@ -3,6 +3,7 @@ import { ProgramDocument, SiteLocale } from "@/graphql/generated";
 import queryDatoCMS from "@/lib/fetchDato";
 import NewsCard from "@/components/cards/NewsCard";
 import CategoryCard from "@/components/cards/CategoryCard";
+import { Fragment } from "react";
 
 const locale = "it";
 
@@ -23,8 +24,10 @@ export default async function Page() {
     <div className="container lg:grid lg:grid-cols-2 lg:gap-6">
       {festivalEvents &&
         festivalEvents.map((event: any) => (
-          <CategoryCard data={event} locale={locale} />
+          <Fragment key={event.id}>
+            <CategoryCard data={event} locale={locale} />
+          </Fragment>
         ))}
     </div>
   );
-};
+}
