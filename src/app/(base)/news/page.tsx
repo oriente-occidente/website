@@ -1,14 +1,13 @@
 import { draftMode } from "next/headers";
-
 import { NewsIndexDocument, AllNewsDocument } from "@/graphql/generated";
 import { SiteLocale } from "@/graphql/generated";
 import IndexPageTemplate from "@/components/templates/IndexPageTemplate";
 import getSeoMeta from "@/lib/seoUtils";
-
 import fetchDato from "@/lib/fetchDato";
 
+const locale = "it";
+
 export async function generateMetadata() {
-  const locale = "it";
   const siteLocale = locale as SiteLocale;
   const data = await fetchDato(
     NewsIndexDocument,
@@ -21,7 +20,6 @@ export async function generateMetadata() {
 }
 
 export default async function Page() {
-  const locale = "it";
   const { isEnabled } = draftMode();
   const siteLocale = locale as SiteLocale;
   const data = await fetchDato(

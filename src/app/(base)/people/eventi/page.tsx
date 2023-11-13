@@ -1,10 +1,24 @@
 import { draftMode } from "next/headers";
 import { EventsIndexDocument, ProgramDocument } from "@/graphql/generated";
 import { SiteLocale } from "@/graphql/generated";
-import fetchDato from "@/lib/fetchDato";
 import IndexPageTemplate from "@/components/templates/IndexPageTemplate";
+import getSeoMeta from "@/lib/seoUtils";
+import fetchDato from "@/lib/fetchDato";
 
 const locale = "it";
+
+export async function generateMetadata() {
+  const siteLocale = locale as SiteLocale;
+  const data = await fetchDato(
+    EventsIndexDocument,
+    { locale: siteLocale },
+    false
+  );
+  const page: any = data?.eventsIndex || null;
+  const meta = getSeoMeta(page);
+  return meta;
+}
+
 export default async function Page() {
   const siteLocale = locale as SiteLocale;
   const { isEnabled } = draftMode();
