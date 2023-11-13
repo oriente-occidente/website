@@ -3,19 +3,18 @@ import { LocaleValue, AltsProps, PageSeoProps } from "@/types";
 import resolveLink from "@/lib/resolveLink";
 import config from "@/data/config";
 
-export function getAlts({
-  titles,
-  slugs,
-  _modelApiKey,
-  section,
-}: Partial<PageSeoProps>) {
-  const alts = titles?.map((item: LocaleValue) => {
+export function getAlts(page: PageSeoProps) {
+  if (!page) return [];
+  console.log("PAGE", page);
+  const alts = page?.titles?.map((item: LocaleValue) => {
     const { value, locale } = item;
     const slug =
-      slugs && slugs.length > 0
-        ? slugs.find((s: LocaleValue) => s.locale === locale)?.value
+      page?.slugs && page?.slugs.length > 0
+        ? page?.slugs.find((s: LocaleValue) => s.locale === locale)?.value
         : "";
     const title = value;
+    const _modelApiKey = page?._modelApiKey || "";
+    const section = page?.section || "";
     return { slug, title: `${title}`, locale, _modelApiKey, section };
   });
   return alts;
@@ -29,8 +28,9 @@ export function getPageSeo(page: PageSeoProps) {
 }
 
 export default function getSeoMeta(page: PageSeoProps) {
+  if (!page) return null;
+  console.log("page", page);
   const seoData = getPageSeo(page);
-  // console.log("seoData", seoData);
   const host = process.env.NEXT_PUBLIC_HOST;
   const tags = toNextMetadata(seoData?.tags || []);
   const dl = config.defaultLocale;
