@@ -1,0 +1,107 @@
+query festivalEventsByDates($locale: SiteLocale, $start: Date, $end: Date) {
+  festivalEvents: allEvents(
+    locale: $locale
+    filter: {
+      slug: { neq: null }
+      isFestival: { eq: true }
+      startDate: { gte: $start, lt: $end }
+    }
+    orderBy: startDate_DESC
+    first: 100
+  ) {
+    id
+    slug
+    _modelApiKey
+    title
+    titleHero
+    imageHero {
+      id
+      responsiveImage(
+        sizes: "(max-width: 1024px) 80vw, (min-width: 1025px) 45vw, 600px"
+        imgixParams: { auto: [format, compress], ar: "5:4", fit: crop }
+      ) {
+        ...imgFrag
+      }
+    }
+    isFestival
+    startDate
+    authors
+    location
+    dates {
+      id
+      startTime
+      isDaily
+      endTime
+    }
+  }
+  workshops: allWorkshops(
+    locale: $locale
+    filter: {
+      slug: { neq: null }
+      isWorkshop: { eq: true }
+      startDate: { gte: $start, lt: $end }
+    }
+    orderBy: startDate_DESC
+    first: 100
+  ) {
+    id
+    slug
+    _modelApiKey
+    title
+    titleHero
+    imageHero {
+      id
+      responsiveImage(
+        sizes: "(max-width: 1024px) 80vw, (min-width: 1025px) 45vw, 600px"
+        imgixParams: { auto: [format, compress], ar: "5:4", fit: crop }
+      ) {
+        ...imgFrag
+      }
+    }
+    isWorkshop
+    startDate
+    authors
+    location
+    dates {
+      id
+      startTime
+      isDaily
+      endTime
+    }
+  }
+  languages: allWorkshops(
+    locale: $locale
+    filter: {
+      slug: { neq: null }
+      isWorkshop: { eq: false }
+      startDate: { gte: $start, lt: $end }
+    }
+    orderBy: startDate_DESC
+    first: 100
+  ) {
+    id
+    slug
+    _modelApiKey
+    title
+    titleHero
+    imageHero {
+      id
+      responsiveImage(
+        sizes: "(max-width: 1024px) 80vw, (min-width: 1025px) 45vw, 600px"
+        imgixParams: { auto: [format, compress], ar: "5:4", fit: crop }
+      ) {
+        ...imgFrag
+      }
+    }
+    isWorkshop
+    startDate
+    authors
+    location
+    dates {
+      id
+      startTime
+      isDaily
+      endTime
+    }
+  }
+}

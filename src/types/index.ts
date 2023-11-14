@@ -50,6 +50,16 @@ export type GenericPageProps = {
   locale: string;
 };
 
+export type FestivalProgramPageProps = {
+  data: {
+    page: any;
+    hero: any;
+    seo: any;
+    list: any[];
+  };
+  locale: string;
+};
+
 export type GenericIndexPageProps = {
   data: {
     list: any[];

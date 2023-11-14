@@ -1,9 +1,13 @@
 import { draftMode } from "next/headers";
-import { FestivalEditionBySlugDocument, SiteLocale } from "@/graphql/generated";
+import {
+  FestivalEditionBySlugDocument,
+  FestivalEventsByDatesDocument,
+  SiteLocale,
+} from "@/graphql/generated";
 import type { BasicSlugPageProps } from "@/types";
-import FestivalTemplate from "@/components/templates/FestivalTemplate";
 import getSeoMeta from "@/lib/seoUtils";
 import fetchDato from "@/lib/fetchDato";
+import FestivalTemplate from "@/components/templates/FestivalTemplate";
 
 const locale = "it";
 
@@ -30,15 +34,27 @@ export default async function Page({ params }: BasicSlugPageProps) {
     isEnabled
   );
   const page: any = data?.festivalEdition;
+
+  const items = await fetchDato(
+    FestivalEventsByDatesDocument,
+    {
+      locale: siteLocale,
+      start: page.startDate,
+      end: page.endDate,
+    },
+    isEnabled
+  );
   const heroData: any = {
-    layoutHero: "",
-    titleHero: page?.titleHero,
-    descriptionHero: page?.descriptionHero,
+    layoutHero: "index",
+    titleHero: page?.theme,
+    descriptionHero: page?.title,
     imageHero: page?.imageHero,
+    slideshowHero: "",
   };
   const pageData: any = {
     hero: heroData,
     page,
+    list: items,
   };
   return <FestivalTemplate data={pageData} locale={locale} />;
 }

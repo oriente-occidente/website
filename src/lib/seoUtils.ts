@@ -5,7 +5,6 @@ import config from "@/data/config";
 
 export function getAlts(page: PageSeoProps) {
   if (!page) return [];
-  console.log("PAGE", page);
   const alts = page?.titles?.map((item: LocaleValue) => {
     const { value, locale } = item;
     const slug =
@@ -29,7 +28,6 @@ export function getPageSeo(page: PageSeoProps) {
 
 export default function getSeoMeta(page: PageSeoProps) {
   if (!page) return null;
-  console.log("page", page);
   const seoData = getPageSeo(page);
   const host = process.env.NEXT_PUBLIC_HOST;
   const tags = toNextMetadata(seoData?.tags || []);

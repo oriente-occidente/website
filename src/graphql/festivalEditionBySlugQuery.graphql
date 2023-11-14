@@ -30,18 +30,15 @@ query festivalEditionBySlug($slug: String!, $locale: SiteLocale) {
     }
     poster {
       image {
-        url
         responsiveImage {
-          src
+          ...imgFrag
         }
       }
     }
-    titleHero: theme
-    descriptionHero: title
+    theme
     imageHero {
-      url
       responsiveImage {
-        src
+        ...imgFrag
       }
     }
   }
