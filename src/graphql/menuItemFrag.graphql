@@ -27,6 +27,11 @@ fragment menuItemFrag on MenuItemRecord {
       title
       _modelApiKey
     }
+    ... on ArtisticResidenciesIndexRecord {
+      id
+      title
+      _modelApiKey
+    }
     ... on EventsIndexRecord {
       id
       title
