@@ -49,45 +49,6 @@ export function removeSpaces(str: string) {
   return str.toLowerCase().replaceAll(" ", "");
 }
 
-export function categoryColorClasses(cat: string) {
-  console.log("cat", cat);
-
-  let c = removeSpaces(cat);
-  console.log("c", c);
-  switch (c) {
-    case "news":
-      return "card-title-news";
-    case "eventi":
-      return "card-title-feeventistival";
-    case "linguaggi":
-      return "card-title-linguaggi";
-    case "workshop":
-      return "card-title-workshop";
-    case "artisti":
-      return "card-title-artisti";
-    case "compagnie":
-      return "card-title-compagnie";
-    case "residenze":
-      return "card-title-residenze";
-    case "progetto":
-      return "card-title-progetto";
-    case "pubblicazioni":
-      return "card-title-pubblicazioni";
-    case "reti":
-      return "card-title-reti";
-    case "partner":
-      return "card-title-partner";
-    case "festival":
-      return "card-title-festival";
-    case "festival-spettacoli":
-      return "card-title-festival";
-    case "festival-linguaggi":
-      return "card-title-festival";
-    default:
-      return "card-title-default";
-  }
-}
-
 export function resolveLinkById(id: string, locale = "it", group = null) {
   return locale === config.defaultLocale ? "/" : `/${locale}/`;
 }

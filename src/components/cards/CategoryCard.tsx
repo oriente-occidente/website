@@ -2,7 +2,7 @@
 import { Image as DatoImage } from "react-datocms";
 import Link from "next/link";
 import { MapPinIcon, CalendarIcon } from "@heroicons/react/24/outline";
-import { groupDatesByDay, categoryColorClasses } from "@/lib/utils";
+import { groupDatesByDay, removeSpaces } from "@/lib/utils";
 import { GenericCardProps } from "@/types";
 import resolveLink from "@/lib/resolveLink";
 import translate from "@/lib/locales";
@@ -22,7 +22,41 @@ export default function CategoryCard({ data, locale }: GenericCardProps) {
       categoryTitle = catToShow.title;
     }
   }
-
+  function categoryColorClasses(cat: string) {
+    let c = removeSpaces(cat);
+    switch (c) {
+      case "news":
+        return "card-title-news";
+      case "eventi":
+        return "card-title-feeventistival";
+      case "linguaggi":
+        return "card-title-linguaggi";
+      case "workshop":
+        return "card-title-workshop";
+      case "artisti":
+        return "card-title-artisti";
+      case "compagnie":
+        return "card-title-compagnie";
+      case "residenze":
+        return "card-title-residenze";
+      case "progetto":
+        return "card-title-progetto";
+      case "pubblicazioni":
+        return "card-title-pubblicazioni";
+      case "reti":
+        return "card-title-reti";
+      case "partner":
+        return "card-title-partner";
+      case "festival":
+        return "card-title-festival";
+      case "festival-spettacoli":
+        return "card-title-festival";
+      case "festival-linguaggi":
+        return "card-title-festival";
+      default:
+        return "card-title-default";
+    }
+  }
   const categoryClasses = categoryColorClasses(categoryTitle);
 
   const link = resolveLink({ ...data, locale });
