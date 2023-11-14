@@ -1779,6 +1779,9 @@ export type ArtistsIndexRecord = RecordInterface & {
   __typename?: 'ArtistsIndexRecord';
   _allContentLocales?: Maybe<Array<ArtistsIndexModelContentFieldMultiLocaleField>>;
   _allDescriptionHeroLocales?: Maybe<Array<StringMultiLocaleField>>;
+  _allReferencingHomes: Array<HomeRecord>;
+  /** Returns meta information regarding a record collection */
+  _allReferencingHomesMeta: CollectionMetadata;
   _allSectionsLocales?: Maybe<Array<AnchorBlockRecordListListNonNullMultiLocaleField>>;
   _allSeoLocales?: Maybe<Array<SeoFieldMultiLocaleField>>;
   _allTitleHeroLocales?: Maybe<Array<StringNonNullMultiLocaleField>>;
@@ -1823,6 +1826,26 @@ export type ArtistsIndexRecord_AllContentLocalesArgs = {
 export type ArtistsIndexRecord_AllDescriptionHeroLocalesArgs = {
   fallbackLocales?: InputMaybe<Array<SiteLocale>>;
   locale?: InputMaybe<SiteLocale>;
+};
+
+
+/** Record of type Indice Artisti (artists_index) */
+export type ArtistsIndexRecord_AllReferencingHomesArgs = {
+  fallbackLocales?: InputMaybe<Array<SiteLocale>>;
+  filter?: InputMaybe<HomeModelFilter>;
+  first?: InputMaybe<Scalars['IntType']['input']>;
+  locale?: InputMaybe<SiteLocale>;
+  orderBy?: InputMaybe<Array<InputMaybe<HomeModelOrderBy>>>;
+  skip?: InputMaybe<Scalars['IntType']['input']>;
+  through?: InputMaybe<InverseRelationshipFilterBetweenHomeAndArtistsIndex>;
+};
+
+
+/** Record of type Indice Artisti (artists_index) */
+export type ArtistsIndexRecord_AllReferencingHomesMetaArgs = {
+  filter?: InputMaybe<HomeModelFilter>;
+  locale?: InputMaybe<SiteLocale>;
+  through?: InputMaybe<InverseRelationshipFilterBetweenHomeAndArtistsIndex>;
 };
 
 
@@ -2010,6 +2033,12 @@ export type ColorField = {
   green: Scalars['IntType']['output'];
   hex: Scalars['String']['output'];
   red: Scalars['IntType']['output'];
+};
+
+/** Specifies how to filter Color fields */
+export type ColorFilter = {
+  /** Filter records with the specified field defined (i.e. with any value) or not */
+  exists?: InputMaybe<Scalars['BooleanType']['input']>;
 };
 
 /** Linking fields */
@@ -4683,6 +4712,12 @@ export enum HomeModelFieldsReferencingArtistModel {
 }
 
 /** Linking fields */
+export enum HomeModelFieldsReferencingArtistsIndexModel {
+  HomeHomeSections = 'home_homeSections',
+  HomeHomeSectionsHomeSectionSectionLink = 'home_homeSections__homeSection_sectionLink'
+}
+
+/** Linking fields */
 export enum HomeModelFieldsReferencingEventModel {
   HomeHomeSections = 'home_homeSections',
   HomeHomeSectionsHomeSectionSectionLink = 'home_homeSections__homeSection_sectionLink',
@@ -4871,7 +4906,7 @@ export type HomeRecordTitleHeroArgs = {
   locale?: InputMaybe<SiteLocale>;
 };
 
-export type HomeSectionModelSectionLinkField = ArtistRecord | EventRecord | NetworkRecord | NewsRecord | PageRecord | ProjectRecord | WorkshopRecord;
+export type HomeSectionModelSectionLinkField = ArtistRecord | ArtisticResidenciesIndexRecord | ArtistsIndexRecord | EventRecord | EventsIndexRecord | NetworkRecord | NetworksIndexRecord | NewsIndexRecord | NewsRecord | PageRecord | ProjectRecord | ProjectsIndexRecord | WorkshopRecord;
 
 export type HomeSectionModelSlidesField = ArtistRecord | EventRecord | NewsRecord | PageRecord | ProjectRecord | WorkshopRecord;
 
@@ -6946,6 +6981,14 @@ export type InverseRelationshipFieldFilterBetweenHomeAndArtist = {
 };
 
 /** Specifies how to filter by linking fields */
+export type InverseRelationshipFieldFilterBetweenHomeAndArtistsIndex = {
+  /** Filter linking records that reference current record in at least one of the specified fields */
+  anyIn?: InputMaybe<Array<HomeModelFieldsReferencingArtistsIndexModel>>;
+  /** Filter linking records that do not reference current record in any of the specified fields */
+  notIn?: InputMaybe<Array<HomeModelFieldsReferencingArtistsIndexModel>>;
+};
+
+/** Specifies how to filter by linking fields */
 export type InverseRelationshipFieldFilterBetweenHomeAndEvent = {
   /** Filter linking records that reference current record in at least one of the specified fields */
   anyIn?: InputMaybe<Array<HomeModelFieldsReferencingEventModel>>;
@@ -8285,6 +8328,14 @@ export type InverseRelationshipFilterBetweenFestivalEditionAndYear = {
 export type InverseRelationshipFilterBetweenHomeAndArtist = {
   /** Specifies how to filter by linking fields */
   fields?: InputMaybe<InverseRelationshipFieldFilterBetweenHomeAndArtist>;
+  /** Specifies how to filter by linking locales */
+  locales?: InputMaybe<LinkingLocalesFilter>;
+};
+
+/** Specifies how to filter linking records */
+export type InverseRelationshipFilterBetweenHomeAndArtistsIndex = {
+  /** Specifies how to filter by linking fields */
+  fields?: InputMaybe<InverseRelationshipFieldFilterBetweenHomeAndArtistsIndex>;
   /** Specifies how to filter by linking locales */
   locales?: InputMaybe<LinkingLocalesFilter>;
 };
@@ -11269,7 +11320,7 @@ export type MenuItemModelFilter = {
   updatedAt?: InputMaybe<UpdatedAtFilter>;
 };
 
-export type MenuItemModelLinkField = FestivalEditionRecord | HomeRecord | PageRecord;
+export type MenuItemModelLinkField = EventsIndexRecord | FestivalEditionRecord | HomeRecord | PageRecord;
 
 export enum MenuItemModelOrderBy {
   _CreatedAtAsc = '_createdAt_ASC',
@@ -17409,6 +17460,7 @@ export type WorkshopCategoryModelFilter = {
   _status?: InputMaybe<StatusFilter>;
   _unpublishingScheduledAt?: InputMaybe<PublishedAtFilter>;
   _updatedAt?: InputMaybe<UpdatedAtFilter>;
+  color?: InputMaybe<ColorFilter>;
   createdAt?: InputMaybe<CreatedAtFilter>;
   description?: InputMaybe<StringFilter>;
   hoverImage?: InputMaybe<FileFilter>;
@@ -17471,6 +17523,7 @@ export type WorkshopCategoryRecord = RecordInterface & {
   _status: ItemStatus;
   _unpublishingScheduledAt?: Maybe<Scalars['DateTime']['output']>;
   _updatedAt: Scalars['DateTime']['output'];
+  color?: Maybe<ColorField>;
   createdAt: Scalars['DateTime']['output'];
   description?: Maybe<Scalars['String']['output']>;
   hoverImage: ImageFileField;
@@ -18964,7 +19017,7 @@ export type HomeQueryVariables = Exact<{
 }>;
 
 
-export type HomeQuery = { __typename?: 'Query', home?: { __typename?: 'HomeRecord', _modelApiKey: string, titleHero: string, seo: Array<{ __typename?: 'Tag', attributes?: Record<string, string> | null, content?: string | null, tag: string }>, homeSlideshow: Array<{ __typename: 'SlideRecord', id: string, title?: string | null, image: { __typename?: 'FileField', id: string, responsiveImage?: { __typename?: 'ResponsiveImage', aspectRatio: number, base64?: string | null, height: number, sizes: string, src: string, srcSet: string, webpSrcSet: string, width: number, alt?: string | null, title?: string | null } | null } }>, homeSections: Array<{ __typename?: 'HomeSectionRecord', id: string, layout: string, title: string, sectionLinkLabel: string, sectionLink: { __typename: 'ArtistRecord', id: string, slug: string, title: string, _modelApiKey: string } | { __typename: 'EventRecord', id: string, slug: string, title: string, _modelApiKey: string } | { __typename: 'NetworkRecord', id: string, slug: string, title: string, _modelApiKey: string } | { __typename: 'NewsRecord', id: string, slug: string, title: string, _modelApiKey: string } | { __typename: 'PageRecord', id: string, slug: string, title: string, _modelApiKey: string, section?: string | null } | { __typename: 'ProjectRecord', id: string, slug: string, title: string, _modelApiKey: string } | { __typename: 'WorkshopRecord', id: string, slug: string, title: string, _modelApiKey: string }, slides: Array<{ __typename: 'ArtistRecord', _firstPublishedAt?: string | null, id: string, slug: string, _modelApiKey: string, title: string, titleHero: string, imageHero?: { __typename?: 'FileField', id: string, responsiveImage?: { __typename?: 'ResponsiveImage', aspectRatio: number, base64?: string | null, height: number, sizes: string, src: string, srcSet: string, webpSrcSet: string, width: number, alt?: string | null, title?: string | null } | null } | null } | { __typename: 'EventRecord', id: string, slug: string, _modelApiKey: string, title: string, titleHero: string, layoutHero: string, descriptionHero?: string | null, authors?: string | null, location?: string | null, startDate: string, dates: Array<{ __typename?: 'EventDateRecord', startTime?: string | null, isDaily?: boolean | null, endTime?: string | null }>, imageHero?: { __typename?: 'FileField', id: string, responsiveImage?: { __typename?: 'ResponsiveImage', aspectRatio: number, base64?: string | null, height: number, sizes: string, src: string, srcSet: string, webpSrcSet: string, width: number, alt?: string | null, title?: string | null } | null } | null, slideshowHero: Array<{ __typename?: 'FileField', id: string, title?: string | null, responsiveImage?: { __typename?: 'ResponsiveImage', aspectRatio: number, base64?: string | null, height: number, sizes: string, src: string, srcSet: string, webpSrcSet: string, width: number, alt?: string | null, title?: string | null } | null }> } | { __typename: 'NewsRecord', id: string, slug: string, _modelApiKey: string, title: string, titleHero: string, _createdAt: string, startDate: string, imageHero?: { __typename?: 'FileField', id: string, responsiveImage?: { __typename?: 'ResponsiveImage', aspectRatio: number, base64?: string | null, height: number, sizes: string, src: string, srcSet: string, webpSrcSet: string, width: number, alt?: string | null, title?: string | null } | null } | null } | { __typename: 'PageRecord', id: string, slug: string, _modelApiKey: string, section?: string | null, title: string, titleHero: string, imageHero?: { __typename?: 'FileField', id: string, responsiveImage?: { __typename?: 'ResponsiveImage', aspectRatio: number, base64?: string | null, height: number, sizes: string, src: string, srcSet: string, webpSrcSet: string, width: number, alt?: string | null, title?: string | null } | null } | null } | { __typename: 'ProjectRecord', id: string, slug: string, _modelApiKey: string, title: string, titleHero: string, authors?: string | null, location?: string | null, startDate: string, dates: Array<{ __typename?: 'EventDateRecord', startTime?: string | null, isDaily?: boolean | null, endTime?: string | null }>, imageHero?: { __typename?: 'FileField', id: string, responsiveImage?: { __typename?: 'ResponsiveImage', aspectRatio: number, base64?: string | null, height: number, sizes: string, src: string, srcSet: string, webpSrcSet: string, width: number, alt?: string | null, title?: string | null } | null } | null } | { __typename: 'WorkshopRecord', id: string, slug: string, _modelApiKey: string, title: string, titleHero: string, authors?: string | null, location?: string | null, startDate: string, dates: Array<{ __typename?: 'EventDateRecord', startTime?: string | null, isDaily?: boolean | null, endTime?: string | null }>, imageHero?: { __typename?: 'FileField', id: string, responsiveImage?: { __typename?: 'ResponsiveImage', aspectRatio: number, base64?: string | null, height: number, sizes: string, src: string, srcSet: string, webpSrcSet: string, width: number, alt?: string | null, title?: string | null } | null } | null }> }> } | null };
+export type HomeQuery = { __typename?: 'Query', home?: { __typename?: 'HomeRecord', _modelApiKey: string, titleHero: string, seo: Array<{ __typename?: 'Tag', attributes?: Record<string, string> | null, content?: string | null, tag: string }>, homeSlideshow: Array<{ __typename: 'SlideRecord', id: string, title?: string | null, image: { __typename?: 'FileField', id: string, responsiveImage?: { __typename?: 'ResponsiveImage', aspectRatio: number, base64?: string | null, height: number, sizes: string, src: string, srcSet: string, webpSrcSet: string, width: number, alt?: string | null, title?: string | null } | null } }>, homeSections: Array<{ __typename?: 'HomeSectionRecord', id: string, layout: string, title: string, sectionLinkLabel: string, sectionLink: { __typename: 'ArtistRecord', id: string, slug: string, title: string, _modelApiKey: string } | { __typename: 'ArtisticResidenciesIndexRecord' } | { __typename: 'ArtistsIndexRecord' } | { __typename: 'EventRecord', id: string, slug: string, title: string, _modelApiKey: string } | { __typename: 'EventsIndexRecord' } | { __typename: 'NetworkRecord', id: string, slug: string, title: string, _modelApiKey: string } | { __typename: 'NetworksIndexRecord' } | { __typename: 'NewsIndexRecord' } | { __typename: 'NewsRecord', id: string, slug: string, title: string, _modelApiKey: string } | { __typename: 'PageRecord', id: string, slug: string, title: string, _modelApiKey: string, section?: string | null } | { __typename: 'ProjectRecord', id: string, slug: string, title: string, _modelApiKey: string } | { __typename: 'ProjectsIndexRecord' } | { __typename: 'WorkshopRecord', id: string, slug: string, title: string, _modelApiKey: string }, slides: Array<{ __typename: 'ArtistRecord', _firstPublishedAt?: string | null, id: string, slug: string, _modelApiKey: string, title: string, titleHero: string, imageHero?: { __typename?: 'FileField', id: string, responsiveImage?: { __typename?: 'ResponsiveImage', aspectRatio: number, base64?: string | null, height: number, sizes: string, src: string, srcSet: string, webpSrcSet: string, width: number, alt?: string | null, title?: string | null } | null } | null } | { __typename: 'EventRecord', id: string, slug: string, _modelApiKey: string, title: string, titleHero: string, layoutHero: string, descriptionHero?: string | null, authors?: string | null, location?: string | null, startDate: string, dates: Array<{ __typename?: 'EventDateRecord', startTime?: string | null, isDaily?: boolean | null, endTime?: string | null }>, imageHero?: { __typename?: 'FileField', id: string, responsiveImage?: { __typename?: 'ResponsiveImage', aspectRatio: number, base64?: string | null, height: number, sizes: string, src: string, srcSet: string, webpSrcSet: string, width: number, alt?: string | null, title?: string | null } | null } | null, slideshowHero: Array<{ __typename?: 'FileField', id: string, title?: string | null, responsiveImage?: { __typename?: 'ResponsiveImage', aspectRatio: number, base64?: string | null, height: number, sizes: string, src: string, srcSet: string, webpSrcSet: string, width: number, alt?: string | null, title?: string | null } | null }> } | { __typename: 'NewsRecord', id: string, slug: string, _modelApiKey: string, title: string, titleHero: string, _createdAt: string, startDate: string, imageHero?: { __typename?: 'FileField', id: string, responsiveImage?: { __typename?: 'ResponsiveImage', aspectRatio: number, base64?: string | null, height: number, sizes: string, src: string, srcSet: string, webpSrcSet: string, width: number, alt?: string | null, title?: string | null } | null } | null } | { __typename: 'PageRecord', id: string, slug: string, _modelApiKey: string, section?: string | null, title: string, titleHero: string, imageHero?: { __typename?: 'FileField', id: string, responsiveImage?: { __typename?: 'ResponsiveImage', aspectRatio: number, base64?: string | null, height: number, sizes: string, src: string, srcSet: string, webpSrcSet: string, width: number, alt?: string | null, title?: string | null } | null } | null } | { __typename: 'ProjectRecord', id: string, slug: string, _modelApiKey: string, title: string, titleHero: string, authors?: string | null, location?: string | null, startDate: string, dates: Array<{ __typename?: 'EventDateRecord', startTime?: string | null, isDaily?: boolean | null, endTime?: string | null }>, imageHero?: { __typename?: 'FileField', id: string, responsiveImage?: { __typename?: 'ResponsiveImage', aspectRatio: number, base64?: string | null, height: number, sizes: string, src: string, srcSet: string, webpSrcSet: string, width: number, alt?: string | null, title?: string | null } | null } | null } | { __typename: 'WorkshopRecord', id: string, slug: string, _modelApiKey: string, title: string, titleHero: string, authors?: string | null, location?: string | null, startDate: string, dates: Array<{ __typename?: 'EventDateRecord', startTime?: string | null, isDaily?: boolean | null, endTime?: string | null }>, imageHero?: { __typename?: 'FileField', id: string, responsiveImage?: { __typename?: 'ResponsiveImage', aspectRatio: number, base64?: string | null, height: number, sizes: string, src: string, srcSet: string, webpSrcSet: string, width: number, alt?: string | null, title?: string | null } | null } | null }> }> } | null };
 
 export type ImageBlockFragFragment = { __typename?: 'ImageBlockRecord', id: string, image?: { __typename?: 'FileField', responsiveImage?: { __typename?: 'ResponsiveImage', aspectRatio: number, base64?: string | null, height: number, sizes: string, src: string, srcSet: string, webpSrcSet: string, width: number, alt?: string | null, title?: string | null } | null } | null };
 
@@ -18985,9 +19038,9 @@ export type LayoutQueryVariables = Exact<{
 }>;
 
 
-export type LayoutQuery = { __typename?: 'Query', _site: { __typename?: 'Site', faviconMetaTags: Array<{ __typename?: 'Tag', tag: string, content?: string | null, attributes?: Record<string, string> | null }>, globalSeo?: { __typename?: 'GlobalSeoField', siteName?: string | null, titleSuffix?: string | null, twitterAccount?: string | null, facebookPageUrl?: string | null, fallbackSeo?: { __typename?: 'SeoField', title?: string | null, twitterCard?: string | null, description?: string | null, image?: { __typename?: 'FileField', url: string, width?: number | null, height?: number | null } | null } | null } | null }, menu: Array<{ __typename?: 'MenuItemRecord', id: string, title: string, slug?: string | null, _modelApiKey: string, children?: Array<{ __typename?: 'MenuItemRecord', id: string, title: string, slug?: string | null, _modelApiKey: string, children?: Array<{ __typename?: 'MenuItemRecord', id: string, title: string, slug?: string | null, _modelApiKey: string, link?: { __typename: 'FestivalEditionRecord', id: string, title: string, _modelApiKey: string, slug: string } | { __typename: 'HomeRecord', id: string, _modelApiKey: string } | { __typename: 'PageRecord', id: string, title: string, _modelApiKey: string, slug: string, section?: string | null } | null } | null> | null, link?: { __typename: 'FestivalEditionRecord', id: string, title: string, _modelApiKey: string, slug: string } | { __typename: 'HomeRecord', id: string, _modelApiKey: string } | { __typename: 'PageRecord', id: string, title: string, _modelApiKey: string, slug: string, section?: string | null } | null } | null> | null, link?: { __typename: 'FestivalEditionRecord', id: string, title: string, _modelApiKey: string, slug: string } | { __typename: 'HomeRecord', id: string, _modelApiKey: string } | { __typename: 'PageRecord', id: string, title: string, _modelApiKey: string, slug: string, section?: string | null } | null }>, footer?: { __typename?: 'FooterRecord', info?: string | null, newsletterSubscriptionMessage?: string | null, newsletterListUrl?: string | null, logo?: { __typename?: 'FileField', responsiveImage?: { __typename?: 'ResponsiveImage', aspectRatio: number, base64?: string | null, height: number, sizes: string, src: string, srcSet: string, webpSrcSet: string, width: number, alt?: string | null, title?: string | null } | null } | null, socials: Array<{ __typename?: 'SocialLinkRecord', id: string, link: string, title: string, image: { __typename?: 'FileField', url: string } }>, sections: Array<{ __typename?: 'FooterSectionRecord', id: string, title?: string | null, links: Array<{ __typename?: 'PageRecord', id: string, slug: string, _modelApiKey: string, title: string, section?: string | null }> }>, links: Array<{ __typename?: 'PageRecord', id: string, slug: string, _modelApiKey: string, title: string, section?: string | null }> } | null };
+export type LayoutQuery = { __typename?: 'Query', _site: { __typename?: 'Site', faviconMetaTags: Array<{ __typename?: 'Tag', tag: string, content?: string | null, attributes?: Record<string, string> | null }>, globalSeo?: { __typename?: 'GlobalSeoField', siteName?: string | null, titleSuffix?: string | null, twitterAccount?: string | null, facebookPageUrl?: string | null, fallbackSeo?: { __typename?: 'SeoField', title?: string | null, twitterCard?: string | null, description?: string | null, image?: { __typename?: 'FileField', url: string, width?: number | null, height?: number | null } | null } | null } | null }, menu: Array<{ __typename?: 'MenuItemRecord', id: string, title: string, slug?: string | null, _modelApiKey: string, children?: Array<{ __typename?: 'MenuItemRecord', id: string, title: string, slug?: string | null, _modelApiKey: string, children?: Array<{ __typename?: 'MenuItemRecord', id: string, title: string, slug?: string | null, _modelApiKey: string, link?: { __typename: 'EventsIndexRecord' } | { __typename: 'FestivalEditionRecord', id: string, title: string, _modelApiKey: string, slug: string } | { __typename: 'HomeRecord', id: string, _modelApiKey: string } | { __typename: 'PageRecord', id: string, title: string, _modelApiKey: string, slug: string, section?: string | null } | null } | null> | null, link?: { __typename: 'EventsIndexRecord' } | { __typename: 'FestivalEditionRecord', id: string, title: string, _modelApiKey: string, slug: string } | { __typename: 'HomeRecord', id: string, _modelApiKey: string } | { __typename: 'PageRecord', id: string, title: string, _modelApiKey: string, slug: string, section?: string | null } | null } | null> | null, link?: { __typename: 'EventsIndexRecord' } | { __typename: 'FestivalEditionRecord', id: string, title: string, _modelApiKey: string, slug: string } | { __typename: 'HomeRecord', id: string, _modelApiKey: string } | { __typename: 'PageRecord', id: string, title: string, _modelApiKey: string, slug: string, section?: string | null } | null }>, footer?: { __typename?: 'FooterRecord', info?: string | null, newsletterSubscriptionMessage?: string | null, newsletterListUrl?: string | null, logo?: { __typename?: 'FileField', responsiveImage?: { __typename?: 'ResponsiveImage', aspectRatio: number, base64?: string | null, height: number, sizes: string, src: string, srcSet: string, webpSrcSet: string, width: number, alt?: string | null, title?: string | null } | null } | null, socials: Array<{ __typename?: 'SocialLinkRecord', id: string, link: string, title: string, image: { __typename?: 'FileField', url: string } }>, sections: Array<{ __typename?: 'FooterSectionRecord', id: string, title?: string | null, links: Array<{ __typename?: 'PageRecord', id: string, slug: string, _modelApiKey: string, title: string, section?: string | null }> }>, links: Array<{ __typename?: 'PageRecord', id: string, slug: string, _modelApiKey: string, title: string, section?: string | null }> } | null };
 
-export type MenuItemFragFragment = { __typename?: 'MenuItemRecord', id: string, title: string, slug?: string | null, _modelApiKey: string, link?: { __typename: 'FestivalEditionRecord', id: string, title: string, _modelApiKey: string, slug: string } | { __typename: 'HomeRecord', id: string, _modelApiKey: string } | { __typename: 'PageRecord', id: string, title: string, _modelApiKey: string, slug: string, section?: string | null } | null };
+export type MenuItemFragFragment = { __typename?: 'MenuItemRecord', id: string, title: string, slug?: string | null, _modelApiKey: string, link?: { __typename: 'EventsIndexRecord' } | { __typename: 'FestivalEditionRecord', id: string, title: string, _modelApiKey: string, slug: string } | { __typename: 'HomeRecord', id: string, _modelApiKey: string } | { __typename: 'PageRecord', id: string, title: string, _modelApiKey: string, slug: string, section?: string | null } | null };
 
 export type NetworkQueryVariables = Exact<{
   slug: Scalars['String']['input'];

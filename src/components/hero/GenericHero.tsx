@@ -9,7 +9,7 @@ export default function GenericHero({ data, locale }: GenericProps) {
   let hero = null;
   const layout = data.layoutHero || null;
   switch (layout) {
-    case "index":
+    case "index" :
       hero = <HeroIndex data={data} locale={locale} />;
       break;
     case "detail":

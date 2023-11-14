@@ -8,6 +8,8 @@ import resolveLink from "@/lib/resolveLink";
 function StandardCard({ data, locale, categoryTitle = "" }) {
   const image = data.imageHero;
   const datesGrouped = data.dates ? groupDatesByDay(data.dates, locale) : [];
+  const dateObject = new Date(data.startDate);
+  const year = dateObject.getFullYear();
 
   return (
     <div className="relative py-4">
@@ -25,6 +27,7 @@ function StandardCard({ data, locale, categoryTitle = "" }) {
                 <span className="font-light capitalize md:pr-1">{str}</span>
               </div>
             ))}
+            {data._modelApiKey=="project"? <div className="font-light">{year}</div> : ""}
             {data.location && (
               <div className="hidden items-center gap-x-2 md:flex">
                 <MapPinIcon aria-hidden="true" className="h-4 w-4" />
@@ -50,7 +53,7 @@ function StandardCard({ data, locale, categoryTitle = "" }) {
         </div>
        
         <div className="z-20 pt-2">
-          <h2 className="text-sm uppercase text-black-light md:text-base">
+          <h2 className={`${data._modelApiKey=="project"? "font-semibold" : ""} text-sm uppercase text-black-light md:text-base`}>
             {data.title}
           </h2>
           {data.authors && (

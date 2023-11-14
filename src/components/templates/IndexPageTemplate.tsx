@@ -9,12 +9,27 @@ export default function IndexPageTemplate({
 }: GenericIndexPageProps) {
   const { list, hero, page } = data;
 
+  const latestYear = list?.reduce((latest, item) => {
+      const itemYear = new Date(item.startDate).getFullYear();
+      return itemYear > latest ? itemYear : latest;
+    }, 0);
+
+  const filteredList = list?.filter((item: any) => {
+      const itemYear = new Date(item.startDate).getFullYear();
+      return itemYear === latestYear;
+    });
+
+  const allHaveEventModelApiKey = list.every(obj => obj._modelApiKey === 'event');
+  const dataList = allHaveEventModelApiKey? filteredList : list
+
+  console.log("LIST", list)
+
   return (
     <div>
       <GenericHero data={hero} locale={locale} />
       <div className="border-color-gray border-t py-6">
         <div className="container lg:grid lg:grid-cols-2 lg:gap-6">
-          {list?.map((item: any) => (
+          {dataList?.map((item: any) => (
             <Fragment key={"wrap_" + item.id}>
               <GenericCard locale={locale} data={item} />
             </Fragment>

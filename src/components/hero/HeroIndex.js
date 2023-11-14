@@ -34,7 +34,7 @@ function HeroIndex({ data, locale }) {
       <header className="relative overflow-hidden md:grid md:grid-cols-4 md:gap-4 xl:container xl:mx-auto">
         {/* <h1 className="title--big z-20 py-4 px-4 xl:pl-6">{titleHero}</h1> */}
 
-        <h1 className="title--big z-20 py-4 px-5 xl:pl-6 leading-snug ">
+        <h1 className="title--big z-20 py-4 px-5 xl:pl-6 leading-snug">
           <span className="md:box-decoration-clone md:bg-white md:shadow-title md:md:shadow-title-lg md:2xl:shadow-title-xl">
             {titleHero}
           </span>
