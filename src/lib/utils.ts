@@ -39,51 +39,54 @@ export function getCategoriesList(list: any[]) {
   }, {});
 }
 
-// export function categoryColorClass(cat: string) {
-//   let c = cat.toLowerCase();
-//   switch (c) {
-//     case "news":
-//       return "bg-cat-news text-black";
-//     case "eventi":
-//       return "bg-cat-eventi text-black";
-//     case "linguaggi":
-//       return "bg-cat-linguaggi text-black";
-//     case "workshop":
-//       return "bg-cat-workshop text-black";
-//     case "artisti":
-//       return "bg-cat-artisti text-black";
-//     case "compagnie":
-//       return "bg-cat-compagnie text-black";
-//     case "residenze":
-//       return "bg-cat-residenze text-black";
-//     case "progetto":
-//       return "bg-cat-progetto text-black";
-//     case "pubblicazioni":
-//       return "bg-cat-pubblicazioni text-black";
-//     case "reti":
-//       return "bg-cat-reti text-black";
-//     case "partner":
-//       return "bg-cat-partner text-black";
-//     case "festival":
-//       return "bg-cat-festival text-black";
-//     default:
-//       return "bg-black text-white";
-//   }
-// }
-export const categoryColorClass: any = {
-  news: "bg-cat-news text-black",
-  eventi: "bg-cat-eventi text-black",
-  linguaggi: "bg-cat-linguaggi text-black",
-  workshop: "bg-cat-workshop text-black",
-  artisti: "bg-cat-artisti text-black",
-  compagnie: "bg-cat-compagnie text-black",
-  residenze: "bg-cat-residenze text-black",
-  progetto: "bg-cat-progetto text-black",
-  pubblicazioni: "bg-cat-pubblicazioni text-black",
-  reti: "bg-cat-reti text-black",
-  partner: "bg-cat-partner text-black",
-  festival: "bg-cat-festival text-black",
-};
+export function sanitize(str: string) {
+  return str
+    .toLowerCase()
+    .replaceAll(/ /g, "-")
+    .replaceAll(/[^\w-]+/g, "");
+}
+export function removeSpaces(str: string) {
+  return str.toLowerCase().replaceAll(" ", "");
+}
+
+export function categoryColorClasses(cat: string) {
+  console.log("cat", cat);
+
+  let c = removeSpaces(cat);
+  console.log("c", c);
+  switch (c) {
+    case "news":
+      return "card-title-news";
+    case "eventi":
+      return "card-title-feeventistival";
+    case "linguaggi":
+      return "card-title-linguaggi";
+    case "workshop":
+      return "card-title-workshop";
+    case "artisti":
+      return "card-title-artisti";
+    case "compagnie":
+      return "card-title-compagnie";
+    case "residenze":
+      return "card-title-residenze";
+    case "progetto":
+      return "card-title-progetto";
+    case "pubblicazioni":
+      return "card-title-pubblicazioni";
+    case "reti":
+      return "card-title-reti";
+    case "partner":
+      return "card-title-partner";
+    case "festival":
+      return "card-title-festival";
+    case "festival-spettacoli":
+      return "card-title-festival";
+    case "festival-linguaggi":
+      return "card-title-festival";
+    default:
+      return "card-title-default";
+  }
+}
 
 export function resolveLinkById(id: string, locale = "it", group = null) {
   return locale === config.defaultLocale ? "/" : `/${locale}/`;

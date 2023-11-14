@@ -7,16 +7,11 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      boxShadow: {
-        title: "5px 0 0 white, -5px 0 0 white",
-        "title-lg": "10px 0 0 white, -10px 0 0 white",
-        "title-xl": "15px 0 0 white, -15px 0 0 white",
-      },
       colors: {
         green: "#81845C",
         red: {
           DEFAULT: "#e64011",
-          alt: "#D83D35"
+          alt: "#D83D35",
         },
         black: {
           DEFAULT: "#000000",
@@ -42,8 +37,13 @@ const config: Config = {
           pubblicazioni: "#BFE9C6",
           reti: "#F2CEBF",
           partner: "#F285B5",
-          festival: "#F26123",
+          festival: "#181818",
         },
+      },
+      boxShadow: {
+        title: "5px 0 0 white, -5px 0 0 white",
+        "title-lg": "10px 0 0 white, -10px 0 0 white",
+        "title-xl": "15px 0 0 white, -15px 0 0 white",
       },
       fontSize: {
         "4xs": ["11px", "20px"],
