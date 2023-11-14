@@ -49,7 +49,6 @@ function renderLink(item: any, locale: string) {
                     {item.children
                       .filter((c: any) => c.link)
                       .map((child: any) => {
-                        console.log("link", child.link);
                         return (
                           <Link
                             key={child.id}
@@ -61,8 +60,7 @@ function renderLink(item: any, locale: string) {
                             onClick={() => close()}
                           >
                             <p className="text-black-light hover:text-red text-sm normal-case">
-                              + {child.title || "+"}
-                              {" " + child.link._modelApiKey}
+                              {child.title || "+"}
                             </p>
                           </Link>
                         );
@@ -83,7 +81,7 @@ function renderLink(item: any, locale: string) {
           href={resolveLink({ ...item.link, locale })}
           className="text-xxs hover:text-red font-semibold tracking-widest text-black"
         >
-          # {item.title || "#"}
+          {item.title || "#"}
         </Link>
       </div>
     );
