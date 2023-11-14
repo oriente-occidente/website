@@ -14,6 +14,7 @@ export default function resolveLink({
   locale,
 }: ResolveLinkProps): string {
   //language prefix
+  console.log(slug, _modelApiKey);
   const lp = locale === config.defaultLocale ? "" : `/${locale}`;
   //page section?
   const s = section?.toLowerCase() || "";

@@ -23,7 +23,8 @@ export default async function fetchDato<
   const { data } = await (
     await fetch("https://graphql.datocms.com/", {
       cache: "force-cache",
-      next: { tags: ["datocms"] }, //revalidate: 0
+      // next: { tags: ["datocms"] }, //revalidate: 0
+      next: { revalidate: 0 },
       method: "POST",
       headers,
       body: JSON.stringify({ query: print(document), variables }),

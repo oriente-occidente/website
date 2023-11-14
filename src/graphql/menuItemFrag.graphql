@@ -19,8 +19,8 @@ fragment menuItemFrag on MenuItemRecord {
     ... on FestivalEditionRecord {
       id
       title
-      _modelApiKey
       slug
+      _modelApiKey
     }
   }
 }
