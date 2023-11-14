@@ -22,5 +22,35 @@ fragment menuItemFrag on MenuItemRecord {
       slug
       _modelApiKey
     }
+    ... on ArtistsIndexRecord {
+      id
+      title
+      _modelApiKey
+    }
+    ... on EventsIndexRecord {
+      id
+      title
+      _modelApiKey
+    }
+    ... on NetworksIndexRecord {
+      id
+      title
+      _modelApiKey
+    }
+    ... on NewsIndexRecord {
+      id
+      title
+      _modelApiKey
+    }
+    ... on ProjectsIndexRecord {
+      id
+      title
+      _modelApiKey
+    }
+    ... on EducationPageRecord {
+      id
+      title
+      _modelApiKey
+    }
   }
 }
