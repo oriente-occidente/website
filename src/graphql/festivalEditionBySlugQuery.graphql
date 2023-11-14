@@ -1,0 +1,288 @@
+query festivalEditionBySlug($slug: String!, $locale: SiteLocale) {
+  festivalEdition(locale: $locale, filter: { slug: { eq: $slug } }) {
+    id
+    seo: _seoMetaTags {
+      ...seoMetaFragment
+    }
+    titles: _allTitleLocales {
+      locale
+      value
+    }
+    slugs: _allSlugLocales {
+      locale
+      value
+    }
+    slug
+    _modelApiKey
+    year {
+      slug
+      title
+      year
+    }
+    startDate
+    endDate
+    title
+    festivalType
+    content {
+      value
+      links
+      blocks
+    }
+    poster {
+      image {
+        url
+        responsiveImage {
+          src
+        }
+      }
+    }
+    titleHero: theme
+    descriptionHero: title
+    imageHero {
+      url
+      responsiveImage {
+        src
+      }
+    }
+  }
+}
+query project($slug: String!, $locale: SiteLocale) {
+  project(locale: $locale, filter: { slug: { eq: $slug } }) {
+    id
+    slug
+    _modelApiKey
+    _modelApiKey
+    seo: _seoMetaTags {
+      ...seoMetaFragment
+    }
+    titles: _allTitleLocales {
+      locale
+      value
+    }
+    slugs: _allSlugLocales {
+      locale
+      value
+    }
+    title
+    layoutHero
+    titleHero
+    descriptionHero
+    imageHero {
+      id
+      title
+      responsiveImage(
+        sizes: "(max-width: 1023px) 100vw, (min-width: 1024px) 80vw, 1400px"
+        imgixParams: { auto: [format, compress], ar: "14:8", fit: crop }
+      ) {
+        ...imgFrag
+      }
+    }
+    slideshowHero {
+      id
+      title
+      responsiveImage(
+        sizes: "(max-width: 1023px) 100vw, (min-width: 1024px) 80vw, 1400px"
+        imgixParams: { auto: [format, compress], ar: "14:8", fit: crop }
+      ) {
+        ...imgFrag
+      }
+    }
+    relatedContents {
+      __typename
+      ... on ArtistRecord {
+        ...slideArtirstFrag
+      }
+      ... on NewsRecord {
+        ...slideNewsFrag
+        _createdAt
+        startDate
+        tags {
+          title
+          slug
+        }
+      }
+      ... on PageRecord {
+        ...slidePageFrag
+      }
+      ... on EventRecord {
+        ...slideEventFrag
+        tags {
+          title
+        }
+      }
+      ... on ProjectRecord {
+        ...slideProjectFrag
+        tags {
+          title
+        }
+      }
+      ... on WorkshopRecord {
+        ...slideWorkshopFrag
+        tags {
+          title
+        }
+      }
+    }
+    content {
+      value
+      links {
+        __typename
+        ... on ArtistRecord {
+          id
+          slug
+          title
+          _modelApiKey
+        }
+        ... on EventRecord {
+          id
+          slug
+          title
+          _modelApiKey
+        }
+        ... on NewsRecord {
+          id
+          slug
+          title
+          _modelApiKey
+        }
+        ... on NetworkRecord {
+          id
+          slug
+          title
+          _modelApiKey
+        }
+        ... on PageRecord {
+          id
+          slug
+          title
+          _modelApiKey
+        }
+        ... on ProjectRecord {
+          id
+          slug
+          title
+          _modelApiKey
+        }
+        ... on WorkshopRecord {
+          id
+          slug
+          title
+          _modelApiKey
+        }
+      }
+      blocks {
+        __typename
+        ... on GalleryRecord {
+          ...galleryFrag
+        }
+        ... on ImageBlockRecord {
+          ...imageBlockFrag
+        }
+        ... on VideoBlockRecord {
+          ...videoFrag
+        }
+      }
+    }
+    sections {
+      id
+      title
+      body {
+        value
+        links {
+          __typename
+          ... on ArtistRecord {
+            id
+            slug
+            title
+            _modelApiKey
+          }
+          ... on EventRecord {
+            id
+            slug
+            title
+            _modelApiKey
+          }
+          ... on NewsRecord {
+            id
+            slug
+            title
+            _modelApiKey
+          }
+          ... on NetworkRecord {
+            id
+            slug
+            title
+            _modelApiKey
+          }
+          ... on PageRecord {
+            id
+            slug
+            title
+            _modelApiKey
+          }
+          ... on ProjectRecord {
+            id
+            slug
+            title
+            _modelApiKey
+          }
+          ... on WorkshopRecord {
+            id
+            slug
+            title
+            _modelApiKey
+          }
+        }
+        blocks {
+          __typename
+          ... on GalleryRecord {
+            ...galleryFrag
+          }
+          ... on ImageBlockRecord {
+            ...imageBlockFrag
+          }
+          ... on VideoBlockRecord {
+            ...videoFrag
+          }
+          ... on PartnerBlockRecord {
+            id
+            title
+            image {
+              responsiveImage(imgixParams: { auto: format, maxW: "300" }) {
+                ...imgFrag
+              }
+            }
+            url
+          }
+          ... on WorkshopCategoriesBlockRecord {
+            ...wsCatsFrag
+          }
+          ... on PromozioniBlockRecord {
+            ...promoFrag
+          }
+        }
+      }
+    }
+    paymentSettings {
+      id
+      description
+      startDate
+      endDate
+      bookable
+      amount
+      paymentLink
+    }
+    tags {
+      id
+      slug
+      title
+    }
+    startDate
+    dates {
+      id
+      isDaily
+      startTime
+      endTime
+    }
+  }
+}
