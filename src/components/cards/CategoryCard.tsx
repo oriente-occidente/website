@@ -2,7 +2,7 @@
 import { Image as DatoImage } from "react-datocms";
 import Link from "next/link";
 import { MapPinIcon, CalendarIcon } from "@heroicons/react/24/outline";
-import { groupDatesByDay } from "@/lib/utils";
+import { groupDatesByDay, categoryColorClasses } from "@/lib/utils";
 import { GenericCardProps } from "@/types";
 import resolveLink from "@/lib/resolveLink";
 import translate from "@/lib/locales";
@@ -22,26 +22,8 @@ export default function CategoryCard({ data, locale }: GenericCardProps) {
       categoryTitle = catToShow.title;
     }
   }
-  const categoryColorClasses: any = {
-    news: "bg-cat-news",
-    eventi: "bg-cat-eventi",
-    linguaggi: "bg-cat-linguaggi",
-    workshop: "bg-cat-workshop",
-    artisti: "bg-cat-artisti",
-    compagnie: "bg-cat-compagnie",
-    residenze: "bg-cat-residenze",
-    progetto: "bg-cat-progetto",
-    pubblicazioni: "bg-cat-pubblicazioni",
-    reti: "bg-cat-reti",
-    partner: "bg-cat-partner",
-    festival: "bg-cat-festival",
-  };
 
-  const categoryClasses = Object.keys(categoryColorClasses).includes(
-    categoryTitle.toLowerCase()
-  )
-    ? categoryColorClasses[categoryTitle.toLowerCase()]
-    : "bg-white";
+  const categoryClasses = categoryColorClasses(categoryTitle);
 
   const link = resolveLink({ ...data, locale });
 
@@ -50,22 +32,32 @@ export default function CategoryCard({ data, locale }: GenericCardProps) {
       <Link href={link} title={data.title} className="group">
         <div className="relative h-[220px] overflow-hidden md:h-[360px]">
           <div className="absolute z-20 bottom-0 group">
-            {data.title &&
+            {/* {data.title &&
               (data.authors ||
                 !data.titleHero ||
                 data.titleHero !== data.title) &&
-              categoryTitle != "artisti" && (
-                <h2
-                  className={`text-xs md:text-base xl:text-lg font-semibold uppercase ${categoryClasses} text-black px-10 mb-2 duration-300 group-hover:-rotate-[1deg]`}
-                >
-                  {data.title}
-                </h2>
-              )}
+              categoryTitle != "artisti" &&
+              data.titleHero !== data.title &&
+              categoryTitle != "artisti" && ( */}
+            {data.title && (
+              <h2
+                className={`pr-5 text-lg font-semibold uppercase text-black md:text-lg group-hover:origin-left group-hover:-rotate-1 group-hover:-translate-y-3 duration-300`}
+              >
+                <span className={`${categoryClasses}`}>{data.title}</span>
+              </h2>
+            )}
+            {data.titleHero && !data.authors && (
+              <h3
+                className={`text-base font-semibold uppercase text-black md:text-lg group-hover:origin-right group-hover:rotate-1 group-hover:-translate-y-1 duration-300`}
+              >
+                <span className={`${categoryClasses}`}>{data.titleHero}</span>
+              </h3>
+            )}
             {data.authors && (
               <div
-                className={`text-xs md:text-base xl:text-lg font-semibold uppercase  px-10 duration-300 group-hover:rotate-[1deg] ${categoryClasses} text-black`}
+                className={`font-semibold uppercase text-black md:text-base group-hover:origin-right group-hover:rotate-1 group-hover:-translate-y-1 duration-300`}
               >
-                {data.authors}
+                <span className={`${categoryClasses}`}>{data.authors}</span>
               </div>
             )}
           </div>
@@ -79,7 +71,7 @@ export default function CategoryCard({ data, locale }: GenericCardProps) {
           <div className="mt-4 mb-3">
             {categoryTitle && categoryTitle != "artisti" && (
               <span
-                className={`px-2 py-1 font-semibold uppercase mr-2 ${categoryClasses} text-black`}
+                className={`px-2 py-1 font-semibold uppercase mr-2 ${categoryClasses}`}
               >
                 {categoryTitle}
               </span>
@@ -105,7 +97,7 @@ export default function CategoryCard({ data, locale }: GenericCardProps) {
             ))}
           {categoryTitle == "artisti" &&
             data.artisticResidence?.map((year: any, index: number) => (
-              <div className="inline-flex" key={index}>
+              <div key={year} className="inline-flex">
                 {index == 0 ? `${year}` : `| ${year}`}&nbsp;
               </div>
             ))}
