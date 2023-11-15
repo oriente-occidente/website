@@ -4480,33 +4480,33 @@ export default async function (client: Client) {
     field_type: "boolean",
     api_key: "show_in_website",
     appearance: { addons: [], editor: "boolean", parameters: {} },
-    default_value: false,
+    default_value: true,
     fieldset: newFieldsets["865773"],
   });
 
-  try {
-    console.log(
-      'Create Multiple links field "Associated Artist" (`associated_artist`) in model "Artista" (`artist`)'
-    );
-    newFields["754276"] = await client.fields.create("148639", {
-      label: "Associated Artist",
-      field_type: "links",
-      api_key: "associated_artist",
-      validators: {
-        items_item_type: {
-          on_publish_with_unpublished_references_strategy: "fail",
-          on_reference_unpublish_strategy: "delete_references",
-          on_reference_delete_strategy: "delete_references",
-          item_types: ["148638"],
-        },
-      },
-      appearance: { addons: [], editor: "links_select", parameters: {} },
-      default_value: null,
-      fieldset: newFieldsets["865774"],
-    });
-  } catch (error) {
-    console.log("ALREADY EXISTS");
-  }
+  // try {
+  //   console.log(
+  //     'Create Multiple links field "Associated Artist" (`associated_artist`) in model "Artista" (`artist`)'
+  //   );
+  //   newFields["754276"] = await client.fields.create("148639", {
+  //     label: "Associated Artist",
+  //     field_type: "links",
+  //     api_key: "associated_artist",
+  //     validators: {
+  //       items_item_type: {
+  //         on_publish_with_unpublished_references_strategy: "fail",
+  //         on_reference_unpublish_strategy: "delete_references",
+  //         on_reference_delete_strategy: "delete_references",
+  //         item_types: ["148638"],
+  //       },
+  //     },
+  //     appearance: { addons: [], editor: "links_select", parameters: {} },
+  //     default_value: null,
+  //     fieldset: newFieldsets["865774"],
+  //   });
+  // } catch (error) {
+  //   console.log("ALREADY EXISTS");
+  // }
 
   console.log(
     'Create Multiple links field "Paese" (`countries`) in model "Artista" (`artist`)'
@@ -4527,26 +4527,26 @@ export default async function (client: Client) {
     default_value: null,
     fieldset: newFieldsets["865774"],
   });
-  try {
-    console.log(
-      'Create Single-line string field "Layout" (`layout_hero`) in model "Artista" (`artist`)'
-    );
-    newFields["754281"] = await client.fields.create("148639", {
-      label: "Layout",
-      field_type: "string",
-      api_key: "layout_hero",
-      validators: { required: {}, enum: { values: ["index", "detail"] } },
-      appearance: {
-        addons: [],
-        editor: "single_line",
-        parameters: { heading: false },
-      },
-      default_value: "index",
-      fieldset: { id: "53348", type: "fieldset" },
-    });
-  } catch (e) {
-    console.log("ALREADY EXISTS");
-  }
+  // try {
+  //   console.log(
+  //     'Create Single-line string field "Layout" (`layout_hero`) in model "Artista" (`artist`)'
+  //   );
+  //   newFields["754281"] = await client.fields.create("148639", {
+  //     label: "Layout",
+  //     field_type: "string",
+  //     api_key: "layout_hero",
+  //     validators: { required: {}, enum: { values: ["index", "detail"] } },
+  //     appearance: {
+  //       addons: [],
+  //       editor: "single_line",
+  //       parameters: { heading: false },
+  //     },
+  //     default_value: "index",
+  //     fieldset: { id: "53348", type: "fieldset" },
+  //   });
+  // } catch (e) {
+  //   console.log("ALREADY EXISTS");
+  // }
   console.log(
     'Create Single-line string field "Sottotitolo" (`subtitle`) in model "Menu Item" (`menu_item`)'
   );
@@ -5206,11 +5206,6 @@ export default async function (client: Client) {
     appearance: { addons: [], editor: "seo", parameters: {} },
   });
 
-  console.log("Destroy fields in existing models/block models");
-
-  console.log('Delete fieldset "Artist dates" in model "Artista" (`artist`)');
-  await client.fieldsets.destroy("53347");
-
   console.log("Update existing fields/fieldsets");
 
   console.log(
@@ -5259,24 +5254,16 @@ export default async function (client: Client) {
     },
   });
 
-  console.log(
-    'Update Multiple links field "Artistic Residence" (`artistic_residence`) in model "Artista" (`artist`)'
-  );
-  await client.fields.update("754275", {
-    position: 1,
-    fieldset: newFieldsets["865774"],
-  });
-
-  console.log(
-    'Update Multiple links field "Anni" (`years`) in model "Artista" (`artist`)'
-  );
-  await client.fields.update("754276", {
-    label: "Anni",
-    api_key: "years",
-    hint: "In quali anni \u00E8 stato associato",
-    position: 3,
-    fieldset: newFieldsets["865774"],
-  });
+  // console.log(
+  //   'Update Multiple links field "Anni" (`years`) in model "Artista" (`artist`)'
+  // );
+  // await client.fields.update("754276", {
+  //   label: "Anni",
+  //   api_key: "years",
+  //   hint: "In quali anni \u00E8 stato associato",
+  //   position: 3,
+  //   fieldset: newFieldsets["865774"],
+  // });
 
   console.log(
     'Update Multiple links field "Related Contents" (`related_contents`) in model "Artista" (`artist`)'
@@ -5948,13 +5935,6 @@ export default async function (client: Client) {
   );
   await client.fields.update("965859", { validators: {} });
 
-  // console.log(
-  //   'Update Color field "Color" (`color`) in model "Categoria Workshop" (`workshop_category`)'
-  // );
-  // await client.fields.update(newFields["7961887"], {
-  //   position: 1,
-  // });
-
   console.log(
     'Update Single-line string field "Titolo" (`title`) in model "Categoria Workshop" (`workshop_category`)'
   );
@@ -6199,364 +6179,4 @@ export default async function (client: Client) {
     sortable: true,
     inverse_relationships_enabled: true,
   });
-
-  /*
-  console.log("Manage menu items");
-  console.log('Create menu item "Edizioni Festival"');
-  newMenuItems["1376247"] = await client.menuItems.create({
-    label: "Edizioni Festival",
-    item_type: newItemTypes["2382191"],
-    parent: { id: "78653", type: "menu_item" },
-  });
-
-  console.log('Create menu item "Residenze Artistiche"');
-  newMenuItems["1376863"] = await client.menuItems.create({
-    label: "Residenze Artistiche",
-    item_type: newItemTypes["2382769"],
-    parent: { id: "78653", type: "menu_item" },
-  });
-
-  console.log('Create menu item "Paesi"');
-  newMenuItems["1377006"] = await client.menuItems.create({
-    label: "Paesi",
-    item_type: newItemTypes["2383134"],
-    parent: { id: "78649", type: "menu_item" },
-  });
-
-  console.log('Create menu item "Compagnie"');
-  newMenuItems["1377028"] = await client.menuItems.create({
-    label: "Compagnie",
-    item_type: newItemTypes["2383186"],
-    parent: { id: "78653", type: "menu_item" },
-  });
-
-  console.log('Create menu item "Contenuti Media"');
-  newMenuItems["1377049"] = await client.menuItems.create({
-    label: "Contenuti Media",
-  });
-
-  console.log('Create menu item "Pubblicazioni"');
-  newMenuItems["1378667"] = await client.menuItems.create({
-    label: "Pubblicazioni",
-    item_type: newItemTypes["2386114"],
-    parent: { id: "78653", type: "menu_item" },
-  });
-
-  console.log('Create menu item "Archivio"');
-  newMenuItems["1378739"] = await client.menuItems.create({
-    label: "Archivio",
-  });
-
-  console.log('Create menu item "Indice News"');
-  newMenuItems["1378780"] = await client.menuItems.create({
-    label: "Indice News",
-    item_type: newItemTypes["2386402"],
-    parent: { id: "78652", type: "menu_item" },
-  });
-
-  console.log('Create menu item "WebTV (Indice Video)"');
-  newMenuItems["1378862"] = await client.menuItems.create({
-    label: "WebTV (Indice Video)",
-    item_type: newItemTypes["2386537"],
-    parent: { id: "78653", type: "menu_item" },
-  });
-
-  console.log('Create menu item "Podcast (Indice Audio)"');
-  newMenuItems["1378863"] = await client.menuItems.create({
-    label: "Podcast (Indice Audio)",
-    item_type: newItemTypes["2386538"],
-    parent: { id: "78653", type: "menu_item" },
-  });
-
-  console.log('Create menu item "Indice Eventi"');
-  newMenuItems["1378864"] = await client.menuItems.create({
-    label: "Indice Eventi",
-    item_type: newItemTypes["2386539"],
-    parent: { id: "78651", type: "menu_item" },
-  });
-
-  console.log('Create menu item "Indice Progetti"');
-  newMenuItems["1378865"] = await client.menuItems.create({
-    label: "Indice Progetti",
-    item_type: newItemTypes["2386540"],
-    parent: { id: "78642", type: "menu_item" },
-  });
-
-  console.log('Create menu item "Indice Reti"');
-  newMenuItems["1378866"] = await client.menuItems.create({
-    label: "Indice Reti",
-    item_type: newItemTypes["2386541"],
-    parent: { id: "101855", type: "menu_item" },
-  });
-
-  console.log('Create menu item "Indice Artisti"');
-  newMenuItems["1378956"] = await client.menuItems.create({
-    label: "Indice Artisti",
-    item_type: newItemTypes["2386724"],
-    parent: { id: "78650", type: "menu_item" },
-  });
-
-  console.log('Create menu item "Percorsi Formativi"');
-  newMenuItems["1378958"] = await client.menuItems.create({
-    label: "Percorsi Formativi",
-    item_type: newItemTypes["2386727"],
-    parent: { id: "78653", type: "menu_item" },
-  });
-
-  console.log('Create menu item "Partner"');
-  newMenuItems["1388023"] = await client.menuItems.create({
-    label: "Partner",
-    item_type: newItemTypes["2404420"],
-    parent: { id: "78653", type: "menu_item" },
-  });
-
-  console.log('Create menu item "Indice Residenze Artistiche"');
-  newMenuItems["1378957"] = await client.menuItems.create({
-    label: "Indice Residenze Artistiche",
-    item_type: newItemTypes["2386725"],
-    parent: newMenuItems["1376863"],
-  });
-
-  console.log('Create menu item "Autori"');
-  newMenuItems["1377033"] = await client.menuItems.create({
-    label: "Autori",
-    item_type: newItemTypes["2383203"],
-    parent: newMenuItems["1377049"],
-  });
-
-  console.log('Create menu item "Foto"');
-  newMenuItems["1378686"] = await client.menuItems.create({
-    label: "Foto",
-    item_type: newItemTypes["2386193"],
-    parent: newMenuItems["1377049"],
-  });
-
-  console.log('Create menu item "Categorie Foto"');
-  newMenuItems["1378696"] = await client.menuItems.create({
-    label: "Categorie Foto",
-    item_type: newItemTypes["2386223"],
-    parent: newMenuItems["1377049"],
-  });
-
-  console.log('Create menu item "Categorie Documento"');
-  newMenuItems["1378698"] = await client.menuItems.create({
-    label: "Categorie Documento",
-    item_type: newItemTypes["2386225"],
-    parent: newMenuItems["1377049"],
-  });
-
-  console.log('Create menu item "Categorie Video"');
-  newMenuItems["1378700"] = await client.menuItems.create({
-    label: "Categorie Video",
-    item_type: newItemTypes["2386227"],
-    parent: newMenuItems["1377049"],
-  });
-
-  console.log('Create menu item "Video"');
-  newMenuItems["1378703"] = await client.menuItems.create({
-    label: "Video",
-    item_type: newItemTypes["2386232"],
-    parent: newMenuItems["1377049"],
-  });
-
-  console.log('Create menu item "Documenti"');
-  newMenuItems["1378706"] = await client.menuItems.create({
-    label: "Documenti",
-    item_type: newItemTypes["2386253"],
-    parent: newMenuItems["1377049"],
-  });
-
-  console.log('Create menu item "Audio"');
-  newMenuItems["1378707"] = await client.menuItems.create({
-    label: "Audio",
-    item_type: newItemTypes["2386254"],
-    parent: newMenuItems["1377049"],
-  });
-
-  console.log('Create menu item "Categorie Audio"');
-  newMenuItems["1378708"] = await client.menuItems.create({
-    label: "Categorie Audio",
-    item_type: newItemTypes["2386255"],
-    parent: newMenuItems["1377049"],
-  });
-
-  console.log('Create menu item "Media"');
-  newMenuItems["1378733"] = await client.menuItems.create({
-    label: "Media",
-    item_type: newItemTypes["2386354"],
-    parent: newMenuItems["1378739"],
-  });
-
-  console.log('Create menu item "Edizioni festival"');
-  newMenuItems["1378734"] = await client.menuItems.create({
-    label: "Edizioni festival",
-    item_type: newItemTypes["2386355"],
-    parent: newMenuItems["1378739"],
-  });
-
-  console.log('Create menu item "Artisti e Compagnie"');
-  newMenuItems["1378735"] = await client.menuItems.create({
-    label: "Artisti e Compagnie",
-    item_type: newItemTypes["2386356"],
-    parent: newMenuItems["1378739"],
-  });
-
-  console.log('Create menu item "News e Pubblicazioni"');
-  newMenuItems["1378737"] = await client.menuItems.create({
-    label: "News e Pubblicazioni",
-    item_type: newItemTypes["2386358"],
-    parent: newMenuItems["1378739"],
-  });
-
-  console.log('Create menu item "Timeline"');
-  newMenuItems["1378738"] = await client.menuItems.create({
-    label: "Timeline",
-    item_type: newItemTypes["2386360"],
-    parent: newMenuItems["1378739"],
-  });
-
-  console.log('Create menu item "Progetti e Reti"');
-  newMenuItems["1378740"] = await client.menuItems.create({
-    label: "Progetti e Reti",
-    item_type: newItemTypes["2386359"],
-    parent: newMenuItems["1378739"],
-  });
-
-  console.log('Create menu item "Attivit\u00E0"');
-  newMenuItems["1378741"] = await client.menuItems.create({
-    label: "Attivit\u00E0",
-    item_type: newItemTypes["2386357"],
-    parent: newMenuItems["1378739"],
-  });
-
-  console.log('Update menu item "Landing Pages"');
-  await client.menuItems.update("78644", {
-    position: 3,
-    parent: { id: "78649", type: "menu_item" },
-  });
-
-  console.log('Update menu item "Categorie Workshop"');
-  await client.menuItems.update("788141", {
-    label: "Categorie Workshop",
-    position: 12,
-    parent: { id: "78653", type: "menu_item" },
-  });
-
-  console.log('Update menu item "Navigazione"');
-  await client.menuItems.update("78656", { position: 21 });
-
-  console.log('Update menu item "Autori"');
-  await client.menuItems.update(newMenuItems["1377033"], { position: 8 });
-
-  console.log('Update menu item "Edizioni Festival"');
-  await client.menuItems.update(newMenuItems["1376247"], { position: 0 });
-
-  console.log('Update menu item "Video"');
-  await client.menuItems.update(newMenuItems["1378703"], { position: 1 });
-
-  console.log('Update menu item "Documenti"');
-  await client.menuItems.update(newMenuItems["1378706"], { position: 2 });
-
-  console.log('Update menu item "Audio"');
-  await client.menuItems.update(newMenuItems["1378707"], { position: 3 });
-
-  console.log('Update menu item "Progetti"');
-  await client.menuItems.update("78642", { position: 7 });
-
-  console.log('Update menu item "Anni"');
-  await client.menuItems.update("78647", { label: "Anni", position: 0 });
-
-  console.log('Update menu item "Reti"');
-  await client.menuItems.update("101855", { position: 8 });
-
-  console.log('Update menu item "Contenuti Media"');
-  await client.menuItems.update(newMenuItems["1377049"], { position: 18 });
-
-  console.log('Update menu item "WebTV (Indice Video)"');
-  await client.menuItems.update(newMenuItems["1378862"], { position: 14 });
-
-  console.log('Update menu item "Partner"');
-  await client.menuItems.update(newMenuItems["1388023"], { position: 9 });
-
-  console.log('Update menu item "Artisti"');
-  await client.menuItems.update("78650", { position: 4 });
-
-  console.log('Update menu item "Paesi"');
-  await client.menuItems.update(newMenuItems["1377006"], { position: 2 });
-
-  console.log('Update menu item "Compagnie"');
-  await client.menuItems.update(newMenuItems["1377028"], { position: 5 });
-
-  console.log('Update menu item "Archivio"');
-  await client.menuItems.update(newMenuItems["1378739"], { position: 20 });
-
-  console.log('Update menu item "Attivit\u00E0"');
-  await client.menuItems.update(newMenuItems["1378741"], { position: 4 });
-
-  console.log('Update menu item "Thank You Page"');
-  await client.menuItems.update("78648", {
-    label: "Thank You Page",
-    position: 4,
-  });
-
-  console.log('Update menu item "Foto"');
-  await client.menuItems.update(newMenuItems["1378686"], { position: 0 });
-
-  console.log('Update menu item "Categorie Audio"');
-  await client.menuItems.update(newMenuItems["1378708"], { position: 7 });
-
-  console.log('Update menu item "Timeline"');
-  await client.menuItems.update(newMenuItems["1378738"], { position: 7 });
-
-  console.log('Update menu item "Podcast (Indice Audio)"');
-  await client.menuItems.update(newMenuItems["1378863"], { position: 13 });
-
-  console.log('Update menu item "Eventi / Spettacoli"');
-  await client.menuItems.update("78651", { label: "Eventi / Spettacoli" });
-
-  console.log('Update menu item "Schema migration"');
-  await client.menuItems.update("788140", { position: 22 });
-
-  console.log('Update menu item "Categorie Foto"');
-  await client.menuItems.update(newMenuItems["1378696"], { position: 4 });
-
-  console.log('Update menu item "Media"');
-  await client.menuItems.update(newMenuItems["1378733"], { position: 0 });
-
-  console.log('Update menu item "Edizioni festival"');
-  await client.menuItems.update(newMenuItems["1378734"], { position: 1 });
-
-  console.log('Update menu item "Artisti e Compagnie"');
-  await client.menuItems.update(newMenuItems["1378735"], { position: 2 });
-
-  console.log('Update menu item "Indice News"');
-  await client.menuItems.update(newMenuItems["1378780"], { position: 0 });
-
-  console.log('Update menu item "Indice Eventi"');
-  await client.menuItems.update(newMenuItems["1378864"], { position: 0 });
-
-  console.log('Update menu item "Indice Progetti"');
-  await client.menuItems.update(newMenuItems["1378865"], { position: 0 });
-
-  console.log('Update menu item "Indice Reti"');
-  await client.menuItems.update(newMenuItems["1378866"], { position: 0 });
-
-  console.log('Update menu item "Indice Artisti"');
-  await client.menuItems.update(newMenuItems["1378956"], { position: 0 });
-
-  console.log('Update menu item "Indice Residenze Artistiche"');
-  await client.menuItems.update(newMenuItems["1378957"], { position: 0 });
-
-  console.log('Update menu item "Percorsi Formativi"');
-  await client.menuItems.update(newMenuItems["1378958"], { position: 11 });
-
-  console.log('Update menu item "Tags"');
-  await client.menuItems.update("78646", { label: "Tags" });
-
-  console.log('Update menu item "Altri contenuti"');
-  await client.menuItems.update("78649", { label: "Altri contenuti" });
-
-  console.log('Update menu item "Categorie Video"');
-  await client.menuItems.update(newMenuItems["1378700"], { position: 5 });
-  */
 }
