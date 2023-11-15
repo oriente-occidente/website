@@ -134,53 +134,53 @@
     @apply mx-auto my-0 px-4 md:px-6;
   }
   .card-title-news {
-    @apply pl-10 pr-4 md:bg-[theme('colors.cat.news')] shadow-[5px_0_0_[theme('colors.cat.news')],-25px_0_0_[theme('colors.cat.news')]] md:shadow-[10px_0_0_[theme('colors.cat.news')],-30px_0_0_[theme('colors.cat.news')]] lg:2xl:shadow-[15px_0_0_[theme('colors.cat.news')],-35px_0_0_[theme('colors.cat.news')]] md:box-decoration-clone text-white;
+    @apply pl-10 pr-4 bg-[theme('colors.cat.news')] shadow-[5px_0_0_[theme('colors.cat.news')],-25px_0_0_[theme('colors.cat.news')]] md:shadow-[10px_0_0_[theme('colors.cat.news')],-30px_0_0_[theme('colors.cat.news')]] lg:2xl:shadow-[15px_0_0_[theme('colors.cat.news')],-35px_0_0_[theme('colors.cat.news')]] box-decoration-clone text-white;
   }
 
   .card-title-eventi {
-    @apply pl-10 pr-4 md:bg-[theme('colors.cat.eventi')] shadow-[5px_0_0_[theme('colors.cat.eventi')],-25px_0_0_[theme('colors.cat.eventi')]] md:shadow-[10px_0_0_[theme('colors.cat.eventi')],-30px_0_0_[theme('colors.cat.eventi')]] lg:2xl:shadow-[15px_0_0_[theme('colors.cat.eventi')],-35px_0_0_[theme('colors.cat.eventi')]] md:box-decoration-clone text-white;
+    @apply pl-10 pr-4 bg-[theme('colors.cat.eventi')] shadow-[5px_0_0_[theme('colors.cat.eventi')],-25px_0_0_[theme('colors.cat.eventi')]] md:shadow-[10px_0_0_[theme('colors.cat.eventi')],-30px_0_0_[theme('colors.cat.eventi')]] lg:2xl:shadow-[15px_0_0_[theme('colors.cat.eventi')],-35px_0_0_[theme('colors.cat.eventi')]] box-decoration-clone text-white;
   }
 
   .card-title-linguaggi {
-    @apply pl-10 pr-4 md:bg-[theme('colors.cat.linguaggi')] shadow-[5px_0_0_[theme('colors.cat.linguaggi')],-25px_0_0_[theme('colors.cat.linguaggi')]] md:shadow-[10px_0_0_[theme('colors.cat.linguaggi')],-30px_0_0_[theme('colors.cat.linguaggi')]] lg:2xl:shadow-[15px_0_0_[theme('colors.cat.linguaggi')],-35px_0_0_[theme('colors.cat.linguaggi')]] md:box-decoration-clone text-white;
+    @apply pl-10 pr-4 bg-[theme('colors.cat.linguaggi')] shadow-[5px_0_0_[theme('colors.cat.linguaggi')],-25px_0_0_[theme('colors.cat.linguaggi')]] md:shadow-[10px_0_0_[theme('colors.cat.linguaggi')],-30px_0_0_[theme('colors.cat.linguaggi')]] lg:2xl:shadow-[15px_0_0_[theme('colors.cat.linguaggi')],-35px_0_0_[theme('colors.cat.linguaggi')]] box-decoration-clone text-white;
   }
 
   .card-title-workshop {
-    @apply pl-10 pr-4 md:bg-[theme('colors.cat.workshop')] shadow-[5px_0_0_[theme('colors.cat.workshop')],-25px_0_0_[theme('colors.cat.workshop')]] md:shadow-[10px_0_0_[theme('colors.cat.workshop')],-30px_0_0_[theme('colors.cat.workshop')]] lg:2xl:shadow-[15px_0_0_[theme('colors.cat.workshop')],-35px_0_0_[theme('colors.cat.workshop')]] md:box-decoration-clone text-white;
+    @apply pl-10 pr-4 bg-[theme('colors.cat.workshop')] shadow-[5px_0_0_[theme('colors.cat.workshop')],-25px_0_0_[theme('colors.cat.workshop')]] md:shadow-[10px_0_0_[theme('colors.cat.workshop')],-30px_0_0_[theme('colors.cat.workshop')]] lg:2xl:shadow-[15px_0_0_[theme('colors.cat.workshop')],-35px_0_0_[theme('colors.cat.workshop')]] box-decoration-clone text-white;
   }
 
   .card-title-artisti {
-    @apply pl-10 pr-4 md:bg-[theme('colors.cat.artisti')] shadow-[5px_0_0_[theme('colors.cat.artisti')],-25px_0_0_[theme('colors.cat.artisti')]] md:shadow-[10px_0_0_[theme('colors.cat.artisti')],-30px_0_0_[theme('colors.cat.artisti')]] lg:2xl:shadow-[15px_0_0_[theme('colors.cat.artisti')],-35px_0_0_[theme('colors.cat.artisti')]] md:box-decoration-clone text-white;
+    @apply pl-10 pr-4 bg-[theme('colors.cat.artisti')] shadow-[5px_0_0_[theme('colors.cat.artisti')],-25px_0_0_[theme('colors.cat.artisti')]] md:shadow-[10px_0_0_[theme('colors.cat.artisti')],-30px_0_0_[theme('colors.cat.artisti')]] lg:2xl:shadow-[15px_0_0_[theme('colors.cat.artisti')],-35px_0_0_[theme('colors.cat.artisti')]] box-decoration-clone text-white;
   }
 
   .card-title-compagnie {
-    @apply pl-10 pr-4 md:bg-[theme('colors.cat.compagnie')] shadow-[5px_0_0_[theme('colors.cat.compagnie')],-25px_0_0_[theme('colors.cat.compagnie')]] md:shadow-[10px_0_0_[theme('colors.cat.compagnie')],-30px_0_0_[theme('colors.cat.compagnie')]] lg:2xl:shadow-[15px_0_0_[theme('colors.cat.compagnie')],-35px_0_0_[theme('colors.cat.compagnie')]] md:box-decoration-clone text-white;
+    @apply pl-10 pr-4 bg-[theme('colors.cat.compagnie')] shadow-[5px_0_0_[theme('colors.cat.compagnie')],-25px_0_0_[theme('colors.cat.compagnie')]] md:shadow-[10px_0_0_[theme('colors.cat.compagnie')],-30px_0_0_[theme('colors.cat.compagnie')]] lg:2xl:shadow-[15px_0_0_[theme('colors.cat.compagnie')],-35px_0_0_[theme('colors.cat.compagnie')]] box-decoration-clone text-white;
   }
 
   .card-title-residenze {
-    @apply pl-10 pr-4 md:bg-[theme('colors.cat.residenze')] shadow-[5px_0_0_[theme('colors.cat.residenze')],-25px_0_0_[theme('colors.cat.residenze')]] md:shadow-[10px_0_0_[theme('colors.cat.residenze')],-30px_0_0_[theme('colors.cat.residenze')]] lg:2xl:shadow-[15px_0_0_[theme('colors.cat.residenze')],-35px_0_0_[theme('colors.cat.residenze')]] md:box-decoration-clone text-white;
+    @apply pl-10 pr-4 bg-[theme('colors.cat.residenze')] shadow-[5px_0_0_[theme('colors.cat.residenze')],-25px_0_0_[theme('colors.cat.residenze')]] md:shadow-[10px_0_0_[theme('colors.cat.residenze')],-30px_0_0_[theme('colors.cat.residenze')]] lg:2xl:shadow-[15px_0_0_[theme('colors.cat.residenze')],-35px_0_0_[theme('colors.cat.residenze')]] box-decoration-clone text-white;
   }
 
   .card-title-progetto {
-    @apply pl-10 pr-4 md:bg-[theme('colors.cat.progetto')] shadow-[5px_0_0_[theme('colors.cat.progetto')],-25px_0_0_[theme('colors.cat.progetto')]] md:shadow-[10px_0_0_[theme('colors.cat.progetto')],-30px_0_0_[theme('colors.cat.progetto')]] lg:2xl:shadow-[15px_0_0_[theme('colors.cat.progetto')],-35px_0_0_[theme('colors.cat.progetto')]] md:box-decoration-clone text-white;
+    @apply pl-10 pr-4 bg-[theme('colors.cat.progetto')] shadow-[5px_0_0_[theme('colors.cat.progetto')],-25px_0_0_[theme('colors.cat.progetto')]] md:shadow-[10px_0_0_[theme('colors.cat.progetto')],-30px_0_0_[theme('colors.cat.progetto')]] lg:2xl:shadow-[15px_0_0_[theme('colors.cat.progetto')],-35px_0_0_[theme('colors.cat.progetto')]] box-decoration-clone text-white;
   }
 
   .card-title-pubblicazioni {
-    @apply pl-10 pr-4 md:bg-[theme('colors.cat.pubblicazioni')] shadow-[5px_0_0_[theme('colors.cat.pubblicazioni')],-25px_0_0_[theme('colors.cat.pubblicazioni')]] md:shadow-[10px_0_0_[theme('colors.cat.pubblicazioni')],-30px_0_0_[theme('colors.cat.pubblicazioni')]] lg:2xl:shadow-[15px_0_0_[theme('colors.cat.pubblicazioni')],-35px_0_0_[theme('colors.cat.pubblicazioni')]] md:box-decoration-clone text-white;
+    @apply pl-10 pr-4 bg-[theme('colors.cat.pubblicazioni')] shadow-[5px_0_0_[theme('colors.cat.pubblicazioni')],-25px_0_0_[theme('colors.cat.pubblicazioni')]] md:shadow-[10px_0_0_[theme('colors.cat.pubblicazioni')],-30px_0_0_[theme('colors.cat.pubblicazioni')]] lg:2xl:shadow-[15px_0_0_[theme('colors.cat.pubblicazioni')],-35px_0_0_[theme('colors.cat.pubblicazioni')]] box-decoration-clone text-white;
   }
 
   .card-title-reti {
-    @apply pl-10 pr-4 md:bg-[theme('colors.cat.reti')] shadow-[5px_0_0_[theme('colors.cat.reti')],-25px_0_0_[theme('colors.cat.reti')]] md:shadow-[10px_0_0_[theme('colors.cat.reti')],-30px_0_0_[theme('colors.cat.reti')]] lg:2xl:shadow-[15px_0_0_[theme('colors.cat.reti')],-35px_0_0_[theme('colors.cat.reti')]] md:box-decoration-clone text-white;
+    @apply pl-10 pr-4 bg-[theme('colors.cat.reti')] shadow-[5px_0_0_[theme('colors.cat.reti')],-25px_0_0_[theme('colors.cat.reti')]] md:shadow-[10px_0_0_[theme('colors.cat.reti')],-30px_0_0_[theme('colors.cat.reti')]] lg:2xl:shadow-[15px_0_0_[theme('colors.cat.reti')],-35px_0_0_[theme('colors.cat.reti')]] box-decoration-clone text-white;
   }
 
   .card-title-partner {
-    @apply pl-10 pr-4 md:bg-[theme('colors.cat.partner')] shadow-[5px_0_0_[theme('colors.cat.partner')],-25px_0_0_[theme('colors.cat.partner')]] md:shadow-[10px_0_0_[theme('colors.cat.partner')],-30px_0_0_[theme('colors.cat.partner')]] lg:2xl:shadow-[15px_0_0_[theme('colors.cat.partner')],-35px_0_0_[theme('colors.cat.partner')]] md:box-decoration-clone text-white;
+    @apply pl-10 pr-4 bg-[theme('colors.cat.partner')] shadow-[5px_0_0_[theme('colors.cat.partner')],-25px_0_0_[theme('colors.cat.partner')]] md:shadow-[10px_0_0_[theme('colors.cat.partner')],-30px_0_0_[theme('colors.cat.partner')]] lg:2xl:shadow-[15px_0_0_[theme('colors.cat.partner')],-35px_0_0_[theme('colors.cat.partner')]] box-decoration-clone text-white;
   }
   .card-title-festival {
-    @apply pl-10 pr-4 md:bg-[theme('colors.cat.festival')] shadow-[5px_0_0_[theme('colors.cat.festival')],-25px_0_0_[theme('colors.cat.festival')]] md:shadow-[10px_0_0_[theme('colors.cat.festival')],-30px_0_0_[theme('colors.cat.festival')]] lg:2xl:shadow-[15px_0_0_[theme('colors.cat.festival')],-35px_0_0_[theme('colors.cat.festival')]] md:box-decoration-clone text-white;
+    @apply pl-10 pr-4 bg-[theme('colors.cat.festival')] shadow-[5px_0_0_[theme('colors.cat.festival')],-25px_0_0_[theme('colors.cat.festival')]] md:shadow-[10px_0_0_[theme('colors.cat.festival')],-30px_0_0_[theme('colors.cat.festival')]] lg:2xl:shadow-[15px_0_0_[theme('colors.cat.festival')],-35px_0_0_[theme('colors.cat.festival')]] box-decoration-clone text-white;
   }
   .card-title-default {
-    @apply pl-10 pr-4 md:bg-[theme('colors.black.light')] shadow-[5px_0_0_[theme('colors.black.light')],-25px_0_0_[theme('colors.black.light')]] md:shadow-[10px_0_0_[theme('colors.black.light')],-30px_0_0_[theme('colors.black.light')]] lg:2xl:shadow-[15px_0_0_[theme('colors.black.light')],-35px_0_0_[theme('colors.black.light')]] md:box-decoration-clone text-white;
+    @apply pl-10 pr-4 bg-[theme('colors.black.light')] shadow-[5px_0_0_[theme('colors.black.light')],-25px_0_0_[theme('colors.black.light')]] md:shadow-[10px_0_0_[theme('colors.black.light')],-30px_0_0_[theme('colors.black.light')]] lg:2xl:shadow-[15px_0_0_[theme('colors.black.light')],-35px_0_0_[theme('colors.black.light')]] box-decoration-clone text-white;
   }
 
   .swiper .swiper-pagination .swiper-pagination-bullet,

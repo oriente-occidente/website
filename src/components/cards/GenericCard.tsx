@@ -13,6 +13,12 @@ export default function GenericCard({ data, locale }: GenericCardProps) {
     case "event":
       card = <CategoryCard locale={locale} data={data} />;
       break;
+    case "project":
+      card = <CategoryCard locale={locale} data={data} />;
+      break;
+    case "network":
+      card = <CategoryCard locale={locale} data={data} />;
+      break;
     default:
       card = <StandardCard locale={locale} data={data} />;
       break;
