@@ -156,7 +156,7 @@ query page($locale: SiteLocale!, $slug: String) {
           ... on VideoBlockRecord {
             ...videoFrag
           }
-          ... on PartnerBlockRecord {
+          ... on PartnerRecord {
             id
             title
             image {
@@ -229,7 +229,7 @@ query page($locale: SiteLocale!, $slug: String) {
           ... on VideoBlockRecord {
             ...videoFrag
           }
-          ... on PartnerBlockRecord {
+          ... on PartnerRecord {
             id
             title
             image {
@@ -270,7 +270,7 @@ query page($locale: SiteLocale!, $slug: String) {
           }
         }
       }
-      ... on PartnerBlockRecord {
+      ... on PartnerRecord {
         id
         title
         image {

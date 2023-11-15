@@ -106,7 +106,12 @@ query educationPageQuery($locale: SiteLocale!) {
             images {
               responsiveImage(
                 sizes: "100vw"
-                imgixParams: { auto: [format, compress], h: 800, w: 1200, fit: crop }
+                imgixParams: {
+                  auto: [format, compress]
+                  h: 800
+                  w: 1200
+                  fit: crop
+                }
               ) {
                 ...imgFrag
               }
@@ -118,7 +123,7 @@ query educationPageQuery($locale: SiteLocale!) {
           ... on VideoBlockRecord {
             ...videoFrag
           }
-          ... on PartnerBlockRecord {
+          ... on PartnerRecord {
             id
             title
             image {
@@ -191,7 +196,7 @@ query educationPageQuery($locale: SiteLocale!) {
           ... on VideoBlockRecord {
             ...videoFrag
           }
-          ... on PartnerBlockRecord {
+          ... on PartnerRecord {
             id
             title
             image {

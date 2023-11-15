@@ -43,7 +43,12 @@ query allArtisticResidenciesQuery {
             images {
               responsiveImage(
                 sizes: "100vw"
-                imgixParams: { auto: [format, compress], h: 800, w: 1200, fit: crop }
+                imgixParams: {
+                  auto: [format, compress]
+                  h: 800
+                  w: 1200
+                  fit: crop
+                }
               ) {
                 ...imgFrag
               }
@@ -55,7 +60,7 @@ query allArtisticResidenciesQuery {
           ... on VideoBlockRecord {
             ...videoFrag
           }
-          ... on PartnerBlockRecord {
+          ... on PartnerRecord {
             id
             title
             image {
@@ -128,7 +133,7 @@ query allArtisticResidenciesQuery {
           ... on VideoBlockRecord {
             ...videoFrag
           }
-          ... on PartnerBlockRecord {
+          ... on PartnerRecord {
             id
             title
             image {

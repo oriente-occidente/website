@@ -189,7 +189,7 @@ query artist($slug: String!, $locale: SiteLocale) {
           ... on VideoBlockRecord {
             ...videoFrag
           }
-          ... on PartnerBlockRecord {
+          ... on PartnerRecord {
             id
             title
             image {

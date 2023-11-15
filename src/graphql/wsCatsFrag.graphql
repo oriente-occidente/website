@@ -8,7 +8,7 @@ fragment wsCatsFrag on WorkshopCategoriesBlockRecord {
     }
     title
     _modelApiKey
-    hoverImage {
+    overImage {
       url
       responsiveImage(
         sizes: "(max-width: 1023px) 50vw, (min-width: 1024px) 30vw, 300px"
@@ -17,7 +17,7 @@ fragment wsCatsFrag on WorkshopCategoriesBlockRecord {
       }
     }
     description
-    colorData{
+    color {
       hex
     }
   }
