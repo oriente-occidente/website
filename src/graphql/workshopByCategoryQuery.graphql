@@ -1,0 +1,40 @@
+query workshopByCategoryQuery($slug: String!, $locale: SiteLocale) {
+  workshopCategory(filter: { slug: { eq: $slug } }, locale: $locale) {
+    id
+    title
+    _modelApiKey
+    _allReferencingWorkshops(filter: { slug: { neq: null } }, locale: $locale) {
+      _modelApiKey
+      title
+      id
+      startDate
+      slug
+      isWorkshop
+      dates {
+        isDaily
+        startTime
+        updatedAt
+        endTime
+      }
+      imageHero {
+        id
+        title
+        responsiveImage(
+          sizes: "(max-width: 1023px) 100vw, (min-width: 1024px) 80vw, 1400px"
+          imgixParams: { auto: [format, compress], ar: "14:8", fit: crop }
+        ) {
+          ...imgFrag
+        }
+      }
+      location
+      subtitlePreview
+      titleHero
+      descriptionHero
+      workshopCategories {
+        id
+        slug
+        title
+      }
+    }
+  }
+}

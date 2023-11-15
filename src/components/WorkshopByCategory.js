@@ -2,44 +2,15 @@
 import translate from "@/lib/locales";
 import { enhanceEvents, sortDesc, sortAsc } from "@/lib/utils";
 import PreviewCard from "@/components/cards/PreviewCard";
-import { useState, useEffect } from "react";
-import Head from "next/head";
+import { useState } from "react";
+// import Head from "next/head";
 import { useRouter } from "next/router";
 
 const MAX = 6;
-function WorkshopByCategory({ list, locale, categoriesList, heroData }) {
+function WorkshopByCategory({ list, locale, heroData }) {
   const router = useRouter();
-  const [workshopCat, setWorkshopCat] = useState("");
+  // const [workshopCat, setWorkshopCat] = useState("");
   const { titleHero, descriptionHero } = heroData;
-
-  function back() {
-    if (history) {
-      history.back();
-    }
-  }
-
-  function getLink(locale) {
-    let href;
-    if (locale == "en") {
-      href = "/en/studio/workshops?cat=all";
-    } else {
-      href = "/studio/workshop?cat=all";
-    }
-    return href;
-  }
-
-  useEffect(() => {
-    if (router.query) {
-      const urlParams = new URLSearchParams(window.location.search);
-      let catParam = urlParams.get("cat");
-      if (catParam) {
-        const cat = urlParams.get("cat").toLowerCase();
-        if (cat) setWorkshopCat(cat);
-      } else {
-        setWorkshopCat("");
-      }
-    }
-  }, [router.query]);
 
   let finished = [];
   let active = [];
@@ -62,14 +33,14 @@ function WorkshopByCategory({ list, locale, categoriesList, heroData }) {
 
   return (
     <>
-      <Head>
+      {/* <Head>
         <title>
           {titleHero +
             ` ${
               workshopCat.charAt(0).toUpperCase() + workshopCat.slice(1)
             } - Oriente Occidente`}
         </title>
-      </Head>
+      </Head> */}
       <header className="overflow-hidden border-t border-gray py-5 md:border-t-0 md:border-b">
         <div className="container">
           <div className="pt-1 lg:flex lg:justify-between lg:pt-0">
@@ -84,7 +55,7 @@ function WorkshopByCategory({ list, locale, categoriesList, heroData }) {
             {workshopCat && workshopCat !== "all" && (
               <div className="flex items-center">
                 <div
-                  onClick={() => back()}
+                  // onClick={() => back()}
                   className="flex cursor-pointer items-center hover:text-red"
                 >
                   <div className="mr-4 h-5 w-5 flex-none bg-arrow-left-black" />
@@ -94,28 +65,24 @@ function WorkshopByCategory({ list, locale, categoriesList, heroData }) {
                 <div className="pl-1">
                   {/* <Link className="" href="/workshop?cat=all" locale={locale}> */}
                   <a
-                    href={getLink(locale)}
+                    // href={getLink(locale)}
                     className="flex items-center hover:text-red"
                   >
-                    {translate("view_all", locale)}
+                    {/* {translate("view_all", locale)} */} todo all
                   </a>
                   {/* </Link> */}
                 </div>
               </div>
             )}
           </div>
-          <h2 className="text-black-light md:mt-1 md:text-sm">
-            {descriptionHero}
-          </h2>
+          <h2 className="text-black-light md:mt-1 md:text-sm">{descriptionHero}</h2>
         </div>
       </header>
 
       <div className="container my-4">
         {workshopCat &&
           workshopCat !== "all" &&
-          (!filterByCategory ||
-            filterByCategory.length == 0 ||
-            list.length == 0) && (
+          (!filterByCategory || filterByCategory.length == 0 || list.length == 0) && (
             <div>
               <div className="mt-20 pb-5 text-lg font-semibold">
                 {translate("no_events", locale)}

@@ -18,7 +18,7 @@ const StructuredContent = ({ locale, content }) => {
         return (
           <div className="py-6 lg:py-12 2xl:py-16" key={record.id}>
             {record.category.map(
-              ({ title, description, colorData, slug, overImage }, id) => {
+              ({ title, description, colorData: color, slug, hoverImage }, id) => {
                 return (
                   <Link key={slug} href={`/studio/formazione/${slug}`} passHref>
                     {/* <a title={title} className="no-underline"> */}

@@ -6,9 +6,9 @@ fragment wsCatsFrag on WorkshopCategoriesBlockRecord {
     seo: _seoMetaTags {
       ...seoMetaFragment
     }
-    # color {
-    #   hex
-    # }
+    colorData {
+      hex
+    }
     title
     _modelApiKey
     overImage {
