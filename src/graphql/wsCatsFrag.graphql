@@ -1,6 +1,6 @@
 fragment wsCatsFrag on WorkshopCategoriesBlockRecord {
   id
-  category {
+  tags {
     id
     slug
     seo: _seoMetaTags {
