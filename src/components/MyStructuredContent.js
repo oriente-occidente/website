@@ -18,7 +18,7 @@ const StructuredContent = ({ locale, content }) => {
         return (
           <div className="py-6 lg:py-12 2xl:py-16" key={record.id}>
             {record.category.map(
-              ({ title, description, colorData, slug, hoverImage }, id) => {
+              ({ title, description, colorData, slug, overImage }, id) => {
                 return (
                   <Link
                     key={slug}
@@ -73,7 +73,7 @@ const StructuredContent = ({ locale, content }) => {
                         objectFit="cover"
                         objectPosition="50% 50%"
                         lazyLoad={false}
-                        data={hoverImage.responsiveImage}
+                        data={overImage.responsiveImage}
                       />
                     </div>
                   </Link>
