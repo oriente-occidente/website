@@ -23,10 +23,8 @@ query program($locale: SiteLocale, $start: Date, $end: Date) {
         ...imgFrag
       }
     }
-    tags {
-      id
-      slug
-      title
+    category {
+      ...tagsFrag
     }
     isFestival
     startDate
@@ -63,10 +61,8 @@ query program($locale: SiteLocale, $start: Date, $end: Date) {
         ...imgFrag
       }
     }
-    tags {
-      id
-      slug
-      title
+    category {
+      ...tagsFrag
     }
     isWorkshop
     startDate
@@ -103,10 +99,8 @@ query program($locale: SiteLocale, $start: Date, $end: Date) {
         ...imgFrag
       }
     }
-    tags {
-      id
-      slug
-      title
+    category {
+      ...tagsFrag
     }
     isWorkshop
     startDate
@@ -141,10 +135,8 @@ query program($locale: SiteLocale, $start: Date, $end: Date) {
     }
     authors
     location
-    tags {
-      id
-      slug
-      title
+    category {
+      ...tagsFrag
     }
     isFestival
     startDate

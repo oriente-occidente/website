@@ -161,9 +161,8 @@ query event($slug: String!, $locale: SiteLocale) {
         ...slideNewsFrag
         _createdAt
         startDate
-        tags {
-          title
-          slug
+        category {
+          ...tagsFrag
         }
       }
       ... on PageRecord {
@@ -171,26 +170,25 @@ query event($slug: String!, $locale: SiteLocale) {
       }
       ... on EventRecord {
         ...slideEventFrag
-        tags {
-          title
+        category {
+          ...tagsFrag
         }
       }
       ... on ProjectRecord {
         ...slideProjectFrag
-        tags {
-          title
+        category {
+          ...tagsFrag
         }
       }
       ... on WorkshopRecord {
         ...slideWorkshopFrag
-        tags {
-          title
+        category {
+          ...tagsFrag
         }
       }
     }
-    tags{
-      title
-      slug
+    category {
+      ...tagsFrag
     }
     paymentSettings {
       id
@@ -207,10 +205,8 @@ query event($slug: String!, $locale: SiteLocale) {
       title
     }
     isFestival
-    tags {
-      id
-      slug
-      title
+    category {
+      ...tagsFrag
     }
   }
 }

@@ -1,0 +1,5 @@
+fragment tagsFrag on TagRecord {
+  title
+  slug
+  id
+}

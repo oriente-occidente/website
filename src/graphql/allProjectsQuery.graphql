@@ -31,10 +31,8 @@ query projects($locale: SiteLocale) {
     }
     startDate
     position
-    tags {
-      id
-      slug
-      title
+    category {
+      ...tagsFrag
     }
   }
 }

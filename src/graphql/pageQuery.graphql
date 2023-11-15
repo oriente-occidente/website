@@ -25,9 +25,8 @@ query page($locale: SiteLocale!, $slug: String) {
         ...slideNewsFrag
         _createdAt
         startDate
-        tags {
-          title
-          slug
+        category {
+          ...tagsFrag
         }
       }
       ... on PageRecord {
@@ -35,20 +34,20 @@ query page($locale: SiteLocale!, $slug: String) {
       }
       ... on EventRecord {
         ...slideEventFrag
-        tags {
-          title
+        category {
+          ...tagsFrag
         }
       }
       ... on ProjectRecord {
         ...slideProjectFrag
-        tags {
-          title
+        category {
+          ...tagsFrag
         }
       }
       ... on WorkshopRecord {
         ...slideWorkshopFrag
-        tags {
-          title
+        category {
+          ...tagsFrag
         }
       }
     }

@@ -99,10 +99,8 @@ query news($slug: String!, $locale: SiteLocale) {
       }
     }
     startDate
-    tags {
-      id
-      slug
-      title
+    category {
+      ...tagsFrag
     }
   }
 }

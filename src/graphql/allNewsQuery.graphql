@@ -14,10 +14,8 @@ query allNews($locale: SiteLocale) {
       ...imageHeroFrag
     }
     startDate
-    tags {
-      title
-      slug
-      id
+    category {
+      ...tagsFrag
     }
   }
 }
