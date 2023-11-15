@@ -15,11 +15,10 @@ const StructuredContent = ({ locale, content }) => {
   const renderBlock = (record) => {
     switch (record.__typename) {
       case "WorkshopCategoriesBlockRecord":
-        console.log("record", record);
         return (
           <div className="py-6 lg:py-12 2xl:py-16" key={record.id}>
             {record.category.map(
-              ({ title, description, color, slug, hoverImage }, id) => {
+              ({ title, description, colorData, slug, hoverImage }, id) => {
                 return (
                   <Link
                     key={slug}
@@ -28,11 +27,10 @@ const StructuredContent = ({ locale, content }) => {
                     }?cat=${slug}`}
                     passHref
                   >
-                    {/* <a title={title} className="no-underline"> */}
                     <div
-                      className={`group relative flex cursor-pointer flex-col overflow-hidden border-b  xl:flex-row xl:items-center ${
+                      className={`group transition-all duration-700 ease-out relative flex cursor-pointer flex-col overflow-hidden border-b  xl:flex-row xl:items-center ${
                         id === 0 && "border-t "
-                      } border-gray py-4 ease-in hover:text-white xl:py-8`}
+                      } border-gray py-4 ease-in hover:text-white xl:py-8 z-0`}
                     >
                       {/* <div className="w-100 h-100 absolute hover:bg-red" /> */}
                       <div className={`z-40 flex items-center  pl-2`}>
@@ -40,7 +38,12 @@ const StructuredContent = ({ locale, content }) => {
                           className="h-[18px] w-[18px] group-hover:w-0 group-hover:opacity-0 sm:h-[28px] sm:w-[28px] xl:h-[58px] xl:w-[58px]"
                           viewBox="0 0 58 58"
                         >
-                          <circle cx="29" cy="29" r="29" fill={color?.hex || "#fff"} />
+                          <circle
+                            cx="29"
+                            cy="29"
+                            r="29"
+                            fill={colorData?.hex || "#fff"}
+                          />
                         </svg>
                         <div
                           className={`flex items-center group-hover:hidden sm:flex-none`}
@@ -51,7 +54,7 @@ const StructuredContent = ({ locale, content }) => {
                           <div className="ml-auto h-[28px] w-[28px] bg-arrow-small-right group-hover:bg-arrow-right lg:h-[38px] lg:w-[38px] xl:block" />
                         </div>
                         <div
-                          style={{ backgroundColor: color?.hex || "#fff" }}
+                          style={{ backgroundColor: colorData?.hex || "#fff" }}
                           className={`hidden items-center rounded-full px-5 group-hover:flex sm:flex-none`}
                         >
                           <div className="px-2 pt-1 text-base sm:px-3 sm:pt-0 sm:text-lg lg:text-2xl xl:px-6">
@@ -82,26 +85,30 @@ const StructuredContent = ({ locale, content }) => {
       case "PromozioniBlockRecord":
         return (
           <div className="py-2 lg:py-10 2xl:py-16" key={record.id}>
-            {record.promozione.map(({ headerColor, title, subtitle, link, text }, id) => {
-              return (
-                <div key={id} className="mb-6 border p-3">
-                  <div
-                    className={`mb-3 ${
-                      headerColor ? "bg-gray-light" : "bg-black/70 text-white"
-                    } p-6`}
-                  >
-                    <div className="pb-2 text-xxs ">{subtitle.toUpperCase()}</div>
-                    <div className="text-sm font-semibold lg:text-base">
-                      {title.toUpperCase()}
+            {record.promozione.map(
+              ({ headerColor, title, subtitle, link, text }, id) => {
+                return (
+                  <div key={id} className="mb-6 border p-3">
+                    <div
+                      className={`mb-3 ${
+                        headerColor ? "bg-gray-light" : "bg-black/70 text-white"
+                      } p-6`}
+                    >
+                      <div className="pb-2 text-xxs ">
+                        {subtitle.toUpperCase()}
+                      </div>
+                      <div className="text-sm font-semibold lg:text-base">
+                        {title.toUpperCase()}
+                      </div>
                     </div>
+                    <div
+                      className="promobox pb-2 sm:pl-3 lg:pl-6"
+                      dangerouslySetInnerHTML={{ __html: text }}
+                    />
                   </div>
-                  <div
-                    className="promobox pb-2 sm:pl-3 lg:pl-6"
-                    dangerouslySetInnerHTML={{ __html: text }}
-                  />
-                </div>
-              );
-            })}
+                );
+              }
+            )}
           </div>
         );
       case "GalleryRecord":
@@ -161,7 +168,12 @@ const StructuredContent = ({ locale, content }) => {
           // console.log('inline', record.__typename);
           const resolved = resolveLink({ ...record, locale });
           return (
-            <Link href={resolved} key={record.id} locale={locale} className="underline">
+            <Link
+              href={resolved}
+              key={record.id}
+              locale={locale}
+              className="underline"
+            >
               {record.title}
             </Link>
           );
@@ -175,7 +187,7 @@ const StructuredContent = ({ locale, content }) => {
               href={resolved}
               key={record.id}
               locale={locale}
-              className="underline"
+              className="NO-underline"
             >
               {children}
             </Link>

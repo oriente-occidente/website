@@ -17,5 +17,8 @@ fragment wsCatsFrag on WorkshopCategoriesBlockRecord {
       }
     }
     description
+    colorData{
+      hex
+    }
   }
 }

@@ -42,7 +42,7 @@
   }
 
   .formatted-content a {
-    @apply font-semibold underline hover:text-red;
+    @apply font-semibold;
   }
 
   .formatted-content ul {
