@@ -10,8 +10,8 @@ import translate from "@/lib/locales";
 export default function CategoryCard({ data, locale }: GenericCardProps) {
   const datesGrouped = data.dates ? groupDatesByDay(data.dates, locale) : [];
   let categoryTitle;
-  if (data.tags) {
-    const catToShow = data.tags;
+  if (data.category) {
+    const catToShow = data.category;
     if (Array.isArray(catToShow)) {
       categoryTitle = catToShow
         .map((cat) => {
@@ -57,7 +57,9 @@ export default function CategoryCard({ data, locale }: GenericCardProps) {
         return "card-title-default";
     }
   }
-  const categoryClasses = categoryColorClasses(categoryTitle);
+  const categoryClasses = categoryColorClasses(
+    categoryTitle ? categoryTitle : ""
+  );
 
   const link = resolveLink({ ...data, locale });
 

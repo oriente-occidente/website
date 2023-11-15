@@ -9,8 +9,8 @@ import resolveLink from "@/lib/resolveLink";
 export default function NewsCard({ data, locale }: GenericCardProps) {
   // console.log("data", data.tags);
   let categoryTitle;
-  if (data.tags) {
-    const catToShow = data.tags;
+  if (data.category) {
+    const catToShow = data.category;
     if (Array.isArray(catToShow)) {
       categoryTitle = catToShow
         .map((cat) => {
@@ -21,6 +21,7 @@ export default function NewsCard({ data, locale }: GenericCardProps) {
       categoryTitle = catToShow.title;
     }
   }
+  console.log("categoryTitle", categoryTitle);
   const categoryColorClasses: any = {
     news: "bg-cat-news text-black",
     eventi: "bg-cat-eventi text-black",
@@ -35,7 +36,8 @@ export default function NewsCard({ data, locale }: GenericCardProps) {
     partner: "bg-cat-partner text-black",
     festival: "bg-cat-festival text-black",
   };
-  const categoryClasses = categoryColorClasses[categoryTitle.toLowerCase()];
+  const categoryClasses =
+    categoryColorClasses[categoryTitle ? categoryTitle.toLowerCase() : ""];
 
   const link = resolveLink({ ...data, locale });
 
