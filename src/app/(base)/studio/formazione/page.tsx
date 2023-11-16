@@ -11,11 +11,7 @@ const locale = "it";
 
 export async function generateMetadata() {
   const siteLocale = locale as SiteLocale;
-  const data = await fetchDato(
-    EducationPageQueryDocument,
-    { locale: siteLocale },
-    false
-  );
+  const data = await fetchDato(EducationPageQueryDocument, { locale: siteLocale }, false);
   const page: any = data.educationPage || null;
   const meta = getSeoMeta(page);
   return meta;

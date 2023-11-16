@@ -6,7 +6,7 @@ fragment wsCatsFrag on WorkshopCategoriesBlockRecord {
     seo: _seoMetaTags {
       ...seoMetaFragment
     }
-    colorData {
+    color {
       hex
     }
     title

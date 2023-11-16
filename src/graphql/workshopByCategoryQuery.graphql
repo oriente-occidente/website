@@ -30,7 +30,7 @@ query workshopByCategoryQuery($slug: String!, $locale: SiteLocale) {
       subtitlePreview
       titleHero
       descriptionHero
-      workshopCategories {
+      workshopCategory {
         id
         slug
         title
