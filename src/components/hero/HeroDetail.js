@@ -61,25 +61,17 @@ function HeroDetail({ data, locale }) {
       <div className="md:border-color-gray relative md:col-span-3 md:col-start-2 md:border-l lg:w-full xl:pt-4">
         <div className="md:items-flex-start px-4 pt-4 md:flex md:justify-between md:px-12">
           <div className="">
-            <h1 className="pt-1 pb-1 text-base uppercase lg:text-xl">
-              {titleHero}
-            </h1>
+            <h1 className="pt-1 pb-1 text-base uppercase lg:text-xl">{titleHero}</h1>
             {authors && (
               <h2 className="mb-1 text-base font-semibold uppercase lg:text-xl">
                 {authors}
               </h2>
             )}
-            <h2 className="text-base font-semibold uppercase">
-              {descriptionHero}
-            </h2>
+            <h2 className="text-base font-semibold uppercase">{descriptionHero}</h2>
           </div>
 
           {paymentSettings && (
-            <BookButton
-              paymentSettings={paymentSettings}
-              locale={locale}
-              id={pageId}
-            />
+            <BookButton paymentSettings={paymentSettings} locale={locale} id={pageId} />
           )}
         </div>
 

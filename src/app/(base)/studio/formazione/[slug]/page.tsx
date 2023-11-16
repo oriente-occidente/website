@@ -1,8 +1,8 @@
 import { draftMode } from "next/headers";
 import queryDatoCMS from "@/lib/fetchDato";
-import { SiteLocale, WorkshopByCategoryQueryDocument } from "@/graphql/generated";
+import { SiteLocale, WorkshopDocument } from "@/graphql/generated";
 import type { BasicSlugPageProps } from "@/types";
-import WorkshopByCategory from "@/components/WorkshopByCategory";
+import PageTemplate from "@/components/templates/PageTemplate";
 
 const locale = "it";
 export default async function Page({ params }: BasicSlugPageProps) {
@@ -10,25 +10,24 @@ export default async function Page({ params }: BasicSlugPageProps) {
   const { isEnabled } = draftMode();
   const siteLocale = locale as SiteLocale;
   const data = await queryDatoCMS(
-    WorkshopByCategoryQueryDocument,
+    WorkshopDocument,
     { locale: siteLocale, slug },
     isEnabled
   );
+  // console.log("data orig", data.workshop?.dates);
   const heroData: any = {
-    titleHero: data?.workshopCategory?.title || "",
+    layoutHero: data?.workshop?.layoutHero,
+    titleHero: data?.workshop?.titleHero,
+    descriptionHero: data?.workshop?.descriptionHero,
+    imageHero: data?.workshop?.imageHero,
+    slideshowHero: data?.workshop?.slideshowHero,
+    dateEvento: data.workshop?.dates,
+    location: data.workshop?.location,
+    authors: data.workshop?.authors,
   };
-  // const pageData: any = {
-  //   hero: heroData,
-  //   ...data.workshop,
-  // };
-
-  return (
-    <WorkshopByCategory
-      list={data.workshopCategory?._allReferencingWorkshops || []}
-      workshopCat={slug}
-      locale={locale}
-      heroData={heroData}
-    />
-  );
-  // return <></>;
+  const pageData: any = {
+    hero: heroData,
+    ...data.workshop,
+  };
+  return <PageTemplate data={pageData} locale={locale} />;
 }
