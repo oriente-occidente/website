@@ -7,8 +7,8 @@ import { useState } from "react";
 import { useRouter } from "next/router";
 
 const MAX = 6;
-function WorkshopByCategory({ list, locale, heroData }) {
-  const router = useRouter();
+function WorkshopByCategory({ list, locale, heroData, workshopCat }) {
+  // const router = useRouter();
   // const [workshopCat, setWorkshopCat] = useState("");
   const { titleHero, descriptionHero } = heroData;
 

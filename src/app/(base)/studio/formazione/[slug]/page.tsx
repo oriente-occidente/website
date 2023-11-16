@@ -25,6 +25,7 @@ export default async function Page({ params }: BasicSlugPageProps) {
   return (
     <WorkshopByCategory
       list={data.workshopCategory?._allReferencingWorkshops || []}
+      workshopCat={slug}
       locale={locale}
       heroData={heroData}
     />

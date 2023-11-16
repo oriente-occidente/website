@@ -20,7 +20,7 @@ const StructuredContent = ({ locale, content }) => {
           <div className="py-6 lg:py-12 2xl:py-16" key={record.id}>
             {record.tags.map(({ title, description, color, slug, overImage }, id) => {
               return (
-                <Link key={slug} href={`/studio/formazione/${slug}`} passHref>
+                <Link key={slug} href={`/studio/formazione/c/${slug}`} passHref>
                   {/* <a title={title} className="no-underline"> */}
                   <div
                     className={`group transition-all duration-700 ease-out relative flex cursor-pointer flex-col overflow-hidden border-b  xl:flex-row xl:items-center ${
