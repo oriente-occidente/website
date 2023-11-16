@@ -1,5 +1,5 @@
 import { draftMode } from "next/headers";
-import { EventsIndexDocument, ProgramDocument } from "@/graphql/generated";
+import { EventsIndexDocument, AllEventsDocument } from "@/graphql/generated";
 import { SiteLocale } from "@/graphql/generated";
 import IndexPageTemplate from "@/components/templates/IndexPageTemplate";
 import getSeoMeta from "@/lib/seoUtils";
@@ -28,14 +28,14 @@ export default async function Page() {
     isEnabled
   );
   const res = await fetchDato(
-    ProgramDocument,
+    AllEventsDocument,
     { locale: siteLocale },
     isEnabled
   );
   let list: any = [];
 
-  if (res.festivalEvents) {
-    list = [...res.festivalEvents];
+  if (res.events) {
+    list = [...res.events];
   }
 
   const heroData = {

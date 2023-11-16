@@ -15,7 +15,7 @@ query artist($slug: String!, $locale: SiteLocale) {
       value
     }
     title
-    #  layoutHero
+    layoutHero
     titleHero
     descriptionHero
     imageHero {

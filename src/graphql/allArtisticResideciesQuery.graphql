@@ -1,20 +1,24 @@
-query allArtisticResidenciesQuery {
-  allArtisticResidecies {
+query allArtisticResidenciesQuery($locale: SiteLocale!) {
+  allArtisticResidecies(locale: $locale) {
     title
     slug
     id
+    _modelApiKey
+    seo: _seoMetaTags {
+      ...seoMetaFragment
+    }
+    titleHero
+
+    descriptionHero
+    imageHero {
+      ...imageHeroFrag
+    }
     artists {
       _modelApiKey
       title
       id
       imageHero {
-        id
-        responsiveImage(
-          sizes: "(max-width: 1024px) 80vw, (min-width: 1025px) 45vw, 600px"
-          imgixParams: { auto: [format, compress], ar: "5:4", fit: crop }
-        ) {
-          ...imgFrag
-        }
+        ...imageHeroFrag
       }
     }
     projects {
@@ -150,31 +154,6 @@ query allArtisticResidenciesQuery {
             ...promoFrag
           }
         }
-      }
-    }
-    _modelApiKey
-    seo: _seoMetaTags {
-      ...seoMetaFragment
-    }
-    titleHero
-    descriptionHero
-    imageHero {
-      id
-      responsiveImage(
-        sizes: "(max-width: 1024px) 80vw, (min-width: 1025px) 45vw, 600px"
-        imgixParams: { auto: [format, compress], ar: "5:4", fit: crop }
-      ) {
-        ...imgFrag
-      }
-    }
-    slideshowHero {
-      id
-      title
-      responsiveImage(
-        sizes: "(max-width: 1023px) 100vw, (min-width: 1024px) 80vw, 1400px"
-        imgixParams: { auto: [format, compress], ar: "14:8", fit: crop }
-      ) {
-        ...imgFrag
       }
     }
   }

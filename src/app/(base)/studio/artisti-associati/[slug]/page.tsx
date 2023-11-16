@@ -2,13 +2,11 @@ import { draftMode } from "next/headers";
 import type { BasicSlugPageProps } from "@/types";
 import { ArtistDocument, SiteLocale } from "@/graphql/generated";
 import queryDatoCMS from "@/lib/fetchDato";
-import HeroIndex from "@/components/hero/HeroIndex";
-import MainContent from "@/components/contents/MainContent";
+import PageTemplate from "@/components/templates/PageTemplate";
 
 const locale = "it";
 export default async function Page({ params }: BasicSlugPageProps) {
   const { slug } = params;
-  const { isEnabled: preview } = draftMode();
   const { isEnabled } = draftMode();
   const siteLocale = locale as SiteLocale;
   const data = await queryDatoCMS(
@@ -16,19 +14,17 @@ export default async function Page({ params }: BasicSlugPageProps) {
     { locale: siteLocale, slug },
     isEnabled
   );
-  const { titleHero, descriptionHero, imageHero, slideshowHero, startDate } =
-    data?.artist || {};
-
+  const page: any = data.artist;
   const heroData: any = {
-    titleHero,
-    descriptionHero,
-    imageHero,
-    slideshowHero,
+    layoutHero: page?.layoutHero,
+    titleHero: page?.titleHero,
+    descriptionHero: page?.descriptionHero,
+    imageHero: page?.imageHero,
+    slideshowHero: page?.slideshowHero,
   };
-  return (
-    <div>
-      <HeroIndex data={heroData} locale={locale} />
-      <MainContent locale={locale} data={data.artist?.content} />
-    </div>
-  );
+  const pageData: any = {
+    hero: heroData,
+    ...page,
+  };
+  return <PageTemplate data={pageData} locale={locale} />;
 }

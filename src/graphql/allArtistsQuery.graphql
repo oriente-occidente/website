@@ -1,0 +1,42 @@
+query associatedArtists($locale: SiteLocale) {
+  associatedArtists: allArtists(
+    locale: $locale
+    filter: { slug: { neq: null }, associatedArtist: { exists: true } }
+    orderBy: _firstPublishedAt_DESC
+    first: 100
+  ) {
+    id
+    title
+    _modelApiKey
+    __typename
+    seo: _seoMetaTags {
+      ...seoMetaFragment
+    }
+    titles: _allTitleLocales {
+      locale
+      value
+    }
+    slugs: _allSlugLocales {
+      locale
+      value
+    }
+    layoutHero
+    titleHero
+    descriptionHero
+    imageHero {
+      ...imageHeroFrag
+    }
+    slideshowHero {
+      ...slideShowHeroFrag
+    }
+    startDate: _firstPublishedAt
+    artisticResidence {
+      id
+      year
+    }
+    associatedArtist {
+      id
+      year
+    }
+  }
+}

@@ -1,5 +1,8 @@
 import { draftMode } from "next/headers";
-import { EventsIndexDocument, ProgramDocument } from "@/graphql/generated";
+import {
+  ArtistsIndexDocument,
+  AssociatedArtistsDocument,
+} from "@/graphql/generated";
 import { SiteLocale } from "@/graphql/generated";
 import IndexPageTemplate from "@/components/templates/IndexPageTemplate";
 import getSeoMeta from "@/lib/seoUtils";
@@ -10,11 +13,11 @@ const locale = "it";
 export async function generateMetadata() {
   const siteLocale = locale as SiteLocale;
   const data = await fetchDato(
-    EventsIndexDocument,
+    ArtistsIndexDocument,
     { locale: siteLocale },
     false
   );
-  const page: any = data?.eventsIndex || null;
+  const page: any = data?.artistsIndex || null;
   const meta = getSeoMeta(page);
   return meta;
 }
@@ -22,25 +25,28 @@ export async function generateMetadata() {
 export default async function Page() {
   const siteLocale = locale as SiteLocale;
   const { isEnabled } = draftMode();
-  const page = await fetchDato(
-    EventsIndexDocument,
+  const page: any = await fetchDato(
+    ArtistsIndexDocument,
     { locale: siteLocale },
     isEnabled
   );
   const res = await fetchDato(
-    ProgramDocument,
+    AssociatedArtistsDocument,
     { locale: siteLocale },
     isEnabled
   );
   let list: any = [];
 
-  if (res.festivalEvents) {
-    list = [...res.festivalEvents];
+  if (res.associatedArtists) {
+    list = [...res.associatedArtists];
   }
 
-  const heroData = {
-    titleHero: page?.eventsIndex?.title || "",
-    descriptionHero: page?.eventsIndex?.description || "",
+  const heroData: any = {
+    layoutHero: page?.layoutHero,
+    titleHero: page?.titleHero,
+    descriptionHero: page?.descriptionHero,
+    imageHero: page?.imageHero,
+    slideshowHero: page?.slideshowHero,
   };
 
   const pageData: any = {
