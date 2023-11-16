@@ -1,4 +1,4 @@
-query workshopByCategoryQuery($slug: String!, $locale: SiteLocale) {
+query workshopByCategoryQuery($slug: String, $locale: SiteLocale) {
   workshopCategory(filter: { slug: { eq: $slug } }, locale: $locale) {
     id
     title

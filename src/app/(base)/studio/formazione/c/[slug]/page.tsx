@@ -11,7 +11,7 @@ export default async function Page({ params }: BasicSlugPageProps) {
   const siteLocale = locale as SiteLocale;
   const data = await queryDatoCMS(
     WorkshopByCategoryQueryDocument,
-    { locale: siteLocale, slug },
+    { locale: siteLocale, slug: slug != "all" ? slug : null },
     isEnabled
   );
   const heroData: any = {
