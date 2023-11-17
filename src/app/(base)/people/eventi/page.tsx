@@ -34,7 +34,7 @@ export default async function Page() {
   );
   let list: any = [];
 
-  if (res.events) {
+  if (res?.events) {
     list = [...res.events];
   }
 
@@ -48,5 +48,6 @@ export default async function Page() {
     hero: heroData,
     page,
   };
+
   return <IndexPageTemplate data={pageData} locale={locale} />;
 }
