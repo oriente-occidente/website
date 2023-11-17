@@ -1,7 +1,8 @@
-query workshopByCategoryQuery($slug: String, $locale: SiteLocale) {
-  workshopCategory(filter: { slug: { eq: $slug } }, locale: $locale) {
+query allWorkshopsByCategoryQuery($slug: String, $locale: SiteLocale) {
+  allWorkshopCategories(filter: { slug: { eq: $slug } }, locale: $locale) {
     id
     title
+    slug
     _modelApiKey
     _allReferencingWorkshops(filter: { slug: { neq: null } }, locale: $locale) {
       _modelApiKey
