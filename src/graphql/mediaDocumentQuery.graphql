@@ -1,0 +1,57 @@
+query mediaDocumentQuery($id: ItemId, $locale: SiteLocale) {
+  mediaDocument(filter: { id: { eq: $id } }, locale: $locale) {
+    _modelApiKey
+    seo: _seoMetaTags {
+      ...seoMetaFragment
+    }
+    titles: _allTitleLocales {
+      locale
+      value
+    }
+    slugs: _allSlugLocales {
+      locale
+      value
+    }
+    id
+    title
+    slug
+    description
+    image {
+      id
+      title
+      alt
+      url
+      responsiveImage(
+        sizes: "(max-width: 1023px) 100vw, (min-width: 1024px) 80vw, 1400px"
+        imgixParams: { auto: [format, compress], ar: "14:8", fit: crop }
+      ) {
+        ...imgFrag
+      }
+    }
+    attachment {
+      id
+      url
+      title
+      size
+    }
+    festivalEditions {
+      slug
+      id
+      title
+    }
+    comoanies {
+      slug
+      title
+      id
+    }
+    mediaAuthor {
+      id
+      fullName
+    }
+    artisticResidencies {
+      id
+      slug
+      title
+    }
+  }
+}

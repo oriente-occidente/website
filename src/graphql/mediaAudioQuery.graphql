@@ -1,0 +1,44 @@
+query mediaAudioQuery($id: ItemId, $locale: SiteLocale) {
+  mediaAudio(filter: { id: { eq: $id } }, locale: $locale) {
+    _modelApiKey
+    seo: _seoMetaTags {
+      ...seoMetaFragment
+    }
+    titles: _allTitleLocales {
+      locale
+      value
+    }
+    slugs: _allSlugLocales {
+      locale
+      value
+    }
+    slug
+    title
+    description
+    audioFiles {
+      id
+      url
+      title
+      author
+    }
+    festivalEditions {
+      slug
+      id
+      title
+    }
+    comoanies {
+      slug
+      title
+      id
+    }
+    mediaAuthor {
+      id
+      fullName
+    }
+    artisticResidencies {
+      id
+      slug
+      title
+    }
+  }
+}

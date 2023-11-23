@@ -1,0 +1,63 @@
+query mediaPhotoQuery($id: ItemId, $locale: SiteLocale) {
+  mediaPhoto(filter: { id: { eq: $id } }, locale: $locale) {
+    _modelApiKey
+    seo: _seoMetaTags {
+      ...seoMetaFragment
+    }
+    id
+    description
+    image {
+      id
+      title
+      alt
+      url
+      responsiveImage(
+        sizes: "(max-width: 1023px) 100vw, (min-width: 1024px) 80vw, 1400px"
+        imgixParams: { auto: [format, compress], ar: "14:8", fit: crop }
+      ) {
+        ...imgFrag
+      }
+    }
+    years {
+      year
+      title
+      slug
+      id
+    }
+    festivalEditions {
+      slug
+      id
+      title
+    }
+    artisticResidencies {
+      id
+      title
+      titleHero
+      slug
+    }
+    artists {
+      slug
+      title
+      id
+      titleHero
+    }
+    category {
+      name
+      id
+    }
+    comoanies {
+      slug
+      title
+      id
+    }
+    mediaAuthor {
+      id
+      fullName
+    }
+    artisticResidencies {
+      id
+      slug
+      title
+    }
+  }
+}
