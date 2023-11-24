@@ -1,0 +1,6 @@
+fragment yearRecordFragment on YearRecord {
+  year
+  title
+  slug
+  id
+}

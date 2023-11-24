@@ -1,5 +1,5 @@
-query mediaAudioQuery($id: ItemId, $locale: SiteLocale) {
-  mediaAudio(filter: { id: { eq: $id } }, locale: $locale) {
+query mediaAudioQuery($slug: String!, $locale: SiteLocale) {
+  mediaAudio(filter: { slug: { eq: $slug } }, locale: $locale) {
     _modelApiKey
     seo: _seoMetaTags {
       ...seoMetaFragment
@@ -21,24 +21,21 @@ query mediaAudioQuery($id: ItemId, $locale: SiteLocale) {
       title
       author
     }
-    festivalEditions {
-      slug
-      id
-      title
+    # INFO
+    years {
+      ...yearRecordFragment
     }
-    comoanies {
-      slug
-      title
-      id
+    festivalEditions {
+      ...festivalEditionRecordFragment
+    }
+    companies {
+      ...companyRecordFragment
     }
     mediaAuthor {
-      id
-      fullName
+      ...mediaAuthorRecordFragment
     }
     artisticResidencies {
-      id
-      slug
-      title
+      ...artisticResidecyRecordFragment
     }
   }
 }

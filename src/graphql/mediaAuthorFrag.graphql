@@ -1,0 +1,4 @@
+fragment mediaAuthorRecordFragment on MediaAuthorRecord {
+  id
+  fullName
+}

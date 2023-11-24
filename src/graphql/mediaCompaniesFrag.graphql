@@ -1,0 +1,5 @@
+fragment companyRecordFragment on CompanyRecord {
+  slug
+  title
+  id
+}

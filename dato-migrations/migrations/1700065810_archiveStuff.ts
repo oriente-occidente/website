@@ -112,9 +112,7 @@ export default async function (client: Client) {
     { skip_menu_item_creation: true }
   );
 
-  console.log(
-    'Create model "Categoria Media Documento " (`media_document_category`)'
-  );
+  console.log('Create model "Categoria Media Documento " (`media_document_category`)');
   newItemTypes["2386225"] = await client.itemTypes.create(
     {
       name: "Categoria Media Documento ",
@@ -255,9 +253,7 @@ export default async function (client: Client) {
     { skip_menu_item_creation: true }
   );
 
-  console.log(
-    'Create model "Archivio Partner e Reti" (`pertners_networks_archive`)'
-  );
+  console.log('Create model "Archivio Partner e Reti" (`pertners_networks_archive`)');
   newItemTypes["2386359"] = await client.itemTypes.create(
     {
       name: "Archivio Partner e Reti",
@@ -422,18 +418,16 @@ export default async function (client: Client) {
   console.log(
     'Create fieldset "Date e opzioni" in model "Edizione Festival" (`festival_edition`)'
   );
-  newFieldsets["865835"] = await client.fieldsets.create(
-    newItemTypes["2382191"],
-    { title: "Date e opzioni" }
-  );
+  newFieldsets["865835"] = await client.fieldsets.create(newItemTypes["2382191"], {
+    title: "Date e opzioni",
+  });
 
   console.log(
     'Create fieldset "Contenuti" in model "Edizione Festival" (`festival_edition`)'
   );
-  newFieldsets["865837"] = await client.fieldsets.create(
-    newItemTypes["2382191"],
-    { title: "Contenuti" }
-  );
+  newFieldsets["865837"] = await client.fieldsets.create(newItemTypes["2382191"], {
+    title: "Contenuti",
+  });
 
   console.log(
     'Create Single-line string field "Tipologia Festival" (`festival_type`) in model "Edizione Festival" (`festival_edition`)'
@@ -644,34 +638,30 @@ export default async function (client: Client) {
   console.log(
     'Create fieldset "Hero" in model "Residenza Artistica" (`artistic_residecy`)'
   );
-  newFieldsets["864479"] = await client.fieldsets.create(
-    newItemTypes["2382769"],
-    { title: "Hero" }
-  );
+  newFieldsets["864479"] = await client.fieldsets.create(newItemTypes["2382769"], {
+    title: "Hero",
+  });
 
   console.log(
     'Create fieldset "Opzioni" in model "Residenza Artistica" (`artistic_residecy`)'
   );
-  newFieldsets["865885"] = await client.fieldsets.create(
-    newItemTypes["2382769"],
-    { title: "Opzioni" }
-  );
+  newFieldsets["865885"] = await client.fieldsets.create(newItemTypes["2382769"], {
+    title: "Opzioni",
+  });
 
   console.log(
     'Create fieldset "Contenuti" in model "Residenza Artistica" (`artistic_residecy`)'
   );
-  newFieldsets["864480"] = await client.fieldsets.create(
-    newItemTypes["2382769"],
-    { title: "Contenuti" }
-  );
+  newFieldsets["864480"] = await client.fieldsets.create(newItemTypes["2382769"], {
+    title: "Contenuti",
+  });
 
   console.log(
     'Create fieldset "Relazioni" in model "Residenza Artistica" (`artistic_residecy`)'
   );
-  newFieldsets["864478"] = await client.fieldsets.create(
-    newItemTypes["2382769"],
-    { title: "Relazioni" }
-  );
+  newFieldsets["864478"] = await client.fieldsets.create(newItemTypes["2382769"], {
+    title: "Relazioni",
+  });
 
   console.log(
     'Create Multiple links field "Anni" (`years`) in model "Residenza Artistica" (`artistic_residecy`)'
@@ -895,22 +885,19 @@ export default async function (client: Client) {
   });
 
   console.log('Create fieldset "Hero" in model "Compagnia" (`company`)');
-  newFieldsets["864482"] = await client.fieldsets.create(
-    newItemTypes["2383186"],
-    { title: "Hero" }
-  );
+  newFieldsets["864482"] = await client.fieldsets.create(newItemTypes["2383186"], {
+    title: "Hero",
+  });
 
   console.log('Create fieldset "Contenuti" in model "Compagnia" (`company`)');
-  newFieldsets["864481"] = await client.fieldsets.create(
-    newItemTypes["2383186"],
-    { title: "Contenuti" }
-  );
+  newFieldsets["864481"] = await client.fieldsets.create(newItemTypes["2383186"], {
+    title: "Contenuti",
+  });
 
   console.log('Create fieldset "Relazioni" in model "Compagnia" (`company`)');
-  newFieldsets["864483"] = await client.fieldsets.create(
-    newItemTypes["2383186"],
-    { title: "Relazioni" }
-  );
+  newFieldsets["864483"] = await client.fieldsets.create(newItemTypes["2383186"], {
+    title: "Relazioni",
+  });
 
   console.log(
     'Create Multiple links field "Artisti" (`artists`) in model "Compagnia" (`company`)'
@@ -1065,9 +1052,7 @@ export default async function (client: Client) {
     appearance: { addons: [], editor: "seo", parameters: {} },
   });
 
-  console.log(
-    'Create Slug field "Slug" (`slug`) in model "Compagnia" (`company`)'
-  );
+  console.log('Create Slug field "Slug" (`slug`) in model "Compagnia" (`company`)');
   newFields["12358969"] = await client.fields.create(newItemTypes["2383186"], {
     label: "Slug",
     field_type: "slug",
@@ -1120,37 +1105,28 @@ export default async function (client: Client) {
     default_value: { it: "", en: "" },
   });
 
-  console.log(
-    'Create fieldset "Hero/Preview" in model "Pubblicazione" (`publication`)'
-  );
-  newFieldsets["865830"] = await client.fieldsets.create(
-    newItemTypes["2386114"],
-    { title: "Hero/Preview", collapsible: true }
-  );
+  console.log('Create fieldset "Hero/Preview" in model "Pubblicazione" (`publication`)');
+  newFieldsets["865830"] = await client.fieldsets.create(newItemTypes["2386114"], {
+    title: "Hero/Preview",
+    collapsible: true,
+  });
 
   console.log(
     'Create fieldset "Date e opzioni" in model "Pubblicazione" (`publication`)'
   );
-  newFieldsets["865829"] = await client.fieldsets.create(
-    newItemTypes["2386114"],
-    { title: "Date e opzioni" }
-  );
+  newFieldsets["865829"] = await client.fieldsets.create(newItemTypes["2386114"], {
+    title: "Date e opzioni",
+  });
 
-  console.log(
-    'Create fieldset "Contenuti" in model "Pubblicazione" (`publication`)'
-  );
-  newFieldsets["865828"] = await client.fieldsets.create(
-    newItemTypes["2386114"],
-    { title: "Contenuti" }
-  );
+  console.log('Create fieldset "Contenuti" in model "Pubblicazione" (`publication`)');
+  newFieldsets["865828"] = await client.fieldsets.create(newItemTypes["2386114"], {
+    title: "Contenuti",
+  });
 
-  console.log(
-    'Create fieldset "Relazioni" in model "Pubblicazione" (`publication`)'
-  );
-  newFieldsets["865831"] = await client.fieldsets.create(
-    newItemTypes["2386114"],
-    { title: "Relazioni" }
-  );
+  console.log('Create fieldset "Relazioni" in model "Pubblicazione" (`publication`)');
+  newFieldsets["865831"] = await client.fieldsets.create(newItemTypes["2386114"], {
+    title: "Relazioni",
+  });
 
   console.log(
     'Create Structured text field "Contenuto principale" (`content`) in model "Pubblicazione" (`publication`)'
@@ -1181,22 +1157,8 @@ export default async function (client: Client) {
       addons: [],
       editor: "structured_text",
       parameters: {
-        marks: [
-          "strong",
-          "code",
-          "emphasis",
-          "underline",
-          "strikethrough",
-          "highlight",
-        ],
-        nodes: [
-          "blockquote",
-          "code",
-          "heading",
-          "link",
-          "list",
-          "thematicBreak",
-        ],
+        marks: ["strong", "code", "emphasis", "underline", "strikethrough", "highlight"],
+        nodes: ["blockquote", "code", "heading", "link", "list", "thematicBreak"],
         heading_levels: [1, 2, 3, 4, 5, 6],
         blocks_start_collapsed: false,
         show_links_meta_editor: false,
@@ -1347,12 +1309,12 @@ export default async function (client: Client) {
   });
 
   console.log(
-    'Create Multiple links field "Compagnie" (`comoanies`) in model "Pubblicazione" (`publication`)'
+    'Create Multiple links field "Compagnie" (`companies`) in model "Pubblicazione" (`publication`)'
   );
   newFields["12372900"] = await client.fields.create(newItemTypes["2386114"], {
     label: "Compagnie",
     field_type: "links",
-    api_key: "comoanies",
+    api_key: "companies",
     validators: {
       items_item_type: {
         on_publish_with_unpublished_references_strategy: "fail",
@@ -1528,13 +1490,10 @@ export default async function (client: Client) {
     },
   });
 
-  console.log(
-    'Create fieldset "Relazioni" in model "Media Foto" (`media_photo`)'
-  );
-  newFieldsets["865851"] = await client.fieldsets.create(
-    newItemTypes["2386193"],
-    { title: "Relazioni" }
-  );
+  console.log('Create fieldset "Relazioni" in model "Media Foto" (`media_photo`)');
+  newFieldsets["865851"] = await client.fieldsets.create(newItemTypes["2386193"], {
+    title: "Relazioni",
+  });
 
   console.log(
     'Create Single link field "Categoria" (`category`) in model "Media Foto" (`media_photo`)'
@@ -1649,12 +1608,12 @@ export default async function (client: Client) {
   });
 
   console.log(
-    'Create Multiple links field "Compagnie" (`comoanies`) in model "Media Foto" (`media_photo`)'
+    'Create Multiple links field "Compagnie" (`companies`) in model "Media Foto" (`media_photo`)'
   );
   newFields["12373204"] = await client.fields.create(newItemTypes["2386193"], {
     label: "Compagnie",
     field_type: "links",
-    api_key: "comoanies",
+    api_key: "companies",
     validators: {
       items_item_type: {
         on_publish_with_unpublished_references_strategy: "fail",
@@ -1874,21 +1833,15 @@ export default async function (client: Client) {
     default_value: { it: "", en: "" },
   });
 
-  console.log(
-    'Create fieldset "Opzioni" in model "Media Video" (`media_video`)'
-  );
-  newFieldsets["865863"] = await client.fieldsets.create(
-    newItemTypes["2386232"],
-    { title: "Opzioni" }
-  );
+  console.log('Create fieldset "Opzioni" in model "Media Video" (`media_video`)');
+  newFieldsets["865863"] = await client.fieldsets.create(newItemTypes["2386232"], {
+    title: "Opzioni",
+  });
 
-  console.log(
-    'Create fieldset "Relazioni" in model "Media Video" (`media_video`)'
-  );
-  newFieldsets["865862"] = await client.fieldsets.create(
-    newItemTypes["2386232"],
-    { title: "Relazioni" }
-  );
+  console.log('Create fieldset "Relazioni" in model "Media Video" (`media_video`)');
+  newFieldsets["865862"] = await client.fieldsets.create(newItemTypes["2386232"], {
+    title: "Relazioni",
+  });
 
   console.log(
     'Create Single link field "Categoria" (`category`) in model "Media Video" (`media_video`)'
@@ -2026,12 +1979,12 @@ export default async function (client: Client) {
   });
 
   console.log(
-    'Create Multiple links field "Compagnie" (`comoanies`) in model "Media Video" (`media_video`)'
+    'Create Multiple links field "Compagnie" (`companies`) in model "Media Video" (`media_video`)'
   );
   newFields["12373354"] = await client.fields.create(newItemTypes["2386232"], {
     label: "Compagnie",
     field_type: "links",
-    api_key: "comoanies",
+    api_key: "companies",
     validators: {
       items_item_type: {
         on_publish_with_unpublished_references_strategy: "fail",
@@ -2247,9 +2200,7 @@ export default async function (client: Client) {
     fieldset: newFieldsets["865862"],
   });
 
-  console.log(
-    'Create Slug field "Slug" (`slug`) in model "Media Video" (`media_video`)'
-  );
+  console.log('Create Slug field "Slug" (`slug`) in model "Media Video" (`media_video`)');
   newFields["12373366"] = await client.fields.create(newItemTypes["2386232"], {
     label: "Slug",
     field_type: "slug",
@@ -2271,10 +2222,9 @@ export default async function (client: Client) {
   console.log(
     'Create fieldset "Relazioni" in model "Media Documento" (`media_document`)'
   );
-  newFieldsets["865865"] = await client.fieldsets.create(
-    newItemTypes["2386253"],
-    { title: "Relazioni" }
-  );
+  newFieldsets["865865"] = await client.fieldsets.create(newItemTypes["2386253"], {
+    title: "Relazioni",
+  });
 
   console.log(
     'Create Single link field "Categoria" (`category`) in model "Media Documento" (`media_document`)'
@@ -2387,12 +2337,12 @@ export default async function (client: Client) {
   });
 
   console.log(
-    'Create Multiple links field "Compagnie" (`comoanies`) in model "Media Documento" (`media_document`)'
+    'Create Multiple links field "Compagnie" (`companies`) in model "Media Documento" (`media_document`)'
   );
   newFields["12373441"] = await client.fields.create(newItemTypes["2386253"], {
     label: "Compagnie",
     field_type: "links",
-    api_key: "comoanies",
+    api_key: "companies",
     validators: {
       items_item_type: {
         on_publish_with_unpublished_references_strategy: "fail",
@@ -2609,21 +2559,15 @@ export default async function (client: Client) {
     },
   });
 
-  console.log(
-    'Create fieldset "Opzioni" in model "Media Audio" (`media_audio`)'
-  );
-  newFieldsets["865867"] = await client.fieldsets.create(
-    newItemTypes["2386254"],
-    { title: "Opzioni" }
-  );
+  console.log('Create fieldset "Opzioni" in model "Media Audio" (`media_audio`)');
+  newFieldsets["865867"] = await client.fieldsets.create(newItemTypes["2386254"], {
+    title: "Opzioni",
+  });
 
-  console.log(
-    'Create fieldset "Relazioni" in model "Media Audio" (`media_audio`)'
-  );
-  newFieldsets["865866"] = await client.fieldsets.create(
-    newItemTypes["2386254"],
-    { title: "Relazioni" }
-  );
+  console.log('Create fieldset "Relazioni" in model "Media Audio" (`media_audio`)');
+  newFieldsets["865866"] = await client.fieldsets.create(newItemTypes["2386254"], {
+    title: "Relazioni",
+  });
 
   console.log(
     'Create Single link field "Categoria" (`category`) in model "Media Audio" (`media_audio`)'
@@ -2748,12 +2692,12 @@ export default async function (client: Client) {
   });
 
   console.log(
-    'Create Multiple links field "Compagnie" (`comoanies`) in model "Media Audio" (`media_audio`)'
+    'Create Multiple links field "Compagnie" (`companies`) in model "Media Audio" (`media_audio`)'
   );
   newFields["12373467"] = await client.fields.create(newItemTypes["2386254"], {
     label: "Compagnie",
     field_type: "links",
-    api_key: "comoanies",
+    api_key: "companies",
     validators: {
       items_item_type: {
         on_publish_with_unpublished_references_strategy: "fail",
@@ -2950,9 +2894,7 @@ export default async function (client: Client) {
     fieldset: newFieldsets["865866"],
   });
 
-  console.log(
-    'Create Slug field "Slug" (`slug`) in model "Media Audio" (`media_audio`)'
-  );
+  console.log('Create Slug field "Slug" (`slug`) in model "Media Audio" (`media_audio`)');
   newFields["12373480"] = await client.fields.create(newItemTypes["2386254"], {
     label: "Slug",
     field_type: "slug",
@@ -3583,18 +3525,16 @@ export default async function (client: Client) {
   console.log(
     'Create fieldset "Hero/Preview" in model "Indice Artisti" (`artists_index`)'
   );
-  newFieldsets["865981"] = await client.fieldsets.create(
-    newItemTypes["2386724"],
-    { title: "Hero/Preview", collapsible: true, start_collapsed: true }
-  );
+  newFieldsets["865981"] = await client.fieldsets.create(newItemTypes["2386724"], {
+    title: "Hero/Preview",
+    collapsible: true,
+    start_collapsed: true,
+  });
 
-  console.log(
-    'Create fieldset "Contents" in model "Indice Artisti" (`artists_index`)'
-  );
-  newFieldsets["865980"] = await client.fieldsets.create(
-    newItemTypes["2386724"],
-    { title: "Contents" }
-  );
+  console.log('Create fieldset "Contents" in model "Indice Artisti" (`artists_index`)');
+  newFieldsets["865980"] = await client.fieldsets.create(newItemTypes["2386724"], {
+    title: "Contents",
+  });
 
   console.log(
     'Create Structured text field "Main Content" (`content`) in model "Indice Artisti" (`artists_index`)'
@@ -3606,14 +3546,7 @@ export default async function (client: Client) {
     localized: true,
     validators: {
       structured_text_blocks: {
-        item_types: [
-          "148647",
-          "148653",
-          "148658",
-          "148659",
-          "1530788",
-          "1530790",
-        ],
+        item_types: ["148647", "148653", "148658", "148659", "1530788", "1530790"],
       },
       structured_text_links: {
         on_publish_with_unpublished_references_strategy: "fail",
@@ -3634,22 +3567,8 @@ export default async function (client: Client) {
       addons: [],
       editor: "structured_text",
       parameters: {
-        marks: [
-          "strong",
-          "code",
-          "emphasis",
-          "underline",
-          "strikethrough",
-          "highlight",
-        ],
-        nodes: [
-          "blockquote",
-          "code",
-          "heading",
-          "link",
-          "list",
-          "thematicBreak",
-        ],
+        marks: ["strong", "code", "emphasis", "underline", "strikethrough", "highlight"],
+        nodes: ["blockquote", "code", "heading", "link", "list", "thematicBreak"],
         heading_levels: [1, 2, 3, 4, 5, 6],
         blocks_start_collapsed: false,
         show_links_meta_editor: false,
@@ -3788,18 +3707,18 @@ export default async function (client: Client) {
   console.log(
     'Create fieldset "Hero/Preview" in model "Indice Residenze Artistiche" (`artistic_residencies_index`)'
   );
-  newFieldsets["865985"] = await client.fieldsets.create(
-    newItemTypes["2386725"],
-    { title: "Hero/Preview", collapsible: true, start_collapsed: true }
-  );
+  newFieldsets["865985"] = await client.fieldsets.create(newItemTypes["2386725"], {
+    title: "Hero/Preview",
+    collapsible: true,
+    start_collapsed: true,
+  });
 
   console.log(
     'Create fieldset "Contents" in model "Indice Residenze Artistiche" (`artistic_residencies_index`)'
   );
-  newFieldsets["865984"] = await client.fieldsets.create(
-    newItemTypes["2386725"],
-    { title: "Contents" }
-  );
+  newFieldsets["865984"] = await client.fieldsets.create(newItemTypes["2386725"], {
+    title: "Contents",
+  });
 
   console.log(
     'Create Structured text field "Main Content" (`content`) in model "Indice Residenze Artistiche" (`artistic_residencies_index`)'
@@ -3811,14 +3730,7 @@ export default async function (client: Client) {
     localized: true,
     validators: {
       structured_text_blocks: {
-        item_types: [
-          "148647",
-          "148653",
-          "148658",
-          "148659",
-          "1530788",
-          "1530790",
-        ],
+        item_types: ["148647", "148653", "148658", "148659", "1530788", "1530790"],
       },
       structured_text_links: {
         on_publish_with_unpublished_references_strategy: "fail",
@@ -3839,22 +3751,8 @@ export default async function (client: Client) {
       addons: [],
       editor: "structured_text",
       parameters: {
-        marks: [
-          "strong",
-          "code",
-          "emphasis",
-          "underline",
-          "strikethrough",
-          "highlight",
-        ],
-        nodes: [
-          "blockquote",
-          "code",
-          "heading",
-          "link",
-          "list",
-          "thematicBreak",
-        ],
+        marks: ["strong", "code", "emphasis", "underline", "strikethrough", "highlight"],
+        nodes: ["blockquote", "code", "heading", "link", "list", "thematicBreak"],
         heading_levels: [1, 2, 3, 4, 5, 6],
         blocks_start_collapsed: false,
         show_links_meta_editor: false,
@@ -3990,21 +3888,17 @@ export default async function (client: Client) {
     appearance: { addons: [], editor: "seo", parameters: {} },
   });
 
-  console.log(
-    'Create fieldset "Hero/Preview" in model "Formazione" (`education_page`)'
-  );
-  newFieldsets["865987"] = await client.fieldsets.create(
-    newItemTypes["2386727"],
-    { title: "Hero/Preview", collapsible: true, start_collapsed: true }
-  );
+  console.log('Create fieldset "Hero/Preview" in model "Formazione" (`education_page`)');
+  newFieldsets["865987"] = await client.fieldsets.create(newItemTypes["2386727"], {
+    title: "Hero/Preview",
+    collapsible: true,
+    start_collapsed: true,
+  });
 
-  console.log(
-    'Create fieldset "Contents" in model "Formazione" (`education_page`)'
-  );
-  newFieldsets["865986"] = await client.fieldsets.create(
-    newItemTypes["2386727"],
-    { title: "Contents" }
-  );
+  console.log('Create fieldset "Contents" in model "Formazione" (`education_page`)');
+  newFieldsets["865986"] = await client.fieldsets.create(newItemTypes["2386727"], {
+    title: "Contents",
+  });
 
   console.log(
     'Create Structured text field "Main Content" (`content`) in model "Formazione" (`education_page`)'
@@ -4016,14 +3910,7 @@ export default async function (client: Client) {
     localized: true,
     validators: {
       structured_text_blocks: {
-        item_types: [
-          "148647",
-          "148653",
-          "148658",
-          "148659",
-          "1530788",
-          "1530790",
-        ],
+        item_types: ["148647", "148653", "148658", "148659", "1530788", "1530790"],
       },
       structured_text_links: {
         on_publish_with_unpublished_references_strategy: "fail",
@@ -4044,22 +3931,8 @@ export default async function (client: Client) {
       addons: [],
       editor: "structured_text",
       parameters: {
-        marks: [
-          "strong",
-          "code",
-          "emphasis",
-          "underline",
-          "strikethrough",
-          "highlight",
-        ],
-        nodes: [
-          "blockquote",
-          "code",
-          "heading",
-          "link",
-          "list",
-          "thematicBreak",
-        ],
+        marks: ["strong", "code", "emphasis", "underline", "strikethrough", "highlight"],
+        nodes: ["blockquote", "code", "heading", "link", "list", "thematicBreak"],
         heading_levels: [1, 2, 3, 4, 5, 6],
         blocks_start_collapsed: false,
         show_links_meta_editor: false,
@@ -4198,26 +4071,20 @@ export default async function (client: Client) {
   console.log(
     'Create fieldset "Hero/Preview" in model "Partner Model" (`partner_model`)'
   );
-  newFieldsets["871995"] = await client.fieldsets.create(
-    newItemTypes["2404420"],
-    { title: "Hero/Preview", collapsible: true }
-  );
+  newFieldsets["871995"] = await client.fieldsets.create(newItemTypes["2404420"], {
+    title: "Hero/Preview",
+    collapsible: true,
+  });
 
-  console.log(
-    'Create fieldset "Contenuti" in model "Partner Model" (`partner_model`)'
-  );
-  newFieldsets["871993"] = await client.fieldsets.create(
-    newItemTypes["2404420"],
-    { title: "Contenuti" }
-  );
+  console.log('Create fieldset "Contenuti" in model "Partner Model" (`partner_model`)');
+  newFieldsets["871993"] = await client.fieldsets.create(newItemTypes["2404420"], {
+    title: "Contenuti",
+  });
 
-  console.log(
-    'Create fieldset "Relazioni" in model "Partner Model" (`partner_model`)'
-  );
-  newFieldsets["871996"] = await client.fieldsets.create(
-    newItemTypes["2404420"],
-    { title: "Relazioni" }
-  );
+  console.log('Create fieldset "Relazioni" in model "Partner Model" (`partner_model`)');
+  newFieldsets["871996"] = await client.fieldsets.create(newItemTypes["2404420"], {
+    title: "Relazioni",
+  });
 
   console.log(
     'Create Structured text field "Contenuto principale" (`content`) in model "Partner Model" (`partner_model`)'
@@ -4248,22 +4115,8 @@ export default async function (client: Client) {
       addons: [],
       editor: "structured_text",
       parameters: {
-        marks: [
-          "strong",
-          "code",
-          "emphasis",
-          "underline",
-          "strikethrough",
-          "highlight",
-        ],
-        nodes: [
-          "blockquote",
-          "code",
-          "heading",
-          "link",
-          "list",
-          "thematicBreak",
-        ],
+        marks: ["strong", "code", "emphasis", "underline", "strikethrough", "highlight"],
+        nodes: ["blockquote", "code", "heading", "link", "list", "thematicBreak"],
         heading_levels: [1, 2, 3, 4, 5, 6],
         blocks_start_collapsed: false,
         show_links_meta_editor: false,
@@ -4564,9 +4417,7 @@ export default async function (client: Client) {
   });
 
   try {
-    console.log(
-      'Create Slug field "Slug" (`slug`) in model "Homepage" (`home`)'
-    );
+    console.log('Create Slug field "Slug" (`slug`) in model "Homepage" (`home`)');
     newFields["754408"] = await client.fields.create("148648", {
       label: "Slug",
       field_type: "slug",
@@ -4836,9 +4687,7 @@ export default async function (client: Client) {
     fieldset: { id: "53365", type: "fieldset" },
   });
 
-  console.log(
-    'Create Multiple links field "Anni" (`years`) in model "Evento" (`event`)'
-  );
+  console.log('Create Multiple links field "Anni" (`years`) in model "Evento" (`event`)');
   newFields["12371614"] = await client.fields.create("148656", {
     label: "Anni",
     field_type: "links",
@@ -4986,9 +4835,7 @@ export default async function (client: Client) {
     title: "Relazioni",
   });
 
-  console.log(
-    'Create Multiple links field "Anni" (`years`) in model "News" (`news`)'
-  );
+  console.log('Create Multiple links field "Anni" (`years`) in model "News" (`news`)');
   newFields["12372265"] = await client.fields.create("148657", {
     label: "Anni",
     field_type: "links",
@@ -5059,12 +4906,12 @@ export default async function (client: Client) {
   });
 
   console.log(
-    'Create Multiple links field "Compagnie" (`comoanies`) in model "News" (`news`)'
+    'Create Multiple links field "Compagnie" (`companies`) in model "News" (`news`)'
   );
   newFields["12372273"] = await client.fields.create("148657", {
     label: "Compagnie",
     field_type: "links",
-    api_key: "comoanies",
+    api_key: "companies",
     validators: {
       items_item_type: {
         on_publish_with_unpublished_references_strategy: "fail",
@@ -5118,9 +4965,7 @@ export default async function (client: Client) {
     fieldset: newFieldsets["865771"],
   });
 
-  console.log(
-    'Create Multiple links field "Eventi" (`events`) in model "News" (`news`)'
-  );
+  console.log('Create Multiple links field "Eventi" (`events`) in model "News" (`news`)');
   newFields["12372279"] = await client.fields.create("148657", {
     label: "Eventi",
     field_type: "links",
@@ -5155,9 +5000,7 @@ export default async function (client: Client) {
     fieldset: { id: "68402", type: "fieldset" },
   });
 
-  console.log(
-    'Create Multiple links field "Anni" (`years`) in model "Rete" (`network`)'
-  );
+  console.log('Create Multiple links field "Anni" (`years`) in model "Rete" (`network`)');
   newFields["12373060"] = await client.fields.create("189821", {
     label: "Anni",
     field_type: "links",
@@ -5235,9 +5078,7 @@ export default async function (client: Client) {
   );
   await client.fields.update("754272", { label: "Info" });
 
-  console.log(
-    'Update Integer number field "Anno" (`year`) in model "Anno" (`year`)'
-  );
+  console.log('Update Integer number field "Anno" (`year`) in model "Anno" (`year`)');
   await client.fields.update("754273", { label: "Anno", position: 3 });
 
   console.log(
@@ -5341,9 +5182,7 @@ export default async function (client: Client) {
     },
   });
 
-  console.log(
-    'Update Slug field "Slug" (`slug`) in model "Menu Item" (`menu_item`)'
-  );
+  console.log('Update Slug field "Slug" (`slug`) in model "Menu Item" (`menu_item`)');
   await client.fields.update("754413", {
     hint: "Viene utilizzato solamente se non c'\u00E8 una pagina associata (link)",
     validators: {
@@ -5394,9 +5233,7 @@ export default async function (client: Client) {
   );
   await client.fields.update("754304", { label: "URL" });
 
-  console.log(
-    'Update SEO meta tags field "SEO" (`seo`) in model "Homepage" (`home`)'
-  );
+  console.log('Update SEO meta tags field "SEO" (`seo`) in model "Homepage" (`home`)');
   await client.fields.update("754312", { position: 1 });
 
   console.log(
@@ -5427,9 +5264,7 @@ export default async function (client: Client) {
     fieldset: newFieldsets["865838"],
   });
 
-  console.log(
-    'Update Slug field "Slug" (`slug`) in model "Progetto" (`project`)'
-  );
+  console.log('Update Slug field "Slug" (`slug`) in model "Progetto" (`project`)');
   await client.fields.update("754415", { position: 2 });
 
   console.log('Update fieldset "Relazioni" in model "Progetto" (`project`)');
@@ -5459,9 +5294,7 @@ export default async function (client: Client) {
     },
   });
 
-  console.log(
-    'Update SEO meta tags field "SEO" (`seo`) in model "Progetto" (`project`)'
-  );
+  console.log('Update SEO meta tags field "SEO" (`seo`) in model "Progetto" (`project`)');
   await client.fields.update("754328", { position: 7 });
 
   console.log(
@@ -5474,9 +5307,7 @@ export default async function (client: Client) {
   );
   await client.fields.update(newFields["12373056"], { position: 3 });
 
-  console.log(
-    'Update fieldset "Date e opzioni" in model "Progetto" (`project`)'
-  );
+  console.log('Update fieldset "Date e opzioni" in model "Progetto" (`project`)');
   await client.fieldsets.update("53354", { title: "Date e opzioni" });
 
   console.log('Update fieldset "Contenuti" in model "Progetto" (`project`)');
@@ -5520,9 +5351,7 @@ export default async function (client: Client) {
     fieldset: newFieldsets["865769"],
   });
 
-  console.log(
-    'Update Slug field "Slug" (`slug`) in model "Workshop" (`workshop`)'
-  );
+  console.log('Update Slug field "Slug" (`slug`) in model "Workshop" (`workshop`)');
   await client.fields.update("754411", { position: 2 });
 
   console.log(
@@ -5600,9 +5429,7 @@ export default async function (client: Client) {
   console.log('Update fieldset "Contenuti" in model "Workshop" (`workshop`)');
   await client.fieldsets.update("53363", { title: "Contenuti", position: 5 });
 
-  console.log(
-    'Update fieldset "Date e opzioni" in model "Workshop" (`workshop`)'
-  );
+  console.log('Update fieldset "Date e opzioni" in model "Workshop" (`workshop`)');
   await client.fieldsets.update("53364", {
     title: "Date e opzioni",
     position: 4,
@@ -5702,14 +5529,10 @@ export default async function (client: Client) {
     },
   });
 
-  console.log(
-    'Update SEO meta tags field "SEO" (`seo`) in model "Evento" (`event`)'
-  );
+  console.log('Update SEO meta tags field "SEO" (`seo`) in model "Evento" (`event`)');
   await client.fields.update("754389", { position: 7 });
 
-  console.log(
-    'Update Multiple links field "Anni" (`years`) in model "Evento" (`event`)'
-  );
+  console.log('Update Multiple links field "Anni" (`years`) in model "Evento" (`event`)');
   await client.fields.update(newFields["12371614"], { position: 2 });
 
   console.log(
@@ -5756,9 +5579,7 @@ export default async function (client: Client) {
   );
   await client.fields.update("754386", { validators: {} });
 
-  console.log(
-    'Update Multiple links field "Tags" (`category`) in model "News" (`news`)'
-  );
+  console.log('Update Multiple links field "Tags" (`category`) in model "News" (`news`)');
   await client.fields.update("754396", {
     label: "Tags",
     position: 0,
@@ -5803,9 +5624,7 @@ export default async function (client: Client) {
   console.log('Update fieldset "Relazioni" in model "News" (`news`)');
   await client.fieldsets.update(newFieldsets["865771"], { position: 6 });
 
-  console.log(
-    'Update SEO meta tags field "SEO" (`seo`) in model "News" (`news`)'
-  );
+  console.log('Update SEO meta tags field "SEO" (`seo`) in model "News" (`news`)');
   await client.fields.update("754398", { position: 7 });
 
   console.log('Update fieldset "Date e opzioni" in model "News" (`news`)');
@@ -5816,9 +5635,7 @@ export default async function (client: Client) {
   );
   await client.fields.update("754397", { validators: {} });
 
-  console.log(
-    'Update Multiple links field "Anni" (`years`) in model "News" (`news`)'
-  );
+  console.log('Update Multiple links field "Anni" (`years`) in model "News" (`news`)');
   await client.fields.update(newFields["12372265"], { position: 1 });
 
   console.log(
@@ -5837,7 +5654,7 @@ export default async function (client: Client) {
   await client.fields.update(newFields["12372271"], { position: 3 });
 
   console.log(
-    'Update Multiple links field "Compagnie" (`comoanies`) in model "News" (`news`)'
+    'Update Multiple links field "Compagnie" (`companies`) in model "News" (`news`)'
   );
   await client.fields.update(newFields["12372273"], { position: 4 });
 
@@ -5851,9 +5668,7 @@ export default async function (client: Client) {
   );
   await client.fields.update(newFields["12372278"], { position: 5 });
 
-  console.log(
-    'Update Multiple links field "Eventi" (`events`) in model "News" (`news`)'
-  );
+  console.log('Update Multiple links field "Eventi" (`events`) in model "News" (`news`)');
   await client.fields.update(newFields["12372279"], { position: 7 });
 
   console.log(
@@ -5884,9 +5699,7 @@ export default async function (client: Client) {
   console.log('Update fieldset "Relazioni" in model "Rete" (`network`)');
   await client.fieldsets.update(newFieldsets["865839"], { position: 6 });
 
-  console.log(
-    'Update SEO meta tags field "SEO" (`seo`) in model "Rete" (`network`)'
-  );
+  console.log('Update SEO meta tags field "SEO" (`seo`) in model "Rete" (`network`)');
   await client.fields.update("965857", { position: 7 });
 
   console.log(
@@ -5913,9 +5726,7 @@ export default async function (client: Client) {
     },
   });
 
-  console.log(
-    'Update Multiple links field "Anni" (`years`) in model "Rete" (`network`)'
-  );
+  console.log('Update Multiple links field "Anni" (`years`) in model "Rete" (`network`)');
   await client.fields.update(newFields["12373060"], { position: 2 });
 
   console.log('Update fieldset "Contenuti" in model "Rete" (`network`)');
@@ -6001,9 +5812,7 @@ export default async function (client: Client) {
     title_field: newFields["12373333"],
   });
 
-  console.log(
-    'Update model "Categoria Media Documento " (`media_document_category`)'
-  );
+  console.log('Update model "Categoria Media Documento " (`media_document_category`)');
   await client.itemTypes.update(newItemTypes["2386225"], {
     // ordering_field: newFields["12373337"],
     title_field: newFields["12373337"],
@@ -6068,9 +5877,7 @@ export default async function (client: Client) {
     title_field: newFields["12373895"],
   });
 
-  console.log(
-    'Update model "Archivio Partner e Reti" (`pertners_networks_archive`)'
-  );
+  console.log('Update model "Archivio Partner e Reti" (`pertners_networks_archive`)');
   await client.itemTypes.update(newItemTypes["2386359"], {
     title_field: newFields["12373898"],
   });

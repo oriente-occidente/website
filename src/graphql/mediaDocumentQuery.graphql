@@ -1,5 +1,5 @@
-query mediaDocumentQuery($id: ItemId, $locale: SiteLocale) {
-  mediaDocument(filter: { id: { eq: $id } }, locale: $locale) {
+query mediaDocumentQuery($slug: String!, $locale: SiteLocale) {
+  mediaDocument(filter: { slug: { eq: $slug } }, locale: $locale) {
     _modelApiKey
     seo: _seoMetaTags {
       ...seoMetaFragment
@@ -34,24 +34,21 @@ query mediaDocumentQuery($id: ItemId, $locale: SiteLocale) {
       title
       size
     }
-    festivalEditions {
-      slug
-      id
-      title
+    # INFO
+    years {
+      ...yearRecordFragment
     }
-    comoanies {
-      slug
-      title
-      id
+    festivalEditions {
+      ...festivalEditionRecordFragment
+    }
+    companies {
+      ...companyRecordFragment
     }
     mediaAuthor {
-      id
-      fullName
+      ...mediaAuthorRecordFragment
     }
     artisticResidencies {
-      id
-      slug
-      title
+      ...artisticResidecyRecordFragment
     }
   }
 }

@@ -18,23 +18,6 @@ query mediaPhotoQuery($id: ItemId, $locale: SiteLocale) {
         ...imgFrag
       }
     }
-    years {
-      year
-      title
-      slug
-      id
-    }
-    festivalEditions {
-      slug
-      id
-      title
-    }
-    artisticResidencies {
-      id
-      title
-      titleHero
-      slug
-    }
     artists {
       slug
       title
@@ -45,19 +28,21 @@ query mediaPhotoQuery($id: ItemId, $locale: SiteLocale) {
       name
       id
     }
-    comoanies {
-      slug
-      title
-      id
+    # INFO
+    years {
+      ...yearRecordFragment
+    }
+    festivalEditions {
+      ...festivalEditionRecordFragment
+    }
+    companies {
+      ...companyRecordFragment
     }
     mediaAuthor {
-      id
-      fullName
+      ...mediaAuthorRecordFragment
     }
     artisticResidencies {
-      id
-      slug
-      title
+      ...artisticResidecyRecordFragment
     }
   }
 }

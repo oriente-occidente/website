@@ -9,7 +9,7 @@ export default function MediaLinks({ data, locale }) {
 
   const keysToExtract = [
     "festivalEditions",
-    "comoanies",
+    "companies",
     "mediaAuthor",
     "artisticResidencies",
   ];
@@ -27,9 +27,7 @@ export default function MediaLinks({ data, locale }) {
 
   return (
     <div className="px-6 lg:px-10">
-      <div className="pb-2 text-xs font-bold uppercase">
-        {translate("year", locale)}
-      </div>
+      <div className="pb-2 text-xs font-bold uppercase">{translate("year", locale)}</div>
       <div className="flex flex-nowrap justify-start pb-4">
         {data.years &&
           data.years.map((y, index, array) => (
@@ -55,25 +53,21 @@ export default function MediaLinks({ data, locale }) {
                     title={y.festivalEditions.title}
                     className="button--with-arrow font-normal"
                   >
-                    <div className="text-xs text-black">
-                      {y.festivalEditions.title}
-                    </div>
+                    <div className="text-xs text-black">{y.festivalEditions.title}</div>
                   </button>
                 </div>
               </div>
-              <div key={y.comoanies.id} className={``}>
+              <div key={y.companies.id} className={``}>
                 <div className="pb-2 text-xs font-bold uppercase">
                   {translate("company", locale)}
                 </div>
                 <div className="flex flex-nowrap justify-start pb-4">
                   <button
                     href="/"
-                    title={y.comoanies.title}
+                    title={y.companies.title}
                     className="button--with-arrow font-normal"
                   >
-                    <div className="text-xs text-black">
-                      {y.comoanies.title}
-                    </div>
+                    <div className="text-xs text-black">{y.companies.title}</div>
                   </button>
                 </div>
               </div>

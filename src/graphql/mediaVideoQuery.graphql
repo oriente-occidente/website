@@ -1,5 +1,5 @@
-query mediaVideoQuery($id: ItemId, $locale: SiteLocale) {
-  mediaVideo(filter: { id: { eq: $id } }, locale: $locale) {
+query mediaVideoQuery($slug: String!, $locale: SiteLocale) {
+  mediaVideo(filter: { slug: { eq: $slug } }, locale: $locale) {
     _modelApiKey
     seo: _seoMetaTags {
       ...seoMetaFragment
@@ -36,24 +36,21 @@ query mediaVideoQuery($id: ItemId, $locale: SiteLocale) {
       provider
       height
     }
-    festivalEditions {
-      slug
-      id
-      title
+    # INFO
+    years {
+      ...yearRecordFragment
     }
-    comoanies {
-      slug
-      title
-      id
+    festivalEditions {
+      ...festivalEditionRecordFragment
+    }
+    companies {
+      ...companyRecordFragment
     }
     mediaAuthor {
-      id
-      fullName
+      ...mediaAuthorRecordFragment
     }
     artisticResidencies {
-      id
-      slug
-      title
+      ...artisticResidecyRecordFragment
     }
   }
 }

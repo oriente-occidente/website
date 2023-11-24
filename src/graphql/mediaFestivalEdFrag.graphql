@@ -1,0 +1,5 @@
+fragment festivalEditionRecordFragment on FestivalEditionRecord {
+  slug
+  id
+  title
+}

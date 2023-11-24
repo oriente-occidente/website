@@ -1,0 +1,5 @@
+fragment artisticResidecyRecordFragment on ArtisticResidecyRecord {
+  id
+  slug
+  title
+}
