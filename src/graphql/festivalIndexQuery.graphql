@@ -1,0 +1,16 @@
+query festivalIndex($locale: SiteLocale!) {
+  festivalIndex: festivalEditionsArchive(locale: $locale) {
+    id
+    title
+    description
+    _modelApiKey
+    __typename
+    seo: _seoMetaTags {
+      ...seoMetaFragment
+    }
+    titles: _allTitleLocales {
+      locale
+      value
+    }
+  }
+}
