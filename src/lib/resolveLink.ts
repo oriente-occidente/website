@@ -79,17 +79,17 @@ export default function resolveLink({
       return `${lp}/${t(`doc`, locale)}/${slug}`;
     case "audio":
       return `${lp}/${t(`audio`, locale)}/${slug}`;
-    case "files_archive":
-      return `${lp}/${t(`archivio`, locale)}/${t(`files`, locale)}`;
-    case "festival_editions_archive":
-      return `${lp}/${t(`archivio`, locale)}/${t(`files`, locale)}`;
-    case "artist_companies_archive":
+    case "artists_companies_archive":
       return `${lp}/${t(`archivio`, locale)}/${t(`files`, locale)}`;
     case "activities_archive":
       return `${lp}/${t(`archivio`, locale)}/${t(`files`, locale)}`;
-    case "news-publications_archive":
+    case "festival_editions_archive":
       return `${lp}/${t(`archivio`, locale)}/${t(`files`, locale)}`;
-    case "partners-networks_archive":
+    case "media_archive":
+      return `${lp}/${t(`archivio`, locale)}/${t(`files`, locale)}`;
+    case "news_publications_archive":
+      return `${lp}/${t(`archivio`, locale)}/${t(`files`, locale)}`;
+    case "partners_networks_archive":
       return `${lp}/${t(`archivio`, locale)}/${t(`files`, locale)}`;
     case "years_archive":
       return `${lp}/${t(`archivio`, locale)}/${t(`timeline`, locale)}`;
