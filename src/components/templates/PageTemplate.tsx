@@ -10,7 +10,6 @@ export default function PageTemplate({ data, locale }: GenericPageProps) {
   const sections = data.sections || [];
   const relatedContents = data.relatedContents || [];
   const otherSections = data.otherSections || [];
-  console.log("hero", hero);
   return (
     <div>
       <GenericHero data={hero} locale={locale} />

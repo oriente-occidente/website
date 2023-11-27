@@ -29,6 +29,7 @@
     "leaflet-defaulticon-compatibility": "^0.1.2",
     "next": "^14.0.1",
     "postcss-import": "^15.1.0",
+    "raf": "^3.4.1",
     "react": "^18",
     "react-awesome-lightbox": "^1.8.1",
     "react-datocms": "^4.1.3",

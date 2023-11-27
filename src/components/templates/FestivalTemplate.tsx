@@ -4,6 +4,7 @@ import { FestivalProgramPageProps } from "@/types";
 import { StructuredText } from "react-datocms";
 import Filters from "@/components/Filters";
 
+import { useEffect, useState } from "react";
 export default function FestivalTemplate({
   data,
   locale,
