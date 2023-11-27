@@ -57,5 +57,40 @@ fragment menuItemFrag on MenuItemRecord {
       title
       _modelApiKey
     }
+    ... on MediaArchiveRecord {
+      id
+      title
+      _modelApiKey
+    }
+    ... on YearsArchiveRecord {
+      id
+      title
+      _modelApiKey
+    }
+    ... on ActivitiesArchiveRecord {
+      id
+      title
+      _modelApiKey
+    }
+    ... on ArtistsCompaniesArchiveRecord {
+      id
+      title
+      _modelApiKey
+    }
+    ... on FestivalEditionsArchiveRecord {
+      id
+      title
+      _modelApiKey
+    }
+    ... on PertnersNetworksArchiveRecord {
+      id
+      title
+      _modelApiKey
+    }
+    ... on NewsPublicationsArchiveRecord {
+      id
+      title
+      _modelApiKey
+    }
   }
 }
