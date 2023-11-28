@@ -8,15 +8,11 @@ const locale = "it";
 export default async function Page({ params }: BasicSlugPageProps) {
   const { isEnabled } = draftMode();
   const siteLocale = locale as SiteLocale;
-  const data = await queryDatoCMS(
+  const { mediaPhoto } = await queryDatoCMS(
     MediaPhotoQueryDocument,
     { locale: siteLocale },
     isEnabled
   );
 
-    console.log(data)
-
-  return (
-      <MediaTemplate data={data.mediaPhoto} _modelApiKey={data.mediaPhoto?._modelApiKey} locale={locale}/>
-  );
+  return <MediaTemplate data={mediaPhoto} locale={locale} />;
 }
