@@ -58,6 +58,7 @@ const labels_it = {
   reservedTextLineOne: "Questo video non è consultabile pubblicamente.",
   reservedTextLineTwo: "Per chiederne l’accesso scrivere all’indirizzo",
   zoom: "Ingrandisci",
-  goToContents: "Vai al contenuto"
+  goToContents: "Vai al contenuto",
+  documentSize: "Dimensioni del documento"
 };
 export default labels_it;

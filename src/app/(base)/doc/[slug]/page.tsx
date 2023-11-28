@@ -1,13 +1,18 @@
 import { draftMode } from "next/headers";
 import type { BasicSlugPageProps } from "@/types";
+import MediaTemplate from "@/components/templates/MediaTemplate";
+import { MediaDocumentQueryDocument, SiteLocale } from "@/graphql/generated";
+import queryDatoCMS from "@/lib/fetchDato";
+
 const locale = "it";
-export default function Page({ params }: BasicSlugPageProps) {
-  return (
-    <div>
-      <div className="text-xl">
-        My slug page: {params.slug} - {locale}
-      </div>
-      <div>LOCALE:{locale}</div>
-    </div>
+export default async function Page({ params }: BasicSlugPageProps) {
+  const { isEnabled } = draftMode();
+  const siteLocale = locale as SiteLocale;
+  const { mediaDocument } = await queryDatoCMS(
+    MediaDocumentQueryDocument,
+    { slug: params.slug },
+    isEnabled
   );
+
+  return <MediaTemplate data={mediaDocument} locale={locale} />;
 }

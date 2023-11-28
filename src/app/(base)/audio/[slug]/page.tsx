@@ -8,13 +8,13 @@ const locale = "it";
 export default async function Page({ params }: BasicSlugPageProps) {
   const { isEnabled } = draftMode();
   const siteLocale = locale as SiteLocale;
-  const data = await queryDatoCMS(
+  const { mediaAudio } = await queryDatoCMS(
     MediaAudioQueryDocument,
     { slug: params.slug },
     isEnabled
   );
 
   return (
-      <MediaTemplate data={data.mediaAudio} _modelApiKey={data.mediaAudio?._modelApiKey} locale={locale}/>
+      <MediaTemplate data={mediaAudio} locale={locale}/>
   );
 }

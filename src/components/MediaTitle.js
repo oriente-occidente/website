@@ -1,5 +1,5 @@
-import { PaperClipIcon } from "@heroicons/react/outline";
-import { VideoCameraIcon } from "@heroicons/react/outline";
+import { PaperClipIcon } from "@heroicons/react/24/outline";
+import { VideoCameraIcon } from "@heroicons/react/24/outline";
 import translate from "@/lib/locales";
 import { MusicalNoteIcon } from "@heroicons/react/20/solid";
 
