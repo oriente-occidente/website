@@ -1,7 +1,7 @@
 "use client";
 import { Image as DatoImage } from "react-datocms";
 import Link from "next/link";
-import { MapPinIcon, CalendarIcon } from "@heroicons/react/24/outline";
+import { MapPinIcon, LocationMarkerIcon, CalendarIcon } from "@heroicons/react/24/outline";
 import { groupDatesByDay } from "@/lib/utils";
 import resolveLink from "@/lib/resolveLink";
 
@@ -27,7 +27,7 @@ function StandardCard({ data, locale, categoryTitle = "" }) {
                 <span className="font-light capitalize md:pr-1">{str}</span>
               </div>
             ))}
-            {data._modelApiKey=="project" || "network" ? <div className="font-light">{year}</div> : ""}
+            {/* {data._modelApiKey=="project" || "network" ? <div className="font-light">{year}</div> : ""} */}
             {data.location && (
               <div className="hidden items-center gap-x-2 md:flex">
                 <MapPinIcon aria-hidden="true" className="h-4 w-4" />
@@ -39,7 +39,7 @@ function StandardCard({ data, locale, categoryTitle = "" }) {
             {data.tags && data.tags.map((tag)=><div key={tag.id}>{tag.title}</div>)}
           </div>
           {image != null ? (
-            <div className="relative h-[220px] overflow-hidden md:h-[360px]">
+            <div className="relative overflow-hidden ">
               <DatoImage
                 className="duration-300 group-hover:scale-105"
                 data={image.responsiveImage}
@@ -51,9 +51,8 @@ function StandardCard({ data, locale, categoryTitle = "" }) {
           <div className="absolute bottom-0 left-0 right-0 z-10 h-[65px] bg-gradient-to-t from-black/80 to-transparent md:h-52"></div>
           <div className="absolute top-0 left-0 right-0 z-10 hidden h-48 bg-gradient-to-b from-black/80 to-transparent md:block"></div>
         </div>
-       
-        <div className="z-20 pt-2">
-          <h2 className={`${data._modelApiKey=="project" || "network"? "font-semibold" : ""} text-sm uppercase text-black-light md:text-base`}>
+        <div className="z-20 absolute md:top-6 md:left-8">
+          <h2 className={`${data._modelApiKey == "project" || "network" ? "font-semibold" : ""} group-hover:text-red mt-2 text-sm font-semibold uppercase text-black duration-300 md:text-lg md:text-white`}>
             {data.title}
           </h2>
           {data.authors && (
@@ -95,6 +94,7 @@ function StandardCard({ data, locale, categoryTitle = "" }) {
         )}
       </Link>
     </div>
+
   );
 }
 
