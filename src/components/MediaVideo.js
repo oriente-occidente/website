@@ -38,7 +38,7 @@ export default function MediaVideo ({data, locale}){
           </div>
         </>
       ) : (
-        <div className="aspect-video">
+        <div className="aspect-video pb-8">
           <VideoEmbedded video={data.video} locale={locale} />
         </div>
       )}

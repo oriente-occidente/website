@@ -1,6 +1,7 @@
 query mediaVideoQuery($slug: String!, $locale: SiteLocale) {
   mediaVideo(filter: { slug: { eq: $slug } }, locale: $locale) {
     _modelApiKey
+    isReserved
     seo: _seoMetaTags {
       ...seoMetaFragment
     }

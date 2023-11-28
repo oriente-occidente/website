@@ -6,8 +6,6 @@ import AudioPlayer, { RHAP_UI } from "react-h5-audio-player";
 import "react-h5-audio-player/lib/styles.css";
 
 export default function MediaAudioPlayer({ data, locale }) {
-
-  console.log("MEDIA AUDIO PLAYER", data.audioFiles)
   return (
     <div className="audio-player grid grid-cols-1 justify-start px-6 lg:px-10">
       {data.audioFiles &&
