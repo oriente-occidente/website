@@ -12,7 +12,7 @@ const config: Config = {
         red: {
           DEFAULT: "#e64011",
           alt: "#D83D35",
-          light: "#FFF5F5"
+          light: "#FFF5F5",
         },
         black: {
           DEFAULT: "#000000",

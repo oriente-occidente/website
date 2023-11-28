@@ -6,10 +6,15 @@
 @layer base {
   html {
     font-family: "Work Sans", sans-serif;
+    @apply scroll-smooth md:scroll-pt-32;
   }
 }
 
 @layer components {
+  .skip-link {
+    @apply absolute left-1/2 z-50 -translate-x-1/2 -translate-y-full bg-black px-3 py-2 text-white duration-500 hover:bg-gray-dark focus:translate-y-0;
+  }
+
   .h1 {
     @apply py-2 text-base font-semibold uppercase lg:py-4 lg:text-2xl;
   }
@@ -280,10 +285,6 @@
 
     .custom-nth-child:nth-child(3n + 1) {
       margin-left: 0;
-    }
-
-    .skip-link {
-      @apply absolute left-1/2 z-50 -translate-x-1/2 -translate-y-full bg-black px-3 py-2 text-white duration-500 hover:bg-gray-dark focus:translate-y-0;
     }
 
     .swiper-notification {
