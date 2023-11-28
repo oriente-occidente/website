@@ -1,0 +1,252 @@
+query timelineQuery($locale: SiteLocale) {
+  allYears(orderBy: year_DESC, locale: $locale) {
+    id
+    year
+    slug
+    __typename
+    _modelApiKey
+    festivalCount: _allReferencingFestivalEditionsMeta {
+      count
+    }
+    festival: _allReferencingFestivalEditions(
+      first: "6"
+      filter: { poster: { neq: null } }
+    ) {
+      id
+      slug
+      poster {
+        id
+        title
+        image {
+          id
+          title
+          alt
+          url
+          responsiveImage(
+            sizes: "(max-width: 1023px) 100vw, (min-width: 1024px) 80vw, 1400px"
+            imgixParams: { auto: [format, compress], ar: "14:8", fit: crop }
+          ) {
+            ...imgFrag
+          }
+        }
+      }
+    }
+    artistsCount: _allReferencingArtistsMeta {
+      count
+    }
+    artists: _allReferencingArtists(first: "6", filter: { slug: { neq: null } }) {
+      _allReferencingCompanies {
+        id
+      }
+      id
+      slug
+      imageHero {
+        id
+        title
+        alt
+        url
+        responsiveImage(
+          sizes: "(max-width: 1023px) 100vw, (min-width: 1024px) 80vw, 1400px"
+          imgixParams: { auto: [format, compress], ar: "14:8", fit: crop }
+        ) {
+          ...imgFrag
+        }
+      }
+    }
+    eventsCount: _allReferencingEventsMeta {
+      count
+    }
+    events: _allReferencingEvents(first: "6", filter: { slug: { neq: null } }) {
+      id
+      slug
+      imageHero {
+        id
+        title
+        alt
+        url
+        responsiveImage(
+          sizes: "(max-width: 1023px) 100vw, (min-width: 1024px) 80vw, 1400px"
+          imgixParams: { auto: [format, compress], ar: "14:8", fit: crop }
+        ) {
+          ...imgFrag
+        }
+      }
+    }
+    workshopsCount: _allReferencingWorkshopsMeta {
+      count
+    }
+    workshops: _allReferencingWorkshops(first: "6", filter: { slug: { neq: null } }) {
+      id
+      slug
+      imageHero {
+        id
+        title
+        alt
+        url
+        responsiveImage(
+          sizes: "(max-width: 1023px) 100vw, (min-width: 1024px) 80vw, 1400px"
+          imgixParams: { auto: [format, compress], ar: "14:8", fit: crop }
+        ) {
+          ...imgFrag
+        }
+      }
+    }
+    artisticResidenciesCount: _allReferencingArtisticResideciesMeta {
+      count
+    }
+    artisticResidencies: _allReferencingArtisticResidecies(
+      first: "6"
+      filter: { slug: { neq: null } }
+    ) {
+      id
+      slug
+      imageHero {
+        id
+        title
+        alt
+        url
+        responsiveImage(
+          sizes: "(max-width: 1023px) 100vw, (min-width: 1024px) 80vw, 1400px"
+          imgixParams: { auto: [format, compress], ar: "14:8", fit: crop }
+        ) {
+          ...imgFrag
+        }
+      }
+    }
+    projectsCount: _allReferencingProjectsMeta {
+      count
+    }
+    projects: _allReferencingProjects(first: "6", filter: { slug: { neq: null } }) {
+      id
+      slug
+      imageHero {
+        id
+        title
+        alt
+        url
+        responsiveImage(
+          sizes: "(max-width: 1023px) 100vw, (min-width: 1024px) 80vw, 1400px"
+          imgixParams: { auto: [format, compress], ar: "14:8", fit: crop }
+        ) {
+          ...imgFrag
+        }
+      }
+    }
+    newsCount: _allReferencingNewsMeta {
+      count
+    }
+    news: _allReferencingNews(first: "6", filter: { slug: { neq: null } }) {
+      id
+      slug
+      imageHero {
+        id
+        title
+        alt
+        url
+        responsiveImage(
+          sizes: "(max-width: 1023px) 100vw, (min-width: 1024px) 80vw, 1400px"
+          imgixParams: { auto: [format, compress], ar: "14:8", fit: crop }
+        ) {
+          ...imgFrag
+        }
+      }
+    }
+    publicationsCount: _allReferencingPublicationsMeta {
+      count
+    }
+    publications: _allReferencingPublications(
+      first: "6"
+      filter: { slug: { neq: null } }
+    ) {
+      id
+      slug
+      imageHero {
+        id
+        title
+        alt
+        url
+        responsiveImage(
+          sizes: "(max-width: 1023px) 100vw, (min-width: 1024px) 80vw, 1400px"
+          imgixParams: { auto: [format, compress], ar: "14:8", fit: crop }
+        ) {
+          ...imgFrag
+        }
+      }
+    }
+    mediaAudiosCount: _allReferencingMediaAudiosMeta {
+      count
+    }
+    mediaPhotosCount: _allReferencingMediaPhotosMeta {
+      count
+    }
+    mediaPhotos: _allReferencingMediaPhotos(first: "6") {
+      id
+      image {
+        id
+        title
+        alt
+        url
+        responsiveImage(
+          sizes: "(max-width: 1023px) 100vw, (min-width: 1024px) 80vw, 1400px"
+          imgixParams: { auto: [format, compress], ar: "14:8", fit: crop }
+        ) {
+          ...imgFrag
+        }
+      }
+    }
+    mediaVideosCount: _allReferencingMediaVideosMeta {
+      count
+    }
+    mediaVideos: _allReferencingMediaVideos(first: "6", filter: { slug: { neq: null } }) {
+      id
+      slug
+      title
+      image {
+        id
+        title
+        alt
+        url
+        responsiveImage(
+          sizes: "(max-width: 1023px) 100vw, (min-width: 1024px) 80vw, 1400px"
+          imgixParams: { auto: [format, compress], ar: "14:8", fit: crop }
+        ) {
+          ...imgFrag
+        }
+      }
+    }
+    mediaDocumentsCount: _allReferencingMediaDocumentsMeta {
+      count
+    }
+    mediaDocuments: _allReferencingMediaDocuments(
+      first: "6"
+      filter: { slug: { neq: null } }
+    ) {
+      id
+      image {
+        id
+        title
+        alt
+        url
+        responsiveImage(
+          sizes: "(max-width: 1023px) 100vw, (min-width: 1024px) 80vw, 1400px"
+          imgixParams: { auto: [format, compress], ar: "14:8", fit: crop }
+        ) {
+          ...imgFrag
+        }
+      }
+    }
+  }
+  yearsArchive {
+    id
+    title
+    __typename
+    _modelApiKey
+    seo: _seoMetaTags {
+      ...seoMetaFragment
+    }
+    titles: _allTitleLocales {
+      locale
+      value
+    }
+  }
+}
