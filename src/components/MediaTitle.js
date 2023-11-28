@@ -1,15 +1,15 @@
 import { PaperClipIcon } from "@heroicons/react/outline";
-import { MusicNoteIcon } from "@heroicons/react/outline";
 import { VideoCameraIcon } from "@heroicons/react/outline";
 import translate from "@/lib/locales";
+import { MusicalNoteIcon } from "@heroicons/react/20/solid";
 
 export default function MediaTitle({ _modelApyKey, data, locale }) {
   return <div className="px-10">
-    <div className="flex items-center gap-2 text-sm text-[#D83D35]">
+    <div className="flex items-center gap-2 text-sm text-red-alt">
       {_modelApyKey == "media_document" ? (
         <PaperClipIcon aria-hidden="true" className="h-5 w-5" color="#D83D35" />
       ) : _modelApyKey == "media_audio" ? (
-        <MusicNoteIcon aria-hidden="true" className="h-5 w-5" color="#D83D35" />
+        <MusicalNoteIcon aria-hidden="true" className="h-5 w-5" color="#D83D35" />
       ) : (
         <VideoCameraIcon
           aria-hidden="true"

@@ -1,24 +1,29 @@
-import { PlayIcon } from "@heroicons/react/outline";
-import { PauseIcon } from "@heroicons/react/solid";
-import { VolumeUpIcon } from "@heroicons/react/outline";
-import { VolumeOffIcon } from "@heroicons/react/outline";
+import { PlayCircleIcon } from "@heroicons/react/24/outline";
+import { PauseIcon } from "@heroicons/react/24/outline";
+import { SpeakerWaveIcon } from "@heroicons/react/24/outline";
+import { SpeakerXMarkIcon } from "@heroicons/react/24/outline";
 import AudioPlayer, { RHAP_UI } from "react-h5-audio-player";
 import "react-h5-audio-player/lib/styles.css";
 
 export default function MediaAudioPlayer({ data, locale }) {
+
+  console.log("MEDIA AUDIO PLAYER", data.audioFiles)
   return (
     <div className="audio-player grid grid-cols-1 justify-start px-6 lg:px-10">
       {data.audioFiles &&
         data.audioFiles.map((el) => (
           <div
             key={el.id}
-            className="col-span-1 border-t border-[#D83D35] py-8 md:flex md:justify-between"
+            className="col-span-1 border-t border-red-alt py-8 md:flex md:justify-between"
           >
             <div>
               <div className="w-full pb-1 text-sm font-bold uppercase">
                 {el.title}
               </div>
-              <div className="pb-4 text-xs">{el.author}</div>
+              {data.mediaAuthor &&
+                data.mediaAuthor.map((author) => (
+                  <div key={author.id} className="pb-4 text-xs">{author.fullName}</div>
+                ))}
             </div>
             <div className="col-span-1 flex h-auto justify-center">
               <AudioPlayer
@@ -39,7 +44,7 @@ export default function MediaAudioPlayer({ data, locale }) {
                 ]}
                 customIcons={{
                   play: (
-                    <PlayIcon
+                    <PlayCircleIcon
                       aria-hidden="true"
                       className="absolute h-12 w-12 sm:h-[60px] sm:w-[60px]"
                       color="#D83D35"
@@ -53,13 +58,13 @@ export default function MediaAudioPlayer({ data, locale }) {
                     />
                   ),
                   volume: (
-                    <VolumeUpIcon
+                    <SpeakerWaveIcon
                       aria-hidden="true"
                       className="absolute h-5 w-5"
                     />
                   ),
                   volumeMute: (
-                    <VolumeOffIcon
+                    <SpeakerXMarkIcon
                       aria-hidden="true"
                       className="absolute h-5 w-5"
                     />
