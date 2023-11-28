@@ -13,7 +13,14 @@ query mediaPhotoQuery($id: ItemId, $locale: SiteLocale) {
       url
       responsiveImage(
         sizes: "(max-width: 1023px) 100vw, (min-width: 1024px) 80vw, 1400px"
-        imgixParams: { auto: [format, compress], ar: "14:8", fit: crop }
+        imgixParams: {
+          auto: [format, compress]
+          ar: "14:8"
+          fit: crop
+          mark: "https://www.datocms-assets.com/55129/1701094962-watermark_50_oo_rifilato.png"
+          markAlign: [middle, center]
+          markScale: 25
+        }
       ) {
         ...imgFrag
       }

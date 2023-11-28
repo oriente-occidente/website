@@ -1,4 +1,4 @@
-import DownloadButton from "components/DownloadButton";
+import DownloadButton from "@/components/DownloadButton";
 
 export default function MediaDownload ({attachment, locale}){
     return <div className="grid grid-cols-1 px-6 lg:px-10">

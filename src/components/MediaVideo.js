@@ -1,6 +1,6 @@
-import VideoEmbedded from "components/VideoEmbedded";
+import VideoEmbedded from "@/components/video/VideoEmbedded";
 import Link from "next/link";
-import translate from "lib/locales";
+import translate from "@/lib/locales";
 
 export default function MediaVideo ({data, locale}){
     return <>

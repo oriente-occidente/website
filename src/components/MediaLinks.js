@@ -1,5 +1,5 @@
 import Link from "next/link";
-import translate from "lib/locales";
+import translate from "@/lib/locales";
 
 export default function MediaLinks({ data, locale }) {
   const yearsNumber = data.years.length;
@@ -27,7 +27,9 @@ export default function MediaLinks({ data, locale }) {
 
   return (
     <div className="px-6 lg:px-10">
-      <div className="pb-2 text-xs font-bold uppercase">{translate("year", locale)}</div>
+      <div className="pb-2 text-xs font-bold uppercase">
+        {translate("year", locale)}
+      </div>
       <div className="flex flex-nowrap justify-start pb-4">
         {data.years &&
           data.years.map((y, index, array) => (
@@ -43,7 +45,7 @@ export default function MediaLinks({ data, locale }) {
         {extractedData.map((y, index) => (
           <>
             <div className={`col-span-1 col-start-${index + 1}`}>
-              <div key={y.festivalEditions.id} className="">
+            {y.festivalEditions?.id && (<div key={y.festivalEditions.id} className="">
                 <div className="pb-2 text-xs font-bold uppercase">
                   {translate("festival", locale)}
                 </div>
@@ -53,25 +55,32 @@ export default function MediaLinks({ data, locale }) {
                     title={y.festivalEditions.title}
                     className="button--with-arrow font-normal"
                   >
-                    <div className="text-xs text-black">{y.festivalEditions.title}</div>
+                    <div className="text-xs text-black">
+                      {y.festivalEditions.title}
+                    </div>
                   </button>
                 </div>
-              </div>
-              <div key={y.companies.id} className={``}>
-                <div className="pb-2 text-xs font-bold uppercase">
-                  {translate("company", locale)}
+              </div>)}
+              {y.companies?.id && (
+                <div key={y.companies.id}>
+                  <div className="pb-2 text-xs font-bold uppercase">
+                    {translate("company", locale)}
+                  </div>
+                  <div className="flex flex-nowrap justify-start pb-4">
+                    <button
+                      href="/"
+                      title={y.companies.title}
+                      className="button--with-arrow font-normal"
+                    >
+                      <div className="text-xs text-black">
+                        {y.companies.title}
+                      </div>
+                    </button>
+                  </div>
                 </div>
-                <div className="flex flex-nowrap justify-start pb-4">
-                  <button
-                    href="/"
-                    title={y.companies.title}
-                    className="button--with-arrow font-normal"
-                  >
-                    <div className="text-xs text-black">{y.companies.title}</div>
-                  </button>
-                </div>
-              </div>
-              <div key={y.artisticResidencies.id} className={``}>
+              )}
+             {y.artisticResidencies?.id && (
+              <div key={y.artisticResidencies.id}>
                 <div className="pb-2 text-xs font-bold uppercase">
                   {translate("residence", locale)}
                 </div>
@@ -86,7 +95,8 @@ export default function MediaLinks({ data, locale }) {
                     </div>
                   </button>
                 </div>
-              </div>
+              </div>)}
+              {y.mediaAuthor?.id && (
               <div key={y.mediaAuthor.id} className="md:cols-span-1">
                 <div className="pb-2 text-xs font-bold uppercase">
                   {translate("author", locale)}
@@ -97,10 +107,12 @@ export default function MediaLinks({ data, locale }) {
                     title={y.mediaAuthor.fullName}
                     className="button--with-arrow font-normal"
                   >
-                    <div className="text-xs text-black">{y.mediaAuthor.fullName}</div>
+                    <div className="text-xs text-black">
+                      {y.mediaAuthor.fullName}
+                    </div>
                   </button>
                 </div>
-              </div>
+              </div>)}
             </div>
           </>
         ))}

@@ -1,7 +1,7 @@
 import { PaperClipIcon } from "@heroicons/react/outline";
 import { MusicNoteIcon } from "@heroicons/react/outline";
 import { VideoCameraIcon } from "@heroicons/react/outline";
-import translate from "lib/locales";
+import translate from "@/lib/locales";
 
 export default function MediaTitle({ _modelApyKey, data, locale }) {
   return <div className="px-10">
