@@ -80,20 +80,25 @@ export default function resolveLink({
     case "audio":
       return `${lp}/${t(`audio`, locale)}/${slug}`;
     case "artists_companies_archive":
-      return `${lp}/${t(`archivio`, locale)}/${t(`files`, locale)}`;
+      return `${lp}/${t(`archivio`, locale)}/${t(`artisti-compagnie`, locale)}`;
     case "activities_archive":
-      return `${lp}/${t(`archivio`, locale)}/${t(`files`, locale)}`;
+      return `${lp}/${t(`archivio`, locale)}/${t(`attivita`, locale)}`;
     case "festival_editions_archive":
-      return `${lp}/${t(`archivio`, locale)}/${t(`files`, locale)}`;
+      return `${lp}/${t(`archivio`, locale)}/${t(`fifestivalles`, locale)}`;
     case "media_archive":
       return `${lp}/${t(`archivio`, locale)}/${t(`files`, locale)}`;
     case "news_publications_archive":
-      return `${lp}/${t(`archivio`, locale)}/${t(`files`, locale)}`;
+      return `${lp}/${t(`archivio`, locale)}/${t(
+        `news-pubblicazioni`,
+        locale
+      )}`;
     case "partners_networks_archive":
-      return `${lp}/${t(`archivio`, locale)}/${t(`files`, locale)}`;
+      return `${lp}/${t(`archivio`, locale)}/${t(`partner-reti`, locale)}`;
     case "years_archive":
       return `${lp}/${t(`archivio`, locale)}/${t(`timeline`, locale)}`;
     default:
       return `${lp}/${slug ? slug : ""}`;
   }
 }
+
+
