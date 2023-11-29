@@ -257,6 +257,7 @@ query timelineQuery($locale: SiteLocale) {
   yearsArchive(locale: $locale) {
     id
     title
+    description
     __typename
     _modelApiKey
     seo: _seoMetaTags {
