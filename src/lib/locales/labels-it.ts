@@ -49,9 +49,9 @@ const labels_it = {
   back: "Torna indietro",
   no_events: "Nessun workshop trovato in questa categoria",
   festival: "Festival",
-  company: "Compagnia", 
+  company: "Compagnia",
   residence: "Residenza",
-  author:"Autore", 
+  author: "Autore",
   document: "Documento",
   audio: "Audio",
   video: "Video",
@@ -59,6 +59,7 @@ const labels_it = {
   reservedTextLineTwo: "Per chiederne l’accesso scrivere all’indirizzo",
   zoom: "Ingrandisci",
   goToContents: "Vai al contenuto",
-  documentSize: "Dimensioni del documento"
+  documentSize: "Dimensioni del documento",
+  program: "Programma",
 };
 export default labels_it;

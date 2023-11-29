@@ -49,17 +49,18 @@ const labels_en = {
   view_all: "View all",
   back: "Back",
   no_events: "No workshops found in this category",
-  festival: "Festival", 
-  company: "Company", 
+  festival: "Festival",
+  company: "Company",
   residence: "Residence",
-  author:"Author", 
-  document: "Document",  
+  author: "Author",
+  document: "Document",
   audio: "Audio",
   video: "Video",
   reservedTextLineOne: "This video is not publicly available.",
   reservedTextLineTwo: "To request access, send an email to",
   zoom: "Zoom",
   goToContents: "Go to content",
-  documentSize: "Document size"
+  documentSize: "Document size",
+  program: "Program",
 };
 export default labels_en;

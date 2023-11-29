@@ -7,11 +7,7 @@ import resolveLink from "@/lib/resolveLink";
 import translate from "@/lib/locales";
 import Newsletter from "@/components/layout/Newsletter";
 
-export default function Footer({
-  locale,
-  data,
-  hideNewsletter = false,
-}: FooterProps) {
+export default function Footer({ locale, data, hideNewsletter = false }: FooterProps) {
   return (
     <>
       <footer id="footer" data-datocms-noindex aria-labelledby="footer-heading">
@@ -39,9 +35,7 @@ export default function Footer({
                     dangerouslySetInnerHTML={{ __html: data.info }}
                   />
                   <div className="mb-8 border-b border-gray-200 pb-8 md:border-0">
-                    <p className="text-xxs mb-2 uppercase text-black">
-                      Social Media
-                    </p>
+                    <p className="text-xxs mb-2 uppercase text-black">Social Media</p>
                     <div className="flex space-x-3 ">
                       {data?.socials?.map((item: any) => {
                         return (
@@ -49,9 +43,7 @@ export default function Footer({
                             <Link
                               href={item.link}
                               target="_blank"
-                              title={`${translate("externaLink", locale)} ${
-                                item.title
-                              }`}
+                              title={`${translate("externaLink", locale)} ${item.title}`}
                               className="text-black hover:text-gray-400"
                             >
                               <span className="sr-only">{item.title}</span>
@@ -86,7 +78,9 @@ export default function Footer({
                               title={`Link to ${item.title}`}
                               className="text-xxs text-black-light tracking-widest hover:text-black"
                             >
-                              {item.title}
+                              {item._modelApiKey == "festival_edition"
+                                ? translate("program", locale)
+                                : item.title}
                             </Link>
                           </li>
                         ))}

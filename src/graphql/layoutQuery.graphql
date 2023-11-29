@@ -50,11 +50,28 @@ query layout($locale: SiteLocale) {
       id
       title
       links {
-        id
-        slug
-        _modelApiKey
-        title
-        section
+        ... on PageRecord {
+          id
+          slug
+          title
+          _modelApiKey
+        }
+        ... on FestivalEditionRecord {
+          id
+          title
+          slug
+          _modelApiKey
+        }
+        ... on ArtistsIndexRecord {
+          id
+          title
+          _modelApiKey
+        }
+        ... on EventsIndexRecord {
+          id
+          title
+          _modelApiKey
+        }
       }
     }
     links {
