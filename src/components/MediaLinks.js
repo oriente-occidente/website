@@ -45,7 +45,7 @@ export default function MediaLinks({ data, locale }) {
       <div className={`grid grid-cols-1 ${gridColums}`}>
         {extractedData.map((y, index) => (
           <>
-            <div className={`col-span-1 col-start-${index + 1}`}>
+            <div className={`col-span-1 col-start-${index + 1} mr-3`}>
             {y.festivalEditions?.id && (<div key={y.festivalEditions.id} className="">
                 <div className="pb-2 text-xs font-bold uppercase">
                   {translate("festival", locale)}

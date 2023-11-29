@@ -61,5 +61,6 @@ const labels_it = {
   goToContents: "Vai al contenuto",
   documentSize: "Dimensioni del documento",
   program: "Programma",
+  news: "News"
 };
 export default labels_it;
