@@ -5,6 +5,7 @@ query timelineQuery($locale: SiteLocale) {
     slug
     __typename
     _modelApiKey
+    # FESTIVAL
     festivalCount: _allReferencingFestivalEditionsMeta {
       count
     }
@@ -31,10 +32,11 @@ query timelineQuery($locale: SiteLocale) {
         }
       }
     }
+    # ARTISTS / COMPANIES
     artistsCount: _allReferencingArtistsMeta {
       count
     }
-    artists: _allReferencingArtists(first: "6", filter: { slug: { neq: null } }) {
+    artists: _allReferencingArtists(filter: { slug: { neq: null } }) {
       _allReferencingCompanies {
         id
       }
@@ -53,10 +55,11 @@ query timelineQuery($locale: SiteLocale) {
         }
       }
     }
+    # ACTIVITIES
     eventsCount: _allReferencingEventsMeta {
       count
     }
-    events: _allReferencingEvents(first: "6", filter: { slug: { neq: null } }) {
+    events: _allReferencingEvents(first: "2", filter: { slug: { neq: null } }) {
       id
       slug
       imageHero {
@@ -75,7 +78,7 @@ query timelineQuery($locale: SiteLocale) {
     workshopsCount: _allReferencingWorkshopsMeta {
       count
     }
-    workshops: _allReferencingWorkshops(first: "6", filter: { slug: { neq: null } }) {
+    workshops: _allReferencingWorkshops(first: "2", filter: { slug: { neq: null } }) {
       id
       slug
       imageHero {
@@ -95,7 +98,7 @@ query timelineQuery($locale: SiteLocale) {
       count
     }
     artisticResidencies: _allReferencingArtisticResidecies(
-      first: "6"
+      first: "2"
       filter: { slug: { neq: null } }
     ) {
       id
@@ -116,7 +119,7 @@ query timelineQuery($locale: SiteLocale) {
     projectsCount: _allReferencingProjectsMeta {
       count
     }
-    projects: _allReferencingProjects(first: "6", filter: { slug: { neq: null } }) {
+    projects: _allReferencingProjects(first: "2", filter: { slug: { neq: null } }) {
       id
       slug
       imageHero {
@@ -132,6 +135,7 @@ query timelineQuery($locale: SiteLocale) {
         }
       }
     }
+    # NEWS
     newsCount: _allReferencingNewsMeta {
       count
     }
@@ -235,8 +239,22 @@ query timelineQuery($locale: SiteLocale) {
         }
       }
     }
+    partnersCount: _allReferencingPartnerModelsMeta {
+      count
+    }
+    networksCount: _allReferencingNetworksMeta {
+      count
+    }
+    networks: _allReferencingNetworks(first: "6", filter: { slug: { neq: null } }) {
+      id
+      title
+      imageHero {
+        id
+      }
+    }
   }
-  yearsArchive {
+  # INDEX
+  yearsArchive(locale: $locale) {
     id
     title
     __typename
@@ -248,5 +266,35 @@ query timelineQuery($locale: SiteLocale) {
       locale
       value
     }
+  }
+  festivalEditionsArchive(locale: $locale) {
+    id
+    __typename
+    _modelApiKey
+  }
+  artistsCompaniesArchive(locale: $locale) {
+    id
+    __typename
+    _modelApiKey
+  }
+  activitiesArchive(locale: $locale) {
+    id
+    __typename
+    _modelApiKey
+  }
+  newsPublicationsArchive(locale: $locale) {
+    id
+    __typename
+    _modelApiKey
+  }
+  pertnersNetworksArchive(locale: $locale) {
+    id
+    __typename
+    _modelApiKey
+  }
+  mediaArchive(locale: $locale) {
+    id
+    __typename
+    _modelApiKey
   }
 }

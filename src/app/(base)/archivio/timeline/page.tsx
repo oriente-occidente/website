@@ -3,6 +3,9 @@ import GenericHero from "@/components/hero/GenericHero";
 import Link from "next/link";
 import { ArrowLongRightIcon } from "@heroicons/react/24/solid";
 import Image from "next/image";
+import queryDatoCMS from "@/lib/fetchDato";
+import { SiteLocale, TimelineQueryDocument, ArtistRecord } from "@/graphql/generated";
+import resolveLink from "@/lib/resolveLink";
 
 const locale = "it";
 
@@ -128,7 +131,102 @@ const hero = {
   descriptionHero:
     "Scopri la storia di 40 anni  di Oriente Occidente etc etc un testo che vada alemeno su un paio di righe che introduca la pagina",
 };
-export default function Page() {
+
+function companiesCount(data: any) {
+  let companies: string[] = [];
+  data.map((artist: ArtistRecord) => {
+    artist._allReferencingCompanies.forEach((c) => {
+      if (!companies.includes(c.id)) {
+        companies.push(c.id);
+      }
+    });
+  });
+  return companies.length;
+}
+
+export default async function Page() {
+  const { isEnabled } = draftMode();
+  const siteLocale = locale as SiteLocale;
+
+  const data = await queryDatoCMS(
+    TimelineQueryDocument,
+    { locale: siteLocale },
+    isEnabled
+  );
+
+  const page: any = data?.yearsArchive || null;
+  let timelineData: any = [];
+
+  data?.allYears.map((y) => {
+    let year = {
+      year: y.year,
+      festival: {
+        slug: resolveLink({
+          _modelApiKey: data?.festivalEditionsArchive?._modelApiKey || "",
+          locale,
+          slug: "",
+        }),
+        count: y.festivalCount.count,
+        images: y.festival,
+      },
+      artitstCompanies: {
+        slug: resolveLink({
+          _modelApiKey: data?.artistsCompaniesArchive?._modelApiKey || "",
+          locale,
+          slug: "",
+        }),
+        count: y.artistsCount.count + companiesCount(y.artists),
+        images: y.artists,
+      },
+      activities: {
+        slug: resolveLink({
+          _modelApiKey: data?.activitiesArchive?._modelApiKey || "",
+          locale,
+          slug: "",
+        }),
+        count:
+          y.eventsCount.count +
+          y.workshopsCount.count +
+          y.artisticResidenciesCount.count +
+          y.projectsCount.count,
+        images: [...y.events, ...y.workshops, ...y.artisticResidencies, ...y.projects],
+      },
+      news: {
+        slug: resolveLink({
+          _modelApiKey: data?.newsPublicationsArchive?._modelApiKey || "",
+          locale,
+          slug: "",
+        }),
+        count: y.newsCount.count + y.publicationsCount.count,
+        images: [...y.news, ...y.publications],
+      },
+      // pertnersNetworks: {
+      //   slug: resolveLink({
+      //     _modelApiKey: data?.pertnersNetworksArchive?._modelApiKey || "",
+      //     locale,
+      //     slug: "",
+      //   }),
+      //   count: y.partnersCount.count + y.networksCount.count,
+      //   images: y.networks,
+      // },
+      media: {
+        slug: resolveLink({
+          _modelApiKey: data?.mediaArchive?._modelApiKey || "",
+          locale,
+          slug: "",
+        }),
+        count:
+          y.mediaAudiosCount.count +
+          y.mediaDocumentsCount.count +
+          y.mediaPhotosCount.count +
+          y.mediaVideosCount.count,
+        images: y.mediaPhotos,
+      },
+      images: y.mediaPhotos,
+    };
+    timelineData.push(year);
+  });
+
   return (
     <div className="">
       {/* My index page - {locale} */}
@@ -137,9 +235,7 @@ export default function Page() {
         <div className="xl:pr-14">
           <div className="sticky top-32">
             <nav className="">
-              <div className="border text-base p-4 border-b md:col-span-3">
-                Anno
-              </div>
+              <div className="border text-base p-4 border-b md:col-span-3">Anno</div>
               <ul className="border-l xl:border border-b-0 mt-[-1px] text-base md:grid md:grid-cols-3 xl:block">
                 {blob.map((item) => {
                   return (
@@ -171,11 +267,7 @@ export default function Page() {
         <div className="col-span-3 border-l border-red pl-28">
           {blob.map((item) => {
             return (
-              <div
-                id={item.year}
-                key={item.year}
-                className="border-b py-8 mb-8"
-              >
+              <div id={item.year} key={item.year} className="border-b py-8 mb-8">
                 <div className="grid grid-cols-3 gap-4">
                   <div className="">
                     <div className="mb-8 text-lg">{item.year}</div>
@@ -183,42 +275,27 @@ export default function Page() {
                       <div className="flex gap-x-2">
                         <div>({item.festival.count})</div>
                         <div>Festival</div>
-                        <ArrowLongRightIcon
-                          aria-hidden="true"
-                          className="h-5 w-5"
-                        />
+                        <ArrowLongRightIcon aria-hidden="true" className="h-5 w-5" />
                       </div>
                       <div className="flex gap-x-2">
                         <div>({item.artitstCompanies.count})</div>
                         <div>Artisti e compagnie</div>
-                        <ArrowLongRightIcon
-                          aria-hidden="true"
-                          className="h-5 w-5"
-                        />
+                        <ArrowLongRightIcon aria-hidden="true" className="h-5 w-5" />
                       </div>
                       <div className="flex gap-x-2">
                         <div>({item.activities.count})</div>
                         <div>Attività</div>
-                        <ArrowLongRightIcon
-                          aria-hidden="true"
-                          className="h-5 w-5"
-                        />
+                        <ArrowLongRightIcon aria-hidden="true" className="h-5 w-5" />
                       </div>
                       <div className="flex gap-x-2">
                         <div>({item.news.count})</div>
                         <div>News</div>
-                        <ArrowLongRightIcon
-                          aria-hidden="true"
-                          className="h-5 w-5"
-                        />
+                        <ArrowLongRightIcon aria-hidden="true" className="h-5 w-5" />
                       </div>
                       <div className="flex gap-x-2">
                         <div>({item.media.count})</div>
                         <div>Media</div>
-                        <ArrowLongRightIcon
-                          aria-hidden="true"
-                          className="h-5 w-5"
-                        />
+                        <ArrowLongRightIcon aria-hidden="true" className="h-5 w-5" />
                       </div>
                     </div>
                   </div>
