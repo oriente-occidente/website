@@ -1,5 +1,6 @@
 import Link from "next/link";
 import translate from "@/lib/locales";
+import resolveLink from "@/lib/resolveLink";
 
 export default function MediaLinks({ data, locale }) {
   const yearsNumber = data.years.length;
@@ -33,12 +34,12 @@ export default function MediaLinks({ data, locale }) {
       <div className="flex flex-nowrap justify-start pb-4">
         {data.years &&
           data.years.map((y, index, array) => (
-            <Link key={y.index} href="/" title={y.title}>
+            <div key={y.index}>
               <div className="text-xs text-black">
                 {y.title}
                 {index !== array.length - 1 && ",\u00A0"}
               </div>
-            </Link>
+            </div>
           ))}
       </div>
       <div className={`grid grid-cols-1 ${gridColums}`}>
@@ -50,15 +51,15 @@ export default function MediaLinks({ data, locale }) {
                   {translate("festival", locale)}
                 </div>
                 <div className="flex flex-nowrap justify-start pb-4">
-                  <button
-                    href="/"
+                  <Link
+                    href={resolveLink({...y.festivalEditions, locale})}
                     title={y.festivalEditions.title}
                     className="button--with-arrow font-normal"
                   >
                     <div className="text-xs text-black">
                       {y.festivalEditions.title}
                     </div>
-                  </button>
+                  </Link>
                 </div>
               </div>)}
               {y.companies?.id && (
@@ -67,15 +68,15 @@ export default function MediaLinks({ data, locale }) {
                     {translate("company", locale)}
                   </div>
                   <div className="flex flex-nowrap justify-start pb-4">
-                    <button
-                      href="/"
+                    <Link
+                      href={resolveLink({...y.companies, locale})}
                       title={y.companies.title}
                       className="button--with-arrow font-normal"
                     >
                       <div className="text-xs text-black">
                         {y.companies.title}
                       </div>
-                    </button>
+                    </Link>
                   </div>
                 </div>
               )}
@@ -85,15 +86,15 @@ export default function MediaLinks({ data, locale }) {
                   {translate("residence", locale)}
                 </div>
                 <div className="flex flex-nowrap justify-start pb-4">
-                  <button
-                    href="/"
+                  <Link
+                    href={resolveLink({...y.artisticResidencies, locale})}
                     title={y.artisticResidencies.title}
                     className="button--with-arrow font-normal"
                   >
                     <div className="text-xs text-black">
                       {y.artisticResidencies.title}
                     </div>
-                  </button>
+                  </Link>
                 </div>
               </div>)}
               {y.mediaAuthor?.id && (
@@ -102,15 +103,15 @@ export default function MediaLinks({ data, locale }) {
                   {translate("author", locale)}
                 </div>
                 <div className="flex flex-nowrap justify-start pb-4">
-                  <button
-                    href="/"
+                  <Link
+                    href={resolveLink({...y.mediaAuthor, locale})}
                     title={y.mediaAuthor.fullName}
                     className="button--with-arrow font-normal"
                   >
                     <div className="text-xs text-black">
                       {y.mediaAuthor.fullName}
                     </div>
-                  </button>
+                  </Link>
                 </div>
               </div>)}
             </div>

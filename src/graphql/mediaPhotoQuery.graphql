@@ -40,15 +40,19 @@ query mediaPhotoQuery($id: ItemId, $locale: SiteLocale) {
       ...yearRecordFragment
     }
     festivalEditions {
+      _modelApiKey
       ...festivalEditionRecordFragment
     }
     companies {
+      _modelApiKey
       ...companyRecordFragment
     }
     mediaAuthor {
+      _modelApiKey
       ...mediaAuthorRecordFragment
     }
     artisticResidencies {
+      _modelApiKey
       ...artisticResidecyRecordFragment
     }
   }
