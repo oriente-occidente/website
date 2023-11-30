@@ -71,22 +71,22 @@ export default function resolveLink({
       return `${lp}/${t(`audio`, locale)}/`;
     case "publication":
       return `${lp}/${t(`pubblicazioni`, locale)}/`;
-    case "photo":
+    case "media_photo":
       return `${lp}/${t(`foto`, locale)}/${slug}`;
-    case "video":
+    case "media_video":
       return `${lp}/${t(`video`, locale)}/${slug}`;
-    case "document":
+    case "media_document":
       return `${lp}/${t(`doc`, locale)}/${slug}`;
-    case "audio":
+    case "media_audio":
       return `${lp}/${t(`audio`, locale)}/${slug}`;
     case "artists_companies_archive":
       return `${lp}/${t(`archivio`, locale)}/${t(`artisti-compagnie`, locale)}`;
     case "activities_archive":
       return `${lp}/${t(`archivio`, locale)}/${t(`attivita`, locale)}`;
     case "festival_editions_archive":
-      return `${lp}/${t(`archivio`, locale)}/${t(`fifestivalles`, locale)}`;
+      return `${lp}/${t(`archivio`, locale)}/${t(`festival`, locale)}`;
     case "media_archive":
-      return `${lp}/${t(`archivio`, locale)}/${t(`files`, locale)}`;
+      return `${lp}/${t(`archivio`, locale)}/${t(`media`, locale)}`;
     case "news_publications_archive":
       return `${lp}/${t(`archivio`, locale)}/${t(
         `news-pubblicazioni`,
@@ -100,5 +100,3 @@ export default function resolveLink({
       return `${lp}/${slug ? slug : ""}`;
   }
 }
-
-

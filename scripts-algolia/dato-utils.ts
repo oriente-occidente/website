@@ -1,21 +1,16 @@
 import dotenv from "dotenv";
 import axios from "axios";
 import { render } from "datocms-structured-text-to-plain-text";
+import labels_en from "../src/lib/locales/labels-en";
 
 dotenv.config({ path: ".env.local" });
-const API_KEY = process.env.NEXT_DATOCMS_API_TOKEN ?? "";
-const DATO_ENV = process.env.NEXT_DATOCMS_ENV ?? null;
-const PROXY = process.env.NEXT_PUBLIC_DOMAIN_PROXY || "";
-const DATO = process.env.NEXT_PUBLIC_DOMAIN_DATO || "";
-
-export function replaceAssetUrlDomain(url: string): string {
-  return url.replace(DATO, PROXY);
-}
+const API_KEY = process.env.NEXT_PUBLIC_DATO_APIKEY ?? "";
+const DATO_ENV = process.env.NEXT_PUBLIC_DATO_ENV ?? null;
 
 type recurseQueryProps = {
   q: string;
   values: any;
-  type: string;
+  propertyName: string;
 
   currentPage: number;
   pageSize: number;
@@ -24,12 +19,15 @@ type recurseQueryProps = {
   done: boolean;
 };
 
-export async function getCollections(q: string, values: any, type: string) {
-  console.info("GET COLLECTIONS", type);
+export async function getCollections(
+  q: string,
+  values: any,
+  propertyName: string
+) {
   return recurseQuery({
     q,
     values,
-    type,
+    propertyName,
     pageSize: 100,
     prevResults: [],
     currentPage: 0,
@@ -40,7 +38,7 @@ export async function getCollections(q: string, values: any, type: string) {
 export async function recurseQuery({
   q,
   values,
-  type,
+  propertyName,
   pageSize,
   currentPage,
   prevResults,
@@ -55,7 +53,8 @@ export async function recurseQuery({
     let results;
     try {
       let response = await fetchData(q, { ...params });
-      results = response[type] || [];
+      results = response[propertyName] || [];
+      console.log("results", results.length);
     } catch (error) {
       // console.error("ERROR", error);
       throw error;
@@ -71,7 +70,7 @@ export async function recurseQuery({
       currentPage,
       done,
       pageSize,
-      type,
+      propertyName,
     });
   } else {
     return prevResults;

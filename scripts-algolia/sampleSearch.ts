@@ -2,7 +2,7 @@ import { getCollections, formatStructuredText } from "./dato-utils";
 import { sendIndex } from "./algolia-utils";
 
 const query = `query associatedArtists($locale: SiteLocale, $first: IntType, $skip: IntType) {
-   allArtists(
+  items: allArtists(
     locale: $locale
     filter: {slug: {neq: null}, associatedArtist: {exists: true}}
     orderBy: _firstPublishedAt_DESC
