@@ -55,5 +55,35 @@ query mediaPhotoQuery($id: ItemId, $locale: SiteLocale) {
       _modelApiKey
       ...artisticResidecyRecordFragment
     }
+     news {
+      _modelApiKey
+      id 
+      title
+      slug
+    }
+    workhops {
+      _modelApiKey
+      id 
+      title
+      slug
+    }
+    events {
+      _modelApiKey
+      id 
+      title
+      slug
+    }
+    publications {
+      _modelApiKey
+      id 
+      title
+      slug
+    }
+    projects {
+      _modelApiKey
+      id 
+      title
+      slug
+    }
   }
 }

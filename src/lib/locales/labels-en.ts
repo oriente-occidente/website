@@ -63,6 +63,12 @@ const labels_en = {
   documentSize: "Document size",
   program: "Program",
   news: "News",
+  category: "Category",
+  artist: "Artist",
+  project: "Project",
+  publication: "Publication",
+  event: "Event",
+  workshop: "Workshop",
   search: {
     show: "Show search",
     label: "Search",

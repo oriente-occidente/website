@@ -37,6 +37,10 @@ query mediaVideoQuery($slug: String!, $locale: SiteLocale) {
       provider
       height
     }
+    category {
+      name
+      id
+    }
     # INFO
     years {
       ...yearRecordFragment
@@ -52,6 +56,42 @@ query mediaVideoQuery($slug: String!, $locale: SiteLocale) {
     }
     artisticResidencies {
       ...artisticResidecyRecordFragment
+    }
+    news {
+      _modelApiKey
+      id
+      title
+      slug
+    }
+    workhops {
+      _modelApiKey
+      id
+      title
+      slug
+    }
+    events {
+      _modelApiKey
+      id
+      title
+      slug
+    }
+    publications {
+      _modelApiKey
+      id
+      title
+      slug
+    }
+    projects {
+      _modelApiKey
+      id
+      title
+      slug
+    }
+    artists {
+      slug
+      title
+      id
+      titleHero
     }
   }
 }

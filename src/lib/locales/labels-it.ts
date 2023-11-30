@@ -62,6 +62,12 @@ const labels_it = {
   documentSize: "Dimensioni del documento",
   program: "Programma",
   news: "News",
+  category: "Categoria",
+  artist: "Artista",
+  project: "Progetto",
+  publication: "Pubblicazione",
+  event: "Evento",
+  workshop: "Workshop",
   search: {
     title: "Cerca",
     show: "Mostra la ricerca",

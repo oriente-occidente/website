@@ -92,6 +92,10 @@
     @apply flex items-center font-semibold tracking-wider text-black no-underline after:ml-2 after:inline-block after:h-8 after:w-8 after:bg-arrow-right-black after:duration-300 hover:after:translate-x-2 hover:after:bg-arrow-right-red md:text-xs md:after:h-10 md:after:w-10;
   }
 
+  .button--with-arrow-small {
+    @apply flex items-center tracking-wider text-black no-underline after:ml-2 after:inline-block after:h-6 after:w-6 after:bg-arrow-right-black after:duration-300 hover:after:translate-x-2 hover:after:bg-arrow-right-red md:text-xs md:after:h-6 md:after:w-6;
+  }
+
   .title {
     @apply text-base font-semibold uppercase md:text-2xl;
   }
