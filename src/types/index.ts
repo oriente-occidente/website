@@ -107,3 +107,9 @@ export type PageSeoProps = {
   slugs?: LocaleValue[];
   section?: string;
 };
+
+export type GenericSearchProps = {
+  data: any;
+  locale: string;
+  children: React.ReactNode;
+};

@@ -1,4 +1,4 @@
-import search from "./sampleSearch";
+import mediaSearch from "./mediaSearch";
 import { listIndexes } from "./algolia-utils";
 
 (async () => {
@@ -7,8 +7,8 @@ import { listIndexes } from "./algolia-utils";
   console.info("INDEXES", indexes);
 
   // VIDEO SEARCH
-  await search("it", indexes);
-  await search("en", indexes);
+  await mediaSearch("it", indexes);
+  await mediaSearch("en", indexes);
 
   const elapsed = Date.now() - start;
   console.info("ELAPSED", elapsed / 1000, "seconds");

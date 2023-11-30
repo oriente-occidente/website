@@ -1,0 +1,16 @@
+query mediaArchiveIndex($locale: SiteLocale!) {
+  page: mediaArchive(locale: $locale) {
+    id
+    title
+    description
+    _modelApiKey
+    seo: _seoMetaTags {
+      ...seoMetaFragment
+    }
+    titles: _allTitleLocales {
+      locale
+      value
+    }
+    __typename
+  }
+}
