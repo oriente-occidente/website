@@ -6,7 +6,7 @@
 @layer base {
   html {
     font-family: "Work Sans", sans-serif;
-    @apply scroll-smooth scroll-pt-[120px] md:scroll-pt-[130px] lg:scroll-pt-[160px] xl:scroll-pt-[100px];
+    @apply scroll-smooth scroll-pt-[100px] md:scroll-pt-[130px] lg:scroll-pt-[160px] xl:scroll-pt-[100px];
   }
 }
 
@@ -110,6 +110,7 @@
 
   .dato-image-contain,
   .dato-image-cover {
+    position: absolute !important;
     height: 100%;
     max-width: 100% !important;
   }

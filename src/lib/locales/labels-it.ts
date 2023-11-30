@@ -1,3 +1,4 @@
+import { ArtistsCompaniesArchiveRecord } from "../../graphql/generated";
 const labels_it = {
   it: "Italiano",
   en: "Inglese",
@@ -51,7 +52,11 @@ const labels_it = {
   festival: "Festival",
   company: "Compagnia",
   residence: "Residenza",
+  artistsCompanies: "Artisti e compagnie",
+  activities: "Attività",
+  news: "News",
   author: "Autore",
+  media: "Media",
   document: "Documento",
   audio: "Audio",
   video: "Video",
