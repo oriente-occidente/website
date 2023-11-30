@@ -135,7 +135,7 @@ export default async function search(locale: string, indexes: string[]) {
     "companies",
     "projects",
     "workhops",
-    "projects",
+    "networks",
     "artists",
     "residencies",
   ];
@@ -148,7 +148,7 @@ export default async function search(locale: string, indexes: string[]) {
     "searchable(companies)",
     "searchable(projects)",
     "searchable(workhops)",
-    "searchable(projects)",
+    "searchable(networks)",
     "searchable(artists)",
     "searchable(residencies)",
   ];

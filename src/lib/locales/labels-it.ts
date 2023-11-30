@@ -75,7 +75,7 @@ const labels_it = {
     serching: "Ricerca in corso...",
     resetting: "Reset in corso...",
     action: "Ricerca",
-    "video-placeholder": "Cerca un video",
+    "video-placeholder": "Cerca un ...",
     "clear-query": "Cancella ricerca",
     "search-something-hint":
       "Cerca qualche parola o frase contenuta all'interno di titoli o contenuti, puoi cercare anche sui filtri, ad esempio 2023 oppure nome di artista",
@@ -101,6 +101,19 @@ const labels_it = {
     lastPageItemAriaLabel: "Vai all'ultima pagina",
     gotoPage: "Vai alla pagina",
     of: "di",
+  },
+  "search-filters": {
+    contentType: "Tiplogia Media",
+    years: "Anni",
+    festival: "Festival",
+    category: "Categoria",
+    author: "Autore",
+    companies: "Compagnie",
+    projects: "Progetti",
+    workhops: "Workhop",
+    networks: "Reti",
+    artists: "Artisti",
+    residencies: "Residenze",
   },
 };
 export default labels_it;

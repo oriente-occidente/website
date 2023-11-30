@@ -123,7 +123,7 @@ export default function MediaSearch({ locale }: MediaSearchPropsType) {
               return (
                 <div className="my-10">
                   <h3 className="text-md uppercase font-bold mb-6">
-                    {translate(`searchfilters.${filter}`, locale)}
+                    {translate(`search-filters.${filter}`, locale)}
                   </h3>
                   <RefinementList
                     searchable={true}
