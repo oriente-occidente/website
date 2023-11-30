@@ -109,11 +109,14 @@ const labels_it = {
     category: "Categoria",
     author: "Autore",
     companies: "Compagnie",
-    projects: "Progetti",
-    workhops: "Workhop",
-    networks: "Reti",
     artists: "Artisti",
     residencies: "Residenze",
+    projects: "Progetti",
+    workhops: "Workhop",
+    news: "News",
+    events: "Eventi",
+    pubblications: "Pubblicazioni",
+    networks: "Reti",
   },
 };
 export default labels_it;

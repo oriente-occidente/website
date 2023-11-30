@@ -30,6 +30,93 @@ export default function MediaSearch({ locale }: MediaSearchPropsType) {
   const [openFilters, setOpenFilters] = useState<boolean>(false);
   const [searchState, setSearchState] = useState<UiState>({});
 
+  const filtersOptions = [
+    {
+      name: "contentType",
+      searchable: false,
+      operator: true,
+      limit: 5,
+      showMore: false,
+    },
+    {
+      name: "years",
+      searchable: false,
+      operator: true,
+      limit: 5,
+      showMore: false,
+    },
+    {
+      name: "festival",
+      searchable: false,
+      operator: true,
+      limit: 5,
+      showMore: false,
+    },
+    {
+      name: "category",
+      searchable: false,
+      operator: true,
+      limit: 5,
+      showMore: false,
+    },
+    {
+      name: "author",
+      searchable: false,
+      operator: true,
+      limit: 5,
+      showMore: false,
+    },
+    {
+      name: "artists",
+      searchable: false,
+      operator: true,
+      limit: 5,
+      showMore: false,
+    },
+    {
+      name: "residencies",
+      searchable: false,
+      operator: true,
+      limit: 5,
+      showMore: false,
+    },
+    {
+      name: "companies",
+      searchable: false,
+      operator: true,
+      limit: 5,
+      showMore: false,
+    },
+    {
+      name: "projects",
+      searchable: false,
+      operator: true,
+      limit: 5,
+      showMore: false,
+    },
+    {
+      name: "workhops",
+      searchable: false,
+      operator: true,
+      limit: 5,
+      showMore: false,
+    },
+    {
+      name: "events",
+      searchable: false,
+      operator: true,
+      limit: 5,
+      showMore: false,
+    },
+    {
+      name: "news",
+      searchable: false,
+      operator: true,
+      limit: 5,
+      showMore: false,
+    },
+  ];
+
   const onStateChange: InstantSearchProps["onStateChange"] = ({
     uiState,
     setUiState,
@@ -107,34 +194,22 @@ export default function MediaSearch({ locale }: MediaSearchPropsType) {
               />
             </div>
 
-            {[
-              "contentType",
-              "years",
-              "festival",
-              "category",
-              "author",
-              "companies",
-              "projects",
-              "workhops",
-              "projects",
-              "artists",
-              "residencies",
-            ].map((filter) => {
+            {filtersOptions.map((filter) => {
               return (
                 <div className="my-10">
                   <h3 className="text-md uppercase font-bold mb-6">
-                    {translate(`search-filters.${filter}`, locale)}
+                    {translate(`search-filters.${filter.name}`, locale)}
                   </h3>
                   <RefinementList
-                    searchable={true}
-                    attribute={filter}
+                    searchable={filter.searchable}
+                    attribute={filter.name}
                     searchablePlaceholder={`${translate(
                       "search.placeholder",
                       locale
                     )}...`}
-                    operator="or"
-                    limit={5}
-                    showMore={true}
+                    operator={filter.operator ? "or" : "and"}
+                    limit={filter.limit}
+                    showMore={filter.showMore}
                     translations={{
                       showMoreButtonText({ isShowingMore }) {
                         return isShowingMore

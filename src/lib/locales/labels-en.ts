@@ -116,11 +116,14 @@ const labels_en = {
     category: "Category",
     author: "Author",
     companies: "Companies",
-    projects: "Projects",
-    workhops: "Workhops",
-    networks: "Networks",
     artists: "Artists",
     residencies: "Residencies",
+    projects: "Projects",
+    workhops: "Workhops",
+    news: "News",
+    events: "Eventi",
+    pubblications: "Pubblicazioni",
+    networks: "Networks",
   },
 };
 export default labels_en;

@@ -33,6 +33,15 @@ artisticResidencies {
 artists {
   title
 }
+events {
+  title
+}
+news {
+  title
+}
+pubblications {
+  title
+}
 `;
 
 const queries: any = {
@@ -85,7 +94,11 @@ function formatItem(item: any) {
   const slug = item.slug || id;
   return {
     objectID: id,
+    //conditional
+    title: item.title || "",
+    image: item.image?.url || "",
     slug,
+    //common
     _modelApiKey,
     description,
     contentType: toContentType(_modelApiKey),
@@ -94,12 +107,13 @@ function formatItem(item: any) {
     festival: getPropertyAsString(item["festivalEditions"], "title"),
     author: getPropertyAsString(item["author"], "fullName"),
     companies: getPropertyAsString(item["companies"], "title"),
-    projects: getPropertyAsString(item["projects"], "title"),
-    workhops: getPropertyAsString(item["workhops"], "title"),
     artists: getPropertyAsString(item["artists"], "title"),
     residencies: getPropertyAsString(item["artisticResidencies"], "title"),
-    title: item.title || "",
-    image: item.image?.url || "",
+    projects: getPropertyAsString(item["projects"], "title"),
+    workhops: getPropertyAsString(item["workhops"], "title"),
+    news: getPropertyAsString(item["news"], "title"),
+    events: getPropertyAsString(item["events"], "title"),
+    publications: getPropertyAsString(item["events"], "title"),
   };
 }
 
@@ -132,11 +146,8 @@ export default async function search(locale: string, indexes: string[]) {
     "festival",
     "category",
     "author",
-    "companies",
-    "projects",
-    "workhops",
-    "networks",
     "artists",
+    "companies",
     "residencies",
   ];
   const attributesForFaceting = [
@@ -145,12 +156,14 @@ export default async function search(locale: string, indexes: string[]) {
     "searchable(festival)",
     "searchable(category)",
     "searchable(author)",
+    "searchable(artists)",
     "searchable(companies)",
+    "searchable(residencies)",
     "searchable(projects)",
     "searchable(workhops)",
-    "searchable(networks)",
-    "searchable(artists)",
-    "searchable(residencies)",
+    "searchable(events)",
+    "searchable(news)",
+    "searchable(pubblications)",
   ];
   const customRanking: string[] = [];
 
