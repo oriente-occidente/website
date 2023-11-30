@@ -108,13 +108,6 @@ export default function MediaSearch({ locale }: MediaSearchPropsType) {
       limit: 5,
       showMore: false,
     },
-    {
-      name: "news",
-      searchable: false,
-      operator: true,
-      limit: 5,
-      showMore: false,
-    },
   ];
 
   const onStateChange: InstantSearchProps["onStateChange"] = ({

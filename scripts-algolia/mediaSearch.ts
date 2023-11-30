@@ -2,46 +2,43 @@ import { getCollections } from "./dato-utils";
 import { sendIndex } from "./algolia-utils";
 
 const commonBlock = `
-id
-_modelApiKey
-description
-creationDate
-festivalEditions {
-  title
-}
-category {
-  name
-}
-years {
-  year
-}
-mediaAuthor {
-  fullName
-}
-companies {
-  title
-}
-projects {
-  title
-}
-workhops {
-  title
-}
-artisticResidencies {
-  title
-}
-artists {
-  title
-}
-events {
-  title
-}
-news {
-  title
-}
-pubblications {
-  title
-}
+  id
+  _modelApiKey
+  description
+  creationDate
+  festivalEditions {
+    title
+  }
+  category {
+    name
+  }
+  years {
+    year
+  }
+  mediaAuthor {
+    fullName
+  }
+  companies {
+    title
+  }
+  projects {
+    title
+  }
+  workhops {
+    title
+  }
+  artisticResidencies {
+    title
+  }
+  artists {
+    title
+  }
+  events {
+    title
+  }
+  news {
+    title
+  }
 `;
 
 const queries: any = {
@@ -81,7 +78,7 @@ const queries: any = {
 
 function getPropertyAsString(list: any[], property: string) {
   if (!list || list.length === 0) return [];
-  return list.map((i: any) => i[property]).sort();
+  return list?.map((i: any) => i[property]).sort();
 }
 
 function toContentType(_modelApiKey: string) {
@@ -105,15 +102,14 @@ function formatItem(item: any) {
     category: item?.category?.name || "",
     years: years.map((i: any) => i.year),
     festival: getPropertyAsString(item["festivalEditions"], "title"),
-    author: getPropertyAsString(item["author"], "fullName"),
+    author: getPropertyAsString(item["mediaAuthor"], "fullName"),
     companies: getPropertyAsString(item["companies"], "title"),
     artists: getPropertyAsString(item["artists"], "title"),
     residencies: getPropertyAsString(item["artisticResidencies"], "title"),
     projects: getPropertyAsString(item["projects"], "title"),
     workhops: getPropertyAsString(item["workhops"], "title"),
-    news: getPropertyAsString(item["news"], "title"),
     events: getPropertyAsString(item["events"], "title"),
-    publications: getPropertyAsString(item["events"], "title"),
+    // news: getPropertyAsString(item["news"], "title"),
   };
 }
 
@@ -128,6 +124,7 @@ export default async function search(locale: string, indexes: string[]) {
     console.log(key, results.length);
     items = [...items, ...results];
   }
+  items = items.filter(Boolean);
   console.info("TOTAL", items.length);
   const data = [];
   for (let i = 0; i < items.length; i++) {
@@ -162,8 +159,7 @@ export default async function search(locale: string, indexes: string[]) {
     "searchable(projects)",
     "searchable(workhops)",
     "searchable(events)",
-    "searchable(news)",
-    "searchable(pubblications)",
+    // "searchable(news)",
   ];
   const customRanking: string[] = [];
 

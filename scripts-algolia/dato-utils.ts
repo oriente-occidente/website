@@ -1,7 +1,6 @@
 import dotenv from "dotenv";
 import axios from "axios";
 import { render } from "datocms-structured-text-to-plain-text";
-import labels_en from "../src/lib/locales/labels-en";
 
 dotenv.config({ path: ".env.local" });
 const API_KEY = process.env.NEXT_PUBLIC_DATO_APIKEY ?? "";
@@ -82,8 +81,6 @@ export const fetchData = async (
   v: any = null,
   preview: boolean = false
 ) => {
-  // console.info("API_KEY", API_KEY);
-  console.info("FETCHING DATO", DATO_ENV);
   if (!API_KEY) return null;
   try {
     let url = `https://graphql.datocms.com`;
@@ -101,7 +98,7 @@ export const fetchData = async (
         },
       }
     );
-    console.info("status", response?.status);
+    // console.info("status", response?.status);
     const data = response?.data;
     // console.info("data", data);
     if (data?.errors) {
