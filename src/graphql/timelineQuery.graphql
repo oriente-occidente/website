@@ -15,22 +15,6 @@ query timelineQuery($locale: SiteLocale) {
     ) {
       id
       slug
-      poster {
-        id
-        title
-        image {
-          id
-          title
-          alt
-          url
-          responsiveImage(
-            sizes: "(max-width: 1023px) 100vw, (min-width: 1024px) 80vw, 1400px"
-            imgixParams: { auto: [format, compress], ar: "14:8", fit: crop }
-          ) {
-            ...imgFrag
-          }
-        }
-      }
     }
     # ARTISTS / COMPANIES
     artistsCount: _allReferencingArtistsMeta {
@@ -42,18 +26,6 @@ query timelineQuery($locale: SiteLocale) {
       }
       id
       slug
-      imageHero {
-        id
-        title
-        alt
-        url
-        responsiveImage(
-          sizes: "(max-width: 1023px) 100vw, (min-width: 1024px) 80vw, 1400px"
-          imgixParams: { auto: [format, compress], ar: "14:8", fit: crop }
-        ) {
-          ...imgFrag
-        }
-      }
     }
     # ACTIVITIES
     eventsCount: _allReferencingEventsMeta {
@@ -62,18 +34,6 @@ query timelineQuery($locale: SiteLocale) {
     events: _allReferencingEvents(first: "2", filter: { slug: { neq: null } }) {
       id
       slug
-      imageHero {
-        id
-        title
-        alt
-        url
-        responsiveImage(
-          sizes: "(max-width: 1023px) 100vw, (min-width: 1024px) 80vw, 1400px"
-          imgixParams: { auto: [format, compress], ar: "14:8", fit: crop }
-        ) {
-          ...imgFrag
-        }
-      }
     }
     workshopsCount: _allReferencingWorkshopsMeta {
       count
@@ -84,18 +44,6 @@ query timelineQuery($locale: SiteLocale) {
     ) {
       id
       slug
-      imageHero {
-        id
-        title
-        alt
-        url
-        responsiveImage(
-          sizes: "(max-width: 1023px) 100vw, (min-width: 1024px) 80vw, 1400px"
-          imgixParams: { auto: [format, compress], ar: "14:8", fit: crop }
-        ) {
-          ...imgFrag
-        }
-      }
     }
     artisticResidenciesCount: _allReferencingArtisticResideciesMeta {
       count
@@ -106,18 +54,6 @@ query timelineQuery($locale: SiteLocale) {
     ) {
       id
       slug
-      imageHero {
-        id
-        title
-        alt
-        url
-        responsiveImage(
-          sizes: "(max-width: 1023px) 100vw, (min-width: 1024px) 80vw, 1400px"
-          imgixParams: { auto: [format, compress], ar: "14:8", fit: crop }
-        ) {
-          ...imgFrag
-        }
-      }
     }
     projectsCount: _allReferencingProjectsMeta {
       count
@@ -128,18 +64,6 @@ query timelineQuery($locale: SiteLocale) {
     ) {
       id
       slug
-      imageHero {
-        id
-        title
-        alt
-        url
-        responsiveImage(
-          sizes: "(max-width: 1023px) 100vw, (min-width: 1024px) 80vw, 1400px"
-          imgixParams: { auto: [format, compress], ar: "14:8", fit: crop }
-        ) {
-          ...imgFrag
-        }
-      }
     }
     # NEWS
     newsCount: _allReferencingNewsMeta {
@@ -148,18 +72,6 @@ query timelineQuery($locale: SiteLocale) {
     news: _allReferencingNews(first: "6", filter: { slug: { neq: null } }) {
       id
       slug
-      imageHero {
-        id
-        title
-        alt
-        url
-        responsiveImage(
-          sizes: "(max-width: 1023px) 100vw, (min-width: 1024px) 80vw, 1400px"
-          imgixParams: { auto: [format, compress], ar: "14:8", fit: crop }
-        ) {
-          ...imgFrag
-        }
-      }
     }
     publicationsCount: _allReferencingPublicationsMeta {
       count
@@ -170,39 +82,12 @@ query timelineQuery($locale: SiteLocale) {
     ) {
       id
       slug
-      imageHero {
-        id
-        title
-        alt
-        url
-        responsiveImage(
-          sizes: "(max-width: 1023px) 100vw, (min-width: 1024px) 80vw, 1400px"
-          imgixParams: { auto: [format, compress], ar: "14:8", fit: crop }
-        ) {
-          ...imgFrag
-        }
-      }
     }
     mediaAudiosCount: _allReferencingMediaAudiosMeta {
       count
     }
     mediaPhotosCount: _allReferencingMediaPhotosMeta {
       count
-    }
-    mediaPhotos: _allReferencingMediaPhotos(first: "6") {
-      id
-      image {
-        id
-        title
-        alt
-        url
-        responsiveImage(
-          sizes: "(max-width: 1023px) 100vw, (min-width: 1024px) 80vw, 1400px"
-          imgixParams: { auto: [format, compress], ar: "14:8", fit: crop }
-        ) {
-          ...imgFrag
-        }
-      }
     }
     mediaVideosCount: _allReferencingMediaVideosMeta {
       count
@@ -214,18 +99,6 @@ query timelineQuery($locale: SiteLocale) {
       id
       slug
       title
-      image {
-        id
-        title
-        alt
-        url
-        responsiveImage(
-          sizes: "(max-width: 1023px) 100vw, (min-width: 1024px) 80vw, 1400px"
-          imgixParams: { auto: [format, compress], ar: "14:8", fit: crop }
-        ) {
-          ...imgFrag
-        }
-      }
     }
     mediaDocumentsCount: _allReferencingMediaDocumentsMeta {
       count
@@ -235,18 +108,6 @@ query timelineQuery($locale: SiteLocale) {
       filter: { slug: { neq: null } }
     ) {
       id
-      image {
-        id
-        title
-        alt
-        url
-        responsiveImage(
-          sizes: "(max-width: 1023px) 100vw, (min-width: 1024px) 80vw, 1400px"
-          imgixParams: { auto: [format, compress], ar: "14:8", fit: crop }
-        ) {
-          ...imgFrag
-        }
-      }
     }
     partnersCount: _allReferencingPartnerModelsMeta {
       count
@@ -260,9 +121,6 @@ query timelineQuery($locale: SiteLocale) {
     ) {
       id
       title
-      imageHero {
-        id
-      }
     }
     images {
       id
