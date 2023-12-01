@@ -57,25 +57,23 @@ function Filters({ locale, list = null }) {
   }
   return (
     <div className="mt-10">
-      <div className="border-gray xl:border-b">
-        <div className="xl:container xl:mx-auto xl:flex xl:justify-between">
+      <div className="border-gray md:border-b">
           <Tabs
             locale={locale}
             selected={typeFilter}
             handleSelect={(value) => changeRoute(value)}
             catLengths={catLengths}
           />
-          <div className="md:border-b md:border-gray md:pt-4 md:pb-8 xl:border-none xl:pt-0 xl:pb-0">
+          {/* <div className="md:border-b md:border-gray md:pt-4 md:pb-8 xl:border-none xl:pt-0 xl:pb-0">
             <div className="px-4 pt-4 md:flex md:justify-between md:px-6 xl:pt-2">
               {""}
             </div>
-          </div>
-        </div>
+          </div> */}
       </div>
 
       <div className="my-4 container">
         {showHeaders && (
-          <div className="border-b border-black  mt-20 pb-5 font-semibold uppercase text-lg">
+          <div className="border-b border-black mt-20 pb-5 font-semibold uppercase text-lg">
             {translate("next_events", locale)}
           </div>
         )}
@@ -87,7 +85,7 @@ function Filters({ locale, list = null }) {
           </div>
         )}
         {showHeaders && (
-          <div className="border-b border-black  mt-20 pb-5 font-semibold uppercase  text-lg">
+          <div className="border-b border-black mt-20 pb-5 font-semibold uppercase text-lg">
             {translate("previous_events", locale)}
           </div>
         )}
