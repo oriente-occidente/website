@@ -22,7 +22,7 @@ export default function MobileNav({
                 {item?.title || "+"}
                 <div
                   className={`${
-                    open ? "" : "rotate-180"
+                    open ? "rotate-180" : ""
                   } bg-arrow-small-down h-4 w-4 duration-300  ease-in md:h-8 md:w-8`}
                 />
               </Disclosure.Button>
@@ -65,9 +65,9 @@ export default function MobileNav({
       focus
       className="fixed inset-0 z-50 h-full origin-top-left transform transition lg:hidden"
     >
-      <div className="h-full divide-y-2 divide-gray-50 bg-white  ">
-        <div className="container py-2">
-          <div className="flex items-center justify-between">
+      <div className="h-full divide-y-2 divide-gray-50 bg-white overflow-auto">
+        <div className="container ">
+          <div className="flex items-center justify-between h-[70px] bg-white/80 md:h-[80px] lg:h-[110px]">
             <div>
               <Link locale={locale} href="/" title="homepage">
                 <img
