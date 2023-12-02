@@ -1,6 +1,7 @@
 "use client";
 import Link from "next/link";
 import { Fragment } from "react";
+import translate from "@/lib/locales";
 
 import config from "@/data/config";
 
@@ -20,16 +21,22 @@ export default function LanguageSwitcher({
             {i > 0 && (
               <span className="hidden text-xs text-gray-600  lg:block">/</span>
             )}
-            <div>
-              <Link
-                href={`${l === "it" ? "/" : "/en"}`}
-                className={`${
-                  isActive ? "font-semibold" : ""
-                } mx-2 lg:mx hover:text-red  `}
-              >
-                {l}
-              </Link>
-            </div>
+            <Link
+              href={`${l === "it" ? "/" : "/en"}`}
+              className={`${
+                isActive ? "font-semibold" : ""
+              } hidden lg:block mx-2 lg:mx hover:text-red  `}
+            >
+              {l}
+            </Link>
+            <Link
+              href={`${l === "it" ? "/" : "/en"}`}
+              className={`${
+                isActive ? "font-semibold" : ""
+              } mx-2 lg:mx hover:text-red lg:hidden`}
+            >
+              {translate(l, l)}
+            </Link>
           </Fragment>
         );
       })}

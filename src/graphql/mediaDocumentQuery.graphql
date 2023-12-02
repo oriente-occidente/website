@@ -34,6 +34,16 @@ query mediaDocumentQuery($slug: String!, $locale: SiteLocale) {
       title
       size
     }
+    artists {
+      slug
+      title
+      id
+      titleHero
+    }
+    category {
+      name
+      id
+    }
     # INFO
     years {
       ...yearRecordFragment
@@ -49,6 +59,42 @@ query mediaDocumentQuery($slug: String!, $locale: SiteLocale) {
     }
     artisticResidencies {
       ...artisticResidecyRecordFragment
+    }
+    news {
+      _modelApiKey
+      id
+      title
+      slug
+    }
+    workhops {
+      _modelApiKey
+      id
+      title
+      slug
+    }
+    events {
+      _modelApiKey
+      id
+      title
+      slug
+    }
+    publications {
+      _modelApiKey
+      id
+      title
+      slug
+    }
+    projects {
+      _modelApiKey
+      id
+      title
+      slug
+    }
+    artists {
+      slug
+      title
+      id
+      titleHero
     }
   }
 }

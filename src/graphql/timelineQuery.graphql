@@ -15,22 +15,6 @@ query timelineQuery($locale: SiteLocale) {
     ) {
       id
       slug
-      poster {
-        id
-        title
-        image {
-          id
-          title
-          alt
-          url
-          responsiveImage(
-            sizes: "(max-width: 1023px) 100vw, (min-width: 1024px) 80vw, 1400px"
-            imgixParams: { auto: [format, compress], ar: "14:8", fit: crop }
-          ) {
-            ...imgFrag
-          }
-        }
-      }
     }
     # ARTISTS / COMPANIES
     artistsCount: _allReferencingArtistsMeta {
@@ -42,18 +26,6 @@ query timelineQuery($locale: SiteLocale) {
       }
       id
       slug
-      imageHero {
-        id
-        title
-        alt
-        url
-        responsiveImage(
-          sizes: "(max-width: 1023px) 100vw, (min-width: 1024px) 80vw, 1400px"
-          imgixParams: { auto: [format, compress], ar: "14:8", fit: crop }
-        ) {
-          ...imgFrag
-        }
-      }
     }
     # ACTIVITIES
     eventsCount: _allReferencingEventsMeta {
@@ -62,37 +34,16 @@ query timelineQuery($locale: SiteLocale) {
     events: _allReferencingEvents(first: "2", filter: { slug: { neq: null } }) {
       id
       slug
-      imageHero {
-        id
-        title
-        alt
-        url
-        responsiveImage(
-          sizes: "(max-width: 1023px) 100vw, (min-width: 1024px) 80vw, 1400px"
-          imgixParams: { auto: [format, compress], ar: "14:8", fit: crop }
-        ) {
-          ...imgFrag
-        }
-      }
     }
     workshopsCount: _allReferencingWorkshopsMeta {
       count
     }
-    workshops: _allReferencingWorkshops(first: "2", filter: { slug: { neq: null } }) {
+    workshops: _allReferencingWorkshops(
+      first: "2"
+      filter: { slug: { neq: null } }
+    ) {
       id
       slug
-      imageHero {
-        id
-        title
-        alt
-        url
-        responsiveImage(
-          sizes: "(max-width: 1023px) 100vw, (min-width: 1024px) 80vw, 1400px"
-          imgixParams: { auto: [format, compress], ar: "14:8", fit: crop }
-        ) {
-          ...imgFrag
-        }
-      }
     }
     artisticResidenciesCount: _allReferencingArtisticResideciesMeta {
       count
@@ -103,37 +54,16 @@ query timelineQuery($locale: SiteLocale) {
     ) {
       id
       slug
-      imageHero {
-        id
-        title
-        alt
-        url
-        responsiveImage(
-          sizes: "(max-width: 1023px) 100vw, (min-width: 1024px) 80vw, 1400px"
-          imgixParams: { auto: [format, compress], ar: "14:8", fit: crop }
-        ) {
-          ...imgFrag
-        }
-      }
     }
     projectsCount: _allReferencingProjectsMeta {
       count
     }
-    projects: _allReferencingProjects(first: "2", filter: { slug: { neq: null } }) {
+    projects: _allReferencingProjects(
+      first: "2"
+      filter: { slug: { neq: null } }
+    ) {
       id
       slug
-      imageHero {
-        id
-        title
-        alt
-        url
-        responsiveImage(
-          sizes: "(max-width: 1023px) 100vw, (min-width: 1024px) 80vw, 1400px"
-          imgixParams: { auto: [format, compress], ar: "14:8", fit: crop }
-        ) {
-          ...imgFrag
-        }
-      }
     }
     # NEWS
     newsCount: _allReferencingNewsMeta {
@@ -142,18 +72,6 @@ query timelineQuery($locale: SiteLocale) {
     news: _allReferencingNews(first: "6", filter: { slug: { neq: null } }) {
       id
       slug
-      imageHero {
-        id
-        title
-        alt
-        url
-        responsiveImage(
-          sizes: "(max-width: 1023px) 100vw, (min-width: 1024px) 80vw, 1400px"
-          imgixParams: { auto: [format, compress], ar: "14:8", fit: crop }
-        ) {
-          ...imgFrag
-        }
-      }
     }
     publicationsCount: _allReferencingPublicationsMeta {
       count
@@ -164,18 +82,6 @@ query timelineQuery($locale: SiteLocale) {
     ) {
       id
       slug
-      imageHero {
-        id
-        title
-        alt
-        url
-        responsiveImage(
-          sizes: "(max-width: 1023px) 100vw, (min-width: 1024px) 80vw, 1400px"
-          imgixParams: { auto: [format, compress], ar: "14:8", fit: crop }
-        ) {
-          ...imgFrag
-        }
-      }
     }
     mediaAudiosCount: _allReferencingMediaAudiosMeta {
       count
@@ -183,40 +89,16 @@ query timelineQuery($locale: SiteLocale) {
     mediaPhotosCount: _allReferencingMediaPhotosMeta {
       count
     }
-    mediaPhotos: _allReferencingMediaPhotos(first: "6") {
-      id
-      image {
-        id
-        title
-        alt
-        url
-        responsiveImage(
-          sizes: "(max-width: 1023px) 100vw, (min-width: 1024px) 80vw, 1400px"
-          imgixParams: { auto: [format, compress], ar: "14:8", fit: crop }
-        ) {
-          ...imgFrag
-        }
-      }
-    }
     mediaVideosCount: _allReferencingMediaVideosMeta {
       count
     }
-    mediaVideos: _allReferencingMediaVideos(first: "6", filter: { slug: { neq: null } }) {
+    mediaVideos: _allReferencingMediaVideos(
+      first: "6"
+      filter: { slug: { neq: null } }
+    ) {
       id
       slug
       title
-      image {
-        id
-        title
-        alt
-        url
-        responsiveImage(
-          sizes: "(max-width: 1023px) 100vw, (min-width: 1024px) 80vw, 1400px"
-          imgixParams: { auto: [format, compress], ar: "14:8", fit: crop }
-        ) {
-          ...imgFrag
-        }
-      }
     }
     mediaDocumentsCount: _allReferencingMediaDocumentsMeta {
       count
@@ -226,18 +108,6 @@ query timelineQuery($locale: SiteLocale) {
       filter: { slug: { neq: null } }
     ) {
       id
-      image {
-        id
-        title
-        alt
-        url
-        responsiveImage(
-          sizes: "(max-width: 1023px) 100vw, (min-width: 1024px) 80vw, 1400px"
-          imgixParams: { auto: [format, compress], ar: "14:8", fit: crop }
-        ) {
-          ...imgFrag
-        }
-      }
     }
     partnersCount: _allReferencingPartnerModelsMeta {
       count
@@ -245,11 +115,34 @@ query timelineQuery($locale: SiteLocale) {
     networksCount: _allReferencingNetworksMeta {
       count
     }
-    networks: _allReferencingNetworks(first: "6", filter: { slug: { neq: null } }) {
+    networks: _allReferencingNetworks(
+      first: "6"
+      filter: { slug: { neq: null } }
+    ) {
       id
       title
-      imageHero {
-        id
+    }
+    images {
+      id
+      description
+      image {
+        title
+        alt
+        url
+        responsiveImage(
+          sizes: "(max-width: 768px) 100vw, (min-width: 1024px) 600px, 800px"
+          imgixParams: {
+            auto: [format, compress]
+            ar: "1:1"
+            fit: crop
+            crop: focalpoint
+            mark: "https://www.datocms-assets.com/55129/1701094962-watermark_50_oo_rifilato.png"
+            markAlign: [middle, center]
+            markScale: 25
+          }
+        ) {
+          ...imgFrag
+        }
       }
     }
   }

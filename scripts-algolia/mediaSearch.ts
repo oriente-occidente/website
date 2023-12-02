@@ -109,7 +109,8 @@ function formatItem(item: any) {
     projects: getPropertyAsString(item["projects"], "title"),
     workhops: getPropertyAsString(item["workhops"], "title"),
     events: getPropertyAsString(item["events"], "title"),
-    // news: getPropertyAsString(item["news"], "title"),
+    news: getPropertyAsString(item["news"], "title"),
+    pubblications: getPropertyAsString(item["pubblications"], "title"),
   };
 }
 
@@ -146,19 +147,22 @@ export default async function search(locale: string, indexes: string[]) {
     "artists",
     "companies",
     "residencies",
+    "author",
+    "artists",
+    "companies",
+    "residencies",
+    "projects",
+    "workhops",
+    "events",
+    "news",
+    "pubblications",
   ];
   const attributesForFaceting = [
     "searchable(contentType)",
+    "searchable(category)",
     "searchable(years)",
     "searchable(festival)",
-    "searchable(category)",
-    "searchable(author)",
-    "searchable(artists)",
-    "searchable(companies)",
-    "searchable(residencies)",
-    "searchable(projects)",
-    "searchable(workhops)",
-    "searchable(events)",
+
     // "searchable(news)",
   ];
   const customRanking: string[] = [];

@@ -3,10 +3,22 @@ import { useState, useEffect } from "react";
 import translate from "@/lib/locales";
 
 const tabs = [
-  { name: "tab_festival", slug: "all" },
-  { name: "tab_events", slug: "festivalEvents" },
-  { name: "tab_workshops", slug: "workshops" },
-  { name: "tab_languages", slug: "languages" },
+  { name: "tab_festival", slug: "all", description: "festivalDescription" },
+  {
+    name: "tab_events",
+    slug: "festivalEvents",
+    description: "eventsDescription",
+  },
+  {
+    name: "tab_workshops",
+    slug: "workshops",
+    description: "workshopsDescription",
+  },
+  {
+    name: "tab_languages",
+    slug: "languages",
+    description: "languagesDescription",
+  },
   // { name: 'tab_talks', slug: 'courses' },
 ];
 
@@ -27,10 +39,11 @@ export default function Tabs({ selected, handleSelect, locale, catLengths }) {
   const filteredTabs = tabs.filter(
     (tab) => tab.slug === "all" || catLengths[tab.slug] > 0
   );
+
   return (
-    <div>
-      <div aria-hidden className="px-4 sm:hidden">
-        <div className="border-b border-black">
+    <>
+      <div aria-hidden className="px-4">
+        {/* <div className="border-b border-black lg:border-t-black border-t">
           <label htmlFor="tabs" className="sr-only">
             -
           </label>
@@ -50,32 +63,42 @@ export default function Tabs({ selected, handleSelect, locale, catLengths }) {
               );
             })}
           </select>
-        </div>
+        </div> */}
       </div>
-      <div className="hidden border-gray sm:block md:border-b xl:border-none">
-        <div className="px-4 md:px-6">
-          <nav className="-mb-px flex space-x-8" aria-label="Tabs">
-            {filteredTabs.map((tab) => {
-              const { slug, name } = tab;
-              const isActive = slug === current;
-              return (
+      <div className="container mx-auto px-0">
+        <nav className="-mb-px flex flex-wrap lg:flex-nowrap w-full" aria-label="Tabs">
+          {filteredTabs.map((tab) => {
+            const { slug, name, description } = tab;
+            const isActive = slug === current;
+            return (
+              <div
+                key={slug}
+                className={`${
+                  isActive
+                    ? "border-black border-b bg-red-light"
+                    : "border-transparent border-b"
+                } px-8 text-base w-full`}
+              >
                 <button
                   onClick={() => handleChange(slug)}
-                  key={slug}
                   className={`${
                     isActive
-                      ? "border-black font-semibold uppercase text-black"
-                      : "border-transparent text-gray-dark hover:border-gray-300 hover:text-black"
-                  } whitespace-nowrap border-b-2 py-4 px-1 text-xxs font-medium tracking-wider`}
+                      ? "font-semibold text-black bg-red-light"
+                      : "text-gray-dark hover:border-gray-300 hover:text-black"
+                  } whitespace-nowrap pt-4 text-xs font-medium tracking-wider`}
                   aria-current={isActive ? "page" : undefined}
                 >
                   {translate(name, locale)}
                 </button>
-              );
-            })}
-          </nav>
-        </div>
+                <p className="text-left text-3xs pb-4">
+                  {" "}
+                  {translate(description, locale)}
+                </p>
+              </div>
+            );
+          })}
+        </nav>
       </div>
-    </div>
+    </>
   );
 }

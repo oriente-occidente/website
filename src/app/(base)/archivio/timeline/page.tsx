@@ -1,136 +1,50 @@
 import { draftMode } from "next/headers";
 import GenericHero from "@/components/hero/GenericHero";
 import Link from "next/link";
-import { ArrowLongRightIcon } from "@heroicons/react/24/solid";
-import Image from "next/image";
+import translate from "@/lib/locales";
+
 import queryDatoCMS from "@/lib/fetchDato";
-import { SiteLocale, TimelineQueryDocument, ArtistRecord } from "@/graphql/generated";
+import {
+  SiteLocale,
+  TimelineQueryDocument,
+  ArtistRecord,
+} from "@/graphql/generated";
 import resolveLink from "@/lib/resolveLink";
+import { ArrowLongRightIcon } from "@heroicons/react/24/solid";
+import TimelineTabs from "@/components/TimelineTabs";
+import { Image as DatoImage } from "react-datocms";
+import { ReactNode } from "react";
 
 const locale = "it";
 
-const blob = [
-  {
-    year: "2023",
-    festival: {
-      slug: "http://www.google.com",
-      count: 2,
-    },
-    artitstCompanies: {
-      slug: "http://www.google.com",
-      count: 20,
-    },
-    activities: {
-      slug: "http://www.google.com",
-      count: 19,
-    },
-    news: {
-      slug: "http://www.google.com",
-      count: 19,
-    },
-    media: {
-      slug: "http://www.google.com",
-      count: 192,
-    },
-    image1: "https://placehold.co/500x500",
-    image2: "https://placehold.co/500x500",
-    image3: "https://placehold.co/500x500",
-    image4: "https://placehold.co/500x500",
-    image5: "https://placehold.co/500x500",
-  },
-  {
-    year: "2022",
-
-    festival: {
-      slug: "http://www.festival.com",
-      count: 2,
-    },
-    artitstCompanies: {
-      slug: "http://www.artist.com",
-      count: 20,
-    },
-    activities: {
-      slug: "http://www.activities.com",
-      count: 19,
-    },
-    news: {
-      slug: "http://www.news.com",
-      count: 19,
-    },
-    media: {
-      slug: "http://www.media.com",
-      count: 192,
-    },
-    image1: "https://placehold.co/500x500",
-    image2: "https://placehold.co/500x500",
-    image3: "https://placehold.co/500x500",
-    image4: "https://placehold.co/500x500",
-    image5: "https://placehold.co/500x500",
-  },
-  {
-    year: "2021",
-
-    festival: {
-      slug: "http://www.google.com",
-      count: 2,
-    },
-    artitstCompanies: {
-      slug: "http://www.google.com",
-      count: 20,
-    },
-    activities: {
-      slug: "http://www.google.com",
-      count: 19,
-    },
-    news: {
-      slug: "http://www.google.com",
-      count: 19,
-    },
-    media: {
-      slug: "http://www.google.com",
-      count: 192,
-    },
-    image1: "https://placehold.co/500x500",
-    image2: "https://placehold.co/500x500",
-    image3: "https://placehold.co/500x500",
-    image4: "https://placehold.co/500x500",
-    image5: "https://placehold.co/500x500",
-  },
-  {
-    year: "2019",
-
-    festival: {
-      slug: "http://www.festival.com",
-      count: 2,
-    },
-    artitstCompanies: {
-      slug: "http://www.artist.com",
-      count: 20,
-    },
-    activities: {
-      slug: "http://www.activities.com",
-      count: 19,
-    },
-    news: {
-      slug: "http://www.news.com",
-      count: 19,
-    },
-    media: {
-      slug: "http://www.media.com",
-      count: 192,
-    },
-    image1: "https://placehold.co/500x500",
-    image2: "https://placehold.co/500x500",
-    image3: "https://placehold.co/500x500",
-    image4: "https://placehold.co/500x500",
-    image5: "https://placehold.co/500x500",
-  },
-];
-const hero = {
-  titleHero: "Timeline",
-  descriptionHero:
-    "Scopri la storia di 40 anni  di Oriente Occidente etc etc un testo che vada alemeno su un paio di righe che introduca la pagina",
+type ContentType = {
+  festival: { slug: string; count: number };
+  artitstCompanies: { slug: string; count: number };
+  activities: { slug: string; count: number };
+  news: { slug: string; count: number };
+  media: { slug: string; count: number };
 };
+
+export function renderSections(content: ContentType): ReactNode[] {
+  const elements: ReactNode[] = [];
+  for (const [key, value] of Object.entries(content)) {
+    const element = (
+      <div key={key}>
+        <Link
+          href={value.slug}
+          title={translate(key, locale)}
+          className="flex gap-x-1"
+        >
+          <div>({value.count})</div>
+          <div>{translate(key, locale)}</div>
+          <ArrowLongRightIcon aria-hidden="true" className="h-5 w-5" />
+        </Link>
+      </div>
+    );
+    elements.push(element);
+  }
+  return elements;
+}
 
 function companiesCount(data: any) {
   let companies: string[] = [];
@@ -155,181 +69,158 @@ export default async function Page() {
   );
 
   const page: any = data?.yearsArchive || null;
+
+  const hero = {
+    titleHero: page.title,
+    descriptionHero: page.description,
+  };
+
   let timelineData: any = [];
 
   data?.allYears.map((y) => {
     let year = {
       year: y.year,
-      festival: {
-        slug: resolveLink({
-          _modelApiKey: data?.festivalEditionsArchive?._modelApiKey || "",
-          locale,
-          slug: "",
-        }),
-        count: y.festivalCount.count,
-        images: y.festival,
+      content: {
+        festival: {
+          slug: resolveLink({
+            _modelApiKey: data?.festivalEditionsArchive?._modelApiKey || "",
+            locale,
+            slug: "",
+          }),
+          count: y.festivalCount.count,
+          images: y.festival,
+        },
+        artistsCompanies: {
+          slug: resolveLink({
+            _modelApiKey: data?.artistsCompaniesArchive?._modelApiKey || "",
+            locale,
+            slug: "",
+          }),
+          count: y.artistsCount.count + companiesCount(y.artists),
+          images: y.artists,
+        },
+        activities: {
+          slug: resolveLink({
+            _modelApiKey: data?.activitiesArchive?._modelApiKey || "",
+            locale,
+            slug: "",
+          }),
+          count:
+            y.eventsCount.count +
+            y.workshopsCount.count +
+            y.artisticResidenciesCount.count +
+            y.projectsCount.count,
+          images: [
+            ...y.events,
+            ...y.workshops,
+            ...y.artisticResidencies,
+            ...y.projects,
+          ],
+        },
+        news: {
+          slug: resolveLink({
+            _modelApiKey: data?.newsPublicationsArchive?._modelApiKey || "",
+            locale,
+            slug: "",
+          }),
+          count: y.newsCount.count + y.publicationsCount.count,
+          images: [...y.news, ...y.publications],
+        },
+        // pertnersNetworks: {
+        //   slug: resolveLink({
+        //     _modelApiKey: data?.pertnersNetworksArchive?._modelApiKey || "",
+        //     locale,
+        //     slug: "",
+        //   }),
+        //   count: y.partnersCount.count + y.networksCount.count,
+        //   images: y.networks,
+        // },
+        media: {
+          slug: resolveLink({
+            _modelApiKey: data?.mediaArchive?._modelApiKey || "",
+            locale,
+            slug: "",
+          }),
+          count:
+            y.mediaAudiosCount.count +
+            y.mediaDocumentsCount.count +
+            y.mediaPhotosCount.count +
+            y.mediaVideosCount.count,
+          images: y.mediaPhotos,
+        },
       },
-      artitstCompanies: {
-        slug: resolveLink({
-          _modelApiKey: data?.artistsCompaniesArchive?._modelApiKey || "",
-          locale,
-          slug: "",
-        }),
-        count: y.artistsCount.count + companiesCount(y.artists),
-        images: y.artists,
-      },
-      activities: {
-        slug: resolveLink({
-          _modelApiKey: data?.activitiesArchive?._modelApiKey || "",
-          locale,
-          slug: "",
-        }),
-        count:
-          y.eventsCount.count +
-          y.workshopsCount.count +
-          y.artisticResidenciesCount.count +
-          y.projectsCount.count,
-        images: [...y.events, ...y.workshops, ...y.artisticResidencies, ...y.projects],
-      },
-      news: {
-        slug: resolveLink({
-          _modelApiKey: data?.newsPublicationsArchive?._modelApiKey || "",
-          locale,
-          slug: "",
-        }),
-        count: y.newsCount.count + y.publicationsCount.count,
-        images: [...y.news, ...y.publications],
-      },
-      // pertnersNetworks: {
-      //   slug: resolveLink({
-      //     _modelApiKey: data?.pertnersNetworksArchive?._modelApiKey || "",
-      //     locale,
-      //     slug: "",
-      //   }),
-      //   count: y.partnersCount.count + y.networksCount.count,
-      //   images: y.networks,
-      // },
-      media: {
-        slug: resolveLink({
-          _modelApiKey: data?.mediaArchive?._modelApiKey || "",
-          locale,
-          slug: "",
-        }),
-        count:
-          y.mediaAudiosCount.count +
-          y.mediaDocumentsCount.count +
-          y.mediaPhotosCount.count +
-          y.mediaVideosCount.count,
-        images: y.mediaPhotos,
-      },
-      images: y.mediaPhotos,
+      images: y.images,
     };
     timelineData.push(year);
   });
 
   return (
-    <div className="">
-      {/* My index page - {locale} */}
+    <>
       <GenericHero data={hero} locale={locale} />
-      <div className="container grid grid-cols-1 xl:grid-cols-4">
-        <div className="xl:pr-14">
-          <div className="sticky top-32">
-            <nav className="">
-              <div className="border text-base p-4 border-b md:col-span-3">Anno</div>
-              <ul className="border-l xl:border border-b-0 mt-[-1px] text-base md:grid md:grid-cols-3 xl:block">
-                {blob.map((item) => {
-                  return (
-                    <li key={item.year} className="border-b border-r">
-                      <Link
-                        href={`#${item.year}`}
-                        className="p-4 flex justify-between items-center hover:bg-red-light motion-safe:duration-300"
-                      >
-                        {item.year}
-                        <ArrowLongRightIcon
-                          aria-hidden="true"
-                          className="h-5 w-5 rotate-90 xl:rotate-0"
-                        />
-                      </Link>
-                    </li>
-                  );
-                })}
-              </ul>
-            </nav>
-            <div className="hidden xl:flex items-center justify-center absolute top-32 -right-14 translate-x-1/2 w-20 h-20 rounded-full bg-white border border-red ">
-              <ArrowLongRightIcon
-                aria-hidden="true"
-                className="h-6 w-6 rotate-90"
-                color="#e64011"
-              />
-            </div>
-          </div>
-        </div>
-        <div className="col-span-3 border-l border-red pl-28">
-          {blob.map((item) => {
+      <div className="container h-full grid grid-cols-1 lg:grid-cols-4 relative">
+        <TimelineTabs nav={timelineData} locale={locale} />
+
+        <div className="col-span-3 lg:border-l lg:border-red pl-1 lg:pl-20 xl:pl-28">
+          {timelineData.map((item: any) => {
+            const view = renderSections(item.content);
+
             return (
-              <div id={item.year} key={item.year} className="border-b py-8 mb-8">
-                <div className="grid grid-cols-3 gap-4">
-                  <div className="">
+              <div
+                id={item.year}
+                key={item.year}
+                className="border-b py-8 mb-8"
+              >
+                <div className="grid grid-flow-row grid-cols-1 md:grid-cols-2 lg:grid-cols-10 gap-4">
+                  <div className="md:col-span-1 lg:col-span-4">
                     <div className="mb-8 text-lg">{item.year}</div>
-                    <div className="space-y-4">
-                      <div className="flex gap-x-2">
-                        <div>({item.festival.count})</div>
-                        <div>Festival</div>
-                        <ArrowLongRightIcon aria-hidden="true" className="h-5 w-5" />
-                      </div>
-                      <div className="flex gap-x-2">
-                        <div>({item.artitstCompanies.count})</div>
-                        <div>Artisti e compagnie</div>
-                        <ArrowLongRightIcon aria-hidden="true" className="h-5 w-5" />
-                      </div>
-                      <div className="flex gap-x-2">
-                        <div>({item.activities.count})</div>
-                        <div>Attività</div>
-                        <ArrowLongRightIcon aria-hidden="true" className="h-5 w-5" />
-                      </div>
-                      <div className="flex gap-x-2">
-                        <div>({item.news.count})</div>
-                        <div>News</div>
-                        <ArrowLongRightIcon aria-hidden="true" className="h-5 w-5" />
-                      </div>
-                      <div className="flex gap-x-2">
-                        <div>({item.media.count})</div>
-                        <div>Media</div>
-                        <ArrowLongRightIcon aria-hidden="true" className="h-5 w-5" />
-                      </div>
-                    </div>
+                    <div className="space-y-4">{view}</div>
                   </div>
 
-                  <div className="relative pb-[150%]">
-                    <img
-                      src={item.image1}
-                      className="absolute object-cover w-full h-full"
-                    ></img>
+                  <div className="md:col-span-1 lg:col-span-3 relative pb-[110%] md:pb-[80%] bg-gray-light relative ">
+                    {item.images[0] && (
+                      <DatoImage
+                        className="dato-image-cover"
+                        data={item.images[0]?.image.responsiveImage}
+                      />
+                    )}
                   </div>
-                  <div className="flex flex-wrap gap-x-[6%] gap-y-4">
-                    <div className="basis-full relative">
-                      <img
-                        src={item.image2}
-                        className="absolute object-cover w-full h-full"
-                      ></img>
+
+                  <div className="md:col-span-2 lg:col-span-3 grid grid-cols-3 md:grid-cols-6 lg:grid-cols-2 gap-x-4 gap-y-4">
+                    <div className="col-span-3 lg:col-span-2 h-[135px] lg:h-[110px] relative bg-gray-light relative ">
+                      {item.images[1] && (
+                        <DatoImage
+                          objectFit="cover"
+                          className="absolute w-full h-full"
+                          data={item.images[1]?.image.responsiveImage}
+                        />
+                      )}
                     </div>
-                    <div className="w-[47%] relative">
-                      <img
-                        src={item.image3}
-                        className="absolute object-cover w-full h-full"
-                      ></img>
+                    <div className="h-[135px] lg:h-[90px] relative bg-gray-light">
+                      {item.images[2] && (
+                        <DatoImage
+                          objectFit="cover"
+                          className="absolute w-full h-full"
+                          data={item.images[2]?.image.responsiveImage}
+                        />
+                      )}
                     </div>
-                    <div className="w-[47%] relative">
-                      <img
-                        src={item.image4}
-                        className="absolute object-cover w-full h-full"
-                      ></img>
+                    <div className="h-[135px] lg:h-[90px] relative bg-gray-light">
+                      {item.images[3] && (
+                        <DatoImage
+                          objectFit="cover"
+                          className="absolute w-full h-full"
+                          data={item.images[3]?.image.responsiveImage}
+                        />
+                      )}
                     </div>
-                    <div className="w-[47%] relative">
-                      <img
-                        src={item.image5}
-                        className="absolute object-cover w-full h-full"
-                      ></img>
+                    <div className="h-[135px] lg:h-[90px] relative bg-gray-light">
+                      {item.images[4] && (
+                        <DatoImage
+                          objectFit="cover"
+                          className="absolute w-full h-full"
+                          data={item.images[4]?.image.responsiveImage}
+                        />
+                      )}
                     </div>
                   </div>
                 </div>
@@ -338,6 +229,6 @@ export default async function Page() {
           })}
         </div>
       </div>
-    </div>
+    </>
   );
 }

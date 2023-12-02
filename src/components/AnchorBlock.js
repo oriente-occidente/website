@@ -24,7 +24,7 @@ export default function AnchorBlock({ data, locale }) {
                 : ""
             }`}
           >
-            <a onClick={() => handleTabClick(translate("program", locale))}>
+            <a href="#program" onClick={() => handleTabClick(translate("program", locale))}>
               {translate("program", locale)}
             </a>
             <ArrowLongRightIcon
@@ -40,7 +40,7 @@ export default function AnchorBlock({ data, locale }) {
                 : ""
             }`}
           >
-            <a onClick={() => handleTabClick(translate("news", locale))}>
+            <a href="#news" onClick={() => handleTabClick(translate("news", locale))}>
               {translate("news", locale)}
             </a>
             <ArrowLongRightIcon
