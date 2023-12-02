@@ -140,7 +140,7 @@ export default function MediaSearch({ locale }: MediaSearchPropsType) {
 
             {filtersOptions.map((filter) => {
               return (
-                <div className="my-10">
+                <div className="my-10" key={filter.name}>
                   <h3 className="text-md uppercase font-bold mb-6">
                     {translate(`search-filters.${filter.name}`, locale)}
                   </h3>
