@@ -25,7 +25,7 @@ type ContentType = {
   media: { slug: string; count: number };
 };
 
-export function renderSections(content: ContentType): ReactNode[] {
+function renderSections(content: ContentType): ReactNode[] {
   const elements: ReactNode[] = [];
   for (const [key, value] of Object.entries(content)) {
     const element = (
@@ -88,7 +88,7 @@ export default async function Page() {
             slug: "",
           }),
           count: y.festivalCount.count,
-          images: y.festival,
+          // images: y.festival,
         },
         artistsCompanies: {
           slug: resolveLink({
@@ -97,7 +97,7 @@ export default async function Page() {
             slug: "",
           }),
           count: y.artistsCount.count + companiesCount(y.artists),
-          images: y.artists,
+          // images: y.artists,
         },
         activities: {
           slug: resolveLink({
@@ -146,7 +146,7 @@ export default async function Page() {
             y.mediaDocumentsCount.count +
             y.mediaPhotosCount.count +
             y.mediaVideosCount.count,
-          images: y.mediaPhotos,
+          // images: y.mediaPhotos,
         },
       },
       images: y.images,
