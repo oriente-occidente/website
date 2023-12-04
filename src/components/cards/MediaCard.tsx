@@ -8,23 +8,20 @@ import {
 import { formatDate } from "@/lib/utils";
 import { GenericCardProps } from "@/types";
 import resolveLink from "@/lib/resolveLink";
+import translate from "@/lib/locales";
+import {
+  PaperClipIcon,
+  MusicalNoteIcon,
+  VideoCameraIcon,
+  PhotoIcon,
+} from "@heroicons/react/24/outline";
 
-export default function NewsCard({ data, locale }: GenericCardProps) {
-  // console.log("data", data.tags);
+export default function MediaCard({ data, locale }: GenericCardProps) {
   let categoryTitle = data.contentType;
-
-  console.log("categoryTitle", categoryTitle);
-  const categoryColorClasses: any = {
-    photo: "bg-cat-news text-black",
-    video: "bg-cat-eventi text-black",
-    audio: "bg-cat-linguaggi text-black",
-    document: "bg-cat-workshop text-black",
-  };
-  const categoryClasses =
-    categoryColorClasses[categoryTitle ? categoryTitle.toLowerCase() : ""];
-
   const link = resolveLink({ ...data, locale });
   const title = data.title || data.id;
+  console.log(data._modelApiKey)
+
   return (
     <div className="relative py-4">
       <Link href={link} title={data.title || data.id} className="group">
@@ -46,13 +43,40 @@ export default function NewsCard({ data, locale }: GenericCardProps) {
           </div>
         )}
         <div className="z-20">
-          <div className="mt-4 mb-3">
+          <div className="mt-4 mb-3 ">
             {categoryTitle && (
-              <span
-                className={`px-2 py-1 font-semibold uppercase mr-2 ${categoryClasses}`}
+              <div
+                className={
+                  "px-2 font-semibold text-xs uppercase mr-2 border border-red text-red inline-flex flex-nowrap items-center gap-1"
+                }
               >
-                {categoryTitle}
-              </span>
+                {categoryTitle.toLowerCase() === "document" ? (
+                  <PaperClipIcon
+                    aria-hidden="true"
+                    className="h-4 w-4"
+                    color="#D83D35"
+                  />
+                ) : categoryTitle.toLowerCase() === "audio" ? (
+                  <MusicalNoteIcon
+                    aria-hidden="true"
+                    className="h-4 w-4"
+                    color="#D83D35"
+                  />
+                ) : categoryTitle.toLowerCase() === "photo" ? (
+                  <PhotoIcon
+                    aria-hidden="true"
+                    className="h-4 w-4"
+                    color="#D83D35"
+                  />
+                ) : (
+                  <VideoCameraIcon
+                    aria-hidden="true"
+                    className="h-4 w-4"
+                    color="#D83D35"
+                  />
+                )}
+                {translate(categoryTitle, locale)}
+              </div>
             )}
             {data.creationDate && (
               <span className="font-semibold text-xs uppercase md:ml-2">
@@ -60,14 +84,18 @@ export default function NewsCard({ data, locale }: GenericCardProps) {
               </span>
             )}
           </div>
-          {title && (
+          {title ? (
+            <h2 className="text-base font-semibold uppercase text-black md:text-lg group-hover:underline">
+              {title}
+            </h2>
+          ) : (
             <h2 className="text-base font-semibold uppercase text-black md:text-lg group-hover:underline">
               {title}
             </h2>
           )}
           <div className="mt-3 uppercase font-semibold text-xxs flex items-center">
-            <div>Vai al contenuto</div>
-            <div className=" hidden h-[20px] w-[20px] bg-arrow-right-black lg:block ml-3 group-hover:ml-5 motion-safe:duration-200" />
+            <div>{translate("goToContents", locale)}</div>
+            <div className="h-[20px] w-[20px] bg-arrow-right-black lg:block ml-3 group-hover:ml-5 motion-safe:duration-200" />
           </div>
         </div>
       </Link>
