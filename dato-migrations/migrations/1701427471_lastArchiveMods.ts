@@ -266,11 +266,17 @@ export default async function (client: Client) {
 
   console.log('Update model "Anno" (`year`)');
 
-  const sortingField = await client.fields.find("year::year");
-  console.log("sortingField", sortingField);
-  await client.itemTypes.update("148638", {
-    ordering_field: { id: sortingField, id, type: "field" },
-  });
+  try {
+    const sortingField = await client.fields.find("year::year");
+    console.log("sortingField", sortingField);
+    await client.itemTypes.update("148638", {
+      ordering_field: { id: sortingField.id, type: "field" },
+    });
+  } catch (e: any) {
+    console.log("ERROR", e);
+    let errors: any = e?.errors || [];
+    errors.map((ee: any) => console.log(ee, ee.attributes));
+  }
 
   console.log('Update model "Archivio Timeline" (`years_archive`)');
   await client.itemTypes.update("bu2ay-uHSpyiVfx-YFZ7Lw", {
@@ -296,10 +302,16 @@ export default async function (client: Client) {
     parent: { id: "78653", type: "menu_item" },
   });
 
-  console.log('Create menu item "Pagine"');
-  newMenuItems["Kp6FMJTfQO2r8SDeVu88PQ"] = await client.menuItems.create({
-    label: "Pagine",
-  });
+  try {
+    console.log('Create menu item "Pagine"');
+    newMenuItems["Kp6FMJTfQO2r8SDeVu88PQ"] = await client.menuItems.create({
+      label: "Tutte le Pagine",
+    });
+  } catch (e: any) {
+    console.log("ERROR", e);
+    let errors: any = e?.errors || [];
+    errors.map((ee: any) => console.log(ee, ee.attributes));
+  }
 
   console.log('Create menu item "Compagnie"');
   newMenuItems["M0G7UKEvQCqiKbgtaSDdqw"] = await client.menuItems.create({
