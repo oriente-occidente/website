@@ -20,7 +20,7 @@ export default function MediaCard({ data, locale }: GenericCardProps) {
   let categoryTitle = data.contentType;
   const link = resolveLink({ ...data, locale });
   const title = data.title || data.id;
-  console.log(data._modelApiKey)
+  console.log(categoryTitle.toLowerCase())
 
   return (
     <div className="relative py-4">
@@ -75,7 +75,7 @@ export default function MediaCard({ data, locale }: GenericCardProps) {
                     color="#D83D35"
                   />
                 )}
-                {translate(categoryTitle, locale)}
+                {translate(categoryTitle.toLowerCase(), locale)}
               </div>
             )}
             {data.creationDate && (

@@ -59,6 +59,7 @@ const labels_en = {
   media: "Media",
   document: "Document",
   audio: "Audio",
+  photo: "Photo",
   video: "Video",
   reservedTextLineOne: "This video is not publicly available.",
   reservedTextLineTwo: "To request access, send an email to",

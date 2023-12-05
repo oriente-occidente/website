@@ -59,6 +59,7 @@ const labels_it = {
   media: "Media",
   document: "Documento",
   audio: "Audio",
+  photo: "Immagine",
   video: "Video",
   reservedTextLineOne: "Questo video non è consultabile pubblicamente.",
   reservedTextLineTwo: "Per chiederne l’accesso scrivere all’indirizzo",
