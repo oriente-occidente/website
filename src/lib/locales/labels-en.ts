@@ -73,6 +73,7 @@ const labels_en = {
   publication: "Publication",
   event: "Event",
   workshop: "Workshop",
+  formazione: "training",
   festivalDescription: "Training activities",
   eventsDescription: "Shows, performances and open rehearsals",
   workshopsDescription: "Complete program",
