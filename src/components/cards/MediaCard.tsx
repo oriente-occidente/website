@@ -20,7 +20,6 @@ export default function MediaCard({ data, locale }: GenericCardProps) {
   let categoryTitle = data.contentType;
   const link = resolveLink({ ...data, locale });
   const title = data.title || data.id;
-  console.log(categoryTitle.toLowerCase())
 
   return (
     <div className="relative py-4">
@@ -90,7 +89,7 @@ export default function MediaCard({ data, locale }: GenericCardProps) {
             </h2>
           ) : (
             <h2 className="text-base font-semibold uppercase text-black md:text-lg group-hover:underline">
-              {title}
+              {data.description}
             </h2>
           )}
           <div className="mt-3 uppercase font-semibold text-xxs flex items-center">
