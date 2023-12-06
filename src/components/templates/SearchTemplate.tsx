@@ -8,10 +8,10 @@ export default function SearchTemplate({
   const { title, description } = data;
   return (
     <div className="container py-10">
-      <h1 className="text-2xl font-bold">{title}</h1>
-      <div className="w-full border-solid border-b-2 border-gray-100 py-10">
-        {description}
-      </div>
+      <header className="overflow-hidden border-t border-gray py-5 md:border-t-0 md:border-b ">
+        <h1 className="title">{title}</h1>
+        <h2 className="text-black-light md:mt-1 md:text-sm">{description}</h2>
+      </header>
       <div className="mt-10">{children}</div>
     </div>
   );

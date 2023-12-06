@@ -26,7 +26,6 @@ type HitProps = {
 
 export default function VideoHit({ hit, locale }: HitProps) {
   const { objectID } = hit;
-  console.log(hit);
   return (
     <div key={`hit-${objectID}`}>
       <MediaCard data={hit} locale={locale} />

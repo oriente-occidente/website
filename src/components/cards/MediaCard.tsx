@@ -20,10 +20,9 @@ export default function MediaCard({ data, locale }: GenericCardProps) {
   let categoryTitle = data.contentType;
   const link = resolveLink({ ...data, locale });
   const title = data.title || data.id;
-
   return (
     <div className="relative py-4">
-      <Link href={link} title={data.title || data.id} className="group">
+      <Link href={link} title={title} className="group">
         {data.image ? (
           <div className="relative h-[220px] overflow-hidden md:h-[360px]">
             <img
@@ -34,10 +33,10 @@ export default function MediaCard({ data, locale }: GenericCardProps) {
         ) : (
           <div className="relative h-[220px] overflow-hidden md:h-[360px] flex items-center justify-center border-1 border-gray-100 bg-cat-linguaggi">
             {categoryTitle.toLowerCase() === "audio" && (
-              <SpeakerWaveIcon className="h-[200px] text-black" />
+              <SpeakerWaveIcon className="h-[150px] text-black" />
             )}
             {categoryTitle.toLowerCase() === "document" && (
-              <DocumentTextIcon className="h-[200px] text-black" />
+              <DocumentTextIcon className="h-[150px] text-black" />
             )}
           </div>
         )}
@@ -83,13 +82,9 @@ export default function MediaCard({ data, locale }: GenericCardProps) {
               </span>
             )}
           </div>
-          {title ? (
-            <h2 className="text-base font-semibold uppercase text-black md:text-lg group-hover:underline">
-              {title}
-            </h2>
-          ) : (
-            <h2 className="text-base font-semibold uppercase text-black md:text-lg group-hover:underline">
-              {data.description}
+          {(title || data.description) && (
+            <h2 className="text-base font-semibold uppercase text-black md:text-lg group-hover:underline line-clamp-2">
+              {title ? title : data.description}
             </h2>
           )}
           <div className="mt-3 uppercase font-semibold text-xxs flex items-center">
