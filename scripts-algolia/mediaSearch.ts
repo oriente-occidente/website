@@ -55,6 +55,7 @@ const queries: any = {
   items: allMediaPhotos(first: $first, skip: $skip, locale: $locale,orderBy: creationDate_DESC) {
     image {
       url(imgixParams: {auto: [format, compress], ar: "5:4", fit: crop})
+      title
     }
     ${commonBlock}
   }}`,
@@ -62,6 +63,9 @@ const queries: any = {
   items: allMediaAudios(first: $first, skip: $skip, locale: $locale,orderBy: creationDate_DESC) {
     title
     slug
+    image {
+      url(imgixParams: {auto: [format, compress], ar: "5:4", fit: crop})
+    }
     ${commonBlock}
   }}
 `,
@@ -89,10 +93,16 @@ function toContentType(_modelApiKey: string) {
 function formatItem(item: any) {
   let { id, _modelApiKey, description, years } = item;
   const slug = item.slug || id;
+  let title;
+  if (_modelApiKey == "media_photo") {
+    title = item.image?.title;
+  } else {
+    title = item.title;
+  }
   return {
     objectID: id,
     //conditional
-    title: item.title || "",
+    title: title || "",
     image: item.image?.url || "",
     slug,
     //common
