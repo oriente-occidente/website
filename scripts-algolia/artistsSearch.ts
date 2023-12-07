@@ -58,7 +58,6 @@ function toContentType(_modelApiKey: string) {
 
 async function formatItem(item: any) {
   let { id, _modelApiKey, years, title, slug } = item;
-  console.log(item);
 
   let contents = [];
   for (let s of item.sections) {
