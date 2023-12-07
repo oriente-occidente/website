@@ -1,6 +1,18 @@
 import { formatStructuredText, getCollections } from "./dato-utils";
 import { sendIndex } from "./algolia-utils";
 
+function toContentType(_modelApiKey: string) {
+  let tipology = ("" + _modelApiKey)
+    .toLowerCase()
+    .replace("media_", "")
+    .replaceAll("_", " ")
+    .replaceAll("-", " ");
+  const splits = tipology.split(" ");
+  return splits
+    .map((t) => `${t.charAt(0).toUpperCase()}${t.slice(1)}`)
+    .join(" ");
+}
+
 const queries: any = {
   festival: `query allFestivalEditions($locale: SiteLocale, $first: IntType, $skip: IntType) {
   items: allFestivalEditions(
@@ -21,24 +33,15 @@ const queries: any = {
     image: imageHero {
       url(imgixParams: {auto: [format, compress], ar: "5:4", fit: crop})
     }
+    year{
+      year
+    }
   }
 }`,
 };
 
-function getPropertyAsString(list: any[], property: string) {
-  if (!list || list.length === 0) return [];
-  return list?.map((i: any) => i[property]).sort();
-}
-
-function toContentType(_modelApiKey: string) {
-  let tipology = ("" + _modelApiKey).toLowerCase().replace("media_", "");
-  return `${tipology.charAt(0).toUpperCase()}${tipology.slice(1)}`;
-}
-
 async function formatItem(item: any) {
-  let { id, _modelApiKey, description, years, title, slug, festivalType } =
-    item;
-
+  let { id, _modelApiKey, year, title, slug, festivalType } = item;
   let content: any = "";
   if (item.content) {
     content = await formatStructuredText(item.content);
@@ -46,21 +49,17 @@ async function formatItem(item: any) {
 
   return {
     objectID: id,
-    image: item.image?.url || "",
+    _modelApiKey,
     title,
     slug,
     content,
-    //common
-    _modelApiKey,
-    festivalType,
-    description,
-    contentType: toContentType(_modelApiKey),
-    years: years.map((i: any) => i.year),
-    country: getPropertyAsString(item["country"], "name"),
+    years: [year.year],
+    festivalType: toContentType(festivalType),
+    image: item.image?.url || "",
   };
 }
 
-const NAME = "news";
+const NAME = "festival";
 export default async function search(locale: string, indexes: string[]) {
   console.info(NAME, locale);
 

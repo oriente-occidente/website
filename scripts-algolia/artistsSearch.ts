@@ -20,7 +20,7 @@ const commonBlock = `
 `;
 
 const queries: any = {
-  artists: `allArtists($locale: SiteLocale, $first: IntType, $skip: IntType) {
+  artists: `query allArtists($locale: SiteLocale, $first: IntType, $skip: IntType) {
   items: allArtists(
     first: $first
     skip: $skip
@@ -57,7 +57,8 @@ function toContentType(_modelApiKey: string) {
 }
 
 async function formatItem(item: any) {
-  let { id, _modelApiKey, description, years, title, slug } = item;
+  let { id, _modelApiKey, years, title, slug } = item;
+  console.log(item);
 
   let contents = [];
   for (let s of item.sections) {
@@ -79,9 +80,7 @@ async function formatItem(item: any) {
     content,
     //common
     _modelApiKey,
-    description,
     contentType: toContentType(_modelApiKey),
-    years: years.map((i: any) => i.year),
     country: getPropertyAsString(item["country"], "name"),
   };
 }
@@ -107,17 +106,9 @@ export default async function search(locale: string, indexes: string[]) {
   }
 
   const indexName = `${NAME}_${locale}`;
-  const searchableAttributes = [
-    "title",
-    "slug",
-    "content",
-    "contentType",
-    "years",
-    "country",
-  ];
+  const searchableAttributes = ["title", "slug", "content", "contentType"];
   const attributesForFaceting = [
     "searchable(contentType)",
-    "searchable(years)",
     "searchable(country)",
   ];
   const customRanking: string[] = [];

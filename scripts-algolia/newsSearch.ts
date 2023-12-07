@@ -53,13 +53,13 @@ function toContentType(_modelApiKey: string) {
 
 async function formatItem(item: any) {
   let { id, _modelApiKey, description, years, title, slug } = item;
-  const content = await formatStructuredText(item.content);
+  // const content = await formatStructuredText(item.content);
   return {
     objectID: id,
     image: item.image?.url || "",
     title,
     slug,
-    content,
+    // content,
     //common
     _modelApiKey,
     description,
@@ -93,7 +93,7 @@ export default async function search(locale: string, indexes: string[]) {
   const searchableAttributes = [
     "title",
     "slug",
-    "content",
+    // "content",
     "contentType",
     "years",
     "festival",

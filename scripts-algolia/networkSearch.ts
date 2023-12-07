@@ -69,7 +69,7 @@ async function formatItem(item: any) {
   };
 }
 
-const NAME = "news";
+const NAME = "networtk";
 export default async function search(locale: string, indexes: string[]) {
   console.info(NAME, locale);
 
