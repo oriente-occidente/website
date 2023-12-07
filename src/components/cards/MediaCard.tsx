@@ -21,7 +21,7 @@ export default function MediaCard({ data, locale }: GenericCardProps) {
   const link = resolveLink({ ...data, locale });
   const title = data.title || data.id;
   return (
-    <div className="relative py-4">
+    <div className="relative">
       <Link href={link} title={title} className="group">
         {data.image ? (
           <div className="relative h-[220px] overflow-hidden md:h-[360px]">

@@ -75,14 +75,14 @@ export default function CustomSearchBox(props: SearchBoxCustomProps) {
         }
       }}
     >
-      <label htmlFor="search" className="">
-        {translate("search.label", props.locale)}
+      <label htmlFor="search" className="text-base lg:text-lg">
+        {translate("search.title", props.locale)}
       </label>
-      <div className="mt-6 block md:flex md:items-center w-full relative">
+      <div className="lg:mt-6 block md:flex md:items-center w-full relative">
         <input
           type="search"
           ref={inputRef}
-          className="peer/search w-full h-12 py-1 px-4 text-base text-gray-700 placeholder-gray-600 border rounded-md focus:shadow-outline"
+          className="peer/search w-full h-12 py-1 px-4 text-sm text-gray-700 placeholder-gray-600 border rounded-sm focus:shadow-outline"
           autoCorrect="off"
           autoCapitalize="off"
           autoComplete="off"
