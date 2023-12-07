@@ -136,7 +136,7 @@ const labels_en = {
     projects: "Projects",
     workhops: "Workhops",
     news: "News",
-    events: "Eventi",
+    events: "Events",
     pubblications: "Pubblicazioni",
     networks: "Networks",
   },
