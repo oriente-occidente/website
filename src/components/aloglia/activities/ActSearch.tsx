@@ -2,20 +2,22 @@
 import React from "react";
 import { useState, useRef, useEffect } from "react";
 import { ChevronDownIcon } from "@heroicons/react/24/solid";
-
 import algoliasearch from "algoliasearch/lite";
 import {
   InstantSearch,
   RefinementList,
   InstantSearchProps,
   Stats,
+  Configure,
 } from "react-instantsearch";
+
+import config from "@/data/config";
 import translate from "@/lib/locales";
-import Pagination from "./Pagination";
-import Results from "./MediaSearchResults";
+import Pagination from "../Pagination";
+import Results from "./ActSearchResults";
 import { UiState } from "instantsearch.js/es/types";
-import CustomClearRefinements from "./CustomCleearRefinements";
-import CustomSearchBox from "./CustomSearchBox";
+import CustomClearRefinements from "../CustomCleearRefinements";
+import CustomSearchBox from "../CustomSearchBox";
 
 const searchClient = algoliasearch(
   process.env.NEXT_PUBLIC_ALGOLIA_APP_ID || "",
@@ -111,8 +113,10 @@ export function AccordionItem({ filter, locale }: any) {
   );
 }
 
-export default function MediaSearch({ locale }: MediaSearchPropsType) {
-  const indexName = `media_${locale}`;
+export default function Search({ locale }: MediaSearchPropsType) {
+  const indexName = `activities`;
+  const isDefaultLocale = locale === config.defaultLocale;
+
   const [notifyReset, setNotifyReset] = useState<boolean>(false);
   const [openFilters, setOpenFilters] = useState<boolean>(false);
   const [searchState, setSearchState] = useState<UiState>({});
@@ -124,13 +128,6 @@ export default function MediaSearch({ locale }: MediaSearchPropsType) {
   const filtersOptions = [
     {
       name: "contentType",
-      searchable: false,
-      operator: true,
-      limit: 5,
-      showMore: false,
-    },
-    {
-      name: "category",
       searchable: false,
       operator: true,
       limit: 5,
@@ -177,7 +174,9 @@ export default function MediaSearch({ locale }: MediaSearchPropsType) {
         searchClient={searchClient}
         indexName={indexName}
         onStateChange={onStateChange}
+        routing={true}
       >
+        <Configure filters={`ita:${isDefaultLocale ? "true" : "false"}`} />
         <div className="flex items-center lg:hidden pb-8 mb-8 border-b border-gray border-dashed">
           <button
             className="flex items-center font-bold text-white bg-black capitalize px-4 py-2 mr-6 whitespace-nowrap"

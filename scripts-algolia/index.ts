@@ -9,31 +9,27 @@ import newsSearch from "./newsSearch";
 (async () => {
   const start = Date.now();
   const indexes = await listIndexes();
+  const defaultLocale = "it";
+  const locales = ["it", "en"];
   console.info("INDEXES", indexes);
 
-  // artists SEARCH
-  await artistsSearch("it", indexes);
-  await artistsSearch("en", indexes);
-
   // MEDIA SEARCH
-  await mediaSearch("it", indexes);
-  await mediaSearch("en", indexes);
+  await mediaSearch(defaultLocale, locales, indexes);
+
+  // artists SEARCH
+  await artistsSearch(defaultLocale, locales, indexes);
 
   // NEWS SEARCH
-  await newsSearch("it", indexes);
-  await newsSearch("en", indexes);
+  await newsSearch(defaultLocale, locales, indexes);
 
   // ACTIVITIES SEARCH
-  await activitiesSearch("it", indexes);
-  await activitiesSearch("en", indexes);
+  await activitiesSearch(defaultLocale, locales, indexes);
 
   // FESTIVAL SEARCH
-  // await festivalSearch("it", indexes);
-  // await festivalSearch("en", indexes);
+  await festivalSearch(defaultLocale, locales, indexes);
 
-  // network SEARCH
-  await networkSearch("it", indexes);
-  await networkSearch("en", indexes);
+  // NETWORK SEARCH
+  await networkSearch(defaultLocale, locales, indexes);
 
   const elapsed = Date.now() - start;
   console.info("ELAPSED", elapsed / 1000, "seconds");

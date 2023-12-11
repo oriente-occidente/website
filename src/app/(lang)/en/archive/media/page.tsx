@@ -6,7 +6,7 @@ import fetchDato from "@/lib/fetchDato";
 import SearchTemplate from "@/components/templates/SearchTemplate";
 import MediaSearch from "@/components/aloglia/media/MediaSearch";
 
-const locale = "it";
+const locale = 'en';
 
 export async function generateMetadata() {
   const siteLocale = locale as SiteLocale;

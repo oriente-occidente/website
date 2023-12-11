@@ -91,7 +91,7 @@ function toContentType(_modelApiKey: string) {
 }
 
 function formatItem(item: any) {
-  let { id, _modelApiKey, description, years } = item;
+  let { id, _modelApiKey, description, years, locale, isDefaultLocale } = item;
   const slug = item.slug || id;
   let title;
   if (_modelApiKey == "media_photo") {
@@ -100,7 +100,8 @@ function formatItem(item: any) {
     title = item.title;
   }
   return {
-    objectID: id,
+    objectID: `${id}-${locale}`,
+    ita: isDefaultLocale,
     //conditional
     title: title || "",
     image: item.image?.url || "",
@@ -124,27 +125,34 @@ function formatItem(item: any) {
   };
 }
 
-const NAME = "media";
-export default async function search(locale: string, indexes: string[]) {
-  console.info(NAME, locale);
-
-  let items: any[] = [];
-  for (const key of Object.keys(queries)) {
-    const query = queries[key];
-    const results = await getCollections(query, { locale }, "items");
-    console.log(key, results.length);
-    items = [...items, ...results];
-  }
-  items = items.filter(Boolean);
-  console.info("TOTAL", items.length);
+const indexName = "media";
+export default async function search(
+  defaultLocale: string,
+  locales: string[],
+  indexes: string[]
+) {
   const data = [];
-  for (let i = 0; i < items.length; i++) {
-    const item: any = items[i];
-    const formatted = await formatItem(item);
-    data.push(formatted);
+  for (const locale of locales) {
+    const isDefaultLocale = defaultLocale == locale;
+
+    let items: any[] = [];
+    console.info(indexName, locale);
+    for (const key of Object.keys(queries)) {
+      const query = queries[key];
+      const results = await getCollections(query, { locale }, "items");
+      console.log(key, results.length);
+      items = [...items, ...results];
+    }
+    items = items.filter(Boolean);
+    console.info("TOTAL", locale, " = ", items.length);
+    for (let i = 0; i < items.length; i++) {
+      const item: any = items[i];
+      const formatted = await formatItem({ ...item, locale, isDefaultLocale });
+      data.push(formatted);
+    }
   }
 
-  const indexName = `${NAME}_${locale}`;
+  // const indexName = `${NAME}_${locale}`;
   const searchableAttributes = [
     "title",
     "slug",
@@ -168,11 +176,11 @@ export default async function search(locale: string, indexes: string[]) {
     "pubblications",
   ];
   const attributesForFaceting = [
+    "ita",
     "searchable(contentType)",
     "searchable(category)",
     "searchable(years)",
     "searchable(festival)",
-
     // "searchable(news)",
   ];
   const customRanking: string[] = [];
@@ -188,7 +196,7 @@ export default async function search(locale: string, indexes: string[]) {
       data,
       searchableAttributes,
       attributesForFaceting,
-      indexLanguages: [locale],
+      indexLanguages: locales,
       customRanking,
       hitsPerPage: 12,
       replace,

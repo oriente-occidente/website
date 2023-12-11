@@ -105,7 +105,7 @@ function toContentType(_modelApiKey: string) {
 }
 
 async function formatItem(item: any) {
-  let { id, _modelApiKey, description, years } = item;
+  let { id, _modelApiKey, description, years, locale, isDefaultLocale } = item;
   const slug = item.slug || id;
 
   let contents = [];
@@ -121,7 +121,8 @@ async function formatItem(item: any) {
   const content = contents.join(" ");
 
   return {
-    objectID: id,
+    objectID: `${id}-${locale}`,
+    ita: isDefaultLocale,
     //conditional
     title: item.title || "",
     image: item.image?.url || "",
@@ -136,27 +137,33 @@ async function formatItem(item: any) {
   };
 }
 
-const NAME = "activities";
-export default async function search(locale: string, indexes: string[]) {
-  console.info(NAME, locale);
+const indexName = "activities";
 
-  let items: any[] = [];
-  for (const key of Object.keys(queries)) {
-    const query = queries[key];
-    const results = await getCollections(query, { locale }, "items");
-    console.log(key, results.length);
-    items = [...items, ...results];
-  }
-  items = items.filter(Boolean);
-  console.info("TOTAL", items.length);
+export default async function search(
+  defaultLocale: string,
+  locales: string[],
+  indexes: string[]
+) {
   const data = [];
-  for (let i = 0; i < items.length; i++) {
-    const item: any = items[i];
-    const formatted = await formatItem(item);
-    data.push(formatted);
-  }
+  for (const locale of locales) {
+    const isDefaultLocale = defaultLocale == locale;
 
-  const indexName = `${NAME}_${locale}`;
+    let items: any[] = [];
+    console.info(indexName, locale);
+    for (const key of Object.keys(queries)) {
+      const query = queries[key];
+      const results = await getCollections(query, { locale }, "items");
+      console.log(key, results.length);
+      items = [...items, ...results];
+    }
+    items = items.filter(Boolean);
+    console.info("TOTAL", locale, " = ", items.length);
+    for (let i = 0; i < items.length; i++) {
+      const item: any = items[i];
+      const formatted = await formatItem({ ...item, locale, isDefaultLocale });
+      data.push(formatted);
+    }
+  }
   const searchableAttributes = [
     "title",
     "slug",
@@ -167,6 +174,7 @@ export default async function search(locale: string, indexes: string[]) {
     "artists",
   ];
   const attributesForFaceting = [
+    "ita",
     "searchable(contentType)",
     "searchable(years)",
     "searchable(festival)",
@@ -186,7 +194,7 @@ export default async function search(locale: string, indexes: string[]) {
       data,
       searchableAttributes,
       attributesForFaceting,
-      indexLanguages: [locale],
+      indexLanguages: locales,
       customRanking,
       hitsPerPage: 12,
       replace,

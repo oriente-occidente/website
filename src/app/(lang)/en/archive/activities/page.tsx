@@ -4,14 +4,14 @@ import { SiteLocale } from "@/graphql/generated";
 import getSeoMeta from "@/lib/seoUtils";
 import fetchDato from "@/lib/fetchDato";
 import SearchTemplate from "@/components/templates/SearchTemplate";
-import MediaSearch from "@/components/aloglia/media/MediaSearch";
+import ActSearch from "@/components/aloglia/activities/ActSearch";
 
-const locale = "it";
+const locale = 'en';
 
 export async function generateMetadata() {
   const siteLocale = locale as SiteLocale;
   const data = await fetchDato(
-    MediaArchiveIndexDocument,
+    ActivitiesArchiveIndexDocument,
     { locale: siteLocale },
     false
   );
@@ -31,7 +31,7 @@ export default async function Page() {
 
   return (
     <SearchTemplate data={data.page} locale={locale}>
-      <MediaSearch locale={locale} />
+      <ActSearch locale={locale} />
     </SearchTemplate>
   );
 }
