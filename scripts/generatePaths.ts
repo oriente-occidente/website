@@ -1,6 +1,11 @@
 import { recurseQuery, fetchData } from "../scripts-algolia/dato-utils";
-import translate from "../src/lib/locales/index";
-import { t } from "../src/lib/resolveLink";
+import config from "../src/data/config";
+
+function t(section: string, locale: string) {
+  if (locale === config.defaultLocale) return section;
+  const key = (config.translations as any)[section];
+  return key?.[locale] ?? section;
+}
 
 // QUERIES
 // Locales
@@ -36,6 +41,11 @@ const workshopsCatQuery: string = `query workshopsCat($locale: SiteLocale) {
 
 // Dynamics
 const dynamicQueries: any = {
+  allFestivalEditions: `query festivalQuery($locale: SiteLocale, $first: IntType, $skip: IntType) {
+    allFestivalEditions(first: $first, skip: $skip, locale: $locale, filter: {slug: {neq: null}}) {
+      slug
+    }
+   }`,
   allNews: `query newsQuery($locale: SiteLocale, $first: IntType, $skip: IntType) {
     allNews(first: $first, skip: $skip, locale: $locale, filter: {slug: {neq: null}}) {
       slug
@@ -56,10 +66,46 @@ const dynamicQueries: any = {
       slug
     }
    }`,
+  allNetworks: `query networksQuery($locale: SiteLocale, $first: IntType, $skip: IntType) {
+    allNetworks(first: $first, skip: $skip, locale: $locale, filter: {slug: {neq: null}}) {
+      slug
+    }
+   }`,
+  allArtisticResidecies: `query artisticResideciesQuery($locale: SiteLocale, $first: IntType, $skip: IntType) {
+    allArtisticResidecies(first: $first, skip: $skip, locale: $locale, filter: {slug: {neq: null}}) {
+      slug
+    }
+   }`,
+  allCompanies: `query companiesQuery($locale: SiteLocale, $first: IntType, $skip: IntType) {
+    allCompanies(first: $first, skip: $skip, locale: $locale, filter: {slug: {neq: null}}) {
+      slug
+    }
+   }`,
+  // archivio
+  allMediaPhotos: `query mediaPhotosQuery($locale: SiteLocale, $first: IntType, $skip: IntType) {
+    allMediaPhotos(first: $first, skip: $skip, locale: $locale) {
+      id
+    }
+   }`,
+  allMediaAudios: `query mediaAudiosQuery($locale: SiteLocale, $first: IntType, $skip: IntType) {
+    allMediaAudios(first: $first, skip: $skip, locale: $locale) {
+      slug
+    }
+   }`,
+  allMediaVideos: `query mediaVideosQuery($locale: SiteLocale, $first: IntType, $skip: IntType) {
+    allMediaVideos(first: $first, skip: $skip, locale: $locale) {
+      slug
+    }
+   }`,
+  allMediaDocuments: `query mediaDocQuery($locale: SiteLocale, $first: IntType, $skip: IntType) {
+    allMediaDocuments(first: $first, skip: $skip, locale: $locale) {
+      slug
+    }
+   }`,
 };
 
 export async function generatePaths() {
-  let paths = ["/", "/404", "/500"];
+  let paths = ["/", "/404", "/500", "/video", "/audio"];
   const localesData = await fetchData(localeQuery);
   for (const locale of localesData._site?.locales || []) {
     let prefix: string = "/";
@@ -92,7 +138,7 @@ export async function generatePaths() {
     const workshopsCat = await fetchData(workshopsCatQuery, { locale });
     for (const cat of workshopsCat.allWorkshopCategories) {
       if (cat.slug) {
-        path = `${prefix}${translate("formazione", locale)}/${cat.slug}`;
+        path = `${prefix}${t("formazione", locale)}/c/${cat.slug}`;
         paths.push(path);
       }
     }
@@ -111,23 +157,45 @@ export async function generatePaths() {
       });
       for (const elem of result) {
         switch (key) {
+          case "allFestivalEditions":
+            path = `${prefix}festival/${elem.slug}`;
+            break;
           case "allNews":
             path = `${prefix}news/${elem.slug}`;
             break;
           case "allWorkshops":
-            path = `${prefix}studio/${translate("formazione", locale)}/${elem.slug}`;
+            path = `${prefix}studio/${t("formazione", locale)}/${elem.slug}`;
             break;
           case "allEvents":
-            path = `${prefix}people/${translate(
-              `search-filters.events`,
-              locale
-            ).toLowerCase()}/${elem.slug}`;
+            path = `${prefix}people/${t(`eventi`, locale)}/${elem.slug}`;
             break;
           case "allProjects":
-            path = `${prefix}people/${translate(
-              `search-filters.projects`,
-              locale
-            ).toLowerCase()}/${elem.slug}`;
+            path = `${prefix}people/${t(`progetti`, locale)}/${elem.slug}`;
+            break;
+          case "allNetworks":
+            path = `${prefix}people/${t(`reti`, locale)}/${elem.slug}`;
+            break;
+          case "allArtisticResidecies":
+            path = `${prefix}studio/${t(`residenze-artistiche`, locale)}/${elem.slug}`;
+            break;
+          case "allCompanies":
+            path = `${prefix}studio/${t(`compagnie`, locale)}/${elem.slug}`;
+            break;
+          // Archivio
+          case "allMediaPhotos":
+            path = `${prefix}${t(`foto`, locale)}/${elem.id}`;
+            break;
+          case "allMediaAudios":
+            path = `${prefix}${t(`audio`, locale)}/${elem.slug}`;
+            break;
+          case "allMediaVideos":
+            path = `${prefix}${t(`video`, locale)}/${elem.slug}`;
+            break;
+          case "allMediaDocuments":
+            path = `${prefix}${t(`doc`, locale)}/${elem.slug}`;
+            break;
+          default:
+            path = "";
             break;
         }
         paths.push(path);
