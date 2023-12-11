@@ -1,5 +1,8 @@
 import { draftMode } from "next/headers";
-import { MediaArchiveIndexDocument } from "@/graphql/generated";
+import {
+  ActivitiesArchiveIndexDocument,
+  MediaArchiveIndexDocument,
+} from "@/graphql/generated";
 import { SiteLocale } from "@/graphql/generated";
 import getSeoMeta from "@/lib/seoUtils";
 import fetchDato from "@/lib/fetchDato";
