@@ -26,8 +26,19 @@
     // these options are overrides used only by ts-node
     "compilerOptions": {
       "module": "commonjs"
-    }
+    },
+    "paths": {
+      "@/*": ["./src/*"]
+    },
+    "require": ["tsconfig-paths/register"]
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/components/ScrollManager.jsx", "dato-migrations/migrations/1700065810_archiveStuff.old"],
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts",
+    "src/components/ScrollManager.jsx",
+    "dato-migrations/migrations/1700065810_archiveStuff.old"
+  ],
   "exclude": ["node_modules"]
 }

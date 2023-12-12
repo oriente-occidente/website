@@ -1,5 +1,6 @@
-import { recurseQuery, fetchData } from "../scripts-algolia/dato-utils";
-import config from "../src/data/config";
+import { recurseQuery, fetchData } from "../../scripts-algolia/dato-utils";
+import config from "@/data/config";
+import resolveLink from "@/lib/resolveLink";
 
 function t(section: string, locale: string) {
   if (locale === config.defaultLocale) return section;
@@ -16,21 +17,21 @@ const localeQuery: string = `query localeQuery {
   }`;
 // Main menu
 const menuQuery: string = `query menuQuery($locale: SiteLocale) {
-   allMenuItems(locale: $locale, filter: {parent: {exists: "false"}}) {
-     slug
-     children {
-       slug
-       link {
-         ... on PageRecord {
-           id
-         }
-       }
-       children {
-         slug
-       }
-     }
-   }
- }`;
+allMenuItems(locale: $locale, filter: {parent: {exists: "false"}}) {
+  slug
+  children {
+    slug
+    link {
+      ... on PageRecord {
+        id
+      }
+    }
+    children {
+      slug
+    }
+  }
+}
+}`;
 
 // Workshops cat
 const workshopsCatQuery: string = `query workshopsCat($locale: SiteLocale) {
@@ -176,7 +177,9 @@ export async function generatePaths() {
             path = `${prefix}people/${t(`reti`, locale)}/${elem.slug}`;
             break;
           case "allArtisticResidecies":
-            path = `${prefix}studio/${t(`residenze-artistiche`, locale)}/${elem.slug}`;
+            path = `${prefix}studio/${t(`residenze-artistiche`, locale)}/${
+              elem.slug
+            }`;
             break;
           case "allCompanies":
             path = `${prefix}studio/${t(`compagnie`, locale)}/${elem.slug}`;
