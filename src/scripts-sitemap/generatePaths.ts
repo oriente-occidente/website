@@ -1,12 +1,6 @@
 import { recurseQuery, fetchData } from "../../scripts-algolia/dato-utils";
-import config from "@/data/config";
+import { t } from "@/lib/resolveLink";
 import resolveLink from "@/lib/resolveLink";
-
-function t(section: string, locale: string) {
-  if (locale === config.defaultLocale) return section;
-  const key = (config.translations as any)[section];
-  return key?.[locale] ?? section;
-}
 
 // QUERIES
 // Locales
@@ -15,6 +9,86 @@ const localeQuery: string = `query localeQuery {
       locales
     }
   }`;
+
+// Pages
+const pagesQuery: string = `query pagesQuery($locale: SiteLocale, $first: IntType, $skip: IntType) {
+  allPages(first: $first, skip: $skip, locale: $locale, filter: {slug: {neq: null}}) {
+    __typename
+    _modelApiKey
+    slug
+    id
+    section
+  }
+}`;
+
+// Index
+
+const indexQueries: any = {
+  educationPage: `query educationPageQuery {
+    educationPage {
+      id
+      _modelApiKey
+      __typename
+    }
+  }`,
+  newsIndex: `query newsIndexQuery {
+    newsIndex {
+      id
+      _modelApiKey
+      __typename
+    }
+  }`,
+  artisticResidenciesIndex: `query artisticResidenciesIndexQuery {
+    artisticResidenciesIndex {
+      id
+      _modelApiKey
+      __typename
+    }
+  }`,
+  artistsIndex: `query artistsIndexQuery {
+    artistsIndex {
+      id
+      _modelApiKey
+      __typename
+    }
+  }`,
+  projectsIndex: `query projectsIndexQuery {
+    projectsIndex {
+      id
+      _modelApiKey
+      __typename
+    }
+  }`,
+  eventsIndex: `query eventsIndexQuery {
+    eventsIndex {
+      id
+      _modelApiKey
+      __typename
+    }
+  }`,
+  networksIndex: `query networksIndexQuery {
+    networksIndex {
+      id
+      _modelApiKey
+      __typename
+    }
+  }`,
+  audiosIndex: `query audiosIndexQuery {
+    audiosIndex {
+      id
+      _modelApiKey
+      __typename
+    }
+  }`,
+  videosIndex: `query videosIndexQuery {
+    videosIndex {
+      id
+      _modelApiKey
+      __typename
+    }
+  }`,
+};
+
 // Main menu
 const menuQuery: string = `query menuQuery($locale: SiteLocale) {
 allMenuItems(locale: $locale, filter: {parent: {exists: "false"}}) {
@@ -114,96 +188,120 @@ export async function generatePaths() {
       prefix = `/${locale}/`;
       paths.push(`/${locale}`);
     }
+    let path: string = "";
+
+    // PAGES
+    const pages = await recurseQuery({
+      q: pagesQuery,
+      values: locale,
+      propertyName: "allPages",
+      pageSize: 100,
+      prevResults: [],
+      currentPage: 0,
+      done: false,
+    });
+
+    for (const p of pages) {
+      path = resolveLink({ ...p, locale });
+      paths.push(path);
+    }
+
+    // INDEX
+    for (const key of Object.keys(indexQueries)) {
+      const q = indexQueries[key];
+      const res = await fetchData(q, { locale });
+      if (res[key]) {
+        path = resolveLink({ ...res[key], locale });
+        paths.push(path);
+      }
+    }
 
     //  MAIN NAVIGATION PATHS
-    const mainMenu = await fetchData(menuQuery, { locale });
-    let path: string = "";
-    for (const menu of mainMenu.allMenuItems || []) {
-      if (menu.slug) {
-        path = `${prefix}${menu.slug}`;
-        paths.push(path);
-      }
-      for (const children of menu.children || []) {
-        if (children.slug) {
-          if (menu.slug == "festival" && children.link.id) {
-            path = `${prefix}${menu.slug}/p/${children.slug}`;
-          } else {
-            path = `${prefix}${menu.slug}/${children.slug}`;
-          }
-          paths.push(path);
-        }
-      }
-    }
+    // const mainMenu = await fetchData(menuQuery, { locale });
+    // for (const menu of mainMenu.allMenuItems || []) {
+    //   if (menu.slug) {
+    //     path = `${prefix}${menu.slug}`;
+    //     paths.push(path);
+    //   }
+    //   for (const children of menu.children || []) {
+    //     if (children.slug) {
+    //       if (menu.slug == "festival" && children.link.id) {
+    //         path = `${prefix}${menu.slug}/p/${children.slug}`;
+    //       } else {
+    //         path = `${prefix}${menu.slug}/${children.slug}`;
+    //       }
+    //       paths.push(path);
+    //     }
+    //   }
+    // }
 
     //  CATEGORIE FORMAZIONE
-    const workshopsCat = await fetchData(workshopsCatQuery, { locale });
-    for (const cat of workshopsCat.allWorkshopCategories) {
-      if (cat.slug) {
-        path = `${prefix}${t("formazione", locale)}/c/${cat.slug}`;
-        paths.push(path);
-      }
-    }
+    // const workshopsCat = await fetchData(workshopsCatQuery, { locale });
+    // for (const cat of workshopsCat.allWorkshopCategories) {
+    //   if (cat.slug) {
+    //     path = `${prefix}${t("formazione", locale)}/c/${cat.slug}`;
+    //     paths.push(path);
+    //   }
+    // }
 
     // DYNAMIC
-    for (const key of Object.keys(dynamicQueries)) {
-      const q = dynamicQueries[key];
-      const result = await recurseQuery({
-        q,
-        values: locale,
-        propertyName: key,
-        pageSize: 100,
-        prevResults: [],
-        currentPage: 0,
-        done: false,
-      });
-      for (const elem of result) {
-        switch (key) {
-          case "allFestivalEditions":
-            path = `${prefix}festival/${elem.slug}`;
-            break;
-          case "allNews":
-            path = `${prefix}news/${elem.slug}`;
-            break;
-          case "allWorkshops":
-            path = `${prefix}studio/${t("formazione", locale)}/${elem.slug}`;
-            break;
-          case "allEvents":
-            path = `${prefix}people/${t(`eventi`, locale)}/${elem.slug}`;
-            break;
-          case "allProjects":
-            path = `${prefix}people/${t(`progetti`, locale)}/${elem.slug}`;
-            break;
-          case "allNetworks":
-            path = `${prefix}people/${t(`reti`, locale)}/${elem.slug}`;
-            break;
-          case "allArtisticResidecies":
-            path = `${prefix}studio/${t(`residenze-artistiche`, locale)}/${
-              elem.slug
-            }`;
-            break;
-          case "allCompanies":
-            path = `${prefix}studio/${t(`compagnie`, locale)}/${elem.slug}`;
-            break;
-          // Archivio
-          case "allMediaPhotos":
-            path = `${prefix}${t(`foto`, locale)}/${elem.id}`;
-            break;
-          case "allMediaAudios":
-            path = `${prefix}${t(`audio`, locale)}/${elem.slug}`;
-            break;
-          case "allMediaVideos":
-            path = `${prefix}${t(`video`, locale)}/${elem.slug}`;
-            break;
-          case "allMediaDocuments":
-            path = `${prefix}${t(`doc`, locale)}/${elem.slug}`;
-            break;
-          default:
-            path = "";
-            break;
-        }
-        paths.push(path);
-      }
-    }
+    // for (const key of Object.keys(dynamicQueries)) {
+    //   const q = dynamicQueries[key];
+    //   const result = await recurseQuery({
+    //     q,
+    //     values: locale,
+    //     propertyName: key,
+    //     pageSize: 100,
+    //     prevResults: [],
+    //     currentPage: 0,
+    //     done: false,
+    //   });
+    //   for (const elem of result) {
+    //     switch (key) {
+    //       case "allFestivalEditions":
+    //         path = `${prefix}festival/${elem.slug}`;
+    //         break;
+    //       case "allNews":
+    //         path = `${prefix}news/${elem.slug}`;
+    //         break;
+    //       case "allWorkshops":
+    //         path = `${prefix}studio/${t("formazione", locale)}/${elem.slug}`;
+    //         break;
+    //       case "allEvents":
+    //         path = `${prefix}people/${t(`eventi`, locale)}/${elem.slug}`;
+    //         break;
+    //       case "allProjects":
+    //         path = `${prefix}people/${t(`progetti`, locale)}/${elem.slug}`;
+    //         break;
+    //       case "allNetworks":
+    //         path = `${prefix}people/${t(`reti`, locale)}/${elem.slug}`;
+    //         break;
+    //       case "allArtisticResidecies":
+    //         path = `${prefix}studio/${t(`residenze-artistiche`, locale)}/${elem.slug}`;
+    //         break;
+    //       case "allCompanies":
+    //         path = `${prefix}studio/${t(`compagnie`, locale)}/${elem.slug}`;
+    //         break;
+    //       // Archivio
+    //       case "allMediaPhotos":
+    //         path = `${prefix}${t(`foto`, locale)}/${elem.id}`;
+    //         break;
+    //       case "allMediaAudios":
+    //         path = `${prefix}${t(`audio`, locale)}/${elem.slug}`;
+    //         break;
+    //       case "allMediaVideos":
+    //         path = `${prefix}${t(`video`, locale)}/${elem.slug}`;
+    //         break;
+    //       case "allMediaDocuments":
+    //         path = `${prefix}${t(`doc`, locale)}/${elem.slug}`;
+    //         break;
+    //       default:
+    //         path = "";
+    //         break;
+    //     }
+    //     paths.push(path);
+    //   }
+    // }
   }
 
   return paths;
