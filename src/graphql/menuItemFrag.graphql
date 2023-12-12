@@ -82,7 +82,7 @@ fragment menuItemFrag on MenuItemRecord {
       title
       _modelApiKey
     }
-    ... on PertnersNetworksArchiveRecord {
+    ... on PartnersNetworksArchiveRecord {
       id
       title
       _modelApiKey

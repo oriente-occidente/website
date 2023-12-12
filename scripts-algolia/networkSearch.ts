@@ -78,7 +78,7 @@ async function formatItem(item: any) {
   };
 }
 
-const indexName = "networtk";
+const indexName = "network";
 export default async function search(
   defaultLocale: string,
   locales: string[],

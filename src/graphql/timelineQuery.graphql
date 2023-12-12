@@ -181,7 +181,7 @@ query timelineQuery($locale: SiteLocale) {
     __typename
     _modelApiKey
   }
-  pertnersNetworksArchive(locale: $locale) {
+  partnersNetworksArchive(locale: $locale) {
     id
     __typename
     _modelApiKey
