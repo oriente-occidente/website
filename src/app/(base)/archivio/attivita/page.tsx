@@ -1,8 +1,5 @@
 import { draftMode } from "next/headers";
-import {
-  ActivitiesArchiveIndexDocument,
-  MediaArchiveIndexDocument,
-} from "@/graphql/generated";
+import { ActivitiesArchiveIndexDocument } from "@/graphql/generated";
 import { SiteLocale } from "@/graphql/generated";
 import getSeoMeta from "@/lib/seoUtils";
 import fetchDato from "@/lib/fetchDato";
@@ -27,7 +24,7 @@ export default async function Page() {
   const { isEnabled } = draftMode();
   const siteLocale = locale as SiteLocale;
   const data = await fetchDato(
-    MediaArchiveIndexDocument,
+    ActivitiesArchiveIndexDocument,
     { locale: siteLocale },
     isEnabled
   );

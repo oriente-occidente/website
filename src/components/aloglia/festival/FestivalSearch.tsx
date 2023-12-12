@@ -14,7 +14,7 @@ import AccordionItem from "@/components/aloglia/AccordionItem";
 import config from "@/data/config";
 import translate from "@/lib/locales";
 import Pagination from "../Pagination";
-import Results from "./MediaSearchResults";
+import Results from "./FestivalSearchResults";
 import { UiState } from "instantsearch.js/es/types";
 import CustomClearRefinements from "../CustomCleearRefinements";
 import CustomSearchBox from "../CustomSearchBox";
@@ -26,7 +26,7 @@ const searchClient = algoliasearch(
 );
 
 export default function Search({ locale }: SearchPropsType) {
-  const indexName = `media`;
+  const indexName = `festival`;
   const isDefaultLocale = locale === config.defaultLocale;
 
   const [notifyReset, setNotifyReset] = useState<boolean>(false);
@@ -39,14 +39,7 @@ export default function Search({ locale }: SearchPropsType) {
 
   const filtersOptions = [
     {
-      name: "contentType",
-      searchable: false,
-      operator: true,
-      limit: 5,
-      showMore: false,
-    },
-    {
-      name: "category",
+      name: "festivalType",
       searchable: false,
       operator: true,
       limit: 5,
@@ -54,13 +47,6 @@ export default function Search({ locale }: SearchPropsType) {
     },
     {
       name: "years",
-      searchable: false,
-      operator: true,
-      limit: 5,
-      showMore: false,
-    },
-    {
-      name: "festival",
       searchable: false,
       operator: true,
       limit: 5,

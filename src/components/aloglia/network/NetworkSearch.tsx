@@ -10,14 +10,15 @@ import {
   Stats,
   Configure,
 } from "react-instantsearch";
-import AccordionItem from "@/components/aloglia/AccordionItem";
+
 import config from "@/data/config";
 import translate from "@/lib/locales";
 import Pagination from "../Pagination";
-import Results from "./MediaSearchResults";
+import Results from "./NetworkSearchResults";
 import { UiState } from "instantsearch.js/es/types";
 import CustomClearRefinements from "../CustomCleearRefinements";
 import CustomSearchBox from "../CustomSearchBox";
+import AccordionItem from "@/components/aloglia/AccordionItem";
 import { SearchPropsType } from "@/types";
 
 const searchClient = algoliasearch(
@@ -26,7 +27,7 @@ const searchClient = algoliasearch(
 );
 
 export default function Search({ locale }: SearchPropsType) {
-  const indexName = `media`;
+  const indexName = `network`;
   const isDefaultLocale = locale === config.defaultLocale;
 
   const [notifyReset, setNotifyReset] = useState<boolean>(false);
@@ -46,21 +47,7 @@ export default function Search({ locale }: SearchPropsType) {
       showMore: false,
     },
     {
-      name: "category",
-      searchable: false,
-      operator: true,
-      limit: 5,
-      showMore: false,
-    },
-    {
       name: "years",
-      searchable: false,
-      operator: true,
-      limit: 5,
-      showMore: false,
-    },
-    {
-      name: "festival",
       searchable: false,
       operator: true,
       limit: 5,

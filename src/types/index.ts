@@ -113,3 +113,7 @@ export type GenericSearchProps = {
   locale: string;
   children: React.ReactNode;
 };
+
+export type SearchPropsType = {
+  locale: string;
+};

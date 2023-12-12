@@ -1,11 +1,9 @@
 "use client";
 import React from "react";
-import { useState, useRef, useEffect } from "react";
-import { ChevronDownIcon } from "@heroicons/react/24/solid";
+import { useState } from "react";
 import algoliasearch from "algoliasearch/lite";
 import {
   InstantSearch,
-  RefinementList,
   InstantSearchProps,
   Stats,
   Configure,
@@ -14,7 +12,7 @@ import AccordionItem from "@/components/aloglia/AccordionItem";
 import config from "@/data/config";
 import translate from "@/lib/locales";
 import Pagination from "../Pagination";
-import Results from "./MediaSearchResults";
+import Results from "./ArtistsSearchResults";
 import { UiState } from "instantsearch.js/es/types";
 import CustomClearRefinements from "../CustomCleearRefinements";
 import CustomSearchBox from "../CustomSearchBox";
@@ -26,7 +24,7 @@ const searchClient = algoliasearch(
 );
 
 export default function Search({ locale }: SearchPropsType) {
-  const indexName = `media`;
+  const indexName = `artists`;
   const isDefaultLocale = locale === config.defaultLocale;
 
   const [notifyReset, setNotifyReset] = useState<boolean>(false);
@@ -46,21 +44,7 @@ export default function Search({ locale }: SearchPropsType) {
       showMore: false,
     },
     {
-      name: "category",
-      searchable: false,
-      operator: true,
-      limit: 5,
-      showMore: false,
-    },
-    {
-      name: "years",
-      searchable: false,
-      operator: true,
-      limit: 5,
-      showMore: false,
-    },
-    {
-      name: "festival",
+      name: "country",
       searchable: false,
       operator: true,
       limit: 5,
