@@ -1,16 +1,34 @@
 import { draftMode } from "next/headers";
-import queryDatoCMS from "@/lib/fetchDato";
-import { SiteLocale, AllWorkshopsByCategoryQueryDocument } from "@/graphql/generated";
+import {
+  SiteLocale,
+  AllWorkshopsByCategoryQueryDocument,
+  EducationPageQueryDocument,
+} from "@/graphql/generated";
 import type { BasicSlugPageProps } from "@/types";
 import WorkshopByCategory from "@/components/WorkshopByCategory";
+import fetchDato from "@/lib/fetchDato";
+import getSeoMeta from "@/lib/seoUtils";
 
 const locale = "it";
+
+export async function generateMetadata() {
+  const siteLocale = locale as SiteLocale;
+  const data = await fetchDato(
+    EducationPageQueryDocument,
+    { locale: siteLocale },
+    false
+  );
+  const page: any = data.educationPage || null;
+  const meta = getSeoMeta(page);
+  return meta;
+}
+
 export default async function Page({ params }: BasicSlugPageProps) {
   const { slug } = params;
   const { isEnabled } = draftMode();
   const siteLocale = locale as SiteLocale;
 
-  const data = await queryDatoCMS(
+  const data = await fetchDato(
     AllWorkshopsByCategoryQueryDocument,
     { locale: siteLocale, slug: slug != "all" ? slug : undefined },
     isEnabled
