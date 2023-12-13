@@ -64,7 +64,7 @@ async function formatItem(item: any) {
     slug,
     content,
     years: [year.year],
-    festivalType: toContentType(festivalType),
+    contentType: toContentType(festivalType),
     image: item.image?.url || "",
   };
 }
@@ -100,12 +100,12 @@ export default async function search(
     "title",
     "slug",
     "content",
-    "festivalType",
+    "contentType",
     "years",
   ];
   const attributesForFaceting = [
     "ita",
-    "searchable(festivalType)",
+    "searchable(contentType)",
     "searchable(years)",
   ];
   const customRanking: string[] = [];

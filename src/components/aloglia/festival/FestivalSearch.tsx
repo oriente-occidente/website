@@ -39,7 +39,7 @@ export default function Search({ locale }: SearchPropsType) {
 
   const filtersOptions = [
     {
-      name: "festivalType",
+      name: "contentType",
       searchable: false,
       operator: true,
       limit: 5,
