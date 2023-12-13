@@ -44,11 +44,7 @@ export default async function RootLayout({ children }: LayoutParams) {
   // console.log("LAYOUT LOCALE", locale);
   const { isEnabled } = draftMode();
   const siteLocale = locale as SiteLocale;
-  const data = await fetchDato(
-    LayoutDocument,
-    { locale: siteLocale },
-    isEnabled
-  );
+  const data = await fetchDato(LayoutDocument, { locale: siteLocale }, isEnabled);
 
   if (!data) return null;
   return (

@@ -1,17 +1,30 @@
+import { draftMode } from "next/headers";
 import type { BasicSlugPageProps } from "@/types";
-const locale = "it";
+import { ArtistDocument, SiteLocale } from "@/graphql/generated";
+import queryDatoCMS from "@/lib/fetchDato";
+import PageTemplate from "@/components/templates/PageTemplate";
 
-export default function Page({ params }: BasicSlugPageProps) {
-  const list = ["eventi", "linguaggi", "workshop", "artisti", "compagnie"];
-  const idx = Math.ceil(Math.random() * list.length - 1);
-  const name = `card-title-${list[idx]}`;
-  const cn = ["text-xl", name];
-  return (
-    <div className="bg-black">
-      <div className={cn.join(" ")}>
-        My slug page: {params.slug} - {locale} - {name}
-      </div>
-      <div>LOCALE:{locale}</div>
-    </div>
+const locale = "it";
+export default async function Page({ params }: BasicSlugPageProps) {
+  const { slug } = params;
+  const { isEnabled } = draftMode();
+  const siteLocale = locale as SiteLocale;
+  const data = await queryDatoCMS(
+    ArtistDocument,
+    { locale: siteLocale, slug },
+    isEnabled
   );
+  const page: any = data.artist;
+  const heroData: any = {
+    layoutHero: page?.layoutHero,
+    titleHero: page?.titleHero,
+    descriptionHero: page?.descriptionHero,
+    imageHero: page?.imageHero,
+    slideshowHero: page?.slideshowHero,
+  };
+  const pageData: any = {
+    hero: heroData,
+    ...page,
+  };
+  return <PageTemplate data={pageData} locale={locale} />;
 }

@@ -4,7 +4,7 @@ import { SiteLocale } from "@/graphql/generated";
 import getSeoMeta from "@/lib/seoUtils";
 import fetchDato from "@/lib/fetchDato";
 import SearchTemplate from "@/components/templates/SearchTemplate";
-import MediaSearch from "@/components/aloglia/MediaSearch";
+import MediaSearch from "@/components/aloglia/media/MediaSearch";
 
 const locale = "it";
 

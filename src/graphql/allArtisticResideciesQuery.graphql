@@ -8,10 +8,13 @@ query allArtisticResidenciesQuery($locale: SiteLocale!) {
       ...seoMetaFragment
     }
     titleHero
-
     descriptionHero
     imageHero {
       ...imageHeroFrag
+    }
+    slugs: _allSlugLocales {
+      locale
+      value
     }
     artists {
       _modelApiKey

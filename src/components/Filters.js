@@ -53,8 +53,11 @@ function Filters({ locale, list = null }) {
   }
 
   function changeRoute(value) {
-    document.location.href = `${window.location.pathname}?type=${value}`;
+    const url = `${window.location.pathname}?type=${value}`;
+    window.history.pushState({ path: url }, "", url);
+    setTypeFilter(value); 
   }
+
   return (
     <div className="mt-10">
       <div className="border-gray md:border-b">

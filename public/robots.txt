@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # Host
-Host: https://orienteoccidente.it
+Host: http://localhost:3000
 
 # Sitemaps
-Sitemap: https://orienteoccidente.it/sitemap.xml
+Sitemap: http://localhost:3000/sitemap.xml

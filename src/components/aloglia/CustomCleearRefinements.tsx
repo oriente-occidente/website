@@ -34,7 +34,7 @@ export default function CustomClearRefinements({
         <div> {translate("search.resetting", locale)}</div>
       ) : (
         <button
-          className="py-1 capitalize min-w-[120px] front-bold flex items-center underline font-bold"
+          className="capitalize min-w-[120px] front-bold flex items-center underline font-bold"
           onClick={(e) => handlePress()}
         >
           {label}
