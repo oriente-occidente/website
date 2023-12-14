@@ -35,7 +35,7 @@ export default function resolveLink({
       return `${lp}/${t(`festival`, locale)}/${slug}`;
     case "education_page":
       return `${lp}/studio/${t(`formazione`, locale)}/`;
-    case "workshops_category":
+    case "workshop_category":
       return `${lp}/studio/${t(`formazione`, locale)}/c/${slug}`;
     case "workshop":
       return `${lp}/studio/${t(`formazione`, locale)}/${slug}`;
@@ -88,10 +88,7 @@ export default function resolveLink({
     case "media_archive":
       return `${lp}/${t(`archivio`, locale)}/${t(`media`, locale)}`;
     case "news_publications_archive":
-      return `${lp}/${t(`archivio`, locale)}/${t(
-        `news-pubblicazioni`,
-        locale
-      )}`;
+      return `${lp}/${t(`archivio`, locale)}/${t(`news-pubblicazioni`, locale)}`;
     case "partners_networks_archive":
       return `${lp}/${t(`archivio`, locale)}/${t(`partner-reti`, locale)}`;
     case "years_archive":

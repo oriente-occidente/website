@@ -36,7 +36,7 @@ function getRoute(path: string) {
 
 async function generateSitemap() {
   const paths: string[] = await generatePaths();
-  console.log("locales", paths);
+  // console.log("locales", paths);
 
   const sitemap = `
   <\?xml version="1.0" encoding="UTF-8"\?>
