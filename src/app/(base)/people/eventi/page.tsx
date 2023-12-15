@@ -22,7 +22,7 @@ export async function generateMetadata() {
 export default async function Page() {
   const siteLocale = locale as SiteLocale;
   const { isEnabled } = draftMode();
-  const date = await fetchDato(
+  const data = await fetchDato(
     EventsIndexDocument,
     { locale: siteLocale },
     isEnabled
@@ -40,8 +40,8 @@ export default async function Page() {
   }
 
   const heroData = {
-    titleHero: page?.eventsIndex?.title || "",
-    descriptionHero: page?.eventsIndex?.description || "",
+    titleHero: page?.title || "",
+    descriptionHero: page?.description || "",
   };
 
   const pageData: any = {
