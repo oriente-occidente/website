@@ -3,7 +3,9 @@ import StructuredContent from "@/components/MyStructuredContent";
 import { render as toPlainText } from "datocms-structured-text-to-plain-text";
 
 export default function MainContent({ data, locale }) {
-  const { blocks, links } = data;
+  if (!data) return null;
+  const blocks = data?.blocks || [];
+  const links = data?.links || [];
   const text = toPlainText(data);
   const len = text ? text.trim().length : 0;
   // console.log('LENGTH', len);

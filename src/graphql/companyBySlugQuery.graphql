@@ -19,26 +19,20 @@ query company($slug: String!, $locale: SiteLocale) {
     titleHero
     descriptionHero
     imageHero {
-      id
-      title
-      responsiveImage(
-        sizes: "(max-width: 1023px) 100vw, (min-width: 1024px) 80vw, 1400px"
-        imgixParams: { auto: [format, compress], ar: "14:8", fit: crop }
-      ) {
-        ...imgFrag
-      }
+      ...imageHeroFrag
     }
     slideshowHero {
-      id
-      title
-      responsiveImage(
-        sizes: "(max-width: 1023px) 100vw, (min-width: 1024px) 80vw, 1400px"
-        imgixParams: { auto: [format, compress], ar: "14:8", fit: crop }
-      ) {
-        ...imgFrag
-      }
+      ...slideShowHeroFrag
     }
 
+    artists {
+      ...slideArtirstFrag
+    }
+
+    startDate: _firstPublishedAt
+    countries {
+      name
+    }
     content {
       value
       links {
@@ -47,36 +41,43 @@ query company($slug: String!, $locale: SiteLocale) {
           id
           slug
           title
+          _modelApiKey
         }
         ... on EventRecord {
           id
           slug
           title
+          _modelApiKey
         }
         ... on NewsRecord {
           id
           slug
           title
+          _modelApiKey
         }
         ... on NetworkRecord {
           id
           slug
           title
+          _modelApiKey
         }
         ... on PageRecord {
           id
           slug
           title
+          _modelApiKey
         }
         ... on ProjectRecord {
           id
           slug
           title
+          _modelApiKey
         }
         ... on WorkshopRecord {
           id
           slug
           title
+          _modelApiKey
         }
       }
       blocks {

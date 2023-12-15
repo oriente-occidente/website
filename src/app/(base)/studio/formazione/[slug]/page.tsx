@@ -1,16 +1,16 @@
 import { draftMode } from "next/headers";
-import queryDatoCMS from "@/lib/fetchDato";
 import { SiteLocale, WorkshopDocument } from "@/graphql/generated";
 import type { BasicSlugPageProps } from "@/types";
 import PageTemplate from "@/components/templates/PageTemplate";
 import getSeoMeta from "@/lib/seoUtils";
+import fetchDato from "@/lib/fetchDato";
 
 const locale = "it";
 
 export async function generateMetadata({ params }: BasicSlugPageProps) {
   const { slug } = params;
   const siteLocale = locale as SiteLocale;
-  const data = await queryDatoCMS(
+  const data = await fetchDato(
     WorkshopDocument,
     { locale: siteLocale, slug },
     false
@@ -24,7 +24,7 @@ export default async function Page({ params }: BasicSlugPageProps) {
   const { slug } = params;
   const { isEnabled } = draftMode();
   const siteLocale = locale as SiteLocale;
-  const data = await queryDatoCMS(
+  const data = await fetchDato(
     WorkshopDocument,
     { locale: siteLocale, slug },
     isEnabled

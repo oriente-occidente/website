@@ -88,7 +88,7 @@ export default async function Page() {
             slug: "",
           }),
           count: y.festivalCount.count,
-          images: y.festival,
+          // images: y.festival,
         },
         artistsCompanies: {
           slug: resolveLink({
@@ -97,7 +97,7 @@ export default async function Page() {
             slug: "",
           }),
           count: y.artistsCount.count + companiesCount(y.artists),
-          images: y.artists,
+          // images: y.artists,
         },
         activities: {
           slug: resolveLink({

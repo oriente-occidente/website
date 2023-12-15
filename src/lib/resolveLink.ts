@@ -70,7 +70,7 @@ export default function resolveLink({
     case "audios_index":
       return `${lp}/${t(`audio`, locale)}/`;
     case "publication":
-      return `${lp}/${t(`pubblicazioni`, locale)}/`;
+      return `${lp}/${t(`pubblicazioni`, locale)}/${slug}`;
     case "media_photo":
       return `${lp}/${t(`foto`, locale)}/${slug}`;
     case "media_video":

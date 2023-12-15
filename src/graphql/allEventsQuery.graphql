@@ -1,4 +1,4 @@
-query allEvents($locale: SiteLocale, $start: Date, $end: Date) {
+query allEvents($locale: SiteLocale) {
   events: allEvents(
     locale: $locale
     filter: { slug: { neq: null }, isFestival: { eq: false } }

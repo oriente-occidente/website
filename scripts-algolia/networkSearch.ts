@@ -66,6 +66,7 @@ async function formatItem(item: any) {
   return {
     objectID: `${id}-${locale}`,
     ita: isDefaultLocale,
+    image: item.image?.url || "",
     title,
     slug,
     content,

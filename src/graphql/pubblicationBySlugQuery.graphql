@@ -1,0 +1,103 @@
+query publication($slug: String!, $locale: SiteLocale) {
+  publication(locale: $locale, filter: { slug: { eq: $slug } }) {
+    id
+    slug
+    _modelApiKey
+    seo: _seoMetaTags {
+      ...seoMetaFragment
+    }
+    titles: _allTitleLocales {
+      locale
+      value
+    }
+    slugs: _allSlugLocales {
+      locale
+      value
+    }
+    title
+    layoutHero
+    titleHero
+    descriptionHero
+    imageHero {
+      id
+      title
+      responsiveImage(
+        sizes: "(max-width: 1023px) 100vw, (min-width: 1024px) 80vw, 1400px"
+        imgixParams: { auto: [format, compress], ar: "14:8", fit: crop }
+      ) {
+        ...imgFrag
+      }
+    }
+    slideshowHero {
+      id
+      title
+      responsiveImage(
+        sizes: "(max-width: 1023px) 100vw, (min-width: 1024px) 80vw, 1400px"
+        imgixParams: { auto: [format, compress], ar: "14:8", fit: crop }
+      ) {
+        ...imgFrag
+      }
+    }
+    content {
+      value
+      links {
+        __typename
+        ... on ArtistRecord {
+          id
+          slug
+          title
+          _modelApiKey
+        }
+        ... on EventRecord {
+          id
+          slug
+          title
+          _modelApiKey
+        }
+        ... on NewsRecord {
+          id
+          slug
+          title
+          _modelApiKey
+        }
+        ... on NetworkRecord {
+          id
+          slug
+          title
+          _modelApiKey
+        }
+        ... on PageRecord {
+          id
+          slug
+          title
+          _modelApiKey
+        }
+        ... on ProjectRecord {
+          id
+          slug
+          title
+          _modelApiKey
+        }
+        ... on WorkshopRecord {
+          id
+          slug
+          title
+          _modelApiKey
+        }
+      }
+      blocks {
+        __typename
+        ... on GalleryRecord {
+          ...galleryFrag
+        }
+        ... on ImageBlockRecord {
+          ...imageBlockFrag
+        }
+        ... on VideoBlockRecord {
+          ...videoFrag
+        }
+      }
+    }
+    startDate
+  }
+}
