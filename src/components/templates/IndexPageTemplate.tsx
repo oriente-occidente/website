@@ -24,7 +24,6 @@ export default function IndexPageTemplate({
     (obj) => obj._modelApiKey === "event"
   );
   const dataList = allHaveEventModelApiKey ? filteredList : list;
-  console.log(page);
   const _modelApiKey = page?._modelApiKey;
   return (
     <div>

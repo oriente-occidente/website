@@ -22,11 +22,12 @@ export async function generateMetadata() {
 export default async function Page() {
   const siteLocale = locale as SiteLocale;
   const { isEnabled } = draftMode();
-  const page = await fetchDato(
+  const data = await fetchDato(
     ProjectsIndexDocument,
     { locale: siteLocale },
     isEnabled
   );
+  const page = data?.projectsIndex;
   const res = await fetchDato(
     ProjectsDocument,
     { locale: siteLocale },

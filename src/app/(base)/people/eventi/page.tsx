@@ -22,11 +22,12 @@ export async function generateMetadata() {
 export default async function Page() {
   const siteLocale = locale as SiteLocale;
   const { isEnabled } = draftMode();
-  const page = await fetchDato(
+  const date = await fetchDato(
     EventsIndexDocument,
     { locale: siteLocale },
     isEnabled
   );
+  const page = data?.eventsIndex;
   const res = await fetchDato(
     AllEventsDocument,
     { locale: siteLocale },
