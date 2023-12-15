@@ -1,7 +1,14 @@
 import { SeoMetaFragmentFragment, Site } from "@/graphql/generated";
 
+export type BasicIdPageProps = {
+  params: {
+    id: string;
+  };
+};
 export type BasicSlugPageProps = {
-  params: { slug: string };
+  params: {
+    slug: string;
+  };
 };
 export type LayoutParams = {
   children: React.ReactNode;
