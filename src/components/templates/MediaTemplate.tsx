@@ -6,6 +6,7 @@ import MediaDocumentImage from "@/components/MediaDocumentImage";
 import MediaDownload from "@/components/MediaDownload";
 import MediaAudioPlayer from "@/components/MediaAudioPlayer";
 import MediaVideo from "@/components/MediaVideo";
+import Breadcrumbs from "@/components/Breadcrumbs";
 
 export default function MediaTemplate({ data, locale }: any) {
   const { _modelApiKey } = data;
@@ -73,6 +74,7 @@ export default function MediaTemplate({ data, locale }: any) {
 
   return (
     <div className="mx-auto md:container md:px-0 lg:px-24 xl:px-64">
+      <Breadcrumbs data={data} locale={locale as any} background={null} />
       {/* {_modelApiKey == "media_photo" && (
         <div className="border-b pt-12 pb-6 md:pt-16 md:pb-12 lg:pt-24">
           <MediaPhotoImage photo={data} locale={locale} />

@@ -3,8 +3,23 @@ import queryDatoCMS from "@/lib/fetchDato";
 import { SiteLocale, WorkshopDocument } from "@/graphql/generated";
 import type { BasicSlugPageProps } from "@/types";
 import PageTemplate from "@/components/templates/PageTemplate";
+import getSeoMeta from "@/lib/seoUtils";
 
 const locale = "it";
+
+export async function generateMetadata({ params }: BasicSlugPageProps) {
+  const { slug } = params;
+  const siteLocale = locale as SiteLocale;
+  const data = await queryDatoCMS(
+    WorkshopDocument,
+    { locale: siteLocale, slug },
+    false
+  );
+  const page: any = data?.workshop || null;
+  const meta = getSeoMeta(page);
+  return meta;
+}
+
 export default async function Page({ params }: BasicSlugPageProps) {
   const { slug } = params;
   const { isEnabled } = draftMode();

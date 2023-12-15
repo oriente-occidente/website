@@ -5,6 +5,7 @@ import { StructuredText } from "react-datocms";
 import Filters from "@/components/Filters";
 import AnchorBlock from "@/components/AnchorBlock";
 import translate from "@/lib/locales";
+import Breadcrumbs from "@/components/Breadcrumbs";
 
 export default function FestivalTemplate({
   data,

@@ -1,5 +1,5 @@
 query artistsIndex($locale: SiteLocale!) {
-  artistsIndex(locale: $locale) {
+  page: artistsIndex(locale: $locale) {
     id
     title
     _modelApiKey

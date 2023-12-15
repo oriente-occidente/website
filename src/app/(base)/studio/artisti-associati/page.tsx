@@ -17,7 +17,7 @@ export async function generateMetadata() {
     { locale: siteLocale },
     false
   );
-  const page: any = data?.artistsIndex || null;
+  const page: any = data?.page || null;
   const meta = getSeoMeta(page);
   return meta;
 }
@@ -25,11 +25,12 @@ export async function generateMetadata() {
 export default async function Page() {
   const siteLocale = locale as SiteLocale;
   const { isEnabled } = draftMode();
-  const page: any = await fetchDato(
+  const data = await fetchDato(
     ArtistsIndexDocument,
     { locale: siteLocale },
     isEnabled
   );
+  const page = data?.page;
   const res = await fetchDato(
     AssociatedArtistsDocument,
     { locale: siteLocale },

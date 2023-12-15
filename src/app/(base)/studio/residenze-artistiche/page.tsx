@@ -25,11 +25,12 @@ export async function generateMetadata() {
 export default async function Page() {
   const siteLocale = locale as SiteLocale;
   const { isEnabled } = draftMode();
-  const page: any = await fetchDato(
+  const data = await fetchDato(
     ArtisticResidenciesIndexDocument,
     { locale: siteLocale },
     isEnabled
   );
+  const page = data.artisticResidenciesIndex;
   const res = await fetchDato(
     AllArtisticResidenciesQueryDocument,
     { locale: siteLocale },
@@ -42,8 +43,8 @@ export default async function Page() {
   }
 
   const heroData = {
-    titleHero: page?.artisticResidenciesIndex?.title || "",
-    descriptionHero: page?.artisticResidenciesIndex?.description || "",
+    titleHero: page?.title || "",
+    descriptionHero: page?.descriptionHero || "",
   };
 
   const pageData: any = {
