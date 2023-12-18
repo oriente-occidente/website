@@ -1,0 +1,22 @@
+query allAudiosWebsite($locale: SiteLocale) {
+  allMediaAudios(locale: $locale, filter: { showInWebsite: { eq: "true" } }) {
+    _modelApiKey
+    id
+    slug
+    title
+    description
+    audioFiles {
+      id
+      url
+      title
+      author
+    }
+    category {
+      name
+      id
+    }
+    image {
+      url(imgixParams: { auto: [format, compress], ar: "5:4", fit: crop })
+    }
+  }
+}
