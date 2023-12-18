@@ -92,5 +92,15 @@ fragment menuItemFrag on MenuItemRecord {
       title
       _modelApiKey
     }
+    ... on AudiosIndexRecord {
+      id
+      title
+      _modelApiKey
+    }
+    ... on VideosIndexRecord {
+      id
+      title
+      _modelApiKey
+    }
   }
 }
