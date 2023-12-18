@@ -35,7 +35,7 @@ export default function AccordionItem({ filter, locale }: any) {
 
   return (
     <div className="my-5 lg:my-10" key={filter.name}>
-      <h3
+      <button
         className="text-[21px] uppercase border-b pb-4 flex justify-between items-center cursor-pointer"
         onClick={() => handleToggle()}
       >
@@ -46,7 +46,7 @@ export default function AccordionItem({ filter, locale }: any) {
             clicked ? "rotate-180" : ""
           }`}
         />
-      </h3>
+      </button>
       <div
         ref={content}
         className={`grid motion-safe:transition-[grid-template-rows] motion-safe:duration-300 ${
