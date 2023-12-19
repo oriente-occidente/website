@@ -152,6 +152,7 @@ query event($slug: String!, $locale: SiteLocale) {
         }
       }
     }
+    # RELATIONS ---
     relatedContents {
       __typename
       ... on ArtistRecord {
@@ -190,6 +191,40 @@ query event($slug: String!, $locale: SiteLocale) {
     category {
       ...tagsFrag
     }
+    years {
+      ...yearRecordFragment
+    }
+    festivalEditions {
+      ...festivalEditionRecordFragment
+    }
+    artists {
+      ...artistRecordFragment
+    }
+    companies {
+      id
+      title
+      slug
+      imageHero {
+        ...imageHeroFrag
+      }
+    }
+    workhops {
+      id
+      title
+      slug
+      imageHero {
+        ...imageHeroFrag
+      }
+    }
+    projects {
+      id
+      title
+      slug
+      imageHero {
+        ...imageHeroFrag
+      }
+    }
+    # --- END RELATIONS ---
     paymentSettings {
       id
       description

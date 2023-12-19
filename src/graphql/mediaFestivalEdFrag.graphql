@@ -1,5 +1,20 @@
 fragment festivalEditionRecordFragment on FestivalEditionRecord {
-  slug
   id
+  slug
   title
+  poster {
+    id
+    image {
+      id
+      title
+      alt
+      url
+      responsiveImage(
+        sizes: "(max-width: 768px) 100vw, (min-width: 1024px) 600px, 800px"
+      ) {
+        ...imgFrag
+      }
+    }
+  }
+  festivalType
 }

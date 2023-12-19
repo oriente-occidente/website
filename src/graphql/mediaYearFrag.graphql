@@ -1,6 +1,19 @@
 fragment yearRecordFragment on YearRecord {
+  id
   year
   title
   slug
-  id
+  images {
+    image {
+      id
+      title
+      alt
+      url
+      responsiveImage(
+        sizes: "(max-width: 768px) 100vw, (min-width: 1024px) 600px, 800px"
+      ) {
+        ...imgFrag
+      }
+    }
+  }
 }

@@ -1,0 +1,8 @@
+fragment artistRecordFragment on ArtistRecord {
+  id
+  title
+  slug
+  imageHero {
+    ...imageHeroFrag
+  }
+}
