@@ -12,7 +12,7 @@ export default function MediaSearchResults({
 }: MediaSearchResultsProps) {
   const { hits } = useHits(props);
   return (
-    <div className="grid grid-cols-1 gap-1 sm:grid-cols-2 sm:gap-2 xl:gap-3 4xl:gap-4 4xl:grid-cols-3 ">
+    <div className="grid grid-cols-1 gap-1 sm:grid-cols-2 4xl:grid-cols-3 gap-x-3 sm:gap-x-5 gap-y-8">
       {hits.length === 0 && "No results"}
       {hits.map((hit: any) => {
         return (
