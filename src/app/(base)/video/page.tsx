@@ -55,7 +55,7 @@ export default async function Page({ params }: BasicSlugPageProps) {
       <HeroEmpty data={heroData} locale={locale} />
       <div className="container my-5 grid sm:grid-cols-2 lg:grid-cols-3 gap-x-3 sm:gap-x-5 gap-y-8">
         {allMediaVideos.map((v) => {
-          const data = { ...v, contentType: "audio", image: v.image?.url };
+          const data = { ...v, contentType: "video", image: v.image?.url };
           return (
             <div key={v.id}>
               <MediaCard data={data} locale={locale} />
