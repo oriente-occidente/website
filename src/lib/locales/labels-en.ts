@@ -125,7 +125,7 @@ const labels_en = {
     of: "of",
   },
   "search-filters": {
-    contentType: "Media Type",
+    contentType: "Type",
     years: "Years",
     festival: "Festival",
     category: "Category",
@@ -139,6 +139,7 @@ const labels_en = {
     events: "Events",
     pubblications: "Pubblicazioni",
     networks: "Networks",
+    country: "Country",
   },
 };
 export default labels_en;

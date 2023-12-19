@@ -36,7 +36,7 @@ export default function AccordionItem({ filter, locale }: any) {
   return (
     <div className="my-5 lg:my-10" key={filter.name}>
       <button
-        className="text-[21px] uppercase border-b pb-4 flex justify-between items-center cursor-pointer"
+        className="w-full text-[21px] uppercase border-b pb-4 flex justify-between items-center cursor-pointer"
         onClick={() => handleToggle()}
       >
         <span>{translate(`search-filters.${filter.name}`, locale)}</span>

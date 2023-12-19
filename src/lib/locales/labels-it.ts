@@ -119,7 +119,7 @@ const labels_it = {
     of: "di",
   },
   "search-filters": {
-    contentType: "Tiplogia Media",
+    contentType: "Tiplogia",
     years: "Anni",
     festival: "Festival",
     category: "Categoria",
@@ -133,6 +133,7 @@ const labels_it = {
     events: "Eventi",
     pubblications: "Pubblicazioni",
     networks: "Reti",
+    country: "Paese",
   },
 };
 export default labels_it;
