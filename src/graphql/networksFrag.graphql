@@ -1,0 +1,12 @@
+fragment networkRecordFragment on NetworkRecord {
+  id
+  title
+  slug
+  imageHero {
+    id
+    title
+    responsiveImage {
+      ...imgFrag
+    }
+  }
+}

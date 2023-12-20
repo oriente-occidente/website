@@ -25,14 +25,17 @@ query company($slug: String!, $locale: SiteLocale) {
       ...slideShowHeroFrag
     }
 
+    # RELATIONS ---
     artists {
       ...slideArtirstFrag
     }
-
-    startDate: _firstPublishedAt
     countries {
       name
     }
+    # --- END RELATIONS ---
+
+    startDate: _firstPublishedAt
+
     content {
       value
       links {

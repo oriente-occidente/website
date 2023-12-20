@@ -38,6 +38,7 @@ query network($slug: String!, $locale: SiteLocale) {
         ...imgFrag
       }
     }
+    # RELATIONS ---
     relatedContents {
       __typename
       ... on ArtistRecord {
@@ -73,6 +74,13 @@ query network($slug: String!, $locale: SiteLocale) {
         }
       }
     }
+    category {
+      ...tagsFrag
+    }
+    years {
+      ...yearRecordFragment
+    }
+    # --- END RELATIONS ---
     content {
       value
       links {
@@ -221,9 +229,6 @@ query network($slug: String!, $locale: SiteLocale) {
       bookable
       amount
       paymentLink
-    }
-    category {
-      ...tagsFrag
     }
     startDate
     dates {

@@ -24,6 +24,7 @@ query artist($slug: String!, $locale: SiteLocale) {
     slideshowHero {
       ...slideShowHeroFrag
     }
+    # RELATIONS ---
     relatedContents {
       __typename
       ... on ArtistRecord {
@@ -59,6 +60,10 @@ query artist($slug: String!, $locale: SiteLocale) {
         }
       }
     }
+    countries {
+      name
+    }
+    # --- END RELATIONS ---
     startDate: _firstPublishedAt
     artisticResidence {
       id

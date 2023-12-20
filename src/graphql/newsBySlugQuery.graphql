@@ -28,6 +28,8 @@ query news($slug: String!, $locale: SiteLocale) {
         ...imgFrag
       }
     }
+    # RELATIONS ---
+    # --- END RELATIONS ---
     slideshowHero {
       id
       title

@@ -38,6 +38,8 @@ query workshop($slug: String!, $locale: SiteLocale) {
         ...imgFrag
       }
     }
+
+    # RELATIONS ---
     relatedContents {
       __typename
       ... on ArtistRecord {
@@ -73,6 +75,68 @@ query workshop($slug: String!, $locale: SiteLocale) {
         }
       }
     }
+    workshopCategory {
+      id
+      seo {
+        description
+        title
+        twitterCard
+        image {
+          responsiveImage {
+            ...imgFrag
+          }
+        }
+      }
+      slug
+      title
+      overImage {
+        id
+        responsiveImage {
+          ...imgFrag
+        }
+      }
+      description
+    }
+    years {
+      ...yearRecordFragment
+    }
+    festivalEditions {
+      ...festivalEditionRecordFragment
+    }
+    category {
+      ...tagsFrag
+    }
+    artists {
+      ...artistRecordFragment
+    }
+    companies {
+      id
+      title
+      slug
+      imageHero {
+        ...imageHeroFrag
+      }
+    }
+    artisticResidecies {
+      ...artisticResidecyRecordFragment
+    }
+    projects {
+      id
+      title
+      slug
+      imageHero {
+        ...imageHeroFrag
+      }
+    }
+    workhops {
+      id
+      title
+      slug
+      imageHero {
+        ...imageHeroFrag
+      }
+    }
+    # --- END RELATIONS ---
     content {
       value
       links {
@@ -216,31 +280,7 @@ query workshop($slug: String!, $locale: SiteLocale) {
       amount
       paymentLink
     }
-    category {
-      ...tagsFrag
-    }
-    workshopCategory {
-      id
-      seo {
-        description
-        title
-        twitterCard
-        image {
-          responsiveImage {
-            ...imgFrag
-          }
-        }
-      }
-      slug
-      title
-      overImage {
-        id
-        responsiveImage {
-          ...imgFrag
-        }
-      }
-      description
-    }
+
     startDate
     dates {
       id

@@ -110,12 +110,7 @@ query artisticResidecy($slug: String!, $locale: SiteLocale) {
             images {
               responsiveImage(
                 sizes: "100vw"
-                imgixParams: {
-                  auto: [format, compress]
-                  h: 800
-                  w: 1200
-                  fit: crop
-                }
+                imgixParams: { auto: [format, compress], h: 800, w: 1200, fit: crop }
               ) {
                 ...imgFrag
               }
@@ -219,5 +214,22 @@ query artisticResidecy($slug: String!, $locale: SiteLocale) {
         }
       }
     }
+    # RELATIONS ---
+    years {
+      ...yearRecordFragment
+    }
+    artists {
+      ...artistRecordFragment
+    }
+    projects {
+      id
+      title
+      slug
+      imageHero {
+        ...imageHeroFrag
+      }
+    }
+
+    # --- END RELATIONS ---
   }
 }

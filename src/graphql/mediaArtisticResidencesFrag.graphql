@@ -2,4 +2,8 @@ fragment artisticResidecyRecordFragment on ArtisticResidecyRecord {
   id
   slug
   title
+  titleHero
+  imageHero {
+    ...imageHeroFrag
+  }
 }
