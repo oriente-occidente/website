@@ -1,4 +1,5 @@
 fragment yearRecordFragment on YearRecord {
+  _modelApiKey
   id
   year
   title

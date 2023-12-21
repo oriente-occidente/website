@@ -1,4 +1,5 @@
 fragment eventRecordFragment on EventRecord {
+  _modelApiKey
   id
   title
   slug

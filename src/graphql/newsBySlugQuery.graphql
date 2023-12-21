@@ -18,6 +18,7 @@ query news($slug: String!, $locale: SiteLocale) {
     layoutHero
     titleHero
     descriptionHero
+    showInArchive
     imageHero {
       id
       title

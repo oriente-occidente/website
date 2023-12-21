@@ -1,4 +1,5 @@
 fragment galleryFrag on GalleryRecord {
+  _modelApiKey
   id
   images {
     responsiveImage(

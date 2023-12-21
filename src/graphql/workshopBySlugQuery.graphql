@@ -271,6 +271,7 @@ query workshop($slug: String!, $locale: SiteLocale) {
       }
     }
     isWorkshop
+    showInWebsite
     paymentSettings {
       id
       description

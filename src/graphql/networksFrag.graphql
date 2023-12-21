@@ -1,4 +1,5 @@
 fragment networkRecordFragment on NetworkRecord {
+  _modelApiKey
   id
   title
   slug

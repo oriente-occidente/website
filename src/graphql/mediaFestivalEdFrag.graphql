@@ -1,4 +1,5 @@
 fragment festivalEditionRecordFragment on FestivalEditionRecord {
+  _modelApiKey
   id
   slug
   title

@@ -31,12 +31,8 @@ query artisticResidecy($slug: String!, $locale: SiteLocale) {
         ...tagsFrag
       }
     }
-
+    showInWebsite
     startDate: _firstPublishedAt
-    years {
-      id
-      year
-    }
 
     content {
       value

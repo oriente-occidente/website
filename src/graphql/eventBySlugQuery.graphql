@@ -240,6 +240,8 @@ query event($slug: String!, $locale: SiteLocale) {
       title
     }
     isFestival
+    isCoProduction
+    showInWebsite
     category {
       ...tagsFrag
     }

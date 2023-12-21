@@ -18,6 +18,7 @@ query network($slug: String!, $locale: SiteLocale) {
     layoutHero
     titleHero
     descriptionHero
+    showInWebsite
     imageHero {
       id
       title

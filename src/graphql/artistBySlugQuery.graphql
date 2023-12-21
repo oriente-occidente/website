@@ -24,6 +24,7 @@ query artist($slug: String!, $locale: SiteLocale) {
     slideshowHero {
       ...slideShowHeroFrag
     }
+    showInWebsite
     # RELATIONS ---
     relatedContents {
       __typename

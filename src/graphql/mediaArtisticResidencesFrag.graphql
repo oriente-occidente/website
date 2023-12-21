@@ -1,4 +1,5 @@
 fragment artisticResidecyRecordFragment on ArtisticResidecyRecord {
+  _modelApiKey
   id
   slug
   title
