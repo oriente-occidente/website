@@ -5,6 +5,7 @@ const labels_it = {
   cookiePolicyId: "94139888",
   cookiePolicyTitle: "Vai a (link esterno) Cookie Policy",
   privacyPolicyTitle: "Vai a (link esterno) Privacy Policy",
+  privacyPreferences: "Preferenze privacy",
   creditsTitle: "Vai a (link esterno) Cantiere Creativo Agenzia web Firenze",
   welcome: "Entra nel sito",
   goodby: "Addio",
