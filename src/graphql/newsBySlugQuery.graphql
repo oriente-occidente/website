@@ -29,6 +29,40 @@ query news($slug: String!, $locale: SiteLocale) {
       }
     }
     # RELATIONS ---
+    category {
+      ...tagsFrag
+    }
+    years {
+      ...yearRecordFragment
+    }
+    festivalEditions {
+      ...festivalEditionRecordFragment
+    }
+    artists {
+      ...artistRecordFragment
+    }
+    comoanies {
+      id
+      title
+      slug
+      imageHero {
+        ...imageHeroFrag
+      }
+    }
+    artisticResidencies {
+      ...artisticResidecyRecordFragment
+    }
+    workhops {
+      id
+      title
+      slug
+      imageHero {
+        ...imageHeroFrag
+      }
+    }
+    events {
+      ...eventRecordFragment
+    }
     # --- END RELATIONS ---
     slideshowHero {
       id
@@ -101,8 +135,5 @@ query news($slug: String!, $locale: SiteLocale) {
       }
     }
     startDate
-    category {
-      ...tagsFrag
-    }
   }
 }

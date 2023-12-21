@@ -1,0 +1,13 @@
+fragment eventRecordFragment on EventRecord {
+  id
+  title
+  slug
+  imageHero {
+    id
+    title
+    responsiveImage {
+      ...imgFrag
+    }
+  }
+  titleHero
+}
