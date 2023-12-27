@@ -1,6 +1,7 @@
 query mediaDocumentQuery($slug: String!, $locale: SiteLocale) {
   mediaDocument(filter: { slug: { eq: $slug } }, locale: $locale) {
     _modelApiKey
+    __typename
     seo: _seoMetaTags {
       ...seoMetaFragment
     }

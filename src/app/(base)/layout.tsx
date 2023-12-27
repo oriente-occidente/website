@@ -43,16 +43,12 @@ export async function generateMetadata() {
 const GTM = process.env.NEXT_PUBLIC_GTM;
 const IUBENDA_SITE_ID = process.env.NEXT_PUBLIC_IUBENDA_SITE_ID;
 
-export default async function RootLayout({ children }: LayoutParams) {
+export default async function RootLayout({ children, params }: any) {
   // console.log("LAYOUT LOCALE", locale);
   const { isEnabled } = draftMode();
   const siteLocale = locale as SiteLocale;
-  const data = await fetchDato(
-    LayoutDocument,
-    { locale: siteLocale },
-    isEnabled
-  );
-
+  const data = await fetchDato(LayoutDocument, { locale: siteLocale }, isEnabled);
+  console.log("children -->", JSON.stringify(children, null, 2));
   if (!data) return null;
   return (
     <html lang={locale}>

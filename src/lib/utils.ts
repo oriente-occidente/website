@@ -141,9 +141,7 @@ export function groupDatesByDay(dates: any[], locale = "it") {
       return daily;
     }, []);
     if (times.length > 0) {
-      return `${date} - ${locale == "it" ? "alle: " : "at: "} ${times.join(
-        " , "
-      )}`;
+      return `${date} - ${locale == "it" ? "alle: " : "at: "} ${times.join(" , ")}`;
     }
     return date;
   });
@@ -181,9 +179,7 @@ export const closestInterval = (intervals: any[]) => {
 
 function getLastDate(dates: any[]) {
   const groups = dates.reduce((group, date) => {
-    const day = dayjs(date.endTime ? date.endTime : date.startTime).format(
-      "YYYY-MM-DD"
-    );
+    const day = dayjs(date.endTime ? date.endTime : date.startTime).format("YYYY-MM-DD");
     if (group[day]) {
       group[day].push(date);
     } else {
@@ -252,3 +248,16 @@ export function enhanceEvents(list: any[]) {
     return { ...event, finished, lastDate, nextDate };
   });
 }
+
+export const mediaRecordTypenames: string[] = [
+  "MediaAudioRecord",
+  "MediaVideoRecord",
+  "MediaPhotoRecord",
+  "MediaDocumentRecord",
+];
+
+export const contentRecordTypenames: string[] = [
+  "EventRecord",
+  "WorkshopRecord",
+  "NewsRecord",
+];

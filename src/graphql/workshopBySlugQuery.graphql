@@ -3,6 +3,7 @@ query workshop($slug: String!, $locale: SiteLocale) {
     id
     slug
     _modelApiKey
+    __typename
     seo: _seoMetaTags {
       ...seoMetaFragment
     }
