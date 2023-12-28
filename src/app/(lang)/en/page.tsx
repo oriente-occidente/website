@@ -1,21 +1,21 @@
 import { draftMode } from "next/headers";
+
 import HomeTemplate from "@/components/templates/HomeTemplate";
 import { HomeDocument, SiteLocale } from "@/graphql/generated";
 import queryDatoCMS from "@/lib/fetchDato";
-import Wrapper from "@/components/layout/Wrapper";
 
-const locale = "it";
+const locale = 'en';
 async function Home() {
   const { isEnabled } = draftMode();
   const siteLocale = locale as SiteLocale;
-  const data = await queryDatoCMS(HomeDocument, { locale: siteLocale }, isEnabled);
+  const data = await queryDatoCMS(
+    HomeDocument,
+    { locale: siteLocale },
+    isEnabled
+  );
 
   if (!data.home) return null;
-  return (
-    <Wrapper locale={locale}>
-      <HomeTemplate data={data.home} locale={locale} />
-    </Wrapper>
-  );
+  return <HomeTemplate data={data.home} locale={locale} />;
 }
 
 export default Home;

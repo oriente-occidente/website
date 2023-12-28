@@ -1,56 +1,48 @@
 import { draftMode } from "next/headers";
-import { notFound } from "next/navigation";
+import { SiteLocale, WorkshopDocument } from "@/graphql/generated";
 import type { BasicSlugPageProps } from "@/types";
-import { ArtisticResidecyDocument, SiteLocale } from "@/graphql/generated";
 import PageTemplate from "@/components/templates/PageTemplate";
 import getSeoMeta from "@/lib/seoUtils";
 import fetchDato from "@/lib/fetchDato";
-import Wrapper from "@/components/layout/Wrapper";
-import { extractSlugData } from "@/lib/utils";
 
-const locale = "it";
+const locale = 'en';
 
 export async function generateMetadata({ params }: BasicSlugPageProps) {
   const { slug } = params;
   const siteLocale = locale as SiteLocale;
   const data = await fetchDato(
-    ArtisticResidecyDocument,
+    WorkshopDocument,
     { locale: siteLocale, slug },
     false
   );
-  const page: any = data?.page || null;
+  const page: any = data?.workshop || null;
   const meta = getSeoMeta(page);
   return meta;
 }
 
 export default async function Page({ params }: BasicSlugPageProps) {
   const { slug } = params;
-
   const { isEnabled } = draftMode();
   const siteLocale = locale as SiteLocale;
   const data = await fetchDato(
-    ArtisticResidecyDocument,
+    WorkshopDocument,
     { locale: siteLocale, slug },
     isEnabled
   );
-
-  if (!data.page) notFound();
+  // console.log("data orig", data.workshop?.dates);
   const heroData: any = {
-    layoutHero: data?.page?.layoutHero,
-    titleHero: data?.page?.titleHero,
-    descriptionHero: data?.page?.descriptionHero,
-    imageHero: data?.page?.imageHero,
-    slideshowHero: data?.page?.slideshowHero,
+    layoutHero: data?.workshop?.layoutHero,
+    titleHero: data?.workshop?.titleHero,
+    descriptionHero: data?.workshop?.descriptionHero,
+    imageHero: data?.workshop?.imageHero,
+    slideshowHero: data?.workshop?.slideshowHero,
+    dateEvento: data.workshop?.dates,
+    location: data.workshop?.location,
+    authors: data.workshop?.authors,
   };
   const pageData: any = {
     hero: heroData,
-    ...data.page,
+    ...data.workshop,
   };
-
-  const slugData = extractSlugData(data.page);
-  return (
-    <Wrapper locale={locale} slugData={slugData}>
-      <PageTemplate data={pageData} locale={locale} />
-    </Wrapper>
-  );
+  return <PageTemplate data={pageData} locale={locale} />;
 }

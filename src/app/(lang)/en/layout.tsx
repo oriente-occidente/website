@@ -7,7 +7,7 @@ import Footer from "@/components/layout/Footer";
 import translate from "@/lib/locales";
 import fetchDato from "@/lib/fetchDato";
 import Script from "next/script";
-import Wrapper from "@/components/layout/Wrapper";
+
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/navigation";
@@ -17,7 +17,7 @@ import "swiper/css/effect-fade";
 import "swiper/css/scrollbar";
 import "@/style/globals.css";
 import { toNextMetadata } from "react-datocms";
-const locale = "it";
+const locale = 'en';
 
 export async function generateMetadata() {
   const siteLocale = locale as SiteLocale;
@@ -43,7 +43,7 @@ export async function generateMetadata() {
 const GTM = process.env.NEXT_PUBLIC_GTM;
 const IUBENDA_SITE_ID = process.env.NEXT_PUBLIC_IUBENDA_SITE_ID;
 
-export default async function RootLayout({ children }: any) {
+export default async function RootLayout({ children, params }: any) {
   // console.log("LAYOUT LOCALE", locale);
   const { isEnabled } = draftMode();
   const siteLocale = locale as SiteLocale;
@@ -61,7 +61,10 @@ export default async function RootLayout({ children }: any) {
             {translate("skipFooter", locale)}
           </a>
         </div>
-        {children}
+        <Header locale={locale} data={data.menu} />
+        <main className="min-h-[50vh] pt-[70px] md:pt-[80px] lg:pt-[110px]">
+          <div>{children}</div>
+        </main>
         <Footer locale={locale} data={data.footer} hideNewsletter={false} />
         <Script type="text/javascript" src="//cs.iubenda.com/sync/2481473.js" />
         <Script

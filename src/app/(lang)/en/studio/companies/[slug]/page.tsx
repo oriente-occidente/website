@@ -1,56 +1,45 @@
 import { draftMode } from "next/headers";
-import { notFound } from "next/navigation";
 import type { BasicSlugPageProps } from "@/types";
-import { ArtisticResidecyDocument, SiteLocale } from "@/graphql/generated";
+import { CompanyDocument, SiteLocale } from "@/graphql/generated";
 import PageTemplate from "@/components/templates/PageTemplate";
 import getSeoMeta from "@/lib/seoUtils";
 import fetchDato from "@/lib/fetchDato";
-import Wrapper from "@/components/layout/Wrapper";
-import { extractSlugData } from "@/lib/utils";
 
-const locale = "it";
+const locale = 'en';
 
 export async function generateMetadata({ params }: BasicSlugPageProps) {
   const { slug } = params;
   const siteLocale = locale as SiteLocale;
   const data = await fetchDato(
-    ArtisticResidecyDocument,
+    CompanyDocument,
     { locale: siteLocale, slug },
     false
   );
-  const page: any = data?.page || null;
+  const page: any = data?.company || null;
   const meta = getSeoMeta(page);
   return meta;
 }
 
 export default async function Page({ params }: BasicSlugPageProps) {
   const { slug } = params;
-
   const { isEnabled } = draftMode();
   const siteLocale = locale as SiteLocale;
   const data = await fetchDato(
-    ArtisticResidecyDocument,
+    CompanyDocument,
     { locale: siteLocale, slug },
     isEnabled
   );
-
-  if (!data.page) notFound();
+  const page: any = data?.company;
   const heroData: any = {
-    layoutHero: data?.page?.layoutHero,
-    titleHero: data?.page?.titleHero,
-    descriptionHero: data?.page?.descriptionHero,
-    imageHero: data?.page?.imageHero,
-    slideshowHero: data?.page?.slideshowHero,
+    layoutHero: page?.layoutHero,
+    titleHero: page?.titleHero,
+    descriptionHero: page?.descriptionHero,
+    imageHero: page?.imageHero,
+    slideshowHero: page?.slideshowHero,
   };
   const pageData: any = {
     hero: heroData,
-    ...data.page,
+    ...page,
   };
-
-  const slugData = extractSlugData(data.page);
-  return (
-    <Wrapper locale={locale} slugData={slugData}>
-      <PageTemplate data={pageData} locale={locale} />
-    </Wrapper>
-  );
+  return <PageTemplate data={pageData} locale={locale} />;
 }

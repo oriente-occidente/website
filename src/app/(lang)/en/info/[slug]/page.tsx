@@ -1,20 +1,18 @@
 import { draftMode } from "next/headers";
 import { notFound } from "next/navigation";
 import type { BasicSlugPageProps } from "@/types";
-import { ArtisticResidecyDocument, SiteLocale } from "@/graphql/generated";
+import { PageDocument, SiteLocale } from "@/graphql/generated";
 import PageTemplate from "@/components/templates/PageTemplate";
 import getSeoMeta from "@/lib/seoUtils";
 import fetchDato from "@/lib/fetchDato";
-import Wrapper from "@/components/layout/Wrapper";
-import { extractSlugData } from "@/lib/utils";
 
-const locale = "it";
+const locale = 'en';
 
 export async function generateMetadata({ params }: BasicSlugPageProps) {
   const { slug } = params;
   const siteLocale = locale as SiteLocale;
   const data = await fetchDato(
-    ArtisticResidecyDocument,
+    PageDocument,
     { locale: siteLocale, slug },
     false
   );
@@ -29,7 +27,7 @@ export default async function Page({ params }: BasicSlugPageProps) {
   const { isEnabled } = draftMode();
   const siteLocale = locale as SiteLocale;
   const data = await fetchDato(
-    ArtisticResidecyDocument,
+    PageDocument,
     { locale: siteLocale, slug },
     isEnabled
   );
@@ -46,11 +44,5 @@ export default async function Page({ params }: BasicSlugPageProps) {
     hero: heroData,
     ...data.page,
   };
-
-  const slugData = extractSlugData(data.page);
-  return (
-    <Wrapper locale={locale} slugData={slugData}>
-      <PageTemplate data={pageData} locale={locale} />
-    </Wrapper>
-  );
+  return <PageTemplate data={pageData} locale={locale} />;
 }
