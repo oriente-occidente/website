@@ -30,6 +30,9 @@ export default function SharedPagination({
   const prevNextClass = resLength && resLength <= 3 ? "hidden" : "";
   return (
     <Pagination
+      onClick={() => {
+        scrollTo(0, 0);
+      }}
       padding={visiblePages}
       classNames={{
         root: "",
