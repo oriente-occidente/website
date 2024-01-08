@@ -1,7 +1,9 @@
 "use client";
 import { Hit as AlgoliaHit } from "instantsearch.js/es/types";
 import MediaCard from "@/components/cards/MediaCard";
-export type VideoHitType = AlgoliaHit<{
+import CategoryCard from "@/components/cards/CategoryCard";
+
+export type ArtistHitType = AlgoliaHit<{
   objectID: string;
   title: string;
   slug: string;
@@ -20,15 +22,16 @@ export type VideoHitType = AlgoliaHit<{
 }>;
 
 type HitProps = {
-  hit: VideoHitType;
+  hit: ArtistHitType;
   locale: string;
 };
 
-export default function VideoHit({ hit, locale }: HitProps) {
+export default function ArtistHit({ hit, locale }: HitProps) {
   const { objectID } = hit;
+  console.log("hit", hit);
   return (
     <div key={`hit-${objectID}`}>
-      <MediaCard data={hit} locale={locale} />
+      <CategoryCard data={hit} locale={locale} />
     </div>
   );
 }

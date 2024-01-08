@@ -18,6 +18,7 @@ const config: Config = {
           DEFAULT: "#000000",
           light: "#424242",
           medium: "#979797",
+          dark: "#162035",
           transparent: "rgba(0,0,0,0.2)",
           lessTransparent: "rgba(0,0,0,0.8)",
         },

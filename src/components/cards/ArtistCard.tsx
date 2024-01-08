@@ -38,7 +38,7 @@ export default function CategoryCard({ data, locale }: GenericCardProps) {
         return "card-title-artisti";
       case "compagnie":
         return "card-title-compagnie";
-      case "residenze":
+      case "artistic_residecy":
         return "card-title-residenze";
       case "progetto":
         return "card-title-progetto";
@@ -61,7 +61,6 @@ export default function CategoryCard({ data, locale }: GenericCardProps) {
   const categoryClasses = categoryColorClasses(
     categoryTitle ? categoryTitle : ""
   );
-
   const link = resolveLink({ ...data, locale });
 
   return (

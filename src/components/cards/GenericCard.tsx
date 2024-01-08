@@ -11,9 +11,9 @@ export default function GenericCard({ data, locale }: GenericCardProps) {
     case "news":
       card = <NewsCard locale={locale} data={data} />;
       break;
-    case "media_audio" || "media_audio" || "media_video" || "media_document" :
-        card = <MediaCard locale={locale} data={data} />;
-        break;
+    case "media_photo" || "media_audio" || "media_video" || "media_document":
+      card = <MediaCard locale={locale} data={data} />;
+      break;
     case "event":
       card = <CategoryCard locale={locale} data={data} />;
       break;

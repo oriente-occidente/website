@@ -9,9 +9,22 @@ import translate from "@/lib/locales";
 
 export default function CategoryCard({ data, locale }: GenericCardProps) {
   const datesGrouped = data.dates ? groupDatesByDay(data.dates, locale) : [];
+  console.log("data", data);
   let categoryTitle;
-  if (data.category) {
-    const catToShow = data.category;
+  // if (data.category) {
+  //   const catToShow = data.category;
+  //   if (Array.isArray(catToShow)) {
+  //     categoryTitle = catToShow
+  //       .map((cat) => {
+  //         return cat.title;
+  //       })
+  //       .join(", ");
+  //   } else {
+  //     categoryTitle = catToShow.title;
+  //   }
+  // }
+  if (data.contentType) {
+    const catToShow = data.contentType;
     if (Array.isArray(catToShow)) {
       categoryTitle = catToShow
         .map((cat) => {
@@ -19,31 +32,32 @@ export default function CategoryCard({ data, locale }: GenericCardProps) {
         })
         .join(", ");
     } else {
-      categoryTitle = catToShow.title;
+      categoryTitle = catToShow;
     }
   }
+  console.log("categoryTitle", categoryTitle);
   function categoryColorClasses(cat: string) {
     let c = removeSpaces(cat);
     switch (c) {
       case "news":
         return "card-title-news";
-      case "eventi":
-        return "card-title-feeventistival";
+      case "event":
+        return "card-title-eventi";
       case "linguaggi":
         return "card-title-linguaggi";
       case "workshop":
         return "card-title-workshop";
-      case "artisti":
+      case "artist":
         return "card-title-artisti";
-      case "compagnie":
+      case "company":
         return "card-title-compagnie";
-      case "residenze":
+      case "artistic_residecy":
         return "card-title-residenze";
-      case "progetto":
+      case "project":
         return "card-title-progetto";
       case "pubblicazioni":
         return "card-title-pubblicazioni";
-      case "reti":
+      case "network":
         return "card-title-reti";
       case "partner":
         return "card-title-partner";
@@ -97,10 +111,20 @@ export default function CategoryCard({ data, locale }: GenericCardProps) {
               </div>
             )}
           </div>
-          <DatoImage
-            className="dato-image-cover duration-300 group-hover:scale-105 "
-            data={data.imageHero.responsiveImage}
-          />
+          {!data.imageHero && (
+            <div className="relative h-[220px] overflow-hidden md:h-[360px]">
+              <img
+                className="dato-image-cover duration-300 group-hover:scale-105"
+                src={data.image}
+              />
+            </div>
+          )}
+          {data.imageHero && (
+            <DatoImage
+              className="dato-image-cover duration-300 group-hover:scale-105 "
+              data={data.imageHero.responsiveImage}
+            />
+          )}
         </div>
 
         <div className="z-20">
@@ -109,7 +133,7 @@ export default function CategoryCard({ data, locale }: GenericCardProps) {
               <span
                 className={`px-2 py-1 font-semibold uppercase mr-2 ${categoryClasses}`}
               >
-                {categoryTitle}
+                {translate(categoryTitle.toLowerCase(), locale)}
               </span>
             )}
           </div>

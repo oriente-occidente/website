@@ -62,6 +62,7 @@ const labels_en = {
   audio: "Audio",
   photo: "Photo",
   video: "Video",
+  artistic_residecy: "Artistic residency",
   reservedTextLineOne: "This video is not publicly available.",
   reservedTextLineTwo: "To request access, send an email to",
   zoom: "Zoom",

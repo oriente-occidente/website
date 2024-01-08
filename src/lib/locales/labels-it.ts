@@ -62,6 +62,7 @@ const labels_it = {
   audio: "Audio",
   photo: "Immagine",
   video: "Video",
+  artistic_residecy: "Residenza artistica",
   reservedTextLineOne: "Questo video non è consultabile pubblicamente.",
   reservedTextLineTwo: "Per chiederne l’accesso scrivere all’indirizzo",
   zoom: "Ingrandisci",

@@ -1,5 +1,6 @@
 "use client";
 import { Image as DatoImage } from "react-datocms";
+import Image from "next/image";
 import Link from "next/link";
 import { MapPinIcon, CalendarIcon } from "@heroicons/react/24/outline";
 import { formatDate } from "@/lib/utils";
@@ -7,10 +8,21 @@ import { GenericCardProps } from "@/types";
 import resolveLink from "@/lib/resolveLink";
 
 export default function NewsCard({ data, locale }: GenericCardProps) {
-  // console.log("data", data.tags);
   let categoryTitle;
-  if (data.category) {
-    const catToShow = data.category;
+  // if (data.category) {
+  //   const catToShow = data.category;
+  //   if (Array.isArray(catToShow)) {
+  //     categoryTitle = catToShow
+  //       .map((cat) => {
+  //         return cat.title;
+  //       })
+  //       .join(", ");
+  //   } else {
+  //     categoryTitle = catToShow.title;
+  //   }
+  // }
+  if (data.contentType) {
+    const catToShow = data.contentType;
     if (Array.isArray(catToShow)) {
       categoryTitle = catToShow
         .map((cat) => {
@@ -18,21 +30,20 @@ export default function NewsCard({ data, locale }: GenericCardProps) {
         })
         .join(", ");
     } else {
-      categoryTitle = catToShow.title;
+      categoryTitle = catToShow;
     }
   }
-  console.log("categoryTitle", categoryTitle);
   const categoryColorClasses: any = {
     news: "bg-cat-news text-black",
-    eventi: "bg-cat-eventi text-black",
-    linguaggi: "bg-cat-linguaggi text-black",
+    event: "bg-cat-eventi text-black",
+    languages: "bg-cat-linguaggi text-black",
     workshop: "bg-cat-workshop text-black",
-    artisti: "bg-cat-artisti text-black",
-    compagnie: "bg-cat-compagnie text-black",
-    residenze: "bg-cat-residenze text-black",
-    progetto: "bg-cat-progetto text-black",
-    pubblicazioni: "bg-cat-pubblicazioni text-black",
-    reti: "bg-cat-reti text-black",
+    artist: "bg-cat-artisti text-black",
+    company: "bg-cat-compagnie text-black",
+    artistic_residecy: "bg-cat-residenze text-black",
+    project: "bg-cat-progetto text-black",
+    publication: "bg-cat-pubblicazioni text-black",
+    network: "bg-cat-reti text-black",
     partner: "bg-cat-partner text-black",
     festival: "bg-cat-festival text-black",
   };
@@ -41,14 +52,23 @@ export default function NewsCard({ data, locale }: GenericCardProps) {
 
   const link = resolveLink({ ...data, locale });
 
+  console.log("data", data);
   return (
     <div className="relative py-4">
       <Link href={link} title={data.title} className="group">
         <div className="relative h-[220px] overflow-hidden md:h-[360px]">
-          <DatoImage
-            className="dato-image-cover duration-300 group-hover:scale-105"
-            data={data.imageHero.responsiveImage}
-          />
+          {data.imageHero && (
+            <DatoImage
+              className="dato-image-cover duration-300 group-hover:scale-105"
+              data={data.imageHero.responsiveImage}
+            />
+          )}
+          {data.image && (
+            <img
+              className="dato-image-cover duration-300 group-hover:scale-105"
+              src={data.image}
+            />
+          )}
         </div>
 
         <div className="z-20">
