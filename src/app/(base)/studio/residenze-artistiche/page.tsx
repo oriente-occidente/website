@@ -52,5 +52,8 @@ export default async function Page() {
     hero: heroData,
     page,
   };
+
+  console.log("PAGE DATA", pageData);
+
   return <IndexPageTemplate data={pageData} locale={locale} />;
 }

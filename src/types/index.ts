@@ -114,6 +114,8 @@ export type PageSeoProps = {
   titles?: LocaleValue[];
   slugs?: LocaleValue[];
   section?: string;
+  sections?: any;
+  content?: any;
 };
 
 export type GenericSearchProps = {
