@@ -9,12 +9,12 @@ import {
   InstantSearchProps,
   Stats,
 } from "react-instantsearch";
-import translate from "@/lib/locales";
 import Pagination from "./Pagination";
-import Results from "./MediaSearchResults";
+import Results from "./media/MediaSearchResults";
 import { UiState } from "instantsearch.js/es/types";
 import CustomClearRefinements from "./CustomCleearRefinements";
 import CustomSearchBox from "./CustomSearchBox";
+import translate from "../../lib/locales";
 
 const searchClient = algoliasearch(
   process.env.NEXT_PUBLIC_ALGOLIA_APP_ID || "",
