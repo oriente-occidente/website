@@ -127,7 +127,7 @@ export default function CategoryCard({ data, locale }: GenericCardProps) {
 
         <div className="z-20">
           <div className="mt-4 mb-3">
-            {categoryTitle && categoryTitle != "artisti" && (
+            {categoryTitle && categoryTitle != "artist" && (
               <span
                 className={`px-2 py-1 font-semibold uppercase mr-2 ${categoryClasses}`}
               >

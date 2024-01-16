@@ -4,6 +4,7 @@ import StandardCard from "@/components/cards/StandardCard";
 import NewsCard from "@/components/cards/NewsCard";
 import MediaCard from "@/components/cards/MediaCard";
 import CategoryCard from "./CategoryCard";
+import ArtistCard from "./ArtistCard";
 
 export default function GenericCard({ data, locale }: GenericCardProps) {
   let card = null;
@@ -22,6 +23,9 @@ export default function GenericCard({ data, locale }: GenericCardProps) {
       break;
     case "network":
       card = <CategoryCard locale={locale} data={data} />;
+      break;
+    case "artist":
+      card = <ArtistCard locale={locale} data={data} />;
       break;
     default:
       card = <StandardCard locale={locale} data={data} />;
