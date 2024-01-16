@@ -21,8 +21,8 @@ export default function NewsCard({ data, locale }: GenericCardProps) {
   //     categoryTitle = catToShow.title;
   //   }
   // }
-  if (data.contentType) {
-    const catToShow = data.contentType;
+  if (data.contentType || data._modelApiKey) {
+    const catToShow = data.contentType ? data.contentType : data._modelApiKey;
     if (Array.isArray(catToShow)) {
       categoryTitle = catToShow
         .map((cat) => {

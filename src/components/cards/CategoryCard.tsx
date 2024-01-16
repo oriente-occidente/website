@@ -9,7 +9,6 @@ import translate from "@/lib/locales";
 
 export default function CategoryCard({ data, locale }: GenericCardProps) {
   const datesGrouped = data.dates ? groupDatesByDay(data.dates, locale) : [];
-  console.log("data", data);
   let categoryTitle;
   // if (data.category) {
   //   const catToShow = data.category;
@@ -23,8 +22,8 @@ export default function CategoryCard({ data, locale }: GenericCardProps) {
   //     categoryTitle = catToShow.title;
   //   }
   // }
-  if (data.contentType) {
-    const catToShow = data.contentType;
+  if (data.contentType || data._modelApiKey) {
+    const catToShow = data.contentType ? data.contentType : data._modelApiKey;
     if (Array.isArray(catToShow)) {
       categoryTitle = catToShow
         .map((cat) => {
@@ -35,7 +34,6 @@ export default function CategoryCard({ data, locale }: GenericCardProps) {
       categoryTitle = catToShow;
     }
   }
-  console.log("categoryTitle", categoryTitle);
   function categoryColorClasses(cat: string) {
     let c = removeSpaces(cat);
     switch (c) {
@@ -96,13 +94,13 @@ export default function CategoryCard({ data, locale }: GenericCardProps) {
                 <span className={`${categoryClasses}`}>{data.title}</span>
               </h2>
             )}
-            {data.titleHero && !data.authors && (
+            {/* {data.titleHero && !data.authors && (
               <h3
                 className={`text-base font-semibold uppercase text-black md:text-lg group-hover:origin-right group-hover:rotate-1 group-hover:-translate-y-1 duration-300`}
               >
                 <span className={`${categoryClasses}`}>{data.titleHero}</span>
               </h3>
-            )}
+            )} */}
             {data.authors && (
               <div
                 className={`font-semibold uppercase text-black md:text-base group-hover:origin-right group-hover:rotate-1 group-hover:-translate-y-1 duration-300`}
