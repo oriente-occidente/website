@@ -3,6 +3,8 @@ import type { BasicIdPageProps } from "@/types";
 import MediaTemplate from "@/components/templates/MediaTemplate";
 import { MediaPhotoQueryDocument, SiteLocale } from "@/graphql/generated";
 import queryDatoCMS from "@/lib/fetchDato";
+import Wrapper from "@/components/layout/Wrapper";
+import { extractSlugData } from "@/lib/utils";
 
 const locale = "it";
 export default async function Page({ params }: BasicIdPageProps) {
@@ -14,6 +16,10 @@ export default async function Page({ params }: BasicIdPageProps) {
     { locale: siteLocale, id },
     isEnabled
   );
-
-  return <MediaTemplate data={mediaPhoto} locale={locale} />;
+  const slugData = extractSlugData(mediaPhoto);
+  return (
+    <Wrapper locale={locale} slugData={slugData}>
+      <MediaTemplate data={mediaPhoto} locale={locale} />
+    </Wrapper>
+  );
 }

@@ -5,6 +5,8 @@ import getSeoMeta from "@/lib/seoUtils";
 import fetchDato from "@/lib/fetchDato";
 import SearchTemplate from "@/components/templates/SearchTemplate";
 import ActSearch from "@/components/aloglia/activities/ActSearch";
+import Wrapper from "@/components/layout/Wrapper";
+import { extractSlugData } from "@/lib/utils";
 
 const locale = "it";
 
@@ -28,10 +30,12 @@ export default async function Page() {
     { locale: siteLocale },
     isEnabled
   );
-
+  const slugData = extractSlugData(data.page);
   return (
-    <SearchTemplate data={data.page} locale={locale}>
-      <ActSearch locale={locale} />
-    </SearchTemplate>
+    <Wrapper locale={locale} slugData={slugData}>
+      <SearchTemplate data={data.page} locale={locale}>
+        <ActSearch locale={locale} />
+      </SearchTemplate>
+    </Wrapper>
   );
 }
