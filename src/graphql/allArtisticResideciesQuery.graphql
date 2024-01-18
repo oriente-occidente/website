@@ -1,36 +1,21 @@
 query allArtisticResidenciesQuery($locale: SiteLocale!) {
   allArtisticResidecies(locale: $locale) {
     title
-    slug
     id
     _modelApiKey
     seo: _seoMetaTags {
       ...seoMetaFragment
     }
-    titleHero
-    descriptionHero
-    imageHero {
-      ...imageHeroFrag
-    }
-    slugs: _allSlugLocales {
+    _allTitleLocales {
       locale
       value
     }
-    artists {
-      _modelApiKey
-      title
-      id
-      imageHero {
-        ...imageHeroFrag
+    _allSectionsLocales {
+      locale
+      value {
+        id
+        title
       }
-    }
-    projects {
-      _modelApiKey
-      slug
-      title
-      startDate
-      id
-      location
     }
     years {
       year
@@ -50,12 +35,7 @@ query allArtisticResidenciesQuery($locale: SiteLocale!) {
             images {
               responsiveImage(
                 sizes: "100vw"
-                imgixParams: {
-                  auto: [format, compress]
-                  h: 800
-                  w: 1200
-                  fit: crop
-                }
+                imgixParams: { auto: [format, compress], h: 800, w: 1200, fit: crop }
               ) {
                 ...imgFrag
               }

@@ -1,99 +1,24 @@
 query artisticResidecy($slug: String!, $locale: SiteLocale) {
-  page: artisticResidecy(locale: $locale, filter: { slug: { eq: $slug } }) {
+  page: artisticResidecy(locale: $locale) {
     id
-    slug
     _modelApiKey
     seo: _seoMetaTags {
       ...seoMetaFragment
     }
-    slugs: _allSlugLocales {
+    _allTitleLocales {
       locale
       value
     }
+    _allSectionsLocales {
+      locale
+      value {
+        id
+        title
+      }
+    }
     title
-    layoutHero
-    titleHero
-    descriptionHero
-    imageHero {
-      ...imageHeroFrag
-    }
-    slideshowHero {
-      ...slideShowHeroFrag
-    }
-
     __typename
-    artists {
-      ...slideArtirstFrag
-    }
-    projects {
-      ...slideProjectFrag
-      category {
-        ...tagsFrag
-      }
-    }
-    showInWebsite
     startDate: _firstPublishedAt
-
-    content {
-      value
-      links {
-        __typename
-        ... on ArtistRecord {
-          id
-          slug
-          title
-          _modelApiKey
-        }
-        ... on EventRecord {
-          id
-          slug
-          title
-          _modelApiKey
-        }
-        ... on NewsRecord {
-          id
-          slug
-          title
-          _modelApiKey
-        }
-        ... on NetworkRecord {
-          id
-          slug
-          title
-          _modelApiKey
-        }
-        ... on PageRecord {
-          id
-          slug
-          title
-          _modelApiKey
-        }
-        ... on ProjectRecord {
-          id
-          slug
-          title
-          _modelApiKey
-        }
-        ... on WorkshopRecord {
-          id
-          slug
-          title
-          _modelApiKey
-        }
-      }
-      blocks {
-        __typename
-        ... on GalleryRecord {
-          ...galleryFrag
-        }
-        ... on ImageBlockRecord {
-          ...imageBlockFrag
-        }
-        ... on VideoBlockRecord {
-          ...videoFrag
-        }
-      }
-    }
     sections {
       id
       title
@@ -213,17 +138,6 @@ query artisticResidecy($slug: String!, $locale: SiteLocale) {
     # RELATIONS ---
     years {
       ...yearRecordFragment
-    }
-    artists {
-      ...artistRecordFragment
-    }
-    projects {
-      id
-      title
-      slug
-      imageHero {
-        ...imageHeroFrag
-      }
     }
 
     # --- END RELATIONS ---

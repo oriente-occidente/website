@@ -263,23 +263,23 @@ export const contentRecordTypenames: string[] = [
 ];
 
 export function extractSlugData(data: any) {
-  let slugData = {
-    _modelApiKey: data._modelApiKey || "",
-    slugs: data.slugs || null,
-    __typename: data.__typename || "",
-    slug: data.slug || null,
-    section: data.section || null,
-  };
+  const keys: string[] = [
+    "_modelApiKey",
+    "slugs",
+    "__typename",
+    "slug",
+    "section",
+    "locale",
+    "id",
+  ];
 
-  if (data.__typename && contentRecordTypenames.includes(data.__typename)) {
-    slugData = {
-      _modelApiKey: "home",
-      slug: "",
-      __typename: data.__typename || "",
-      section: null,
-      slugs: null,
-    };
-  }
+  let slugData = { ...data };
+
+  Object.keys(data).forEach((k: any) => {
+    if (!keys.includes(k)) {
+      delete slugData[k];
+    }
+  });
 
   return slugData;
 }

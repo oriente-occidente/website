@@ -90,6 +90,8 @@ function renderLink(item: any, locale: string) {
 
 function Header(props: any) {
   const { data, locale, slugData } = props;
+  // console.log("locale", locale);
+  // console.log("slugdata", slugData);
   return (
     <header>
       <Popover className="t-0 fixed inset-x-0 z-40 h-[70px] bg-white/80 md:h-[80px] lg:h-[110px]">
