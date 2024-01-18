@@ -48,13 +48,13 @@ query timelineQuery($locale: SiteLocale) {
     artisticResidenciesCount: _allReferencingArtisticResideciesMeta {
       count
     }
-    artisticResidencies: _allReferencingArtisticResidecies(
-      first: "2"
-      filter: { slug: { neq: null } }
-    ) {
-      id
-      slug
-    }
+    # artisticResidencies: _allReferencingArtisticResidecies(
+    #   first: "2"
+    #   filter: { slug: { neq: null } }
+    # ) {
+    #   id
+    #   slug
+    # }
     projectsCount: _allReferencingProjectsMeta {
       count
     }

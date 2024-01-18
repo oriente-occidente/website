@@ -9,6 +9,9 @@ const config = {
     "artisti-associati": {
       en: "associated-artists",
     },
+    artisti: {
+      en: "artists",
+    },
     compagnie: {
       en: "companies",
     },

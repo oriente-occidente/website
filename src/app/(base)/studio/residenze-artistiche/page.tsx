@@ -38,10 +38,13 @@ export default async function Page() {
   );
   let list: any = [];
 
-  if (res.allArtisticResidecies) {
-    list = [...res.allArtisticResidecies];
+  // if (res.allArtisticResidecies) {
+  //   list = [...res.allArtisticResidecies];
+  // }
+  if (res.allArtists) {
+    list = [...res.allArtists];
   }
-
+  console.log("res", res);
   const heroData = {
     titleHero: page?.title || "",
     descriptionHero: page?.descriptionHero || "",

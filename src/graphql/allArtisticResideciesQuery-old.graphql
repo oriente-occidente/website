@@ -1,101 +1,42 @@
-query artisticResidecy($locale: SiteLocale) {
-  page: artisticResidecy(locale: $locale) {
-    id
-    # query artisticResidecy($slug: String!, $locale: SiteLocale) {
-    # page: artisticResidecy(locale: $locale, filter: { slug: { eq: $slug } }) {
-    #   id
+query allArtisticResidenciesQueryOld($locale: SiteLocale!) {
+  allArtisticResidecies(locale: $locale) {
+    title
     # slug
+    # id
     # _modelApiKey
     # seo: _seoMetaTags {
     #   ...seoMetaFragment
     # }
-    # slugs: _allSlugLocales {
-    #   locale
-    #   value
-    # }
-    # title
-    # layoutHero
     # titleHero
     # descriptionHero
     # imageHero {
     #   ...imageHeroFrag
     # }
-    # slideshowHero {
-    #   ...slideShowHeroFrag
+    # slugs: _allSlugLocales {
+    #   locale
+    #   value
     # }
-
-    # __typename
     # artists {
-    #   ...slideArtirstFrag
+    #   _modelApiKey
+    #   title
+    #   id
+    #   imageHero {
+    #     ...imageHeroFrag
+    #   }
     # }
     # projects {
-    #   ...slideProjectFrag
-    #   category {
-    #     ...tagsFrag
-    #   }
+    #   _modelApiKey
+    #   slug
+    #   title
+    #   startDate
+    #   id
+    #   location
     # }
-    # showInWebsite
-    # startDate: _firstPublishedAt
-
-    # content {
-    #   value
-    #   links {
-    #     __typename
-    #     ... on ArtistRecord {
-    #       id
-    #       slug
-    #       title
-    #       _modelApiKey
-    #     }
-    #     ... on EventRecord {
-    #       id
-    #       slug
-    #       title
-    #       _modelApiKey
-    #     }
-    #     ... on NewsRecord {
-    #       id
-    #       slug
-    #       title
-    #       _modelApiKey
-    #     }
-    #     ... on NetworkRecord {
-    #       id
-    #       slug
-    #       title
-    #       _modelApiKey
-    #     }
-    #     ... on PageRecord {
-    #       id
-    #       slug
-    #       title
-    #       _modelApiKey
-    #     }
-    #     ... on ProjectRecord {
-    #       id
-    #       slug
-    #       title
-    #       _modelApiKey
-    #     }
-    #     ... on WorkshopRecord {
-    #       id
-    #       slug
-    #       title
-    #       _modelApiKey
-    #     }
-    #   }
-    #   blocks {
-    #     __typename
-    #     ... on GalleryRecord {
-    #       ...galleryFrag
-    #     }
-    #     ... on ImageBlockRecord {
-    #       ...imageBlockFrag
-    #     }
-    #     ... on VideoBlockRecord {
-    #       ...videoFrag
-    #     }
-    #   }
+    # years {
+    #   year
+    #   title
+    #   slug
+    #   id
     # }
     # sections {
     #   id
@@ -109,7 +50,12 @@ query artisticResidecy($locale: SiteLocale) {
     #         images {
     #           responsiveImage(
     #             sizes: "100vw"
-    #             imgixParams: { auto: [format, compress], h: 800, w: 1200, fit: crop }
+    #             imgixParams: {
+    #               auto: [format, compress]
+    #               h: 800
+    #               w: 1200
+    #               fit: crop
+    #             }
     #           ) {
     #             ...imgFrag
     #           }
@@ -213,22 +159,5 @@ query artisticResidecy($locale: SiteLocale) {
     #     }
     #   }
     # }
-    # # RELATIONS ---
-    # years {
-    #   ...yearRecordFragment
-    # }
-    # artists {
-    #   ...artistRecordFragment
-    # }
-    # projects {
-    #   id
-    #   title
-    #   slug
-    #   imageHero {
-    #     ...imageHeroFrag
-    #   }
-    # }
-
-    # --- END RELATIONS ---
   }
 }

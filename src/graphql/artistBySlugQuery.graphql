@@ -24,7 +24,7 @@ query artist($slug: String!, $locale: SiteLocale) {
     slideshowHero {
       ...slideShowHeroFrag
     }
-    showInWebsite
+    # showInWebsite
     # RELATIONS ---
     relatedContents {
       __typename
@@ -66,10 +66,10 @@ query artist($slug: String!, $locale: SiteLocale) {
     }
     # --- END RELATIONS ---
     startDate: _firstPublishedAt
-    artisticResidence {
-      id
-      year
-    }
+    # artisticResidence {
+    #   id
+    #   year
+    # }
     #  associatedArtist {
     #    id
     #    year

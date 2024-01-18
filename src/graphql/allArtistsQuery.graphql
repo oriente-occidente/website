@@ -31,10 +31,10 @@ query associatedArtists($locale: SiteLocale) {
       ...slideShowHeroFrag
     }
     startDate: _firstPublishedAt
-    artisticResidence {
-      id
-      year
-    }
+    # artisticResidence {
+    #   id
+    #   year
+    # }
     associatedArtist {
       id
       year
