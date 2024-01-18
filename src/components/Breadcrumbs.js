@@ -3,7 +3,8 @@ import Link from "next/link";
 import resolveLink from "@/lib/resolveLink";
 
 export default function Breadcrumbs({ data, locale, background }) {
-  const d = { ...data, slug: data.slug ? data.slug : data.id }
+  const d = { ...data, slug: data.slug ? data.slug : data.id };
+  // console.log("d", d);
   const link = resolveLink({ locale, ...d });
   const paths = link.split("/").filter((p) => p);
   return (
@@ -14,11 +15,11 @@ export default function Breadcrumbs({ data, locale, background }) {
       <div className="container flex">
         <ol role="list" className="flex items-center space-x-4">
           {["Home", ...paths].map((p, i) => {
-            const total = paths.length
+            const total = paths.length;
             return (
               <li key={p} className="group">
                 <div className="flex items-center">
-                  {i < total &&
+                  {i < total && (
                     <Link
                       href={i === 0 ? "/" : link}
                       locale={locale}
@@ -27,10 +28,12 @@ export default function Breadcrumbs({ data, locale, background }) {
                     >
                       {p}
                     </Link>
-                  }
-                  {i == total &&
-                    <span className="text-[12px] uppercase font-semibold">{p}</span>
-                  }
+                  )}
+                  {i == total && (
+                    <span className="text-[12px] uppercase font-semibold">
+                      {d.title || p}
+                    </span>
+                  )}
                 </div>
               </li>
             );

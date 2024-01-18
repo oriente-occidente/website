@@ -7,11 +7,7 @@ import AnchorBlock from "@/components/AnchorBlock";
 import translate from "@/lib/locales";
 import Breadcrumbs from "@/components/Breadcrumbs";
 
-export default function FestivalTemplate({
-  data,
-  locale,
-}: FestivalProgramPageProps) {
-  console.log(data);
+export default function FestivalTemplate({ data, locale }: FestivalProgramPageProps) {
   return (
     <div>
       <GenericHero data={data?.hero} locale={locale} />

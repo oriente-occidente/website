@@ -33,6 +33,7 @@ export default function NewsCard({ data, locale }: GenericCardProps) {
       categoryTitle = catToShow;
     }
   }
+  // console.log("categoryTitle", categoryTitle);
   const categoryColorClasses: any = {
     news: "bg-cat-news text-black",
     event: "bg-cat-eventi text-black",
@@ -87,9 +88,7 @@ export default function NewsCard({ data, locale }: GenericCardProps) {
             )}
           </div>
           {data.title &&
-            (data.authors ||
-              !data.titleHero ||
-              data.titleHero !== data.title) && (
+            (data.authors || !data.titleHero || data.titleHero !== data.title) && (
               <h2 className="text-base font-semibold uppercase text-black md:text-lg group-hover:underline">
                 {data.title}
               </h2>
@@ -110,10 +109,7 @@ export default function NewsCard({ data, locale }: GenericCardProps) {
         </div>
         {data.location && (
           <div className="flex items-center gap-1 md:hidden">
-            <MapPinIcon
-              aria-hidden="true"
-              className="mr-1 h-4 w-3 text-black"
-            />
+            <MapPinIcon aria-hidden="true" className="mr-1 h-4 w-3 text-black" />
             <div className="text-xxs">{data.location}</div>
           </div>
         )}
