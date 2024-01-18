@@ -1,12 +1,15 @@
 "use client";
 import Link from "next/link";
 import resolveLink from "@/lib/resolveLink";
+import { cleanURL } from "@/lib/utils";
 
 export default function Breadcrumbs({ data, locale, background }) {
   const d = { ...data, slug: data.slug ? data.slug : data.id };
   // console.log("d", d);
   const link = resolveLink({ locale, ...d });
-  const paths = link.split("/").filter((p) => p);
+  const cleanLink = cleanURL(link, locale);
+  const paths = cleanLink.split("/").filter((p) => p);
+
   return (
     <nav
       className={`hidden md:block bg-${background} border-y border-y-gray py-2 xl:py-5`}

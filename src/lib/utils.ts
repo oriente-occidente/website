@@ -283,3 +283,10 @@ export function extractSlugData(data: any) {
 
   return slugData;
 }
+
+export function cleanURL(url: string, locale: string) {
+  const substrings: string[] = ["c/", "p/", `${locale}/`];
+  let cleaned: string = url;
+  substrings.forEach((s) => (cleaned = cleaned.replace(s, "")));
+  return cleaned.trim();
+}
