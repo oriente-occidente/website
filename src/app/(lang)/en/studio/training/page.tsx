@@ -6,16 +6,14 @@ import { SiteLocale } from "@/graphql/generated";
 import { EducationPageQueryDocument } from "@/graphql/generated";
 import PageTemplate from "@/components/templates/PageTemplate";
 import getSeoMeta from "@/lib/seoUtils";
+import Wrapper from "@/components/layout/Wrapper";
+import { extractSlugData } from "@/lib/utils";
 
 const locale = 'en';
 
 export async function generateMetadata() {
   const siteLocale = locale as SiteLocale;
-  const data = await fetchDato(
-    EducationPageQueryDocument,
-    { locale: siteLocale },
-    false
-  );
+  const data = await fetchDato(EducationPageQueryDocument, { locale: siteLocale }, false);
   const page: any = data.educationPage || null;
   const meta = getSeoMeta(page);
   return meta;
@@ -42,5 +40,10 @@ export default async function Page() {
     ...data.educationPage,
     page: data.educationPage,
   };
-  return <PageTemplate data={pageData} locale={locale} />;
+  const slugData = extractSlugData(data.educationPage);
+  return (
+    <Wrapper locale={locale} slugData={slugData}>
+      <PageTemplate data={pageData} locale={locale} />
+    </Wrapper>
+  );
 }

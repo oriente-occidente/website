@@ -7,7 +7,7 @@ import Footer from "@/components/layout/Footer";
 import translate from "@/lib/locales";
 import fetchDato from "@/lib/fetchDato";
 import Script from "next/script";
-
+import Wrapper from "@/components/layout/Wrapper";
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/navigation";
@@ -43,7 +43,7 @@ export async function generateMetadata() {
 const GTM = process.env.NEXT_PUBLIC_GTM;
 const IUBENDA_SITE_ID = process.env.NEXT_PUBLIC_IUBENDA_SITE_ID;
 
-export default async function RootLayout({ children, params }: any) {
+export default async function RootLayout({ children }: any) {
   // console.log("LAYOUT LOCALE", locale);
   const { isEnabled } = draftMode();
   const siteLocale = locale as SiteLocale;
@@ -61,10 +61,7 @@ export default async function RootLayout({ children, params }: any) {
             {translate("skipFooter", locale)}
           </a>
         </div>
-        <Header locale={locale} data={data.menu} />
-        <main className="min-h-[50vh] pt-[70px] md:pt-[80px] lg:pt-[110px]">
-          <div>{children}</div>
-        </main>
+        {children}
         <Footer locale={locale} data={data.footer} hideNewsletter={false} />
         <Script type="text/javascript" src="//cs.iubenda.com/sync/2481473.js" />
         <Script

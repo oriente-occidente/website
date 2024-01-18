@@ -8,16 +8,14 @@ import type { BasicSlugPageProps } from "@/types";
 import WorkshopByCategory from "@/components/WorkshopByCategory";
 import fetchDato from "@/lib/fetchDato";
 import getSeoMeta from "@/lib/seoUtils";
+import Wrapper from "@/components/layout/Wrapper";
+import { extractSlugData } from "@/lib/utils";
 
 const locale = "it";
 
 export async function generateMetadata() {
   const siteLocale = locale as SiteLocale;
-  const data = await fetchDato(
-    EducationPageQueryDocument,
-    { locale: siteLocale },
-    false
-  );
+  const data = await fetchDato(EducationPageQueryDocument, { locale: siteLocale }, false);
   const page: any = data.educationPage || null;
   const meta = getSeoMeta(page);
   return meta;
@@ -56,14 +54,16 @@ export default async function Page({ params }: BasicSlugPageProps) {
   //   hero: heroData,
   //   ...data.workshop,
   // };
-
+  const slugData = extractSlugData(data.allWorkshopCategories);
   return (
-    <WorkshopByCategory
-      list={list.flat()}
-      workshopCat={workshopCat}
-      locale={locale}
-      heroData={heroData}
-    />
+    <Wrapper locale={locale} slugData={slugData}>
+      <WorkshopByCategory
+        list={list.flat()}
+        workshopCat={workshopCat}
+        locale={locale}
+        heroData={heroData}
+      />
+    </Wrapper>
   );
   // return <></>;
 }

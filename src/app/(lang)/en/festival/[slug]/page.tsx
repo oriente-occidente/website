@@ -8,6 +8,8 @@ import type { BasicSlugPageProps } from "@/types";
 import getSeoMeta from "@/lib/seoUtils";
 import fetchDato from "@/lib/fetchDato";
 import FestivalTemplate from "@/components/templates/FestivalTemplate";
+import Wrapper from "@/components/layout/Wrapper";
+import { extractSlugData } from "@/lib/utils";
 
 const locale = 'en';
 
@@ -56,5 +58,10 @@ export default async function Page({ params }: BasicSlugPageProps) {
     page,
     list: items,
   };
-  return <FestivalTemplate data={pageData} locale={locale} />;
+  const slugData = extractSlugData(data.festivalEdition);
+  return (
+    <Wrapper locale={locale} slugData={slugData}>
+      <FestivalTemplate data={pageData} locale={locale} />
+    </Wrapper>
+  );
 }

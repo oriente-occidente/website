@@ -5,6 +5,8 @@ import getSeoMeta from "@/lib/seoUtils";
 import fetchDato from "@/lib/fetchDato";
 import SearchTemplate from "@/components/templates/SearchTemplate";
 import ArtistsSearch from "@/components/aloglia/artists/ArtistsSearch";
+import Wrapper from "@/components/layout/Wrapper";
+import { extractSlugData } from "@/lib/utils";
 const locale = 'en';
 
 export async function generateMetadata() {
@@ -27,10 +29,12 @@ export default async function Page() {
     { locale: siteLocale },
     isEnabled
   );
-
+  const slugData = extractSlugData(data.page);
   return (
-    <SearchTemplate data={data.page} locale={locale}>
-      <ArtistsSearch locale={locale} />
-    </SearchTemplate>
+    <Wrapper locale={locale} slugData={slugData}>
+      <SearchTemplate data={data.page} locale={locale}>
+        <ArtistsSearch locale={locale} />
+      </SearchTemplate>
+    </Wrapper>
   );
 }

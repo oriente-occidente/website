@@ -23,6 +23,7 @@ export default async function Page({ params }: BasicSlugPageProps) {
   const { isEnabled } = draftMode();
   const siteLocale = locale as SiteLocale;
   const data = await fetchDato(NewsDocument, { locale: siteLocale, slug }, isEnabled);
+  console.log("DATA ->", data);
   const heroData: any = {
     layoutHero: data?.news?.layoutHero,
     titleHero: data?.news?.titleHero,

@@ -11,6 +11,8 @@ import {
 import fetchDato from "@/lib/fetchDato";
 import HeroEmpty from "@/components/hero/HeroEmpty";
 import MediaCard from "@/components/cards/MediaCard";
+import Wrapper from "@/components/layout/Wrapper";
+import { extractSlugData } from "@/lib/utils";
 
 const locale = "it";
 
@@ -49,20 +51,22 @@ export default async function Page({ params }: BasicSlugPageProps) {
     titleHero: videosIndex.title,
     descriptionHero: videosIndex.description,
   };
-
+  const slugData = extractSlugData(videosIndex);
   return (
-    <div>
-      <HeroEmpty data={heroData} locale={locale} />
-      <div className="container my-5 grid sm:grid-cols-2 lg:grid-cols-3 gap-x-3 sm:gap-x-5 gap-y-8">
-        {allMediaVideos.map((v) => {
-          const data = { ...v, contentType: "video", image: v.image?.url };
-          return (
-            <div key={v.id}>
-              <MediaCard data={data} locale={locale} />
-            </div>
-          );
-        })}
+    <Wrapper locale={locale} slugData={slugData}>
+      <div>
+        <HeroEmpty data={heroData} locale={locale} />
+        <div className="container my-5 grid sm:grid-cols-2 lg:grid-cols-3 gap-x-3 sm:gap-x-5 gap-y-8">
+          {allMediaVideos.map((v) => {
+            const data = { ...v, contentType: "video", image: v.image?.url };
+            return (
+              <div key={v.id}>
+                <MediaCard data={data} locale={locale} />
+              </div>
+            );
+          })}
+        </div>
       </div>
-    </div>
+    </Wrapper>
   );
 }
