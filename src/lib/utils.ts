@@ -249,18 +249,18 @@ export function enhanceEvents(list: any[]) {
   });
 }
 
-export const mediaRecordTypenames: string[] = [
-  "MediaAudioRecord",
-  "MediaVideoRecord",
-  "MediaPhotoRecord",
-  "MediaDocumentRecord",
-];
+// export const mediaRecordTypenames: string[] = [
+//   "MediaAudioRecord",
+//   "MediaVideoRecord",
+//   "MediaPhotoRecord",
+//   "MediaDocumentRecord",
+// ];
 
-export const contentRecordTypenames: string[] = [
-  "EventRecord",
-  "WorkshopRecord",
-  "NewsRecord",
-];
+// export const contentRecordTypenames: string[] = [
+//   "EventRecord",
+//   "WorkshopRecord",
+//   "NewsRecord",
+// ];
 
 export function extractSlugData(data: any) {
   const keys: string[] = [
@@ -271,11 +271,12 @@ export function extractSlugData(data: any) {
     "section",
     "locale",
     "id",
+    "titleHero",
   ];
 
   let slugData = { ...data };
 
-  Object.keys(data).forEach((k: any) => {
+  Object.keys(data).forEach((k: string) => {
     if (!keys.includes(k)) {
       delete slugData[k];
     }

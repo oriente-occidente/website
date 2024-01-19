@@ -1,6 +1,6 @@
 import { draftMode } from "next/headers";
 import { notFound } from "next/navigation";
-
+import Breadcrumbs from "@/components/Breadcrumbs";
 import type { BasicSlugPageProps } from "@/types";
 import getSeoMeta from "@/lib/seoUtils";
 import {
@@ -54,6 +54,7 @@ export default async function Page({ params }: BasicSlugPageProps) {
   const slugData = extractSlugData(audiosIndex);
   return (
     <Wrapper locale={locale} slugData={slugData}>
+      <Breadcrumbs data={audiosIndex} locale={locale as any} background={null} />
       <div>
         <HeroEmpty data={heroData} locale={locale} />
         <div className="container my-5 grid sm:grid-cols-2 lg:grid-cols-3 gap-x-3 sm:gap-x-5 gap-y-8">

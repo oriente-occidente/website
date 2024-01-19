@@ -10,6 +10,7 @@
     "fix": "node ./scripts/dedupe-generated-types.mjs",
     "codegen": "graphql-codegen --config codegen.ts && npm run fix",
     "locales": "zx ./scripts/locales.mjs",
+    "indexesRef": "ts-node ./src/lib/generateIndexesReference.ts",
     "algolia": "ts-node ./scripts-algolia/index.ts",
     "sitemap": "ts-node ./src/scripts-sitemap/sitemap.ts",
     "test": "jest",

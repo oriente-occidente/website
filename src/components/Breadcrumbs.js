@@ -2,13 +2,18 @@
 import Link from "next/link";
 import resolveLink from "@/lib/resolveLink";
 import { cleanURL } from "@/lib/utils";
+import indexesReference from "@/data/indexesReference.json";
 
 export default function Breadcrumbs({ data, locale, background }) {
   const d = { ...data, slug: data.slug ? data.slug : data.id };
-  // console.log("d", d);
+  const parentIndex = indexesReference[d._modelApiKey] || null;
   const link = resolveLink({ locale, ...d });
-  const cleanLink = cleanURL(link, locale);
-  const paths = cleanLink.split("/").filter((p) => p);
+  const href = parentIndex
+    ? resolveLink({ locale, _modelApiKey: parentIndex.apiKey })
+    : link;
+  const paths = cleanURL(link)
+    .split("/")
+    .filter((p) => p);
 
   return (
     <nav
@@ -24,12 +29,12 @@ export default function Breadcrumbs({ data, locale, background }) {
                 <div className="flex items-center">
                   {i < total && (
                     <Link
-                      href={i === 0 ? "/" : link}
+                      href={i === 0 ? "/" : href}
                       locale={locale}
                       className="text-[12px] uppercase hover:text-red"
                       aria-current={i === paths.length ? "page" : undefined}
                     >
-                      {p}
+                      {p.replace("-", " ")}
                     </Link>
                   )}
                   {i == total && (
@@ -37,6 +42,7 @@ export default function Breadcrumbs({ data, locale, background }) {
                       {d.title || p}
                     </span>
                   )}
+                  <div className="ml-4 h-5 w-5 bg-arrow-right-black group-last:hidden"></div>
                 </div>
               </li>
             );

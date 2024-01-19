@@ -1,0 +1,29 @@
+{
+  "news": {
+    "apiKey": "news_index"
+  },
+  "network": {
+    "apiKey": "networks_index"
+  },
+  "artistic_residecy": {
+    "apiKey": "artistic_residencies_index"
+  },
+  "artist": {
+    "apiKey": "artists_index"
+  },
+  "media_audio": {
+    "apiKey": "audios_index"
+  },
+  "event": {
+    "apiKey": "events_index"
+  },
+  "project": {
+    "apiKey": "projects_index"
+  },
+  "media_video": {
+    "apiKey": "videos_index"
+  },
+  "workshop_category": {
+    "apiKey": "education_page"
+  }
+}

@@ -53,7 +53,7 @@ export default function NewsCard({ data, locale }: GenericCardProps) {
 
   const link = resolveLink({ ...data, locale });
 
-  console.log("data", data);
+  // console.log("data", data);
   return (
     <div className="relative py-4">
       <Link href={link} title={data.title} className="group">

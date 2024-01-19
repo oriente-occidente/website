@@ -22,7 +22,7 @@ export default function CategoryCard({ data, locale }: GenericCardProps) {
       categoryTitle = catToShow.title;
     }
   }
-  console.log("data", data);
+  // console.log("data", data);
   function categoryColorClasses(cat: string) {
     let c = removeSpaces(cat);
     switch (c) {
@@ -58,9 +58,7 @@ export default function CategoryCard({ data, locale }: GenericCardProps) {
         return "card-title-default";
     }
   }
-  const categoryClasses = categoryColorClasses(
-    categoryTitle ? categoryTitle : ""
-  );
+  const categoryClasses = categoryColorClasses(categoryTitle ? categoryTitle : "");
 
   const link = resolveLink({ ...data, locale });
 
@@ -109,13 +107,8 @@ export default function CategoryCard({ data, locale }: GenericCardProps) {
           </div>
           {data.location && categoryTitle != "artisti" && (
             <div className="flex items-center gap-1 text-red-alt">
-              <MapPinIcon
-                aria-hidden="true"
-                className="mr-1 h-4 w-3 text-red-alt"
-              />
-              <div className="text-xxs inline-block normal-case">
-                {data.location}
-              </div>
+              <MapPinIcon aria-hidden="true" className="mr-1 h-4 w-3 text-red-alt" />
+              <div className="text-xxs inline-block normal-case">{data.location}</div>
             </div>
           )}
           {categoryTitle != "artisti" &&

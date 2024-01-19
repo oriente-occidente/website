@@ -24,7 +24,7 @@ export default function IndexPageTemplate({ data, locale }: GenericIndexPageProp
   const _modelApiKey = page?._modelApiKey;
   return (
     <div>
-      <Breadcrumbs data={{ _modelApiKey }} locale={locale as any} background={null} />
+      <Breadcrumbs data={page} locale={locale as any} background={null} />
       <GenericHero data={hero} locale={locale} />
       {page.content && <MainContent data={page.content} locale={locale} />}
       {page.sections?.length > 0 && (

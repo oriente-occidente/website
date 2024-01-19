@@ -7,6 +7,8 @@ import MediaDownload from "@/components/MediaDownload";
 import MediaAudioPlayer from "@/components/MediaAudioPlayer";
 import MediaVideo from "@/components/MediaVideo";
 import Breadcrumbs from "@/components/Breadcrumbs";
+import Wrapper from "@/components/layout/Wrapper";
+import { extractSlugData } from "@/lib/utils";
 
 export default function MediaTemplate({ data, locale }: any) {
   if (!data?._modelApiKey) return;
@@ -25,11 +27,7 @@ export default function MediaTemplate({ data, locale }: any) {
         return (
           <>
             <div className="pt-12 lg:pt-24 pb-12">
-              <MediaTitle
-                _modelApyKey={data._modelApiKey}
-                data={data}
-                locale={locale}
-              />
+              <MediaTitle _modelApyKey={data._modelApiKey} data={data} locale={locale} />
             </div>
             {data.image && (
               <div className="pb-12">
@@ -45,11 +43,7 @@ export default function MediaTemplate({ data, locale }: any) {
         return (
           <>
             <div className="pt-12 lg:pt-24 pb-12">
-              <MediaTitle
-                _modelApyKey={data._modelApiKey}
-                data={data}
-                locale={locale}
-              />
+              <MediaTitle _modelApyKey={data._modelApiKey} data={data} locale={locale} />
             </div>
             <div className="pb-12 border-b">
               <MediaAudioPlayer data={data} locale={locale} />
@@ -60,11 +54,7 @@ export default function MediaTemplate({ data, locale }: any) {
         return (
           <>
             <div className="pt-12 lg:pt-24 pb-12">
-              <MediaTitle
-                _modelApyKey={data._modelApiKey}
-                data={data}
-                locale={locale}
-              />
+              <MediaTitle _modelApyKey={data._modelApiKey} data={data} locale={locale} />
             </div>
             <div className="grid grid-cols-1 justify-center pb-6 border-b">
               <MediaVideo data={data} locale={locale} />
@@ -75,8 +65,9 @@ export default function MediaTemplate({ data, locale }: any) {
         return null;
     }
   };
-
+  // const slugData = extractSlugData(data);
   return (
+    // <Wrapper locale={locale} slugData={slugData}>
     <div className="mx-auto md:container">
       <Breadcrumbs data={data} locale={locale as any} background={null} />
       <div className=" md:px-0 lg:px-24 xl:px-64">
@@ -86,5 +77,6 @@ export default function MediaTemplate({ data, locale }: any) {
         </div>
       </div>
     </div>
+    // </Wrapper>
   );
 }
