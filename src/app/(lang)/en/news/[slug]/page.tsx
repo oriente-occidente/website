@@ -6,6 +6,7 @@ import fetchDato from "@/lib/fetchDato";
 import getSeoMeta from "@/lib/seoUtils";
 import Wrapper from "@/components/layout/Wrapper";
 import { extractSlugData } from "@/lib/utils";
+import queryDatoCMS from "@/lib/fetchDato";
 
 const locale = 'en';
 
@@ -22,7 +23,8 @@ export default async function Page({ params }: BasicSlugPageProps) {
   const { slug } = params;
   const { isEnabled } = draftMode();
   const siteLocale = locale as SiteLocale;
-  const data = await fetchDato(NewsDocument, { locale: siteLocale, slug }, isEnabled);
+  const data = await queryDatoCMS(NewsDocument, { locale: siteLocale, slug }, isEnabled);
+
   const heroData: any = {
     layoutHero: data?.news?.layoutHero,
     titleHero: data?.news?.titleHero,

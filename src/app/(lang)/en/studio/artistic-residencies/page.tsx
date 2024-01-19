@@ -55,6 +55,7 @@ export default async function Page() {
     page,
   };
   const slugData = extractSlugData(data.artisticResidenciesIndex);
+
   return (
     <Wrapper locale={locale} slugData={slugData}>
       <IndexPageTemplate data={pageData} locale={locale} />;

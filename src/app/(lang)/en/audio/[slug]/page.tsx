@@ -3,6 +3,8 @@ import type { BasicSlugPageProps } from "@/types";
 import MediaTemplate from "@/components/templates/MediaTemplate";
 import { MediaAudioQueryDocument, SiteLocale } from "@/graphql/generated";
 import queryDatoCMS from "@/lib/fetchDato";
+import Wrapper from "@/components/layout/Wrapper";
+import { extractSlugData } from "@/lib/utils";
 
 const locale = 'en';
 export default async function Page({ params }: BasicSlugPageProps) {
@@ -13,8 +15,10 @@ export default async function Page({ params }: BasicSlugPageProps) {
     { slug: params.slug },
     isEnabled
   );
-
+  const slugData = extractSlugData(mediaAudio);
   return (
-      <MediaTemplate data={mediaAudio} locale={locale}/>
+    <Wrapper locale={locale} slugData={slugData}>
+      <MediaTemplate data={mediaAudio} locale={locale} />
+    </Wrapper>
   );
 }

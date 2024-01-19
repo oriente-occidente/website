@@ -10,6 +10,7 @@ import fetchDato from "@/lib/fetchDato";
 import getSeoMeta from "@/lib/seoUtils";
 import Wrapper from "@/components/layout/Wrapper";
 import { extractSlugData } from "@/lib/utils";
+import Breadcrumbs from "@/components/Breadcrumbs";
 
 const locale = 'en';
 
@@ -57,6 +58,11 @@ export default async function Page({ params }: BasicSlugPageProps) {
   const slugData = extractSlugData(data.allWorkshopCategories);
   return (
     <Wrapper locale={locale} slugData={slugData}>
+      <Breadcrumbs
+        data={data.allWorkshopCategories[0]}
+        locale={locale as any}
+        background={null}
+      />
       <WorkshopByCategory
         list={list.flat()}
         workshopCat={workshopCat}
