@@ -25,6 +25,7 @@ export default function IndexPageTemplate({
   );
   const dataList = allHaveEventModelApiKey ? filteredList : list;
   const _modelApiKey = page?._modelApiKey;
+  console.log("_modelApiKey", _modelApiKey);
   return (
     <div>
       <Breadcrumbs
@@ -37,7 +38,7 @@ export default function IndexPageTemplate({
         <div className="container lg:grid lg:grid-cols-2 lg:gap-6">
           {dataList?.map((item: any) => (
             <Fragment key={"wrap_" + item.id}>
-              <GenericCard locale={locale} data={item} />
+              <GenericCard locale={locale} data={item} model={_modelApiKey} />
             </Fragment>
           ))}
         </div>

@@ -44,7 +44,7 @@ export default async function Page() {
   if (res.allArtists) {
     list = [...res.allArtists];
   }
-  console.log("res", res);
+  // console.log("res", res);
   const heroData = {
     titleHero: page?.title || "",
     descriptionHero: page?.descriptionHero || "",

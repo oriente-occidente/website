@@ -29,10 +29,14 @@ query allArtisticResidenciesQuery($locale: SiteLocale!) {
       ...slideShowHeroFrag
     }
     startDate: _firstPublishedAt
-    # artisticResidence {
-    #   id
-    #   year
-    # }
+    residencies {
+      id
+      years {
+        id
+        year
+        title
+      }
+    }
     associatedArtist {
       id
       year
