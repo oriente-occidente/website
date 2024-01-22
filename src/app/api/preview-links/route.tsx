@@ -1,75 +1,54 @@
-import { NextRequest } from "next/server";
-import { headers as getHeaders } from "next/headers";
-// import { SiteLocale } from "@/graphql/generated";
+import type { NextApiRequest, NextApiResponse } from "next";
+import resolveLink from "@/lib/resolveLink";
 
-type generatePreviewUrlParams = {
-  item: any;
-  itemType: any;
-  locale: string;
-};
+async function generatePreviewUrl({ item, itemType, locale }: any) {
+  console.info("locale", locale);
+  if (!item?.attributes) return null;
+  console.info("JSON", JSON.stringify(item.attributes, null, 2));
+  const apiKey = itemType.attributes.api_key || null;
+  console.info("apiKey", apiKey);
 
-const generatePreviewUrl = ({
-  item,
-  itemType,
-  locale,
-}: generatePreviewUrlParams) => {
-  switch (itemType.attributes.api_key) {
-    case "page":
-      return `/${locale}/${item.attributes.slug}`;
-    case "post":
-      return `/${locale}/posts/${item.attributes.slug}`;
-    case "tag":
-      return `/${locale}/posts/tag/${item.attributes.slug}`;
-    default:
-      return `/${locale}/${item?.attributes?.slug || ""}`;
-  }
-};
-
-const headers = {
-  "Access-Control-Allow-Origin": "*",
-  "Access-Control-Allow-Methods": "POST, OPTIONS",
-  "Access-Control-Allow-Headers": "Content-Type, Authorization",
-  "Content-Type": "application/json",
-};
-
-export async function OPTIONS(request: NextRequest) {
-  return new Response("ok", {
-    status: 200,
-    headers,
-  });
+  const slug = item.attributes.slug || null;
+  const slugLocale = slug ? (locale ? slug[locale] : slug["it"]) : null;
+  let record: any = { slug: slugLocale, apiKey };
+  const link = apiKey === "home" ? "/" : resolveLink({ ...record, locale });
+  console.info("LINK", link);
+  return link;
 }
 
-export async function POST(request: NextRequest) {
-  const { searchParams } = new URL(request.url);
-  // const token = searchParams.get("token");
-  // if (token !== process.env.DRAFT_SECRET_TOKEN)
-  //   return new Response("Invalid token", { status: 401 });
-  const parsedRequest = await request.json();
-  const url = generatePreviewUrl(parsedRequest);
-  if (!url) {
-    return new Response(JSON.stringify({ previewLinks: [] }), {
-      status: 200,
-      headers,
-    });
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse
+) {
+  // setup CORS permissions
+  res.setHeader("Access-Control-Allow-Origin", "*");
+  res.setHeader("Access-Control-Allow-Methods", "POST, OPTIONS");
+  res.setHeader("Access-Control-Allow-Headers", "Content-Type, Authorization");
+  res.setHeader("Content-Type", "application/json");
+  // This will allow OPTIONS request
+  if (req.method === "OPTIONS") {
+    return res.status(200).send("ok");
   }
+  console.info("req.body", req.body);
 
-  const baseUrl = process.env.HOST || "";
-  const previewLinks = [];
+  const url = await generatePreviewUrl(req.body);
+  if (!url) {
+    return res.status(200).json({ previewLinks: [] });
+  }
+  const baseUrl = process.env.NEXT_PUBLIC_HOST;
 
-  if (parsedRequest.item.meta.status !== "draft")
-    previewLinks.push({
+  const previewLinks = [
+    // Public URL:
+    {
       label: "Published version",
-      url: `${baseUrl}/api/draft/disable?url=${url}`,
-    });
-
-  if (parsedRequest.item.meta.status !== "published")
-    previewLinks.push({
+      url: `${baseUrl}${url}`,
+    },
+    // >This requires an API route on your project that starts Next.js Preview Mode
+    // and redirects to the URL provided with the `redirect` parameter:
+    {
       label: "Draft version",
-      url: `${baseUrl}/api/draft/enable?url=${url}`,
-    });
-
-  return new Response(JSON.stringify({ previewLinks }), {
-    status: 200,
-    headers,
-  });
+      url: `${baseUrl}/api/preview?redirect=${url}`,
+    },
+  ];
+  return res.status(200).json({ previewLinks });
 }
