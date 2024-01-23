@@ -10,8 +10,20 @@ import translate from "@/lib/locales";
 export default function CategoryCard({ data, locale }: GenericCardProps) {
   const datesGrouped = data.dates ? groupDatesByDay(data.dates, locale) : [];
   let categoryTitle;
-  if (data.category) {
-    const catToShow = data.category;
+  // if (data.category) {
+  //   const catToShow = data.category;
+  //   if (Array.isArray(catToShow)) {
+  //     categoryTitle = catToShow
+  //       .map((cat) => {
+  //         return cat.title;
+  //       })
+  //       .join(", ");
+  //   } else {
+  //     categoryTitle = catToShow.title;
+  //   }
+  // }
+  if (data.contentType || data._modelApiKey) {
+    const catToShow = data.contentType ? data.contentType : data._modelApiKey;
     if (Array.isArray(catToShow)) {
       categoryTitle = catToShow
         .map((cat) => {
@@ -19,7 +31,7 @@ export default function CategoryCard({ data, locale }: GenericCardProps) {
         })
         .join(", ");
     } else {
-      categoryTitle = catToShow.title;
+      categoryTitle = catToShow;
     }
   }
   function categoryColorClasses(cat: string) {
@@ -27,23 +39,23 @@ export default function CategoryCard({ data, locale }: GenericCardProps) {
     switch (c) {
       case "news":
         return "card-title-news";
-      case "eventi":
-        return "card-title-feeventistival";
+      case "event":
+        return "card-title-eventi";
       case "linguaggi":
         return "card-title-linguaggi";
       case "workshop":
         return "card-title-workshop";
-      case "artisti":
+      case "artist":
         return "card-title-artisti";
-      case "compagnie":
+      case "company":
         return "card-title-compagnie";
-      case "residenze":
+      case "artistic_residecy":
         return "card-title-residenze";
-      case "progetto":
+      case "project":
         return "card-title-progetto";
       case "pubblicazioni":
         return "card-title-pubblicazioni";
-      case "reti":
+      case "network":
         return "card-title-reti";
       case "partner":
         return "card-title-partner";
@@ -82,13 +94,13 @@ export default function CategoryCard({ data, locale }: GenericCardProps) {
                 <span className={`${categoryClasses}`}>{data.title}</span>
               </h2>
             )}
-            {data.titleHero && !data.authors && (
+            {/* {data.titleHero && !data.authors && (
               <h3
                 className={`text-base font-semibold uppercase text-black md:text-lg group-hover:origin-right group-hover:rotate-1 group-hover:-translate-y-1 duration-300`}
               >
                 <span className={`${categoryClasses}`}>{data.titleHero}</span>
               </h3>
-            )}
+            )} */}
             {data.authors && (
               <div
                 className={`font-semibold uppercase text-black md:text-base group-hover:origin-right group-hover:rotate-1 group-hover:-translate-y-1 duration-300`}
@@ -97,19 +109,29 @@ export default function CategoryCard({ data, locale }: GenericCardProps) {
               </div>
             )}
           </div>
-          <DatoImage
-            className="dato-image-cover duration-300 group-hover:scale-105 "
-            data={data.imageHero.responsiveImage}
-          />
+          {!data.imageHero && (
+            <div className="relative h-[220px] overflow-hidden md:h-[360px]">
+              <img
+                className="dato-image-cover duration-300 group-hover:scale-105"
+                src={data.image}
+              />
+            </div>
+          )}
+          {data.imageHero && (
+            <DatoImage
+              className="dato-image-cover duration-300 group-hover:scale-105 "
+              data={data.imageHero.responsiveImage}
+            />
+          )}
         </div>
 
         <div className="z-20">
           <div className="mt-4 mb-3">
-            {categoryTitle && categoryTitle != "artisti" && (
+            {categoryTitle && categoryTitle != "artist" && (
               <span
                 className={`px-2 py-1 font-semibold uppercase mr-2 ${categoryClasses}`}
               >
-                {categoryTitle}
+                {translate(categoryTitle.toLowerCase(), locale)}
               </span>
             )}
           </div>

@@ -3,6 +3,7 @@ query news($slug: String!, $locale: SiteLocale) {
     id
     slug
     _modelApiKey
+    __typename
     seo: _seoMetaTags {
       ...seoMetaFragment
     }
@@ -18,6 +19,7 @@ query news($slug: String!, $locale: SiteLocale) {
     layoutHero
     titleHero
     descriptionHero
+    showInArchive
     imageHero {
       id
       title
@@ -28,6 +30,42 @@ query news($slug: String!, $locale: SiteLocale) {
         ...imgFrag
       }
     }
+    # RELATIONS ---
+    category {
+      ...tagsFrag
+    }
+    years {
+      ...yearRecordFragment
+    }
+    festivalEditions {
+      ...festivalEditionRecordFragment
+    }
+    artists {
+      ...artistRecordFragment
+    }
+    comoanies {
+      id
+      title
+      slug
+      imageHero {
+        ...imageHeroFrag
+      }
+    }
+    artisticResidencies {
+      ...artisticResidecyRecordFragment
+    }
+    workhops {
+      id
+      title
+      slug
+      imageHero {
+        ...imageHeroFrag
+      }
+    }
+    events {
+      ...eventRecordFragment
+    }
+    # --- END RELATIONS ---
     slideshowHero {
       id
       title
@@ -99,8 +137,5 @@ query news($slug: String!, $locale: SiteLocale) {
       }
     }
     startDate
-    category {
-      ...tagsFrag
-    }
   }
 }

@@ -1,6 +1,7 @@
 query mediaPhotoQuery($id: ItemId, $locale: SiteLocale) {
   mediaPhoto(filter: { id: { eq: $id } }, locale: $locale) {
     _modelApiKey
+    __typename
     seo: _seoMetaTags {
       ...seoMetaFragment
     }
@@ -55,33 +56,33 @@ query mediaPhotoQuery($id: ItemId, $locale: SiteLocale) {
       _modelApiKey
       ...artisticResidecyRecordFragment
     }
-     news {
+    news {
       _modelApiKey
-      id 
+      id
       title
       slug
     }
     workhops {
       _modelApiKey
-      id 
+      id
       title
       slug
     }
     events {
       _modelApiKey
-      id 
+      id
       title
       slug
     }
     publications {
       _modelApiKey
-      id 
+      id
       title
       slug
     }
     projects {
       _modelApiKey
-      id 
+      id
       title
       slug
     }

@@ -7,7 +7,11 @@ import resolveLink from "@/lib/resolveLink";
 import translate from "@/lib/locales";
 import Newsletter from "@/components/layout/Newsletter";
 
-export default function Footer({ locale, data, hideNewsletter = false }: FooterProps) {
+export default function Footer({
+  locale,
+  data,
+  hideNewsletter = false,
+}: FooterProps) {
   return (
     <>
       <footer id="footer" data-datocms-noindex aria-labelledby="footer-heading">
@@ -35,7 +39,9 @@ export default function Footer({ locale, data, hideNewsletter = false }: FooterP
                     dangerouslySetInnerHTML={{ __html: data.info }}
                   />
                   <div className="mb-8 border-b border-gray-200 pb-8 md:border-0">
-                    <p className="text-xxs mb-2 uppercase text-black">Social Media</p>
+                    <p className="text-xxs mb-2 uppercase text-black">
+                      Social Media
+                    </p>
                     <div className="flex space-x-3 ">
                       {data?.socials?.map((item: any) => {
                         return (
@@ -43,7 +49,9 @@ export default function Footer({ locale, data, hideNewsletter = false }: FooterP
                             <Link
                               href={item.link}
                               target="_blank"
-                              title={`${translate("externaLink", locale)} ${item.title}`}
+                              title={`${translate("externaLink", locale)} ${
+                                item.title
+                              }`}
                               className="text-black hover:text-gray-400"
                             >
                               <span className="sr-only">{item.title}</span>
@@ -119,6 +127,17 @@ export default function Footer({ locale, data, hideNewsletter = false }: FooterP
                         className="iubenda-nostyle no-brand iubenda-embed text-xxs text-black-light tracking-widest hover:text-black"
                       >
                         Cookie Policy
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        href="#"
+                        title={`${translate("privacyPreferences", locale)}`}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="iubenda-cs-preferences-link iubenda-nostyle no-brand iubenda-embed text-xxs text-black-light tracking-widest hover:text-black"
+                      >
+                        {translate("privacyPreferences", locale)}
                       </Link>
                     </li>
                     <li>

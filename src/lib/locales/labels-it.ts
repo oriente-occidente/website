@@ -5,6 +5,7 @@ const labels_it = {
   cookiePolicyId: "94139888",
   cookiePolicyTitle: "Vai a (link esterno) Cookie Policy",
   privacyPolicyTitle: "Vai a (link esterno) Privacy Policy",
+  privacyPreferences: "Preferenze privacy",
   creditsTitle: "Vai a (link esterno) Cantiere Creativo Agenzia web Firenze",
   welcome: "Entra nel sito",
   goodby: "Addio",
@@ -61,6 +62,7 @@ const labels_it = {
   audio: "Audio",
   photo: "Immagine",
   video: "Video",
+  artistic_residecy: "Residenza artistica",
   reservedTextLineOne: "Questo video non è consultabile pubblicamente.",
   reservedTextLineTwo: "Per chiederne l’accesso scrivere all’indirizzo",
   zoom: "Ingrandisci",
@@ -119,7 +121,7 @@ const labels_it = {
     of: "di",
   },
   "search-filters": {
-    contentType: "Tiplogia Media",
+    contentType: "Tiplogia",
     years: "Anni",
     festival: "Festival",
     category: "Categoria",
@@ -133,6 +135,7 @@ const labels_it = {
     events: "Eventi",
     pubblications: "Pubblicazioni",
     networks: "Reti",
+    country: "Paese",
   },
 };
 export default labels_it;

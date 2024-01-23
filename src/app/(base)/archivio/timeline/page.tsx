@@ -14,6 +14,8 @@ import { ArrowLongRightIcon } from "@heroicons/react/24/solid";
 import TimelineTabs from "@/components/TimelineTabs";
 import { Image as DatoImage } from "react-datocms";
 import { ReactNode } from "react";
+import Wrapper from "@/components/layout/Wrapper";
+import { extractSlugData } from "@/lib/utils";
 
 const locale = "it";
 
@@ -86,6 +88,7 @@ export default async function Page() {
             _modelApiKey: data?.festivalEditionsArchive?._modelApiKey || "",
             locale,
             slug: "",
+            slugs: [],
           }),
           count: y.festivalCount.count,
           // images: y.festival,
@@ -95,6 +98,7 @@ export default async function Page() {
             _modelApiKey: data?.artistsCompaniesArchive?._modelApiKey || "",
             locale,
             slug: "",
+            slugs: [],
           }),
           count: y.artistsCount.count + companiesCount(y.artists),
           // images: y.artists,
@@ -104,24 +108,21 @@ export default async function Page() {
             _modelApiKey: data?.activitiesArchive?._modelApiKey || "",
             locale,
             slug: "",
+            slugs: [],
           }),
           count:
             y.eventsCount.count +
             y.workshopsCount.count +
             y.artisticResidenciesCount.count +
             y.projectsCount.count,
-          images: [
-            ...y.events,
-            ...y.workshops,
-            ...y.artisticResidencies,
-            ...y.projects,
-          ],
+          //images: [...y.events, ...y.workshops, ...y.artisticResidencies, ...y.projects],
         },
         news: {
           slug: resolveLink({
             _modelApiKey: data?.newsPublicationsArchive?._modelApiKey || "",
             locale,
             slug: "",
+            slugs: [],
           }),
           count: y.newsCount.count + y.publicationsCount.count,
           images: [...y.news, ...y.publications],
@@ -140,6 +141,7 @@ export default async function Page() {
             _modelApiKey: data?.mediaArchive?._modelApiKey || "",
             locale,
             slug: "",
+            slugs: [],
           }),
           count:
             y.mediaAudiosCount.count +
@@ -153,9 +155,9 @@ export default async function Page() {
     };
     timelineData.push(year);
   });
-
+  const slugData = extractSlugData(data);
   return (
-    <>
+    <Wrapper locale={locale} slugData={slugData}>
       <GenericHero data={hero} locale={locale} />
       <div className="container h-full grid grid-cols-1 lg:grid-cols-4 relative">
         <TimelineTabs nav={timelineData} locale={locale} />
@@ -229,6 +231,6 @@ export default async function Page() {
           })}
         </div>
       </div>
-    </>
+    </Wrapper>
   );
 }

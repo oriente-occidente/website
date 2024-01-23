@@ -7,6 +7,8 @@ import {
 import IndexPageTemplate from "@/components/templates/IndexPageTemplate";
 import getSeoMeta from "@/lib/seoUtils";
 import fetchDato from "@/lib/fetchDato";
+import Wrapper from "@/components/layout/Wrapper";
+import { extractSlugData } from "@/lib/utils";
 
 const locale = "it";
 
@@ -38,10 +40,13 @@ export default async function Page() {
   );
   let list: any = [];
 
-  if (res.allArtisticResidecies) {
-    list = [...res.allArtisticResidecies];
+  // if (res.allArtisticResidecies) {
+  //   list = [...res.allArtisticResidecies];
+  // }
+  if (res.allArtists) {
+    list = [...res.allArtists];
   }
-
+  // console.log("res", res);
   const heroData = {
     titleHero: page?.title || "",
     descriptionHero: page?.descriptionHero || "",
@@ -52,5 +57,11 @@ export default async function Page() {
     hero: heroData,
     page,
   };
-  return <IndexPageTemplate data={pageData} locale={locale} />;
+  const slugData = extractSlugData(data.artisticResidenciesIndex);
+
+  return (
+    <Wrapper locale={locale} slugData={slugData}>
+      <IndexPageTemplate data={pageData} locale={locale} />;
+    </Wrapper>
+  );
 }

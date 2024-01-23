@@ -4,6 +4,7 @@ const labels_en = {
   cookiePolicyId: "86853640",
   cookiePolicyTitle: "Go to (external link) Cookie Policy",
   privacyPolicyTitle: "Go to (external link) Privacy Policy",
+  privacyPreferences: "Privacy preferences",
   creditsTitle: "Go to (external link) Cantiere Creativo Agency web Firenze",
   welcome: "Enter the site",
   goodby: "Goodby",
@@ -61,6 +62,7 @@ const labels_en = {
   audio: "Audio",
   photo: "Photo",
   video: "Video",
+  artistic_residecy: "Artistic residency",
   reservedTextLineOne: "This video is not publicly available.",
   reservedTextLineTwo: "To request access, send an email to",
   zoom: "Zoom",
@@ -125,7 +127,7 @@ const labels_en = {
     of: "of",
   },
   "search-filters": {
-    contentType: "Media Type",
+    contentType: "Type",
     years: "Years",
     festival: "Festival",
     category: "Category",
@@ -139,6 +141,7 @@ const labels_en = {
     events: "Events",
     pubblications: "Pubblicazioni",
     networks: "Networks",
+    country: "Country",
   },
 };
 export default labels_en;

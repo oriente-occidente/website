@@ -141,9 +141,7 @@ export function groupDatesByDay(dates: any[], locale = "it") {
       return daily;
     }, []);
     if (times.length > 0) {
-      return `${date} - ${locale == "it" ? "alle: " : "at: "} ${times.join(
-        " , "
-      )}`;
+      return `${date} - ${locale == "it" ? "alle: " : "at: "} ${times.join(" , ")}`;
     }
     return date;
   });
@@ -181,9 +179,7 @@ export const closestInterval = (intervals: any[]) => {
 
 function getLastDate(dates: any[]) {
   const groups = dates.reduce((group, date) => {
-    const day = dayjs(date.endTime ? date.endTime : date.startTime).format(
-      "YYYY-MM-DD"
-    );
+    const day = dayjs(date.endTime ? date.endTime : date.startTime).format("YYYY-MM-DD");
     if (group[day]) {
       group[day].push(date);
     } else {
@@ -251,4 +247,47 @@ export function enhanceEvents(list: any[]) {
     const lastDate = getLastDate(event.dates);
     return { ...event, finished, lastDate, nextDate };
   });
+}
+
+// export const mediaRecordTypenames: string[] = [
+//   "MediaAudioRecord",
+//   "MediaVideoRecord",
+//   "MediaPhotoRecord",
+//   "MediaDocumentRecord",
+// ];
+
+// export const contentRecordTypenames: string[] = [
+//   "EventRecord",
+//   "WorkshopRecord",
+//   "NewsRecord",
+// ];
+
+export function extractSlugData(data: any) {
+  const keys: string[] = [
+    "_modelApiKey",
+    "slugs",
+    "__typename",
+    "slug",
+    "section",
+    "locale",
+    "id",
+    "titleHero",
+  ];
+
+  let slugData = { ...data };
+
+  Object.keys(data).forEach((k: string) => {
+    if (!keys.includes(k)) {
+      delete slugData[k];
+    }
+  });
+
+  return slugData;
+}
+
+export function cleanURL(url: string, locale: string) {
+  const substrings: string[] = ["c/", "p/", `${locale}/`];
+  let cleaned: string = url;
+  substrings.forEach((s) => (cleaned = cleaned.replace(s, "")));
+  return cleaned.trim();
 }

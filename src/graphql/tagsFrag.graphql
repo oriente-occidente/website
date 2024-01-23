@@ -1,4 +1,5 @@
 fragment tagsFrag on TagRecord {
+  _modelApiKey
   title
   slug
   id

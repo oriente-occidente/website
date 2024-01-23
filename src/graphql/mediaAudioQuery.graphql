@@ -1,6 +1,7 @@
 query mediaAudioQuery($slug: String!, $locale: SiteLocale) {
   mediaAudio(filter: { slug: { eq: $slug } }, locale: $locale) {
     _modelApiKey
+    __typename
     seo: _seoMetaTags {
       ...seoMetaFragment
     }

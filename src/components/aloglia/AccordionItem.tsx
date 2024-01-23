@@ -35,18 +35,16 @@ export default function AccordionItem({ filter, locale }: any) {
 
   return (
     <div className="my-5 lg:my-10" key={filter.name}>
-      <h3
-        className="text-[21px] uppercase border-b pb-4 flex justify-between items-center cursor-pointer"
+      <button
+        className="w-full text-[21px] uppercase border-b pb-4 flex justify-between items-center cursor-pointer"
         onClick={() => handleToggle()}
       >
         <span>{translate(`search-filters.${filter.name}`, locale)}</span>
         <ChevronDownIcon
           aria-hidden="true"
-          className={`h-4 w-4 motion-safe:duration-300 ${
-            clicked ? "rotate-180" : ""
-          }`}
+          className={`h-4 w-4 motion-safe:duration-300 ${clicked ? "rotate-180" : ""}`}
         />
-      </h3>
+      </button>
       <div
         ref={content}
         className={`grid motion-safe:transition-[grid-template-rows] motion-safe:duration-300 ${
@@ -57,10 +55,7 @@ export default function AccordionItem({ filter, locale }: any) {
           <RefinementList
             searchable={filter.searchable}
             attribute={filter.name}
-            searchablePlaceholder={`${translate(
-              "search.placeholder",
-              locale
-            )}...`}
+            searchablePlaceholder={`${translate("search.placeholder", locale)}...`}
             operator={filter.operator ? "or" : "and"}
             limit={filter.limit}
             showMore={filter.showMore}

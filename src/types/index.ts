@@ -1,13 +1,21 @@
 import { SeoMetaFragmentFragment, Site } from "@/graphql/generated";
 
+export type BasicIdPageProps = {
+  params: {
+    id: string;
+  };
+};
 export type BasicSlugPageProps = {
-  params: { slug: string };
+  params: {
+    slug: string;
+  };
 };
 export type LayoutParams = {
   children: React.ReactNode;
 };
 export type ResolveLinkProps = {
   slug: string;
+  slugs: any | undefined;
   _modelApiKey: string;
   locale: string;
   section?: string;
@@ -32,6 +40,7 @@ export type GenericCardProps = {
   data: any;
   locale: string;
   categoryTitle?: string;
+  model?: string;
 };
 
 export type GenericPageProps = {
@@ -106,6 +115,8 @@ export type PageSeoProps = {
   titles?: LocaleValue[];
   slugs?: LocaleValue[];
   section?: string;
+  sections?: any;
+  content?: any;
 };
 
 export type GenericSearchProps = {

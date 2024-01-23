@@ -1,0 +1,9 @@
+fragment artistRecordFragment on ArtistRecord {
+  _modelApiKey
+  id
+  title
+  slug
+  imageHero {
+    ...imageHeroFrag
+  }
+}

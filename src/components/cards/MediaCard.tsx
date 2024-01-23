@@ -16,6 +16,44 @@ import {
   PhotoIcon,
 } from "@heroicons/react/24/outline";
 
+export function CatTitle(catTitle: string) {
+  let title = null;
+  switch (catTitle) {
+    case "document":
+      title = (
+        <PaperClipIcon aria-hidden="true" className="h-4 w-4" color="#D83D35" />
+      );
+      break;
+    case "audio":
+      title = (
+        <MusicalNoteIcon
+          aria-hidden="true"
+          className="h-4 w-4"
+          color="#D83D35"
+        />
+      );
+      break;
+    case "photo":
+      title = (
+        <PhotoIcon aria-hidden="true" className="h-4 w-4" color="#D83D35" />
+      );
+      break;
+    case "video":
+      title = (
+        <VideoCameraIcon
+          aria-hidden="true"
+          className="h-4 w-4"
+          color="#D83D35"
+        />
+      );
+      break;
+    default:
+      <></>;
+  }
+
+  return title;
+}
+
 export default function MediaCard({ data, locale }: GenericCardProps) {
   let categoryTitle = data.contentType;
   const link = resolveLink({ ...data, locale });
@@ -48,31 +86,7 @@ export default function MediaCard({ data, locale }: GenericCardProps) {
                   "px-2 font-semibold text-xs uppercase mr-2 border border-red text-red inline-flex flex-nowrap items-center gap-1"
                 }
               >
-                {categoryTitle.toLowerCase() === "document" ? (
-                  <PaperClipIcon
-                    aria-hidden="true"
-                    className="h-4 w-4"
-                    color="#D83D35"
-                  />
-                ) : categoryTitle.toLowerCase() === "audio" ? (
-                  <MusicalNoteIcon
-                    aria-hidden="true"
-                    className="h-4 w-4"
-                    color="#D83D35"
-                  />
-                ) : categoryTitle.toLowerCase() === "photo" ? (
-                  <PhotoIcon
-                    aria-hidden="true"
-                    className="h-4 w-4"
-                    color="#D83D35"
-                  />
-                ) : (
-                  <VideoCameraIcon
-                    aria-hidden="true"
-                    className="h-4 w-4"
-                    color="#D83D35"
-                  />
-                )}
+                {CatTitle(categoryTitle.toLowerCase())}
                 {translate(categoryTitle.toLowerCase(), locale)}
               </div>
             )}

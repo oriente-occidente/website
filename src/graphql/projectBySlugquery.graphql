@@ -39,6 +39,52 @@ query project($slug: String!, $locale: SiteLocale) {
         ...imgFrag
       }
     }
+    # RELATIONS ---
+    relatedContents {
+      __typename
+      ... on ArtistRecord {
+        ...slideArtirstFrag
+      }
+      ... on NewsRecord {
+        ...slideNewsFrag
+        _createdAt
+        startDate
+        category {
+          ...tagsFrag
+        }
+      }
+      ... on PageRecord {
+        ...slidePageFrag
+      }
+      ... on EventRecord {
+        ...slideEventFrag
+        category {
+          ...tagsFrag
+        }
+      }
+      ... on ProjectRecord {
+        ...slideProjectFrag
+        category {
+          ...tagsFrag
+        }
+      }
+      ... on WorkshopRecord {
+        ...slideWorkshopFrag
+        category {
+          ...tagsFrag
+        }
+      }
+    }
+    category {
+      ...tagsFrag
+    }
+    years {
+      ...yearRecordFragment
+    }
+    networks {
+      ...networkRecordFragment
+    }
+    # --- END RELATIONS ---
     relatedContents {
       __typename
       ... on ArtistRecord {
@@ -222,9 +268,6 @@ query project($slug: String!, $locale: SiteLocale) {
       bookable
       amount
       paymentLink
-    }
-    category {
-      ...tagsFrag
     }
     startDate
     dates {
