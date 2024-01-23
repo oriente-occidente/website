@@ -57,11 +57,11 @@ export default function resolveLink({
     case "artistic_residencies_index":
       return `${lp}/studio/${t(`residenze-artistiche`, locale)}/`;
     case "artistic_residecy":
-      return `${lp}/studio/${t(`residenze-artistiche`, locale)}/${lslug}`;
+      return `${lp}/studio/${t(`artisti`, locale)}/${slug}`;
     case "artists_index":
       return `${lp}/studio/${t(`artisti-associati`, locale)}/`;
     case "artist":
-      return `${lp}/studio/${t(`artisti-associati`, locale)}/${lslug}`;
+      return `${lp}/studio/${t(`artisti`, locale)}/${slug}`;
     case "company":
       return `${lp}/studio/${t(`compagnie`, locale)}/${lslug}`;
     case "events_index":
@@ -111,7 +111,10 @@ export default function resolveLink({
     case "media_archive":
       return `${lp}/${t(`archivio`, locale)}/${t(`media`, locale)}`;
     case "news_publications_archive":
-      return `${lp}/${t(`archivio`, locale)}/${t(`news-pubblicazioni`, locale)}`;
+      return `${lp}/${t(`archivio`, locale)}/${t(
+        `news-pubblicazioni`,
+        locale
+      )}`;
     case "partners_networks_archive":
       return `${lp}/${t(`archivio`, locale)}/${t(`partner-reti`, locale)}`;
     case "years_archive":

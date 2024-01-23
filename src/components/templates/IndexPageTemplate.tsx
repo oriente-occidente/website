@@ -22,6 +22,7 @@ export default function IndexPageTemplate({ data, locale }: GenericIndexPageProp
   const allHaveEventModelApiKey = list.every((obj) => obj._modelApiKey === "event");
   const dataList = allHaveEventModelApiKey ? filteredList : list;
   const _modelApiKey = page?._modelApiKey;
+  console.log("_modelApiKey", _modelApiKey);
   return (
     <div>
       <Breadcrumbs data={page} locale={locale as any} background={null} />
@@ -34,7 +35,7 @@ export default function IndexPageTemplate({ data, locale }: GenericIndexPageProp
         <div className="container lg:grid lg:grid-cols-2 lg:gap-6">
           {dataList?.map((item: any) => (
             <Fragment key={"wrap_" + item.id}>
-              <GenericCard locale={locale} data={item} />
+              <GenericCard locale={locale} data={item} model={_modelApiKey} />
             </Fragment>
           ))}
         </div>

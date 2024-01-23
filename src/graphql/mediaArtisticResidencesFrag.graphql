@@ -2,4 +2,18 @@ fragment artisticResidecyRecordFragment on ArtisticResidecyRecord {
   _modelApiKey
   id
   title
+  slug: _allReferencingArtists {
+    slug
+  }
+  titleHero: _allReferencingArtists {
+    titleHero
+  }
+  imageHero: _allReferencingArtists {
+    imageHero {
+      ...imageHeroFrag
+    }
+  }
+  years {
+    year
+  }
 }

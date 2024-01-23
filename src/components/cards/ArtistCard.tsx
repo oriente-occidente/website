@@ -7,7 +7,11 @@ import { GenericCardProps } from "@/types";
 import resolveLink from "@/lib/resolveLink";
 import translate from "@/lib/locales";
 
-export default function CategoryCard({ data, locale }: GenericCardProps) {
+export default function CategoryCard({
+  data,
+  locale,
+  model,
+}: GenericCardProps) {
   let categoryTitle;
   if (data.contentType || data._modelApiKey) {
     const catToShow = data.contentType ? data.contentType : data._modelApiKey;
@@ -84,13 +88,31 @@ export default function CategoryCard({ data, locale }: GenericCardProps) {
 
         <div className="z-20">
           <div className="mt-4 mb-3">
-            {data.artisticResidence?.map((res: any, index: number) => {
-              return (
-                <div key={res.year} className="inline-flex">
-                  {index == 0 ? `${res.year}` : `| ${res.year}`}&nbsp;
-                </div>
-              );
-            })}
+            {model == "artistic_residencies_index" &&
+              data.residencies?.map((res: any) => {
+                return (
+                  <>
+                    {res.years?.map((yearObj: any, index: number) => {
+                      const { year } = yearObj;
+                      return (
+                        <div key={year + index} className="inline-flex">
+                          {index == 0 ? `${year}` : `| ${year}`}&nbsp;
+                        </div>
+                      );
+                    })}
+                  </>
+                );
+              })}
+
+            {model == "artists_index" &&
+              data.associatedArtist?.map((yearObj: any, index: number) => {
+                const { year } = yearObj;
+                return (
+                  <div key={year + index} className="inline-flex">
+                    {index == 0 ? `${year}` : `| ${year}`}&nbsp;
+                  </div>
+                );
+              })}
           </div>
           <div className="mt-3 uppercase font-semibold text-xxs flex items-center">
             <div>{translate("goToContents", locale)}</div>

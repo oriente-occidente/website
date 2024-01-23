@@ -40,6 +40,7 @@ export type GenericCardProps = {
   data: any;
   locale: string;
   categoryTitle?: string;
+  model?: string;
 };
 
 export type GenericPageProps = {

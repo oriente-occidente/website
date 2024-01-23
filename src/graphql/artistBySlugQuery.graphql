@@ -65,6 +65,10 @@ query artist($slug: String!, $locale: SiteLocale) {
     }
     # --- END RELATIONS ---
     startDate: _firstPublishedAt
+    # artisticResidence {
+    #   id
+    #   year
+    # }
     #  associatedArtist {
     #    id
     #    year
