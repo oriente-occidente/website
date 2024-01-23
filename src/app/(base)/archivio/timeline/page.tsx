@@ -4,7 +4,11 @@ import Link from "next/link";
 import translate from "@/lib/locales";
 
 import queryDatoCMS from "@/lib/fetchDato";
-import { SiteLocale, TimelineQueryDocument, ArtistRecord } from "@/graphql/generated";
+import {
+  SiteLocale,
+  TimelineQueryDocument,
+  ArtistRecord,
+} from "@/graphql/generated";
 import resolveLink from "@/lib/resolveLink";
 import { ArrowLongRightIcon } from "@heroicons/react/24/solid";
 import TimelineTabs from "@/components/TimelineTabs";
@@ -28,7 +32,11 @@ function renderSections(content: ContentType): ReactNode[] {
   for (const [key, value] of Object.entries(content)) {
     const element = (
       <div key={key}>
-        <Link href={value.slug} title={translate(key, locale)} className="flex gap-x-1">
+        <Link
+          href={value.slug}
+          title={translate(key, locale)}
+          className="flex gap-x-1"
+        >
           <div>({value.count})</div>
           <div>{translate(key, locale)}</div>
           <ArrowLongRightIcon aria-hidden="true" className="h-5 w-5" />
@@ -80,6 +88,7 @@ export default async function Page() {
             _modelApiKey: data?.festivalEditionsArchive?._modelApiKey || "",
             locale,
             slug: "",
+            slugs: [],
           }),
           count: y.festivalCount.count,
           // images: y.festival,
@@ -89,6 +98,7 @@ export default async function Page() {
             _modelApiKey: data?.artistsCompaniesArchive?._modelApiKey || "",
             locale,
             slug: "",
+            slugs: [],
           }),
           count: y.artistsCount.count + companiesCount(y.artists),
           // images: y.artists,
@@ -98,19 +108,21 @@ export default async function Page() {
             _modelApiKey: data?.activitiesArchive?._modelApiKey || "",
             locale,
             slug: "",
+            slugs: [],
           }),
           count:
             y.eventsCount.count +
             y.workshopsCount.count +
             y.artisticResidenciesCount.count +
             y.projectsCount.count,
-          images: [...y.events, ...y.workshops, ...y.artisticResidencies, ...y.projects],
+          //images: [...y.events, ...y.workshops, ...y.artisticResidencies, ...y.projects],
         },
         news: {
           slug: resolveLink({
             _modelApiKey: data?.newsPublicationsArchive?._modelApiKey || "",
             locale,
             slug: "",
+            slugs: [],
           }),
           count: y.newsCount.count + y.publicationsCount.count,
           images: [...y.news, ...y.publications],
@@ -129,6 +141,7 @@ export default async function Page() {
             _modelApiKey: data?.mediaArchive?._modelApiKey || "",
             locale,
             slug: "",
+            slugs: [],
           }),
           count:
             y.mediaAudiosCount.count +
@@ -154,7 +167,11 @@ export default async function Page() {
             const view = renderSections(item.content);
 
             return (
-              <div id={item.year} key={item.year} className="border-b py-8 mb-8">
+              <div
+                id={item.year}
+                key={item.year}
+                className="border-b py-8 mb-8"
+              >
                 <div className="grid grid-flow-row grid-cols-1 md:grid-cols-2 lg:grid-cols-10 gap-4">
                   <div className="md:col-span-1 lg:col-span-4">
                     <div className="mb-8 text-lg">{item.year}</div>
