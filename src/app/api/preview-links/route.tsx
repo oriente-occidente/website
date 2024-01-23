@@ -1,27 +1,31 @@
 import { NextRequest } from "next/server";
 import resolveLink from "@/lib/resolveLink";
 
-async function generatePreviewUrl({ item, itemType, locale }: any) {
-  console.info("locale", locale);
-  if (!item?.attributes) return null;
-  console.info("JSON", JSON.stringify(item.attributes, null, 2));
-  const apiKey = itemType.attributes.api_key || null;
-  console.info("apiKey", apiKey);
-
-  const slug = item.attributes.slug || null;
-  const slugLocale = slug ? (locale ? slug[locale] : slug["it"]) : null;
-  let record: any = { slug: slugLocale, apiKey };
-  const link = apiKey === "home" ? "/" : resolveLink({ ...record, locale });
-  console.info("LINK", link);
-  return link;
-}
-
 const headers = {
   "Access-Control-Allow-Origin": "*",
   "Access-Control-Allow-Methods": "POST, OPTIONS",
   "Access-Control-Allow-Headers": "Content-Type, Authorization",
   "Content-Type": "application/json",
 };
+
+function generatePreviewUrl({ item, itemType, locale }: any) {
+  console.info("locale", locale);
+  if (!item?.attributes) return null;
+  // console.info("JSON", JSON.stringify(item.attributes, null, 2));
+  const _modelApiKey = itemType.attributes.api_key || null;
+  console.info("_modelApiKey", _modelApiKey);
+
+  const section = item.attributes.section || null;
+
+  const slug = item.attributes.slug || null;
+  const slugLocale = slug ? (locale ? slug[locale] : slug["it"]) : null;
+  let record: any = { slug: slugLocale, _modelApiKey, section };
+
+  const link =
+    _modelApiKey === "home" ? "/" : resolveLink({ ...record, locale });
+  console.info("LINK", link);
+  return link;
+}
 
 export async function OPTIONS(request: NextRequest) {
   return new Response("ok", {
@@ -33,7 +37,7 @@ export async function OPTIONS(request: NextRequest) {
 export async function POST(request: NextRequest) {
   // const { searchParams } = new URL(request.url);
   const body = await request.json();
-  console.log("body", body);
+  // console.log("body", body);
   const url = generatePreviewUrl(body);
 
   if (!url) {
