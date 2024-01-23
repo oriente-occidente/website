@@ -55,7 +55,7 @@ export async function recurseQuery({
       results = response[propertyName] || [];
       console.log("results", results.length);
     } catch (error) {
-      // console.error("ERROR", error);
+      console.error("query error", error);
       throw error;
     }
 
