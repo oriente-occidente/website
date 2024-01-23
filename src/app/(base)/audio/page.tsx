@@ -2,7 +2,6 @@ import { draftMode } from "next/headers";
 import { notFound } from "next/navigation";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import type { BasicSlugPageProps } from "@/types";
-import getSeoMeta from "@/lib/seoUtils";
 import {
   AudiosIndexDocument,
   AllAudiosWebsiteDocument,
@@ -64,7 +63,7 @@ export default async function Page({ params }: BasicSlugPageProps) {
         <div className="container my-5 grid sm:grid-cols-2 lg:grid-cols-3 gap-x-3 sm:gap-x-5 gap-y-8">
           {response?.allMediaAudios?.map((a) => {
             const data = { ...a, contentType: "audio", image: a.image?.url };
-            console.log("a.image?.url", a.image?.url);
+            // console.log("a.image?.url", a.image?.url);
             return (
               <div key={a.id}>
                 <MediaCard data={data} locale={locale} />
