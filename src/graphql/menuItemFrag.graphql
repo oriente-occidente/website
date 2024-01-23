@@ -1,6 +1,7 @@
 fragment menuItemFrag on MenuItemRecord {
   id
   title
+  subtitle
   slug
   _modelApiKey
   link {

@@ -2,7 +2,7 @@
 import Link from "next/link";
 import { Fragment } from "react";
 import { Popover, Transition } from "@headlessui/react";
-import { ChevronDownIcon } from "@heroicons/react/20/solid";
+import { ChevronDownIcon, ArrowLongRightIcon } from "@heroicons/react/20/solid";
 
 import resolveLink from "@/lib/resolveLink";
 import LanguageSwitcher from "@/components/layout/LanguageSwitcher";
@@ -14,20 +14,20 @@ function classNames(...classes: any) {
 function renderLink(item: any, locale: string) {
   if (item.children && item.children.filter((c: any) => c.link).length > 0) {
     return (
-      <Popover className="relative">
+      <Popover className="relative ">
         {({ open, close }) => (
           <Fragment>
             <Popover.Button
               className={classNames(
                 open ? "text-black" : "text-black",
-                "group text-xxs hover:text-red inline-flex items-center rounded-md font-semibold uppercase tracking-widest"
+                "group text-xxs hover:bg-red-light inline-flex items-center font-semibold uppercase tracking-widest px-2 py-1"
               )}
             >
               <span>{item.title}</span>
               <ChevronDownIcon
                 className={classNames(
                   open ? "text-black" : "text-black",
-                  "group-hover:text-red ml-1 h-5 w-5"
+                  " ml-1 h-5 w-5"
                 )}
                 aria-hidden="true"
                 focusable="false"
@@ -44,8 +44,8 @@ function renderLink(item: any, locale: string) {
               leaveTo="opacity-0 translate-y-1"
             >
               <Popover.Panel className="absolute left-1/2 z-50 mt-3 w-screen max-w-xs -translate-x-1/2 transform px-2 sm:px-0">
-                <div className="overflow-hidden rounded-lg shadow-lg">
-                  <div className="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
+                <div className="overflow-hidden shadow-lg">
+                  <div className="relative grid bg-white divide-y divide-black">
                     {item.children
                       .filter((c: any) => c.link)
                       .map((child: any) => {
@@ -56,12 +56,22 @@ function renderLink(item: any, locale: string) {
                               ...child.link,
                               locale,
                             })}
-                            className="-m-3 block rounded-md p-1"
+                            className="block py-1 sm:py-4 px-3 sm:px-5 hover:bg-red-light flex justify-between items-center"
                             onClick={() => close()}
                           >
-                            <p className="text-black-light hover:text-red text-sm normal-case">
+                            <p className="text-black text-xs normal-case font-semibold">
                               {child.title || "+"}
+                              {child.subtitle && (
+                                <span className="block font-normal mt-1 text-3xs leading-none">
+                                  {child.subtitle}
+                                </span>
+                              )}
                             </p>
+                            <ArrowLongRightIcon
+                              aria-hidden="true"
+                              className="shrink-0 h-6 w-6"
+                              color="black-light"
+                            />
                           </Link>
                         );
                       })}
@@ -79,7 +89,7 @@ function renderLink(item: any, locale: string) {
         <Link
           key={item.id}
           href={resolveLink({ ...item.link, locale })}
-          className="text-xxs hover:text-red font-semibold tracking-widest text-black"
+          className=" block text-xxs hover:bg-red-light font-semibold tracking-widest text-black px-2 py-1"
         >
           {item.title || "#"}
         </Link>
@@ -122,7 +132,7 @@ function Header(props: any) {
               <div className="hidden lg:flex lg:flex-1 lg:items-center lg:justify-end">
                 <Popover.Group
                   as="nav"
-                  className="flex space-x-4 uppercase xl:space-x-10"
+                  className="flex space-x-2 uppercase xl:space-x-4"
                 >
                   {data?.map((item: any) => (
                     <Fragment key={item.id}>
@@ -130,7 +140,7 @@ function Header(props: any) {
                     </Fragment>
                   ))}
                 </Popover.Group>
-                <div className="text-xxs text-black-light  ml-14 pt-1 font-semibold uppercase tracking-widest lg:flex">
+                <div className="text-xxs text-black-light ml-14 pt-1 font-semibold uppercase tracking-widest lg:flex">
                   <LanguageSwitcher
                     currentLocale={locale}
                     slugData={slugData || {}}
