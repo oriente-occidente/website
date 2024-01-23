@@ -125,15 +125,25 @@ function Header(props: any) {
                   className="flex space-x-4 uppercase xl:space-x-10"
                 >
                   {data?.map((item: any) => (
-                    <Fragment key={item.id}>{renderLink(item, locale)}</Fragment>
+                    <Fragment key={item.id}>
+                      {renderLink(item, locale)}
+                    </Fragment>
                   ))}
                 </Popover.Group>
                 <div className="text-xxs text-black-light  ml-14 pt-1 font-semibold uppercase tracking-widest lg:flex">
-                  <LanguageSwitcher currentLocale={locale} slugData={slugData || {}} />
+                  <LanguageSwitcher
+                    currentLocale={locale}
+                    slugData={slugData || {}}
+                  />
                 </div>
               </div>
             </div>
-            <MobileNav data={data} locale={locale} handleClose={handleClose} />
+            <MobileNav
+              data={data}
+              locale={locale}
+              handleClose={handleClose}
+              slugData={slugData || {}}
+            />
           </>
         )}
       </Popover>

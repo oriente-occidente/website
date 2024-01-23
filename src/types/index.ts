@@ -34,6 +34,7 @@ export type MobileNavProps = {
   data: any;
   locale: string;
   handleClose: () => void;
+  slugData: any;
 };
 
 export type GenericCardProps = {

@@ -11,6 +11,7 @@ export default function MobileNav({
   data,
   locale,
   handleClose,
+  slugData,
 }: MobileNavProps) {
   function renderMobileLink(item: any) {
     if (item.children && item.children.length > 0) {
@@ -97,7 +98,10 @@ export default function MobileNav({
             ))}
           </div>
           <div className="text-xxs mt-16 border-t border-black pt-4 uppercase tracking-widest md:mt-28 md:pt-10 md:text-base">
-            <LanguageSwitcher currentLocale={locale} />
+            <LanguageSwitcher
+              currentLocale={locale}
+              slugData={slugData || {}}
+            />
           </div>
         </nav>
       </div>

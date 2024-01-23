@@ -40,7 +40,7 @@ export default async function Page({ params }: BasicSlugPageProps) {
     isEnabled
   );
 
-  const { allMediaVideos } = await fetchDato(
+  const response = await fetchDato(
     AllVideosWebsiteDocument,
     { locale: siteLocale },
     isEnabled
@@ -54,11 +54,15 @@ export default async function Page({ params }: BasicSlugPageProps) {
   const slugData = extractSlugData(videosIndex);
   return (
     <Wrapper locale={locale} slugData={slugData}>
-      <Breadcrumbs data={videosIndex} locale={locale as any} background={null} />
+      <Breadcrumbs
+        data={videosIndex}
+        locale={locale as any}
+        background={null}
+      />
       <div>
         <HeroEmpty data={heroData} locale={locale} />
         <div className="container my-5 grid sm:grid-cols-2 lg:grid-cols-3 gap-x-3 sm:gap-x-5 gap-y-8">
-          {allMediaVideos.map((v) => {
+          {response?.allMediaVideos?.map((v) => {
             const data = { ...v, contentType: "video", image: v.image?.url };
             return (
               <div key={v.id}>

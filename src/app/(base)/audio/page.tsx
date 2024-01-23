@@ -40,7 +40,7 @@ export default async function Page({ params }: BasicSlugPageProps) {
     isEnabled
   );
 
-  const { allMediaAudios } = await fetchDato(
+  const response = await fetchDato(
     AllAudiosWebsiteDocument,
     { locale: siteLocale },
     isEnabled
@@ -54,11 +54,15 @@ export default async function Page({ params }: BasicSlugPageProps) {
   const slugData = extractSlugData(audiosIndex);
   return (
     <Wrapper locale={locale} slugData={slugData}>
-      <Breadcrumbs data={audiosIndex} locale={locale as any} background={null} />
+      <Breadcrumbs
+        data={audiosIndex}
+        locale={locale as any}
+        background={null}
+      />
       <div>
         <HeroEmpty data={heroData} locale={locale} />
         <div className="container my-5 grid sm:grid-cols-2 lg:grid-cols-3 gap-x-3 sm:gap-x-5 gap-y-8">
-          {allMediaAudios.map((a) => {
+          {response?.allMediaAudios?.map((a) => {
             const data = { ...a, contentType: "audio", image: a.image?.url };
             console.log("a.image?.url", a.image?.url);
             return (
