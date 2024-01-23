@@ -51,11 +51,11 @@ export default function TimelineTabs({ nav, locale }) {
           />
         </button>
         <div
-          className={` absolute w-full lg:relative motion-safe:transition-[grid-template-rows] motion-safe:duration-500 grid  ${openYears ? "grid-rows-[1fr]" : "grid-rows-[0fr]"
+          className={`absolute w-full lg:relative motion-safe:transition-[grid-template-rows] motion-safe:duration-500 grid  ${openYears ? "grid-rows-[1fr]" : "grid-rows-[0fr]"
             } lg:grid-rows-[1fr]`}
         >
-          <div className="overflow-hidden -mx-1">
-            <ul className="bg-white shadow-xl lg:shadow-none border-l lg:border border-b-0 lg:mt-[-1px] text-base grid grid-cols-2 md:grid-cols-3 lg:block mx-1">
+          <div className="overflow-auto max-h-[calc(100vh-200px)] lg:h-[650px]">
+            <ul className="bg-white shadow-xl lg:shadow-none border-l lg:border border-b-0 lg:mt-[-1px] text-base grid grid-cols-2 md:grid-cols-3 lg:block">
               {nav.map((item) => {
                 return (
                   <li
@@ -66,8 +66,8 @@ export default function TimelineTabs({ nav, locale }) {
                     <Link
                       tabIndex={openYears ? "0" : "-1"}
                       href={`#${item.year}`}
-                      className={`w-full p-2 md:p-4 flex justify-between items-center hover:bg-red-light motion-safe:duration-300 text-xs md:text-base ${isSticky ? "lg:text-sm lg:py-2" : "lg:text-base lg:p-4"} `}
-
+                      // className={`w-full p-2 md:p-4 flex justify-between items-center hover:bg-red-light motion-safe:duration-300 text-xs md:text-base ${isSticky ? "lg:text-sm lg:py-2" : "lg:text-base lg:p-4"} `}
+                      className={`w-full p-2 md:p-4 flex justify-between items-center hover:bg-red-light motion-safe:duration-300 text-xs md:text-base lg:text-sm lg:py-2`}
                     >
                       {item.year}
                       <ArrowLongRightIcon
