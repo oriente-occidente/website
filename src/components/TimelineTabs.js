@@ -35,9 +35,9 @@ export default function TimelineTabs({ nav, locale }) {
     <div
       ref={stickyRef}
       // className={`sticky top-[-1px] pt-[70px] md:pt-[80px] lg:pt-[120px] lg:pr-14 z-10 lg:h-[650px] `}
-      className={`sticky top-[70px] md:top-[80px] lg:top-[120px] lg:pr-14 z-10 lg:h-[650px] `}
+      className={`sticky top-[70px] md:top-[80px] lg:top-[120px] lg:pr-14 z-10 h-[calc(100vh-100px)] md:h-[calc(100vh-90px)] lg:h-[calc(100vh-130px)] `}
     >
-      <nav className="lg:mt-[-1px]">
+      <nav className="relative h-full overflow-auto">
         <button
           // href=""
           tabIndex="0"
@@ -54,7 +54,7 @@ export default function TimelineTabs({ nav, locale }) {
           className={`absolute w-full lg:relative motion-safe:transition-[grid-template-rows] motion-safe:duration-500 grid  ${openYears ? "grid-rows-[1fr]" : "grid-rows-[0fr]"
             } lg:grid-rows-[1fr]`}
         >
-          <div className="overflow-auto max-h-[calc(100vh-200px)] lg:h-[650px]">
+          <div className="overflow-auto h-full lg:overflow-visible ">
             <ul className="bg-white shadow-xl lg:shadow-none border-l lg:border border-b-0 lg:mt-[-1px] text-base grid grid-cols-2 md:grid-cols-3 lg:block">
               {nav.map((item) => {
                 return (
