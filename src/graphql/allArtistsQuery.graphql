@@ -1,7 +1,11 @@
 query associatedArtists($locale: SiteLocale) {
   associatedArtists: allArtists(
     locale: $locale
-    filter: { slug: { neq: null }, associatedArtist: { exists: true } }
+    filter: {
+      slug: { neq: null }
+      associatedArtist: { exists: true }
+      showInAssociatedArtistsIndex: { eq: true }
+    }
     orderBy: _firstPublishedAt_DESC
     first: 100
   ) {

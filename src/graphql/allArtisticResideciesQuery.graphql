@@ -36,9 +36,5 @@ query allArtisticResidenciesQuery($locale: SiteLocale!) {
         title
       }
     }
-    associatedArtist {
-      id
-      year
-    }
   }
 }
