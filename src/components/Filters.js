@@ -1,6 +1,7 @@
 "use client";
 import Tabs from "@/components/Tabs";
 import PreviewCard from "@/components/cards/PreviewCard";
+import CategoryCard from "@/components/cards/CategoryCard";
 import translate from "@/lib/locales";
 import { enhanceEvents, sortDesc, sortAsc } from "@/lib/utils";
 import { useEffect, useState } from "react";
@@ -55,7 +56,7 @@ function Filters({ locale, list = null }) {
   function changeRoute(value) {
     const url = `${window.location.pathname}?type=${value}`;
     window.history.pushState({ path: url }, "", url);
-    setTypeFilter(value); 
+    setTypeFilter(value);
   }
 
   return (
@@ -95,7 +96,7 @@ function Filters({ locale, list = null }) {
         {finished.length > 0 && (
           <div className="lg:grid lg:grid-cols-2 lg:gap-6 ">
             {finished?.map((item) => (
-              <PreviewCard locale={locale} data={item} key={item.id} />
+              <CategoryCard locale={locale} data={item} key={item.id} />
             ))}
           </div>
         )}
