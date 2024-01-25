@@ -27,6 +27,15 @@ export default function GenericCard({ data, locale, model }: GenericCardProps) {
     case "artist":
       card = <ArtistCard locale={locale} data={data} model={model} />;
       break;
+    case "festival_edition":
+      card = <CategoryCard locale={locale} data={data} model={model} />;
+      break;
+    case "company":
+      card = <CategoryCard locale={locale} data={data} model={model} />;
+      break;
+    case "workshop":
+      card = <CategoryCard locale={locale} data={data} model={model} />;
+      break;
     default:
       card = <StandardCard locale={locale} data={data} />;
       break;

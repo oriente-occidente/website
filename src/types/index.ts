@@ -56,6 +56,12 @@ export type GenericPageProps = {
     slugs?: LocaleValue;
     _modelApiKey: string;
     section?: string;
+    category?: any[];
+    festivalEditions?: any[];
+    artists?: any[];
+    comoanies?: any[];
+    workhops?: any[];
+    events?: any[];
   };
   locale: string;
 };

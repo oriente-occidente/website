@@ -44,6 +44,7 @@ query news($slug: String!, $locale: SiteLocale) {
       ...artistRecordFragment
     }
     comoanies {
+      _modelApiKey
       id
       title
       slug
@@ -55,6 +56,7 @@ query news($slug: String!, $locale: SiteLocale) {
       ...artisticResidecyRecordFragment
     }
     workhops {
+      _modelApiKey
       id
       title
       slug
