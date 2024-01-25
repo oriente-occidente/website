@@ -55,9 +55,9 @@ query mediaVideoQuery($slug: String!, $locale: SiteLocale) {
     mediaAuthor {
       ...mediaAuthorRecordFragment
     }
-    artisticResidencies {
-      ...artisticResidecyRecordFragment
-    }
+    # artisticResidencies {
+    #   ...artisticResidecyRecordFragment
+    # }
     news {
       _modelApiKey
       id
@@ -89,6 +89,7 @@ query mediaVideoQuery($slug: String!, $locale: SiteLocale) {
       slug
     }
     artists {
+      _modelApiKey
       slug
       title
       id

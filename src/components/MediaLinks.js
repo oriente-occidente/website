@@ -167,7 +167,7 @@ export default function MediaLinks({ data, locale }) {
         </div>
       )}
 
-      {data.artisticResidencies.length>0 && (
+      {/* {data.artisticResidencies.length>0 && (
         <div className="col-span-1">
           <div className="pb-2 text-xs font-bold uppercase">
             {translate("residence", locale)}
@@ -192,7 +192,7 @@ export default function MediaLinks({ data, locale }) {
             </>
           ))}
         </div>
-      )}
+      )} */}
 
       {data.publications.length>0 && (
         <div className="col-span-1">

@@ -27,6 +27,7 @@ query mediaPhotoQuery($id: ItemId, $locale: SiteLocale) {
       }
     }
     artists {
+      _modelApiKey
       slug
       title
       id
@@ -52,10 +53,10 @@ query mediaPhotoQuery($id: ItemId, $locale: SiteLocale) {
       _modelApiKey
       ...mediaAuthorRecordFragment
     }
-    artisticResidencies {
-      _modelApiKey
-      ...artisticResidecyRecordFragment
-    }
+    # artisticResidencies {
+    #   _modelApiKey
+    #   ...artisticResidecyRecordFragment
+    # }
     news {
       _modelApiKey
       id

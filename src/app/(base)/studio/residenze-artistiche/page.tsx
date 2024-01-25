@@ -43,7 +43,7 @@ export default async function Page() {
   // if (res.allArtisticResidecies) {
   //   list = [...res.allArtisticResidecies];
   // }
-  if (res.allArtists) {
+  if (res?.allArtists.length > 0) {
     list = [...res.allArtists];
   }
   // console.log("res", res);

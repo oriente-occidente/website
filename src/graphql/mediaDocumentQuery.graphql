@@ -58,9 +58,9 @@ query mediaDocumentQuery($slug: String!, $locale: SiteLocale) {
     mediaAuthor {
       ...mediaAuthorRecordFragment
     }
-    artisticResidencies {
-      ...artisticResidecyRecordFragment
-    }
+    # artisticResidencies {
+    #   ...artisticResidecyRecordFragment
+    # }
     news {
       _modelApiKey
       id
@@ -92,6 +92,7 @@ query mediaDocumentQuery($slug: String!, $locale: SiteLocale) {
       slug
     }
     artists {
+      _modelApiKey
       slug
       title
       id

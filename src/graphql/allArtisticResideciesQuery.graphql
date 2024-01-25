@@ -1,10 +1,14 @@
 query allArtisticResidenciesQuery($locale: SiteLocale!) {
   allArtists(
-    filter: { showInResidenciesIndex: { eq: "true" } }
+    filter: {
+      showInResidenciesIndex: { eq: true }
+      artisticResidence: { exists: true }
+    }
     locale: $locale
   ) {
     id
     title
+    slug
     _modelApiKey
     __typename
     seo: _seoMetaTags {
@@ -28,13 +32,14 @@ query allArtisticResidenciesQuery($locale: SiteLocale!) {
       ...slideShowHeroFrag
     }
     startDate: _firstPublishedAt
-    residencies {
+    artisticResidence {
       id
-      years {
-        id
-        year
-        title
-      }
+      title
+      year
+    }
+    associatedArtist {
+      id
+      year
     }
   }
 }
