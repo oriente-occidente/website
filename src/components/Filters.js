@@ -62,13 +62,13 @@ function Filters({ locale, list = null }) {
   return (
     <div className="mt-10">
       <div className="border-gray md:border-b">
-          <Tabs
-            locale={locale}
-            selected={typeFilter}
-            handleSelect={(value) => changeRoute(value)}
-            catLengths={catLengths}
-          />
-          {/* <div className="md:border-b md:border-gray md:pt-4 md:pb-8 xl:border-none xl:pt-0 xl:pb-0">
+        <Tabs
+          locale={locale}
+          selected={typeFilter}
+          handleSelect={(value) => changeRoute(value)}
+          catLengths={catLengths}
+        />
+        {/* <div className="md:border-b md:border-gray md:pt-4 md:pb-8 xl:border-none xl:pt-0 xl:pb-0">
             <div className="px-4 pt-4 md:flex md:justify-between md:px-6 xl:pt-2">
               {""}
             </div>

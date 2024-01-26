@@ -12,6 +12,25 @@ query festivalEditionBySlug($slug: String!, $locale: SiteLocale) {
       locale
       value
     }
+    news: _allReferencingNews(
+      locale: $locale
+      filter: { slug: { neq: null } }
+      orderBy: startDate_DESC
+      first: 8
+    ) {
+      id
+      slug
+      title
+      _modelApiKey
+      titleHero
+      imageHero {
+        ...imageHeroFrag
+      }
+      startDate
+      category {
+        ...tagsFrag
+      }
+    }
     slug
     _modelApiKey
     year {

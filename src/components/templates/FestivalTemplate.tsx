@@ -6,8 +6,11 @@ import Filters from "@/components/Filters";
 import AnchorBlock from "@/components/AnchorBlock";
 import translate from "@/lib/locales";
 import Breadcrumbs from "@/components/Breadcrumbs";
+import NewsCard from "../cards/NewsCard";
+import { Fragment } from "react";
 
 export default function FestivalTemplate({ data, locale }: FestivalProgramPageProps) {
+  const news = data.page.news || [];
   return (
     <div>
       <Breadcrumbs data={data?.page} locale={locale as any} background={null} />
@@ -28,11 +31,20 @@ export default function FestivalTemplate({ data, locale }: FestivalProgramPagePr
         </div>
       </div>
       <Filters list={data.list as any} locale={locale} />
-      <div id="news" className="container mx-auto px-0">
-        <div className="uppercase font-bold text-lg px-6 pt-12">
-          {translate("news", locale)}
+      {news.length > 0 && (
+        <div id="news" className="container mx-auto px-0">
+          <div className="uppercase font-bold text-lg px-6 pt-12">
+            {translate("news", locale)}
+          </div>
+          <div className="lg:grid lg:grid-cols-2 lg:gap-6 py-6">
+            {news.map((n: any, id: any) => (
+              <Fragment key={"news_" + id}>
+                <NewsCard locale={locale} data={n} />
+              </Fragment>
+            ))}
+          </div>
         </div>
-      </div>
+      )}
     </div>
   );
 }
