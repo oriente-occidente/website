@@ -7,15 +7,31 @@ import OtherSections from "@/components/contents/OtherSections";
 import { GenericPageProps } from "@/types";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import translate from "@/lib/locales";
+import { LoaderValue } from "next/dist/shared/lib/image-config";
 
 export default function PageTemplate({ data, locale }: GenericPageProps) {
   const { hero, content } = data;
   const sections = data.sections || [];
   const relatedContents = data.relatedContents || [];
   const otherSections = data.otherSections || [];
+  console.log("data.category", data.category);
 
-  function mergeArray(...arrays: any[]) {
-    return arrays.reduce((acc, array) => {
+  interface DataTypes {
+    festivalEditions?: [];
+    artists?: [];
+    companies?: [];
+    news?: [];
+    networks?: [];
+    workhops?: [];
+    events?: [];
+    projects?: [];
+    activities?: [];
+    // ... altri campi
+  }
+
+  function mergeArray(data: DataTypes, keys: any[]): any[] {
+    return keys.reduce((acc, key) => {
+      const array = data[key];
       if (Array.isArray(array) && array.length) {
         return [...acc, ...array];
       }
@@ -23,13 +39,17 @@ export default function PageTemplate({ data, locale }: GenericPageProps) {
     }, []);
   }
 
-  const activities = mergeArray(data.workhops, data.events);
+  const keysToMerge = ["workhops", "events", "projects"];
+  /* è possibile aggiungere altre chiavi */
 
-  const fields = [
+  const activities = mergeArray(data, keysToMerge);
+
+  const fields: (keyof DataTypes)[] = [
     "festivalEditions",
     "artists",
     "companies",
-    "news" /* altri campi */,
+    "news",
+    "networks" /* altri campi */,
   ];
   const relations = fields
     .filter(
@@ -40,7 +60,7 @@ export default function PageTemplate({ data, locale }: GenericPageProps) {
     )
     .map((field) => ({
       key: field,
-      title: translate(field, locale), // qui puoi eventualmente usare translate(field, locale) se hai delle traduzioni per le etichette
+      title: translate(field, locale),
       content: data[field],
     }));
 

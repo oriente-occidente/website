@@ -51,6 +51,7 @@ const labels_en = {
   back: "Back",
   no_events: "No workshops found in this category",
   festival: "Festival",
+  festivalEditions: "Festival Editions",
   company: "Company",
   companies: "Companies",
   residence: "Residence",

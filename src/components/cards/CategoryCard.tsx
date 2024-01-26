@@ -9,6 +9,7 @@ import translate from "@/lib/locales";
 
 export default function CategoryCard({ data, locale }: GenericCardProps) {
   const datesGrouped = data.dates ? groupDatesByDay(data.dates, locale) : [];
+  // console.log("data", data);
   let categoryTitle;
   // if (data.category) {
   //   const catToShow = data.category;
@@ -89,7 +90,7 @@ export default function CategoryCard({ data, locale }: GenericCardProps) {
               categoryTitle != "artisti" && ( */}
             {data.title && (
               <h2
-                className={`pr-5 text-lg font-semibold uppercase text-black md:text-lg group-hover:origin-left group-hover:-rotate-1 group-hover:-translate-y-3 duration-300`}
+                className={`pr-5 text-base sm:text-lg font-semibold uppercase text-black md:text-lg group-hover:origin-left group-hover:-rotate-1 group-hover:-translate-y-3 duration-300`}
               >
                 <span className={`${categoryClasses}`}>{data.title}</span>
               </h2>
@@ -127,13 +128,15 @@ export default function CategoryCard({ data, locale }: GenericCardProps) {
 
         <div className="z-20">
           <div className="mt-4 mb-3">
-            {categoryTitle && categoryTitle != "artist" && (
-              <span
-                className={`px-2 py-1 font-semibold uppercase mr-2 ${categoryClasses}`}
-              >
-                {translate(categoryTitle.toLowerCase(), locale)}
-              </span>
-            )}
+            {categoryTitle &&
+              categoryTitle != "artist" &&
+              categoryTitle != "festival_edition" && (
+                <span
+                  className={`px-2 py-1 font-semibold uppercase mr-2 ${categoryClasses}`}
+                >
+                  {translate(categoryTitle.toLowerCase(), locale)}
+                </span>
+              )}
           </div>
           {data.location && categoryTitle != "artisti" && (
             <div className="flex items-center gap-1 text-red-alt">

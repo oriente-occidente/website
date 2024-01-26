@@ -51,6 +51,7 @@ const labels_it = {
   back: "Torna indietro",
   no_events: "Nessun workshop trovato in questa categoria",
   festival: "Festival",
+  festivalEditions: "Edizioni Festival",
   company: "Compagnia",
   companies: "Compagnie",
   residence: "Residenza",

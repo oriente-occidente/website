@@ -202,6 +202,7 @@ query event($slug: String!, $locale: SiteLocale) {
       ...artistRecordFragment
     }
     companies {
+      _modelApiKey
       id
       title
       slug
@@ -210,6 +211,7 @@ query event($slug: String!, $locale: SiteLocale) {
       }
     }
     workhops {
+      _modelApiKey
       id
       title
       slug
@@ -218,6 +220,7 @@ query event($slug: String!, $locale: SiteLocale) {
       }
     }
     projects {
+      _modelApiKey
       id
       title
       slug

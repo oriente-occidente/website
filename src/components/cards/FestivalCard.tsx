@@ -58,7 +58,9 @@ export default function CategoryCard({ data, locale }: GenericCardProps) {
         return "card-title-default";
     }
   }
-  const categoryClasses = categoryColorClasses(categoryTitle ? categoryTitle : "");
+  const categoryClasses = categoryColorClasses(
+    categoryTitle ? categoryTitle : ""
+  );
 
   const link = resolveLink({ ...data, locale });
 
@@ -69,7 +71,7 @@ export default function CategoryCard({ data, locale }: GenericCardProps) {
           <div className="absolute z-20 bottom-0 group">
             {data.title && (
               <h2
-                className={`pr-5 text-lg font-semibold uppercase text-black md:text-lg group-hover:origin-left group-hover:-rotate-1 group-hover:-translate-y-3 duration-300`}
+                className={`pr-5 text-base sm:text-lg font-semibold uppercase text-black md:text-lg group-hover:origin-left group-hover:-rotate-1 group-hover:-translate-y-3 duration-300`}
               >
                 <span className={`${categoryClasses}`}>{data.title}</span>
               </h2>
@@ -107,8 +109,13 @@ export default function CategoryCard({ data, locale }: GenericCardProps) {
           </div>
           {data.location && categoryTitle != "artisti" && (
             <div className="flex items-center gap-1 text-red-alt">
-              <MapPinIcon aria-hidden="true" className="mr-1 h-4 w-3 text-red-alt" />
-              <div className="text-xxs inline-block normal-case">{data.location}</div>
+              <MapPinIcon
+                aria-hidden="true"
+                className="mr-1 h-4 w-3 text-red-alt"
+              />
+              <div className="text-xxs inline-block normal-case">
+                {data.location}
+              </div>
             </div>
           )}
           {categoryTitle != "artisti" &&

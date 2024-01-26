@@ -17,5 +17,10 @@ fragment festivalEditionRecordFragment on FestivalEditionRecord {
       }
     }
   }
+  imageHero {
+    responsiveImage {
+      ...imgFrag
+    }
+  }
   festivalType
 }

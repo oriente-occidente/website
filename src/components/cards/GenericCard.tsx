@@ -33,6 +33,9 @@ export default function GenericCard({ data, locale, model }: GenericCardProps) {
     case "company":
       card = <CategoryCard locale={locale} data={data} model={model} />;
       break;
+    case "companies":
+      card = <CategoryCard locale={locale} data={data} model={model} />;
+      break;
     case "workshop":
       card = <CategoryCard locale={locale} data={data} model={model} />;
       break;
