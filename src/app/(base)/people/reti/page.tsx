@@ -11,7 +11,11 @@ const locale = "it";
 
 export async function generateMetadata() {
   const siteLocale = locale as SiteLocale;
-  const data = await fetchDato(NetworksIndexDocument, { locale: siteLocale }, false);
+  const data = await fetchDato(
+    NetworksIndexDocument,
+    { locale: siteLocale },
+    false
+  );
   const page: any = data?.networksIndex || null;
   const meta = getSeoMeta(page);
   return meta;
@@ -20,13 +24,27 @@ export async function generateMetadata() {
 export default async function Page() {
   const siteLocale = locale as SiteLocale;
   const { isEnabled } = draftMode();
-  const data = await fetchDato(NetworksIndexDocument, { locale: siteLocale }, isEnabled);
+  const data = await fetchDato(
+    NetworksIndexDocument,
+    { locale: siteLocale },
+    isEnabled
+  );
   const page = data?.networksIndex;
-  const res = await fetchDato(NetworksDocument, { locale: siteLocale }, isEnabled);
+  const res = await fetchDato(
+    NetworksDocument,
+    { locale: siteLocale },
+    isEnabled
+  );
   let list: any = res?.networks || [];
+
+  const heroData = {
+    titleHero: page?.title || "",
+    descriptionHero: page?.description || "",
+  };
+
   const pageData: any = {
     list,
-    hero: null,
+    hero: heroData,
     page,
   };
   const slugData = extractSlugData(data.networksIndex);

@@ -11,7 +11,7 @@ export default function Relations({ relations, locale }) {
       <div className="md:mx-auto md:container md:grid md:grid-cols-4 md:gap-4">
         <div className="hidden md:block">
           <div
-            className="top-28 sticky divide-y"
+            className="top-28 sticky"
           >
             {relations.map((relation) => (
               <>
@@ -22,7 +22,7 @@ export default function Relations({ relations, locale }) {
                       className="flex justify-between p-2 hover:bg-red-light"
                       title={`Link to ${relation.title}`}
                     >
-                      <h2 className="mb-1 text-xxs tracking-wider ">
+                      <h2 className="mb-1 text-xs tracking-wider capitalize">
                         {relation.title}
                       </h2>
                       <ArrowLongDownIcon
@@ -37,7 +37,7 @@ export default function Relations({ relations, locale }) {
           </div>
         </div>
 
-        <div className="border-color-gray md:col-span-3 md:border-l pl-12 divide-y">
+        <div className="border-color-gray md:col-span-3 md:border-l px-4 md:pl-12 divide-y">
           {relations.map((r) => {
             return (
               <div key={r.title} id={sanitize(r.title)} className="mb-7">
@@ -46,7 +46,6 @@ export default function Relations({ relations, locale }) {
                 </h2>
                 <div className="lg:grid lg:grid-cols-2 lg:gap-6">
                   {r.content?.map((c) => {
-
                     return (
                       <div key={c.id}>
                         <GenericCard locale={locale} data={c} />

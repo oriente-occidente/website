@@ -7,7 +7,13 @@ import OtherSections from "@/components/contents/OtherSections";
 import { GenericPageProps } from "@/types";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import translate from "@/lib/locales";
-import { LoaderValue } from "next/dist/shared/lib/image-config";
+import {
+  EventsIndexRecord,
+  NetworksIndexRecord,
+  NewsIndexRecord,
+  ProjectsIndexRecord,
+} from "@/graphql/generated";
+import { lchown } from "fs";
 
 export default function PageTemplate({ data, locale }: GenericPageProps) {
   const { hero, content } = data;
@@ -16,23 +22,17 @@ export default function PageTemplate({ data, locale }: GenericPageProps) {
   const otherSections = data.otherSections || [];
   console.log("data.category", data.category);
 
-  interface DataTypes {
-    festivalEditions?: [];
-    artists?: [];
-    companies?: [];
-    news?: [];
-    networks?: [];
-    workhops?: [];
-    events?: [];
-    projects?: [];
-    activities?: [];
-    // ... altri campi
-  }
+  type DataTypes = Partial<
+    | ProjectsIndexRecord
+    | NewsIndexRecord
+    | NetworksIndexRecord
+    | EventsIndexRecord
+  >;
 
   function mergeArray(data: DataTypes, keys: any[]): any[] {
-    return keys.reduce((acc, key) => {
+    return keys.reduce((acc: any, key: keyof DataTypes) => {
       const array = data[key];
-      if (Array.isArray(array) && array.length) {
+      if (array && Array.isArray(array) && array.length > 0) {
         return [...acc, ...array];
       }
       return acc;
@@ -41,10 +41,18 @@ export default function PageTemplate({ data, locale }: GenericPageProps) {
 
   const keysToMerge = ["workhops", "events", "projects"];
   /* è possibile aggiungere altre chiavi */
+  const keysMediaToMerge = [
+    "_allReferencingMediaPhotos",
+    "_allReferencingMediaVideos",
+    "_allReferencingMediaAudios",
+    "_allReferencingMediaDocuments",
+  ];
+  /* è possibile aggiungere altre chiavi */
 
-  const activities = mergeArray(data, keysToMerge);
+  const activities = mergeArray(data as any, keysToMerge);
+  const media = mergeArray(data as any, keysMediaToMerge);
 
-  const fields: (keyof DataTypes)[] = [
+  const fields: string[] = [
     "festivalEditions",
     "artists",
     "companies",
@@ -53,28 +61,44 @@ export default function PageTemplate({ data, locale }: GenericPageProps) {
   ];
   const relations = fields
     .filter(
-      (field) =>
-        (data[field] as any) &&
-        Array.isArray(data[field] as any) &&
-        data[field].length > 0
+      (field: string) =>
+        (data as any)[field] &&
+        Array.isArray((data as any)[field] as any) &&
+        (data as any)[field].length > 0
     )
     .map((field) => ({
       key: field,
       title: translate(field, locale),
-      content: data[field],
+      content: (data as any)[field],
     }));
 
   const activityTypes = ["workshop", "event", "project"];
+  const mediaTypes = [
+    "media_audio",
+    "media_photo",
+    "media_video",
+    "media_document",
+  ];
+
   const activitiesContent = activities.filter(
     (activity: { _modelApiKey: string }) =>
       activityTypes.includes(activity._modelApiKey)
   );
-
+  const mediaContent = media.filter((media: { _modelApiKey: string }) =>
+    mediaTypes.includes(media._modelApiKey)
+  );
   if (activitiesContent.length > 0) {
     relations.push({
       key: "activities",
       title: translate("activities", locale),
       content: activitiesContent,
+    });
+  }
+  if (mediaContent.length > 0) {
+    relations.push({
+      key: "media",
+      title: translate("media", locale),
+      content: mediaContent,
     });
   }
 
@@ -87,7 +111,7 @@ export default function PageTemplate({ data, locale }: GenericPageProps) {
         <SectionsParagraphs locale={locale} sections={sections} />
       )}
       {relatedContents.length > 0 && (
-        <div className="mt-20 mb-6">
+        <div className="mt-20 mb-12">
           <GalleryPreview slides={relatedContents} locale={locale} />
         </div>
       )}

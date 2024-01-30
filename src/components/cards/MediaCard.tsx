@@ -20,11 +20,13 @@ export function CatTitle(catTitle: string) {
   let title = null;
   switch (catTitle) {
     case "document":
+    case "media_document":
       title = (
         <PaperClipIcon aria-hidden="true" className="h-4 w-4" color="#D83D35" />
       );
       break;
     case "audio":
+    case "media_audio":
       title = (
         <MusicalNoteIcon
           aria-hidden="true"
@@ -34,11 +36,13 @@ export function CatTitle(catTitle: string) {
       );
       break;
     case "photo":
+    case "media_photo":
       title = (
         <PhotoIcon aria-hidden="true" className="h-4 w-4" color="#D83D35" />
       );
       break;
     case "video":
+    case "media_video":
       title = (
         <VideoCameraIcon
           aria-hidden="true"
@@ -55,9 +59,19 @@ export function CatTitle(catTitle: string) {
 }
 
 export default function MediaCard({ data, locale }: GenericCardProps) {
-  let categoryTitle = data.contentType;
-  const link = resolveLink({ ...data, locale });
-  const title = data.title || data.id;
+  let categoryTitle = data.contentType || data._modelApiKey;
+  let mediaData;
+  if (data._modelApiKey === "media_photo") {
+    mediaData = {
+      ...data,
+      slug: data.id,
+    };
+  } else {
+    mediaData = data;
+  }
+
+  const link = resolveLink({ ...mediaData, locale });
+  const title = data.title || data.description || data.id;
   return (
     <div className="relative">
       <Link href={link} title={title} className="group">
@@ -65,15 +79,17 @@ export default function MediaCard({ data, locale }: GenericCardProps) {
           <div className="relative h-[220px] overflow-hidden md:h-[360px]">
             <img
               className="dato-image-cover duration-300 group-hover:scale-105"
-              src={data.image}
+              src={data.image.url ? data.image.url : data.image}
             />
           </div>
         ) : (
           <div className="relative h-[220px] overflow-hidden md:h-[360px] flex items-center justify-center border-1 border-gray-100 bg-cat-linguaggi">
-            {categoryTitle.toLowerCase() === "audio" && (
-              <SpeakerWaveIcon className="h-[150px] text-black" />
-            )}
-            {categoryTitle.toLowerCase() === "document" && (
+            {categoryTitle.toLowerCase() === "audio" ||
+              (categoryTitle.toLowerCase() === "media_audio" && (
+                <SpeakerWaveIcon className="h-[150px] text-black" />
+              ))}
+            {(categoryTitle.toLowerCase() === "document" ||
+              categoryTitle.toLowerCase() === "media_document") && (
               <DocumentTextIcon className="h-[150px] text-black" />
             )}
           </div>

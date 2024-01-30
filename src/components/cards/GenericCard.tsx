@@ -12,32 +12,23 @@ export default function GenericCard({ data, locale, model }: GenericCardProps) {
     case "news":
       card = <NewsCard locale={locale} data={data} />;
       break;
-    case "media_photo" || "media_audio" || "media_video" || "media_document":
+    case "media_photo":
+    case "media_audio":
+    case "media_video":
+    case "media_document":
       card = <MediaCard locale={locale} data={data} />;
       break;
     case "event":
-      card = <CategoryCard locale={locale} data={data} />;
-      break;
     case "project":
-      card = <CategoryCard locale={locale} data={data} />;
-      break;
     case "network":
+    case "festival_edition":
+    case "company":
+    case "companies":
+    case "workshop":
       card = <CategoryCard locale={locale} data={data} />;
       break;
     case "artist":
       card = <ArtistCard locale={locale} data={data} model={model} />;
-      break;
-    case "festival_edition":
-      card = <CategoryCard locale={locale} data={data} model={model} />;
-      break;
-    case "company":
-      card = <CategoryCard locale={locale} data={data} model={model} />;
-      break;
-    case "companies":
-      card = <CategoryCard locale={locale} data={data} model={model} />;
-      break;
-    case "workshop":
-      card = <CategoryCard locale={locale} data={data} model={model} />;
       break;
     default:
       card = <StandardCard locale={locale} data={data} />;

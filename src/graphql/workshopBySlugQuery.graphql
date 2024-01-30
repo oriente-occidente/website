@@ -137,6 +137,45 @@ query workshop($slug: String!, $locale: SiteLocale) {
         ...imageHeroFrag
       }
     }
+    _allReferencingMediaPhotos {
+      id
+      _modelApiKey
+      description
+      image {
+        url(imgixParams: { auto: [format, compress], ar: "5:4", fit: crop })
+        title
+      }
+    }
+    _allReferencingMediaVideos {
+      id
+      _modelApiKey
+      description
+      image {
+        url(imgixParams: { auto: [format, compress], ar: "5:4", fit: crop })
+        title
+      }
+      title
+    }
+    _allReferencingMediaDocuments {
+      id
+      _modelApiKey
+      description
+      image {
+        url(imgixParams: { auto: [format, compress], ar: "5:4", fit: crop })
+        title
+      }
+      title
+    }
+    _allReferencingMediaAudios {
+      id
+      _modelApiKey
+      description
+      image {
+        url(imgixParams: { auto: [format, compress], ar: "5:4", fit: crop })
+        title
+      }
+      title
+    }
     # --- END RELATIONS ---
     content {
       value
