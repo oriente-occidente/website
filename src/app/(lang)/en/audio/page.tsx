@@ -13,7 +13,7 @@ import MediaCard from "@/components/cards/MediaCard";
 import Wrapper from "@/components/layout/Wrapper";
 import { extractSlugData } from "@/lib/utils";
 
-const locale = "en";
+const locale = 'en';
 
 // export async function generateMetadata({ params }: BasicSlugPageProps) {
 //   const { slug } = params;

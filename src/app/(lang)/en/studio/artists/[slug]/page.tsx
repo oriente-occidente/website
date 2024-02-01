@@ -4,6 +4,8 @@ import { ArtistDocument, SiteLocale } from "@/graphql/generated";
 import PageTemplate from "@/components/templates/PageTemplate";
 import fetchDato from "@/lib/fetchDato";
 import getSeoMeta from "@/lib/seoUtils";
+import Wrapper from "@/components/layout/Wrapper";
+import { extractSlugData } from "@/lib/utils";
 
 const locale = 'en';
 
@@ -41,5 +43,11 @@ export default async function Page({ params }: BasicSlugPageProps) {
     hero: heroData,
     ...page,
   };
-  return <PageTemplate data={pageData} locale={locale} />;
+  const slugData = extractSlugData(page);
+
+  return (
+    <Wrapper locale={locale} slugData={slugData}>
+      <PageTemplate data={pageData} locale={locale} />;{" "}
+    </Wrapper>
+  );
 }
