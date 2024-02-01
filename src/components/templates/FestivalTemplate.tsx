@@ -24,7 +24,8 @@ export default function FestivalTemplate({ data, locale }: FestivalProgramPagePr
           </div>
         </div>
       )}
-      <AnchorBlock data={null} locale={locale} />
+      <div className="w-full lg:border-t-black border-t" />
+      {news.length > 0 && <AnchorBlock data={null} locale={locale} />}
       <div id="program" className="container mx-auto px-0">
         <div className="uppercase font-bold text-lg px-8 pt-12">
           {translate("program", locale)}

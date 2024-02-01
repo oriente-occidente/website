@@ -14,7 +14,7 @@ export default function AnchorBlock({ data, locale }) {
   };
 
   return (
-    <div className="lg:border-t-black border-b border-t">
+    <div className="border-b ">
       <div className="container mx-auto px-0">
         <div className="flex flex-col md:flex-row md:flex-nowrap text-left items-center px-0 mx-0">
           <a

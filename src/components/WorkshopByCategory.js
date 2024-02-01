@@ -1,10 +1,9 @@
 "use client";
 import translate from "@/lib/locales";
+import Link from "next/link";
 import { enhanceEvents, sortDesc, sortAsc } from "@/lib/utils";
 import PreviewCard from "@/components/cards/PreviewCard";
-import { useState } from "react";
-// import Head from "next/head";
-import { useRouter } from "next/router";
+import resolveLink from "@/lib/resolveLink";
 
 const MAX = 6;
 function WorkshopByCategory({ list, locale, heroData, workshopCat }) {
@@ -54,22 +53,27 @@ function WorkshopByCategory({ list, locale, heroData, workshopCat }) {
 
             {workshopCat && workshopCat !== "all" && (
               <div className="flex items-center">
-                <div
-                  // onClick={() => back()}
+                <Link
+                  href={resolveLink({ _modelApiKey: "education_page", locale })}
+                  title={translate("back", locale)}
                   className="flex cursor-pointer items-center hover:text-red"
                 >
                   <div className="mr-4 h-5 w-5 flex-none bg-arrow-left-black" />
                   <span className="">{translate("back", locale)} |</span>
-                </div>
+                </Link>
 
                 <div className="pl-1">
-                  {/* <Link className="" href="/workshop?cat=all" locale={locale}> */}
-                  <a
-                    // href={getLink(locale)}
+                  <Link
+                    href={resolveLink({
+                      _modelApiKey: "workshop_category",
+                      slug: "all",
+                      locale,
+                    })}
+                    title={translate("view_all", locale)}
                     className="flex items-center hover:text-red"
                   >
-                    {/* {translate("view_all", locale)} */} todo all
-                  </a>
+                    {translate("view_all", locale)}
+                  </Link>
                   {/* </Link> */}
                 </div>
               </div>
