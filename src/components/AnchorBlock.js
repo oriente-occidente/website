@@ -20,7 +20,7 @@ export default function AnchorBlock({ data, locale }) {
           <a
             href="#program"
             onClick={() => handleTabClick(translate("program", locale))}
-            className={`flex flex-grow justify-between py-4 px-5 text-base w-full md:w-1/2 ${
+            className={`flex flex-grow justify-between py-4 px-8 text-base w-full md:w-1/2 ${
               activeTab == translate("program", locale)
                 ? "bg-red-light font-semibold border-b border-black lg:border-none"
                 : ""
@@ -36,7 +36,7 @@ export default function AnchorBlock({ data, locale }) {
           <a
             href="#news"
             onClick={() => handleTabClick(translate("news", locale))}
-            className={`flex flex-grow justify-between py-4 px-5 text-base w-full md:w-1/2 ${
+            className={`flex flex-grow justify-between py-4 px-8 text-base w-full md:w-1/2 ${
               activeTab == translate("news", locale)
                 ? "bg-red-light font-semibold border-b border-black lg:border-none"
                 : ""
