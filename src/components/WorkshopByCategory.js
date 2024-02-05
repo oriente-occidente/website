@@ -3,6 +3,7 @@ import translate from "@/lib/locales";
 import Link from "next/link";
 import { enhanceEvents, sortDesc, sortAsc } from "@/lib/utils";
 import PreviewCard from "@/components/cards/PreviewCard";
+import GenericCard from "@/components/cards/GenericCard";
 import resolveLink from "@/lib/resolveLink";
 
 const MAX = 6;
@@ -101,7 +102,7 @@ function WorkshopByCategory({ list, locale, heroData, workshopCat }) {
         {active.length > 0 && (
           <div className="lg:grid lg:grid-cols-2 lg:gap-6">
             {active?.map((item) => (
-              <PreviewCard locale={locale} data={item} key={item.id} />
+              <GenericCard locale={locale} data={item} key={item.id} />
             ))}
           </div>
         )}
@@ -113,7 +114,8 @@ function WorkshopByCategory({ list, locale, heroData, workshopCat }) {
         {finished.length > 0 && (
           <div className="lg:grid lg:grid-cols-2 lg:gap-6 ">
             {finished?.slice(0, MAX).map((item) => (
-              <PreviewCard locale={locale} data={item} key={item.id} />
+
+              <GenericCard locale={locale} data={item} key={item.id} />
             ))}
           </div>
         )}
