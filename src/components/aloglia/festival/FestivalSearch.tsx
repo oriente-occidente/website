@@ -85,6 +85,7 @@ export default function Search({ locale }: SearchPropsType) {
         onStateChange={onStateChange}
         routing={true}
       >
+        {/* AND years:2021 */}
         <Configure filters={`ita:${isDefaultLocale ? "true" : "false"}`} />
         <div className="flex items-center lg:hidden pb-8 mb-8 border-b border-gray border-dashed">
           <button
@@ -122,10 +123,7 @@ export default function Search({ locale }: SearchPropsType) {
                   <Stats
                     translations={{
                       rootElementText({ nbHits }) {
-                        return `${nbHits} ${translate(
-                          "search.results",
-                          locale
-                        )} `;
+                        return `${nbHits} ${translate("search.results", locale)} `;
                       },
                     }}
                   />
@@ -143,11 +141,7 @@ export default function Search({ locale }: SearchPropsType) {
 
               {filtersOptions.map((filter) => {
                 return (
-                  <AccordionItem
-                    key={filter.name}
-                    filter={filter}
-                    locale={locale}
-                  />
+                  <AccordionItem key={filter.name} filter={filter} locale={locale} />
                 );
               })}
             </div>

@@ -19,6 +19,8 @@ export type ResolveLinkProps = {
   _modelApiKey: string;
   locale: string;
   section?: string;
+  year?: string;
+  archiveType?: string;
 };
 export type FooterProps = {
   locale: string;

@@ -4,11 +4,7 @@ import Link from "next/link";
 import translate from "@/lib/locales";
 
 import queryDatoCMS from "@/lib/fetchDato";
-import {
-  SiteLocale,
-  TimelineQueryDocument,
-  ArtistRecord,
-} from "@/graphql/generated";
+import { SiteLocale, TimelineQueryDocument, ArtistRecord } from "@/graphql/generated";
 import resolveLink from "@/lib/resolveLink";
 import { ArrowLongRightIcon } from "@heroicons/react/24/solid";
 import TimelineTabs from "@/components/TimelineTabs";
@@ -89,6 +85,9 @@ export default async function Page() {
   let timelineData: any = [];
 
   data?.allYears.map((y) => {
+    if (y.year == 2021) {
+      console.log("y", JSON.stringify(y, null, 2));
+    }
     let year = {
       year: y.year,
       content: {
@@ -98,6 +97,8 @@ export default async function Page() {
             locale,
             slug: "",
             slugs: [],
+            year: y.year.toString(),
+            archiveType: "festival",
           }),
           count: y.festivalCount.count,
           // images: y.festival,
@@ -108,6 +109,8 @@ export default async function Page() {
             locale,
             slug: "",
             slugs: [],
+            year: y.year.toString(),
+            archiveType: "artists",
           }),
           count: y.artistsCount.count + companiesCount(y.artists),
           // images: y.artists,
@@ -118,11 +121,13 @@ export default async function Page() {
             locale,
             slug: "",
             slugs: [],
+            year: y.year.toString(),
+            archiveType: "activities",
           }),
           count:
             y.eventsCount.count +
             y.workshopsCount.count +
-            y.artisticResidenciesCount.count +
+            // y.artisticResidenciesCount.count +
             y.projectsCount.count,
           //images: [...y.events, ...y.workshops, ...y.artisticResidencies, ...y.projects],
         },
@@ -132,6 +137,8 @@ export default async function Page() {
             locale,
             slug: "",
             slugs: [],
+            year: y.year.toString(),
+            archiveType: "news",
           }),
           count: y.newsCount.count + y.publicationsCount.count,
           images: [...y.news, ...y.publications],
@@ -151,6 +158,8 @@ export default async function Page() {
             locale,
             slug: "",
             slugs: [],
+            year: y.year.toString(),
+            archiveType: "media",
           }),
           count:
             y.mediaAudiosCount.count +
@@ -177,11 +186,7 @@ export default async function Page() {
             const view = renderSections(item.content, item.year);
 
             return (
-              <div
-                id={item.year}
-                key={item.year}
-                className="border-b py-8 mb-8"
-              >
+              <div id={item.year} key={item.year} className="border-b py-8 mb-8">
                 <div className="grid grid-flow-row grid-cols-1 md:grid-cols-2 lg:grid-cols-10 gap-4">
                   <div className="md:col-span-1 lg:col-span-4">
                     <div className="mb-8 text-lg">{item.year}</div>

@@ -7,12 +7,18 @@ export function t(section: string, locale: string) {
   return key?.[locale] ?? section;
 }
 
+function getArchiveYear(archiveType: string = "", year: string = "") {
+  return `?${archiveType}%5BrefinementList%5D%5Byears%5D%5B0%5D=${year}`;
+}
+
 export default function resolveLink({
   slug,
   slugs,
   _modelApiKey,
   section,
   locale,
+  year,
+  archiveType,
 }: ResolveLinkProps): string {
   //language prefix
   const lp = locale === config.defaultLocale ? "" : `/${locale}`;
@@ -103,20 +109,35 @@ export default function resolveLink({
     case "media_audio":
       return `${lp}/${t(`audio`, locale)}/${lslug}`;
     case "artists_companies_archive":
-      return `${lp}/${t(`archivio`, locale)}/${t(`artisti-compagnie`, locale)}`;
+      return `${lp}/${t(`archivio`, locale)}/${t(
+        `artisti-compagnie`,
+        locale
+      )}${getArchiveYear(archiveType, year)}`;
     case "activities_archive":
-      return `${lp}/${t(`archivio`, locale)}/${t(`attivita`, locale)}`;
+      return `${lp}/${t(`archivio`, locale)}/${t(`attivita`, locale)}${getArchiveYear(
+        archiveType,
+        year
+      )}`;
     case "festival_editions_archive":
-      return `${lp}/${t(`archivio`, locale)}/${t(`festival`, locale)}`;
+      return `${lp}/${t(`archivio`, locale)}/${t(`festival`, locale)}${getArchiveYear(
+        archiveType,
+        year
+      )}`;
     case "media_archive":
-      return `${lp}/${t(`archivio`, locale)}/${t(`media`, locale)}`;
+      return `${lp}/${t(`archivio`, locale)}/${t(`media`, locale)}${getArchiveYear(
+        archiveType,
+        year
+      )}`;
     case "news_publications_archive":
       return `${lp}/${t(`archivio`, locale)}/${t(
         `news-pubblicazioni`,
         locale
-      )}`;
+      )}${getArchiveYear(archiveType, year)}`;
     case "partners_networks_archive":
-      return `${lp}/${t(`archivio`, locale)}/${t(`partner-reti`, locale)}`;
+      return `${lp}/${t(`archivio`, locale)}/${t(`partner-reti`, locale)}${getArchiveYear(
+        archiveType,
+        year
+      )}`;
     case "years_archive":
       return `${lp}/${t(`archivio`, locale)}/${t(`timeline`, locale)}`;
     default:

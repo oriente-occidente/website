@@ -72,14 +72,14 @@ const queries: any = {
     }
   }}
 `,
-  residencies: `query residencies($locale: SiteLocale, $first: IntType, $skip: IntType) {
-  items: allArtisticResidecies(
-    first: $first
-    skip: $skip
-    locale: $locale
-  ) {
-    ${commonBlock}
-  }}`,
+  // residencies: `query residencies($locale: SiteLocale, $first: IntType, $skip: IntType) {
+  // items: allArtisticResidecies(
+  //   first: $first
+  //   skip: $skip
+  //   locale: $locale
+  // ) {
+  //   ${commonBlock}
+  // }}`,
   projects: `query projects($locale: SiteLocale, $first: IntType, $skip: IntType) {
   items: allProjects(
     first: $first

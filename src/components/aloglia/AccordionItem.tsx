@@ -12,7 +12,6 @@ export default function AccordionItem({ filter, locale }: any) {
   const handleToggle = () => {
     setClicked((prev) => !prev);
   };
-
   const [screenWidth, setScreenWidth] = useState(window.innerWidth);
 
   useEffect(() => {
@@ -71,6 +70,13 @@ export default function AccordionItem({ filter, locale }: any) {
                   : translate("search.show-more", locale);
               },
             }}
+            // TODO ?
+            // transformItems={(items) => {
+            //   return items.map((item) => ({
+            //     ...item,
+            //     isRefined: item.value == "2021" ? true : false,
+            //   }));
+            // }}
             classNames={{
               root: "text-xs",
               list: "",
