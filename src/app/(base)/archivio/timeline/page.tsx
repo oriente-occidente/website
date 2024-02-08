@@ -29,7 +29,7 @@ type ContentType = {
 
 function renderSections(content: ContentType, year: string): ReactNode[] {
   const elements: ReactNode[] = [];
-  console.log("CONTENT", content);
+  // console.log("CONTENT", content);
   const params: any = {
     festival: `festival[refinementList][years][0]=${year}`,
     artistsCompanies: `artists[refinementList][years][0]=${year}`,
