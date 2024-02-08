@@ -112,17 +112,14 @@ export default function Search({ locale }: SearchPropsType) {
                   <CustomSearchBox
                     resetNotification={notifyReset}
                     locale={locale}
-                    section="video"
+                    section=""
                   />
                 </div>
                 <div className="hidden mb-6 pb-6 border-b border-gray border-dashed lg:flex justify-between items-center">
                   <Stats
                     translations={{
                       rootElementText({ nbHits }) {
-                        return `${nbHits} ${translate(
-                          "search.results",
-                          locale
-                        )} `;
+                        return `${nbHits} ${translate("search.results", locale)} `;
                       },
                     }}
                   />
@@ -140,11 +137,7 @@ export default function Search({ locale }: SearchPropsType) {
 
               {filtersOptions.map((filter) => {
                 return (
-                  <AccordionItem
-                    key={filter.name}
-                    filter={filter}
-                    locale={locale}
-                  />
+                  <AccordionItem key={filter.name} filter={filter} locale={locale} />
                 );
               })}
             </div>

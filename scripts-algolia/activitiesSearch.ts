@@ -72,14 +72,40 @@ const queries: any = {
     }
   }}
 `,
-  // residencies: `query residencies($locale: SiteLocale, $first: IntType, $skip: IntType) {
-  // items: allArtisticResidecies(
-  //   first: $first
-  //   skip: $skip
-  //   locale: $locale
-  // ) {
-  //   ${commonBlock}
-  // }}`,
+  residencies: `query allArtists($locale: SiteLocale, $first: IntType, $skip: IntType) {
+    items: allArtists(
+      first: $first
+      skip: $skip
+      locale: $locale
+      orderBy: _publishedAt_DESC
+      filter: {
+        showInResidenciesIndex: { eq: true }
+        artisticResidence: { exists: true }
+      }
+    ) {
+      title
+      slug
+      id
+      _modelApiKey
+      years: artisticResidence {
+        year
+      }
+      image: imageHero {
+        url(imgixParams: {auto: [format, compress], ar: "5:4", fit: crop})
+      }
+      country: countries {
+        name
+      }
+      sections {
+        body {
+          value
+        }
+      }
+      content {
+        value
+      }
+    }
+  }`,
   projects: `query projects($locale: SiteLocale, $first: IntType, $skip: IntType) {
   items: allProjects(
     first: $first
@@ -100,8 +126,12 @@ function getPropertyAsString(list: any[], property: string) {
 }
 
 function toContentType(_modelApiKey: string) {
-  let tipology = ("" + _modelApiKey).toLowerCase().replace("media_", "");
-  return `${tipology.charAt(0).toUpperCase()}${tipology.slice(1)}`;
+  if (_modelApiKey == "artist") {
+    return "Artistic residency";
+  } else {
+    let tipology = ("" + _modelApiKey).toLowerCase().replace("media_", "");
+    return `${tipology.charAt(0).toUpperCase()}${tipology.slice(1)}`;
+  }
 }
 
 async function formatItem(item: any) {

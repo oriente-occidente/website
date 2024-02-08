@@ -85,9 +85,6 @@ export default async function Page() {
   let timelineData: any = [];
 
   data?.allYears.map((y) => {
-    if (y.year == 2021) {
-      console.log("y", JSON.stringify(y, null, 2));
-    }
     let year = {
       year: y.year,
       content: {
@@ -127,7 +124,8 @@ export default async function Page() {
           count:
             y.eventsCount.count +
             y.workshopsCount.count +
-            // y.artisticResidenciesCount.count +
+            y.artistsCount.count +
+            companiesCount(y.artists) +
             y.projectsCount.count,
           //images: [...y.events, ...y.workshops, ...y.artisticResidencies, ...y.projects],
         },
@@ -173,7 +171,7 @@ export default async function Page() {
     };
     timelineData.push(year);
   });
-  const slugData = extractSlugData(data);
+  const slugData = extractSlugData(data.yearsArchive);
   return (
     <Wrapper locale={locale} slugData={slugData}>
       <GenericHero data={hero} locale={locale} />

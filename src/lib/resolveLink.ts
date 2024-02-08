@@ -8,7 +8,11 @@ export function t(section: string, locale: string) {
 }
 
 function getArchiveYear(archiveType: string = "", year: string = "") {
-  return `?${archiveType}%5BrefinementList%5D%5Byears%5D%5B0%5D=${year}`;
+  let path = "";
+  if (year.length > 0) {
+    path = `?${archiveType}%5BrefinementList%5D%5Byears%5D%5B0%5D=${year}`;
+  }
+  return path;
 }
 
 export default function resolveLink({
