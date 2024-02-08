@@ -27,13 +27,22 @@ type ContentType = {
   media: { slug: string; count: number };
 };
 
-function renderSections(content: ContentType): ReactNode[] {
+function renderSections(content: ContentType, year: string): ReactNode[] {
   const elements: ReactNode[] = [];
+  console.log("CONTENT", content);
+  const params: any = {
+    festival: `festival[refinementList][years][0]=${year}`,
+    artitstCompanies: `artisti-compagnie[refinementList][years][0]=${year}`,
+    activities: `activities[refinementList][years][0]=${year}`,
+    news: `news-pubblicazioni[refinementList][years][0]=${year}`,
+    media: `media[refinementList][years][0]=${year}`,
+  };
+
   for (const [key, value] of Object.entries(content)) {
     const element = (
       <div key={key}>
         <Link
-          href={value.slug}
+          href={`${value.slug}?${params[key]}`}
           title={translate(key, locale)}
           className="flex gap-x-1"
         >
@@ -164,7 +173,8 @@ export default async function Page() {
 
         <div className="col-span-3 lg:border-l lg:border-red pl-1 lg:pl-20 xl:pl-28">
           {timelineData.map((item: any) => {
-            const view = renderSections(item.content);
+            console.log("ITEM", item);
+            const view = renderSections(item.content, item.year);
 
             return (
               <div

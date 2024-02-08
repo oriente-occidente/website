@@ -1,11 +1,9 @@
 "use client";
 import React from "react";
-import { useState, useRef, useEffect } from "react";
-import { ChevronDownIcon } from "@heroicons/react/24/solid";
+import { useState, useEffect } from "react";
 import algoliasearch from "algoliasearch/lite";
 import {
   InstantSearch,
-  RefinementList,
   InstantSearchProps,
   Stats,
   Configure,
@@ -72,6 +70,12 @@ export default function Search({ locale }: SearchPropsType) {
   const handleOpenFilters = () => {
     setOpenFilters(!openFilters);
   };
+
+  useEffect(() => {
+    console.log("SEARCH", window.location.search);
+    const params = decodeURIComponent(window.location.search);
+    console.log("SEARCH PARAMS", params);
+  }, []);
 
   return (
     <div className="xl:pb-8">

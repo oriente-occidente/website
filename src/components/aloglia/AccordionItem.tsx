@@ -42,7 +42,9 @@ export default function AccordionItem({ filter, locale }: any) {
         <span>{translate(`search-filters.${filter.name}`, locale)}</span>
         <ChevronDownIcon
           aria-hidden="true"
-          className={`h-4 w-4 motion-safe:duration-300 ${clicked ? "rotate-180" : ""}`}
+          className={`h-4 w-4 motion-safe:duration-300 ${
+            clicked ? "rotate-180" : ""
+          }`}
         />
       </button>
       <div
@@ -55,7 +57,10 @@ export default function AccordionItem({ filter, locale }: any) {
           <RefinementList
             searchable={filter.searchable}
             attribute={filter.name}
-            searchablePlaceholder={`${translate("search.placeholder", locale)}...`}
+            searchablePlaceholder={`${translate(
+              "search.placeholder",
+              locale
+            )}...`}
             operator={filter.operator ? "or" : "and"}
             limit={filter.limit}
             showMore={filter.showMore}
