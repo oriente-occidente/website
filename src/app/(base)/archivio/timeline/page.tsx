@@ -32,9 +32,9 @@ function renderSections(content: ContentType, year: string): ReactNode[] {
   console.log("CONTENT", content);
   const params: any = {
     festival: `festival[refinementList][years][0]=${year}`,
-    artitstCompanies: `artisti-compagnie[refinementList][years][0]=${year}`,
+    artistsCompanies: `artists[refinementList][years][0]=${year}`,
     activities: `activities[refinementList][years][0]=${year}`,
-    news: `news-pubblicazioni[refinementList][years][0]=${year}`,
+    news: `news[refinementList][years][0]=${year}`,
     media: `media[refinementList][years][0]=${year}`,
   };
 
