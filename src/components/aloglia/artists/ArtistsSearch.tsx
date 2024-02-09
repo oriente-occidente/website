@@ -44,6 +44,13 @@ export default function Search({ locale }: SearchPropsType) {
       showMore: false,
     },
     {
+      name: "years",
+      searchable: false,
+      operator: true,
+      limit: 5,
+      showMore: false,
+    },
+    {
       name: "country",
       searchable: false,
       operator: true,

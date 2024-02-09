@@ -17,6 +17,9 @@ const commonBlock = `
       value
     }
   }
+  years: associated_artist{
+    year
+  }
 `;
 
 const queries: any = {
@@ -80,6 +83,7 @@ async function formatItem(item: any) {
     content,
     //common
     _modelApiKey,
+    years: years.map((i: any) => i.year),
     contentType: toContentType(_modelApiKey),
     country: getPropertyAsString(item["country"], "name"),
   };
@@ -113,11 +117,18 @@ export default async function search(
     }
   }
 
-  const searchableAttributes = ["title", "slug", "content", "contentType"];
+  const searchableAttributes = [
+    "title",
+    "slug",
+    "content",
+    "contentType",
+    "years",
+  ];
   const attributesForFaceting = [
     "ita",
     "searchable(contentType)",
     "searchable(country)",
+    "searchable(years)",
   ];
   const customRanking: string[] = [];
 
