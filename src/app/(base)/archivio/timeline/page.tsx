@@ -125,7 +125,7 @@ export default async function Page() {
             y.eventsCount.count +
             y.workshopsCount.count +
             y.artistsCount.count +
-            companiesCount(y.artists) +
+            // companiesCount(y.artists) +
             y.projectsCount.count,
           //images: [...y.events, ...y.workshops, ...y.artisticResidencies, ...y.projects],
         },
