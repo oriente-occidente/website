@@ -17,7 +17,7 @@ const commonBlock = `
       value
     }
   }
-  years: associated_artist{
+  years: associatedArtist{
     year
   }
 `;

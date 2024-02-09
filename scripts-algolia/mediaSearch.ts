@@ -181,7 +181,6 @@ export default async function search(
     "searchable(category)",
     "searchable(years)",
     "searchable(festival)",
-    // "searchable(news)",
   ];
   const customRanking: string[] = [];
 
