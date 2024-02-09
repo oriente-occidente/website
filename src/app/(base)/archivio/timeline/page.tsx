@@ -41,17 +41,21 @@ function renderSections(content: ContentType, year: string): ReactNode[] {
 
   for (const [key, value] of Object.entries(content)) {
     const element = (
-      <div key={key}>
-        <Link
-          href={value.slug}
-          title={translate(key, locale)}
-          className="flex gap-x-1"
-        >
-          <div>({value.count})</div>
-          <div>{translate(key, locale)}</div>
-          <ArrowLongRightIcon aria-hidden="true" className="h-5 w-5" />
-        </Link>
-      </div>
+      <>
+        {value.count > 0 && (
+          <div key={key}>
+            <Link
+              href={value.slug}
+              title={translate(key, locale)}
+              className="flex gap-x-1"
+            >
+              <div>({value.count})</div>
+              <div>{translate(key, locale)}</div>
+              <ArrowLongRightIcon aria-hidden="true" className="h-5 w-5" />
+            </Link>
+          </div>
+        )}
+      </>
     );
     elements.push(element);
   }
