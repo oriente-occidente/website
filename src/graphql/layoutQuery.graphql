@@ -22,7 +22,10 @@ query layout($locale: SiteLocale) {
       }
     }
   }
-  menu: allMenuItems(filter: { parent: { exists: "false" } }, locale: $locale) {
+  menu: allMenuItems(
+    filter: { parent: { exists: "false" }, slug: { neq: null } }
+    locale: $locale
+  ) {
     ...menuItemFrag
     children {
       ...menuItemFrag

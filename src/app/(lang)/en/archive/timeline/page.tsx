@@ -4,7 +4,11 @@ import Link from "next/link";
 import translate from "@/lib/locales";
 
 import queryDatoCMS from "@/lib/fetchDato";
-import { SiteLocale, TimelineQueryDocument, ArtistRecord } from "@/graphql/generated";
+import {
+  SiteLocale,
+  TimelineQueryDocument,
+  ArtistRecord,
+} from "@/graphql/generated";
 import resolveLink from "@/lib/resolveLink";
 import { ArrowLongRightIcon } from "@heroicons/react/24/solid";
 import TimelineTabs from "@/components/TimelineTabs";
@@ -25,32 +29,33 @@ type ContentType = {
 
 function renderSections(content: ContentType, year: string): ReactNode[] {
   const elements: ReactNode[] = [];
-  console.log("CONTENT", content);
-  const params: any = {
-    festival: `festival[refinementList][years][0]=${year}`,
-    artitstCompanies: `artisti-compagnie[refinementList][years][0]=${year}`,
-    activities: `activities[refinementList][years][0]=${year}`,
-    news: `news-pubblicazioni[refinementList][years][0]=${year}`,
-    media: `media[refinementList][years][0]=${year}`,
-  };
+  // console.log("CONTENT", content);
+  // const params: any = {
+  //   festival: `festival[refinementList][years][0]=${year}`,
+  //   artistsCompanies: `artists[refinementList][years][0]=${year}`,
+  //   activities: `activities[refinementList][years][0]=${year}`,
+  //   news: `news[refinementList][years][0]=${year}`,
+  //   media: `media[refinementList][years][0]=${year}`,
+  // };
+  //{`${value.slug}?${params[key]}`}
 
   for (const [key, value] of Object.entries(content)) {
     const element = (
-      <div key={key}>
-<<<<<<< HEAD
-        <Link
-          href={`${value.slug}?${params[key]}`}
-          title={translate(key, locale)}
-          className="flex gap-x-1"
-        >
-=======
-        <Link href={value.slug} title={translate(key, locale)} className="flex gap-x-1">
->>>>>>> 99ebc53 (algolia imp)
-          <div>({value.count})</div>
-          <div>{translate(key, locale)}</div>
-          <ArrowLongRightIcon aria-hidden="true" className="h-5 w-5" />
-        </Link>
-      </div>
+      <>
+        {value.count > 0 && (
+          <div key={key}>
+            <Link
+              href={value.slug}
+              title={translate(key, locale)}
+              className="flex gap-x-1"
+            >
+              <div>({value.count})</div>
+              <div>{translate(key, locale)}</div>
+              <ArrowLongRightIcon aria-hidden="true" className="h-5 w-5" />
+            </Link>
+          </div>
+        )}
+      </>
     );
     elements.push(element);
   }
@@ -129,7 +134,7 @@ export default async function Page() {
             y.eventsCount.count +
             y.workshopsCount.count +
             y.artistsCount.count +
-            companiesCount(y.artists) +
+            // companiesCount(y.artists) +
             y.projectsCount.count,
           //images: [...y.events, ...y.workshops, ...y.artisticResidencies, ...y.projects],
         },
@@ -188,7 +193,11 @@ export default async function Page() {
             const view = renderSections(item.content, item.year);
 
             return (
-              <div id={item.year} key={item.year} className="border-b py-8 mb-8">
+              <div
+                id={item.year}
+                key={item.year}
+                className="border-b py-8 mb-8"
+              >
                 <div className="grid grid-flow-row grid-cols-1 md:grid-cols-2 lg:grid-cols-10 gap-4">
                   <div className="md:col-span-1 lg:col-span-4">
                     <div className="mb-8 text-lg">{item.year}</div>

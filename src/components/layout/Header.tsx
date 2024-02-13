@@ -100,8 +100,6 @@ function renderLink(item: any, locale: string) {
 
 function Header(props: any) {
   const { data, locale, slugData } = props;
-  // console.log("locale", locale);
-  // console.log("slugdata", slugData);
   return (
     <header>
       <Popover className="t-0 fixed inset-x-0 z-40 h-[70px] bg-white/80 md:h-[80px] lg:h-[110px]">
@@ -130,21 +128,13 @@ function Header(props: any) {
                 </Popover.Button>
               </div>
               <div className="hidden lg:flex lg:flex-1 lg:items-center lg:justify-end">
-                <Popover.Group
-                  as="nav"
-                  className="flex space-x-2 uppercase xl:space-x-4"
-                >
+                <Popover.Group as="nav" className="flex space-x-2 uppercase xl:space-x-4">
                   {data?.map((item: any) => (
-                    <Fragment key={item.id}>
-                      {renderLink(item, locale)}
-                    </Fragment>
+                    <Fragment key={item.id}>{renderLink(item, locale)}</Fragment>
                   ))}
                 </Popover.Group>
                 <div className="text-xxs text-black-light ml-14 pt-1 font-semibold uppercase tracking-widest lg:flex">
-                  <LanguageSwitcher
-                    currentLocale={locale}
-                    slugData={slugData || {}}
-                  />
+                  <LanguageSwitcher currentLocale={locale} slugData={slugData || {}} />
                 </div>
               </div>
             </div>

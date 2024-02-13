@@ -4,11 +4,7 @@ import Link from "next/link";
 import translate from "@/lib/locales";
 
 import queryDatoCMS from "@/lib/fetchDato";
-import {
-  SiteLocale,
-  TimelineQueryDocument,
-  ArtistRecord,
-} from "@/graphql/generated";
+import { SiteLocale, TimelineQueryDocument, ArtistRecord } from "@/graphql/generated";
 import resolveLink from "@/lib/resolveLink";
 import { ArrowLongRightIcon } from "@heroicons/react/24/solid";
 import TimelineTabs from "@/components/TimelineTabs";
@@ -92,7 +88,7 @@ export default async function Page() {
   };
 
   let timelineData: any = [];
-
+  console.log("DATA --->", data);
   data?.allYears.map((y) => {
     let year = {
       year: y.year,
@@ -189,15 +185,10 @@ export default async function Page() {
 
         <div className="col-span-3 lg:border-l lg:border-red pl-1 lg:pl-20 xl:pl-28">
           {timelineData.map((item: any) => {
-            console.log("ITEM", item);
             const view = renderSections(item.content, item.year);
 
             return (
-              <div
-                id={item.year}
-                key={item.year}
-                className="border-b py-8 mb-8"
-              >
+              <div id={item.year} key={item.year} className="border-b py-8 mb-8">
                 <div className="grid grid-flow-row grid-cols-1 md:grid-cols-2 lg:grid-cols-10 gap-4">
                   <div className="md:col-span-1 lg:col-span-4">
                     <div className="mb-8 text-lg">{item.year}</div>
