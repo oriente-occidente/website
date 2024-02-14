@@ -44,13 +44,11 @@ export default function resolveLink({
     return "#";
   }
 
-  // if (redirect) {
-  //   return `${lp}`;
-  // }
-
   switch (_modelApiKey) {
     case "page":
-      if (!s || s === "-") {
+      if (redirect) {
+        return `${lp}`;
+      } else if (!s || s === "-") {
         return `${lp}/${lslug}`;
       } else if (s === "festival") {
         return `${lp}/${ls}/p/${lslug}`;
@@ -64,7 +62,11 @@ export default function resolveLink({
     case "workshop_category":
       return `${lp}/studio/${t(`formazione`, locale)}/c/${lslug}`;
     case "workshop":
-      return `${lp}/studio/${t(`formazione`, locale)}/${lslug}`;
+      if (redirect) {
+        return `${lp}`;
+      } else {
+        return `${lp}/studio/${t(`formazione`, locale)}/${lslug}`;
+      }
     case "artistic_residencies_index":
       return `${lp}/studio/${t(`residenze-artistiche`, locale)}/`;
     case "artistic_residecy":
@@ -78,7 +80,11 @@ export default function resolveLink({
     case "events_index":
       return `${lp}/people/${t(`eventi`, locale)}/`;
     case "event":
-      return `${lp}/people/${t(`eventi`, locale)}/${lslug}`;
+      if (redirect) {
+        return `${lp}`;
+      } else {
+        return `${lp}/people/${t(`eventi`, locale)}/${lslug}`;
+      }
     case "projects_index":
       return `${lp}/people/${t(`progetti`, locale)}/`;
     case "project":
@@ -90,7 +96,11 @@ export default function resolveLink({
     case "news_index":
       return `${lp}/${t(`news`, locale)}/`;
     case "news":
-      return `${lp}/${t(`news`, locale)}/${lslug}`;
+      if (redirect) {
+        return `${lp}`;
+      } else {
+        return `${lp}/${t(`news`, locale)}/${lslug}`;
+      }
     case "videos_index":
       return `${lp}/${t(`video`, locale)}/`;
     case "audios_index":

@@ -21,21 +21,27 @@ query timelineQuery($locale: SiteLocale) {
       slug
     }
     # ARTISTS / COMPANIES
-    artistsCount: _allReferencingArtistsMeta {
-      count
-    }
-    artists: _allReferencingArtists(
+    artistsCount: _allReferencingArtistsMeta(
       filter: {
         showInResidenciesIndex: { eq: true }
         artisticResidence: { exists: true }
         slug: { neq: null }
       }
+      locale: $locale
     ) {
-      _allReferencingCompanies {
-        id
-      }
+      count
+    }
+    artists: _allReferencingArtists(
+      filter: { associatedArtist: { exists: true } }
+      locale: $locale
+    ) {
       id
-      slug
+    }
+    companies: _allReferencingCompanies(
+      filter: { associatedArtist: { exists: true } }
+      locale: $locale
+    ) {
+      id
     }
     # ACTIVITIES
     eventsCount: _allReferencingEventsMeta {

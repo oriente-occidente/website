@@ -21,7 +21,6 @@ export async function generateMetadata({ params }: BasicSlugPageProps) {
 
 export default async function Page({ params }: BasicSlugPageProps) {
   const { slug } = params;
-
   const { isEnabled } = draftMode();
   const siteLocale = locale as SiteLocale;
   const data = await fetchDato(PageDocument, { locale: siteLocale, slug }, isEnabled);
@@ -38,6 +37,7 @@ export default async function Page({ params }: BasicSlugPageProps) {
     hero: heroData,
     ...data.page,
   };
+  console.log("data.page ->", data.page);
 
   const slugData = extractSlugData(data.page);
 

@@ -4,11 +4,7 @@ import Link from "next/link";
 import translate from "@/lib/locales";
 
 import queryDatoCMS from "@/lib/fetchDato";
-import {
-  SiteLocale,
-  TimelineQueryDocument,
-  ArtistRecord,
-} from "@/graphql/generated";
+import { SiteLocale, TimelineQueryDocument, ArtistRecord } from "@/graphql/generated";
 import resolveLink from "@/lib/resolveLink";
 import { ArrowLongRightIcon } from "@heroicons/react/24/solid";
 import TimelineTabs from "@/components/TimelineTabs";
@@ -63,15 +59,8 @@ function renderSections(content: ContentType, year: string): ReactNode[] {
 }
 
 function companiesCount(data: any) {
-  let companies: string[] = [];
-  data.map((artist: ArtistRecord) => {
-    artist._allReferencingCompanies.forEach((c) => {
-      if (!companies.includes(c.id)) {
-        companies.push(c.id);
-      }
-    });
-  });
-  return companies.length;
+  const ids = data.map((elem: any) => elem.id);
+  return ids.length;
 }
 
 export default async function Page() {
@@ -92,7 +81,6 @@ export default async function Page() {
   };
 
   let timelineData: any = [];
-
   data?.allYears.map((y) => {
     let year = {
       year: y.year,
@@ -118,8 +106,7 @@ export default async function Page() {
             year: y.year.toString(),
             archiveType: "artists",
           }),
-          count: y.artistsCount.count + companiesCount(y.artists),
-          // images: y.artists,
+          count: companiesCount([...y.artists, ...y.companies]),
         },
         activities: {
           slug: resolveLink({
@@ -134,7 +121,6 @@ export default async function Page() {
             y.eventsCount.count +
             y.workshopsCount.count +
             y.artistsCount.count +
-            // companiesCount(y.artists) +
             y.projectsCount.count,
           //images: [...y.events, ...y.workshops, ...y.artisticResidencies, ...y.projects],
         },
@@ -189,15 +175,10 @@ export default async function Page() {
 
         <div className="col-span-3 lg:border-l lg:border-red pl-1 lg:pl-20 xl:pl-28">
           {timelineData.map((item: any) => {
-            console.log("ITEM", item);
             const view = renderSections(item.content, item.year);
 
             return (
-              <div
-                id={item.year}
-                key={item.year}
-                className="border-b py-8 mb-8"
-              >
+              <div id={item.year} key={item.year} className="border-b py-8 mb-8">
                 <div className="grid grid-flow-row grid-cols-1 md:grid-cols-2 lg:grid-cols-10 gap-4">
                   <div className="md:col-span-1 lg:col-span-4">
                     <div className="mb-8 text-lg">{item.year}</div>

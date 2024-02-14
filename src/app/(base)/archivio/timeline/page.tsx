@@ -59,15 +59,8 @@ function renderSections(content: ContentType, year: string): ReactNode[] {
 }
 
 function companiesCount(data: any) {
-  let companies: string[] = [];
-  data.map((artist: ArtistRecord) => {
-    artist._allReferencingCompanies.forEach((c) => {
-      if (!companies.includes(c.id)) {
-        companies.push(c.id);
-      }
-    });
-  });
-  return companies.length;
+  const ids = data.map((elem: any) => elem.id);
+  return ids.length;
 }
 
 export default async function Page() {
@@ -88,7 +81,6 @@ export default async function Page() {
   };
 
   let timelineData: any = [];
-  console.log("DATA --->", data);
   data?.allYears.map((y) => {
     let year = {
       year: y.year,
@@ -114,8 +106,7 @@ export default async function Page() {
             year: y.year.toString(),
             archiveType: "artists",
           }),
-          count: y.artistsCount.count + companiesCount(y.artists),
-          // images: y.artists,
+          count: companiesCount([...y.artists, ...y.companies]),
         },
         activities: {
           slug: resolveLink({
@@ -130,7 +121,6 @@ export default async function Page() {
             y.eventsCount.count +
             y.workshopsCount.count +
             y.artistsCount.count +
-            // companiesCount(y.artists) +
             y.projectsCount.count,
           //images: [...y.events, ...y.workshops, ...y.artisticResidencies, ...y.projects],
         },
