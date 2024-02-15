@@ -21,35 +21,19 @@ export function CatTitle(catTitle: string) {
   switch (catTitle) {
     case "document":
     case "media_document":
-      title = (
-        <PaperClipIcon aria-hidden="true" className="h-4 w-4" color="#D83D35" />
-      );
+      title = <PaperClipIcon aria-hidden="true" className="h-4 w-4" color="#D83D35" />;
       break;
     case "audio":
     case "media_audio":
-      title = (
-        <MusicalNoteIcon
-          aria-hidden="true"
-          className="h-4 w-4"
-          color="#D83D35"
-        />
-      );
+      title = <MusicalNoteIcon aria-hidden="true" className="h-4 w-4" color="#D83D35" />;
       break;
     case "photo":
     case "media_photo":
-      title = (
-        <PhotoIcon aria-hidden="true" className="h-4 w-4" color="#D83D35" />
-      );
+      title = <PhotoIcon aria-hidden="true" className="h-4 w-4" color="#D83D35" />;
       break;
     case "video":
     case "media_video":
-      title = (
-        <VideoCameraIcon
-          aria-hidden="true"
-          className="h-4 w-4"
-          color="#D83D35"
-        />
-      );
+      title = <VideoCameraIcon aria-hidden="true" className="h-4 w-4" color="#D83D35" />;
       break;
     default:
       <></>;
@@ -60,17 +44,7 @@ export function CatTitle(catTitle: string) {
 
 export default function MediaCard({ data, locale }: GenericCardProps) {
   let categoryTitle = data.contentType || data._modelApiKey;
-  let mediaData;
-  if (data._modelApiKey === "media_photo") {
-    mediaData = {
-      ...data,
-      slug: data.id,
-    };
-  } else {
-    mediaData = data;
-  }
-
-  const link = resolveLink({ ...mediaData, locale });
+  const link = resolveLink({ ...data, locale });
   const title = data.title || data.description || data.id;
   return (
     <div className="relative">
