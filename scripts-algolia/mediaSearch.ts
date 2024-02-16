@@ -43,7 +43,7 @@ const commonBlock = `
 
 const queries: any = {
   allMediaVideosQuery: `query allMediaVideos($locale: SiteLocale, $first: IntType, $skip: IntType) {
-    items: allMediaVideos(first: $first, skip: $skip, locale: $locale,orderBy: creationDate_DESC) {
+    items: allMediaVideos(first: $first, skip: $skip, locale: $locale,orderBy: creationDate_DESC, fallbackLocales: it) {
     ${commonBlock}
     title
     slug
@@ -52,7 +52,7 @@ const queries: any = {
     }
   }}`,
   allMediaPhotosQuery: `query allMediaPhotos($locale: SiteLocale, $first: IntType, $skip: IntType) {
-  items: allMediaPhotos(first: $first, skip: $skip, locale: $locale,orderBy: creationDate_DESC) {
+  items: allMediaPhotos(first: $first, skip: $skip, locale: $locale,orderBy: creationDate_DESC, fallbackLocales: it) {
     image {
       url(imgixParams: {auto: [format, compress], ar: "5:4", fit: crop})
       title
@@ -60,7 +60,7 @@ const queries: any = {
     ${commonBlock}
   }}`,
   allMediaAudios: `query allMediaVideos($locale: SiteLocale, $first: IntType, $skip: IntType) {
-  items: allMediaAudios(first: $first, skip: $skip, locale: $locale,orderBy: creationDate_DESC) {
+  items: allMediaAudios(first: $first, skip: $skip, locale: $locale,orderBy: creationDate_DESC, fallbackLocales: it) {
     title
     slug
     image {
@@ -69,8 +69,8 @@ const queries: any = {
     ${commonBlock}
   }}
 `,
-  allMediaDocuments: `query allMediaDocuments($locale: SiteLocale, $first: IntType, $skip: IntType,) {
-  items: allMediaDocuments(first: $first, skip: $skip, locale: $locale,orderBy: creationDate_DESC) {
+  allMediaDocuments: `query allMediaDocuments($locale: SiteLocale, $first: IntType, $skip: IntType) {
+  items: allMediaDocuments(first: $first, skip: $skip, locale: $locale,orderBy: creationDate_DESC, fallbackLocales: it) {
     ${commonBlock}
     title
     slug
