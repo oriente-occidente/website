@@ -63,7 +63,7 @@ query artist($slug: String!, $locale: SiteLocale) {
     countries {
       name
     }
-    _allReferencingMediaPhotos {
+    _allReferencingMediaPhotos(fallbackLocales: it) {
       id
       _modelApiKey
       description
@@ -72,8 +72,20 @@ query artist($slug: String!, $locale: SiteLocale) {
         title
       }
     }
-    _allReferencingMediaVideos {
+    _allReferencingMediaVideos(fallbackLocales: it) {
       id
+      _modelApiKey
+      slug
+      description
+      image {
+        url(imgixParams: { auto: [format, compress], ar: "5:4", fit: crop })
+        title
+      }
+      title
+    }
+    _allReferencingMediaDocuments(fallbackLocales: it) {
+      id
+      slug
       _modelApiKey
       description
       image {
@@ -82,18 +94,9 @@ query artist($slug: String!, $locale: SiteLocale) {
       }
       title
     }
-    _allReferencingMediaDocuments {
+    _allReferencingMediaAudios(fallbackLocales: it) {
       id
-      _modelApiKey
-      description
-      image {
-        url(imgixParams: { auto: [format, compress], ar: "5:4", fit: crop })
-        title
-      }
-      title
-    }
-    _allReferencingMediaAudios {
-      id
+      slug
       _modelApiKey
       description
       image {

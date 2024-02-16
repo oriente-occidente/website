@@ -6,9 +6,8 @@ import getSeoMeta from "@/lib/seoUtils";
 import fetchDato from "@/lib/fetchDato";
 import Wrapper from "@/components/layout/Wrapper";
 import { extractSlugData } from "@/lib/utils";
-import { TestQueryDocument } from "@/graphql/generated";
 
-const locale = "en";
+const locale = 'en';
 
 export async function generateMetadata({ params }: BasicSlugPageProps) {
   const { slug } = params;
@@ -23,17 +22,7 @@ export default async function Page({ params }: BasicSlugPageProps) {
   const { slug } = params;
   const { isEnabled } = draftMode();
   const siteLocale = locale as SiteLocale;
-
   const data = await fetchDato(EventDocument, { locale: siteLocale, slug }, isEnabled);
-  const test = await fetchDato(
-    TestQueryDocument,
-    { locale: siteLocale, slug },
-    isEnabled
-  );
-
-  // console.log("data ->", data);
-  // console.log("test ->", test.event?.relatedContents);
-
   const heroData: any = {
     layoutHero: data?.event?.layoutHero,
     titleHero: data?.event?.titleHero,
