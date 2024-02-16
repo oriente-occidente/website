@@ -55,7 +55,13 @@ export default async function Page({ params }: BasicSlugPageProps) {
   //   hero: heroData,
   //   ...data.workshop,
   // };
-  const slugData = extractSlugData(data.allWorkshopCategories);
+  const slugData =
+    slug != "all"
+      ? extractSlugData(data.allWorkshopCategories[0])
+      : {
+          _modelApiKey: "workshop_category",
+          slug: "all",
+        };
   return (
     <Wrapper locale={locale} slugData={slugData}>
       <Breadcrumbs

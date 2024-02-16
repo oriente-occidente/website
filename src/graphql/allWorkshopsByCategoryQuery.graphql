@@ -3,6 +3,14 @@ query allWorkshopsByCategoryQuery($slug: String, $locale: SiteLocale) {
     id
     title
     slug
+    titles: _allTitleLocales {
+      locale
+      value
+    }
+    slugs: _allSlugLocales {
+      locale
+      value
+    }
     _modelApiKey
     _allReferencingWorkshops(filter: { slug: { neq: null } }, locale: $locale) {
       _modelApiKey
