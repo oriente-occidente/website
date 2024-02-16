@@ -6,10 +6,7 @@ import Breadcrumbs from "../Breadcrumbs";
 import MainContent from "@/components/contents/MainContent";
 import SectionsParagraphs from "@/components/contents/SectionsParagraphs";
 
-export default function IndexPageTemplate({
-  data,
-  locale,
-}: GenericIndexPageProps) {
+export default function IndexPageTemplate({ data, locale }: GenericIndexPageProps) {
   const { list, hero, page } = data;
   const latestYear = list?.reduce((latest, item) => {
     const itemYear = new Date(item.startDate).getFullYear();
@@ -21,12 +18,9 @@ export default function IndexPageTemplate({
     return itemYear === latestYear;
   });
 
-  const allHaveEventModelApiKey = list.every(
-    (obj) => obj._modelApiKey === "event"
-  );
+  const allHaveEventModelApiKey = list.every((obj) => obj._modelApiKey === "event");
   const dataList = allHaveEventModelApiKey ? filteredList : list;
   const _modelApiKey = page?._modelApiKey;
-  // console.log("_modelApiKey", _modelApiKey);
   return (
     <div>
       <Breadcrumbs data={page} locale={locale as any} background={null} />

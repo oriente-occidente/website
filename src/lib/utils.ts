@@ -275,7 +275,6 @@ export function extractSlugData(data: any) {
   ];
 
   let slugData = { ...data };
-
   Object.keys(data).forEach((k: string) => {
     if (!keys.includes(k)) {
       delete slugData[k];

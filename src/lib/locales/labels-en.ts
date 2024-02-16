@@ -88,11 +88,12 @@ const labels_en = {
   workshopsDescription: "Complete program",
   languagesDescription: "Conferences and talks",
   search: {
+    title: "Search",
     show: "Show search",
     label: "Search",
     results: "Results",
     artworks_shown: "Artworks shown",
-    placeholder: "Search",
+    placeholder: "Search...",
     categories: "Categories",
     museums: "Filter for Museums",
     artworks: "Filter for Artworks",

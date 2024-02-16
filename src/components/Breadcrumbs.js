@@ -11,7 +11,7 @@ export default function Breadcrumbs({ data, locale, background }) {
   const href = parentIndex
     ? resolveLink({ locale, _modelApiKey: parentIndex.apiKey })
     : link;
-  const paths = cleanURL(link)
+  const paths = cleanURL(link, locale)
     .split("/")
     .filter((p) => p);
 

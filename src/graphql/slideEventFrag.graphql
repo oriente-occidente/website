@@ -1,6 +1,10 @@
 fragment slideEventFrag on EventRecord {
   id
   slug
+  slugs: _allSlugLocales {
+    locale
+    value
+  }
   _modelApiKey
   title
   titleHero

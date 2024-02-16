@@ -16,7 +16,7 @@ query page($locale: SiteLocale!, $slug: String) {
       value
     }
     section
-    relatedContents {
+    relatedContents(fallbackLocales: it) {
       __typename
       ... on ArtistRecord {
         ...slideArtirstFrag
@@ -132,12 +132,7 @@ query page($locale: SiteLocale!, $slug: String) {
             images {
               responsiveImage(
                 sizes: "100vw"
-                imgixParams: {
-                  auto: [format, compress]
-                  h: 800
-                  w: 1200
-                  fit: crop
-                }
+                imgixParams: { auto: [format, compress], h: 800, w: 1200, fit: crop }
               ) {
                 ...imgFrag
               }
@@ -252,12 +247,7 @@ query page($locale: SiteLocale!, $slug: String) {
         image {
           responsiveImage(
             sizes: "(max-width: 1023px) 50vw, (min-width: 1024px) 30vw, 300px"
-            imgixParams: {
-              auto: [format, compress]
-              ar: "1:1"
-              fit: crop
-              crop: top
-            }
+            imgixParams: { auto: [format, compress], ar: "1:1", fit: crop, crop: top }
           ) {
             ...imgFrag
           }

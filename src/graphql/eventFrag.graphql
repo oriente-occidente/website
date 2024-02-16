@@ -3,6 +3,10 @@ fragment eventRecordFragment on EventRecord {
   id
   title
   slug
+  slugs: _allSlugLocales {
+    locale
+    value
+  }
   imageHero {
     id
     title
