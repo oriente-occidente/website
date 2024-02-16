@@ -92,7 +92,7 @@ const labels_it = {
     show: "Mostra la ricerca",
     label: "Ricerca",
     results: "Risultati",
-    placeholder: "Ricerca",
+    placeholder: "Ricerca...",
     categories: "Categorie",
     tags: "Tags",
     reset: "Mostra tutto",

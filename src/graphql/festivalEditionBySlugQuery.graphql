@@ -142,7 +142,7 @@ query festivalEditionBySlug($slug: String!, $locale: SiteLocale) {
 #         ...imgFrag
 #       }
 #     }
-#     relatedContents {
+#     relatedContents(fallbackLocales: it) {
 #       __typename
 #       ... on ArtistRecord {
 #         ...slideArtirstFrag

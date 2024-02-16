@@ -154,7 +154,7 @@ query event($slug: String!, $locale: SiteLocale) {
       }
     }
     # RELATIONS ---
-    relatedContents {
+    relatedContents(fallbackLocales: it) {
       __typename
       ... on ArtistRecord {
         ...slideArtirstFrag

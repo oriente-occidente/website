@@ -24,9 +24,10 @@ export default function resolveLink({
   locale,
   year,
   archiveType,
+  switcher,
 }: ResolveLinkProps): string {
   //language prefix
-  const lp = locale === config.defaultLocale ? "" : `/${locale}`;
+  let lp = locale === config.defaultLocale ? "" : `/${locale}`;
   //page section?
   const s = section?.toLowerCase() || "";
   //localized section, used for pages section
@@ -38,8 +39,13 @@ export default function resolveLink({
   if (slugs) {
     const item = slugs.find((e: any) => e.locale == locale);
     lslug = item?.value || slug;
-    redirect = !item?.value;
-    // console.log("redirect", redirect);
+
+    if (switcher) {
+      // redirect a home
+      redirect = !item?.value;
+    } else {
+      lp = "";
+    }
   }
   if (!_modelApiKey) {
     return "#";
