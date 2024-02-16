@@ -60,7 +60,7 @@ query festivalEditionBySlug($slug: String!, $locale: SiteLocale) {
         ...imgFrag
       }
     }
-    _allReferencingMediaPhotos {
+    _allReferencingMediaPhotos(fallbackLocales: it) {
       id
       _modelApiKey
       description
@@ -69,18 +69,9 @@ query festivalEditionBySlug($slug: String!, $locale: SiteLocale) {
         title
       }
     }
-    _allReferencingMediaVideos {
+    _allReferencingMediaVideos(fallbackLocales: it) {
       id
-      _modelApiKey
-      description
-      image {
-        url(imgixParams: { auto: [format, compress], ar: "5:4", fit: crop })
-        title
-      }
-      title
-    }
-    _allReferencingMediaDocuments {
-      id
+      slug
       _modelApiKey
       description
       image {
@@ -89,8 +80,20 @@ query festivalEditionBySlug($slug: String!, $locale: SiteLocale) {
       }
       title
     }
-    _allReferencingMediaAudios {
+    _allReferencingMediaDocuments(fallbackLocales: it) {
       id
+      slug
+      _modelApiKey
+      description
+      image {
+        url(imgixParams: { auto: [format, compress], ar: "5:4", fit: crop })
+        title
+      }
+      title
+    }
+    _allReferencingMediaAudios(fallbackLocales: it) {
+      id
+      slug
       _modelApiKey
       description
       image {
