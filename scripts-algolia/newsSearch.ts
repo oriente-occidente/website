@@ -27,6 +27,7 @@ const queries: any = {
     skip: $skip
     locale: $locale
     orderBy: _publishedAt_DESC
+    filter: {showInArchive: {eq: true}}
   ) {
     ${commonBlock}
   }}`,
