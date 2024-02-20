@@ -12,7 +12,10 @@ query allWorkshopsByCategoryQuery($slug: String, $locale: SiteLocale) {
       value
     }
     _modelApiKey
-    _allReferencingWorkshops(filter: { slug: { neq: null } }, locale: $locale) {
+    _allReferencingWorkshops(
+      filter: { slug: { neq: null }, showInWebsite: { eq: "true" } }
+      locale: $locale
+    ) {
       _modelApiKey
       title
       id
