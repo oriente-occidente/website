@@ -1,7 +1,11 @@
 query allEvents($locale: SiteLocale) {
   events: allEvents(
     locale: $locale
-    filter: { slug: { neq: null }, isFestival: { eq: false } }
+    filter: {
+      slug: { neq: null }
+      isFestival: { eq: false }
+      showInWebsite: { eq: true }
+    }
     orderBy: startDate_DESC
     first: 100
   ) {

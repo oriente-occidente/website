@@ -5,6 +5,7 @@ query associatedArtists($locale: SiteLocale) {
       slug: { neq: null }
       associatedArtist: { exists: true }
       showInAssociatedArtistsIndex: { eq: true }
+      showInWebsite: { eq: true }
     }
     orderBy: _firstPublishedAt_DESC
     first: 100
