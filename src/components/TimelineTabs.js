@@ -35,9 +35,9 @@ export default function TimelineTabs({ nav, locale }) {
     <div
       ref={stickyRef}
       // className={`sticky top-[-1px] pt-[70px] md:pt-[80px] lg:pt-[120px] lg:pr-14 z-10 lg:h-[650px] `}
-      className={`sticky top-[70px] md:top-[80px] lg:top-[120px] lg:pr-14 z-10 h-[calc(100vh-100px)] md:h-[calc(100vh-90px)] lg:h-[calc(100vh-130px)] `}
+      className={`sticky top-[70px] md:top-[80px] lg:top-[120px] lg:pr-14 z-10 lg:h-[calc(100vh-130px)] `}
     >
-      <nav className="relative h-full overflow-auto">
+      <nav className="relative lg:h-full lg:overflow-auto">
         <button
           // href=""
           tabIndex="0"
