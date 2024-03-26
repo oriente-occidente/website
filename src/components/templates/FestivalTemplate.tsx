@@ -1,7 +1,7 @@
 "use client";
 import GenericHero from "@/components/hero/GenericHero";
 import { FestivalProgramPageProps } from "@/types";
-import { StructuredText } from "react-datocms";
+import StructuredContent from "@/components/MyStructuredContent";
 import Filters from "@/components/Filters";
 import AnchorBlock from "@/components/AnchorBlock";
 import translate from "@/lib/locales";
@@ -22,7 +22,7 @@ export default function FestivalTemplate({
         <div className="md:container md:mx-auto md:grid md:grid-cols-4 md:gap-4">
           <div className="border-color-gray md:col-span-3 md:col-start-2 md:border-l md:pt-6">
             <div className="px-4 py-6 md:px-12 md:py-8">
-              <StructuredText data={data?.page?.content} />
+              <StructuredContent locale={locale} content={data?.page?.content} />
             </div>
           </div>
         </div>
