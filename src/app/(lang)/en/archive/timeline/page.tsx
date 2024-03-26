@@ -87,6 +87,7 @@ export default async function Page() {
       content: {
         festival: {
           slug: resolveLink({
+            id:"",
             _modelApiKey: data?.festivalEditionsArchive?._modelApiKey || "",
             locale,
             slug: "",
@@ -99,6 +100,7 @@ export default async function Page() {
         },
         artistsCompanies: {
           slug: resolveLink({
+            id:"",
             _modelApiKey: data?.artistsCompaniesArchive?._modelApiKey || "",
             locale,
             slug: "",
@@ -110,6 +112,7 @@ export default async function Page() {
         },
         activities: {
           slug: resolveLink({
+            id:"",
             _modelApiKey: data?.activitiesArchive?._modelApiKey || "",
             locale,
             slug: "",
@@ -126,6 +129,7 @@ export default async function Page() {
         },
         news: {
           slug: resolveLink({
+            id:"",
             _modelApiKey: data?.newsPublicationsArchive?._modelApiKey || "",
             locale,
             slug: "",
@@ -147,6 +151,7 @@ export default async function Page() {
         // },
         media: {
           slug: resolveLink({
+            id:"",
             _modelApiKey: data?.mediaArchive?._modelApiKey || "",
             locale,
             slug: "",

@@ -74,6 +74,7 @@ query artist($slug: String!, $locale: SiteLocale) {
     }
     _allReferencingMediaVideos {
       id
+      slug
       _modelApiKey
       description
       image {
@@ -84,6 +85,7 @@ query artist($slug: String!, $locale: SiteLocale) {
     }
     _allReferencingMediaDocuments {
       id
+      slug
       _modelApiKey
       description
       image {
@@ -94,6 +96,7 @@ query artist($slug: String!, $locale: SiteLocale) {
     }
     _allReferencingMediaAudios {
       id
+      slug
       _modelApiKey
       description
       image {

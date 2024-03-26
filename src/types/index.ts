@@ -14,6 +14,7 @@ export type LayoutParams = {
   children: React.ReactNode;
 };
 export type ResolveLinkProps = {
+  id: string;
   slug: string;
   slugs: any | undefined;
   _modelApiKey: string;

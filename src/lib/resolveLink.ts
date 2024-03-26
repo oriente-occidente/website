@@ -16,6 +16,7 @@ function getArchiveYear(archiveType: string = "", year: string = "") {
 }
 
 export default function resolveLink({
+  id,
   slug,
   slugs,
   _modelApiKey,
@@ -108,7 +109,7 @@ export default function resolveLink({
     case "publication":
       return `${lp}/${t(`pubblicazioni`, locale)}/${lslug}`;
     case "media_photo":
-      return `${lp}/${t(`foto`, locale)}/${lslug}`;
+      return `${lp}/${t(`foto`, locale)}/${id}`;
     case "media_video":
       return `${lp}/${t(`video`, locale)}/${lslug}`;
     case "media_document":
