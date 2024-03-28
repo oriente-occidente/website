@@ -56,7 +56,7 @@ function StandardCard({ data, locale, categoryTitle = "" }) {
             {data.title}
           </h2>
           {data.authors && (
-            <div className="text-sm font-semibold uppercase text-black md:text-base">
+            <div className="text-sm font-semibold uppercase text-black md:text-base md:text-white">
               {data.authors}
             </div>
           )}
