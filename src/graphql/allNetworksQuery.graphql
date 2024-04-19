@@ -2,7 +2,7 @@ query networks($locale: SiteLocale) {
   networks: allNetworks(
     locale: $locale
     orderBy: startDate_DESC
-    filter: { slug: { neq: null } }
+    filter: { slug: { neq: null }, showInWebsite: { eq: true } }
   ) {
     id
     slug

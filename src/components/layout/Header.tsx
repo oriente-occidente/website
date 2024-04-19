@@ -47,7 +47,7 @@ function renderLink(item: any, locale: string) {
                 <div className="overflow-hidden shadow-lg">
                   <div className="relative grid bg-white divide-y divide-black">
                     {item.children
-                      .filter((c: any) => c.link)
+                      .filter((c: any) => c.link && c.slug !== null)
                       .map((child: any) => {
                         return (
                           <Link

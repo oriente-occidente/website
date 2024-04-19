@@ -63,7 +63,7 @@ query artist($slug: String!, $locale: SiteLocale) {
     countries {
       name
     }
-    _allReferencingMediaPhotos {
+    _allReferencingMediaPhotos(fallbackLocales: it) {
       id
       _modelApiKey
       description
@@ -72,7 +72,19 @@ query artist($slug: String!, $locale: SiteLocale) {
         title
       }
     }
-    _allReferencingMediaVideos {
+    _allReferencingMediaVideos(fallbackLocales: it) {
+      id
+      slug
+      _modelApiKey
+      slug
+      description
+      image {
+        url(imgixParams: { auto: [format, compress], ar: "5:4", fit: crop })
+        title
+      }
+      title
+    }
+    _allReferencingMediaDocuments(fallbackLocales: it) {
       id
       slug
       _modelApiKey
@@ -83,6 +95,7 @@ query artist($slug: String!, $locale: SiteLocale) {
       }
       title
     }
+<<<<<<< HEAD
     _allReferencingMediaDocuments {
       id
       slug
@@ -95,6 +108,21 @@ query artist($slug: String!, $locale: SiteLocale) {
       title
     }
     _allReferencingMediaAudios {
+||||||| parent of 2499c82 (wip fix)
+    _allReferencingMediaDocuments {
+      id
+      _modelApiKey
+      description
+      image {
+        url(imgixParams: { auto: [format, compress], ar: "5:4", fit: crop })
+        title
+      }
+      title
+    }
+    _allReferencingMediaAudios {
+=======
+    _allReferencingMediaAudios(fallbackLocales: it) {
+>>>>>>> 2499c82 (wip fix)
       id
       slug
       _modelApiKey

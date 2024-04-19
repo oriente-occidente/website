@@ -22,6 +22,7 @@ export type ResolveLinkProps = {
   section?: string;
   year?: string;
   archiveType?: string;
+  switcher?: boolean;
 };
 export type FooterProps = {
   locale: string;

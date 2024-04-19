@@ -24,8 +24,8 @@ export default function LanguageSwitcher({
             <Link
               href={`${
                 l === "it"
-                  ? resolveLink({ ...slugData, locale: "it" })
-                  : resolveLink({ ...slugData, locale: "en" })
+                  ? resolveLink({ ...slugData, locale: "it", switcher: true })
+                  : resolveLink({ ...slugData, locale: "en", switcher: true })
               }`}
               className={`${
                 isActive ? "font-semibold" : ""
@@ -36,8 +36,8 @@ export default function LanguageSwitcher({
             <Link
               href={`${
                 l === "it"
-                  ? resolveLink({ ...slugData, locale: "it" })
-                  : resolveLink({ ...slugData, locale: "en" })
+                  ? resolveLink({ ...slugData, locale: "it", switcher: true })
+                  : resolveLink({ ...slugData, locale: "en", switcher: true })
               }`}
               className={`${
                 isActive ? "font-semibold" : ""

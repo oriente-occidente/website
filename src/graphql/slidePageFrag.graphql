@@ -1,6 +1,10 @@
 fragment slidePageFrag on PageRecord {
   id
   slug
+  slugs: _allSlugLocales {
+    locale
+    value
+  }
   _modelApiKey
   section
   title

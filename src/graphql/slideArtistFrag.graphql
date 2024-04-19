@@ -1,5 +1,9 @@
 fragment slideArtirstFrag on ArtistRecord {
   _firstPublishedAt
+  slugs: _allSlugLocales {
+    locale
+    value
+  }
   id
   slug
   _modelApiKey

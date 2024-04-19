@@ -1,6 +1,10 @@
 fragment slideProjectFrag on ProjectRecord {
   id
   slug
+  slugs: _allSlugLocales {
+    locale
+    value
+  }
   _modelApiKey
   title
   titleHero
