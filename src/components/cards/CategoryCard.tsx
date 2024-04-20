@@ -42,7 +42,7 @@ export default function CategoryCard({ data, locale }: GenericCardProps) {
         return "card-title-news";
       case "event":
         return "card-title-eventi";
-      case "linguaggi":
+      case "languages":
         return "card-title-linguaggi";
       case "workshop":
         return "card-title-workshop";
@@ -70,12 +70,20 @@ export default function CategoryCard({ data, locale }: GenericCardProps) {
         return "card-title-default";
     }
   }
+
+  function checkWorkshops(catTitle: string) {
+    if (catTitle == "workshop") {
+      if (data.isWorkshop == false) {
+        categoryTitle = "languages";
+      }
+    }
+  }
+  checkWorkshops(categoryTitle);
   const categoryClasses = categoryColorClasses(
     categoryTitle ? categoryTitle : ""
   );
 
   const link = resolveLink({ ...data, locale });
-
   return (
     <div className="relative py-4">
       <Link href={link} title={data.title} className="group">
