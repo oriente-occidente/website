@@ -95,34 +95,7 @@ query artist($slug: String!, $locale: SiteLocale) {
       }
       title
     }
-<<<<<<< HEAD
-    _allReferencingMediaDocuments {
-      id
-      slug
-      _modelApiKey
-      description
-      image {
-        url(imgixParams: { auto: [format, compress], ar: "5:4", fit: crop })
-        title
-      }
-      title
-    }
     _allReferencingMediaAudios {
-||||||| parent of 2499c82 (wip fix)
-    _allReferencingMediaDocuments {
-      id
-      _modelApiKey
-      description
-      image {
-        url(imgixParams: { auto: [format, compress], ar: "5:4", fit: crop })
-        title
-      }
-      title
-    }
-    _allReferencingMediaAudios {
-=======
-    _allReferencingMediaAudios(fallbackLocales: it) {
->>>>>>> 2499c82 (wip fix)
       id
       slug
       _modelApiKey
