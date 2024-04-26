@@ -5,6 +5,7 @@ import GenericHero from "@/components/hero/GenericHero";
 import Breadcrumbs from "../Breadcrumbs";
 import MainContent from "@/components/contents/MainContent";
 import SectionsParagraphs from "@/components/contents/SectionsParagraphs";
+import translate from "@/lib/locales";
 
 export default function IndexPageTemplate({
   data,
@@ -66,7 +67,7 @@ export default function IndexPageTemplate({
         <div className="container">
           {allHaveEventModelApiKey && (
             <div className="border-b border-black mt-20 pb-5 font-semibold uppercase text-lg">
-              Prossimi Eventi{" "}
+              {translate("next_events", locale)}
             </div>
           )}
           <div className=" lg:grid lg:grid-cols-2 lg:gap-6">
@@ -78,7 +79,7 @@ export default function IndexPageTemplate({
           </div>
           {allHaveEventModelApiKey && (
             <div className="border-b border-black mt-20 pb-5 font-semibold uppercase text-lg">
-              Eventi Precedenti
+              {translate("previous_events", locale)}
             </div>
           )}
           <div className=" lg:grid lg:grid-cols-2 lg:gap-6">
