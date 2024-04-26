@@ -6,7 +6,10 @@ import Breadcrumbs from "../Breadcrumbs";
 import MainContent from "@/components/contents/MainContent";
 import SectionsParagraphs from "@/components/contents/SectionsParagraphs";
 
-export default function IndexPageTemplate({ data, locale }: GenericIndexPageProps) {
+export default function IndexPageTemplate({
+  data,
+  locale,
+}: GenericIndexPageProps) {
   const { list, hero, page } = data;
   const latestYear = list?.reduce((latest, item) => {
     const itemYear = new Date(item.startDate).getFullYear();
@@ -17,7 +20,10 @@ export default function IndexPageTemplate({ data, locale }: GenericIndexPageProp
     const itemYear = new Date(item.startDate).getFullYear();
     return itemYear === latestYear;
   });
-
+  const filteredPastList = list?.filter((item: any) => {
+    const itemYear = new Date(item.startDate).getFullYear();
+    return itemYear !== latestYear;
+  });
   const sortArtistByYear = (items: any) => {
     let key =
       page._modelApiKey == "artistic_residencies_index"
@@ -32,13 +38,21 @@ export default function IndexPageTemplate({ data, locale }: GenericIndexPageProp
     return items;
   };
 
-  const allHaveEventModelApiKey = list.every((obj) => obj._modelApiKey === "event");
+  const allHaveEventModelApiKey = list.every(
+    (obj) => obj._modelApiKey === "event"
+  );
   const isArtist = list.every((obj) => obj._modelApiKey === "artist");
   const dataList = allHaveEventModelApiKey
     ? filteredList
     : isArtist
     ? sortArtistByYear(list)
     : list;
+
+  let pastEvents = [];
+
+  if (allHaveEventModelApiKey) {
+    pastEvents = filteredPastList;
+  }
   const _modelApiKey = page?._modelApiKey;
   return (
     <div>
@@ -49,12 +63,36 @@ export default function IndexPageTemplate({ data, locale }: GenericIndexPageProp
         <SectionsParagraphs locale={locale} sections={page.sections} />
       )}
       <div className="border-color-gray border-t py-6">
-        <div className="container lg:grid lg:grid-cols-2 lg:gap-6">
-          {dataList?.map((item: any) => (
-            <Fragment key={"wrap_" + item.id}>
-              <GenericCard locale={locale} data={item} model={_modelApiKey} />
-            </Fragment>
-          ))}
+        <div className="container">
+          {allHaveEventModelApiKey && (
+            <div className="border-b border-black mt-20 pb-5 font-semibold uppercase text-lg">
+              Prossimi Eventi{" "}
+            </div>
+          )}
+          <div className=" lg:grid lg:grid-cols-2 lg:gap-6">
+            {dataList?.map((item: any) => (
+              <Fragment key={"wrap_" + item.id}>
+                <GenericCard locale={locale} data={item} model={_modelApiKey} />
+              </Fragment>
+            ))}
+          </div>
+          {allHaveEventModelApiKey && (
+            <div className="border-b border-black mt-20 pb-5 font-semibold uppercase text-lg">
+              Eventi Precedenti
+            </div>
+          )}
+          <div className=" lg:grid lg:grid-cols-2 lg:gap-6">
+            {pastEvents.length > 0 &&
+              pastEvents?.map((item: any) => (
+                <Fragment key={"wrap_" + item.id}>
+                  <GenericCard
+                    locale={locale}
+                    data={item}
+                    model={_modelApiKey}
+                  />
+                </Fragment>
+              ))}
+          </div>
         </div>
       </div>
     </div>
