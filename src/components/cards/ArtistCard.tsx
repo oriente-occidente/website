@@ -3,15 +3,11 @@ import { Image as DatoImage } from "react-datocms";
 import Link from "next/link";
 import { MapPinIcon, CalendarIcon } from "@heroicons/react/24/outline";
 import { groupDatesByDay, removeSpaces } from "@/lib/utils";
-import { GenericCardProps } from "@/types";
+import { GenericCardProps, ArtisticResidenceYear } from "@/types";
 import resolveLink from "@/lib/resolveLink";
 import translate from "@/lib/locales";
 
-export default function CategoryCard({
-  data,
-  locale,
-  model,
-}: GenericCardProps) {
+export default function CategoryCard({ data, locale, model }: GenericCardProps) {
   let categoryTitle;
   if (data.contentType || data._modelApiKey) {
     const catToShow = data.contentType ? data.contentType : data._modelApiKey;
@@ -60,9 +56,7 @@ export default function CategoryCard({
         return "card-title-default";
     }
   }
-  const categoryClasses = categoryColorClasses(
-    categoryTitle ? categoryTitle : ""
-  );
+  const categoryClasses = categoryColorClasses(categoryTitle ? categoryTitle : "");
   const link = resolveLink({ ...data, locale });
 
   return (
@@ -89,23 +83,31 @@ export default function CategoryCard({
         <div className="z-20">
           <div className="mt-4 mb-3">
             {model == "artistic_residencies_index" &&
-              data.artisticResidence?.map((yearObj: any, index: number) => {
-                const { year } = yearObj;
-                return (
-                  <div key={year + index} className="inline-flex">
-                    {index == 0 ? `${year}` : `| ${year}`}&nbsp;
-                  </div>
-                );
-              })}
+              data.artisticResidence
+                ?.sort(
+                  (a: ArtisticResidenceYear, b: ArtisticResidenceYear) => b.year - a.year
+                )
+                .map((yearObj: ArtisticResidenceYear, index: number) => {
+                  const { year } = yearObj;
+                  return (
+                    <div key={year + index} className="inline-flex">
+                      {index == 0 ? `${year}` : `| ${year}`}&nbsp;
+                    </div>
+                  );
+                })}
             {model == "artists_index" &&
-              data.associatedArtist?.map((yearObj: any, index: number) => {
-                const { year } = yearObj;
-                return (
-                  <div key={year + index} className="inline-flex">
-                    {index == 0 ? `${year}` : `| ${year}`}&nbsp;
-                  </div>
-                );
-              })}
+              data.associatedArtist
+                ?.sort(
+                  ({ year: a }: { year: number }, { year: b }: { year: number }) => b - a
+                )
+                .map((yearObj: ArtisticResidenceYear, index: number) => {
+                  const { year } = yearObj;
+                  return (
+                    <div key={year + index} className="inline-flex">
+                      {index == 0 ? `${year}` : `| ${year}`}&nbsp;
+                    </div>
+                  );
+                })}
           </div>
           <div className="mt-3 uppercase font-semibold text-xxs flex items-center">
             <div>{translate("goToContents", locale)}</div>

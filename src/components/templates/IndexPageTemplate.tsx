@@ -1,6 +1,6 @@
 import { Fragment } from "react";
 import GenericCard from "@/components/cards/GenericCard";
-import { GenericIndexPageProps } from "@/types";
+import { GenericIndexPageProps, ArtisticResidenceYear } from "@/types";
 import GenericHero from "@/components/hero/GenericHero";
 import Breadcrumbs from "../Breadcrumbs";
 import MainContent from "@/components/contents/MainContent";
@@ -18,8 +18,27 @@ export default function IndexPageTemplate({ data, locale }: GenericIndexPageProp
     return itemYear === latestYear;
   });
 
+  const sortArtistByYear = (items: any) => {
+    let key =
+      page._modelApiKey == "artistic_residencies_index"
+        ? "artisticResidence"
+        : "associatedArtist";
+
+    items.sort((a: any, b: any) => {
+      let aMax = Math.max(...a[key].map((y: ArtisticResidenceYear) => y.year));
+      let bMax = Math.max(...b[key].map((y: ArtisticResidenceYear) => y.year));
+      return bMax - aMax;
+    });
+    return items;
+  };
+
   const allHaveEventModelApiKey = list.every((obj) => obj._modelApiKey === "event");
-  const dataList = allHaveEventModelApiKey ? filteredList : list;
+  const isArtist = list.every((obj) => obj._modelApiKey === "artist");
+  const dataList = allHaveEventModelApiKey
+    ? filteredList
+    : isArtist
+    ? sortArtistByYear(list)
+    : list;
   const _modelApiKey = page?._modelApiKey;
   return (
     <div>

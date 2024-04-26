@@ -1,5 +1,11 @@
 import { SeoMetaFragmentFragment, Site } from "@/graphql/generated";
 
+export type ArtisticResidenceYear = {
+  id: string;
+  title?: string;
+  year: number;
+};
+
 export type BasicIdPageProps = {
   params: {
     id: string;

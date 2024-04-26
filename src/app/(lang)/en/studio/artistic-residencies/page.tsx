@@ -61,7 +61,7 @@ export default async function Page() {
 
   return (
     <Wrapper locale={locale} slugData={slugData}>
-      <IndexPageTemplate data={pageData} locale={locale} />;
+      <IndexPageTemplate data={pageData} locale={locale} />
     </Wrapper>
   );
 }
