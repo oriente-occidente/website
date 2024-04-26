@@ -29,6 +29,9 @@ function HomeCard({ count, categoryTitle, data, locale }) {
                 data={data.imageHero.responsiveImage}
                 alt={data.imageHero.alt}
                 title={data.imageHero.title}
+                layout="fill"
+                objectFit="cover"
+                objectPosition="center"
               />
             ) : (
               <div className="h-full w-full duration-300 group-hover:scale-105" />
