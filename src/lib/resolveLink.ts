@@ -43,8 +43,6 @@ export default function resolveLink({
     if (switcher) {
       // redirect a home
       redirect = !item?.value;
-    } else {
-      lp = "";
     }
   }
   if (!_modelApiKey) {
