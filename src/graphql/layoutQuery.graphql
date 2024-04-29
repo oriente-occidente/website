@@ -82,6 +82,16 @@ query layout($locale: SiteLocale) {
           _modelApiKey
           title
         }
+        ... on ArtisticResidenciesIndexRecord {
+          id
+          _modelApiKey
+          title
+        }
+        ... on NetworksIndexRecord {
+          id
+          _modelApiKey
+          title
+        }
       }
     }
     links {
