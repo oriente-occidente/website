@@ -84,7 +84,7 @@ export default function Footer({
                             <Link
                               href={resolveLink({ ...item, locale })}
                               title={`Link to ${item.title}`}
-                              className="text-xxs text-black-light tracking-widest hover:text-black"
+                              className="text-xxs text-black-light tracking-widest hover:text-black hover:underline underline-offset-4"
                             >
                               {item._modelApiKey == "festival_edition"
                                 ? translate("program", locale)
@@ -110,7 +110,7 @@ export default function Footer({
                         title={`${translate("privacyPolicyTitle", locale)}`}
                         target="_blank"
                         rel="noreferrer"
-                        className="iubenda-nostyle no-brand iubenda-embed text-xxs text-black-light tracking-widest hover:text-black"
+                        className="iubenda-nostyle no-brand iubenda-embed text-xxs text-black-light tracking-widest hover:text-black hover:underline underline-offset-4"
                       >
                         Privacy Policy
                       </Link>
@@ -124,7 +124,7 @@ export default function Footer({
                         title={`${translate("cookiePolicyTitle", locale)}`}
                         target="_blank"
                         rel="noreferrer"
-                        className="iubenda-nostyle no-brand iubenda-embed text-xxs text-black-light tracking-widest hover:text-black"
+                        className="iubenda-nostyle no-brand iubenda-embed text-xxs text-black-light tracking-widest hover:text-black hover:underline underline-offset-4"
                       >
                         Cookie Policy
                       </Link>
@@ -135,7 +135,7 @@ export default function Footer({
                         title={`${translate("privacyPreferences", locale)}`}
                         target="_blank"
                         rel="noreferrer"
-                        className="iubenda-cs-preferences-link iubenda-nostyle no-brand iubenda-embed text-xxs text-black-light tracking-widest hover:text-black"
+                        className="iubenda-cs-preferences-link iubenda-nostyle no-brand iubenda-embed text-xxs text-black-light tracking-widest hover:text-black hover:underline underline-offset-4"
                       >
                         {translate("privacyPreferences", locale)}
                       </Link>
@@ -146,7 +146,7 @@ export default function Footer({
                         title={`${translate("creditsTitle", locale)}`}
                         target="_blank"
                         rel="noreferrer"
-                        className="text-xxs text-black-light whitespace-nowrap tracking-widest hover:text-black"
+                        className="text-xxs text-black-light whitespace-nowrap tracking-widest hover:text-black hover:underline underline-offset-4"
                       >
                         Credits
                       </Link>
