@@ -9,6 +9,8 @@ import {
   Pagination,
 } from "swiper/modules";
 import StandardCard from "@/components/cards/StandardCard";
+import GenericCard from "@/components/cards/GenericCard";
+
 import { closestInterval } from "@/lib/utils";
 
 function GalleryPreview({ slides, locale }) {
@@ -58,12 +60,15 @@ function GalleryPreview({ slides, locale }) {
           return (
             <div className="relative" key={`gallery-preview-${id}`}>
               <SwiperSlide>
-                <StandardCard
+                {/* <StandardCard
                   locale={locale}
                   data={slide}
                   categoryTitle={categoryTitle}
                   eventDate={eventDate}
-                />
+                /> */}
+                <GenericCard locale={locale} data={slide}
+                  categoryTitle={categoryTitle}
+                  eventDate={eventDate} />
               </SwiperSlide>
             </div>
           );
