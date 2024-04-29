@@ -10,6 +10,7 @@ function HomeCard({ count, categoryTitle, data, locale }) {
       href={resolveLink({ ...data, locale })}
       locale={locale}
       title={data.titleHero}
+      aria-label={`Vai a ${data.title}`}
       className="group"
     >
       <div className="relative h-[240px] pb-8 pl-4 md:h-[640px] md:pb-16 md:pl-6 lg:pb-20 xl:h-[45vw]">

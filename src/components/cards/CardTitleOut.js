@@ -27,7 +27,7 @@ function CardOutTitle({ data, locale }) {
 
   return (
     <div className="pb-8 md:pb-0">
-      <Link href={resolveLinkById(data.id, locale)} title={title}>
+      <Link href={resolveLinkById(data.id, locale)} title={title}  aria-label={`Vai a ${data.title}`}>
         <div className="md:relative md:h-[360px]">
           <DatoImage
             className="md:h-full"

@@ -6,7 +6,7 @@ import resolveLink from "@/lib/resolveLink";
 function CardTextArrow({ locale, data }) {
   return (
     <div className="pb-8 md:pb-0">
-      <Link href={resolveLinkById(data.id, locale)} title={data.title}>
+      <Link href={resolveLinkById(data.id, locale)} title={data.title}  aria-label={`Vai a ${data.title}`}>
         <div className="absolute left-4 top-4 z-20 text-xs font-semibold uppercase text-white md:left-8 md:top-6 lg:text-lg ">
           <span>{data.title}</span>
         </div>

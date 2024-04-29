@@ -30,7 +30,7 @@ function PreviewCard({ data, locale, group = null, year }) {
 
   return (
     <div className="relative py-4">
-      <Link href={link} title={data.title} className="group">
+      <Link href={link} title={data.title} className="group" aria-label={`Vai a ${data.title}`}>
         <div className="relative">
           <div className="absolute left-4 bottom-2 top-auto z-20 text-xxs font-semibold uppercase text-white md:left-8 md:bottom-8 md:text-xs ">
             {datesGrouped.map((str) => (

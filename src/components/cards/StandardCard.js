@@ -17,6 +17,7 @@ function StandardCard({ data, locale, categoryTitle = "" }) {
         href={resolveLink({ ...data, locale })}
         locale={locale}
         title={data.title}
+        aria-label={`Vai a ${data.title}`}
         className="group"
       >
         <div className="relative flex">

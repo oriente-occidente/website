@@ -27,7 +27,7 @@ function CardTitleIn({ locale, data }) {
 
   return (
     <div className="pb-8 md:pb-0">
-      <Link href={resolveLinkById(data.id, locale)} title={data.title}>
+      <Link href={resolveLinkById(data.id, locale)} title={data.title}  aria-label={`Vai a ${data.title}`}>
         <div className="absolute left-4 top-48 z-20 flex space-x-4 text-xxs font-semibold uppercase text-white md:left-8 md:bottom-8 md:top-auto md:text-xs ">
           <span>{categoryTitle}</span>
           {eventDate && (

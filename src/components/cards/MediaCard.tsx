@@ -48,7 +48,7 @@ export default function MediaCard({ data, locale }: GenericCardProps) {
   const title = data.title || data.description || data.id;
   return (
     <div className="relative">
-      <Link href={link} title={title} className="group">
+      <Link href={link} title={title} className="group" aria-label={`Vai a ${title}`}>
         {data.image ? (
           <div className="relative h-[220px] overflow-hidden md:h-[360px]">
             <img
