@@ -17,7 +17,7 @@ export default function ZoomButton({ locale, imageUrl }) {
         className="inline-flex border border-black px-4 py-3 text-3xs md:text-xxs font-semibold uppercase"
       >
         {translate("zoom", locale)} 
-        <MagnifyingGlassPlusIcon aria-hidden="true" className="mx-1 h-5 w-5 rotate-90" /> 
+        <MagnifyingGlassPlusIcon aria-hidden="true" focusable="false" className="mx-1 h-5 w-5 rotate-90" /> 
         
       </a>
     </Fancybox>

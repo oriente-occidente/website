@@ -46,7 +46,7 @@ export default function TimelineTabs({ nav, locale }) {
         >
           <div className="text-xs md:text-base">{translate("year", locale)}</div>
           <ChevronDownIcon
-            aria-hidden="true"
+            aria-hidden="true" focusable="false"
             className={`h-4 w-4 lg:hidden motion-safe:duration-300 ${openYears ? "rotate-180" : ""}`}
           />
         </button>
@@ -71,7 +71,7 @@ export default function TimelineTabs({ nav, locale }) {
                     >
                       {item.year}
                       <ArrowLongRightIcon
-                        aria-hidden="true"
+                        aria-hidden="true" focusable="false"
                         className="h-5 w-5 rotate-90 lg:rotate-0"
                       />
                     </Link>
@@ -84,7 +84,7 @@ export default function TimelineTabs({ nav, locale }) {
       </nav>
       <div className="hidden lg:flex items-center justify-center absolute top-32 right-0 translate-x-1/2 w-20 h-20 rounded-full bg-white border border-red">
         <ArrowLongRightIcon
-          aria-hidden="true"
+          aria-hidden="true" focusable="false"
           className="h-6 w-6 rotate-90"
           color="#e64011"
         />

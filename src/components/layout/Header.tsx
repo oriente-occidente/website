@@ -29,7 +29,7 @@ function renderLink(item: any, locale: string) {
                   open ? "text-black" : "text-black",
                   " ml-1 h-5 w-5"
                 )}
-                aria-hidden="true"
+                aria-hidden="true" focusable="false"
                 focusable="false"
               />
             </Popover.Button>
@@ -68,7 +68,7 @@ function renderLink(item: any, locale: string) {
                               )}
                             </p>
                             <ArrowLongRightIcon
-                              aria-hidden="true"
+                              aria-hidden="true" focusable="false"
                               className="shrink-0 h-6 w-6"
                               color="black-light"
                             />
@@ -127,7 +127,7 @@ function Header(props: any) {
                   </span>
                   <div
                     className="bg-open ml-2 h-6 w-6 md:ml-4 md:w-8"
-                    aria-hidden="true"
+                    aria-hidden="true" focusable="false"
                   />
                 </Popover.Button>
               </div>

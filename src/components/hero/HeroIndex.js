@@ -73,7 +73,7 @@ function HeroIndex({ data, locale }) {
           )}
           {newsDate && (
             <div className="px-4 md:pl-10 lg:px-20 lg:pt-2 hidden items-center gap-x-2 md:flex">
-              <CalendarIcon aria-hidden="true" className="h-4 w-4" />
+              <CalendarIcon aria-hidden="true" focusable="false" className="h-4 w-4" />
               <span className="font-light normal-case md:pr-1">
                 {formatDate(newsDate, locale)}
               </span>
@@ -99,7 +99,7 @@ function HeroIndex({ data, locale }) {
                       className="flex items-center text-xxs text-black-light"
                     >
                       <CalendarIcon
-                        aria-hidden="true"
+                        aria-hidden="true" focusable="false"
                         className="mr-2 h-4 w-4"
                       />
                       {formatDate(date.startTime, locale || "en", date.isDaily)}
@@ -109,7 +109,7 @@ function HeroIndex({ data, locale }) {
               ) : null}
               {location && (
                 <h2 className="mt-1 flex items-center text-xxs text-black-light">
-                  <MapPinIcon aria-hidden="true" className="mr-2 h-4 w-4" />
+                  <MapPinIcon aria-hidden="true" focusable="false" className="mr-2 h-4 w-4" />
                   {location}
                 </h2>
               )}

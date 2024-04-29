@@ -43,27 +43,27 @@ export default function MediaAudioPlayer({ data, locale }) {
                 customIcons={{
                   play: (
                     <PlayCircleIcon
-                      aria-hidden="true"
+                      aria-hidden="true" focusable="false"
                       className="absolute h-12 w-12 sm:h-[60px] sm:w-[60px]"
                       color="#D83D35"
                     />
                   ),
                   pause: (
                     <PauseIcon
-                      aria-hidden="true"
+                      aria-hidden="true" focusable="false"
                       className="absolute h-12 w-12 sm:h-[60px] sm:w-[60px]"
                       color="#D83D35"
                     />
                   ),
                   volume: (
                     <SpeakerWaveIcon
-                      aria-hidden="true"
+                      aria-hidden="true" focusable="false"
                       className="absolute h-5 w-5"
                     />
                   ),
                   volumeMute: (
                     <SpeakerXMarkIcon
-                      aria-hidden="true"
+                      aria-hidden="true" focusable="false"
                       className="absolute h-5 w-5"
                     />
                   ),

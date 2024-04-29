@@ -7,12 +7,12 @@ export default function MediaTitle({ _modelApyKey, data, locale }) {
   return <div className="px-10">
     <div className="flex items-center gap-2 text-sm text-red-alt">
       {_modelApyKey == "media_document" ? (
-        <PaperClipIcon aria-hidden="true" className="h-5 w-5" color="#D83D35" />
+        <PaperClipIcon aria-hidden="true" focusable="false" className="h-5 w-5" color="#D83D35" />
       ) : _modelApyKey == "media_audio" ? (
-        <MusicalNoteIcon aria-hidden="true" className="h-5 w-5" color="#D83D35" />
+        <MusicalNoteIcon aria-hidden="true" focusable="false" className="h-5 w-5" color="#D83D35" />
       ) : (
         <VideoCameraIcon
-          aria-hidden="true"
+          aria-hidden="true" focusable="false"
           className="h-5 w-5"
           color="#D83D35"
         />

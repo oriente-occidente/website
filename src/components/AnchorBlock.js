@@ -28,7 +28,7 @@ export default function AnchorBlock({ data, locale }) {
           >
             <p>{translate("program", locale)}</p>
             <ArrowLongRightIcon
-              aria-hidden="true"
+              aria-hidden="true" focusable="false"
               className="h-6 w-6 rotate-90"
               color="black"
             />
@@ -44,7 +44,7 @@ export default function AnchorBlock({ data, locale }) {
           >
             <p>{translate("news", locale)}</p>
             <ArrowLongRightIcon
-              aria-hidden="true"
+              aria-hidden="true" focusable="false"
               className="h-6 w-6 rotate-90"
               color="black"
             />

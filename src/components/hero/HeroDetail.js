@@ -44,7 +44,7 @@ function HeroDetail({ data, locale }) {
                   key={date.id}
                   className="flex items-center text-xxs text-black-light"
                 >
-                  <CalendarIcon aria-hidden="true" className="mr-2 h-4 w-4" />
+                  <CalendarIcon aria-hidden="true" focusable="false" className="mr-2 h-4 w-4" />
                   {formatDate(date.startTime, locale, date.isDaily)}
                 </div>
               ))}
@@ -52,7 +52,7 @@ function HeroDetail({ data, locale }) {
           ) : null}
           {location && (
             <h2 className="mt-1 flex items-center text-xxs text-black-light">
-              <MapPinIcon aria-hidden="true" className="mr-2 h-4 w-4" />
+              <MapPinIcon aria-hidden="true" focusable="false" className="mr-2 h-4 w-4" />
               {location}
             </h2>
           )}

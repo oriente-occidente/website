@@ -37,7 +37,7 @@ function CustomDialog({
               onClick={() => closeDialog()}
             >
               <span className="sr-only">Close</span>
-              <XIcon className="h-6 w-6" aria-hidden="true" />
+              <XIcon className="h-6 w-6" aria-hidden="true" focusable="false" />
             </button>
 
             <div className="relative flex flex-col bg-white p-10 text-black ">

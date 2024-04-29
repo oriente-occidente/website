@@ -23,14 +23,14 @@ function StandardCard({ data, locale, categoryTitle = "" }) {
           <div className="text-xxs absolute left-4 bottom-2 top-auto z-20 font-semibold uppercase text-white md:left-8 md:bottom-6 md:text-xs">
             {datesGrouped.map((str) => (
               <div className="hidden items-center gap-x-2 md:flex" key={str}>
-                <CalendarIcon aria-hidden="true" className="h-4 w-4" />
+                <CalendarIcon aria-hidden="true" focusable="false" className="h-4 w-4" />
                 <span className="font-light capitalize md:pr-1">{str}</span>
               </div>
             ))}
             {/* {data._modelApiKey=="project" || "network" ? <div className="font-light">{year}</div> : ""} */}
             {data.location && (
               <div className="hidden items-center gap-x-2 md:flex">
-                <MapPinIcon aria-hidden="true" className="h-4 w-4" />
+                <MapPinIcon aria-hidden="true" focusable="false" className="h-4 w-4" />
                 <span className="hidden font-light normal-case md:inline-block">
                   {data.location}
                 </span>
@@ -64,7 +64,7 @@ function StandardCard({ data, locale, categoryTitle = "" }) {
         {/* {data.dates && (
             <div className="md:hidden flex gap-1 items-center">
               <CalendarIcon
-                aria-hidden="true"
+                aria-hidden="true" focusable="false"
                 className="w-3 h-4 mr-1 text-black"
               />
               <h3 className="inline-block md:hidden normal-case text-xxs">
@@ -75,7 +75,7 @@ function StandardCard({ data, locale, categoryTitle = "" }) {
         {datesGrouped.map((d) => (
           <div className="flex items-center gap-1 md:hidden" key={"descr_" + d}>
             <CalendarIcon
-              aria-hidden="true"
+              aria-hidden="true" focusable="false"
               className="mr-1 h-4 w-3 text-black"
             />
             <div className="text-xxs capitalize">{d}</div>
@@ -84,7 +84,7 @@ function StandardCard({ data, locale, categoryTitle = "" }) {
         {data.location && (
           <div className="flex items-center gap-1 md:hidden">
             <MapPinIcon
-              aria-hidden="true"
+              aria-hidden="true" focusable="false"
               className="mr-1 h-4 w-3 text-black"
             />
             <div className="text-xxs inline-block normal-case md:hidden">

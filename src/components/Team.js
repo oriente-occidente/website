@@ -30,7 +30,7 @@ export default function Team({ locale, data }) {
               className="hover:text-red"
             >
               <AtSymbolIcon
-                aria-hidden="true"
+                aria-hidden="true" focusable="false"
                 className="h-4 w-4 mr-1 inline-block"
               />
               email
@@ -47,7 +47,7 @@ export default function Team({ locale, data }) {
               className="hover:text-red"
             >
               <LinkIcon
-                aria-hidden="true"
+                aria-hidden="true" focusable="false"
                 className="h-4 w-4 mr-1 inline-block"
               />
               linkedin

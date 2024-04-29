@@ -110,7 +110,7 @@ export default function CategoryCard({ data, locale }: GenericCardProps) {
           {data.location && categoryTitle != "artisti" && (
             <div className="flex items-center gap-1 text-red-alt">
               <MapPinIcon
-                aria-hidden="true"
+                aria-hidden="true" focusable="false"
                 className="mr-1 h-4 w-3 text-red-alt"
               />
               <div className="text-xxs inline-block normal-case">
@@ -121,7 +121,7 @@ export default function CategoryCard({ data, locale }: GenericCardProps) {
           {categoryTitle != "artisti" &&
             datesGrouped.map((str) => (
               <div className="items-center gap-x-2 flex text-red-alt" key={str}>
-                <CalendarIcon aria-hidden="true" className="h-4 w-4" />
+                <CalendarIcon aria-hidden="true" focusable="false" className="h-4 w-4" />
                 <span className="text-xxs inline-block normal-case">{str}</span>
               </div>
             ))}

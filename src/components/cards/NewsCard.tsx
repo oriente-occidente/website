@@ -109,7 +109,7 @@ export default function NewsCard({ data, locale }: GenericCardProps) {
         </div>
         {data.location && (
           <div className="flex items-center gap-1 md:hidden">
-            <MapPinIcon aria-hidden="true" className="mr-1 h-4 w-3 text-black" />
+            <MapPinIcon aria-hidden="true" focusable="false" className="mr-1 h-4 w-3 text-black" />
             <div className="text-xxs">{data.location}</div>
           </div>
         )}

@@ -40,7 +40,7 @@ export default function AccordionItem({ filter, locale }: any) {
       >
         <span>{translate(`search-filters.${filter.name}`, locale)}</span>
         <ChevronDownIcon
-          aria-hidden="true"
+          aria-hidden="true" focusable="false"
           className={`h-4 w-4 motion-safe:duration-300 ${
             clicked ? "rotate-180" : ""
           }`}

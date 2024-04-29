@@ -47,7 +47,7 @@ function renderSections(content: ContentType, year: string): ReactNode[] {
             >
               <div>({value.count})</div>
               <div>{translate(key, locale)}</div>
-              <ArrowLongRightIcon aria-hidden="true" className="h-5 w-5" />
+              <ArrowLongRightIcon aria-hidden="true" focusable="false" className="h-5 w-5" />
             </Link>
           </div>
         )}

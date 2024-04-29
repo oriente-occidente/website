@@ -26,7 +26,7 @@ export default function Relations({ relations, locale }) {
                         {relation.title}
                       </h2>
                       <ArrowLongDownIcon
-                        aria-hidden="true"
+                        aria-hidden="true" focusable="false"
                         className={`h-6 w-6`}
                       />
                     </Link>
