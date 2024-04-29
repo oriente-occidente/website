@@ -97,11 +97,11 @@ export default function CategoryCard({ data, locale }: GenericCardProps) {
               data.titleHero !== data.title &&
               categoryTitle != "artisti" && ( */}
             {data.title && (
-              <h2
+              <h3
                 className={`pr-5 text-base sm:text-lg font-semibold uppercase text-black md:text-lg group-hover:origin-left group-hover:-rotate-1 group-hover:-translate-y-3 duration-300`}
               >
                 <span className={`${categoryClasses}`}>{data.title}</span>
-              </h2>
+              </h3>
             )}
             {/* {data.titleHero && !data.authors && (
               <h3

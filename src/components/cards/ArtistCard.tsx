@@ -65,11 +65,11 @@ export default function CategoryCard({ data, locale, model }: GenericCardProps) 
         <div className="relative h-[220px] overflow-hidden md:h-[360px]">
           <div className="absolute z-20 bottom-0 group">
             {data.title && (
-              <h2
+              <h3
                 className={`pr-5 text-base sm:text-lg font-semibold uppercase text-black md:text-lg group-hover:origin-left group-hover:-rotate-1 group-hover:-translate-y-3 duration-300`}
               >
                 <span className={`${categoryClasses}`}>{data.title}</span>
-              </h2>
+              </h3>
             )}
           </div>
           {data.imageHero && (

@@ -63,11 +63,11 @@ function HeroDetail({ data, locale }) {
           <div className="">
             <h1 className="pt-1 pb-1 text-base uppercase lg:text-xl">{titleHero}</h1>
             {authors && (
-              <h2 className="mb-1 text-base font-semibold uppercase lg:text-xl">
+              <p className="mb-1 text-base font-semibold uppercase lg:text-xl">
                 {authors}
-              </h2>
+              </p>
             )}
-            <h2 className="text-base font-semibold uppercase">{descriptionHero}</h2>
+            <p className="text-base font-semibold uppercase">{descriptionHero}</p>
           </div>
 
           {paymentSettings && (
