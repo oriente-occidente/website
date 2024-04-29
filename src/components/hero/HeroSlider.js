@@ -12,7 +12,7 @@ import { Image as DatoImage } from "react-datocms";
 
 function HeroSlider({ slides }) {
   return (
-    <header id="main-content" className="relative overflow-hidden">
+    <div className="relative overflow-hidden">
       <Swiper
         modules={[Autoplay, A11y, EffectFade, Parallax, Pagination, Navigation]}
         spaceBetween={0}
@@ -43,7 +43,7 @@ function HeroSlider({ slides }) {
           );
         })}
       </Swiper>
-    </header>
+    </div>
   );
 }
 
