@@ -107,7 +107,11 @@ function Header(props: any) {
           <>
             <div className="container flex h-full items-center justify-between py-2 sm:px-6 lg:justify-start lg:space-x-10 lg:py-3">
               <div>
-                <Link locale={locale} href="/" className="flex">
+                <Link
+                  locale={locale}
+                  href={resolveLink({ _modelApiKey: "home", slug: "/", locale })}
+                  className="flex"
+                >
                   <span className="sr-only">Oriente Occidente</span>
                   <img
                     className="h-10 w-auto object-contain sm:h-12 lg:h-16"

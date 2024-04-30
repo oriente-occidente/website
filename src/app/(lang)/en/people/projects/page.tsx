@@ -24,9 +24,14 @@ export default async function Page() {
   const page = data?.projectsIndex;
   const res = await fetchDato(ProjectsDocument, { locale: siteLocale }, isEnabled);
 
+  const heroData = {
+    titleHero: page?.title || "",
+    descriptionHero: page?.description || "",
+  };
+
   const pageData: any = {
     list: res.projects || [],
-    hero: null,
+    hero: heroData,
     page,
   };
   const slugData = extractSlugData(data.projectsIndex);

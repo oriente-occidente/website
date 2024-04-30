@@ -1,5 +1,6 @@
 query allNews($locale: SiteLocale) {
   allNews(
+    fallbackLocales: it
     locale: $locale
     orderBy: startDate_DESC
     filter: { slug: { neq: null } }
