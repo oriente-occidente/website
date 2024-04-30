@@ -1,6 +1,7 @@
 import dayjs from "dayjs";
 import "dayjs/locale/it";
 import config from "@/data/config";
+import { ArtisticResidenceYear } from "@/types";
 
 export function getBaseDate() {
   return dayjs().subtract(1, "year").toDate();
@@ -177,9 +178,9 @@ export const closestInterval = (intervals: any[]) => {
   return intervals[0];
 };
 
-function getLastDate(dates: any[]) {
+function getLastDate(dates: any[], format: string = "YYYY-MM-DD") {
   const groups = dates.reduce((group, date) => {
-    const day = dayjs(date.endTime ? date.endTime : date.startTime).format("YYYY-MM-DD");
+    const day = dayjs(date.endTime ? date.endTime : date.startTime).format(format);
     if (group[day]) {
       group[day].push(date);
     } else {
@@ -289,4 +290,31 @@ export function cleanURL(url: string, locale: string) {
   let cleaned: string = url;
   substrings.forEach((s) => (cleaned = cleaned.replace(s, "")));
   return cleaned.trim();
+}
+
+export function getUpcomingEvents(list: any) {
+  const now = dayjs().format();
+  return list.filter((item: any) => {
+    const lastDate = getLastDate(item.dates, "");
+    return now < lastDate;
+  });
+}
+
+export function getPastEvents(list: any) {
+  const now = dayjs().format();
+  return list.filter((item: any) => {
+    const lastDate = getLastDate(item.dates, "");
+    return now > lastDate;
+  });
+}
+
+export function sortArtistByYear(items: any, apiKey: string) {
+  let key = "artisticResidence";
+  if (apiKey != "artistic_residencies_index") key = "associatedArtist";
+  items.sort((a: any, b: any) => {
+    let aMax = Math.max(...a[key].map((y: ArtisticResidenceYear) => y.year));
+    let bMax = Math.max(...b[key].map((y: ArtisticResidenceYear) => y.year));
+    return bMax - aMax;
+  });
+  return items;
 }
