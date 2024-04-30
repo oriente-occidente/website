@@ -5147,7 +5147,6 @@ export type FooterRecordSectionsArgs = {
 };
 
 export type FooterSectionModelLinksField = ArtisticResidenciesIndexRecord | ArtistsIndexRecord | EventsIndexRecord | FestivalEditionRecord | NetworksIndexRecord | PageRecord | ProjectsIndexRecord;
-export type FooterSectionModelLinksField = ArtisticResidenciesIndexRecord | ArtistsIndexRecord | EventsIndexRecord | FestivalEditionRecord | NetworksIndexRecord | PageRecord | ProjectsIndexRecord;
 
 /** Block of type Footer Section (footer_section) */
 export type FooterSectionRecord = RecordInterface & {

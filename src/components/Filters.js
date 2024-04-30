@@ -10,7 +10,7 @@ function Filters({ locale, list = null }) {
   const [typeFilter, setTypeFilter] = useState("festivalEvents");
   useEffect(() => {
     const params = new URLSearchParams(window.location.search);
-    console.log("params", params);
+    // console.log("params", params);
     if (params.get("type")) {
       setTypeFilter(params.get("type"));
     }
@@ -34,7 +34,7 @@ function Filters({ locale, list = null }) {
     }
   }
 
-  console.log("typeFilter", typeFilter);
+  // console.log("typeFilter", typeFilter);
   const resultList = filterData(list, typeFilter);
   const finished = sortDesc(
     resultList?.filter((e) => e.finished),

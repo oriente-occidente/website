@@ -1,6 +1,8 @@
 "use client";
 import { useState, useEffect } from "react";
 import translate from "@/lib/locales";
+import { Fragment } from "react";
+import { Tab } from "@headlessui/react";
 
 const tabs = [
   { name: "tab_festival", slug: "all", description: "festivalDescription" },
@@ -29,7 +31,11 @@ export default function Tabs({ selected, handleSelect, locale, catLengths }) {
       handleSelect(value);
     }
   }
-
+  function onKeydown(e, slug) {
+    if (e.key === "Enter") {
+      setCurrent(slug)
+    }
+  }
   useEffect(() => {
     if (selected) {
       setCurrent(selected);
@@ -43,47 +49,96 @@ export default function Tabs({ selected, handleSelect, locale, catLengths }) {
   return (
     <>
       <div className="container mx-auto px-0">
-        <nav
+        <nav aria-label="Tabs">
+          <Tab.Group  onChange={handleChange(current)}>
+            <Tab.List className="-mb-px flex flex-wrap lg:flex-nowrap w-full">
+              {filteredTabs.map((tab) => {
+                const { slug, name, description } = tab;
+                const isActive = slug === current;
+                return (
+                  <Tab key={slug} as={Fragment}>
+                    {({ selected }) => (
+                      <button
+                        onClick={() => setCurrent(slug)}
+                        onKeyDown={(e) => onKeydown(e,slug)}
+                        className={`group w-full border-transparent border-b text-left px-8 pt-4 hover:!border-black
+                          ${
+                            selected
+                              ? "font-semibold text-blac !border-black"
+                              : "text-gray-dark hover:text-black "
+                          }
+                          ${
+                            isActive
+                              ? "bg-red-light !border-black font-semibold"
+                              : ""
+                          }
+                          `}
+                      >
+                        <p
+                          className={`${
+                            isActive
+                              ? "font-semibold text-black"
+                              : "text-gray-dark group-hover:text-black group-hover:font-semibold"
+                          }`}
+                        >
+                          {translate(name, locale)}
+                        </p>
+                        <p className="text-left text-3xs pb-4">
+                          {translate(description, locale)}
+                        </p>
+                      </button>
+                    )}
+                  </Tab>
+                );
+              })}
+            </Tab.List>
+          </Tab.Group>
+        </nav>
+      </div>
+
+      {/* <div className="container mx-auto px-0">
+        <div
           className="-mb-px flex flex-wrap lg:flex-nowrap w-full"
           aria-label="Tabs"
+          role="tablist"
         >
-          {filteredTabs.map((tab) => {
+          {filteredTabs.map((tab, i) => {
             const { slug, name, description } = tab;
             const isActive = slug === current;
             return (
-              <div
+              // <li  className={` w-full`}>
+              <button
                 key={slug}
+                tabIndex={isActive }
+                onClick={() => handleChange(slug)}
+                onKeyDown={() => handleChange(slug)}
                 className={`${
                   isActive
-                    ? "border-black border-b bg-red-light"
+                    ? "bg-red-light border-black border-b bg-red-light"
                     : "border-transparent border-b"
-                } px-8 pt-4 text-base w-full cursor-pointer`}
+                } whitespace-nowrap block w-full text-xs font-medium tracking-wider text-left px-8 py-4 cursor-pointer`}
+                role="tab"
+                aria-selected={isActive}
+                aria-current={isActive ? "page" : undefined}
               >
-                <a
-                  onClick={() => handleChange(slug)}
+                <p
                   className={`${
-                    isActive ? "bg-red-light" : ""
-                  } whitespace-nowrap pt-4 text-xs font-medium tracking-wider`}
-                  aria-current={isActive ? "page" : undefined}
+                    isActive
+                      ? "font-semibold text-black"
+                      : "text-gray-dark hover:text-black hover:font-semibold"
+                  }`}
                 >
-                  <p
-                    className={`${
-                      isActive
-                        ? "font-semibold text-black"
-                        : "text-gray-dark hover:text-black"
-                    }`}
-                  >
-                    {translate(name, locale)}
-                  </p>
-                  <p className="text-left text-3xs pb-4">
-                    {translate(description, locale)}
-                  </p>
-                </a>
-              </div>
+                  {translate(name, locale)}
+                </p>
+                <p className="text-left text-3xs">
+                  {translate(description, locale)}
+                </p>
+              </button>
+              // </li>
             );
           })}
-        </nav>
-      </div>
+        </div>
+      </div> */}
     </>
   );
 }
