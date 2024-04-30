@@ -85,7 +85,7 @@ export default function MobileNav({
                 </span>
                 <div
                   className="bg-close ml-2 h-6 w-6 md:ml-4 md:h-8 md:w-8"
-                  aria-hidden="true" focusable="false"
+                  aria-hidden="true"
                 />
               </Popover.Button>
             </div>
