@@ -21,11 +21,17 @@ export default async function Page() {
   const { isEnabled } = draftMode();
   const siteLocale = locale as SiteLocale;
   const data = await fetchDato(NewsIndexDocument, { locale: siteLocale }, isEnabled);
+  const page = data?.newsIndex;
   const res = await fetchDato(AllNewsDocument, { locale: siteLocale }, isEnabled);
+
+  const heroData = {
+    titleHero: page?.title || "",
+    descriptionHero: page?.description || "",
+  };
 
   const pageData: any = {
     list: res.allNews || [],
-    hero: null,
+    hero: heroData,
     page: data?.newsIndex,
   };
   const slugData = extractSlugData(data.newsIndex);
