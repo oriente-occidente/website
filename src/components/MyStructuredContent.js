@@ -44,12 +44,13 @@ const StructuredContent = ({ locale, content }) => {
                     </div>
                     <div className="absolute top-0 left-0 right-0 z-10 h-full opacity-0 bg-gray-dark motion-safe:transition-opacity motion-safe:duration-500 group-hover:opacity-100">
                       <Image
-                        className="opacity-30"
+                        data={overImage.responsiveImage}
                         layout="fill"
+                        alt={overImage.alt}
+                        className="opacity-30"
                         objectFit="cover"
                         objectPosition="50% 50%"
                         lazyLoad={false}
-                        data={overImage.responsiveImage}
                       />
                     </div>
                   </div>
@@ -61,26 +62,30 @@ const StructuredContent = ({ locale, content }) => {
       case "PromozioniBlockRecord":
         return (
           <div className="py-2 lg:py-10 2xl:py-16" key={record.id}>
-            {record.promozione.map(({ headerColor, title, subtitle, link, text }, id) => {
-              return (
-                <div key={id} className="mb-6 border p-3">
-                  <div
-                    className={`mb-3 ${
-                      headerColor ? "bg-gray-light" : "bg-black/70 text-white"
-                    } p-6`}
-                  >
-                    <div className="pb-2 text-xxs ">{subtitle.toUpperCase()}</div>
-                    <div className="text-sm font-semibold lg:text-base">
-                      {title.toUpperCase()}
+            {record.promozione.map(
+              ({ headerColor, title, subtitle, link, text }, id) => {
+                return (
+                  <div key={id} className="mb-6 border p-3">
+                    <div
+                      className={`mb-3 ${
+                        headerColor ? "bg-gray-light" : "bg-black/70 text-white"
+                      } p-6`}
+                    >
+                      <div className="pb-2 text-xxs ">
+                        {subtitle.toUpperCase()}
+                      </div>
+                      <div className="text-sm font-semibold lg:text-base">
+                        {title.toUpperCase()}
+                      </div>
                     </div>
+                    <div
+                      className="promobox pb-2 sm:pl-3 lg:pl-6"
+                      dangerouslySetInnerHTML={{ __html: text }}
+                    />
                   </div>
-                  <div
-                    className="promobox pb-2 sm:pl-3 lg:pl-6"
-                    dangerouslySetInnerHTML={{ __html: text }}
-                  />
-                </div>
-              );
-            })}
+                );
+              }
+            )}
           </div>
         );
       case "GalleryRecord":
@@ -140,7 +145,12 @@ const StructuredContent = ({ locale, content }) => {
           // console.log('inline', record.__typename);
           const resolved = resolveLink({ ...record, locale });
           return (
-            <Link href={resolved} key={record.id} locale={locale} className="underline">
+            <Link
+              href={resolved}
+              key={record.id}
+              locale={locale}
+              className="underline"
+            >
               {record.title}
             </Link>
           );

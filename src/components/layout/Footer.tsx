@@ -6,6 +6,7 @@ import type { FooterProps } from "@/types";
 import resolveLink from "@/lib/resolveLink";
 import translate from "@/lib/locales";
 import Newsletter from "@/components/layout/Newsletter";
+import Image from "next/image";
 
 export default function Footer({
   locale,
@@ -24,10 +25,12 @@ export default function Footer({
             <div className="md:grid md:grid-cols-2 md:gap-4">
               <div className="space-y-4 xl:grid xl:grid-cols-2 xl:gap-4 xl:space-y-0">
                 <div>
-                  <img
+                  <Image
                     className="h-[50px] w-[170px]"
                     src="/new-logo.svg"
                     alt="Oriente Occidente"
+                    width={170}
+                    height={50}
                   />
                 </div>
                 <div className="xl:space-y-4">
@@ -55,10 +58,10 @@ export default function Footer({
                               className="text-black hover:text-gray-400"
                             >
                               <span className="sr-only">{item.title}</span>
-                              <img
+                              <Image
                                 src={item.image.url}
-                                width="20px"
-                                height="20px"
+                                width={20}
+                                height={20}
                                 title={`${item.title}`}
                                 alt={`${item.title}`}
                               />

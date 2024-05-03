@@ -24,7 +24,7 @@ export default function SharedPagination({
     } else if (tablet.matches) {
       setVisiblePages(2);
     }
-  });
+  },[setVisiblePages]);
 
   const firstLastClass = isMainSearch ? "hidden" : "hidden md:block";
   const prevNextClass = resLength && resLength <= 3 ? "hidden" : "";

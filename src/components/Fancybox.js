@@ -17,7 +17,7 @@ export default function Fancybox(props) {
       NativeFancybox.unbind(container);
       NativeFancybox.close();
     };
-  }, []);
+  }, [props.delegate,props.options]);
 
   return <div ref={containerRef}>{props.children}</div>;
 }

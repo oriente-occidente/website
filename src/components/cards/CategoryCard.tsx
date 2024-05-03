@@ -1,5 +1,6 @@
 "use client";
 import { Image as DatoImage } from "react-datocms";
+import Image  from "next/image"
 import Link from "next/link";
 import { MapPinIcon, CalendarIcon } from "@heroicons/react/24/outline";
 import { groupDatesByDay, removeSpaces } from "@/lib/utils";
@@ -120,9 +121,10 @@ export default function CategoryCard({ data, locale }: GenericCardProps) {
           </div>
           {!data.imageHero && (
             <div className="relative h-[220px] overflow-hidden md:h-[360px]">
-              <img
+              <Image
                 className="dato-image-cover duration-300 group-hover:scale-105"
                 src={data.image}
+                alt={data.image.alt? data.image.alt : "Oriente Occidente"}
               />
             </div>
           )}

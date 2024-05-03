@@ -41,7 +41,7 @@ const VideoEmbedded = (props) => {
       const rect = ref.current.getBoundingClientRect().toJSON();
       setWidth(rect.width);
     }
-  }, [ref?.current, width, size]);
+  }, [width, size]);
 
   return (
     <div ref={ref} key={id} style={{ width: "100%", backgroundColor: "#000" }}>

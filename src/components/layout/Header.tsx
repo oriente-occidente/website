@@ -3,10 +3,10 @@ import Link from "next/link";
 import { Fragment } from "react";
 import { Popover, Transition } from "@headlessui/react";
 import { ChevronDownIcon, ArrowLongRightIcon } from "@heroicons/react/20/solid";
-
 import resolveLink from "@/lib/resolveLink";
 import LanguageSwitcher from "@/components/layout/LanguageSwitcher";
 import MobileNav from "@/components/layout/nav/MobileNav";
+import Image from "next/image";
 
 function classNames(...classes: any) {
   return classes.filter(Boolean).join(" ");
@@ -56,7 +56,7 @@ function renderLink(item: any, locale: string) {
                               ...child.link,
                               locale,
                             })}
-                            className="block py-1 sm:py-4 px-3 sm:px-5 hover:bg-red-light flex justify-between items-center"
+                            className=" py-1 sm:py-4 px-3 sm:px-5 hover:bg-red-light flex justify-between items-center"
                             onClick={() => close()}
                           >
                             <p className="text-black text-xs normal-case font-semibold">
@@ -109,11 +109,17 @@ function Header(props: any) {
               <div>
                 <Link
                   locale={locale}
-                  href={resolveLink({ _modelApiKey: "home", slug: "/", locale })}
+                  href={resolveLink({
+                    _modelApiKey: "home",
+                    slug: "/",
+                    locale,
+                  })}
                   className="flex"
                 >
                   <span className="sr-only">Oriente Occidente</span>
-                  <img
+                  <Image
+                    width={20}
+                    height={20}
                     className="h-10 w-auto object-contain sm:h-12 lg:h-16"
                     src="/new-logo.svg"
                     alt="Oriente Occidente"
@@ -132,13 +138,21 @@ function Header(props: any) {
                 </Popover.Button>
               </div>
               <div className="hidden lg:flex lg:flex-1 lg:items-center lg:justify-end">
-                <Popover.Group as="nav" className="flex space-x-2 uppercase xl:space-x-4">
+                <Popover.Group
+                  as="nav"
+                  className="flex space-x-2 uppercase xl:space-x-4"
+                >
                   {data?.map((item: any) => (
-                    <Fragment key={item.id}>{renderLink(item, locale)}</Fragment>
+                    <Fragment key={item.id}>
+                      {renderLink(item, locale)}
+                    </Fragment>
                   ))}
                 </Popover.Group>
                 <div className="text-xxs text-black-light ml-14 pt-1 font-semibold uppercase tracking-widest lg:flex">
-                  <LanguageSwitcher currentLocale={locale} slugData={slugData || {}} />
+                  <LanguageSwitcher
+                    currentLocale={locale}
+                    slugData={slugData || {}}
+                  />
                 </div>
               </div>
             </div>

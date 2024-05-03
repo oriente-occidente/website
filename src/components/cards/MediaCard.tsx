@@ -15,25 +15,54 @@ import {
   VideoCameraIcon,
   PhotoIcon,
 } from "@heroicons/react/24/outline";
+import Image from "next/image";
 
 export function CatTitle(catTitle: string) {
   let title = null;
   switch (catTitle) {
     case "document":
     case "media_document":
-      title = <PaperClipIcon aria-hidden="true" focusable="false" className="h-4 w-4" color="#D83D35" />;
+      title = (
+        <PaperClipIcon
+          aria-hidden="true"
+          focusable="false"
+          className="h-4 w-4"
+          color="#D83D35"
+        />
+      );
       break;
     case "audio":
     case "media_audio":
-      title = <MusicalNoteIcon aria-hidden="true" focusable="false" className="h-4 w-4" color="#D83D35" />;
+      title = (
+        <MusicalNoteIcon
+          aria-hidden="true"
+          focusable="false"
+          className="h-4 w-4"
+          color="#D83D35"
+        />
+      );
       break;
     case "photo":
     case "media_photo":
-      title = <PhotoIcon aria-hidden="true" focusable="false" className="h-4 w-4" color="#D83D35" />;
+      title = (
+        <PhotoIcon
+          aria-hidden="true"
+          focusable="false"
+          className="h-4 w-4"
+          color="#D83D35"
+        />
+      );
       break;
     case "video":
     case "media_video":
-      title = <VideoCameraIcon aria-hidden="true" focusable="false" className="h-4 w-4" color="#D83D35" />;
+      title = (
+        <VideoCameraIcon
+          aria-hidden="true"
+          focusable="false"
+          className="h-4 w-4"
+          color="#D83D35"
+        />
+      );
       break;
     default:
       <></>;
@@ -48,12 +77,20 @@ export default function MediaCard({ data, locale }: GenericCardProps) {
   const title = data.title || data.description || data.id;
   return (
     <div className="relative">
-      <Link href={link} title={title} className="group" aria-label={`Vai a ${title}`}>
+      <Link
+        href={link}
+        title={title}
+        className="group"
+        aria-label={`Vai a ${title}`}
+      >
         {data.image ? (
           <div className="relative h-[220px] overflow-hidden md:h-[360px]">
-            <img
+            <Image
               className="dato-image-cover duration-300 group-hover:scale-105"
               src={data.image.url ? data.image.url : data.image}
+              alt={data.image.alt ? data.image.alt : "Oriente Occidente"}
+              width={400}
+              height={300}
             />
           </div>
         ) : (

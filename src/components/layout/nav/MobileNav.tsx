@@ -2,7 +2,7 @@
 import Link from "next/link";
 import { Fragment } from "react";
 import { Popover, Disclosure } from "@headlessui/react";
-
+import Image from "next/image";
 import resolveLink from "@/lib/resolveLink";
 import LanguageSwitcher from "@/components/layout/LanguageSwitcher";
 import { MobileNavProps } from "@/types";
@@ -71,11 +71,13 @@ export default function MobileNav({
           <div className="flex items-center justify-between h-[70px] bg-white/80 md:h-[80px] lg:h-[110px]">
             <div>
               <Link locale={locale} href="/" title="homepage">
-                <img
-                  className="h-10 w-auto sm:h-12 lg:h-16"
-                  src="/new-logo.svg"
-                  alt="Oriente Occidente"
-                />
+                <Image
+                    width={20}
+                    height={20}
+                    className="h-10 w-auto object-contain sm:h-12 lg:h-16"
+                    src="/new-logo.svg"
+                    alt="Oriente Occidente"
+                  />
               </Link>
             </div>
             <div className="-mr-2">

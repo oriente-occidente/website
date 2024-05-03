@@ -91,10 +91,14 @@ export default function CategoryCard({ data, locale }: GenericCardProps) {
               </div>
             )}
           </div>
-          <img
+          {/* <img
             className="dato-image-cover duration-300 group-hover:scale-105"
             src={data.image}
-          />
+          /> */}
+          <DatoImage
+              className="dato-image-cover duration-300 group-hover:scale-105 "
+              data={data.image.responsiveImage}
+            />
         </div>
 
         <div className="z-20">
