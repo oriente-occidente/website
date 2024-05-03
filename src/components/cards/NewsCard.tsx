@@ -70,11 +70,9 @@ export default function NewsCard({ data, locale }: GenericCardProps) {
             //   src={data.image}
             // />
             <Image
-              className="dato-image-cover duration-300 group-hover:scale-105"
+              className="duration-300 group-hover:scale-105"
               src={data.image.url ? data.image.url : data.image}
               alt={data.image.alt ? data.image.alt : "Oriente Occidente"}
-              width={400}
-              height={300}
             />
           )}
         </div>
