@@ -20,9 +20,11 @@ function HeroSlider({ slides }) {
         slidesPerView={1}
         pagination={true}
         navigation={true}
+        preloadImages={true}
+        lazy={true}
         className="mySwiper relative h-[40vh] md:h-[60vh] xl:h-[70vh]"
       >
-        {slides.map((slide) => {
+        {slides.map((slide, i) => {
           const { image } = slide;
           const { responsiveImage, alt, title, id } = image;
           return (
@@ -32,6 +34,7 @@ function HeroSlider({ slides }) {
                 data={responsiveImage}
                 alt={alt}
                 title={title}
+                priority={i == 0 ? true : false}
               />
               <div className="container relative h-full">
                 <h2 className="absolute bottom-16 right-4 z-20 w-4/5 text-right text-base font-normal text-white md:bottom-12 md:w-2/3 md:text-lg xl:w-1/2 xl:text-2xl 2xl:bottom-24 2xl:right-0">
