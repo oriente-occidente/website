@@ -122,7 +122,7 @@ function Header(props: any) {
                     height={20}
                     className="h-10 w-auto object-contain sm:h-12 lg:h-16"
                     src="/new-logo.svg"
-                    alt="Oriente Occidente"
+                    alt="Oriente Occidente Logo"
                   />
                 </Link>
               </div>

@@ -62,8 +62,7 @@ export default function Footer({
                                 src={item.image.url}
                                 width={20}
                                 height={20}
-                                title={`${item.title}`}
-                                alt={`${item.title}`}
+                                alt={`${item.title} logo`}
                               />
                             </Link>
                           </Fragment>
