@@ -44,7 +44,7 @@ export default function Newsletter({ locale, data }: NewsletterProps) {
                   <label className="sr-only" htmlFor="input-text">
                     Text:
                   </label>
-                  <div className="sr-only" aria-hidden="true">
+                  <div className="sr-only">
                     <input
                       type="text"
                       id="input-text"
