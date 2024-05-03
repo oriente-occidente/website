@@ -12,12 +12,7 @@ fragment wsCatsFrag on WorkshopCategoriesBlockRecord {
     title
     _modelApiKey
     overImage {
-      url
-      responsiveImage(
-        sizes: "(max-width: 1023px) 50vw, (min-width: 1024px) 30vw, 300px"
-      ) {
-        ...imgFrag
-      }
+      ...imageHeroFrag
     }
     description
     color {

@@ -3,7 +3,7 @@ fragment imageBlockFrag on ImageBlockRecord {
   id
   image {
     responsiveImage(
-      sizes: "100vw"
+      sizes: "(max-width: 1024px) 80vw, (min-width: 1025px) 45vw, 600px"
       imgixParams: { auto: [format, compress], h: 800, w: 1200, fit: crop }
     ) {
       ...imgFrag

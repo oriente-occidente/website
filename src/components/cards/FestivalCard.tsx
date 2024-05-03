@@ -67,7 +67,7 @@ export default function CategoryCard({ data, locale }: GenericCardProps) {
   return (
     <div className="relative py-4">
       <Link href={link} title={data.title} className="group" aria-label={`Vai a ${data.title}`}>
-        <div className="relative h-[220px] overflow-hidden md:h-[360px]">
+        <div className="relative overflow-hidden">
           <div className="absolute z-20 bottom-0 group">
             {data.title && (
               <h3

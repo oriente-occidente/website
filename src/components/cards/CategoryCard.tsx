@@ -88,7 +88,7 @@ export default function CategoryCard({ data, locale }: GenericCardProps) {
   return (
     <div className="relative py-4">
       <Link href={link} title={data.title} className="group"  aria-label={`Vai a ${data.title}`}>
-        <div className="relative h-[220px] overflow-hidden md:h-[360px]">
+        <div className="relative overflow-hidden">
           <div className="absolute z-20 bottom-0 group">
             {/* {data.title &&
               (data.authors ||
@@ -120,9 +120,9 @@ export default function CategoryCard({ data, locale }: GenericCardProps) {
             )}
           </div>
           {!data.imageHero && (
-            <div className="relative h-[220px] overflow-hidden md:h-[360px]">
+            <div className="relative overflow-hidden ">
               <Image
-                className="dato-image-cover duration-300 group-hover:scale-105"
+                className="duration-300 group-hover:scale-105"
                 src={data.image}
                 alt={data.image.alt? data.image.alt : "Oriente Occidente"}
               />
@@ -130,7 +130,7 @@ export default function CategoryCard({ data, locale }: GenericCardProps) {
           )}
           {data.imageHero && (
             <DatoImage
-              className="dato-image-cover duration-300 group-hover:scale-105 "
+              className="duration-300 group-hover:scale-105 "
               data={data.imageHero.responsiveImage}
             />
           )}

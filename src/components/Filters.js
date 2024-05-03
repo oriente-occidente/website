@@ -84,7 +84,7 @@ function Filters({ locale, list = null }) {
         {active.length > 0 && (
           <div className="lg:grid lg:grid-cols-2 lg:gap-6">
             {active?.map((item) => (
-              <PreviewCard locale={locale} data={item} key={item.id} />
+              <CategoryCard locale={locale} data={item} key={item.id} />
             ))}
           </div>
         )}

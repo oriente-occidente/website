@@ -84,7 +84,7 @@ export default function MediaCard({ data, locale }: GenericCardProps) {
         aria-label={`Vai a ${title}`}
       >
         {data.image ? (
-          <div className="relative h-[220px] overflow-hidden md:h-[360px]">
+          <div className="relative overflow-hidden">
             <Image
               className="dato-image-cover duration-300 group-hover:scale-105"
               src={data.image.url ? data.image.url : data.image}
@@ -94,7 +94,7 @@ export default function MediaCard({ data, locale }: GenericCardProps) {
             />
           </div>
         ) : (
-          <div className="relative h-[220px] overflow-hidden md:h-[360px] flex items-center justify-center border-1 border-gray-100 bg-cat-linguaggi">
+          <div className="relative overflow-hidden flex items-center justify-center border-1 border-gray-100 bg-cat-linguaggi">
             {categoryTitle.toLowerCase() === "audio" ||
               (categoryTitle.toLowerCase() === "media_audio" && (
                 <SpeakerWaveIcon className="h-[150px] text-black" />
