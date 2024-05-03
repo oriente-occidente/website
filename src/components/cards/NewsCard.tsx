@@ -58,23 +58,19 @@ export default function NewsCard({ data, locale }: GenericCardProps) {
     <div className="relative py-4">
       <Link href={link} title={data.title} className="group" aria-label={`Vai a ${data.title}`}>
         <div className="relative overflow-hidden">
-          {data.imageHero && (
+          {/* {data.imageHero && (
             <DatoImage
               className=" duration-300 group-hover:scale-105"
               data={data.imageHero.responsiveImage}
             />
-          )}
-          {data.image && (
-            // <img
-            //   className="dato-image-cover duration-300 group-hover:scale-105"
-            //   src={data.image}
-            // />
+          )} */}
+          {/* {data.image && ( */}
             <Image
               className="duration-300 group-hover:scale-105"
               src={data.image.url ? data.image.url : data.image}
               alt={data.image.alt ? data.image.alt : "Oriente Occidente"}
             />
-          )}
+          {/* )} */}
         </div>
 
         <div className="z-20">
