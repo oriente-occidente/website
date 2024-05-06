@@ -82,10 +82,11 @@ const labels_en = {
   publication: "Publication",
   event: "Event",
   workshop: "Workshop",
+  languages: "Languages",
   formazione: "training",
-  festivalDescription: "Training activities",
+  festivalDescription: "Complete program",
   eventsDescription: "Shows, performances and open rehearsals",
-  workshopsDescription: "Complete program",
+  workshopsDescription: "Training activities",
   languagesDescription: "Conferences and talks",
   search: {
     title: "Search",

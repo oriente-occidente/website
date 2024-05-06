@@ -96,7 +96,7 @@ export default function CategoryCard({ data, locale }: GenericCardProps) {
             src={data.image}
           /> */}
           <DatoImage
-              className="dato-image-cover duration-300 group-hover:scale-105 "
+              className="duration-300 group-hover:scale-105 "
               data={data.image.responsiveImage}
             />
         </div>

@@ -74,7 +74,7 @@ export default function CategoryCard({ data, locale, model }: GenericCardProps) 
           </div>
           {data.imageHero && (
             <DatoImage
-              className="dato-image-cover duration-300 group-hover:scale-105 "
+              className=" duration-300 group-hover:scale-105 "
               data={data.imageHero.responsiveImage}
             />
           )}
