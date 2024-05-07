@@ -6,14 +6,47 @@ import translate from "@/lib/locales";
 import { enhanceEvents, sortDesc, sortAsc, sortFlatEvents } from "@/lib/utils";
 import { useEffect, useState } from "react";
 
+const tabs = [
+  { name: "tab_festival", slug: "all", description: "festivalDescription" },
+  {
+    name: "tab_events",
+    slug: "festivalEvents",
+    description: "eventsDescription",
+  },
+  {
+    name: "tab_workshops",
+    slug: "workshops",
+    description: "workshopsDescription",
+  },
+  {
+    name: "tab_languages",
+    slug: "languages",
+    description: "languagesDescription",
+  },
+  // { name: 'tab_talks', slug: 'courses' },
+];
+
 function Filters({ locale, list = null }) {
-  const [typeFilter, setTypeFilter] = useState("festivalEvents");
+  const [typeFilter, setTypeFilter] = useState(null);
+
+  function handleTypeFilter(value) {
+    setTypeFilter(value);
+  }
+
+  useEffect(() => {
+    if (typeFilter) {
+      const url = `${window.location.pathname}?type=${typeFilter}`;
+      window.history.pushState({ path: url }, "", url);
+    }
+  }, [typeFilter]);
+
   useEffect(() => {
     if (typeof window !== "undefined") {
       const params = new URLSearchParams(window.location.search);
-      // console.log("params", params);
-      if (params.get("type")) {
+      if (params.get("type") && tabs.find((t) => t.slug == params.get("type"))) {
         setTypeFilter(params.get("type"));
+      } else {
+        setTypeFilter("festivalEvents");
       }
     }
   }, []);
@@ -56,22 +89,15 @@ function Filters({ locale, list = null }) {
     }
   }
 
-  function changeRoute(value) {
-    if (typeof window !== "undefined") {
-      const url = `${window.location.pathname}?type=${value}`;
-      window.history.pushState({ path: url }, "", url);
-      setTypeFilter(value);
-    }
-  }
-
   return (
     <div className="mt-10">
       <div className="border-gray md:border-b">
         <Tabs
           locale={locale}
           selected={typeFilter}
-          handleSelect={(value) => changeRoute(value)}
+          handleSelect={(value) => handleTypeFilter(value)}
           catLengths={catLengths}
+          tabs={tabs}
         />
         {/* <div className="md:border-b md:border-gray md:pt-4 md:pb-8 xl:border-none xl:pt-0 xl:pb-0">
             <div className="px-4 pt-4 md:flex md:justify-between md:px-6 xl:pt-2">

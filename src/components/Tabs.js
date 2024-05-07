@@ -4,43 +4,12 @@ import translate from "@/lib/locales";
 import { Fragment } from "react";
 import { Tab } from "@headlessui/react";
 
-const tabs = [
-  { name: "tab_festival", slug: "all", description: "festivalDescription" },
-  {
-    name: "tab_events",
-    slug: "festivalEvents",
-    description: "eventsDescription",
-  },
-  {
-    name: "tab_workshops",
-    slug: "workshops",
-    description: "workshopsDescription",
-  },
-  {
-    name: "tab_languages",
-    slug: "languages",
-    description: "languagesDescription",
-  },
-  // { name: 'tab_talks', slug: 'courses' },
-];
-
-export default function Tabs({ selected, handleSelect, locale, catLengths }) {
-  const [current, setCurrent] = useState("festivalEvents");
-  function handleChange(value) {
-    if (value && handleSelect) {
-      handleSelect(value);
-    }
-  }
+export default function Tabs({ selected, handleSelect, locale, catLengths, tabs }) {
   function onKeydown(e, slug) {
     if (e.key === "Enter") {
-      setCurrent(slug)
+      handleSelect(slug);
     }
   }
-  useEffect(() => {
-    if (selected) {
-      setCurrent(selected);
-    }
-  }, [selected]);
 
   const filteredTabs = tabs.filter(
     (tab) => tab.slug === "all" || catLengths[tab.slug] > 0
@@ -50,28 +19,24 @@ export default function Tabs({ selected, handleSelect, locale, catLengths }) {
     <>
       <div className="container mx-auto px-0">
         <nav aria-label="Tabs">
-          <Tab.Group  onChange={handleChange(current)}>
+          <Tab.Group>
             <Tab.List className="-mb-px flex flex-wrap lg:flex-nowrap w-full">
               {filteredTabs.map((tab) => {
                 const { slug, name, description } = tab;
-                const isActive = slug === current;
+                const isActive = slug === selected;
                 return (
                   <Tab key={slug} as={Fragment}>
                     {({ selected }) => (
                       <button
-                        onClick={() => setCurrent(slug)}
-                        onKeyDown={(e) => onKeydown(e,slug)}
+                        onClick={() => handleSelect(slug)}
+                        onKeyDown={(e) => onKeydown(e, slug)}
                         className={`group w-full border-transparent border-b text-left px-8 pt-4 hover:!border-black
                           ${
-                            selected
+                            isActive
                               ? "font-semibold text-blac !border-black"
                               : "text-gray-dark hover:text-black "
                           }
-                          ${
-                            isActive
-                              ? "bg-red-light !border-black font-semibold"
-                              : ""
-                          }
+                          ${isActive ? "bg-red-light !border-black font-semibold" : ""}
                           `}
                       >
                         <p
