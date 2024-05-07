@@ -9,10 +9,7 @@ import Breadcrumbs from "@/components/Breadcrumbs";
 import NewsCard from "../cards/NewsCard";
 import { Fragment } from "react";
 
-export default function FestivalTemplate({
-  data,
-  locale,
-}: FestivalProgramPageProps) {
+export default function FestivalTemplate({ data, locale }: FestivalProgramPageProps) {
   const news = data.page.news || [];
   return (
     <div>

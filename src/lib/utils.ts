@@ -250,6 +250,15 @@ export function enhanceEvents(list: any[]) {
   });
 }
 
+export function sortFlatEvents(list: any[]) {
+  if (!list) return [];
+  return list.sort((a: any, b: any) => {
+    let aMax = Math.max(...a.dates.map((y: any) => dayjs(y.startTime).unix()));
+    let bMax = Math.max(...b.dates.map((y: any) => dayjs(y.startTime).unix()));
+    return aMax - bMax;
+  });
+}
+
 // export const mediaRecordTypenames: string[] = [
 //   "MediaAudioRecord",
 //   "MediaVideoRecord",

@@ -3,16 +3,18 @@ import Tabs from "@/components/Tabs";
 import PreviewCard from "@/components/cards/PreviewCard";
 import CategoryCard from "@/components/cards/CategoryCard";
 import translate from "@/lib/locales";
-import { enhanceEvents, sortDesc, sortAsc } from "@/lib/utils";
+import { enhanceEvents, sortDesc, sortAsc, sortFlatEvents } from "@/lib/utils";
 import { useEffect, useState } from "react";
 
 function Filters({ locale, list = null }) {
   const [typeFilter, setTypeFilter] = useState("festivalEvents");
   useEffect(() => {
-    const params = new URLSearchParams(window.location.search);
-    // console.log("params", params);
-    if (params.get("type")) {
-      setTypeFilter(params.get("type"));
+    if (typeof window !== "undefined") {
+      const params = new URLSearchParams(window.location.search);
+      // console.log("params", params);
+      if (params.get("type")) {
+        setTypeFilter(params.get("type"));
+      }
     }
   }, []);
 
@@ -27,8 +29,9 @@ function Filters({ locale, list = null }) {
           }
           return all;
         }, []) || [];
-      //TODO SORT BY DATE
-      return enhanceEvents(allResults);
+
+      // return enhanceEvents(allResults);
+      return sortFlatEvents(allResults);
     } else {
       return enhanceEvents(results[typeFilter]);
     }
@@ -54,9 +57,11 @@ function Filters({ locale, list = null }) {
   }
 
   function changeRoute(value) {
-    const url = `${window.location.pathname}?type=${value}`;
-    window.history.pushState({ path: url }, "", url);
-    setTypeFilter(value);
+    if (typeof window !== "undefined") {
+      const url = `${window.location.pathname}?type=${value}`;
+      window.history.pushState({ path: url }, "", url);
+      setTypeFilter(value);
+    }
   }
 
   return (

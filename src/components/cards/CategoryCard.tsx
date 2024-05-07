@@ -9,7 +9,7 @@ import resolveLink from "@/lib/resolveLink";
 import translate from "@/lib/locales";
 
 export default function CategoryCard({ data, locale }: GenericCardProps) {
-  console.log("data", data.category);
+  // console.log("data", data.category);
   const datesGrouped = data.dates ? groupDatesByDay(data.dates, locale) : [];
   // console.log("data", data);
   let categoryTitle;
@@ -81,9 +81,7 @@ export default function CategoryCard({ data, locale }: GenericCardProps) {
     }
   }
   checkWorkshops(categoryTitle);
-  const categoryClasses = categoryColorClasses(
-    categoryTitle ? categoryTitle : ""
-  );
+  const categoryClasses = categoryColorClasses(categoryTitle ? categoryTitle : "");
 
   const link = resolveLink({ ...data, locale });
   return (
@@ -156,7 +154,14 @@ export default function CategoryCard({ data, locale }: GenericCardProps) {
             {data.category?.length > 0 && (
               <>
                 {data.category.map((cat: any) => {
-                  return <div key={cat.id} className="text-[13px] md:text-sm uppercase font-semibold leading-[1]">{cat.title}</div>;
+                  return (
+                    <div
+                      key={cat.id}
+                      className="text-[13px] md:text-sm uppercase font-semibold leading-[1]"
+                    >
+                      {cat.title}
+                    </div>
+                  );
                 })}
               </>
             )}
@@ -168,19 +173,13 @@ export default function CategoryCard({ data, locale }: GenericCardProps) {
                 focusable="false"
                 className="mr-1 h-4 w-3 text-red-alt"
               />
-              <div className="text-xxs inline-block normal-case">
-                {data.location}
-              </div>
+              <div className="text-xxs inline-block normal-case">{data.location}</div>
             </div>
           )}
           {categoryTitle != "artisti" &&
             datesGrouped.map((str) => (
               <div className="items-center gap-x-2 flex text-red-alt" key={str}>
-                <CalendarIcon
-                  aria-hidden="true"
-                  focusable="false"
-                  className="h-4 w-4"
-                />
+                <CalendarIcon aria-hidden="true" focusable="false" className="h-4 w-4" />
                 <span className="text-xxs inline-block normal-case">{str}</span>
               </div>
             ))}
