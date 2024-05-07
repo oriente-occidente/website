@@ -1,6 +1,6 @@
 "use client";
 import { Image as DatoImage } from "react-datocms";
-import Image  from "next/image"
+import Image from "next/image";
 import Link from "next/link";
 import { MapPinIcon, CalendarIcon } from "@heroicons/react/24/outline";
 import { groupDatesByDay, removeSpaces } from "@/lib/utils";
@@ -9,6 +9,7 @@ import resolveLink from "@/lib/resolveLink";
 import translate from "@/lib/locales";
 
 export default function CategoryCard({ data, locale }: GenericCardProps) {
+  console.log("data", data.category);
   const datesGrouped = data.dates ? groupDatesByDay(data.dates, locale) : [];
   // console.log("data", data);
   let categoryTitle;
@@ -87,7 +88,12 @@ export default function CategoryCard({ data, locale }: GenericCardProps) {
   const link = resolveLink({ ...data, locale });
   return (
     <div className="relative py-4">
-      <Link href={link} title={data.title} className="group"  aria-label={`Vai a ${data.title}`}>
+      <Link
+        href={link}
+        title={data.title}
+        className="group"
+        aria-label={`Vai a ${data.title}`}
+      >
         <div className="relative overflow-hidden">
           <div className="absolute z-20 bottom-0 group">
             {/* {data.title &&
@@ -124,7 +130,7 @@ export default function CategoryCard({ data, locale }: GenericCardProps) {
               <Image
                 className="duration-300 group-hover:scale-105"
                 src={data.image}
-                alt={data.image.alt? data.image.alt : "Oriente Occidente"}
+                alt={data.image.alt ? data.image.alt : "Oriente Occidente"}
               />
             </div>
           )}
@@ -137,21 +143,29 @@ export default function CategoryCard({ data, locale }: GenericCardProps) {
         </div>
 
         <div className="z-20">
-          <div className="mt-4 mb-3">
+          <div className="mt-4 mb-3 flex items-center">
             {categoryTitle &&
               categoryTitle != "artist" &&
               categoryTitle != "festival_edition" && (
                 <span
-                  className={`px-2 py-1 font-semibold uppercase mr-2 ${categoryClasses}`}
+                  className={`px-2 py-1 text-[13px] md:text-sm font-semibold uppercase mr-2 ${categoryClasses}`}
                 >
                   {translate(categoryTitle.toLowerCase(), locale)}
                 </span>
               )}
+            {data.category?.length > 0 && (
+              <>
+                {data.category.map((cat: any) => {
+                  return <div key={cat.id} className="text-[13px] md:text-sm uppercase font-semibold leading-[1]">{cat.title}</div>;
+                })}
+              </>
+            )}
           </div>
           {data.location && categoryTitle != "artisti" && (
             <div className="flex items-center gap-1 text-red-alt">
               <MapPinIcon
-                aria-hidden="true" focusable="false"
+                aria-hidden="true"
+                focusable="false"
                 className="mr-1 h-4 w-3 text-red-alt"
               />
               <div className="text-xxs inline-block normal-case">
@@ -162,7 +176,11 @@ export default function CategoryCard({ data, locale }: GenericCardProps) {
           {categoryTitle != "artisti" &&
             datesGrouped.map((str) => (
               <div className="items-center gap-x-2 flex text-red-alt" key={str}>
-                <CalendarIcon aria-hidden="true" focusable="false" className="h-4 w-4" />
+                <CalendarIcon
+                  aria-hidden="true"
+                  focusable="false"
+                  className="h-4 w-4"
+                />
                 <span className="text-xxs inline-block normal-case">{str}</span>
               </div>
             ))}

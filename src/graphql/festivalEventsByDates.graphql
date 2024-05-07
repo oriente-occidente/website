@@ -17,6 +17,9 @@ query festivalEventsByDates($locale: SiteLocale, $start: Date, $end: Date) {
     imageHero {
       ...imageHeroFrag
     }
+    category {
+      ...tagsFrag
+    }
     isFestival
     startDate
     authors
