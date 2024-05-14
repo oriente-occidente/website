@@ -5,6 +5,7 @@ query allArtisticResidenciesQuery($locale: SiteLocale!) {
       artisticResidence: { exists: true }
     }
     locale: $locale
+    first: "100"
   ) {
     id
     title
