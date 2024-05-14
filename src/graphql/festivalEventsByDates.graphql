@@ -4,7 +4,7 @@ query festivalEventsByDates($locale: SiteLocale, $start: Date, $end: Date) {
     filter: {
       slug: { neq: null }
       isFestival: { eq: true }
-      # startDate: { gte: $start, lt: $end }
+      startDate: { gte: $start, lt: $end }
     }
     orderBy: startDate_DESC
     first: 100
