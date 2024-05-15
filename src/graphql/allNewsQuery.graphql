@@ -11,6 +11,7 @@ query allNews($locale: SiteLocale) {
     title
     _modelApiKey
     titleHero
+    descriptionHero
     imageHero {
       ...imageHeroFrag
     }

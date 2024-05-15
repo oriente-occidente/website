@@ -88,20 +88,19 @@ export default function NewsCard({ data, locale }: GenericCardProps) {
               </span>
             )}
           </div>
-          {data.title &&
-            (data.authors || !data.titleHero || data.titleHero !== data.title) && (
+          {/* {(data.title || !data.titleHero || data.titleHero !== data.title) && ( */}
               <h2 className="text-base font-semibold uppercase text-black md:text-lg group-hover:underline">
                 {data.title}
               </h2>
-            )}
-          {data.titleHero && !data.authors && (
-            <h3 className="text-xs text-black ">{data.titleHero}</h3>
+            {/* )} */}
+          {data.descriptionHero && (
+            <h3 className="text-xs text-black ">{data.descriptionHero}</h3>
           )}
-          {data.authors && (
+          {/* {data.authors && (
             <div className="text-sm font-semibold uppercase text-black md:text-base ">
               {data.authors}
             </div>
-          )}
+          )} */}
 
           <div className="mt-3 uppercase font-semibold text-xxs flex items-center">
             <div>Vai al contenuto</div>
