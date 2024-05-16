@@ -44,7 +44,11 @@ function HeroDetail({ data, locale }) {
                   key={date.id}
                   className="flex items-center text-xxs text-black-light"
                 >
-                  <CalendarIcon aria-hidden="true" focusable="false" className="mr-2 h-4 w-4" />
+                  <CalendarIcon
+                    aria-hidden="true"
+                    focusable="false"
+                    className="mr-2 h-4 w-4"
+                  />
                   {formatDate(date.startTime, locale, date.isDaily)}
                 </div>
               ))}
