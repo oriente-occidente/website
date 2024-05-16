@@ -1,14 +1,6 @@
 "use client";
 
 function DevForm() {
-  // let Gallery = () => <div />;
-  // if (slideshowHero != '') {
-  //   Gallery = dynamic(() => import('components/galleries/Gallery'), {
-  //     loading: () => <div>...</div>,
-  //     ssr: false,
-  //   });
-  // }
-
   return (
     <form name="contact" method="POST" data-netlify="true">
       <input type="hidden" name="form-name" value="contact" />
