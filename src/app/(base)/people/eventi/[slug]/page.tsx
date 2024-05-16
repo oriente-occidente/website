@@ -32,6 +32,7 @@ export default async function Page({ params }: BasicSlugPageProps) {
     dateEvento: data?.event?.dates,
     location: data?.event?.location,
     paymentSettings: data?.event?.paymentSettings,
+    pageId: data?.event?.id,
   };
   const pageData: any = {
     hero: heroData,

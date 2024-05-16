@@ -5,8 +5,6 @@ import dayjs from "dayjs";
 import translate from "@/lib/locales";
 
 export default function BookButton({ locale, paymentSettings, id }) {
-  console.log("paymentSettings", paymentSettings);
-
   const router = useRouter();
   const isBookable = paymentSettings?.reduce((result, p) => result || p.bookable, false);
   const today = dayjs(new Date());

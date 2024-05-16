@@ -81,17 +81,12 @@ function HeroIndex({ data, locale }) {
           )}
           {paymentSettings != null && (
             <div className="pt-4 md:pl-6 lg:pl-16">
-              <BookButton
-                paymentSettings={paymentSettings}
-                locale={locale}
-                id={pageId}
-              />
+              <BookButton paymentSettings={paymentSettings} locale={locale} id={pageId} />
             </div>
           )}
           {dateEvento && (
             <div className="px-4 pt-4 md:pl-10 lg:px-20">
-              {dateEvento != null &&
-              !["project", "network"].includes(pageType) ? (
+              {dateEvento != null && !["project", "network"].includes(pageType) ? (
                 <>
                   {dateEvento.map((date) => (
                     <div
@@ -99,7 +94,8 @@ function HeroIndex({ data, locale }) {
                       className="flex items-center text-xxs text-black-light"
                     >
                       <CalendarIcon
-                        aria-hidden="true" focusable="false"
+                        aria-hidden="true"
+                        focusable="false"
                         className="mr-2 h-4 w-4"
                       />
                       {formatDate(date.startTime, locale || "en", date.isDaily)}
@@ -109,7 +105,11 @@ function HeroIndex({ data, locale }) {
               ) : null}
               {location && (
                 <h2 className="mt-1 flex items-center text-xxs text-black-light">
-                  <MapPinIcon aria-hidden="true" focusable="false" className="mr-2 h-4 w-4" />
+                  <MapPinIcon
+                    aria-hidden="true"
+                    focusable="false"
+                    className="mr-2 h-4 w-4"
+                  />
                   {location}
                 </h2>
               )}
