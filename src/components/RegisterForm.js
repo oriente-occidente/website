@@ -40,8 +40,8 @@ export default function RegisterForm({ payload, thankyouMessage, locale }) {
       )}
       <h1 className="h1 mt-10">{translate("registration_form", locale)}</h1>
       <div className={`mb-10 rounded-lg border p-4 `}>
-        <form name="register" method="post" data-netlify="true">
-          <input type="hidden" name="form-name" value="register" />
+        <form name="register_event" method="post" data-netlify="true">
+          <input type="hidden" name="form-name" value="register_event" />
           <input type="hidden" name="locale" value={locale} />
           <input type="hidden" name="title" value={payload?.title} />
           <input type="hidden" name="level-name" value={choiche?.description} />
