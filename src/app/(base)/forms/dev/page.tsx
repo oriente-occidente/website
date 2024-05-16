@@ -19,8 +19,8 @@ export default async function Page({ params, searchParams }: BasicSlugPageProps)
   const slugData = {};
   return (
     <Wrapper locale={locale} slugData={slugData}>
-      <form name="contact" method="POST" data-netlify="true">
-        <input type="hidden" name="form-name" value="contact" />
+      <form name="devtest" method="POST" data-netlify="true">
+        <input type="hidden" name="form-name" value="devtest" />
         <p>
           <label>
             Your Name: <input type="text" name="name" />

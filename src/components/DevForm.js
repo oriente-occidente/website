@@ -2,8 +2,8 @@
 
 function DevForm() {
   return (
-    <form name="contact" method="POST" data-netlify="true">
-      <input type="hidden" name="form-name" value="contact" />
+    <form name="test" method="POST" data-netlify="true">
+      <input type="hidden" name="form-name" value="test" />
       <p>
         <label>
           Your Name: <input type="text" name="name" />
