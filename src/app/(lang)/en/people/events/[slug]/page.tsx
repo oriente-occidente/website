@@ -31,6 +31,7 @@ export default async function Page({ params }: BasicSlugPageProps) {
     slideshowHero: data?.event?.slideshowHero,
     dateEvento: data?.event?.dates,
     location: data?.event?.location,
+    paymentSettings: data?.event?.paymentSettings,
   };
   const pageData: any = {
     hero: heroData,

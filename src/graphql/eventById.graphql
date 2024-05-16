@@ -1,0 +1,15 @@
+query eventByID($id: ItemId, $locale: SiteLocale) {
+  event(filter: { id: { eq: $id } }, locale: $locale, fallbackLocales: it) {
+    id
+    title
+    paymentSettings {
+      id
+      paymentLink
+      startDate
+      endDate
+      description
+      bookable
+      amount
+    }
+  }
+}

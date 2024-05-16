@@ -15,6 +15,7 @@ export type BasicSlugPageProps = {
   params: {
     slug: string;
   };
+  searchParams?: any;
 };
 export type LayoutParams = {
   children: React.ReactNode;
