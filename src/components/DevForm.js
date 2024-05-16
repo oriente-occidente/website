@@ -42,4 +42,4 @@ function DevForm() {
   );
 }
 
-export default HeroIndex;
+export default DevForm;
