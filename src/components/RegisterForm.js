@@ -1,11 +1,14 @@
 "use client";
 import { formatDate } from "@/lib/utils";
-import { useState, useEffect } from "react";
+import { useState } from "react";
+import { useRouter } from "next/navigation";
 import Table from "@/components/Table";
 import translate from "@/lib/locales";
 
 export default function RegisterForm({ payload, thankyouMessage, locale }) {
   const [paymentId, setPaymentId] = useState(null);
+  const [errorMessage, setErrorMessage] = useState(null);
+  const router = useRouter();
 
   const handleChange = (e) => {
     const value = e.target?.value;
@@ -13,37 +16,6 @@ export default function RegisterForm({ payload, thankyouMessage, locale }) {
     setPaymentId(value);
   };
 
-  const handleFormSubmit = async (event) => {
-    event.preventDefault();
-    try {
-      // console.log(event.target);
-      // setStatus('pending');
-      // setError(null);
-      const myForm = event.target;
-      const formData = new FormData(myForm);
-
-      const res = await fetch("/__forms.html", {
-        method: "POST",
-        headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: new URLSearchParams(formData).toString(),
-      });
-      if (res.status === 200) {
-        console.log("ok");
-      } else {
-        console.log("err", res);
-        // setStatus('error');
-        // setError(`${res.status} ${res.statusText}`);
-      }
-    } catch (e) {
-      console.log("catch e", e);
-      // setStatus("error");
-      // setError(`${e}`);
-    }
-  };
-
-  const action = `${locale === "en" ? "/en" : ""}/forms/thankyou?id=${payload.id}${
-    paymentId ? "&cp=" + paymentId : ""
-  }`;
   const choiche = paymentId
     ? payload.paymentSettings?.find((p) => p.id === paymentId)
     : null;
@@ -57,6 +29,32 @@ export default function RegisterForm({ payload, thankyouMessage, locale }) {
     const price = `${amount ? amount + " €" : ""}`;
     return [description, range, price];
   });
+
+  const url = `${locale === "en" ? "/en" : ""}/forms/thankyou?id=${payload.id}${
+    paymentId ? "&cp=" + paymentId : ""
+  }`;
+
+  const handleFormSubmit = async (event) => {
+    event.preventDefault();
+    try {
+      const registerForm = event.target;
+      const formData = new FormData(registerForm);
+
+      const res = await fetch("/__forms.html", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: new URLSearchParams(formData).toString(),
+      });
+      if (res.status === 200) {
+        router.push(url);
+      } else {
+        console.log("err", res);
+      }
+    } catch (e) {
+      console.error("error: ", e);
+      setErrorMessage(`Form error`);
+    }
+  };
 
   return (
     <div className="my-10 p-10">
@@ -209,6 +207,7 @@ export default function RegisterForm({ payload, thankyouMessage, locale }) {
             </button>
           </div>
         </form>
+        {errorMessage}
       </div>
     </div>
   );
