@@ -13,6 +13,34 @@ export default function RegisterForm({ payload, thankyouMessage, locale }) {
     setPaymentId(value);
   };
 
+  const handleFormSubmit = async (event) => {
+    event.preventDefault();
+    try {
+      // console.log(event.target);
+      // setStatus('pending');
+      // setError(null);
+      const myForm = event.target;
+      const formData = new FormData(myForm);
+
+      const res = await fetch("/__forms.html", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: new URLSearchParams(formData).toString(),
+      });
+      if (res.status === 200) {
+        console.log("ok");
+      } else {
+        console.log("err", res);
+        // setStatus('error');
+        // setError(`${res.status} ${res.statusText}`);
+      }
+    } catch (e) {
+      console.log("catch e", e);
+      // setStatus("error");
+      // setError(`${e}`);
+    }
+  };
+
   const action = `${locale === "en" ? "/en" : ""}/forms/thankyou?id=${payload.id}${
     paymentId ? "&cp=" + paymentId : ""
   }`;
@@ -40,7 +68,7 @@ export default function RegisterForm({ payload, thankyouMessage, locale }) {
       )}
       <h1 className="h1 mt-10">{translate("registration_form", locale)}</h1>
       <div className={`mb-10 rounded-lg border p-4 `}>
-        <form name="register" method="post" data-netlify="true">
+        <form name="register" method="post" onSubmit={handleFormSubmit}>
           <input type="hidden" name="form-name" value="register" />
           <input type="hidden" name="locale" value={locale} />
           <input type="hidden" name="title" value={payload?.title} />
