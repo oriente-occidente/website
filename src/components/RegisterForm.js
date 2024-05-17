@@ -57,7 +57,7 @@ export default function RegisterForm({ payload, thankyouMessage, locale }) {
   };
 
   return (
-    <div className="my-10 p-10">
+    <div className="container mx-auto my-10 py-10">
       {payload && (
         <>
           <h3 className="h3">{payload?.title}</h3>
