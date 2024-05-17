@@ -18,7 +18,7 @@ export default function HomeTemplate({
     <div>
       <h1 className="sr-only">Oriente Occidente</h1>
       <HeroSlider slides={homeSlideshow} />
-      <main id="main-content">
+      <main id="main-content" itemScope itemType="https://schema.org/Article">
         {homeSections.map((block: any) => {
           return (
             <Fragment key={block.id}>
