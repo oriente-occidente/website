@@ -1,23 +1,17 @@
-/studio/artisti-associati/* /studio/artisti/*
-/studio/residenze-artistiche/* /studio/artisti/*
-
-https://presentiaccessibili.orienteoccidente.it/ https://www.orienteoccidente.it
-https://presentiaccessibili.orienteoccidente.it/en/ https://www.orienteoccidente.it/en
-https://presentiaccessibili.orienteoccidente.it/* https://www.orienteoccidente.it/*
-https://presentiaccessibili.orienteoccidente.it/en/* https://www.orienteoccidente.it/en/*
-
-/festival/programma /festival/44deg-oriente-occidente-dance-festival
-/festival/programma/* /festival/44deg-oriente-occidente-dance-festival
-
-/studio/workshop /festival/44deg-oriente-occidente-dance-festival
-
-/en/festival/program /en/festival/44deg-oriente-occidente-dance-festival
-/en/festival/program/* /en/festival/44deg-oriente-occidente-dance-festival/*
-
-/en/studio/artistic-residences /en/studio/artistic-residencies
-/en/studio/artistic-residences/* /en/studio/artists/*
-/en/studio/associated-artists/* /en/studio/artists/*
-
-
-/festival/box-office /box-office
-/en/festival/box-office /en/box-office
+# Redirects from what the browser requests to what we serve
+/studio/artisti-associati/*                           /studio/artisti/*
+/studio/residenze-artistiche/*                        /studio/artisti/*
+/festival/programma                                   /festival/44deg-oriente-occidente-dance-festival
+/festival/programma/*                                 /festival/44deg-oriente-occidente-dance-festival
+/studio/workshop                                      /festival/44deg-oriente-occidente-dance-festival
+/en/festival/program                                  /en/festival/44deg-oriente-occidente-dance-festival
+/en/festival/program/*                                /en/festival/44deg-oriente-occidente-dance-festival/*
+/en/studio/artistic-residences                        /en/studio/artistic-residencies
+/en/studio/artistic-residences/*                      /en/studio/artists/*
+/en/studio/associated-artists/*                       /en/studio/artists/*
+/festival/box-office                                  /box-office
+/en/festival/box-office                               /en/box-office
+https://presentiaccessibili.orienteoccidente.it/      https://www.orienteoccidente.it
+https://presentiaccessibili.orienteoccidente.it/en/   https://www.orienteoccidente.it/en
+https://presentiaccessibili.orienteoccidente.it/*     https://www.orienteoccidente.it/*
+https://presentiaccessibili.orienteoccidente.it/en/*  https://www.orienteoccidente.it/en/*
