@@ -3,7 +3,7 @@ import { Image as DatoImage } from "react-datocms";
 import Image from "next/image";
 import Link from "next/link";
 import { MapPinIcon, CalendarIcon } from "@heroicons/react/24/outline";
-import { formatDate, round } from "@/lib/utils";
+import { formatDate } from "@/lib/utils";
 import { GenericCardProps } from "@/types";
 import resolveLink from "@/lib/resolveLink";
 
