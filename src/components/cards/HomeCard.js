@@ -33,6 +33,7 @@ function HomeCard({ count, categoryTitle, data, locale }) {
                 layout="fill"
                 objectFit="cover"
                 objectPosition="center"
+                priority={count == 1 ? true : false}
               />
             ) : (
               <div className="h-full w-full duration-300 group-hover:scale-105" />
