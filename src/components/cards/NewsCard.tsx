@@ -53,7 +53,10 @@ export default function NewsCard({ data, locale }: GenericCardProps) {
 
   const link = resolveLink({ ...data, locale });
 
-  console.log("data", data);
+  console.log(
+    "data.imageHero.responsiveImage.sizes",
+    data.imageHero.responsiveImage.sizes
+  );
   return (
     <div className="relative py-4">
       <Link
@@ -62,20 +65,20 @@ export default function NewsCard({ data, locale }: GenericCardProps) {
         className="group"
         aria-label={`Vai a ${data.title}`}
       >
-        <div className="relative overflow-hidden">
+        <div className="relative overflow-hidden aspect-[4/3]">
           {data.imageHero && (
             // <DatoImage
             //   className=" duration-300 group-hover:scale-105"
             //   data={data.imageHero.responsiveImage}
             // />
             <Image
+              fill
               className="duration-300 group-hover:scale-105"
               src={data.imageHero.url ? data.imageHero.url : data.image}
               alt={
                 data.imageHero.alt ? data.imageHero.alt : "Oriente Occidente"
               }
-              width={data.imageHero.width}
-              height={data.imageHero.height}
+              sizes={data.imageHero.responsiveImage.sizes}
             />
           )}
           {data.image && (

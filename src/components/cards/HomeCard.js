@@ -39,13 +39,15 @@ function HomeCard({ count, categoryTitle, data, locale }) {
               // />
               <Image
                 className="h-full w-full duration-300 group-hover:scale-105"
-                src={data.imageHero.url ? data.imageHero.url : data.imageHero}
+                src={data.imageHero.responsiveImage.src ? data.imageHero.responsiveImage.src : data.imageHero}
                 alt={
                   data.imageHero.alt ? data.imageHero.alt : "Oriente Occidente"
                 }
-                layout="fill"
+                fill
                 objectFit="cover"
                 objectPosition="center"
+                sizes={data.imageHero.responsiveImage.sizes}
+
                 // priority={count == 1 ? true : false}
               />
             ) : (
