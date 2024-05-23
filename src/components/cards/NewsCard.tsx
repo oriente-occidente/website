@@ -3,7 +3,7 @@ import { Image as DatoImage } from "react-datocms";
 import Image from "next/image";
 import Link from "next/link";
 import { MapPinIcon, CalendarIcon } from "@heroicons/react/24/outline";
-import { formatDate } from "@/lib/utils";
+import { formatDate, round } from "@/lib/utils";
 import { GenericCardProps } from "@/types";
 import resolveLink from "@/lib/resolveLink";
 
@@ -53,10 +53,6 @@ export default function NewsCard({ data, locale }: GenericCardProps) {
 
   const link = resolveLink({ ...data, locale });
 
-  console.log(
-    "data.imageHero.responsiveImage.sizes",
-    data.imageHero.responsiveImage.sizes
-  );
   return (
     <div className="relative py-4">
       <Link
@@ -65,7 +61,7 @@ export default function NewsCard({ data, locale }: GenericCardProps) {
         className="group"
         aria-label={`Vai a ${data.title}`}
       >
-        <div className="relative overflow-hidden aspect-[4/3]">
+        <div className={`relative overflow-hidden aspect-[1.7]`}>
           {data.imageHero && (
             // <DatoImage
             //   className=" duration-300 group-hover:scale-105"
