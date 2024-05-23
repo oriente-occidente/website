@@ -124,11 +124,13 @@ export default function CategoryCard({ data, locale }: GenericCardProps) {
             )}
           </div>
           {!data.imageHero && (
-            <div className="relative overflow-hidden ">
+            <div className="relative overflow-hidden">
               <Image
                 className="duration-300 group-hover:scale-105"
                 src={data.image}
                 alt={data.image.alt ? data.image.alt : "Oriente Occidente"}
+                width={600}
+                height={200}
               />
             </div>
           )}

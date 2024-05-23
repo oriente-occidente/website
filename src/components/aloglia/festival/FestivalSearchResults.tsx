@@ -2,14 +2,14 @@
 import { UseHitsProps, useHits } from "react-instantsearch";
 import Hit from "./FestivalHit";
 
-type MediaSearchResultsProps = UseHitsProps & {
+type FestivalSearchResultsProps = UseHitsProps & {
   locale: string;
 };
 
-export default function MediaSearchResults({
+export default function FestivalSearchResults({
   locale,
   ...props
-}: MediaSearchResultsProps) {
+}: FestivalSearchResultsProps) {
   const { hits } = useHits(props);
   return (
     <div className="grid grid-cols-1 gap-1 sm:grid-cols-2 4xl:grid-cols-3 gap-x-3 sm:gap-x-5 gap-y-8">
