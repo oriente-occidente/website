@@ -9,6 +9,7 @@ import {
 } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Image as DatoImage } from "react-datocms";
+import Image from "next/image";
 
 function HeroSlider({ slides }) {
   return (
@@ -29,11 +30,22 @@ function HeroSlider({ slides }) {
           const { responsiveImage, alt, title, id } = image;
           return (
             <SwiperSlide key={id}>
-              <DatoImage
+              {/* <DatoImage
                 className="dato-image-cover"
                 data={responsiveImage}
                 alt={alt}
                 title={title}
+                priority={i == 0 ? true : false}
+              /> */}
+              <Image
+                className="h-full w-full duration-300 group-hover:scale-105"
+                src={image.url ? image.url : image}
+                alt={
+                  image.alt ? image.alt : "Oriente Occidente"
+                }
+                layout="fill"
+                objectFit="cover"
+                objectPosition="center"
                 priority={i == 0 ? true : false}
               />
               <div className="container relative h-full">

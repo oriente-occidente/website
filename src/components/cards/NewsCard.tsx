@@ -53,15 +53,29 @@ export default function NewsCard({ data, locale }: GenericCardProps) {
 
   const link = resolveLink({ ...data, locale });
 
-  // console.log("data", data);
+  console.log("data", data);
   return (
     <div className="relative py-4">
-      <Link href={link} title={data.title} className="group" aria-label={`Vai a ${data.title}`}>
+      <Link
+        href={link}
+        title={data.title}
+        className="group"
+        aria-label={`Vai a ${data.title}`}
+      >
         <div className="relative overflow-hidden">
           {data.imageHero && (
-            <DatoImage
-              className=" duration-300 group-hover:scale-105"
-              data={data.imageHero.responsiveImage}
+            // <DatoImage
+            //   className=" duration-300 group-hover:scale-105"
+            //   data={data.imageHero.responsiveImage}
+            // />
+            <Image
+              className="duration-300 group-hover:scale-105"
+              src={data.imageHero.url ? data.imageHero.url : data.image}
+              alt={
+                data.imageHero.alt ? data.imageHero.alt : "Oriente Occidente"
+              }
+              width={data.imageHero.width}
+              height={data.imageHero.height}
             />
           )}
           {data.image && (
@@ -89,10 +103,10 @@ export default function NewsCard({ data, locale }: GenericCardProps) {
             )}
           </div>
           {/* {(data.title || !data.titleHero || data.titleHero !== data.title) && ( */}
-              <h2 className="text-base font-semibold uppercase text-black md:text-lg group-hover:underline">
-                {data.title}
-              </h2>
-            {/* )} */}
+          <h2 className="text-base font-semibold uppercase text-black md:text-lg group-hover:underline">
+            {data.title}
+          </h2>
+          {/* )} */}
           {data.descriptionHero && (
             <h3 className="text-xs text-black ">{data.descriptionHero}</h3>
           )}
@@ -109,7 +123,11 @@ export default function NewsCard({ data, locale }: GenericCardProps) {
         </div>
         {data.location && (
           <div className="flex items-center gap-1 md:hidden">
-            <MapPinIcon aria-hidden="true" focusable="false" className="mr-1 h-4 w-3 text-black" />
+            <MapPinIcon
+              aria-hidden="true"
+              focusable="false"
+              className="mr-1 h-4 w-3 text-black"
+            />
             <div className="text-xxs">{data.location}</div>
           </div>
         )}

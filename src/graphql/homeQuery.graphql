@@ -11,6 +11,7 @@ query home($locale: SiteLocale!) {
       title
       image {
         id
+        url
         responsiveImage(
           sizes: "100vw"
           imgixParams: {
