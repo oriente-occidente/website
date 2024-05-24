@@ -35,6 +35,7 @@ export async function generateMetadata() {
       siteName: globalSeo?.siteName,
       images: fallbackSeo?.image,
       locale,
+      url:process.env.HOST,
       type: "website",
     },
   };
