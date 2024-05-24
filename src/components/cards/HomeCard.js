@@ -27,30 +27,31 @@ function HomeCard({ count, categoryTitle, data, locale }) {
           </div>
           <div className="relative w-3/4 overflow-hidden lg:w-8/12">
             {data.imageHero ? (
-              // <DatoImage
-              //   className="h-full w-full duration-300 group-hover:scale-105"
-              //   data={data.imageHero.responsiveImage}
-              //   alt={data.imageHero.alt}
-              //   title={data.imageHero.title}
-              //   layout="fill"
-              //   objectFit="cover"
-              //   objectPosition="center"
-              //   priority={count == 1 ? true : false}
-              // />
-              <Image
+              <DatoImage
+                lazyLoad
                 className="h-full w-full duration-300 group-hover:scale-105"
-                src={data.imageHero.responsiveImage.src ? data.imageHero.responsiveImage.src : data.imageHero}
-                alt={
-                  data.imageHero.alt ? data.imageHero.alt : "Oriente Occidente"
-                }
-                fill
+                data={data.imageHero.responsiveImage}
+                alt={data.imageHero.alt}
+                title={data.imageHero.title}
+                layout="fill"
                 objectFit="cover"
                 objectPosition="center"
-                sizes={data.imageHero.responsiveImage.sizes}
-
-                // priority={count == 1 ? true : false}
+                priority={count == 1 ? true : false}
               />
             ) : (
+              // <Image
+              //   className="h-full w-full duration-300 group-hover:scale-105"
+              //   src={data.imageHero.responsiveImage.src ? data.imageHero.responsiveImage.src : data.imageHero}
+              //   alt={
+              //     data.imageHero.alt ? data.imageHero.alt : "Oriente Occidente"
+              //   }
+              //   fill
+              //   objectFit="cover"
+              //   objectPosition="center"
+              //   sizes={data.imageHero.responsiveImage.sizes}
+
+              //   // priority={count == 1 ? true : false}
+              // />
               <div className="h-full w-full duration-300 group-hover:scale-105" />
             )}
             <div className="absolute left-0 top-0 z-10 h-1/2 w-full bg-gradient-to-b from-black-transparent to-transparent"></div>

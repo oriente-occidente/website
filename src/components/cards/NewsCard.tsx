@@ -63,19 +63,19 @@ export default function NewsCard({ data, locale }: GenericCardProps) {
       >
         <div className={`relative overflow-hidden aspect-[1.7]`}>
           {data.imageHero && (
-            // <DatoImage
-            //   className=" duration-300 group-hover:scale-105"
-            //   data={data.imageHero.responsiveImage}
-            // />
-            <Image
-              fill
-              className="duration-300 group-hover:scale-105"
-              src={data.imageHero.url ? data.imageHero.url : data.image}
-              alt={
-                data.imageHero.alt ? data.imageHero.alt : "Oriente Occidente"
-              }
-              sizes={data.imageHero.responsiveImage.sizes}
+            <DatoImage
+              className=" duration-300 group-hover:scale-105"
+              data={data.imageHero.responsiveImage}
             />
+            // <Image
+            //   fill
+            //   className="duration-300 group-hover:scale-105"
+            //   src={data.imageHero.url ? data.imageHero.url : data.image}
+            //   alt={
+            //     data.imageHero.alt ? data.imageHero.alt : "Oriente Occidente"
+            //   }
+            //   sizes={data.imageHero.responsiveImage.sizes}
+            // />
           )}
           {data.image && (
             <Image
