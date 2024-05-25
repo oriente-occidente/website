@@ -30,14 +30,14 @@ function HeroSlider({ slides }) {
           const { responsiveImage, alt, title, id } = image;
           return (
             <SwiperSlide key={id}>
-              {/* <DatoImage
+              <DatoImage
                 className="dato-image-cover"
                 data={responsiveImage}
                 alt={alt}
                 title={title}
                 priority={i == 0 ? true : false}
-              /> */}
-              <Image
+              />
+              {/* <Image
                 className="h-full w-full duration-300 group-hover:scale-105"
                 src={image.url ? image.url : image}
                 alt={
@@ -48,8 +48,7 @@ function HeroSlider({ slides }) {
                 objectPosition="center"
                 priority={i == 0 ? true : false}
                 sizes={image.responsiveImage.sizes}
-
-              />
+              /> */}
               <div className="container relative h-full">
                 <h2 className="absolute bottom-16 right-4 z-20 w-4/5 text-right text-base font-normal text-white md:bottom-12 md:w-2/3 md:text-lg xl:w-1/2 xl:text-2xl 2xl:bottom-24 2xl:right-0">
                   {slide.title}
