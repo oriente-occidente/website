@@ -35,7 +35,7 @@ export async function generateMetadata() {
       siteName: globalSeo?.siteName,
       images: fallbackSeo?.image,
       locale,
-      url:process.env.HOST,
+      url: process.env.HOST,
       type: "website",
     },
   };
@@ -48,7 +48,11 @@ export default async function RootLayout({ children }: any) {
   // console.log("LAYOUT LOCALE", locale);
   const { isEnabled } = draftMode();
   const siteLocale = locale as SiteLocale;
-  const data = await fetchDato(LayoutDocument, { locale: siteLocale }, isEnabled);
+  const data = await fetchDato(
+    LayoutDocument,
+    { locale: siteLocale },
+    isEnabled
+  );
   if (!data) return null;
   return (
     <html lang={locale}>
@@ -64,19 +68,12 @@ export default async function RootLayout({ children }: any) {
         </div>
         {children}
         <Footer locale={locale} data={data.footer} hideNewsletter={false} />
-        <Script type="text/javascript" src="//cs.iubenda.com/sync/2481473.js" />
-        <Script
-          type="text/javascript"
-          src="//cdn.iubenda.com/cs/iubenda_cs.js"
-          charSet="UTF-8"
-          async
-        />
-
-        <Script
-          id="iubenda"
-          strategy="afterInteractive"
-          dangerouslySetInnerHTML={{
-            __html: `var _iub = _iub || [];
+        {locale && IUBENDA_SITE_ID && (
+          <Script
+            id="iubenda"
+            strategy="afterInteractive"
+            dangerouslySetInnerHTML={{
+              __html: `var _iub = _iub || [];
             _iub.csConfiguration = {
               "askConsentAtCookiePolicyUpdate":true,
               "countryDetection":true,
@@ -108,38 +105,53 @@ export default async function RootLayout({ children }: any) {
                 "showPurposesToggles":true,
                 "textColor":"#332e2d"
               },
-              "callback":{
-                onPreferenceExpressedOrNotNeeded: function(preference) {
-                  // console.log("PREFENCE", preference)
-                  window.consentIsGiven = preference;
-                }
-              }
             };
           `,
-          }}
-        />
-        <Script
-        type="plain/text"
-        className="_iub_cs_activate"
-        data-iub-purposes="4"
-        src={`https://www.googletagmanager.com/gtag/js?id=${GTM}`}
-      />
-      <Script
-        id="google-analytics-script"
-        type="plain/text"
-        className="_iub_cs_activate"
-        data-iub-purposes="4"
-        dangerouslySetInnerHTML={{
-          __html: `
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', '${GTM}', {
-          page_path: window.location.pathname,
-        });
-        `,
-        }}
-      />
+            }}
+          />
+        )}
+        {locale && IUBENDA_SITE_ID && (
+          <Script
+            id="iubenda-cs-1"
+            type="text/javascript"
+            src={`//cs.iubenda.com/sync/${IUBENDA_SITE_ID}.js`}
+          />
+        )}
+        {locale && IUBENDA_SITE_ID && (
+          <Script
+            id="iubenda-cs-2"
+            type="text/javascript"
+            src="//cdn.iubenda.com/cs/iubenda_cs.js"
+            strategy="lazyOnload"
+          />
+        )}
+
+        {locale && GTM && (
+          <Script
+            type="plain/text"
+            className="_iub_cs_activate"
+            data-iub-purposes="4"
+            src={`https://www.googletagmanager.com/gtag/js?id=${GTM}`}
+          />
+        )}
+        {locale && GTM && (
+          <Script
+            id="google-analytics-script"
+            type="plain/text"
+            className="_iub_cs_activate"
+            data-iub-purposes="4"
+            dangerouslySetInnerHTML={{
+              __html: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', '${GTM}', {
+              page_path: window.location.pathname,
+            });
+            `,
+            }}
+          />
+        )}
       </body>
     </html>
   );
