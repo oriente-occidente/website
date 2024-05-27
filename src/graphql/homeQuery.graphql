@@ -13,12 +13,13 @@ query home($locale: SiteLocale!) {
         id
         url
         responsiveImage(
-          sizes: "100vw"
+          # sizes: "100vw"
           imgixParams: {
             auto: [format, compress]
             ar: "16:9"
             fit: crop
             crop: top
+            w: 1800
           }
         ) {
           ...imgFrag
