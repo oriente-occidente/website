@@ -22,18 +22,17 @@ export default function HomeTemplate({
         {homeSections.map((block: any) => {
           return (
             <Fragment key={block.id}>
-              <div
-                className="border-gray container flex items-center justify-between border-t"
-                key={block.id}
-              >
-                <h2 className="title--small py-8 lg:py-16">{block.title}</h2>
-                <Link
-                  href={resolveLink({ ...block.sectionLink, locale })}
-                  locale={locale}
-                  className="button--with-arrow"
-                >
-                  {block.sectionLinkLabel}
-                </Link>
+              <div className="border-gray border-t mt-8 lg:mt-16">
+                <div className="container flex items-center justify-between ">
+                  <h2 className="title--small py-8 lg:py-16">{block.title}</h2>
+                  <Link
+                    href={resolveLink({ ...block.sectionLink, locale })}
+                    locale={locale}
+                    className="button--with-arrow"
+                  >
+                    {block.sectionLinkLabel}
+                  </Link>
+                </div>
               </div>
               {block.layout == "Mission" ? (
                 <div className="bg-gray">

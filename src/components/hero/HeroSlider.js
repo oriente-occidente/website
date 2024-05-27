@@ -21,8 +21,8 @@ function HeroSlider({ slides }) {
         slidesPerView={1}
         pagination={true}
         navigation={true}
-        preloadImages={true}
-        lazy={true}
+        // preloadImages={true}
+        lazyload="true"
         className="mySwiper relative h-[40vh] md:h-[60vh] xl:h-[70vh]"
       >
         {slides.map((slide, i) => {
@@ -36,6 +36,7 @@ function HeroSlider({ slides }) {
                 alt={alt}
                 title={title}
                 priority={i == 0 ? true : false}
+                fetchpriority={i == 0 ? "high" : "low"}
               />
               {/* <Image
                 className="h-full w-full duration-300 group-hover:scale-105"

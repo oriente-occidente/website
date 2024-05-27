@@ -61,7 +61,7 @@ export default function NewsCard({ data, locale }: GenericCardProps) {
         className="group"
         aria-label={`Vai a ${data.title}`}
       >
-        <div className={`relative overflow-hidden aspect-[1.7]`}>
+        <div className={`relative overflow-hidden`}>
           {data.imageHero && (
             <DatoImage
               className=" duration-300 group-hover:scale-105"

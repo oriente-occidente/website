@@ -37,6 +37,7 @@ function HomeCard({ count, categoryTitle, data, locale }) {
                 objectFit="cover"
                 objectPosition="center"
                 priority={count == 1 ? true : false}
+                fetchpriority={count == 1 ? "high" : "low"}
               />
             ) : (
               // <Image
