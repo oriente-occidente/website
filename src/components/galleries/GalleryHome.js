@@ -18,7 +18,12 @@ function GalleryHome({ slides, background, locale }) {
         speed={900}
         slidesPerView={1.25}
         className="mySwiper"
-        lazylaod="true"
+        lazy={{
+          enabled: true,
+          loadPrevNext: true,
+          loadPrevNextAmount: 1,
+          loadOnTransitionStart: true,
+        }}
         breakpoints={{
           1280: {
             spaceBetween: 20,

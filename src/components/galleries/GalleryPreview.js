@@ -24,6 +24,12 @@ function GalleryPreview({ slides, locale }) {
         centeredSlides={true}
         initialSlide={1}
         className="mySwiper"
+        lazy={{
+          enabled: true,
+          loadPrevNext: true,
+          loadPrevNextAmount: 1,
+          loadOnTransitionStart: true,
+        }}
         breakpoints={{
           1024: {
             slidesPerView: 2,
