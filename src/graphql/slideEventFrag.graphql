@@ -25,7 +25,7 @@ fragment slideEventFrag on EventRecord {
     id
     title
     responsiveImage(
-      sizes: "(max-width: 1023px) 100vw, (min-width: 1024px) 80vw, 1400px"
+      sizes: "(max-width: 1023px) 100vw, (min-width: 1024px) 1000px, 1400px"
       imgixParams: { auto: [format, compress], ar: "14:8", fit: crop }
     ) {
       ...imgFrag
