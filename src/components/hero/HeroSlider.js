@@ -22,7 +22,7 @@ function HeroSlider({ slides }) {
         pagination={true}
         navigation={true}
         preloadImages={true}
-        lazy
+        lazy={true}
         className="mySwiper relative h-[40vh] md:h-[60vh] xl:h-[70vh]"
       >
         {slides.map((slide, i) => {
