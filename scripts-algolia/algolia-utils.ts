@@ -21,7 +21,7 @@ export const createObjects = async (
   data: any[],
   replace: boolean = false
 ) => {
-  console.info("INDEX ", indexName, replace);
+  // console.info("INDEX ", indexName, replace);
   const index = client.initIndex(indexName);
   await index.setSettings(settings);
   let results = null;
@@ -98,9 +98,9 @@ export async function sendIndex({
     indexLanguages,
     typoTolerance,
   };
-  console.info("INDEX", indexName);
-  console.info("DATA", data.length);
-  console.info("DATA", data.length);
+  // console.info("INDEX", indexName);
+  // console.info("DATA", data.length);
+  // console.info("DATA", data.length);
   console.info("REPLACE OR SAVE ? ", replace ? "REPLACE" : "SAVE");
   await createObjects(indexName, settings, data, replace);
 }

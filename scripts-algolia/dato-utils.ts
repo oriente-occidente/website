@@ -53,7 +53,7 @@ export async function recurseQuery({
     try {
       let response = await fetchData(q, { ...params });
       results = response[propertyName] || [];
-      console.log("results", results.length);
+      // console.log("results", results.length);
     } catch (error) {
       console.error("query error", error);
       throw error;
