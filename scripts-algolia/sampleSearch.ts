@@ -52,10 +52,10 @@ async function formatItem(item: any) {
 
 const NAME = "artists";
 export default async function search(locale: string, indexes: string[]) {
-  console.info(NAME, locale);
+  // console.info(NAME, locale);
 
   const items: any[] = await getCollections(query, { locale }, "items");
-  console.info("TOTAL", items.length);
+  console.info("TOTAL", NAME, locale, items.length);
   const data = [];
   for (let i = 0; i < items.length; i++) {
     const item: any = items[i];

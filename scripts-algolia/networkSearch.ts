@@ -94,7 +94,7 @@ export default async function search(
     for (const key of Object.keys(queries)) {
       const query = queries[key];
       const results = await getCollections(query, { locale }, "items");
-      console.log(key, results.length);
+      // console.log(key, results.length);
       items = [...items, ...results];
     }
     items = items.filter(Boolean);

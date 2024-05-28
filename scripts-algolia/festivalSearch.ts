@@ -80,15 +80,15 @@ export default async function search(
     const isDefaultLocale = defaultLocale == locale;
 
     let items: any[] = [];
-    console.info(indexName, locale);
+    // console.info(indexName, locale);
     for (const key of Object.keys(queries)) {
       const query = queries[key];
       const results = await getCollections(query, { locale }, "items");
-      console.log(key, results.length);
+      // console.log(key, results.length);
       items = [...items, ...results];
     }
     items = items.filter(Boolean);
-    console.info("TOTAL", locale, " = ", items.length);
+    console.info("TOTAL", indexName, locale, " = ", items.length);
     for (let i = 0; i < items.length; i++) {
       const item: any = items[i];
       const formatted = await formatItem({ ...item, locale, isDefaultLocale });
