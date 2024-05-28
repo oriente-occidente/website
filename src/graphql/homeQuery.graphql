@@ -13,13 +13,29 @@ query home($locale: SiteLocale!) {
         id
         url
         responsiveImage(
-          sizes: "(max-width:768px) 50vw, (max-width: 1024px) 80vw, (min-width: 1025px) 1800px, 600px"
+          sizes: "100vw"
           imgixParams: {
             auto: [format, compress]
             ar: "16:9"
             fit: crop
             crop: top
-            # w: 900
+            w: 1600
+          }
+        ) {
+          ...imgFrag
+        }
+      }
+      mobileImg: image {
+        id
+        url
+        responsiveImage(
+          sizes: "100vw"
+          imgixParams: {
+            auto: [format, compress]
+            ar: "10:9"
+            fit: crop
+            crop: top
+            h: 400
           }
         ) {
           ...imgFrag

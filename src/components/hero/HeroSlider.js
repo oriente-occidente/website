@@ -27,16 +27,25 @@ function HeroSlider({ slides }) {
           loadPrevNextAmount: 1,
           loadOnTransitionStart: true,
         }}
-        className="mySwiper relative h-[40vh] md:h-[60vh] xl:h-[70vh]"
+        className="mySwiper relative  lg:h-[60vh] xl:h-[70vh]"
       >
         {slides.map((slide, i) => {
-          const { image } = slide;
+          const { image, mobileImg } = slide;
           const { responsiveImage, alt, title, id } = image;
+
           return (
             <SwiperSlide key={id}>
               <DatoImage
-                className="dato-image-cover"
+                className="dato-image-cover hidden lg:block"
                 data={responsiveImage}
+                alt={alt}
+                title={title}
+                priority={i == 0 ? true : false}
+                fetchpriority={i == 0 ? "high" : "low"}
+              />
+              <DatoImage
+                className=" lg:hidden"
+                data={mobileImg.responsiveImage}
                 alt={alt}
                 title={title}
                 priority={i == 0 ? true : false}
