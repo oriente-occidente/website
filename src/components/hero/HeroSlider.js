@@ -30,10 +30,9 @@ function HeroSlider({ slides }) {
         {slides.map((slide, i) => {
           const { image, mobileImg } = slide;
           const { responsiveImage, alt, title, id } = image;
-
           return (
             <SwiperSlide key={id}>
-              <SRCImage
+              <DatoImage
                 className="dato-image-cover hidden lg:block"
                 data={responsiveImage}
                 alt={alt}
@@ -42,15 +41,13 @@ function HeroSlider({ slides }) {
                 fetchpriority={i == 0 ? "high" : "low"}
               />
               <DatoImage
-                className=" lg:hidden"
+                className="lg:hidden"
                 data={mobileImg.responsiveImage}
-                alt={alt}
-                title={title}
                 priority={i == 0 ? true : false}
                 fetchpriority={i == 0 ? "high" : "low"}
               />
               <div className="container relative h-full">
-                <h2 className="absolute bottom-16 right-4 z-20 w-4/5 text-right text-base font-normal text-white md:bottom-12 md:w-2/3 md:text-lg xl:w-1/2 xl:text-2xl 2xl:bottom-24 2xl:right-0">
+                <h2 className="absolute bottom-16 right-4 z-20 w-4/5 text-right text-base font-normal text-white leading-none md:leading-10 md:bottom-12 md:w-2/3 md:text-lg xl:w-1/2 xl:text-2xl 2xl:bottom-24 2xl:right-0">
                   {slide.title}
                 </h2>
               </div>
