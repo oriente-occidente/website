@@ -82,6 +82,7 @@ export default function NewsCard({ data, locale }: GenericCardProps) {
               className="duration-300 group-hover:scale-105"
               src={data.image.url ? data.image.url : data.image}
               alt={data.image.alt ? data.image.alt : "Oriente Occidente"}
+              priority={true}
             />
           )}
         </div>
