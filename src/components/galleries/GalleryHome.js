@@ -20,8 +20,8 @@ function GalleryHome({ slides, background, locale }) {
         className="mySwiper"
         lazy={{
           enabled: true,
+          checkInView: true,
           loadPrevNext: true,
-          loadPrevNextAmount: 1,
           loadOnTransitionStart: true,
         }}
         breakpoints={{

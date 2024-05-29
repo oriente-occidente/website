@@ -8,7 +8,6 @@ import {
   Parallax,
   Pagination,
 } from "swiper/modules";
-import StandardCard from "@/components/cards/StandardCard";
 import GenericCard from "@/components/cards/GenericCard";
 
 import { closestInterval } from "@/lib/utils";
@@ -26,8 +25,8 @@ function GalleryPreview({ slides, locale }) {
         className="mySwiper"
         lazy={{
           enabled: true,
+          checkInView: true,
           loadPrevNext: true,
-          loadPrevNextAmount: 1,
           loadOnTransitionStart: true,
         }}
         breakpoints={{
@@ -66,12 +65,6 @@ function GalleryPreview({ slides, locale }) {
           return (
             <div className="relative" key={`gallery-preview-${id}`}>
               <SwiperSlide>
-                {/* <StandardCard
-                  locale={locale}
-                  data={slide}
-                  categoryTitle={categoryTitle}
-                  eventDate={eventDate}
-                /> */}
                 <GenericCard
                   count={i}
                   locale={locale} 
