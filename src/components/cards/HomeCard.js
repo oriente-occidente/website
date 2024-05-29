@@ -1,5 +1,5 @@
 "use client";
-import { Image as DatoImage } from "react-datocms";
+import { Image as DatoImage,SRCImage } from "react-datocms";
 import Image from "next/image";
 
 import translate from "@/lib/locales";
@@ -27,7 +27,7 @@ function HomeCard({ count, categoryTitle, data, locale }) {
           </div>
           <div className="relative w-3/4 overflow-hidden lg:w-8/12">
             {data.imageHero ? (
-              <DatoImage
+              <SRCImage
                 lazyLoad
                 className="h-full w-full duration-300 group-hover:scale-105"
                 data={data.imageHero.responsiveImage}

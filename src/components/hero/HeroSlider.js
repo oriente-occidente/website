@@ -8,7 +8,7 @@ import {
   Pagination,
 } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Image as DatoImage } from "react-datocms";
+import { Image as DatoImage,SRCImage } from "react-datocms";
 import Image from "next/image";
 
 function HeroSlider({ slides }) {
@@ -35,7 +35,7 @@ function HeroSlider({ slides }) {
 
           return (
             <SwiperSlide key={id}>
-              <DatoImage
+              <SRCImage
                 className="dato-image-cover hidden lg:block"
                 data={responsiveImage}
                 alt={alt}
