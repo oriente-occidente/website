@@ -21,7 +21,6 @@ function GalleryHome({ slides, background, locale }) {
         lazy={{
           enabled: true,
           checkInView: true,
-          loadPrevNext: true,
           loadOnTransitionStart: true,
         }}
         breakpoints={{

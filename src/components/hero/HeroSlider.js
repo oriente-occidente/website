@@ -23,8 +23,6 @@ function HeroSlider({ slides }) {
         navigation={true}
         lazy={{
           enabled: true,
-          loadPrevNext: true,
-          loadPrevNextAmount: 1,
           loadOnTransitionStart: true,
         }}
         className="mySwiper relative  lg:h-[60vh] xl:h-[70vh]"
