@@ -1,5 +1,5 @@
 "use client";
-import { Image as DatoImage } from "react-datocms";
+import { Image as DatoImage,SRCImage } from "react-datocms";
 import Image from "next/image";
 import Link from "next/link";
 import { MapPinIcon, CalendarIcon } from "@heroicons/react/24/outline";
@@ -70,7 +70,7 @@ export default function NewsCard({ data, locale, count }: GenericCardProps) {
             //   priority={count == 1 ? true : false}
             //   fetchpriority={count == 1 ? true : false}
             // />
-            <DatoImage
+            <SRCImage
               className="duration-300 group-hover:scale-105"
               data={data.imageHero.responsiveImage}
               priority={count == 1 ? true : false}
