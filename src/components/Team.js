@@ -19,7 +19,7 @@ export default function Team({ locale, data }) {
         {data.role}
       </div>
       <h2 className="text-sm font-semibold uppercase xl:text-base">
-        {data.title}
+        {data.teamTitle}
       </h2>
       <div className="flex justify-between">
         {data.email && (
