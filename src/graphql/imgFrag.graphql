@@ -1,7 +1,6 @@
 fragment imgFrag on ResponsiveImage {
   aspectRatio
   bgColor
-  base64
   height
   sizes
   src

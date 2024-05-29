@@ -66,7 +66,7 @@ export default function NewsCard({ data, locale }: GenericCardProps) {
             <DatoImage
               className=" duration-300 group-hover:scale-105"
               data={data.imageHero.responsiveImage}
-            />
+              priority={true}              />
             // <Image
             //   fill
             //   className="duration-300 group-hover:scale-105"
