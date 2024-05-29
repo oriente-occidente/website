@@ -37,7 +37,7 @@ export default async function Page({ params }: BasicSlugPageProps) {
     hero: heroData,
     ...data.page,
   };
-  console.log("data.page ->", data.page);
+  // console.log("data.page ->", data.page);
 
   const slugData = extractSlugData(data.page);
 
