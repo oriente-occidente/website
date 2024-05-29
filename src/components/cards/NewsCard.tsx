@@ -7,7 +7,7 @@ import { formatDate } from "@/lib/utils";
 import { GenericCardProps } from "@/types";
 import resolveLink from "@/lib/resolveLink";
 
-export default function NewsCard({ data, locale }: GenericCardProps) {
+export default function NewsCard({ data, locale, count }: GenericCardProps) {
   let categoryTitle;
   // if (data.category) {
   //   const catToShow = data.category;
@@ -63,10 +63,18 @@ export default function NewsCard({ data, locale }: GenericCardProps) {
       >
         <div className={`relative overflow-hidden`}>
           {data.imageHero && (
+            // <DatoImage
+            // lazyLoad
+            //   className=" duration-300 group-hover:scale-105"
+            //   data={data.imageHero.responsiveImage}
+            //   priority={count == 1 ? true : false}
+            //   fetchpriority={count == 1 ? true : false}
+            // />
             <DatoImage
-              className=" duration-300 group-hover:scale-105"
+              className="duration-300 group-hover:scale-105"
               data={data.imageHero.responsiveImage}
-              priority={true}              />
+              priority={count == 1 ? true : false}
+            />
             // <Image
             //   fill
             //   className="duration-300 group-hover:scale-105"

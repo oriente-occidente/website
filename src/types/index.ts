@@ -53,6 +53,7 @@ export type GenericCardProps = {
   locale: string;
   categoryTitle?: string;
   model?: string;
+  count?: number;
 };
 
 export type GenericPageProps = {

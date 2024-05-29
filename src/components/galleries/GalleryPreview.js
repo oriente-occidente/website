@@ -72,7 +72,10 @@ function GalleryPreview({ slides, locale }) {
                   categoryTitle={categoryTitle}
                   eventDate={eventDate}
                 /> */}
-                <GenericCard locale={locale} data={slide}
+                <GenericCard
+                  count={i}
+                  locale={locale} 
+                  data={slide}
                   categoryTitle={categoryTitle}
                   eventDate={eventDate} />
               </SwiperSlide>
