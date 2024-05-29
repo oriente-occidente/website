@@ -16,7 +16,7 @@ import {
 import { lchown } from "fs";
 
 export default function PageTemplate({ data, locale }: GenericPageProps) {
-  console.log("data!", data);
+  // console.log("data!", data);
   const { hero, content } = data;
   const sections = data.sections || [];
   const relatedContents = data.relatedContents || [];
