@@ -27,15 +27,14 @@ function HomeCard({ count, categoryTitle, data, locale }) {
           </div>
           <div className="relative w-3/4 overflow-hidden lg:w-8/12">
             {data.imageHero ? (
-              <SRCImage
-                lazyLoad
-                className="h-full w-full duration-300 group-hover:scale-105"
+              <DatoImage
+                // className="h-full w-full duration-300 group-hover:scale-105"
                 data={data.imageHero.responsiveImage}
-                alt={data.imageHero.alt}
-                title={data.imageHero.title}
-                layout="fill"
-                objectFit="cover"
-                objectPosition="center"
+                // alt={data.imageHero.alt}
+                // title={data.imageHero.title}
+                // layout="fill"
+                // objectFit="cover"
+                // objectPosition="center"
                 priority={count == 1 ? true : false}
                 fetchpriority={count == 1 ? "high" : "low"}
               />
