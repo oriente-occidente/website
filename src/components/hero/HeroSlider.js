@@ -30,16 +30,21 @@ function HeroSlider({ slides }) {
         {slides.map((slide, i) => {
           const { image, mobileImg } = slide;
           const { responsiveImage, id } = image;
-          console.log('image', mobileImg.responsiveImage.alt);
+          console.log("image", mobileImg.responsiveImage.alt);
           return (
             <SwiperSlide key={id}>
-              <div className="relative aspect-[4/3] md:aspect-auto h-full" style={{background: `${responsiveImage.bgColor}`}}>
+              <div
+                className="relative aspect-[4/3] md:aspect-auto h-full"
+                style={{ background: `${responsiveImage.bgColor}` }}
+              >
                 <Image
                   src={mobileImg.responsiveImage.src}
                   alt={mobileImg.responsiveImage.alt}
                   width={500}
                   height={300}
                   className="absolute inset-0 object-cover object-center w-full h-full"
+                  priority={i == 0 ? true : false}
+                  fetchpriority={i == 0 ? "high" : "low"}
                 />
               </div>
               {/* <DatoImage
