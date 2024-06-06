@@ -82,7 +82,7 @@ export default function AccordionItem({ filter, locale }: any) {
               list: "",
               item: "cursor-pointer p-2 hover:underline relative overflow-hidden",
               checkbox:
-                "peer appearance-none checked:border-b -ml-12 mr-12 pl-8 checked:border-black before:content-[''] before:z-[1] before:block before:w-[14px] before:h-[14px] before:rounded-sm before:border before:border-[2px] before:border-black before:mt-[4px] before:ml-5 ",
+                "peer   checked:border-b -ml-12 mr-12 pl-8 checked:border-black before:content-[''] before:z-[1] before:block before:w-[14px] before:h-[14px] before:rounded-sm before:border before:border-[2px] before:border-black before:mt-[4px] before:ml-5 focus-visible:before:outline focus-visible:before:outline-2 focus-visible:before:outline-offset-2 focus-visible:before:outline-sky-600",
               label: "cursor-pointer flex items-start ",
               count:
                 "ml-2 font-normal px-[3px] py-[1px] bg-border rounded-md before:content-['('] after:content-[')']",

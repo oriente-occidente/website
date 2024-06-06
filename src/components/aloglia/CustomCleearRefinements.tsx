@@ -29,12 +29,12 @@ export default function CustomClearRefinements({
       ? translate("search.remove-filters", locale)
       : translate("search.reset", locale);
   return (
-    <div>
+    <div className="text-right">
       {notifyReset ? (
         <div> {translate("search.resetting", locale)}</div>
       ) : (
         <button
-          className="capitalize min-w-[120px] front-bold flex items-center underline font-bold"
+          className=" font-bold flex items-center underline"
           onClick={(e) => handlePress()}
         >
           {label}
