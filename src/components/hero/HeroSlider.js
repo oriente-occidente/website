@@ -28,9 +28,8 @@ function HeroSlider({ slides }) {
         className="mySwiper relative  lg:h-[60vh] xl:h-[70vh]"
       >
         {slides.map((slide, i) => {
-          const { image, mobileImg } = slide;
-          const { responsiveImage, id } = image;
-          console.log("image", mobileImg.responsiveImage.alt);
+          const { mobileImg } = slide;
+          const { responsiveImage, id } = mobileImg;
           return (
             <SwiperSlide key={id}>
               <div
@@ -38,8 +37,8 @@ function HeroSlider({ slides }) {
                 style={{ background: `${responsiveImage.bgColor}` }}
               >
                 <Image
-                  src={mobileImg.responsiveImage.src}
-                  alt={mobileImg.responsiveImage.alt}
+                  src={responsiveImage.src}
+                  alt={responsiveImage.alt}
                   width={500}
                   height={300}
                   className="absolute inset-0 object-cover object-center w-full h-full"

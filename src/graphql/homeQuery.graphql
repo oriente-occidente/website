@@ -28,7 +28,6 @@ query home($locale: SiteLocale!) {
         id
         url
         responsiveImage(
-          sizes: "100w"
           imgixParams: {
             auto: [format, compress]
             ar: "10:9"
