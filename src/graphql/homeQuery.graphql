@@ -33,6 +33,7 @@ query home($locale: SiteLocale!) {
             auto: [format, compress]
             ar: "10:9"
             fit: crop
+            w: 600
           }
         ) {
           ...imgFrag

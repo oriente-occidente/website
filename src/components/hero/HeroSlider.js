@@ -8,7 +8,7 @@ import {
   Pagination,
 } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Image as DatoImage,SRCImage } from "react-datocms";
+import { Image as DatoImage, SRCImage } from "react-datocms";
 import Image from "next/image";
 
 function HeroSlider({ slides }) {
@@ -32,7 +32,16 @@ function HeroSlider({ slides }) {
           const { responsiveImage, alt, title, id } = image;
           return (
             <SwiperSlide key={id}>
-              <DatoImage
+              <div className="relative aspect-[4/3] md:aspect-auto h-full" style={{background: `${responsiveImage.bgColor}`}}>
+                <Image
+                  src={mobileImg.responsiveImage.src}
+                  alt={title}
+                  width={500}
+                  height={300}
+                  className="absolute inset-0 object-cover object-center w-full h-full"
+                />
+              </div>
+              {/* <DatoImage
                 className="dato-image-cover hidden lg:block"
                 data={responsiveImage}
                 alt={alt}
@@ -45,11 +54,13 @@ function HeroSlider({ slides }) {
                 data={mobileImg.responsiveImage}
                 priority={i == 0 ? true : false}
                 fetchpriority={i == 0 ? "high" : "low"}
-              />
-              <div className="container relative h-full">
-                <h2 className="absolute bottom-16 right-4 z-20 w-4/5 text-right text-base font-normal text-white leading-none md:leading-10 md:bottom-12 md:w-2/3 md:text-lg xl:w-1/2 xl:text-2xl 2xl:bottom-24 2xl:right-0">
-                  {slide.title}
-                </h2>
+              /> */}
+              <div>
+                <div className="container relative h-full">
+                  <h2 className="absolute bottom-16 right-4 z-20 w-4/5 text-right text-base font-normal text-white leading-none md:leading-10 md:bottom-12 md:w-2/3 md:text-lg xl:w-1/2 xl:text-2xl 2xl:bottom-24 2xl:right-0">
+                    {slide.title}
+                  </h2>
+                </div>
               </div>
               <div className="from-black-lessTransparent absolute inset-0 z-10 bg-gradient-to-t to-transparent"></div>
             </SwiperSlide>
