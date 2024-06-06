@@ -103,7 +103,7 @@ export default function CategoryCard({ data, locale }: GenericCardProps) {
               categoryTitle != "artisti" && ( */}
             {data.title && (
               <h3
-                className={`pr-5 text-base sm:text-lg font-semibold uppercase text-black md:text-lg group-hover:origin-left group-hover:-rotate-1 group-hover:-translate-y-3 duration-300`}
+                className={`pr-5 text-sm md:text-lg font-semibold uppercase leading-6 text-black md:text-lg group-hover:origin-left group-hover:-rotate-1 group-hover:-translate-y-3 duration-300`}
               >
                 <span className={`${categoryClasses}`}>{data.title}</span>
               </h3>
@@ -117,7 +117,7 @@ export default function CategoryCard({ data, locale }: GenericCardProps) {
             )} */}
             {data.authors && (
               <div
-                className={`font-semibold uppercase text-black md:text-base group-hover:origin-right group-hover:rotate-1 group-hover:-translate-y-1 duration-300`}
+                className={`font-semibold uppercase text-black text-[12px] md:text-base group-hover:origin-right group-hover:rotate-1 group-hover:-translate-y-1 duration-300`}
               >
                 <span className={`${categoryClasses}`}>{data.authors}</span>
               </div>
