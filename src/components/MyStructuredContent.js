@@ -1,7 +1,7 @@
 "use client";
 import { Fragment } from "react";
 import { StructuredText, renderRule } from "react-datocms";
-import { isBlockquote, isHeading } from "datocms-structured-text-utils";
+import { isBlockquote, isHeading, isLink } from "datocms-structured-text-utils";
 import { Image } from "react-datocms";
 import Link from "next/link";
 import BlockQuote from "@/components/BlockQuote";
@@ -149,7 +149,7 @@ const StructuredContent = ({ locale, content }) => {
               href={resolved}
               key={record.id}
               locale={locale}
-              className="underline"
+              className="underline hover:no-underline hover:text-black-medium"
             >
               {record.title}
             </Link>
@@ -164,7 +164,7 @@ const StructuredContent = ({ locale, content }) => {
               href={resolved}
               key={record.id}
               locale={locale}
-              className="NO-underline"
+              className="underline hover:no-underline hover:text-black-medium"
             >
               {children}
             </Link>
@@ -187,6 +187,22 @@ const StructuredContent = ({ locale, content }) => {
               <div className={`h${classTag}`} key={key}>
                 {children}
               </div>
+            );
+          }),
+          renderRule(isLink, ({ node, children, key }) => {
+            if (!children) return null;
+            return (
+              <a
+                className="underline hover:no-underline hover:text-black-medium"
+                key={key}
+                target="_blank"
+                rel="noreferrer"
+                title={node.url || "link"}
+                href={node.url}
+                aria-label={`${node.url || "link"} open in new window`}
+              >
+                {children}
+              </a>
             );
           }),
         ]}
