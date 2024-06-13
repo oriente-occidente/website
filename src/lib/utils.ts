@@ -108,10 +108,10 @@ export function formatDate(str: string, locale = "it", isDaily = false) {
   const fmt =
     locale === "it"
       ? isDaily
-        ? "DD/MM/YYYY HH:mm"
+        ? "DD/MM/YYYY - HH:mm"
         : "DD MMMM YYYY"
       : isDaily
-      ? "MMM DD YYYY HH:mm"
+      ? "MMM DD YYYY - HH:mm"
       : "MMM DD YYYY";
   // dayjs.locale(locale);
   // console.log('DAYJS LOCALE', dayjs.locale(), locale);
@@ -142,7 +142,9 @@ export function groupDatesByDay(dates: any[], locale = "it") {
       return daily;
     }, []);
     if (times.length > 0) {
-      return `${date} - ${locale == "it" ? "alle: " : "at: "} ${times.join(" , ")}`;
+      return `${date} - ${locale == "it" ? "alle: " : "at: "} ${times.join(
+        " , "
+      )}`;
     }
     return date;
   });
@@ -180,7 +182,9 @@ export const closestInterval = (intervals: any[]) => {
 
 function getLastDate(dates: any[], format: string = "YYYY-MM-DD") {
   const groups = dates.reduce((group, date) => {
-    const day = dayjs(date.endTime ? date.endTime : date.startTime).format(format);
+    const day = dayjs(date.endTime ? date.endTime : date.startTime).format(
+      format
+    );
     if (group[day]) {
       group[day].push(date);
     } else {

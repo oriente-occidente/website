@@ -88,6 +88,8 @@ const labels_en = {
   eventsDescription: "Shows, performances and open rehearsals",
   workshopsDescription: "Training activities",
   languagesDescription: "Conferences and talks",
+  from: "from",
+  to: "to",
   search: {
     title: "Search",
     show: "Show search",

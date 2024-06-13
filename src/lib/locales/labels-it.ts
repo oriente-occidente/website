@@ -88,6 +88,8 @@ const labels_it = {
   eventsDescription: "Spettacoli, performance e prove aperte",
   workshopsDescription: "Attività di formazione",
   languagesDescription: "Conferenze e talk",
+  from: "dal",
+  to: "al",
   search: {
     title: "Cerca",
     show: "Mostra la ricerca",
