@@ -43,10 +43,13 @@ function Filters({ locale, list = null }) {
   useEffect(() => {
     if (typeof window !== "undefined") {
       const params = new URLSearchParams(window.location.search);
-      if (params.get("type") && tabs.find((t) => t.slug == params.get("type"))) {
+      if (
+        params.get("type") &&
+        tabs.find((t) => t.slug == params.get("type"))
+      ) {
         setTypeFilter(params.get("type"));
       } else {
-        setTypeFilter("festivalEvents");
+        setTypeFilter("all");
       }
     }
   }, []);
