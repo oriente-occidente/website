@@ -69,7 +69,7 @@ function Filters({ locale, list = null }) {
       // return enhanceEvents(allResults);
       return sortFlatEvents(allResults);
     } else {
-      return enhanceEvents(results[typeFilter]);
+      return sortFlatEvents(results[typeFilter]);
     }
   }
 
