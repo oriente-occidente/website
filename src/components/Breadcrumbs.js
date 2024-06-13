@@ -5,12 +5,19 @@ import { cleanURL } from "@/lib/utils";
 import indexesReference from "@/data/indexesReference.json";
 
 export default function Breadcrumbs({ data, locale, background }) {
+  // console.log("DATA ---->", data);
   const d = { ...data, slug: data.slug ? data.slug : data.id };
   const parentIndex = indexesReference[d._modelApiKey] || null;
   const link = resolveLink({ locale, ...d });
-  const href = parentIndex
-    ? resolveLink({ locale, _modelApiKey: parentIndex.apiKey })
-    : link;
+  const href =
+    d._modelApiKey == "event" && d.isFestival
+      ? resolveLink({
+          ...d.festivalEditions[0],
+          locale,
+        })
+      : parentIndex
+      ? resolveLink({ locale, _modelApiKey: parentIndex.apiKey })
+      : link;
   const paths = cleanURL(link, locale)
     .split("/")
     .filter((p) => p);

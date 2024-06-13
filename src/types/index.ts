@@ -30,6 +30,8 @@ export type ResolveLinkProps = {
   year?: string;
   archiveType?: string;
   switcher?: boolean;
+  isFestival?: boolean;
+  isBreadcrumbs?: boolean;
 };
 export type FooterProps = {
   locale: string;

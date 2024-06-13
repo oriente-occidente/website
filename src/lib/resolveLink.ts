@@ -25,6 +25,8 @@ export default function resolveLink({
   year,
   archiveType,
   switcher,
+  isFestival,
+  isBreadcrumbs,
 }: ResolveLinkProps): string {
   //language prefix
   let lp = locale === config.defaultLocale ? "" : `/${locale}`;
@@ -87,6 +89,8 @@ export default function resolveLink({
     case "event":
       if (redirect) {
         return `${lp}`;
+      } else if (isFestival && isBreadcrumbs) {
+        return `${lp}/festival/${t(`programma`, locale)}/${lslug}`;
       } else {
         return `${lp}/people/${t(`eventi`, locale)}/${lslug}`;
       }

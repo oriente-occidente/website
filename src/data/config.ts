@@ -30,6 +30,9 @@ const config = {
     pubblicazioni: {
       en: "publications",
     },
+    programma: {
+      en: "program",
+    },
     "artisti-compagnie": {
       en: "artists-companies",
     },

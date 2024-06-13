@@ -95,7 +95,11 @@ export default function PageTemplate({ data, locale }: GenericPageProps) {
 
   return (
     <div>
-      <Breadcrumbs data={data} locale={locale as any} background={null} />
+      <Breadcrumbs
+        data={{ ...data, isBreadcrumbs: true }}
+        locale={locale as any}
+        background={null}
+      />
       <GenericHero data={hero} locale={locale} />
       <MainContent data={content} locale={locale} />
       {sections.length > 0 && <SectionsParagraphs locale={locale} sections={sections} />}
