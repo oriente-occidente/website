@@ -31,6 +31,7 @@ export type ResolveLinkProps = {
   archiveType?: string;
   switcher?: boolean;
   isFestival?: boolean;
+  isWorkshop?: boolean;
   isBreadcrumbs?: boolean;
 };
 export type FooterProps = {

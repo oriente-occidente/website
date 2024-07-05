@@ -10,7 +10,8 @@ export default function Breadcrumbs({ data, locale, background }) {
   const parentIndex = indexesReference[d._modelApiKey] || null;
   const link = resolveLink({ locale, ...d });
   const href =
-    d._modelApiKey == "event" && d.isFestival
+    (d._modelApiKey == "event" && d.isFestival) ||
+    (d._modelApiKey == "workshop" && !d.isWorkshop)
       ? resolveLink({
           ...d.festivalEditions[0],
           locale,

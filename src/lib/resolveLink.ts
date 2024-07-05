@@ -26,6 +26,7 @@ export default function resolveLink({
   archiveType,
   switcher,
   isFestival,
+  isWorkshop,
   isBreadcrumbs,
 }: ResolveLinkProps): string {
   //language prefix
@@ -71,6 +72,8 @@ export default function resolveLink({
     case "workshop":
       if (redirect) {
         return `${lp}`;
+      } else if (!isWorkshop && isBreadcrumbs) {
+        return `${lp}/festival/${t(`programma`, locale)}/${lslug}`;
       } else {
         return `${lp}/studio/${t(`formazione`, locale)}/${lslug}`;
       }

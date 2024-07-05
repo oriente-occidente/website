@@ -41,7 +41,7 @@ function HeroDetail({ data, locale }) {
           {dateEvento != null ? (
             <>
               {dateEvento.map((date) => {
-                console.log(date.endtime);
+                // console.log(date.endtime);
                 return (
                   <div
                     key={date.id}
@@ -52,8 +52,7 @@ function HeroDetail({ data, locale }) {
                       focusable="false"
                       className="mr-2 h-4 w-4"
                     />
-                    {date.isDaily &&
-                      formatDate(date.startTime, locale, date.isDaily)}
+                    {date.isDaily && formatDate(date.startTime, locale, date.isDaily)}
                     <div>
                       {date.endTime && !date.isDaily && (
                         <div>
@@ -76,11 +75,7 @@ function HeroDetail({ data, locale }) {
           ) : null}
           {location && (
             <h2 className="mt-1 flex items-center text-xxs text-black-light">
-              <MapPinIcon
-                aria-hidden="true"
-                focusable="false"
-                className="mr-2 h-4 w-4"
-              />
+              <MapPinIcon aria-hidden="true" focusable="false" className="mr-2 h-4 w-4" />
               {location}
             </h2>
           )}
@@ -89,25 +84,17 @@ function HeroDetail({ data, locale }) {
       <div className="md:border-color-gray relative md:col-span-3 md:col-start-2 md:border-l lg:w-full xl:pt-4">
         <div className="md:items-flex-start px-4 pt-4 md:flex md:justify-between md:px-12">
           <div className="">
-            <h1 className="pt-1 pb-1 text-base uppercase lg:text-xl">
-              {titleHero}
-            </h1>
+            <h1 className="pt-1 pb-1 text-base uppercase lg:text-xl">{titleHero}</h1>
             {authors && (
               <p className="mb-1 text-base font-semibold uppercase lg:text-xl">
                 {authors}
               </p>
             )}
-            <p className="text-base font-semibold uppercase">
-              {descriptionHero}
-            </p>
+            <p className="text-base font-semibold uppercase">{descriptionHero}</p>
           </div>
 
           {paymentSettings && (
-            <BookButton
-              paymentSettings={paymentSettings}
-              locale={locale}
-              id={pageId}
-            />
+            <BookButton paymentSettings={paymentSettings} locale={locale} id={pageId} />
           )}
         </div>
 

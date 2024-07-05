@@ -33,12 +33,14 @@ export default async function Page({ params }: BasicSlugPageProps) {
     dateEvento: data.workshop?.dates,
     location: data.workshop?.location,
     authors: data.workshop?.authors,
+    paymentSettings: data.workshop?.paymentSettings,
   };
   const pageData: any = {
     hero: heroData,
     ...data.workshop,
   };
   const slugData = extractSlugData(data.workshop);
+
   return (
     <Wrapper locale={locale} slugData={slugData}>
       <PageTemplate data={pageData} locale={locale} />
