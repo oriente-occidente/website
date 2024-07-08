@@ -6,7 +6,10 @@ import translate from "@/lib/locales";
 
 export default function BookButton({ locale, paymentSettings, id }) {
   const router = useRouter();
-  const isBookable = paymentSettings?.reduce((result, p) => result || p.bookable, false);
+  const isBookable = paymentSettings?.reduce(
+    (result, p) => result || p.bookable,
+    false
+  );
   const today = dayjs(new Date());
   const isFuture = paymentSettings?.reduce((result, p) => {
     const start = dayjs(p.startDate);
@@ -30,14 +33,22 @@ export default function BookButton({ locale, paymentSettings, id }) {
     return null;
   }
   return (
-    <div className="pl-4">
+    <div className="mt-6 md:mt-0 md:pl-4">
       {isBookable ? (
-        <button className="button--with-arrow" onClick={() => handleRegistration(id)}>
+        <button
+          className="button--with-arrow"
+          onClick={() => handleRegistration(id)}
+        >
           {/* {translate('register', locale)} */}
           {translate("booking", locale)}
         </button>
       ) : (
-        <a className="button--with-arrow" href={link} target="_blank" rel="noreferrer">
+        <a
+          className="button--with-arrow"
+          href={link}
+          target="_blank"
+          rel="noreferrer"
+        >
           {/* {translate('buy', locale)} */}
           {translate("booking", locale)}
         </a>
