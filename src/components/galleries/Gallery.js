@@ -1,5 +1,5 @@
 "use client";
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
 import { Image as DatoImage } from "react-datocms";
 import { Swiper, SwiperSlide } from "swiper/react";
 import {
@@ -29,10 +29,15 @@ function Gallery({ slides }) {
         speed={700}
         slidesPerView={1}
         pagination={true}
-        navigation={showArrows}
+        // navigation={showArrows}
+        navigation={true}
         className="SwiperGallery"
         effect="fade"
         parallax={true}
+        onBeforeInit={(swiper) => {
+          swiper.params.navigation.prevEl = prevRef.current;
+          swiper.params.navigation.nextEl = nextRef.current;
+        }}
         // onSwiper={(swiper) => {
         //   setTimeout(() => {
         //     swiper?.params?.navigation?.prevEl = prevRef.current;
