@@ -51,9 +51,12 @@ function Gallery({ slides }) {
         {slides?.map((slide) => {
           return (
             <SwiperSlide key={slide.id}>
-              <div className="relative" data-swiper-parallax="-50%">
+              <div
+                className="relative aspect-video"
+                data-swiper-parallax="-50%"
+              >
                 <DatoImage
-                  className="max-w-[1400px]"
+                  className="dato-image-cover"
                   data={slide.responsiveImage}
                   alt={slide.alt}
                   title={slide.title}
