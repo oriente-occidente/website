@@ -32,8 +32,8 @@ function Gallery({ slides }) {
         // navigation={showArrows}
         navigation={true}
         className="SwiperGallery"
-        effect="fade"
-        parallax={true}
+        // effect="fade"
+        // parallax={true}
         onBeforeInit={(swiper) => {
           swiper.params.navigation.prevEl = prevRef.current;
           swiper.params.navigation.nextEl = nextRef.current;
@@ -53,7 +53,7 @@ function Gallery({ slides }) {
             <SwiperSlide key={slide.id}>
               <div
                 className="relative aspect-video"
-                data-swiper-parallax="-50%"
+                // data-swiper-parallax="-50%"
               >
                 <DatoImage
                   className="dato-image-cover"
