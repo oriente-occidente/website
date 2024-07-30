@@ -2,25 +2,21 @@
 import { useEffect, useRef } from "react";
 import { Image as DatoImage } from "react-datocms";
 import { Swiper, SwiperSlide } from "swiper/react";
-import {
-  Autoplay,
-  A11y,
-  Parallax,
-  Pagination,
-  Navigation,
-} from "swiper/modules";
+import { Autoplay, A11y, Parallax, Pagination, Navigation } from "swiper/modules";
 
 function Gallery({ slides }) {
-  const prevRef = useRef(null);
-  const nextRef = useRef(null);
+  // const prevRef = useRef(null);
+  // const nextRef = useRef(null);
 
-  const showArrows =
-    slides.length > 1
-      ? {
-          prevEl: prevRef.current,
-          nextEl: nextRef.current,
-        }
-      : false;
+  const swiperRef = useRef();
+
+  // const showArrows =
+  //   slides.length > 1
+  //     ? {
+  //         prevEl: prevRef.current,
+  //         nextEl: nextRef.current,
+  //       }
+  //     : false;
   return (
     <div className="relative swiper-gallery">
       <Swiper
@@ -34,9 +30,12 @@ function Gallery({ slides }) {
         className="SwiperGallery"
         // effect="fade"
         // parallax={true}
+        // onBeforeInit={(swiper) => {
+        //   swiper.params.navigation.prevEl = prevRef.current;
+        //   swiper.params.navigation.nextEl = nextRef.current;
+        // }}
         onBeforeInit={(swiper) => {
-          swiper.params.navigation.prevEl = prevRef.current;
-          swiper.params.navigation.nextEl = nextRef.current;
+          swiperRef.current = swiper;
         }}
         // onSwiper={(swiper) => {
         //   setTimeout(() => {
@@ -72,8 +71,16 @@ function Gallery({ slides }) {
           );
         })}
       </Swiper>
-      <div ref={prevRef} className="swiper-button-prev"></div>
-      <div ref={nextRef} className="swiper-button-next"></div>
+      {/* <div ref={prevRef} className="swiper-button-prev"></div>
+      <div ref={nextRef} className="swiper-button-next"></div> */}
+      <div
+        onClick={() => swiperRef.current?.slidePrev()}
+        className="swiper-button-prev"
+      ></div>
+      <div
+        onClick={() => swiperRef.current?.slideNext()}
+        className="swiper-button-next"
+      ></div>
     </div>
   );
 }
