@@ -1,22 +1,13 @@
 "use client";
-import { useEffect, useRef } from "react";
+import { useRef, useState } from "react";
 import { Image as DatoImage } from "react-datocms";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, A11y, Parallax, Pagination, Navigation } from "swiper/modules";
 
 function Gallery({ slides }) {
-  // const prevRef = useRef(null);
-  // const nextRef = useRef(null);
-
+  const [activeId, setActiveId] = useState(0);
   const swiperRef = useRef();
 
-  // const showArrows =
-  //   slides.length > 1
-  //     ? {
-  //         prevEl: prevRef.current,
-  //         nextEl: nextRef.current,
-  //       }
-  //     : false;
   return (
     <div className="relative swiper-gallery">
       <Swiper
@@ -30,22 +21,10 @@ function Gallery({ slides }) {
         className="SwiperGallery"
         // effect="fade"
         // parallax={true}
-        // onBeforeInit={(swiper) => {
-        //   swiper.params.navigation.prevEl = prevRef.current;
-        //   swiper.params.navigation.nextEl = nextRef.current;
-        // }}
         onBeforeInit={(swiper) => {
           swiperRef.current = swiper;
         }}
-        // onSwiper={(swiper) => {
-        //   setTimeout(() => {
-        //     swiper?.params?.navigation?.prevEl = prevRef.current;
-        //     swiper?.params?.navigation?.nextEl = nextRef.current;
-        //     swiper.navigation.destroy();
-        //     swiper.navigation.init();
-        //     swiper.navigation.update();
-        //   });
-        // }}
+        onSlideChange={(swiper) => setActiveId(swiper.activeIndex)}
       >
         {slides?.map((slide) => {
           return (
@@ -71,16 +50,23 @@ function Gallery({ slides }) {
           );
         })}
       </Swiper>
-      {/* <div ref={prevRef} className="swiper-button-prev"></div>
-      <div ref={nextRef} className="swiper-button-next"></div> */}
-      <div
-        onClick={() => swiperRef.current?.slidePrev()}
-        className="swiper-button-prev"
-      ></div>
-      <div
-        onClick={() => swiperRef.current?.slideNext()}
-        className="swiper-button-next"
-      ></div>
+
+      {slides && slides.length > 1 && (
+        <>
+          <button
+            onClick={() => swiperRef.current?.slidePrev()}
+            className={`swiper-button-prev ${
+              activeId == 0 ? "swiper-button-disabled" : ""
+            }`}
+          ></button>
+          <button
+            onClick={() => swiperRef.current?.slideNext()}
+            className={`swiper-button-next ${
+              activeId == slides.length - 1 ? "swiper-button-disabled" : ""
+            }`}
+          ></button>
+        </>
+      )}
     </div>
   );
 }
