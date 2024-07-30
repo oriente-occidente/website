@@ -31,7 +31,7 @@ function HeroIndex({ data, locale }) {
 
   return (
     <div className="border-t border-gray bg-gray pb-10 md:border-none md:py-0">
-      <header className="relative overflow-hidden md:grid md:grid-cols-4 md:gap-4 xl:container xl:mx-auto">
+      <header className="relative  md:grid md:grid-cols-4 md:gap-4 xl:container xl:mx-auto">
         {/* <h1 className="title--big z-20 py-4 px-4 xl:pl-6">{titleHero}</h1> */}
 
         <h1 className="title--big z-20 py-4 px-5 xl:pl-6 leading-snug">
@@ -73,7 +73,11 @@ function HeroIndex({ data, locale }) {
           )}
           {newsDate && (
             <div className="px-4 md:pl-10 lg:px-20 lg:pt-2 hidden items-center gap-x-2 md:flex">
-              <CalendarIcon aria-hidden="true" focusable="false" className="h-4 w-4" />
+              <CalendarIcon
+                aria-hidden="true"
+                focusable="false"
+                className="h-4 w-4"
+              />
               <span className="font-light normal-case md:pr-1">
                 {formatDate(newsDate, locale)}
               </span>
@@ -81,12 +85,17 @@ function HeroIndex({ data, locale }) {
           )}
           {paymentSettings != null && (
             <div className="pt-4 md:pl-6 lg:pl-16">
-              <BookButton paymentSettings={paymentSettings} locale={locale} id={pageId} />
+              <BookButton
+                paymentSettings={paymentSettings}
+                locale={locale}
+                id={pageId}
+              />
             </div>
           )}
           {dateEvento && (
             <div className="px-4 pt-4 md:pl-10 lg:px-20">
-              {dateEvento != null && !["project", "network"].includes(pageType) ? (
+              {dateEvento != null &&
+              !["project", "network"].includes(pageType) ? (
                 <>
                   {dateEvento.map((date) => (
                     <div

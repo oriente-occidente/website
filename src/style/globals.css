@@ -253,12 +253,12 @@
 
   .swiper.swiper-button-prev,
   .swiper-gallery .swiper-button-prev {
-    @apply left-[-33%] bottom-0 before:border-black after:bg-arrow-left-black xl:left-[calc(-33%+1.5rem)] xl:bottom-8 2xl:-left-[333px];
+    @apply left-[-33%] bottom-0 before:border-black after:bg-arrow-left-black xl:left-[calc(-33%+1.5rem)] xl:-bottom-3 2xl:-left-[333px];
   }
 
   .swiper.swiper-button-next,
   .swiper-gallery .swiper-button-next {
-    @apply bottom-0 left-[calc(-33%+3.5rem)] before:border-black after:bg-arrow-right-black xl:bottom-8 xl:left-[calc(-33%+5rem)] 2xl:-left-[calc(333px-3.5rem)];
+    @apply bottom-0 left-[calc(-33%+3.5rem)] before:border-black after:bg-arrow-right-black xl:-bottom-3 xl:left-[calc(-33%+5rem)] 2xl:-left-[calc(333px-3.5rem)];
   }
 
   .swiper-gallery-standard .swiper-button-prev {
