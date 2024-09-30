@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 import { Image as DatoImage } from "react-datocms";
 import Link from "next/link";
 import { MapPinIcon, CalendarIcon } from "@heroicons/react/24/outline";
@@ -7,7 +8,11 @@ import { GenericCardProps, ArtisticResidenceYear } from "@/types";
 import resolveLink from "@/lib/resolveLink";
 import translate from "@/lib/locales";
 
-export default function CategoryCard({ data, locale, model }: GenericCardProps) {
+export default function CategoryCard({
+  data,
+  locale,
+  model,
+}: GenericCardProps) {
   let categoryTitle;
   if (data.contentType || data._modelApiKey) {
     const catToShow = data.contentType ? data.contentType : data._modelApiKey;
@@ -56,12 +61,19 @@ export default function CategoryCard({ data, locale, model }: GenericCardProps) 
         return "card-title-default";
     }
   }
-  const categoryClasses = categoryColorClasses(categoryTitle ? categoryTitle : "");
+  const categoryClasses = categoryColorClasses(
+    categoryTitle ? categoryTitle : ""
+  );
   const link = resolveLink({ ...data, locale });
 
   return (
     <div className="relative py-4">
-      <Link href={link} title={data.title} className="group" aria-label={`Vai a ${data.title}`}>
+      <Link
+        href={link}
+        title={data.title}
+        className="group"
+        aria-label={`Vai a ${data.title}`}
+      >
         <div className="relative overflow-hidden">
           <div className="absolute z-20 bottom-0 group">
             {data.title && (
@@ -74,8 +86,17 @@ export default function CategoryCard({ data, locale, model }: GenericCardProps) 
           </div>
           {data.imageHero && (
             <DatoImage
-              className=" duration-300 group-hover:scale-105 "
+              className="duration-300 group-hover:scale-105 "
               data={data.imageHero.responsiveImage}
+            />
+          )}
+          {!data.imageHero && (
+            <Image
+              width={600}
+              height={600}
+              className="aspect-[20/16] w-full object-cover"
+              src="/artist-placeholder.jpg"
+              alt={data.title || ""}
             />
           )}
         </div>
@@ -85,7 +106,8 @@ export default function CategoryCard({ data, locale, model }: GenericCardProps) 
             {model == "artistic_residencies_index" &&
               data.artisticResidence
                 ?.sort(
-                  (a: ArtisticResidenceYear, b: ArtisticResidenceYear) => b.year - a.year
+                  (a: ArtisticResidenceYear, b: ArtisticResidenceYear) =>
+                    b.year - a.year
                 )
                 .map((yearObj: ArtisticResidenceYear, index: number) => {
                   const { year } = yearObj;
@@ -98,7 +120,10 @@ export default function CategoryCard({ data, locale, model }: GenericCardProps) 
             {model == "artists_index" &&
               data.associatedArtist
                 ?.sort(
-                  ({ year: a }: { year: number }, { year: b }: { year: number }) => b - a
+                  (
+                    { year: a }: { year: number },
+                    { year: b }: { year: number }
+                  ) => b - a
                 )
                 .map((yearObj: ArtisticResidenceYear, index: number) => {
                   const { year } = yearObj;
