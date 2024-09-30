@@ -86,7 +86,7 @@ export default function MediaCard({ data, locale }: GenericCardProps) {
         {data.image ? (
           <div className="relative overflow-hidden">
             <Image
-              className="dato-image-cover duration-300 group-hover:scale-105"
+              className="object-cover w-full duration-300 group-hover:scale-105"
               src={data.image.url ? data.image.url : data.image}
               alt={data.image.alt ? data.image.alt : "Oriente Occidente"}
               width={400}
