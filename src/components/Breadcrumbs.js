@@ -22,7 +22,6 @@ export default function Breadcrumbs({ data, locale, background }) {
   const paths = cleanURL(link, locale)
     .split("/")
     .filter((p) => p);
-
   return (
     <nav
       className={`hidden md:block bg-${background} border-y border-y-gray py-2 xl:py-5`}
@@ -47,7 +46,11 @@ export default function Breadcrumbs({ data, locale, background }) {
                   )}
                   {i == total && (
                     <span className="text-[12px] uppercase font-semibold">
-                      {d.title || p}
+                      <span className="text-[12px] uppercase font-semibold">
+                        {d.slug === data.id && data.image?.title
+                          ? data.image.title
+                          : d.title || p}
+                      </span>
                     </span>
                   )}
                   <div className="ml-4 h-5 w-5 bg-arrow-right-black group-last:hidden"></div>
