@@ -27,7 +27,11 @@ export default function MediaTemplate({ data, locale }: any) {
         return (
           <>
             <div className="pt-12 lg:pt-24 pb-12">
-              <MediaTitle _modelApyKey={data._modelApiKey} data={data} locale={locale} />
+              <MediaTitle
+                _modelApyKey={data._modelApiKey}
+                data={data}
+                locale={locale}
+              />
             </div>
             {data.image && (
               <div className="pb-12">
@@ -43,7 +47,11 @@ export default function MediaTemplate({ data, locale }: any) {
         return (
           <>
             <div className="pt-12 lg:pt-24 pb-12">
-              <MediaTitle _modelApyKey={data._modelApiKey} data={data} locale={locale} />
+              <MediaTitle
+                _modelApyKey={data._modelApiKey}
+                data={data}
+                locale={locale}
+              />
             </div>
             <div className="pb-12 border-b">
               <MediaAudioPlayer data={data} locale={locale} />
@@ -54,7 +62,11 @@ export default function MediaTemplate({ data, locale }: any) {
         return (
           <>
             <div className="pt-12 lg:pt-24 pb-12">
-              <MediaTitle _modelApyKey={data._modelApiKey} data={data} locale={locale} />
+              <MediaTitle
+                _modelApyKey={data._modelApiKey}
+                data={data}
+                locale={locale}
+              />
             </div>
             <div className="grid grid-cols-1 justify-center pb-6 border-b">
               <MediaVideo data={data} locale={locale} />
