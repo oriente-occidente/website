@@ -43,7 +43,7 @@ function HeroSlider({ slides }) {
                   height={900}
                   className="absolute inset-0 object-cover object-center w-full h-full hidden lg:block"
                   priority={i == 0 ? true : false}
-                  fetchpriority={i == 0 ? "high" : "low"}
+                  fetchPriority={i == 0 ? "high" : "low"}
                 />
                 <Image
                   src={mobileImg.responsiveImage.src}
@@ -52,7 +52,7 @@ function HeroSlider({ slides }) {
                   height={300}
                   className="absolute inset-0 object-cover object-center w-full h-full lg:hidden"
                   priority={i == 0 ? true : false}
-                  fetchpriority={i == 0 ? "high" : "low"}
+                  fetchPriority={i == 0 ? "high" : "low"}
                 />
               </div>
               {/* <DatoImage
@@ -61,13 +61,13 @@ function HeroSlider({ slides }) {
                 alt={alt}
                 title={title}
                 priority={i == 0 ? true : false}
-                fetchpriority={i == 0 ? "high" : "low"}
+                fetchPriority={i == 0 ? "high" : "low"}
               />
               <DatoImage
                 className="lg:hidden"
                 data={mobileImg.responsiveImage}
                 priority={i == 0 ? true : false}
-                fetchpriority={i == 0 ? "high" : "low"}
+                fetchPriority={i == 0 ? "high" : "low"}
               /> */}
               <div>
                 <div className="container relative h-full">

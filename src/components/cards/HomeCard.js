@@ -1,5 +1,5 @@
 "use client";
-import { Image as DatoImage,SRCImage } from "react-datocms";
+import { Image as DatoImage, SRCImage } from "react-datocms";
 import Image from "next/image";
 
 import translate from "@/lib/locales";
@@ -35,7 +35,7 @@ function HomeCard({ count, categoryTitle, data, locale }) {
                 objectFit="cover"
                 objectPosition="center"
                 priority={count == 1 ? true : false}
-                fetchpriority={count == 1 ? "high" : "low"}
+                fetchPriority={count == 1 ? "high" : "low"}
               />
             ) : (
               // <Image
