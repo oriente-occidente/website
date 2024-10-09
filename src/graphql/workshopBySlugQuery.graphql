@@ -172,36 +172,43 @@ query workshop($slug: String!, $locale: SiteLocale) {
       links {
         __typename
         ... on ArtistRecord {
+          _modelApiKey
           id
           slug
           title
         }
         ... on EventRecord {
+          _modelApiKey
           id
           slug
           title
         }
         ... on NewsRecord {
+          _modelApiKey
           id
           slug
           title
         }
         ... on NetworkRecord {
+          _modelApiKey
           id
           slug
           title
         }
         ... on PageRecord {
+          _modelApiKey
           id
           slug
           title
         }
         ... on ProjectRecord {
+          _modelApiKey
           id
           slug
           title
         }
         ... on WorkshopRecord {
+          _modelApiKey
           id
           slug
           title
