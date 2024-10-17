@@ -18,7 +18,7 @@ export default function MediaLinks({ data, locale }) {
     "workhops",
     "events",
     "mediaAuthor",
-    "news"
+    "news",
   ];
 
   keysToExtract.forEach((key) => {
@@ -43,7 +43,7 @@ export default function MediaLinks({ data, locale }) {
         </div>
       )}
 
-      {data.years.length>0 && (
+      {data.years.length > 0 && (
         <div className="col-span-1">
           <div className="text-xs font-bold uppercase pb-2">
             {translate("year", locale)}
@@ -61,7 +61,7 @@ export default function MediaLinks({ data, locale }) {
         </div>
       )}
 
-      {data.festivalEditions.length>0 && (
+      {data.festivalEditions.length > 0 && (
         <div className="col-span-1">
           <div className="pb-2 text-xs font-bold uppercase">
             {translate("festival", locale)}
@@ -88,7 +88,7 @@ export default function MediaLinks({ data, locale }) {
         </div>
       )}
 
-      {data.artists.length && (
+      {data.artists.length > 0 && (
         <div className="col-span-1">
           <div className="pb-2 text-xs font-bold uppercase">
             {translate("artist", locale)}
@@ -115,32 +115,34 @@ export default function MediaLinks({ data, locale }) {
         </div>
       )}
 
-      {data.companies.length>0 && <div className="col-span-1">
-        <div className="pb-2 text-xs font-bold uppercase">
-          {translate("company", locale)}
-        </div>
-        {extractedData.map((y, index) => (
-          <>
-            {y.companies?.id && (
-              <div key={y.companies.id}>
-                <div className="flex flex-nowrap justify-start">
-                  <Link
-                    href={resolveLink({ ...y.companies, locale })}
-                    title={y.companies.title}
-                    className="button--with-arrow-small font-normal"
-                  >
-                    <div className="text-xs text-black">
-                      {y.companies.title}
-                    </div>
-                  </Link>
+      {data.companies.length > 0 && (
+        <div className="col-span-1">
+          <div className="pb-2 text-xs font-bold uppercase">
+            {translate("company", locale)}
+          </div>
+          {extractedData.map((y, index) => (
+            <>
+              {y.companies?.id && (
+                <div key={y.companies.id}>
+                  <div className="flex flex-nowrap justify-start">
+                    <Link
+                      href={resolveLink({ ...y.companies, locale })}
+                      title={y.companies.title}
+                      className="button--with-arrow-small font-normal"
+                    >
+                      <div className="text-xs text-black">
+                        {y.companies.title}
+                      </div>
+                    </Link>
+                  </div>
                 </div>
-              </div>
-            )}
-          </>
-        ))}
-      </div>}
+              )}
+            </>
+          ))}
+        </div>
+      )}
 
-      {data.projects.length>0 && (
+      {data.projects.length > 0 && (
         <div className="col-span-1">
           <div className="pb-2 text-xs font-bold uppercase">
             {translate("project", locale)}
@@ -194,7 +196,7 @@ export default function MediaLinks({ data, locale }) {
         </div>
       )} */}
 
-      {data.publications.length>0 && (
+      {data.publications.length > 0 && (
         <div className="col-span-1">
           <div className="pb-2 text-xs font-bold uppercase">
             {translate("publication", locale)}
@@ -221,7 +223,7 @@ export default function MediaLinks({ data, locale }) {
         </div>
       )}
 
-      {data.workhops.length>0 && (
+      {data.workhops.length > 0 && (
         <div className="col-span-1">
           <div className="pb-2 text-xs font-bold uppercase">
             {translate("workshop", locale)}
@@ -248,7 +250,7 @@ export default function MediaLinks({ data, locale }) {
         </div>
       )}
 
-      {data.events.length>0 && (
+      {data.events.length > 0 && (
         <div className="col-span-1">
           <div className="pb-2 text-xs font-bold uppercase">
             {translate("event", locale)}
@@ -273,7 +275,7 @@ export default function MediaLinks({ data, locale }) {
         </div>
       )}
 
-      {data.mediaAuthor.length>0 && (
+      {data.mediaAuthor.length > 0 && (
         <div className="col-span-1">
           <div className="pb-2 text-xs font-bold uppercase">
             {translate("author", locale)}
@@ -294,7 +296,7 @@ export default function MediaLinks({ data, locale }) {
         </div>
       )}
 
-      {data.news.length>0 && (
+      {data.news.length > 0 && (
         <div className="col-span-1">
           <div className="pb-2 text-xs font-bold uppercase">
             {translate("news", locale)}
