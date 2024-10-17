@@ -3,6 +3,7 @@ query timelineQuery($locale: SiteLocale) {
     orderBy: year_DESC
     locale: $locale
     filter: { showInTimeline: { eq: true } }
+    first: "100"
   ) {
     id
     year
@@ -54,7 +55,10 @@ query timelineQuery($locale: SiteLocale) {
     workshopsCount: _allReferencingWorkshopsMeta {
       count
     }
-    workshops: _allReferencingWorkshops(first: "2", filter: { slug: { neq: null } }) {
+    workshops: _allReferencingWorkshops(
+      first: "2"
+      filter: { slug: { neq: null } }
+    ) {
       id
       slug
     }
@@ -71,7 +75,10 @@ query timelineQuery($locale: SiteLocale) {
     projectsCount: _allReferencingProjectsMeta {
       count
     }
-    projects: _allReferencingProjects(first: "2", filter: { slug: { neq: null } }) {
+    projects: _allReferencingProjects(
+      first: "2"
+      filter: { slug: { neq: null } }
+    ) {
       id
       slug
     }
@@ -102,7 +109,10 @@ query timelineQuery($locale: SiteLocale) {
     mediaVideosCount: _allReferencingMediaVideosMeta {
       count
     }
-    mediaVideos: _allReferencingMediaVideos(first: "6", filter: { slug: { neq: null } }) {
+    mediaVideos: _allReferencingMediaVideos(
+      first: "6"
+      filter: { slug: { neq: null } }
+    ) {
       id
       slug
       title
@@ -122,7 +132,10 @@ query timelineQuery($locale: SiteLocale) {
     networksCount: _allReferencingNetworksMeta {
       count
     }
-    networks: _allReferencingNetworks(first: "6", filter: { slug: { neq: null } }) {
+    networks: _allReferencingNetworks(
+      first: "6"
+      filter: { slug: { neq: null } }
+    ) {
       id
       title
     }
