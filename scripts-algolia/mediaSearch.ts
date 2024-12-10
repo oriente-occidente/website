@@ -91,7 +91,7 @@ function toContentType(_modelApiKey: string) {
 }
 
 function formatItem(item: any) {
-  let { id, _modelApiKey, description, years, locale, isDefaultLocale } = item;
+  let { id, _modelApiKey, description, years: y, locale, isDefaultLocale } = item;
   const slug = item.slug || id;
   let title;
   if (_modelApiKey == "media_photo") {
@@ -99,6 +99,7 @@ function formatItem(item: any) {
   } else {
     title = item.title;
   }
+  const years = y.map((i: any) => i.year);
   return {
     objectID: `${id}-${locale}`,
     ita: isDefaultLocale,
@@ -111,7 +112,8 @@ function formatItem(item: any) {
     description,
     contentType: toContentType(_modelApiKey),
     category: item?.category?.name || "",
-    years: years.map((i: any) => i.year),
+    years,
+    sortyear: years[0],
     festival: getPropertyAsString(item["festivalEditions"], "title"),
     author: getPropertyAsString(item["mediaAuthor"], "fullName"),
     companies: getPropertyAsString(item["companies"], "title"),
@@ -182,7 +184,7 @@ export default async function search(
     "searchable(years)",
     "searchable(festival)",
   ];
-  const customRanking: string[] = [];
+  const customRanking: string[] = ["desc(sortyear)", "asc(title)"];
 
   let replace = false;
   if (indexes.includes(indexName)) {
