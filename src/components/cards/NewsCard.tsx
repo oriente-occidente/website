@@ -1,5 +1,5 @@
 "use client";
-import { Image as DatoImage,SRCImage } from "react-datocms";
+import { Image as DatoImage, SRCImage } from "react-datocms";
 import Image from "next/image";
 import Link from "next/link";
 import { MapPinIcon, CalendarIcon } from "@heroicons/react/24/outline";

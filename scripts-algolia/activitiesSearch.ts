@@ -32,6 +32,7 @@ const queries: any = {
     orderBy: startDate_DESC
     filter: {isWorkshop: {eq: true}}
   ) {
+    isWorkshop
     ${commonBlock}
     artists {
       title
@@ -48,6 +49,7 @@ const queries: any = {
     orderBy: startDate_DESC
     filter: {isWorkshop: {eq: false}}
   ) {
+    isWorkshop
     ${commonBlock}
     artists {
       title
@@ -125,9 +127,13 @@ function getPropertyAsString(list: any[], property: string) {
   return list?.map((i: any) => i[property]).sort();
 }
 
-function toContentType(_modelApiKey: string) {
+// Languages
+
+function toContentType(_modelApiKey: string, isWorkshop?: boolean) {
   if (_modelApiKey == "artist") {
     return "Artistic residency";
+  } else if (_modelApiKey == "workshop") {
+    return isWorkshop ? "Workshop" : "Languages";
   } else {
     let tipology = ("" + _modelApiKey).toLowerCase().replace("media_", "");
     return `${tipology.charAt(0).toUpperCase()}${tipology.slice(1)}`;
@@ -137,6 +143,7 @@ function toContentType(_modelApiKey: string) {
 async function formatItem(item: any) {
   let { id, _modelApiKey, description, years: y, locale, isDefaultLocale } = item;
   const slug = item.slug || id;
+  const isWorkshop = item.isWorkshop || null;
 
   const years = y.map((i: any) => i.year);
 
@@ -150,8 +157,8 @@ async function formatItem(item: any) {
     const text = await formatStructuredText(item.content);
     contents.push(text);
   }
-  const content = contents.join(" ");
-
+  // const content = contents.join(" ");
+  const contentType = toContentType(_modelApiKey, isWorkshop);
   return {
     objectID: `${id}-${locale}`,
     ita: isDefaultLocale,
@@ -162,7 +169,7 @@ async function formatItem(item: any) {
     //common
     _modelApiKey,
     description,
-    contentType: toContentType(_modelApiKey),
+    contentType,
     years,
     sortyear: years[0],
     festival: getPropertyAsString(item["festivalEditions"], "title"),
