@@ -1,10 +1,5 @@
 "use client";
 import Link from "next/link";
-import {
-  DocumentTextIcon,
-  SpeakerWaveIcon,
-  PowerIcon,
-} from "@heroicons/react/24/outline";
 import { formatDate } from "@/lib/utils";
 import { GenericCardProps } from "@/types";
 import resolveLink from "@/lib/resolveLink";
@@ -14,6 +9,9 @@ import {
   MusicalNoteIcon,
   VideoCameraIcon,
   PhotoIcon,
+  DocumentTextIcon,
+  SpeakerWaveIcon,
+  PowerIcon,
 } from "@heroicons/react/24/outline";
 import Image from "next/image";
 
@@ -94,14 +92,18 @@ export default function MediaCard({ data, locale }: GenericCardProps) {
             />
           </div>
         ) : (
-          <div className="relative overflow-hidden flex items-center justify-center border-1 border-gray-100 bg-cat-linguaggi">
-            {categoryTitle.toLowerCase() === "audio" ||
-              (categoryTitle.toLowerCase() === "media_audio" && (
-                <SpeakerWaveIcon className="h-[150px] text-black" />
-              ))}
+          <div className="relative aspect-[4/3.2] overflow-hidden flex items-center justify-center border-1 bg-gray-light">
+            {(categoryTitle.toLowerCase() === "audio" ||
+              categoryTitle.toLowerCase() === "media_audio") && (
+              <SpeakerWaveIcon className="h-[150px] text-gray-mid" />
+            )}
             {(categoryTitle.toLowerCase() === "document" ||
               categoryTitle.toLowerCase() === "media_document") && (
-              <DocumentTextIcon className="h-[150px] text-black" />
+              <DocumentTextIcon className="h-[150px] text-gray-mid" />
+            )}
+            {(categoryTitle.toLowerCase() === "video" ||
+              categoryTitle.toLowerCase() === "media_video") && (
+              <VideoCameraIcon className="h-[150px] text-gray-mid" />
             )}
           </div>
         )}
