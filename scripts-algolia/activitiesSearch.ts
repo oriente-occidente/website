@@ -135,8 +135,10 @@ function toContentType(_modelApiKey: string) {
 }
 
 async function formatItem(item: any) {
-  let { id, _modelApiKey, description, years, locale, isDefaultLocale } = item;
+  let { id, _modelApiKey, description, years: y, locale, isDefaultLocale } = item;
   const slug = item.slug || id;
+
+  const years = y.map((i: any) => i.year);
 
   let contents = [];
   for (let s of item.sections) {
@@ -161,7 +163,8 @@ async function formatItem(item: any) {
     _modelApiKey,
     description,
     contentType: toContentType(_modelApiKey),
-    years: years.map((i: any) => i.year),
+    years,
+    sortyear: years[0],
     festival: getPropertyAsString(item["festivalEditions"], "title"),
     artists: getPropertyAsString(item["artists"], "title"),
   };
@@ -211,7 +214,7 @@ export default async function search(
 
     // "searchable(news)",
   ];
-  const customRanking: string[] = [];
+  const customRanking: string[] = ["desc(sortyear)", "asc(title)"];
 
   let replace = false;
   if (indexes.includes(indexName)) {

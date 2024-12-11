@@ -117,20 +117,14 @@ export default async function search(
     }
   }
 
-  const searchableAttributes = [
-    "title",
-    "slug",
-    "content",
-    "contentType",
-    "years",
-  ];
+  const searchableAttributes = ["title", "slug", "content", "contentType", "years"];
   const attributesForFaceting = [
     "ita",
     "searchable(contentType)",
     "searchable(country)",
     "searchable(years)",
   ];
-  const customRanking: string[] = [];
+  const customRanking: string[] = ["asc(title)"];
 
   let replace = false;
   if (indexes.includes(indexName)) {
