@@ -4,7 +4,11 @@ import Link from "next/link";
 import translate from "@/lib/locales";
 
 import queryDatoCMS from "@/lib/fetchDato";
-import { SiteLocale, TimelineQueryDocument, ArtistRecord } from "@/graphql/generated";
+import {
+  SiteLocale,
+  TimelineQueryDocument,
+  ArtistRecord,
+} from "@/graphql/generated";
 import resolveLink from "@/lib/resolveLink";
 import { ArrowLongRightIcon } from "@heroicons/react/24/solid";
 import TimelineTabs from "@/components/TimelineTabs";
@@ -47,7 +51,11 @@ function renderSections(content: ContentType, year: string): ReactNode[] {
             >
               <div>({value.count})</div>
               <div>{translate(key, locale)}</div>
-              <ArrowLongRightIcon aria-hidden="true" focusable="false" className="h-5 w-5" />
+              <ArrowLongRightIcon
+                aria-hidden="true"
+                focusable="false"
+                className="h-5 w-5"
+              />
             </Link>
           </div>
         )}
@@ -87,7 +95,7 @@ export default async function Page() {
       content: {
         festival: {
           slug: resolveLink({
-            id:"",
+            id: "",
             _modelApiKey: data?.festivalEditionsArchive?._modelApiKey || "",
             locale,
             slug: "",
@@ -100,7 +108,7 @@ export default async function Page() {
         },
         artistsCompanies: {
           slug: resolveLink({
-            id:"",
+            id: "",
             _modelApiKey: data?.artistsCompaniesArchive?._modelApiKey || "",
             locale,
             slug: "",
@@ -112,7 +120,7 @@ export default async function Page() {
         },
         activities: {
           slug: resolveLink({
-            id:"",
+            id: "",
             _modelApiKey: data?.activitiesArchive?._modelApiKey || "",
             locale,
             slug: "",
@@ -129,7 +137,7 @@ export default async function Page() {
         },
         news: {
           slug: resolveLink({
-            id:"",
+            id: "",
             _modelApiKey: data?.newsPublicationsArchive?._modelApiKey || "",
             locale,
             slug: "",
@@ -151,7 +159,7 @@ export default async function Page() {
         // },
         media: {
           slug: resolveLink({
-            id:"",
+            id: "",
             _modelApiKey: data?.mediaArchive?._modelApiKey || "",
             locale,
             slug: "",
@@ -183,14 +191,18 @@ export default async function Page() {
             const view = renderSections(item.content, item.year);
 
             return (
-              <div id={item.year} key={item.year} className="border-b py-8 mb-8">
+              <div
+                id={item.year}
+                key={item.year}
+                className="border-b py-8 mb-8"
+              >
                 <div className="grid grid-flow-row grid-cols-1 md:grid-cols-2 lg:grid-cols-10 gap-4">
                   <div className="md:col-span-1 lg:col-span-4">
                     <div className="mb-8 text-lg">{item.year}</div>
                     <div className="space-y-4">{view}</div>
                   </div>
 
-                  <div className="md:col-span-1 lg:col-span-3 relative pb-[110%] md:pb-[80%] bg-gray-light relative ">
+                  <div className="md:col-span-1 lg:col-span-3 relative pb-[110%] md:pb-[80%] relative ">
                     {item.images[0] && (
                       <DatoImage
                         className="dato-image-cover"
@@ -200,7 +212,7 @@ export default async function Page() {
                   </div>
 
                   <div className="md:col-span-2 lg:col-span-3 grid grid-cols-3 md:grid-cols-6 lg:grid-cols-2 gap-x-4 gap-y-4">
-                    <div className="col-span-3 lg:col-span-2 h-[135px] lg:h-[110px] relative bg-gray-light relative ">
+                    <div className="col-span-3 lg:col-span-2 h-[135px] lg:h-[110px] relative relative ">
                       {item.images[1] && (
                         <DatoImage
                           objectFit="cover"
@@ -209,7 +221,7 @@ export default async function Page() {
                         />
                       )}
                     </div>
-                    <div className="h-[135px] lg:h-[90px] relative bg-gray-light">
+                    <div className="h-[135px] lg:h-[90px] relative">
                       {item.images[2] && (
                         <DatoImage
                           objectFit="cover"
@@ -218,7 +230,7 @@ export default async function Page() {
                         />
                       )}
                     </div>
-                    <div className="h-[135px] lg:h-[90px] relative bg-gray-light">
+                    <div className="h-[135px] lg:h-[90px] relative">
                       {item.images[3] && (
                         <DatoImage
                           objectFit="cover"
@@ -227,7 +239,7 @@ export default async function Page() {
                         />
                       )}
                     </div>
-                    <div className="h-[135px] lg:h-[90px] relative bg-gray-light">
+                    <div className="h-[135px] lg:h-[90px] relative ">
                       {item.images[4] && (
                         <DatoImage
                           objectFit="cover"
