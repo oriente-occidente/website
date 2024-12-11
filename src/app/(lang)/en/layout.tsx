@@ -114,7 +114,7 @@ export default async function RootLayout({ children }: any) {
           <Script
             id="iubenda-cs-1"
             type="text/javascript"
-            src={`//cs.iubenda.com/sync/${IUBENDA_SITE_ID}.js`}
+            src={`https://cs.iubenda.com/autoblocking/${IUBENDA_SITE_ID}.js`}
           />
         )}
         {locale && IUBENDA_SITE_ID && (

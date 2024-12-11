@@ -47,7 +47,7 @@ export default async function Page({ params }: BasicSlugPageProps) {
 
   return (
     <Wrapper locale={locale} slugData={slugData}>
-      <PageTemplate data={pageData} locale={locale} />;
+      <PageTemplate data={pageData} locale={locale} />
     </Wrapper>
   );
 }

@@ -66,7 +66,12 @@ export default function CategoryCard({ data, locale }: GenericCardProps) {
 
   return (
     <div className="relative py-4">
-      <Link href={link} title={data.title} className="group" aria-label={`Vai a ${data.title}`}>
+      <Link
+        href={link}
+        title={data.title}
+        className="group"
+        aria-label={`Vai a ${data.title}`}
+      >
         <div className="relative overflow-hidden">
           <div className="absolute z-20 bottom-0 group">
             {data.title && (
@@ -96,9 +101,9 @@ export default function CategoryCard({ data, locale }: GenericCardProps) {
             src={data.image}
           /> */}
           <DatoImage
-              className="duration-300 group-hover:scale-105 "
-              data={data.image.responsiveImage}
-            />
+            className="duration-300 group-hover:scale-105 "
+            data={data.image.responsiveImage}
+          />
         </div>
 
         <div className="z-20">
@@ -114,7 +119,8 @@ export default function CategoryCard({ data, locale }: GenericCardProps) {
           {data.location && categoryTitle != "artisti" && (
             <div className="flex items-center gap-1 text-red-alt">
               <MapPinIcon
-                aria-hidden="true" focusable="false"
+                aria-hidden="true"
+                focusable="false"
                 className="mr-1 h-4 w-3 text-red-alt"
               />
               <div className="text-xxs inline-block normal-case">
@@ -125,7 +131,11 @@ export default function CategoryCard({ data, locale }: GenericCardProps) {
           {categoryTitle != "artisti" &&
             datesGrouped.map((str) => (
               <div className="items-center gap-x-2 flex text-red-alt" key={str}>
-                <CalendarIcon aria-hidden="true" focusable="false" className="h-4 w-4" />
+                <CalendarIcon
+                  aria-hidden="true"
+                  focusable="false"
+                  className="h-4 w-4"
+                />
                 <span className="text-xxs inline-block normal-case">{str}</span>
               </div>
             ))}

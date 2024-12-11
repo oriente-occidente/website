@@ -94,8 +94,8 @@ export default function CategoryCard({ data, locale }: GenericCardProps) {
         className="group"
         aria-label={`Vai a ${data.title}`}
       >
-        <div className="relative overflow-hidden">
-          <div className="absolute z-20 bottom-0 group">
+        <div className="relative overflow-hidden aspect-[4/3.2] bg-gray-light">
+          <div className="absolute z-20 bottom-0 group aaa">
             {/* {data.title &&
               (data.authors ||
                 !data.titleHero ||

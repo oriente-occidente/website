@@ -202,52 +202,52 @@ export default async function Page() {
                     <div className="space-y-4">{view}</div>
                   </div>
 
-                  <div className="md:col-span-1 lg:col-span-3 relative pb-[110%] md:pb-[80%] relative ">
-                    {item.images[0] && (
+                  {item.images[0] && (
+                    <div className="md:col-span-1 lg:col-span-3 relative pb-[110%] md:pb-[80%] bg-gray-light">
                       <DatoImage
                         className="dato-image-cover"
                         data={item.images[0]?.image.responsiveImage}
                       />
-                    )}
-                  </div>
+                    </div>
+                  )}
 
                   <div className="md:col-span-2 lg:col-span-3 grid grid-cols-3 md:grid-cols-6 lg:grid-cols-2 gap-x-4 gap-y-4">
-                    <div className="col-span-3 lg:col-span-2 h-[135px] lg:h-[110px] relative relative ">
-                      {item.images[1] && (
+                    {item.images[1] && (
+                      <div className="col-span-3 lg:col-span-2 h-[135px] lg:h-[110px] relative bg-gray-light ">
                         <DatoImage
                           objectFit="cover"
                           className="absolute w-full h-full"
                           data={item.images[1]?.image.responsiveImage}
                         />
-                      )}
-                    </div>
-                    <div className="h-[135px] lg:h-[90px] relative">
-                      {item.images[2] && (
+                      </div>
+                    )}
+                    {item.images[2] && (
+                      <div className="h-[135px] lg:h-[90px] relative  bg-gray-light">
                         <DatoImage
                           objectFit="cover"
                           className="absolute w-full h-full"
                           data={item.images[2]?.image.responsiveImage}
                         />
-                      )}
-                    </div>
-                    <div className="h-[135px] lg:h-[90px] relative">
-                      {item.images[3] && (
+                      </div>
+                    )}
+                    {item.images[3] && (
+                      <div className="h-[135px] lg:h-[90px] relative  bg-gray-light">
                         <DatoImage
                           objectFit="cover"
                           className="absolute w-full h-full"
                           data={item.images[3]?.image.responsiveImage}
                         />
-                      )}
-                    </div>
-                    <div className="h-[135px] lg:h-[90px] relative ">
-                      {item.images[4] && (
+                      </div>
+                    )}
+                    {item.images[4] && (
+                      <div className="h-[135px] lg:h-[90px] relative bg-gray-light">
                         <DatoImage
                           objectFit="cover"
                           className="absolute w-full h-full"
                           data={item.images[4]?.image.responsiveImage}
                         />
-                      )}
-                    </div>
+                      </div>
+                    )}
                   </div>
                 </div>
               </div>
