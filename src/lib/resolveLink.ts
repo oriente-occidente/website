@@ -120,7 +120,11 @@ export default function resolveLink({
     case "publication":
       return `${lp}/${t(`pubblicazioni`, locale)}/${lslug}`;
     case "media_photo":
-      return `${lp}/${t(`foto`, locale)}/${id}`;
+      if (lslug) {
+        return `${lp}/${t(`foto`, locale)}/${lslug}`;
+      } else {
+        return `${lp}/${t(`foto`, locale)}/${id}`;
+      }
     case "media_video":
       return `${lp}/${t(`video`, locale)}/${lslug}`;
     case "media_document":
@@ -133,30 +137,30 @@ export default function resolveLink({
         locale
       )}${getArchiveYear(archiveType, year)}`;
     case "activities_archive":
-      return `${lp}/${t(`archivio`, locale)}/${t(`attivita`, locale)}${getArchiveYear(
-        archiveType,
-        year
-      )}`;
+      return `${lp}/${t(`archivio`, locale)}/${t(
+        `attivita`,
+        locale
+      )}${getArchiveYear(archiveType, year)}`;
     case "festival_editions_archive":
-      return `${lp}/${t(`archivio`, locale)}/${t(`festival`, locale)}${getArchiveYear(
-        archiveType,
-        year
-      )}`;
+      return `${lp}/${t(`archivio`, locale)}/${t(
+        `festival`,
+        locale
+      )}${getArchiveYear(archiveType, year)}`;
     case "media_archive":
-      return `${lp}/${t(`archivio`, locale)}/${t(`media`, locale)}${getArchiveYear(
-        archiveType,
-        year
-      )}`;
+      return `${lp}/${t(`archivio`, locale)}/${t(
+        `media`,
+        locale
+      )}${getArchiveYear(archiveType, year)}`;
     case "news_publications_archive":
       return `${lp}/${t(`archivio`, locale)}/${t(
         `news-pubblicazioni`,
         locale
       )}${getArchiveYear(archiveType, year)}`;
     case "partners_networks_archive":
-      return `${lp}/${t(`archivio`, locale)}/${t(`partner-reti`, locale)}${getArchiveYear(
-        archiveType,
-        year
-      )}`;
+      return `${lp}/${t(`archivio`, locale)}/${t(
+        `partner-reti`,
+        locale
+      )}${getArchiveYear(archiveType, year)}`;
     case "years_archive":
       return `${lp}/${t(`archivio`, locale)}/${t(`timeline`, locale)}`;
     default:
