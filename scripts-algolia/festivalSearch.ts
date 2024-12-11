@@ -33,6 +33,9 @@ const queries: any = {
     image: imageHero {
       url(imgixParams: {auto: [format, compress], ar: "5:4", fit: crop})
     }
+    previewImage: imageSearchPreview {
+      url(imgixParams: {auto: [format, compress], ar: "5:4", fit: crop})
+    }
     year{
       year
     }
@@ -66,6 +69,7 @@ async function formatItem(item: any) {
     years: [year.year],
     contentType: toContentType(festivalType),
     image: item.image?.url || "",
+    previewImage: item.previewImage?.url || "",
   };
 }
 

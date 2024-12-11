@@ -125,6 +125,25 @@ export default function CategoryCard({ data, locale }: GenericCardProps) {
               </div>
             )}
           </div>
+          {data.previewImage && (
+            <Image
+              className="duration-300 group-hover:scale-105"
+              src={data.previewImage}
+              alt={
+                data.previewImage.alt
+                  ? data.previewImage.alt
+                  : "Oriente Occidente"
+              }
+              width={600}
+              height={200}
+            />
+          )}
+          {!data.previewImage && data.imageHero && (
+            <DatoImage
+              className="duration-300 group-hover:scale-105 "
+              data={data.imageHero.responsiveImage}
+            />
+          )}
           {!data.imageHero && data.image && (
             <div className="relative overflow-hidden">
               <Image
@@ -143,12 +162,6 @@ export default function CategoryCard({ data, locale }: GenericCardProps) {
               className="aspect-[20/16] w-full object-cover"
               src="/artist-placeholder.jpg"
               alt={data.title || ""}
-            />
-          )}
-          {data.imageHero && (
-            <DatoImage
-              className="duration-300 group-hover:scale-105 "
-              data={data.imageHero.responsiveImage}
             />
           )}
         </div>
