@@ -17,7 +17,7 @@ const commonBlock = `
       value
     }
   }
-  years: associatedArtist{
+  associatedArtist{
     year
   }
 `;
@@ -30,8 +30,12 @@ const queries: any = {
     locale: $locale
     orderBy: _publishedAt_DESC
     filter: {}
+    fallbackLocales: it
   ) {
     ${commonBlock}
+    artisticResidence{
+      year
+    }
     content {
       value
     }
@@ -44,6 +48,7 @@ const queries: any = {
     locale: $locale
     orderBy: _publishedAt_DESC
     filter: {}
+    fallbackLocales: it
   ) {
     ${commonBlock}
   }}`,
@@ -60,7 +65,15 @@ function toContentType(_modelApiKey: string) {
 }
 
 async function formatItem(item: any) {
-  let { id, _modelApiKey, years, title, slug, locale, isDefaultLocale } = item;
+  let {
+    id,
+    _modelApiKey,
+    associatedArtist,
+    title,
+    slug,
+    locale,
+    isDefaultLocale,
+  } = item;
 
   let contents = [];
   for (let s of item.sections) {
@@ -73,6 +86,14 @@ async function formatItem(item: any) {
     contents.push(text);
   }
   const content = contents.join(" ");
+  const yearsGrouped = [
+    ...associatedArtist,
+    ...(item.artisticResidence || []),
+  ].map((y) => y.year);
+
+  const uniqueYears = yearsGrouped.filter((element, index) => {
+    return yearsGrouped.indexOf(element) === index;
+  });
 
   return {
     objectID: `${id}-${locale}`,
@@ -83,7 +104,7 @@ async function formatItem(item: any) {
     content,
     //common
     _modelApiKey,
-    years: years.map((i: any) => i.year),
+    years: uniqueYears.map((i: any) => i),
     contentType: toContentType(_modelApiKey),
     country: getPropertyAsString(item["country"], "name"),
   };
@@ -117,7 +138,13 @@ export default async function search(
     }
   }
 
-  const searchableAttributes = ["title", "slug", "content", "contentType", "years"];
+  const searchableAttributes = [
+    "title",
+    "slug",
+    "content",
+    "contentType",
+    "years",
+  ];
   const attributesForFaceting = [
     "ita",
     "searchable(contentType)",
