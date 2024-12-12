@@ -116,7 +116,8 @@ export default async function Page() {
             year: y.year.toString(),
             archiveType: "artists",
           }),
-          count: companiesCount([...y.artists, ...y.companies]),
+          // count: companiesCount([...y.artists, ...y.companies]),
+          count: y.artistsCount.count,
         },
         activities: {
           slug: resolveLink({
@@ -189,7 +190,6 @@ export default async function Page() {
         <div className="col-span-3 lg:border-l lg:border-red pl-1 lg:pl-20 xl:pl-28">
           {timelineData.map((item: any) => {
             const view = renderSections(item.content, item.year);
-
             return (
               <div
                 id={item.year}
