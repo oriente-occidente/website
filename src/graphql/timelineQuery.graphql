@@ -21,6 +21,17 @@ query timelineQuery($locale: SiteLocale) {
       id
       slug
     }
+    artistFromEvents: _allReferencingEvents {
+      artists {
+        id
+      }
+      companies {
+        id
+      }
+    }
+    artistFromRelations: _allReferencingArtists {
+      id
+    }
     # ARTISTS / COMPANIES
     artistsCount: _allReferencingArtistsMeta(
       filter: { slug: { neq: null } }

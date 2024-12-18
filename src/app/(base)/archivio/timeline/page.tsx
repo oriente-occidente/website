@@ -27,6 +27,26 @@ type ContentType = {
   media: { slug: string; count: number };
 };
 
+interface Artist {
+  id: string;
+}
+
+interface Company {
+  id: string;
+}
+
+interface Event {
+  artists: Artist[];
+  companies: Company[];
+}
+
+interface YearData {
+  id: string;
+  year: number;
+  artistFromEvents: Event[];
+  artistFromRelations: Artist[];
+}
+
 function renderSections(content: ContentType, year: string): ReactNode[] {
   const elements: ReactNode[] = [];
   // console.log("CONTENT", content);
@@ -88,6 +108,25 @@ export default async function Page() {
     descriptionHero: page.description,
   };
 
+  // Funzione per calcolare il totale di artisti unici per un anno
+  function countUniqueArtists(yearData: YearData): number {
+    // Step 1: Raccogli tutti gli ID degli artisti da `artistFromEvents`
+    const artistsFromEventsIds = yearData.artistFromEvents.flatMap((event) =>
+      event.artists.map((artist) => artist.id)
+    );
+    // Step 2: Raccogli tutti gli ID degli artisti da `artistFromRelations`
+    const artistsFromRelationsIds = yearData.artistFromRelations.map(
+      (artist) => artist.id
+    );
+    // Step 3: Combina gli ID e rimuovi i duplicati usando un Set
+    const uniqueArtistIds = new Set([
+      ...artistsFromEventsIds,
+      ...artistsFromRelationsIds,
+    ]);
+    // Step 4: Ritorna il numero totale di artisti unici
+    return uniqueArtistIds.size;
+  }
+
   let timelineData: any = [];
   data?.allYears.map((y) => {
     let year = {
@@ -117,7 +156,8 @@ export default async function Page() {
             archiveType: "artists",
           }),
           // count: companiesCount([...y.artists, ...y.companies]),
-          count: y.artistsCount.count,
+          // count: y.artistsCount.count,
+          count: countUniqueArtists(y),
         },
         activities: {
           slug: resolveLink({
@@ -181,6 +221,7 @@ export default async function Page() {
     timelineData.push(year);
   });
   const slugData = extractSlugData(data.yearsArchive);
+
   return (
     <Wrapper locale={locale} slugData={slugData}>
       <GenericHero data={hero} locale={locale} />
@@ -189,6 +230,9 @@ export default async function Page() {
 
         <div className="col-span-3 lg:border-l lg:border-red pl-1 lg:pl-20 xl:pl-28">
           {timelineData.map((item: any) => {
+            // if (item.year == "2017") {
+            //   console.log("item", item);
+            // }
             const view = renderSections(item.content, item.year);
             return (
               <div
