@@ -111,20 +111,28 @@ export default async function Page() {
   // Funzione per calcolare il totale di artisti unici per un anno
   function countUniqueArtists(yearData: YearData): number {
     // Step 1: Raccogli tutti gli ID degli artisti da `artistFromEvents`
-    const artistsFromEventsIds = yearData.artistFromEvents.flatMap((event) =>
-      event.artists.map((artist) => artist.id)
-    );
+    const artistsFromEventsIds = yearData.artistFromEvents.map((event) => {
+      return [...event.artists, ...event.companies].map(
+        (artist) => artist.id[0]
+      );
+    });
     // Step 2: Raccogli tutti gli ID degli artisti da `artistFromRelations`
     const artistsFromRelationsIds = yearData.artistFromRelations.map(
-      (artist) => artist.id
+      (artist) => {
+        return artist.id;
+      }
     );
-    // Step 3: Combina gli ID e rimuovi i duplicati usando un Set
-    const uniqueArtistIds = new Set([
+    const idsGrouped = [
       ...artistsFromEventsIds,
       ...artistsFromRelationsIds,
-    ]);
+    ].map((id) => id);
+
+    const uniqueIds = idsGrouped.filter((element, index) => {
+      return idsGrouped.indexOf(element) === index;
+    });
+
     // Step 4: Ritorna il numero totale di artisti unici
-    return uniqueArtistIds.size;
+    return uniqueIds.length;
   }
 
   let timelineData: any = [];

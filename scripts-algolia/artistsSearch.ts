@@ -36,6 +36,11 @@ const queries: any = {
     artisticResidence{
       year
     }
+    _allReferencingEvents {
+      years {
+        title
+      }
+    }
     content {
       value
     }
@@ -51,6 +56,11 @@ const queries: any = {
     fallbackLocales: it
   ) {
     ${commonBlock}
+    _allReferencingEvents {
+      years {
+        title
+      }
+    }
   }}`,
 };
 
@@ -85,15 +95,24 @@ async function formatItem(item: any) {
     const text = await formatStructuredText(item.content);
     contents.push(text);
   }
+  let artistFromEvents: any = [];
+  if (item._allReferencingEvents) {
+    item._allReferencingEvents.map((anni: any) =>
+      anni.years.map((y: any) => artistFromEvents.push({ year: y.title }))
+    );
+  }
+
   const content = contents.join(" ");
   const yearsGrouped = [
     ...associatedArtist,
     ...(item.artisticResidence || []),
-  ].map((y) => y.year);
+    ...(artistFromEvents || []),
+  ].map((y) => y.year.toString());
 
   const uniqueYears = yearsGrouped.filter((element, index) => {
     return yearsGrouped.indexOf(element) === index;
   });
+  console.log("uniqueYears", uniqueYears);
 
   return {
     objectID: `${id}-${locale}`,

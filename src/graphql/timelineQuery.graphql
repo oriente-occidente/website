@@ -24,13 +24,16 @@ query timelineQuery($locale: SiteLocale) {
     artistFromEvents: _allReferencingEvents {
       artists {
         id
+        title
       }
       companies {
         id
+        title
       }
     }
     artistFromRelations: _allReferencingArtists {
       id
+      title
     }
     # ARTISTS / COMPANIES
     artistsCount: _allReferencingArtistsMeta(
