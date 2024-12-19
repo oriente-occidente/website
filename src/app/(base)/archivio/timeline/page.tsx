@@ -2,6 +2,13 @@ import { draftMode } from "next/headers";
 import GenericHero from "@/components/hero/GenericHero";
 import Link from "next/link";
 import translate from "@/lib/locales";
+import {
+  InstantSearch,
+  InstantSearchProps,
+  Stats,
+  Configure,
+} from "react-instantsearch";
+import algoliasearch from "algoliasearch/lite";
 
 import queryDatoCMS from "@/lib/fetchDato";
 import {
@@ -16,6 +23,7 @@ import { Image as DatoImage } from "react-datocms";
 import { ReactNode } from "react";
 import Wrapper from "@/components/layout/Wrapper";
 import { extractSlugData } from "@/lib/utils";
+import { getIndexData } from "../../../../../scripts-algolia/algolia-utils";
 
 const locale = "it";
 
@@ -113,7 +121,7 @@ export default async function Page() {
     // Step 1: Raccogli tutti gli ID degli artisti da `artistFromEvents`
     const artistsFromEventsIds = yearData.artistFromEvents.map((event) => {
       return [...event.artists, ...event.companies].map(
-        (artist) => artist.id[0]
+        (artist) => artist.id
       );
     });
     // Step 2: Raccogli tutti gli ID degli artisti da `artistFromRelations`
@@ -123,20 +131,20 @@ export default async function Page() {
       }
     );
     const idsGrouped = [
-      ...artistsFromEventsIds,
-      ...artistsFromRelationsIds,
+      ...artistsFromEventsIds.flat(),
+      ...artistsFromRelationsIds.flat(),
     ].map((id) => id);
 
     const uniqueIds = idsGrouped.filter((element, index) => {
       return idsGrouped.indexOf(element) === index;
     });
-
-    // Step 4: Ritorna il numero totale di artisti unici
     return uniqueIds.length;
   }
 
+
   let timelineData: any = [];
-  data?.allYears.map((y) => {
+
+  for (const y of data?.allYears) {
     let year = {
       year: y.year,
       content: {
@@ -150,7 +158,7 @@ export default async function Page() {
             year: y.year.toString(),
             archiveType: "festival",
           }),
-          count: y.festivalCount.count,
+          count: await getIndexData("festival", y.year),
           // images: y.festival,
         },
         artistsCompanies: {
@@ -165,7 +173,8 @@ export default async function Page() {
           }),
           // count: companiesCount([...y.artists, ...y.companies]),
           // count: y.artistsCount.count,
-          count: countUniqueArtists(y),
+          // count: countUniqueArtists(y),
+          count: await getIndexData("artists", y.year)
         },
         activities: {
           slug: resolveLink({
@@ -177,11 +186,12 @@ export default async function Page() {
             year: y.year.toString(),
             archiveType: "activities",
           }),
-          count:
-            y.eventsCount.count +
-            y.workshopsCount.count +
-            y.artistsCount.count +
-            y.projectsCount.count,
+          count: await getIndexData("activities", y.year)
+          // count:
+          //   y.eventsCount.count +
+          //   y.workshopsCount.count +
+          //   y.artistsCount.count +
+          //   y.projectsCount.count,
           //images: [...y.events, ...y.workshops, ...y.artisticResidencies, ...y.projects],
         },
         news: {
@@ -194,7 +204,8 @@ export default async function Page() {
             year: y.year.toString(),
             archiveType: "news",
           }),
-          count: y.newsCount.count + y.publicationsCount.count,
+          // count: y.newsCount.count + y.publicationsCount.count,
+          count: await getIndexData("news", y.year),
           images: [...y.news, ...y.publications],
         },
         // pertnersNetworks: {
@@ -216,18 +227,24 @@ export default async function Page() {
             year: y.year.toString(),
             archiveType: "media",
           }),
-          count:
-            y.mediaAudiosCount.count +
-            y.mediaDocumentsCount.count +
-            y.mediaPhotosCount.count +
-            y.mediaVideosCount.count,
+          count: await getIndexData("media", y.year)
+          // count:
+          //   y.mediaAudiosCount.count +
+          //   y.mediaDocumentsCount.count +
+          //   y.mediaPhotosCount.count +
+          //   y.mediaVideosCount.count,
           // images: y.mediaPhotos,
         },
       },
       images: y.images,
     };
     timelineData.push(year);
-  });
+
+  }
+
+  // data?.allYears.map((y) => {
+   
+  // });
   const slugData = extractSlugData(data.yearsArchive);
 
   return (

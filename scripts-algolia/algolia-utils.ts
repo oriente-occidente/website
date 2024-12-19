@@ -8,6 +8,15 @@ export const client = algoliasearch(
   process.env.ALGOLIA_ADMIN_KEY || ""
 );
 
+export async function getIndexData(indexName: string, year: any) {
+  const idx = client.initIndex(indexName)
+  const filters = `years:${year}`
+  const elem = await idx.search('', {
+    filters, // Filtro sui risultati
+  })
+  return elem.nbHits / 2 || 0
+}
+
 /**
  * Function to create or update an Index with data on Algolia
  * @param {String} indexName - The name of the index

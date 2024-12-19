@@ -112,7 +112,6 @@ async function formatItem(item: any) {
   const uniqueYears = yearsGrouped.filter((element, index) => {
     return yearsGrouped.indexOf(element) === index;
   });
-  console.log("uniqueYears", uniqueYears);
 
   return {
     objectID: `${id}-${locale}`,
