@@ -1,5 +1,5 @@
 import { formatStructuredText, getCollections } from "./dato-utils";
-import { sendIndex } from "./algolia-utils";
+import { sendIndex, yearsCounter } from "./algolia-utils";
 
 function toContentType(_modelApiKey: string) {
   let tipology = ("" + _modelApiKey)
@@ -131,6 +131,8 @@ export default async function search(
       replace,
     };
     await sendIndex(indexData as any);
+    const counter = yearsCounter(data);
+    return counter;
   } catch (error) {
     console.error(error);
   }

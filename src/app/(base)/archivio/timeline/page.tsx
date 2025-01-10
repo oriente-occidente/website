@@ -2,13 +2,6 @@ import { draftMode } from "next/headers";
 import GenericHero from "@/components/hero/GenericHero";
 import Link from "next/link";
 import translate from "@/lib/locales";
-import {
-  InstantSearch,
-  InstantSearchProps,
-  Stats,
-  Configure,
-} from "react-instantsearch";
-import algoliasearch from "algoliasearch/lite";
 
 import queryDatoCMS from "@/lib/fetchDato";
 import {
@@ -22,8 +15,7 @@ import TimelineTabs from "@/components/TimelineTabs";
 import { Image as DatoImage } from "react-datocms";
 import { ReactNode } from "react";
 import Wrapper from "@/components/layout/Wrapper";
-import { extractSlugData } from "@/lib/utils";
-import { getIndexData } from "../../../../../scripts-algolia/algolia-utils";
+import { extractSlugData, getIndexData } from "@/lib/utils";
 
 const locale = "it";
 
@@ -94,11 +86,6 @@ function renderSections(content: ContentType, year: string): ReactNode[] {
   return elements;
 }
 
-function companiesCount(data: any) {
-  const ids = data.map((elem: any) => elem.id);
-  return ids.length;
-}
-
 export default async function Page() {
   const { isEnabled } = draftMode();
   const siteLocale = locale as SiteLocale;
@@ -116,32 +103,6 @@ export default async function Page() {
     descriptionHero: page.description,
   };
 
-  // Funzione per calcolare il totale di artisti unici per un anno
-  function countUniqueArtists(yearData: YearData): number {
-    // Step 1: Raccogli tutti gli ID degli artisti da `artistFromEvents`
-    const artistsFromEventsIds = yearData.artistFromEvents.map((event) => {
-      return [...event.artists, ...event.companies].map(
-        (artist) => artist.id
-      );
-    });
-    // Step 2: Raccogli tutti gli ID degli artisti da `artistFromRelations`
-    const artistsFromRelationsIds = yearData.artistFromRelations.map(
-      (artist) => {
-        return artist.id;
-      }
-    );
-    const idsGrouped = [
-      ...artistsFromEventsIds.flat(),
-      ...artistsFromRelationsIds.flat(),
-    ].map((id) => id);
-
-    const uniqueIds = idsGrouped.filter((element, index) => {
-      return idsGrouped.indexOf(element) === index;
-    });
-    return uniqueIds.length;
-  }
-
-
   let timelineData: any = [];
 
   for (const y of data?.allYears) {
@@ -158,7 +119,7 @@ export default async function Page() {
             year: y.year.toString(),
             archiveType: "festival",
           }),
-          count: await getIndexData("festival", y.year),
+          count: await getIndexData("festival", y.year.toString(), locale),
           // images: y.festival,
         },
         artistsCompanies: {
@@ -171,10 +132,7 @@ export default async function Page() {
             year: y.year.toString(),
             archiveType: "artists",
           }),
-          // count: companiesCount([...y.artists, ...y.companies]),
-          // count: y.artistsCount.count,
-          // count: countUniqueArtists(y),
-          count: await getIndexData("artists", y.year)
+          count: await getIndexData("artists", y.year.toString(), locale),
         },
         activities: {
           slug: resolveLink({
@@ -186,13 +144,7 @@ export default async function Page() {
             year: y.year.toString(),
             archiveType: "activities",
           }),
-          count: await getIndexData("activities", y.year)
-          // count:
-          //   y.eventsCount.count +
-          //   y.workshopsCount.count +
-          //   y.artistsCount.count +
-          //   y.projectsCount.count,
-          //images: [...y.events, ...y.workshops, ...y.artisticResidencies, ...y.projects],
+          count: await getIndexData("activities", y.year.toString(), locale),
         },
         news: {
           slug: resolveLink({
@@ -204,19 +156,10 @@ export default async function Page() {
             year: y.year.toString(),
             archiveType: "news",
           }),
-          // count: y.newsCount.count + y.publicationsCount.count,
-          count: await getIndexData("news", y.year),
+          count: await getIndexData("news", y.year.toString(), locale),
           images: [...y.news, ...y.publications],
         },
-        // pertnersNetworks: {
-        //   slug: resolveLink({
-        //     _modelApiKey: data?.pertnersNetworksArchive?._modelApiKey || "",
-        //     locale,
-        //     slug: "",
-        //   }),
-        //   count: y.partnersCount.count + y.networksCount.count,
-        //   images: y.networks,
-        // },
+
         media: {
           slug: resolveLink({
             id: "",
@@ -227,23 +170,16 @@ export default async function Page() {
             year: y.year.toString(),
             archiveType: "media",
           }),
-          count: await getIndexData("media", y.year)
-          // count:
-          //   y.mediaAudiosCount.count +
-          //   y.mediaDocumentsCount.count +
-          //   y.mediaPhotosCount.count +
-          //   y.mediaVideosCount.count,
-          // images: y.mediaPhotos,
+          count: await getIndexData("media", y.year.toString(), locale),
         },
       },
       images: y.images,
     };
     timelineData.push(year);
-
   }
 
   // data?.allYears.map((y) => {
-   
+
   // });
   const slugData = extractSlugData(data.yearsArchive);
 
@@ -255,9 +191,6 @@ export default async function Page() {
 
         <div className="col-span-3 lg:border-l lg:border-red pl-1 lg:pl-20 xl:pl-28">
           {timelineData.map((item: any) => {
-            // if (item.year == "2017") {
-            //   console.log("item", item);
-            // }
             const view = renderSections(item.content, item.year);
             return (
               <div

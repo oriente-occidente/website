@@ -2,6 +2,24 @@ import dayjs from "dayjs";
 import "dayjs/locale/it";
 import config from "@/data/config";
 import { ArtisticResidenceYear } from "@/types";
+import timelineJson from "@/data/timeline_counters.json";
+
+type YearData = Record<string, number>;
+type LanguageData = {
+  [key: string]: YearData;
+};
+type TimelineCounter = {
+  [key: string]: LanguageData;
+};
+
+export async function getIndexData(
+  indexName: string,
+  year: string,
+  locale: string
+) {
+  const timelineCounter: TimelineCounter = timelineJson;
+  return timelineCounter[indexName][locale][year] || 0;
+}
 
 export function getBaseDate() {
   return dayjs().subtract(1, "year").toDate();

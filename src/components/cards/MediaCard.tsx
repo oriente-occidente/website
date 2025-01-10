@@ -75,7 +75,12 @@ export default function MediaCard({ data, locale }: GenericCardProps) {
   const title = data.title || data.description || data.id;
   return (
     <div className="relative">
-      <Link href={link} title={title} className="group" aria-label={`Vai a ${title}`}>
+      <Link
+        href={link}
+        title={title}
+        className="group"
+        aria-label={`Vai a ${title}`}
+      >
         {data.image ? (
           <div className="relative overflow-hidden">
             <Image
@@ -104,7 +109,6 @@ export default function MediaCard({ data, locale }: GenericCardProps) {
         )}
         <div className="z-20">
           <div className="mt-4 mb-3 ">
-            {JSON.stringify(data.sortyear)}
             {categoryTitle && (
               <div
                 className={

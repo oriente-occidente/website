@@ -1,5 +1,5 @@
 import { getCollections } from "./dato-utils";
-import { sendIndex } from "./algolia-utils";
+import { sendIndex, yearsCounter } from "./algolia-utils";
 
 const commonBlock = `
   id
@@ -91,7 +91,14 @@ function toContentType(_modelApiKey: string) {
 }
 
 function formatItem(item: any) {
-  let { id, _modelApiKey, description, years: y, locale, isDefaultLocale } = item;
+  let {
+    id,
+    _modelApiKey,
+    description,
+    years: y,
+    locale,
+    isDefaultLocale,
+  } = item;
   const slug = item.slug || id;
   let title;
   if (_modelApiKey == "media_photo") {
@@ -202,7 +209,10 @@ export default async function search(
       hitsPerPage: 12,
       replace,
     };
+    // console.log("DATA: ", data);
     await sendIndex(indexData as any);
+    const counter = yearsCounter(data);
+    return counter;
   } catch (error) {
     console.error(error);
   }

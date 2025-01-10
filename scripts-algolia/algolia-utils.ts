@@ -1,5 +1,6 @@
 import dotenv from "dotenv";
 import algoliasearch from "algoliasearch";
+import { promises as fs } from "fs";
 
 dotenv.config({ path: ".env.local" });
 
@@ -7,15 +8,6 @@ export const client = algoliasearch(
   process.env.NEXT_PUBLIC_ALGOLIA_APP_ID || "",
   process.env.ALGOLIA_ADMIN_KEY || ""
 );
-
-export async function getIndexData(indexName: string, year: any) {
-  const idx = client.initIndex(indexName)
-  const filters = `years:${year}`
-  const elem = await idx.search('', {
-    filters, // Filtro sui risultati
-  })
-  return elem.nbHits / 2 || 0
-}
 
 /**
  * Function to create or update an Index with data on Algolia
@@ -112,4 +104,31 @@ export async function sendIndex({
   // console.info("DATA", data.length);
   console.info("REPLACE OR SAVE ? ", replace ? "REPLACE" : "SAVE");
   await createObjects(indexName, settings, data, replace);
+}
+
+export function yearsCounter(data: any) {
+  type YearsCount = {
+    [key: string]: number;
+  };
+
+  let count_it: YearsCount = {};
+  let count_en: YearsCount = {};
+
+  for (let d of data) {
+    d.years.forEach((y: string) => {
+      if (d.ita) {
+        count_it = {
+          ...count_it,
+          [y]: count_it[y] ? count_it[y] + 1 : 1,
+        };
+      } else {
+        count_en = {
+          ...count_en,
+          [y]: count_en[y] ? count_en[y] + 1 : 1,
+        };
+      }
+    });
+  }
+
+  return { it: count_it, en: count_en };
 }

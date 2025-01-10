@@ -15,7 +15,7 @@ import TimelineTabs from "@/components/TimelineTabs";
 import { Image as DatoImage } from "react-datocms";
 import { ReactNode } from "react";
 import Wrapper from "@/components/layout/Wrapper";
-import { extractSlugData } from "@/lib/utils";
+import { extractSlugData, getIndexData } from "@/lib/utils";
 
 const locale = 'en';
 
@@ -26,6 +26,26 @@ type ContentType = {
   news: { slug: string; count: number };
   media: { slug: string; count: number };
 };
+
+interface Artist {
+  id: string;
+}
+
+interface Company {
+  id: string;
+}
+
+interface Event {
+  artists: Artist[];
+  companies: Company[];
+}
+
+interface YearData {
+  id: string;
+  year: number;
+  artistFromEvents: Event[];
+  artistFromRelations: Artist[];
+}
 
 function renderSections(content: ContentType, year: string): ReactNode[] {
   const elements: ReactNode[] = [];
@@ -66,11 +86,6 @@ function renderSections(content: ContentType, year: string): ReactNode[] {
   return elements;
 }
 
-function companiesCount(data: any) {
-  const ids = data.map((elem: any) => elem.id);
-  return ids.length;
-}
-
 export default async function Page() {
   const { isEnabled } = draftMode();
   const siteLocale = locale as SiteLocale;
@@ -89,7 +104,8 @@ export default async function Page() {
   };
 
   let timelineData: any = [];
-  data?.allYears.map((y) => {
+
+  for (const y of data?.allYears) {
     let year = {
       year: y.year,
       content: {
@@ -103,7 +119,7 @@ export default async function Page() {
             year: y.year.toString(),
             archiveType: "festival",
           }),
-          count: y.festivalCount.count,
+          count: await getIndexData("festival", y.year.toString(), locale),
           // images: y.festival,
         },
         artistsCompanies: {
@@ -116,8 +132,7 @@ export default async function Page() {
             year: y.year.toString(),
             archiveType: "artists",
           }),
-          // count: companiesCount([...y.artists, ...y.companies]),
-          count: y.artistsCount.count,
+          count: await getIndexData("artists", y.year.toString(), locale),
         },
         activities: {
           slug: resolveLink({
@@ -129,12 +144,7 @@ export default async function Page() {
             year: y.year.toString(),
             archiveType: "activities",
           }),
-          count:
-            y.eventsCount.count +
-            y.workshopsCount.count +
-            y.artistsCount.count +
-            y.projectsCount.count,
-          //images: [...y.events, ...y.workshops, ...y.artisticResidencies, ...y.projects],
+          count: await getIndexData("activities", y.year.toString(), locale),
         },
         news: {
           slug: resolveLink({
@@ -146,18 +156,10 @@ export default async function Page() {
             year: y.year.toString(),
             archiveType: "news",
           }),
-          count: y.newsCount.count + y.publicationsCount.count,
+          count: await getIndexData("news", y.year.toString(), locale),
           images: [...y.news, ...y.publications],
         },
-        // pertnersNetworks: {
-        //   slug: resolveLink({
-        //     _modelApiKey: data?.pertnersNetworksArchive?._modelApiKey || "",
-        //     locale,
-        //     slug: "",
-        //   }),
-        //   count: y.partnersCount.count + y.networksCount.count,
-        //   images: y.networks,
-        // },
+
         media: {
           slug: resolveLink({
             id: "",
@@ -168,19 +170,19 @@ export default async function Page() {
             year: y.year.toString(),
             archiveType: "media",
           }),
-          count:
-            y.mediaAudiosCount.count +
-            y.mediaDocumentsCount.count +
-            y.mediaPhotosCount.count +
-            y.mediaVideosCount.count,
-          // images: y.mediaPhotos,
+          count: await getIndexData("media", y.year.toString(), locale),
         },
       },
       images: y.images,
     };
     timelineData.push(year);
-  });
+  }
+
+  // data?.allYears.map((y) => {
+
+  // });
   const slugData = extractSlugData(data.yearsArchive);
+
   return (
     <Wrapper locale={locale} slugData={slugData}>
       <GenericHero data={hero} locale={locale} />

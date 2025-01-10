@@ -1,5 +1,5 @@
 import { formatStructuredText, getCollections } from "./dato-utils";
-import { sendIndex } from "./algolia-utils";
+import { sendIndex, yearsCounter } from "./algolia-utils";
 
 const commonBlock = `
   id
@@ -141,7 +141,14 @@ function toContentType(_modelApiKey: string, isWorkshop?: boolean) {
 }
 
 async function formatItem(item: any) {
-  let { id, _modelApiKey, description, years: y, locale, isDefaultLocale } = item;
+  let {
+    id,
+    _modelApiKey,
+    description,
+    years: y,
+    locale,
+    isDefaultLocale,
+  } = item;
   const slug = item.slug || id;
   const isWorkshop = item.isWorkshop || null;
 
@@ -240,6 +247,8 @@ export default async function search(
       replace,
     };
     await sendIndex(indexData as any);
+    const counter = yearsCounter(data);
+    return counter;
   } catch (error) {
     console.error(error);
   }
