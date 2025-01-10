@@ -2,6 +2,7 @@ import { draftMode } from "next/headers";
 import GenericHero from "@/components/hero/GenericHero";
 import Link from "next/link";
 import translate from "@/lib/locales";
+import type { Metadata } from "next";
 
 import queryDatoCMS from "@/lib/fetchDato";
 import {
@@ -17,7 +18,10 @@ import { ReactNode } from "react";
 import Wrapper from "@/components/layout/Wrapper";
 import { extractSlugData, getIndexData } from "@/lib/utils";
 
-const locale = 'en';
+const locale = "en";
+export const metadata: Metadata = {
+  title: "Timeline - Oriente Occidente",
+};
 
 type ContentType = {
   festival: { slug: string; count: number };
