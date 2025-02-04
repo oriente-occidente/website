@@ -69,6 +69,8 @@ const labels_it = {
   media_photo: "Immagine",
   media_video: "Video",
   artistic_residecy: "Residenza artistica",
+  "artistic residency": "Residenza artistica",
+  network: "Rete",
   reservedTextLineOne: "Questo video non è consultabile pubblicamente.",
   reservedTextLineTwo: "Per chiederne l’accesso scrivere all’indirizzo",
   zoom: "Ingrandisci",

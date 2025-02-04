@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import { useState, useRef, useEffect } from "react";
+import { useState, useRef, useEffect, useMemo } from "react";
 import { ChevronDownIcon } from "@heroicons/react/24/solid";
 import { RefinementList } from "react-instantsearch";
 
@@ -31,6 +31,15 @@ export default function AccordionItem({ filter, locale }: any) {
       setClicked(true);
     }
   }, [screenWidth]);
+
+  const transformedItems = useMemo(() => {
+    return (items: any) => {
+      items.forEach((item: any) => {
+        item.label = translate(item.label.toLowerCase(), locale) || item.label;
+      });
+      return items;
+    };
+  }, [locale]);
 
   return (
     <div className="my-5 lg:my-10" key={filter.name}>
@@ -64,6 +73,7 @@ export default function AccordionItem({ filter, locale }: any) {
             operator={filter.operator ? "or" : "and"}
             limit={filter.limit}
             showMore={filter.showMore}
+            transformItems={transformedItems}
             translations={{
               showMoreButtonText({ isShowingMore }) {
                 return isShowingMore
@@ -71,20 +81,13 @@ export default function AccordionItem({ filter, locale }: any) {
                   : translate("search.show-more", locale);
               },
             }}
-            // TODO ?
-            // transformItems={(items) => {
-            //   return items.map((item) => ({
-            //     ...item,
-            //     isRefined: item.value == "2021" ? true : false,
-            //   }));
-            // }}
             classNames={{
               root: "text-xs",
               list: "",
               item: "cursor-pointer p-2 hover:underline relative overflow-hidden",
               checkbox:
                 "peer   checked:border-b -ml-12 mr-12 pl-8 checked:border-black before:content-[''] before:z-[1] before:block before:w-[14px] before:h-[14px] before:rounded-sm before:border before:border-[2px] before:border-black before:mt-[4px] before:ml-5 focus-visible:before:outline focus-visible:before:outline-2 focus-visible:before:outline-offset-2 focus-visible:before:outline-sky-600",
-              label: "cursor-pointer flex items-start ",
+              label: "cursor-pointer flex items-start capitalize",
               count:
                 "ml-2 font-normal px-[3px] py-[1px] bg-border rounded-md before:content-['('] after:content-[')']",
               selectedItem:

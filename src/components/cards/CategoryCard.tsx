@@ -81,7 +81,9 @@ export default function CategoryCard({ data, locale }: GenericCardProps) {
     }
   }
   checkWorkshops(categoryTitle);
-  const categoryClasses = categoryColorClasses(categoryTitle ? categoryTitle : "");
+  const categoryClasses = categoryColorClasses(
+    categoryTitle ? categoryTitle : ""
+  );
 
   const link = resolveLink({ ...data, locale });
   return (
@@ -93,7 +95,7 @@ export default function CategoryCard({ data, locale }: GenericCardProps) {
         aria-label={`Vai a ${data.title}`}
       >
         <div className="relative overflow-hidden aspect-[4/3.2] bg-gray-light">
-          <div className="absolute z-20 bottom-0 group aaa">
+          <div className="absolute z-20 bottom-0 group">
             {/* {data.title &&
               (data.authors ||
                 !data.titleHero ||
@@ -127,17 +129,23 @@ export default function CategoryCard({ data, locale }: GenericCardProps) {
             <Image
               className="duration-300 group-hover:scale-105"
               src={data.previewImage}
-              alt={data.previewImage.alt ? data.previewImage.alt : "Oriente Occidente"}
+              alt={
+                data.previewImage.alt
+                  ? data.previewImage.alt
+                  : "Oriente Occidente"
+              }
               width={600}
               height={200}
             />
           )}
-          {!data.previewImage && data.imageHero && data.imageHero.responsiveImage && (
-            <DatoImage
-              className="duration-300 group-hover:scale-105 "
-              data={data.imageHero.responsiveImage}
-            />
-          )}
+          {!data.previewImage &&
+            data.imageHero &&
+            data.imageHero.responsiveImage && (
+              <DatoImage
+                className="duration-300 group-hover:scale-105 "
+                data={data.imageHero.responsiveImage}
+              />
+            )}
           {!data.imageHero && data.image && (
             <div className="relative overflow-hidden">
               <Image
@@ -193,13 +201,19 @@ export default function CategoryCard({ data, locale }: GenericCardProps) {
                 focusable="false"
                 className="mr-1 h-4 w-3 text-red-alt"
               />
-              <div className="text-xxs inline-block normal-case">{data.location}</div>
+              <div className="text-xxs inline-block normal-case">
+                {data.location}
+              </div>
             </div>
           )}
           {categoryTitle != "artisti" &&
             datesGrouped.map((str) => (
               <div className="items-center gap-x-2 flex text-red-alt" key={str}>
-                <CalendarIcon aria-hidden="true" focusable="false" className="h-4 w-4" />
+                <CalendarIcon
+                  aria-hidden="true"
+                  focusable="false"
+                  className="h-4 w-4"
+                />
                 <span className="text-xxs inline-block normal-case">{str}</span>
               </div>
             ))}

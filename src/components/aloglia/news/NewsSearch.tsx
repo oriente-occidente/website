@@ -126,7 +126,10 @@ export default function Search({ locale }: SearchPropsType) {
                   <Stats
                     translations={{
                       rootElementText({ nbHits }) {
-                        return `${nbHits} ${translate("search.results", locale)} `;
+                        return `${nbHits} ${translate(
+                          "search.results",
+                          locale
+                        )} `;
                       },
                     }}
                   />
@@ -144,14 +147,18 @@ export default function Search({ locale }: SearchPropsType) {
 
               {filtersOptions.map((filter) => {
                 return (
-                  <AccordionItem key={filter.name} filter={filter} locale={locale} />
+                  <AccordionItem
+                    key={filter.name}
+                    filter={filter}
+                    locale={locale}
+                  />
                 );
               })}
             </div>
           </div>
 
           <div className="lg:w-3/4 lg:pl-10">
-            <Results locale={locale} />
+            {/* <Results locale={locale} /> */}
             <div className="py-10 w-full ">
               <Pagination locale={locale} />
             </div>

@@ -55,7 +55,7 @@ export default function Search({ locale }: SearchPropsType) {
       searchable: false,
       operator: true,
       limit: 5,
-      showMore: false,
+      showMore: true,
     },
   ];
 

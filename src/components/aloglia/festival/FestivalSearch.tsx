@@ -48,7 +48,7 @@ export default function Search({ locale }: SearchPropsType) {
       searchable: false,
       operator: true,
       limit: 5,
-      showMore: false,
+      showMore: true,
     },
   ];
 
@@ -123,7 +123,10 @@ export default function Search({ locale }: SearchPropsType) {
                   <Stats
                     translations={{
                       rootElementText({ nbHits }) {
-                        return `${nbHits} ${translate("search.results", locale)} `;
+                        return `${nbHits} ${translate(
+                          "search.results",
+                          locale
+                        )} `;
                       },
                     }}
                   />
@@ -141,7 +144,11 @@ export default function Search({ locale }: SearchPropsType) {
 
               {filtersOptions.map((filter) => {
                 return (
-                  <AccordionItem key={filter.name} filter={filter} locale={locale} />
+                  <AccordionItem
+                    key={filter.name}
+                    filter={filter}
+                    locale={locale}
+                  />
                 );
               })}
             </div>

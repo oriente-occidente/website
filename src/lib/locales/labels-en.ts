@@ -69,6 +69,8 @@ const labels_en = {
   media_photo: "Photo",
   media_video: "Video",
   artistic_residecy: "Artistic residency",
+  "artistic residency": "Artistic residency",
+  network: "Network",
   reservedTextLineOne: "This video is not publicly available.",
   reservedTextLineTwo: "To request access, send an email to",
   zoom: "Zoom",

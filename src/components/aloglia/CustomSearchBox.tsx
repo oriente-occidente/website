@@ -92,7 +92,7 @@ export default function CustomSearchBox(props: SearchBoxCustomProps) {
           placeholder={placeholder}
           maxLength={512}
           name="search"
-          aria-label={translate("layout.search_label", props.locale)}
+          aria-label={translate("search.label", props.locale)}
           id="search"
           value={inputValue}
           onChange={(event) => {
@@ -103,7 +103,7 @@ export default function CustomSearchBox(props: SearchBoxCustomProps) {
         />
         <button
           type="submit"
-          title={translate("layout.search_label", props.locale)}
+          title={translate("search.label", props.locale)}
           className="group focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-600 px-2 bg-gray-light rounded-sm border border-gray-dark hover:bg-gray"
         >
           <MagnifyingGlassIcon
