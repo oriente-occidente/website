@@ -28,7 +28,6 @@ function HeroDetail({ data, locale }) {
   //     ssr: false,
   //   });
   // }
-
   return (
     <header className="overflow-hidden border-t border-gray pb-10 md:grid md:grid-cols-4 md:gap-4 md:border-none md:py-0 xl:container xl:mx-auto">
       <div className="border-b border-gray py-3 md:border-none md:pt-4 xl:pt-8">
@@ -119,13 +118,14 @@ function HeroDetail({ data, locale }) {
             <div className="relative">
               <DatoImage
                 className="max-w-[1400px]"
+                layout="cover"
                 data={imageHero.responsiveImage}
-                alt={imageHero.alt}
-                title={imageHero.title}
+                alt={imageHero.responsiveImage.alt}
+                title={imageHero.responsiveImage.title}
               />
-              {imageHero.title && (
+              {imageHero.responsiveImage.title && (
                 <div className="absolute bottom-0 left-0 right-0 z-1 px-4 pt-3 pb-2 text-xxs text-white bg-gradient-to-t from-black/80 text-shadow">
-                  {imageHero.title}
+                  {imageHero.responsiveImage.title}
                 </div>
               )}
             </div>
