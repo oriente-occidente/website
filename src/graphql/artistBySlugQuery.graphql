@@ -28,6 +28,8 @@ query artist($slug: String!, $locale: SiteLocale) {
     slideshowHero {
       ...slideShowHeroFrag
     }
+    showInResidenciesIndex
+    showInAssociatedArtistsIndex
     # RELATIONS ---
     relatedContents {
       __typename

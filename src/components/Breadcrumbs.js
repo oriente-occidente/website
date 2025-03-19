@@ -3,25 +3,63 @@ import Link from "next/link";
 import resolveLink from "@/lib/resolveLink";
 import { cleanURL } from "@/lib/utils";
 import indexesReference from "@/data/indexesReference.json";
+import { usePathname, useRouter } from "next/navigation";
+import { useEffect, useState } from "react";
 
 export default function Breadcrumbs({ data, locale, background }) {
-  // console.log("DATA ---->", data);
   const d = { ...data, slug: data.slug ? data.slug : data.id };
-  const parentIndex = indexesReference[d._modelApiKey] || null;
+
+  const [prevUrl, setPrevUrl] = useState();
+  const pathname = usePathname();
+
+  useEffect(() => {
+    const storedPrevUrl = sessionStorage.getItem("prevUrl");
+    if (storedPrevUrl !== pathname) {
+      setPrevUrl(storedPrevUrl);
+    }
+    sessionStorage.setItem("prevUrl", pathname);
+  }, [pathname]);
+
+  const parentIndex =
+    d._modelApiKey == "artist" && d.showInResidenciesIndex
+      ? indexesReference["artistic_residecy"]
+      : d._modelApiKey == "artist" && d.showInAssociatedArtistsIndex
+      ? indexesReference["artist"]
+      : indexesReference["artistic_residecy"];
+
   const link = resolveLink({ locale, ...d });
-  const href =
-    (d._modelApiKey == "event" && d.isFestival) ||
-    (d._modelApiKey == "workshop" && !d.isWorkshop)
-      ? resolveLink({
-          ...d.festivalEditions[0],
-          locale,
-        })
-      : parentIndex
-      ? resolveLink({ locale, _modelApiKey: parentIndex.apiKey })
-      : link;
+
+  let href;
+  if (d._modelApiKey == "event" && d.isFestival) {
+    href = resolveLink({
+      ...d.festivalEditions[0],
+      locale,
+    });
+  } else if (d._modelApiKey == "workshop" && !d.isWorkshop) {
+    href = resolveLink({
+      ...d.festivalEditions[0],
+      locale,
+    });
+  } else if (d._modelApiKey == "artist") {
+    href =
+      prevUrl && prevUrl !== pathname
+        ? prevUrl
+        : resolveLink({ locale, _modelApiKey: parentIndex.apiKey });
+  } else if (parentIndex) {
+    href = resolveLink({ locale, _modelApiKey: parentIndex.apiKey });
+  } else {
+    href = link;
+  }
+
   const paths = cleanURL(link, locale)
     .split("/")
     .filter((p) => p);
+
+  // console.log("link", link);
+  // console.log(
+  //   "resolveLink({ locale, _modelApiKey: parentIndex.apiKey })",
+  //   resolveLink({ locale, _modelApiKey: parentIndex.apiKey })
+  // );
   return (
     <nav
       className={`hidden md:block bg-${background} border-y border-y-gray py-2 xl:py-5`}

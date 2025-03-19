@@ -15,42 +15,55 @@ async function getLocale(request: NextRequest): Promise<string> {
   return locale;
 }
 
-export async function middleware(request: NextRequest) {
-  // const pathname = request.nextUrl.pathname;
-  const response = NextResponse.next();
-  // let currentLocale = await getLocale(request);
-  // console.log("CURRENT LOCALE", currentLocale);
-  // let locale = "" + currentLocale;
+// export async function middleware(request: NextRequest) {
+//   // const pathname = request.nextUrl.pathname;
+//   const response = NextResponse.next();
+//   // let currentLocale = await getLocale(request);
+//   // console.log("CURRENT LOCALE", currentLocale);
+//   // let locale = "" + currentLocale;
 
-  // const pathnameIsEnglish = pathname.startsWith(`/en`);
+//   // const pathnameIsEnglish = pathname.startsWith(`/en`);
 
-  // if (pathnameIsEnglish) {
-  //   locale = "en";
-  // } else {
-  //   locale = "it";
-  // }
+//   // if (pathnameIsEnglish) {
+//   //   locale = "en";
+//   // } else {
+//   //   locale = "it";
+//   // }
 
-  // if (pathname === "/" && !locale) {
-  //   locale = "it";
-  // }
-  // // return NextResponse.redirect(new URL(`/${locale}/home`, request.url));
-  // // return NextResponse.redirect(new URL(`/${locale}/${pathname}`, request.url));
+//   // if (pathname === "/" && !locale) {
+//   //   locale = "it";
+//   // }
+//   // // return NextResponse.redirect(new URL(`/${locale}/home`, request.url));
+//   // // return NextResponse.redirect(new URL(`/${locale}/${pathname}`, request.url));
 
-  // console.log("MDLWR LOCALE", locale);
+//   // console.log("MDLWR LOCALE", locale);
 
-  // response.cookies.set({
-  //   name: "locale",
-  //   value: locale ? locale : "it",
-  // });
+//   // response.cookies.set({
+//   //   name: "locale",
+//   //   value: locale ? locale : "it",
+//   // });
 
-  // if (currentLocale !== locale) {
-  //   console.log("SWITCH");
-  //   return NextResponse.redirect(
-  //     new URL(`/${locale === "en" ? "en/" : ""}`, request.url)
-  //   );
-  // }
-  return response;
-  // return NextResponse.redirect(new URL(`${pathname}`, request.url));
+//   // if (currentLocale !== locale) {
+//   //   console.log("SWITCH");
+//   //   return NextResponse.redirect(
+//   //     new URL(`/${locale === "en" ? "en/" : ""}`, request.url)
+//   //   );
+//   // }
+//   return response;
+//   // return NextResponse.redirect(new URL(`${pathname}`, request.url));
+// }
+
+export function middleware(request: Request) {
+  // Store current request url in a custom header, which you can read later
+  const requestHeaders = new Headers(request.headers);
+  requestHeaders.set("x-url", request.url);
+
+  return NextResponse.next({
+    request: {
+      // Apply new request headers
+      headers: requestHeaders,
+    },
+  });
 }
 
 export const config = {
