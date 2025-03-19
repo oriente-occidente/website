@@ -3,7 +3,7 @@ import ReactPlayer from "react-player";
 
 const VideoEmbedded = (props) => {
   const { id, video, autoPlay, loop, muted, controls } = props;
-  console.log("props", props);
+  // console.log("props", props);
   return (
     <div
       key={id}
