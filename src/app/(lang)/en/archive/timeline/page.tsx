@@ -18,7 +18,8 @@ import { ReactNode } from "react";
 import Wrapper from "@/components/layout/Wrapper";
 import { extractSlugData, getIndexData } from "@/lib/utils";
 
-const locale = "en";
+const locale = 'en';
+
 export const metadata: Metadata = {
   title: "Timeline - Oriente Occidente",
 };

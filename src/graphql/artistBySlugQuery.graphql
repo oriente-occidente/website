@@ -1,5 +1,9 @@
 query artist($slug: String!, $locale: SiteLocale) {
-  artist(locale: $locale, filter: { slug: { eq: $slug } }) {
+  artist(
+    fallbackLocales: it
+    locale: $locale
+    filter: { slug: { eq: $slug } }
+  ) {
     id
     slug
     _modelApiKey
