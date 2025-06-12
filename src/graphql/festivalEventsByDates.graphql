@@ -7,7 +7,7 @@ query festivalEventsByDates($locale: SiteLocale, $start: Date, $end: Date) {
       startDate: { gte: $start, lt: $end }
     }
     orderBy: startDate_DESC
-    first: 100
+    first: 500
   ) {
     id
     slug

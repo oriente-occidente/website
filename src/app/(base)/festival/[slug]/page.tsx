@@ -10,6 +10,7 @@ import fetchDato from "@/lib/fetchDato";
 import FestivalTemplate from "@/components/templates/FestivalTemplate";
 import Wrapper from "@/components/layout/Wrapper";
 import { extractSlugData } from "@/lib/utils";
+import dayjs from "dayjs";
 
 const locale = "it";
 
@@ -42,10 +43,11 @@ export default async function Page({ params }: BasicSlugPageProps) {
     {
       locale: siteLocale,
       start: page.startDate,
-      end: page.endDate,
+      end: dayjs(page.endDate).add(1, "day").format("YYYY-MM-DD"),
     },
     isEnabled
   );
+
   const heroData: any = {
     layoutHero: "index",
     titleHero: page?.theme,
