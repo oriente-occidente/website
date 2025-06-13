@@ -20,12 +20,22 @@ export default function Breadcrumbs({ data, locale, background }) {
     sessionStorage.setItem("prevUrl", pathname);
   }, [pathname]);
 
-  const parentIndex =
-    d._modelApiKey == "artist" && d.showInResidenciesIndex
-      ? indexesReference["artistic_residecy"]
-      : d._modelApiKey == "artist" && d.showInAssociatedArtistsIndex
-      ? indexesReference["artist"]
-      : indexesReference["artistic_residecy"];
+  let parentIndex;
+
+  switch (true) {
+    case d._modelApiKey === "artist" && d.showInResidenciesIndex:
+      parentIndex = indexesReference["artistic_residecy"];
+      break;
+    case d._modelApiKey === "artist" && d.showInAssociatedArtistsIndex:
+      parentIndex = indexesReference["artist"];
+      break;
+    case d._modelApiKey === "news":
+      parentIndex = indexesReference["news"];
+      break;
+    default:
+      parentIndex = "";
+      break;
+  }
 
   const link = resolveLink({ locale, ...d });
 
@@ -51,6 +61,8 @@ export default function Breadcrumbs({ data, locale, background }) {
     href = link;
   }
 
+  console.log("parentIndex", parentIndex);
+  console.log("href", href);
   const paths = cleanURL(link, locale)
     .split("/")
     .filter((p) => p);
