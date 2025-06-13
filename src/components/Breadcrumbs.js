@@ -32,6 +32,15 @@ export default function Breadcrumbs({ data, locale, background }) {
     case d._modelApiKey === "news":
       parentIndex = indexesReference["news"];
       break;
+    case d._modelApiKey === "event":
+      parentIndex = indexesReference["event"];
+      break;
+    case d._modelApiKey === "project":
+      parentIndex = indexesReference["project"];
+      break;
+    case d._modelApiKey === "network":
+      parentIndex = indexesReference["network"];
+      break;
     default:
       parentIndex = "";
       break;
@@ -61,8 +70,6 @@ export default function Breadcrumbs({ data, locale, background }) {
     href = link;
   }
 
-  console.log("parentIndex", parentIndex);
-  console.log("href", href);
   const paths = cleanURL(link, locale)
     .split("/")
     .filter((p) => p);
