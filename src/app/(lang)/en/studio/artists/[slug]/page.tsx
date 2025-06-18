@@ -7,7 +7,7 @@ import getSeoMeta from "@/lib/seoUtils";
 import Wrapper from "@/components/layout/Wrapper";
 import { extractSlugData } from "@/lib/utils";
 
-const locale = "en";
+const locale = 'en';
 
 export async function generateMetadata({ params }: BasicSlugPageProps) {
   const { slug } = params;
@@ -31,7 +31,6 @@ export default async function Page({ params }: BasicSlugPageProps) {
     { locale: siteLocale, slug },
     isEnabled
   );
-  console.log("-------->>>>>>>>>", data);
   const page: any = data.artist;
   const heroData: any = {
     layoutHero: page?.layoutHero,
