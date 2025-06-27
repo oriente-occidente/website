@@ -61,7 +61,7 @@ export default function NewsCard({ data, locale, count }: GenericCardProps) {
         className="group"
         aria-label={`Vai a ${data.title}`}
       >
-        <div className={`relative overflow-hidden`}>
+        <div className={`relative overflow-hidden aspect-video`}>
           {data.imageHero && (
             // <DatoImage
             // lazyLoad
@@ -71,7 +71,7 @@ export default function NewsCard({ data, locale, count }: GenericCardProps) {
             //   fetchpriority={count == 1 ? true : false}
             // />
             <SRCImage
-              className="duration-300 group-hover:scale-105"
+              className="duration-300 group-hover:scale-105 absolute object-cover object-center w-full h-full !max-w-full"
               data={data.imageHero.responsiveImage}
               priority={count == 1 ? true : false}
             />
