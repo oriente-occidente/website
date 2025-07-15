@@ -9,9 +9,7 @@ import resolveLink from "@/lib/resolveLink";
 import translate from "@/lib/locales";
 
 export default function CategoryCard({ data, locale }: GenericCardProps) {
-  // console.log("data", data);
   const datesGrouped = data.dates ? groupDatesByDay(data.dates, locale) : [];
-  // console.log("data", data);
   let categoryTitle;
   // if (data.category) {
   //   const catToShow = data.category;

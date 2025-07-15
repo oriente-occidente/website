@@ -6,11 +6,16 @@ import MediaCard from "@/components/cards/MediaCard";
 import CategoryCard from "./CategoryCard";
 import ArtistCard from "./ArtistCard";
 
-export default function GenericCard({ data, locale, model, count= 0 }: GenericCardProps) {
+export default function GenericCard({
+  data,
+  locale,
+  model,
+  count = 0,
+}: GenericCardProps) {
   let card = null;
   switch (data._modelApiKey) {
     case "news":
-      card = <NewsCard locale={locale} data={data} count={count}/>;
+      card = <NewsCard locale={locale} data={data} count={count} />;
       break;
     case "media_photo":
     case "media_audio":
@@ -25,7 +30,7 @@ export default function GenericCard({ data, locale, model, count= 0 }: GenericCa
     case "company":
     case "companies":
     case "workshop":
-      card = <CategoryCard locale={locale} data={data}  />;
+      card = <CategoryCard locale={locale} data={data} />;
       break;
     case "artist":
       card = <ArtistCard locale={locale} data={data} model={model} />;

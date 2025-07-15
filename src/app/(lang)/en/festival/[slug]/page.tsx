@@ -12,7 +12,7 @@ import Wrapper from "@/components/layout/Wrapper";
 import { extractSlugData } from "@/lib/utils";
 import dayjs from "dayjs";
 
-const locale = "en";
+const locale = 'en';
 
 export async function generateMetadata({ params }: BasicSlugPageProps) {
   const { slug } = params;
@@ -44,7 +44,7 @@ export default async function Page({ params }: BasicSlugPageProps) {
       locale: siteLocale,
       start: page.startDate,
       end: dayjs(page.endDate)
-        .tz("Europe/Rome")
+        // .tz("Europe/Rome")
         .add(1, "day")
         .format("YYYY-MM-DD"),
     },
