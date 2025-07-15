@@ -43,7 +43,10 @@ export default async function Page({ params }: BasicSlugPageProps) {
     {
       locale: siteLocale,
       start: page.startDate,
-      end: dayjs(page.endDate).add(1, "day").format("YYYY-MM-DD"),
+      end: dayjs(page.endDate)
+        // .tz("Europe/Rome")
+        .add(1, "day")
+        .format("YYYY-MM-DD"),
     },
     isEnabled
   );

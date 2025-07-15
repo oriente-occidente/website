@@ -9,6 +9,11 @@ import resolveLink from "@/lib/resolveLink";
 
 export default function NewsCard({ data, locale, count }: GenericCardProps) {
   let categoryTitle;
+  let dateParsed = "";
+  if (data.startDate) {
+    dateParsed = formatDate(data.startDate, locale);
+  }
+
   // if (data.category) {
   //   const catToShow = data.category;
   //   if (Array.isArray(catToShow)) {
@@ -106,7 +111,7 @@ export default function NewsCard({ data, locale, count }: GenericCardProps) {
             )}
             {data.startDate && (
               <span className="font-semibold text-xs uppercase md:ml-2">
-                {formatDate(data.startDate, locale)}
+                {dateParsed}
               </span>
             )}
           </div>

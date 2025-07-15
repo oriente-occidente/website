@@ -1,8 +1,13 @@
 import dayjs from "dayjs";
+import timezone from "dayjs/plugin/timezone";
+import utc from "dayjs/plugin/utc";
 import "dayjs/locale/it";
 import config from "@/data/config";
 import { ArtisticResidenceYear } from "@/types";
 import timelineJson from "@/data/timeline_counters.json";
+
+dayjs.extend(utc);
+dayjs.extend(timezone);
 
 type YearData = Record<string, number>;
 type LanguageData = {
@@ -22,7 +27,7 @@ export async function getIndexData(
 }
 
 export function getBaseDate() {
-  return dayjs().subtract(1, "year").toDate();
+  return dayjs().tz("Europe/Rome").subtract(1, "year").toDate();
 }
 
 export function getYearOfDate(date: string) {
@@ -133,14 +138,15 @@ export function formatDate(str: string, locale = "it", isDaily = false) {
       : "MMM DD YYYY";
   // dayjs.locale(locale);
   // console.log('DAYJS LOCALE', dayjs.locale(), locale);
-  return dayjs(str).locale(locale).format(fmt);
+
+  return dayjs.utc(str).locale(locale).tz("Europe/Rome").format(fmt);
 }
 
 export function groupDatesByDay(dates: any[], locale = "it") {
   // dayjs.locale(locale);
   // console.log('DAYJS LOCALE', dayjs.locale(), locale);
   const groups = dates.reduce((group, date) => {
-    const day = dayjs(date.startTime).format("YYYY-MM-DD");
+    const day = dayjs.utc(date.startTime).format("YYYY-MM-DD");
     if (group[day]) {
       group[day].push(date);
     } else {
@@ -150,12 +156,14 @@ export function groupDatesByDay(dates: any[], locale = "it") {
   }, {});
 
   return Object.keys(groups).map((day) => {
-    const date = dayjs(day)
+    const date = dayjs
+      .utc(day)
+      .tz("Europe/Rome")
       .locale(locale)
       .format(locale === "it" ? "DD MMMM YYYY" : "MMM DD YYYY");
     const times = groups[day].reduce((daily: string[], d: any) => {
       if (d.isDaily) {
-        daily.push(dayjs(d.startTime).format("HH:mm"));
+        daily.push(dayjs.utc(d.startTime).tz("Europe/Rome").format("HH:mm"));
       }
       return daily;
     }, []);
@@ -200,9 +208,10 @@ export const closestInterval = (intervals: any[]) => {
 
 function getLastDate(dates: any[], format: string = "YYYY-MM-DD") {
   const groups = dates.reduce((group, date) => {
-    const day = dayjs(date.endTime ? date.endTime : date.startTime).format(
-      format
-    );
+    const day = dayjs
+      .utc(date.endTime ? date.endTime : date.startTime)
+      .tz("Europe/Rome")
+      .format(format);
     if (group[day]) {
       group[day].push(date);
     } else {
@@ -219,7 +228,7 @@ export function isFinished(dates: any[], from: string) {
   const currentDate = dayjs(from);
   const lastDate = getLastDate(dates);
   if (!lastDate) return true;
-  const last = dayjs(lastDate);
+  const last = dayjs.utc(lastDate).tz("Europe/Rome");
   const diff = currentDate.diff(last, "day");
   return diff >= 1;
 
@@ -236,7 +245,9 @@ export function isFinished(dates: any[], from: string) {
 function getNearestDate(dates: any[], from: string) {
   const currentDate = dayjs(from);
   const groups = dates.reduce((group, date) => {
-    const day = dayjs(date.startTime).format("YYYY-MM-DD-HH-mm");
+    const day = dayjs(date.startTime)
+      .tz("Europe/Rome")
+      .format("YYYY-MM-DD-HH-mm");
     if (group[day]) {
       group[day].push(date);
     } else {
@@ -249,10 +260,10 @@ function getNearestDate(dates: any[], from: string) {
   const start: any = sorted.slice(-1);
 
   const nearest = sorted.reduce((min: any, d: any) => {
-    const dd = dayjs(d);
+    const dd = dayjs(d).tz("Europe/Rome");
     const diff = Math.abs(currentDate.diff(dd, "hour"));
 
-    const minDate = dayjs(min);
+    const minDate = dayjs(min).tz("Europe/Rome");
     const minDiff = Math.abs(currentDate.diff(minDate, "hour"));
 
     return minDiff < diff ? min : d;
@@ -261,7 +272,7 @@ function getNearestDate(dates: any[], from: string) {
 }
 
 export function enhanceEvents(list: any[]) {
-  const from = dayjs().format("YYYY-MM-DD");
+  const from = dayjs().tz("Europe/Rome").format("YYYY-MM-DD");
   // const from = dayjs('2020/09/09').format('YYYY-MM-DD');
   if (!list) return [];
   return list.map((event) => {
@@ -324,7 +335,7 @@ export function cleanURL(url: string, locale: string) {
 }
 
 export function getUpcomingEvents(list: any) {
-  const now = dayjs().format();
+  const now = dayjs().tz("Europe/Rome").format();
   return list.filter((item: any) => {
     const lastDate = getLastDate(item.dates, "");
     return now < lastDate;
@@ -332,7 +343,7 @@ export function getUpcomingEvents(list: any) {
 }
 
 export function getPastEvents(list: any) {
-  const now = dayjs().format();
+  const now = dayjs().tz("Europe/Rome").format();
   return list.filter((item: any) => {
     const lastDate = getLastDate(item.dates, "");
     return now > lastDate;

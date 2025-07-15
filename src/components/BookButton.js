@@ -2,7 +2,12 @@
 // import { useRouter } from "next/router";
 import { useRouter } from "next/navigation";
 import dayjs from "dayjs";
+import timezone from "dayjs/plugin/timezone";
+import utc from "dayjs/plugin/utc";
 import translate from "@/lib/locales";
+
+dayjs.extend(utc);
+dayjs.extend(timezone);
 
 export default function BookButton({ locale, paymentSettings, id }) {
   const router = useRouter();
@@ -10,10 +15,10 @@ export default function BookButton({ locale, paymentSettings, id }) {
     (result, p) => result || p.bookable,
     false
   );
-  const today = dayjs(new Date());
+  const today = dayjs(new Date()).tz("Europe/Rome");
   const isFuture = paymentSettings?.reduce((result, p) => {
-    const start = dayjs(p.startDate);
-    const end = dayjs(p.endDate);
+    const start = dayjs(p.startDate).tz("Europe/Rome");
+    const end = dayjs(p.endDate).tz("Europe/Rome");
     return result || today.isBefore(start) || today.isBefore(end);
   }, false);
   const showBookButton = paymentSettings.length > 0 && isFuture;

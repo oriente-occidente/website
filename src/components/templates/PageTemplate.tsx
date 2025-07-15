@@ -22,7 +22,10 @@ export default function PageTemplate({ data, locale }: GenericPageProps) {
   const otherSections = data.otherSections || [];
 
   type DataTypes = Partial<
-    ProjectsIndexRecord | NewsIndexRecord | NetworksIndexRecord | EventsIndexRecord
+    | ProjectsIndexRecord
+    | NewsIndexRecord
+    | NetworksIndexRecord
+    | EventsIndexRecord
   >;
 
   function mergeArray(data: DataTypes, keys: any[]): any[] {
@@ -69,10 +72,16 @@ export default function PageTemplate({ data, locale }: GenericPageProps) {
     }));
 
   const activityTypes = ["workshop", "event", "project"];
-  const mediaTypes = ["media_audio", "media_photo", "media_video", "media_document"];
+  const mediaTypes = [
+    "media_audio",
+    "media_photo",
+    "media_video",
+    "media_document",
+  ];
 
-  const activitiesContent = activities.filter((activity: { _modelApiKey: string }) =>
-    activityTypes.includes(activity._modelApiKey)
+  const activitiesContent = activities.filter(
+    (activity: { _modelApiKey: string }) =>
+      activityTypes.includes(activity._modelApiKey)
   );
   const mediaContent = media.filter((media: { _modelApiKey: string }) =>
     mediaTypes.includes(media._modelApiKey)
@@ -101,14 +110,20 @@ export default function PageTemplate({ data, locale }: GenericPageProps) {
       />
       <GenericHero data={hero} locale={locale} />
       <MainContent data={content} locale={locale} />
-      {sections.length > 0 && <SectionsParagraphs locale={locale} sections={sections} />}
+      {sections.length > 0 && (
+        <SectionsParagraphs locale={locale} sections={sections} />
+      )}
       {relatedContents.length > 0 && (
         <div className="mt-20 mb-12">
           <GalleryPreview slides={relatedContents} locale={locale} />
         </div>
       )}
-      {otherSections.length > 0 && <OtherSections locale={locale} data={otherSections} />}
-      {relations.length > 0 && <Relations locale={locale} relations={relations} />}
+      {otherSections.length > 0 && (
+        <OtherSections locale={locale} data={otherSections} />
+      )}
+      {relations.length > 0 && (
+        <Relations locale={locale} relations={relations} />
+      )}
     </div>
   );
 }

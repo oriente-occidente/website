@@ -72,9 +72,9 @@ export default function Search({ locale }: SearchPropsType) {
   };
 
   useEffect(() => {
-    console.log("SEARCH", window.location.search);
+    // console.log("SEARCH", window.location.search);
     const params = decodeURIComponent(window.location.search);
-    console.log("SEARCH PARAMS", params);
+    // console.log("SEARCH PARAMS", params);
   }, []);
 
   return (

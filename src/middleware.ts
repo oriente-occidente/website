@@ -3,10 +3,6 @@ import { NextRequest, NextResponse } from "next/server";
 async function getLocale(request: NextRequest): Promise<string> {
   const headers = new Headers(request.headers);
   const acceptLanguage = headers.get("accept-language");
-  if (acceptLanguage) {
-    console.log("acceptLanguage", acceptLanguage);
-    // headers.set("accept-language", acceptLanguage.replaceAll("_", "-"));
-  }
   // const headersObject = Object.fromEntries(headers.entries());
   // console.log("MDLWR headersObject", headersObject);
 

@@ -9,7 +9,10 @@ import Breadcrumbs from "@/components/Breadcrumbs";
 import NewsCard from "../cards/NewsCard";
 import { Fragment } from "react";
 
-export default function FestivalTemplate({ data, locale }: FestivalProgramPageProps) {
+export default function FestivalTemplate({
+  data,
+  locale,
+}: FestivalProgramPageProps) {
   const news = data.page.news || [];
   return (
     <div>
@@ -19,7 +22,10 @@ export default function FestivalTemplate({ data, locale }: FestivalProgramPagePr
         <div className="md:container md:mx-auto md:grid md:grid-cols-4 md:gap-4">
           <div className="border-color-gray md:col-span-3 md:col-start-2 md:border-l md:pt-6">
             <div className="px-4 py-6 md:px-12 md:py-8">
-              <StructuredContent locale={locale} content={data?.page?.content} />
+              <StructuredContent
+                locale={locale}
+                content={data?.page?.content}
+              />
             </div>
           </div>
         </div>
