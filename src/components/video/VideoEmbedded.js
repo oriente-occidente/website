@@ -1,5 +1,9 @@
 "use client";
-import ReactPlayer from "react-player";
+import dynamic from "next/dynamic";
+
+const ReactPlayer = dynamic(() => import("react-player"), {
+  ssr: false,
+});
 
 const VideoEmbedded = (props) => {
   const { id, video, autoPlay, loop, muted, controls } = props;
