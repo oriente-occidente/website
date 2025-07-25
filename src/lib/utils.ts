@@ -145,7 +145,6 @@ export function formatDate(str: string, locale = "it", isDaily = false) {
 export function groupDatesByDay(dates: any[], locale = "it") {
   // dayjs.locale(locale);
   // console.log('DAYJS LOCALE', dayjs.locale(), locale);
-  console.log("DATES..", dates);
   const groups = dates.reduce((group, date) => {
     const day = dayjs(date.startTime).tz("Europe/Rome").format("YYYY-MM-DD");
     if (group[day]) {

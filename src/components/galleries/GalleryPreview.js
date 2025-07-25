@@ -40,7 +40,6 @@ function GalleryPreview({ slides, locale }) {
         }}
       >
         {slides.map((slide, i) => {
-          console.log("SLIDE___", slide);
           const { id } = slide;
           let categoryTitle;
 
