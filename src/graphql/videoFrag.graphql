@@ -22,7 +22,7 @@ fragment videoFrag on VideoBlockRecord {
     title
     url
     video {
-      mp4Url
+      streamingUrl
     }
   }
 }
