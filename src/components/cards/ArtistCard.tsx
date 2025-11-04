@@ -65,7 +65,6 @@ export default function CategoryCard({
     categoryTitle ? categoryTitle : ""
   );
   const link = resolveLink({ ...data, locale });
-
   return (
     <div className="relative py-4">
       <Link
@@ -84,20 +83,23 @@ export default function CategoryCard({
               </h3>
             )}
           </div>
-          {data.imageHero && (
+          {data.imageHero.responsiveImage && (
             <DatoImage
               className="duration-300 group-hover:scale-105 "
               data={data.imageHero.responsiveImage}
             />
           )}
-          {!data.imageHero && (
-            <Image
-              width={600}
-              height={600}
-              className="aspect-[20/16] w-full object-cover"
-              src="/artist-placeholder.jpg"
-              alt={data.title || ""}
-            />
+          {!data.imageHero.responsiveImage && (
+            <div className="relative overflow-hidden aspect-video">
+              <Image
+                width={600}
+                height={600}
+                className="absolute w-full h-full inset-0 object-cover object-center
+"
+                src="/artist-placeholder.jpg"
+                alt={data.title || ""}
+              />
+            </div>
           )}
         </div>
 
