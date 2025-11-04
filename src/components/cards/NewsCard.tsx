@@ -57,7 +57,7 @@ export default function NewsCard({ data, locale, count }: GenericCardProps) {
     categoryColorClasses[categoryTitle ? categoryTitle.toLowerCase() : ""];
 
   const link = resolveLink({ ...data, locale });
-
+  console.log("data", data);
   return (
     <div className="relative py-4">
       <Link
@@ -67,7 +67,7 @@ export default function NewsCard({ data, locale, count }: GenericCardProps) {
         aria-label={`Vai a ${data.title}`}
       >
         <div className={`relative overflow-hidden aspect-video`}>
-          {data.imageHero && (
+          {data.imageHero.responsiveImage && (
             // <DatoImage
             // lazyLoad
             //   className=" duration-300 group-hover:scale-105"
@@ -97,6 +97,17 @@ export default function NewsCard({ data, locale, count }: GenericCardProps) {
               alt={data.image.alt ? data.image.alt : "Oriente Occidente"}
               priority={true}
             />
+          )}
+          {!data.imageHero.responsiveImage && (
+            <div className="relative overflow-hidden aspect-video">
+              <Image
+                width={600}
+                height={600}
+                className="absolute w-full h-full inset-0 object-cover object-center"
+                src="/artist-placeholder.jpg"
+                alt={data.title || ""}
+              />
+            </div>
           )}
         </div>
 
