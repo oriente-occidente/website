@@ -1,5 +1,5 @@
 "use client";
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState, useRef, useEffect, useCallback } from "react";
 import { useSearchBox, UseSearchBoxProps } from "react-instantsearch";
 import { MagnifyingGlassIcon } from "@heroicons/react/24/outline";
 
@@ -20,16 +20,16 @@ export default function CustomSearchBox(props: SearchBoxCustomProps) {
   const [inputValue, setInputValue] = useState(query);
   const inputRef = useRef<HTMLInputElement>(null);
 
-  function reset() {
+  const reset = useCallback(() => {
     clear();
     setInputValue("");
-  }
+  }, [clear]);
 
   useEffect(() => {
     if (props.resetNotification) {
       reset();
     }
-  }, [props.resetNotification]);
+  }, [props.resetNotification, reset]);
 
   function setQuery(newQuery: string) {
     setInputValue(newQuery);
@@ -40,7 +40,7 @@ export default function CustomSearchBox(props: SearchBoxCustomProps) {
       setQuery(props.initialQuery);
       refine(props.initialQuery);
     }
-  }, [props.initialQuery]);
+  }, [props.initialQuery, refine]);
 
   const placeholder = props.customPlaceholder
     ? props.customPlaceholder
@@ -99,7 +99,6 @@ export default function CustomSearchBox(props: SearchBoxCustomProps) {
             setQuery(event.currentTarget.value);
           }}
           required={true}
-          autoFocus
         />
         <button
           type="submit"
@@ -113,8 +112,12 @@ export default function CustomSearchBox(props: SearchBoxCustomProps) {
           />
         </button>
       </div>
-      <span hidden={!isSearchStalled}>
-        {translate("search.searching", props.locale)}
+      <span
+        role="status"
+        aria-live="polite"
+        className={isSearchStalled ? "" : "sr-only"}
+      >
+        {isSearchStalled ? translate("searching", props.locale) : ""}
       </span>
     </form>
   );

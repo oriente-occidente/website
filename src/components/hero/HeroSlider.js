@@ -21,6 +21,18 @@ function HeroSlider({ slides }) {
         slidesPerView={1}
         pagination={true}
         navigation={true}
+        autoplay={{
+          delay: 5000,
+          pauseOnMouseEnter: true,
+          disableOnInteraction: true,
+        }}
+        a11y={{
+          prevSlideMessage: 'Slide precedente',
+          nextSlideMessage: 'Slide successiva',
+          firstSlideMessage: 'Prima slide',
+          lastSlideMessage: 'Ultima slide',
+          paginationBulletMessage: 'Vai alla slide {{index}}',
+        }}
         lazy={{
           enabled: true,
           loadOnTransitionStart: true,

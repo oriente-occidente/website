@@ -1,6 +1,7 @@
 "use client";
 import { Dialog, Transition } from "@headlessui/react";
 import { XIcon } from "@heroicons/react/24/outline";
+import translate from "@/lib/locales";
 
 function CustomDialog({
   title,
@@ -8,6 +9,7 @@ function CustomDialog({
   open = false,
   onClose = null,
   children,
+  locale = "it",
 }) {
   function closeDialog() {
     if (onClose) {
@@ -35,8 +37,9 @@ function CustomDialog({
               type="button"
               className="absolute right-10 top-5 z-30 rounded-md bg-white text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2"
               onClick={() => closeDialog()}
+              aria-label={translate("close", locale)}
             >
-              <span className="sr-only">Close</span>
+              <span className="sr-only">{translate("close", locale)}</span>
               <XIcon className="h-6 w-6" aria-hidden="true" focusable="false" />
             </button>
 

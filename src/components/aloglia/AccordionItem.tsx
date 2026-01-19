@@ -41,11 +41,15 @@ export default function AccordionItem({ filter, locale }: any) {
     };
   }, [locale]);
 
+  const panelId = `accordion-panel-${filter.name}`;
+
   return (
     <div className="my-5 lg:my-10" key={filter.name}>
       <button
         className="w-full text-[21px] uppercase border-b pb-4 flex justify-between items-center cursor-pointer"
         onClick={() => handleToggle()}
+        aria-expanded={clicked}
+        aria-controls={panelId}
       >
         <span>{translate(`search-filters.${filter.name}`, locale)}</span>
         <ChevronDownIcon
@@ -57,10 +61,12 @@ export default function AccordionItem({ filter, locale }: any) {
         />
       </button>
       <div
+        id={panelId}
         ref={content}
         className={`grid motion-safe:transition-[grid-template-rows] motion-safe:duration-300 ${
           clicked ? "grid-rows-[1fr]" : "grid-rows-[0fr]"
         }`}
+        aria-hidden={!clicked}
       >
         <div className="overflow-hidden">
           <RefinementList

@@ -88,29 +88,30 @@ export default function Breadcrumbs({ data, locale, background }) {
         <ol role="list" className="flex items-center space-x-4">
           {["Home", ...paths].map((p, i) => {
             const total = paths.length;
+            const isLastItem = i === total;
             return (
               <li key={p} className="group">
                 <div className="flex items-center">
-                  {i < total && (
+                  {!isLastItem && (
                     <Link
                       href={i === 0 ? "/" : href}
                       locale={locale}
                       className="text-[12px] uppercase hover:text-red"
-                      aria-current={i === paths.length ? "page" : undefined}
                     >
                       {p.replace("-", " ")}
                     </Link>
                   )}
-                  {i == total && (
-                    <span className="text-[12px] uppercase font-semibold">
-                      <span className="text-[12px] uppercase font-semibold">
-                        {d.slug === data.id && data.image?.title
-                          ? data.image.title
-                          : d.title || p}
-                      </span>
+                  {isLastItem && (
+                    <span
+                      className="text-[12px] uppercase font-semibold"
+                      aria-current="page"
+                    >
+                      {d.slug === data.id && data.image?.title
+                        ? data.image.title
+                        : d.title || p}
                     </span>
                   )}
-                  <div className="ml-4 h-5 w-5 bg-arrow-right-black group-last:hidden"></div>
+                  <div className="ml-4 h-5 w-5 bg-arrow-right-black group-last:hidden" aria-hidden="true"></div>
                 </div>
               </li>
             );

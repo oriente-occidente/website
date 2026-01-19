@@ -2,6 +2,17 @@ import { ArtistsCompaniesArchiveRecord } from "../../graphql/generated";
 const labels_it = {
   it: "Italiano",
   en: "Inglese",
+  // Accessibility labels
+  selectValue: "Seleziona un valore",
+  menu: "Menu",
+  openMenu: "Apri menu di navigazione",
+  closeMenu: "Chiudi menu di navigazione",
+  close: "Chiudi",
+  goTo: "Vai a",
+  insertEmail: "Inserisci la tua email",
+  selectYear: "Seleziona anno",
+  yearNavigation: "Navigazione per anno",
+  searching: "Ricerca in corso...",
   cookiePolicyId: "94139888",
   cookiePolicyTitle: "Vai a (link esterno) Cookie Policy",
   privacyPolicyTitle: "Vai a (link esterno) Privacy Policy",

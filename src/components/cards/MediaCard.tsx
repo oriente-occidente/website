@@ -79,7 +79,7 @@ export default function MediaCard({ data, locale }: GenericCardProps) {
         href={link}
         title={title}
         className="group"
-        aria-label={`Vai a ${title}`}
+        aria-label={`${translate("goTo", locale)} ${title}`}
       >
         {data.image ? (
           <div className="relative overflow-hidden">
@@ -132,7 +132,7 @@ export default function MediaCard({ data, locale }: GenericCardProps) {
           )}
           <div className="mt-3 uppercase font-semibold text-xxs flex items-center">
             <div>{translate("goToContents", locale)}</div>
-            <div className="h-[20px] w-[20px] bg-arrow-right-black lg:block ml-3 group-hover:ml-5 motion-safe:duration-200" />
+            <div className="h-[20px] w-[20px] bg-arrow-right-black lg:block ml-3 group-hover:ml-5 motion-safe:duration-200" aria-hidden="true" />
           </div>
         </div>
       </Link>

@@ -1,6 +1,17 @@
 const labels_en = {
   it: "Italian",
   en: "English",
+  // Accessibility labels
+  selectValue: "Select a value",
+  menu: "Menu",
+  openMenu: "Open navigation menu",
+  closeMenu: "Close navigation menu",
+  close: "Close",
+  goTo: "Go to",
+  insertEmail: "Insert your email",
+  selectYear: "Select year",
+  yearNavigation: "Year navigation",
+  searching: "Searching...",
   cookiePolicyId: "86853640",
   cookiePolicyTitle: "Go to (external link) Cookie Policy",
   privacyPolicyTitle: "Go to (external link) Privacy Policy",

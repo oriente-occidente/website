@@ -7,6 +7,7 @@ import resolveLink from "@/lib/resolveLink";
 import LanguageSwitcher from "@/components/layout/LanguageSwitcher";
 import MobileNav from "@/components/layout/nav/MobileNav";
 import Image from "next/image";
+import translate from "@/lib/locales";
 
 function classNames(...classes: any) {
   return classes.filter(Boolean).join(" ");
@@ -22,6 +23,7 @@ function renderLink(item: any, locale: string) {
                 open ? "text-black" : "text-black",
                 "group text-xxs hover:bg-red-light inline-flex items-center font-semibold uppercase tracking-widest px-2 py-1"
               )}
+              aria-haspopup="true"
             >
               <span>{item.title}</span>
               <ChevronDownIcon
@@ -127,9 +129,12 @@ function Header(props: any) {
                 </Link>
               </div>
               <div className="-my-2 -mr-2 lg:hidden">
-                <Popover.Button className="focus:primary inline-flex items-center justify-center bg-transparent p-2 text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset">
+                <Popover.Button
+                  className="focus:primary inline-flex items-center justify-center bg-transparent p-2 text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset"
+                  aria-label={translate("openMenu", locale)}
+                >
                   <span className="text-[12px] font-semibold uppercase tracking-widest text-black md:text-xs">
-                    Menu
+                    {translate("menu", locale)}
                   </span>
                   <div
                     className="bg-open ml-2 h-6 w-6 md:ml-4 md:w-8"

@@ -6,6 +6,7 @@ import Image from "next/image";
 import resolveLink from "@/lib/resolveLink";
 import LanguageSwitcher from "@/components/layout/LanguageSwitcher";
 import { MobileNavProps } from "@/types";
+import translate from "@/lib/locales";
 
 export default function MobileNav({
   data,
@@ -81,9 +82,12 @@ export default function MobileNav({
               </Link>
             </div>
             <div className="-mr-2">
-              <Popover.Button className="focus:black inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:ring-2 focus:ring-inset">
+              <Popover.Button
+                className="focus:black inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:ring-2 focus:ring-inset"
+                aria-label={translate("closeMenu", locale)}
+              >
                 <span className="text-[12px] font-semibold uppercase tracking-widest text-black md:text-xs">
-                  Close
+                  {translate("close", locale)}
                 </span>
                 <div
                   className="bg-close ml-2 h-6 w-6 md:ml-4 md:h-8 md:w-8"

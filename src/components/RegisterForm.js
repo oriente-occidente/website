@@ -74,16 +74,19 @@ export default function RegisterForm({ payload, thankyouMessage, locale }) {
 
           <div className="grid grid-cols-1 gap-4 md:grid-cols-3 xl:grid-cols-4">
             <div>
-              <label htmlFor={"level"}>{translate("level", locale)}</label>
+              <label htmlFor="level">
+                {translate("level", locale)} <span aria-hidden="true">*</span>
+              </label>
               <select
+                id="level"
                 className="min-w-full rounded text-gray-700"
                 name="level"
-                // value={paymentId}
-                defaultValue={""}
-                required="required"
+                defaultValue=""
+                required
+                aria-required="true"
                 onChange={(e) => handleChange(e)}
               >
-                <option value="">select a value</option>
+                <option value="" disabled>{translate("selectValue", locale)}</option>
                 {payload?.paymentSettings?.map((o) => (
                   <option value={o.id} key={o.id}>
                     {o.description}
@@ -92,108 +95,141 @@ export default function RegisterForm({ payload, thankyouMessage, locale }) {
               </select>
             </div>
             <div>
-              <label htmlFor={"firstName"}>{translate("firstName", locale)}</label>
+              <label htmlFor="firstName">
+                {translate("firstName", locale)} <span aria-hidden="true">*</span>
+              </label>
               <input
+                id="firstName"
                 className="min-w-full rounded text-gray-700"
                 name="firstName"
                 type="text"
                 maxLength="250"
-                required="required"
+                required
+                aria-required="true"
               />
             </div>
             <div>
-              <label htmlFor={"lastName"}>{translate("lastName", locale)}</label>
+              <label htmlFor="lastName">
+                {translate("lastName", locale)} <span aria-hidden="true">*</span>
+              </label>
               <input
+                id="lastName"
                 className="min-w-full rounded text-gray-700"
                 name="lastName"
                 type="text"
                 maxLength="250"
-                required="required"
+                required
+                aria-required="true"
               />
             </div>
             <div>
-              <label htmlFor={"email"}>{translate("email", locale)}</label>
+              <label htmlFor="email">
+                {translate("email", locale)} <span aria-hidden="true">*</span>
+              </label>
               <input
+                id="email"
                 className="min-w-full rounded text-gray-700"
                 name="email"
                 type="email"
                 maxLength="250"
-                required="required"
+                required
+                aria-required="true"
               />
             </div>
             <div>
-              <label htmlFor={"address"}>{translate("address", locale)}</label>
+              <label htmlFor="address">
+                {translate("address", locale)} <span aria-hidden="true">*</span>
+              </label>
               <input
+                id="address"
                 className="min-w-full rounded text-gray-700"
                 name="address"
                 type="text"
                 maxLength="250"
-                required="required"
+                required
+                aria-required="true"
               />
             </div>
             <div>
-              <label htmlFor={"city"}>{translate("city", locale)}</label>
+              <label htmlFor="city">
+                {translate("city", locale)} <span aria-hidden="true">*</span>
+              </label>
               <input
+                id="city"
                 className="min-w-full rounded text-gray-700"
                 name="city"
                 type="text"
                 maxLength="250"
-                required="required"
+                required
+                aria-required="true"
               />
             </div>
             <div>
-              <label htmlFor={"stateCode"}>{translate("stateCode", locale)}</label>
+              <label htmlFor="stateCode">
+                {translate("stateCode", locale)} <span aria-hidden="true">*</span>
+              </label>
               <input
+                id="stateCode"
                 className="min-w-full rounded text-gray-700"
                 name="stateCode"
                 type="text"
                 maxLength="250"
-                required="required"
+                required
+                aria-required="true"
               />
             </div>
             <div>
-              <label htmlFor={"zipCode"}>{translate("zipCode", locale)}</label>
+              <label htmlFor="zipCode">
+                {translate("zipCode", locale)} <span aria-hidden="true">*</span>
+              </label>
               <input
+                id="zipCode"
                 className="min-w-full rounded text-gray-700"
                 name="zipCode"
                 type="text"
                 maxLength="250"
-                required="required"
+                required
+                aria-required="true"
               />
             </div>
             <div>
-              <label htmlFor={"phone"}>{translate("phone", locale)}</label>
+              <label htmlFor="phone">
+                {translate("phone", locale)} <span aria-hidden="true">*</span>
+              </label>
               <input
+                id="phone"
                 className="min-w-full rounded text-gray-700"
                 name="phone"
                 type="text"
                 maxLength="250"
-                required="required"
+                required
+                aria-required="true"
               />
             </div>
             <div>
-              <label htmlFor={"notes"}>{translate("notes", locale)}</label>
+              <label htmlFor="notes">{translate("notes", locale)}</label>
               <textarea
+                id="notes"
                 className="min-w-full rounded text-gray-700"
                 rows={4}
                 name="notes"
-                type="textarea"
                 maxLength="500"
               />
             </div>
 
-            <div>
+            <div className="flex items-start">
               <input
-                className="mr-4 rounded text-gray-700"
+                id="privacy"
+                className="mr-4 mt-1 rounded text-gray-700"
                 name="privacy"
                 type="checkbox"
-                required="required"
+                required
+                aria-required="true"
               />
               <label
-                className="px-2"
-                htmlFor={"privacy"}
+                htmlFor="privacy"
                 dangerouslySetInnerHTML={{
-                  __html: thankyouMessage.textPrivacy,
+                  __html: `${thankyouMessage.textPrivacy} <span aria-hidden="true">*</span>`,
                 }}
               />
             </div>
@@ -207,7 +243,11 @@ export default function RegisterForm({ payload, thankyouMessage, locale }) {
             </button>
           </div>
         </form>
-        {errorMessage}
+        {errorMessage && (
+          <div role="alert" aria-live="polite" className="mt-4 text-red-600">
+            {errorMessage}
+          </div>
+        )}
       </div>
     </div>
   );

@@ -64,9 +64,12 @@ export default function TimelineTabs({ nav, locale }) {
           </div>
         </div>
         <button
-          tabIndex="0"
+          tabIndex={0}
           className="lg:hidden w-full bg-white border text-base p-2 md:p-4  md:col-span-3 cursor-pointer lg:cursor-default flex justify-between items-center hover:bg-red-light motion-safe:duration-300 lg:hover:bg-transparent "
           onClick={() => setOpenYars(!openYears)}
+          aria-expanded={openYears}
+          aria-controls="year-list"
+          aria-label={translate("selectYear", locale)}
         >
           <div className="text-xs md:text-base">
             {translate("year", locale)}
@@ -85,7 +88,12 @@ export default function TimelineTabs({ nav, locale }) {
           } lg:grid-rows-[1fr]`}
         >
           <div className="overflow-auto h-full lg:overflow-visible ">
-            <ul className="bg-white shadow-xl lg:shadow-none border-l lg:border border-b-0 lg:mt-[-1px] text-base grid grid-cols-2 md:grid-cols-3 lg:block">
+            <ul
+              id="year-list"
+              role="list"
+              aria-label={translate("yearNavigation", locale)}
+              className="bg-white shadow-xl lg:shadow-none border-l lg:border border-b-0 lg:mt-[-1px] text-base grid grid-cols-2 md:grid-cols-3 lg:block"
+            >
               {nav.map((item) => {
                 return (
                   <li
@@ -94,9 +102,8 @@ export default function TimelineTabs({ nav, locale }) {
                     onClick={() => setOpenYars(!openYears)}
                   >
                     <Link
-                      tabIndex={!isMobile ? "0" : openYears ? "0" : "-1"}
+                      tabIndex={!isMobile ? 0 : openYears ? 0 : -1}
                       href={`#${item.year}`}
-                      // className={`w-full p-2 md:p-4 flex justify-between items-center hover:bg-red-light motion-safe:duration-300 text-xs md:text-base ${isSticky ? "lg:text-sm lg:py-2" : "lg:text-base lg:p-4"} `}
                       className={`w-full p-2 md:p-4 flex justify-between items-center hover:bg-red-light motion-safe:duration-300 text-xs md:text-base lg:text-sm lg:py-2`}
                     >
                       {item.year}

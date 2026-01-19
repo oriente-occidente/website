@@ -6,6 +6,7 @@ import { MapPinIcon, CalendarIcon } from "@heroicons/react/24/outline";
 import { formatDate } from "@/lib/utils";
 import { GenericCardProps } from "@/types";
 import resolveLink from "@/lib/resolveLink";
+import translate from "@/lib/locales";
 
 export default function NewsCard({ data, locale, count }: GenericCardProps) {
   let categoryTitle;
@@ -57,14 +58,14 @@ export default function NewsCard({ data, locale, count }: GenericCardProps) {
     categoryColorClasses[categoryTitle ? categoryTitle.toLowerCase() : ""];
 
   const link = resolveLink({ ...data, locale });
-  console.log("data", data);
+
   return (
     <div className="relative py-4">
       <Link
         href={link}
         title={data.title}
         className="group"
-        aria-label={`Vai a ${data.title}`}
+        aria-label={`${translate("goTo", locale)} ${data.title}`}
       >
         <div className={`relative overflow-hidden aspect-video`}>
           {data.imageHero.responsiveImage && (
@@ -141,8 +142,8 @@ export default function NewsCard({ data, locale, count }: GenericCardProps) {
           )} */}
 
           <div className="mt-3 uppercase font-semibold text-xxs flex items-center">
-            <div>Vai al contenuto</div>
-            <div className=" hidden h-[20px] w-[20px] bg-arrow-right-black lg:block ml-3 group-hover:ml-5 motion-safe:duration-200" />
+            <div>{translate("goToContents", locale)}</div>
+            <div className=" hidden h-[20px] w-[20px] bg-arrow-right-black lg:block ml-3 group-hover:ml-5 motion-safe:duration-200" aria-hidden="true" />
           </div>
         </div>
         {data.location && (
