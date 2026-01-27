@@ -8,7 +8,7 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        green: "#81845C",
+        green: "#2e7d32",
         red: {
           DEFAULT: "#e64011",
           alt: "#D83D35",
