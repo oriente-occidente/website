@@ -20,15 +20,20 @@ export default function MobileNav({
         <Disclosure>
           {({ open }) => (
             <>
-              <Disclosure.Button className="flex items-center justify-between text-left text-sm font-semibold uppercase md:text-xl">
+              <Disclosure.Button
+                className="flex items-center justify-between text-left text-sm font-semibold uppercase md:text-xl"
+                aria-expanded={open}
+                aria-controls={`submenu-${item.id}`}
+              >
                 {item?.title || "+"}
                 <div
                   className={`${
                     open ? "rotate-180" : ""
                   } bg-arrow-small-down h-4 w-4 duration-300  ease-in md:h-8 md:w-8`}
+                  aria-hidden="true"
                 />
               </Disclosure.Button>
-              <Disclosure.Panel>
+              <Disclosure.Panel id={`submenu-${item.id}`}>
                 {item.children?.map((child: any) => (
                   <Link
                     key={child?.id}

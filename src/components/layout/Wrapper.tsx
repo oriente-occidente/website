@@ -11,9 +11,9 @@ export default async function Wrapper({ slugData, locale, children }: any) {
   return (
     <>
       <Header locale={locale} data={layoutData.menu} slugData={slugData} />
-      <div className="min-h-[50vh] pt-[70px] md:pt-[80px] lg:pt-[110px]">
-        <div>{children}</div>
-      </div>
+      <main id="main-content" className="min-h-[50vh] pt-[70px] md:pt-[80px] lg:pt-[110px]">
+        {children}
+      </main>
     </>
   );
 }

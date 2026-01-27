@@ -143,7 +143,10 @@ export default function NewsCard({ data, locale, count }: GenericCardProps) {
 
           <div className="mt-3 uppercase font-semibold text-xxs flex items-center">
             <div>{translate("goToContents", locale)}</div>
-            <div className=" hidden h-[20px] w-[20px] bg-arrow-right-black lg:block ml-3 group-hover:ml-5 motion-safe:duration-200" aria-hidden="true" />
+            <div
+              className=" hidden h-[20px] w-[20px] bg-arrow-right-black lg:block ml-3 group-hover:ml-5 motion-safe:duration-200"
+              aria-hidden="true"
+            />
           </div>
         </div>
         {data.location && (
