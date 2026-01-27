@@ -32,6 +32,30 @@
     font-family: "Work Sans", sans-serif;
     @apply scroll-smooth scroll-pt-[100px] md:scroll-pt-[130px] lg:scroll-pt-[160px] xl:scroll-pt-[100px];
   }
+
+  /* Accessibilità: focus visibile per navigazione da tastiera (WCAG 2.4.7) */
+  a:focus-visible,
+  button:focus-visible,
+  input:focus-visible,
+  select:focus-visible,
+  textarea:focus-visible,
+  [tabindex]:focus-visible {
+    @apply outline-2 outline-offset-2 outline-black;
+  }
+
+  /* Focus visibile su sfondo scuro */
+  .bg-black a:focus-visible,
+  .bg-black button:focus-visible,
+  footer a:focus-visible,
+  footer button:focus-visible {
+    @apply outline-white;
+  }
+
+  /* Rimuove l'outline di default solo quando focus-visible non è supportato */
+  a:focus:not(:focus-visible),
+  button:focus:not(:focus-visible) {
+    outline: none;
+  }
 }
 
 @layer components {

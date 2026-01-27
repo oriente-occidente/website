@@ -25,6 +25,13 @@ function Gallery({ slides }) {
           swiperRef.current = swiper;
         }}
         onSlideChange={(swiper) => setActiveId(swiper.activeIndex)}
+        a11y={{
+          prevSlideMessage: 'Slide precedente',
+          nextSlideMessage: 'Slide successiva',
+          firstSlideMessage: 'Prima slide',
+          lastSlideMessage: 'Ultima slide',
+          paginationBulletMessage: 'Vai alla slide {{index}}',
+        }}
       >
         {slides?.map((slide) => {
           return (
@@ -55,12 +62,16 @@ function Gallery({ slides }) {
         <>
           <button
             onClick={() => swiperRef.current?.slidePrev()}
+            aria-label="Slide precedente"
+            aria-disabled={activeId === 0}
             className={`swiper-button-prev ${
               activeId == 0 ? "swiper-button-disabled" : ""
             }`}
           ></button>
           <button
             onClick={() => swiperRef.current?.slideNext()}
+            aria-label="Slide successiva"
+            aria-disabled={activeId === slides.length - 1}
             className={`swiper-button-next ${
               activeId == slides.length - 1 ? "swiper-button-disabled" : ""
             }`}

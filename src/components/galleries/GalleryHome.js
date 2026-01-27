@@ -28,6 +28,13 @@ function GalleryHome({ slides, background, locale }) {
             spaceBetween: 20,
           },
         }}
+        a11y={{
+          prevSlideMessage: 'Slide precedente',
+          nextSlideMessage: 'Slide successiva',
+          firstSlideMessage: 'Prima slide',
+          lastSlideMessage: 'Ultima slide',
+          paginationBulletMessage: 'Vai alla slide {{index}}',
+        }}
       >
         {slides.map((slide, i) => {
           const {

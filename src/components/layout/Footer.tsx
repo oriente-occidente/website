@@ -52,17 +52,20 @@ export default function Footer({
                             <Link
                               href={item.link}
                               target="_blank"
+                              rel="noopener noreferrer"
                               title={`${translate("externaLink", locale)} ${
                                 item.title
                               }`}
+                              aria-label={`${item.title} - ${translate("externaLink", locale)}`}
                               className="text-black hover:text-gray-400"
                             >
-                              <span className="sr-only">{item.title}</span>
+                              <span className="sr-only">{item.title} ({translate("externaLink", locale)})</span>
                               <Image
                                 src={item.image.url}
                                 width={20}
                                 height={20}
-                                alt={`${item.title} logo`}
+                                alt=""
+                                aria-hidden="true"
                               />
                             </Link>
                           </Fragment>

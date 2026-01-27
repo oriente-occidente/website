@@ -1,4 +1,5 @@
 "use client";
+import { useState, useRef } from "react";
 import {
   A11y,
   Autoplay,
@@ -12,9 +13,26 @@ import { Image as DatoImage, SRCImage } from "react-datocms";
 import Image from "next/image";
 
 function HeroSlider({ slides }) {
+  const [isPlaying, setIsPlaying] = useState(true);
+  const swiperRef = useRef(null);
+
+  const toggleAutoplay = () => {
+    if (swiperRef.current) {
+      if (isPlaying) {
+        swiperRef.current.autoplay.stop();
+      } else {
+        swiperRef.current.autoplay.start();
+      }
+      setIsPlaying(!isPlaying);
+    }
+  };
+
   return (
     <div className="relative overflow-hidden">
       <Swiper
+        onSwiper={(swiper) => {
+          swiperRef.current = swiper;
+        }}
         modules={[Autoplay, A11y, EffectFade, Parallax, Pagination, Navigation]}
         spaceBetween={0}
         speed={900}
@@ -27,17 +45,17 @@ function HeroSlider({ slides }) {
           disableOnInteraction: true,
         }}
         a11y={{
-          prevSlideMessage: 'Slide precedente',
-          nextSlideMessage: 'Slide successiva',
-          firstSlideMessage: 'Prima slide',
-          lastSlideMessage: 'Ultima slide',
-          paginationBulletMessage: 'Vai alla slide {{index}}',
+          prevSlideMessage: "Slide precedente",
+          nextSlideMessage: "Slide successiva",
+          firstSlideMessage: "Prima slide",
+          lastSlideMessage: "Ultima slide",
+          paginationBulletMessage: "Vai alla slide {{index}}",
         }}
         lazy={{
           enabled: true,
           loadOnTransitionStart: true,
         }}
-        className="mySwiper relative  lg:h-[60vh] xl:h-[70vh]"
+        className="mySwiper relative md:h-[50vh] lg:h-[60vh] xl:h-[70vh]"
       >
         {slides.map((slide, i) => {
           const { image, mobileImg } = slide;
@@ -93,6 +111,39 @@ function HeroSlider({ slides }) {
           );
         })}
       </Swiper>
+
+      {/* Pulsante Pausa/Play per accessibilità WCAG 2.2.2 */}
+      <button
+        onClick={toggleAutoplay}
+        aria-label={
+          isPlaying
+            ? "Metti in pausa la presentazione"
+            : "Riproduci la presentazione"
+        }
+        aria-pressed={!isPlaying}
+        className="absolute bottom-4 left-4 z-30 flex h-10 w-10 items-center justify-center rounded-full bg-black/60 text-white transition-colors hover:bg-black/80 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-black lg:bottom-8 lg:left-8"
+      >
+        {isPlaying ? (
+          <svg
+            aria-hidden="true"
+            className="h-5 w-5"
+            fill="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path d="M6 4h4v16H6V4zm8 0h4v16h-4V4z" />
+          </svg>
+        ) : (
+          <svg
+            aria-hidden="true"
+            className="h-5 w-5"
+            fill="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path d="M8 5v14l11-7z" />
+          </svg>
+        )}
+        <span className="sr-only">{isPlaying ? "Pausa" : "Play"}</span>
+      </button>
     </div>
   );
 }

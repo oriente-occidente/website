@@ -143,7 +143,7 @@ function Header(props: any) {
                 </Popover.Button>
               </div>
               <div className="hidden lg:flex lg:flex-1 lg:items-center lg:justify-end">
-                <Popover.Group as="nav" className="flex space-x-2 uppercase xl:space-x-4">
+                <Popover.Group as="nav" aria-label="Menu principale" className="flex space-x-2 uppercase xl:space-x-4">
                   {data?.map((item: any) => (
                     <Fragment key={item.id}>{renderLink(item, locale)}</Fragment>
                   ))}

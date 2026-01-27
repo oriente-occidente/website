@@ -52,13 +52,15 @@ export default function Newsletter({ locale, data }: NewsletterProps) {
                     />
                   </div>
                   <div>
-                    <input
-                      className="pointer absolute top-4 right-4 block h-6 w-6 bg-arrow-small-right text-transparent"
+                    <button
                       type="submit"
                       name="subscribe"
                       id="mc-embedded-subscribe"
                       aria-label={translate("subscribe", locale)}
-                    ></input>
+                      className="pointer absolute top-4 right-4 flex h-6 w-6 items-center justify-center bg-arrow-small-right focus-visible:ring-2 focus-visible:ring-black focus-visible:ring-offset-2"
+                    >
+                      <span className="sr-only">{translate("subscribe", locale)}</span>
+                    </button>
                   </div>
                 </div>
               </form>

@@ -26,6 +26,13 @@ function Gallery({ slides }) {
             spaceBetween: 300,
           },
         }}
+        a11y={{
+          prevSlideMessage: 'Slide precedente',
+          nextSlideMessage: 'Slide successiva',
+          firstSlideMessage: 'Prima slide',
+          lastSlideMessage: 'Ultima slide',
+          paginationBulletMessage: 'Vai alla slide {{index}}',
+        }}
       >
         {slides?.map((slide) => {
           return (
