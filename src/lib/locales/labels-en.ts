@@ -105,6 +105,8 @@ const labels_en = {
   languagesDescription: "Conferences and talks",
   from: "from",
   to: "to",
+  "accessibility-report": "Accessibility report",
+  "accessibility-report-slug": "accessibility-report",
   search: {
     title: "Search",
     show: "Show search",

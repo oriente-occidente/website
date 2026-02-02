@@ -105,6 +105,8 @@ const labels_it = {
   languagesDescription: "Conferenze e talk",
   from: "dal",
   to: "al",
+  "accessibility-report": "Dichiarazione accessibilità",
+  "accessibility-report-slug": "dichiarazione-accessibilita",
   search: {
     title: "Cerca",
     show: "Mostra la ricerca",

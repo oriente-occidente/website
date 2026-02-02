@@ -56,10 +56,16 @@ export default function Footer({
                               title={`${translate("externaLink", locale)} ${
                                 item.title
                               }`}
-                              aria-label={`${item.title} - ${translate("externaLink", locale)}`}
+                              aria-label={`${item.title} - ${translate(
+                                "externaLink",
+                                locale,
+                              )}`}
                               className="text-black hover:text-gray-400"
                             >
-                              <span className="sr-only">{item.title} ({translate("externaLink", locale)})</span>
+                              <span className="sr-only">
+                                {item.title} ({translate("externaLink", locale)}
+                                )
+                              </span>
                               <Image
                                 src={item.image.url}
                                 width={20}
@@ -75,7 +81,7 @@ export default function Footer({
                   </div>
                 </div>
               </div>
-              <div className="mt-8 grid grid-cols-2 gap-4 md:mt-0 xl:mt-0 xl:grid-cols-4">
+              <div className="mt-8 grid md:grid-cols-2 gap-4 md:mt-0 xl:mt-0 xl:grid-cols-4">
                 {data?.sections?.map((section: any) => {
                   const { title, links, id } = section;
                   return (
@@ -110,7 +116,7 @@ export default function Footer({
                       <Link
                         href={`https://www.iubenda.com/privacy-policy/${translate(
                           "cookiePolicyId",
-                          locale
+                          locale,
                         )}`}
                         title={`${translate("privacyPolicyTitle", locale)}`}
                         target="_blank"
@@ -124,7 +130,7 @@ export default function Footer({
                       <Link
                         href={`https://www.iubenda.com/privacy-policy/${translate(
                           "cookiePolicyId",
-                          locale
+                          locale,
                         )}/cookie-policy`}
                         title={`${translate("cookiePolicyTitle", locale)}`}
                         target="_blank"
@@ -160,19 +166,34 @@ export default function Footer({
                 </div>
               </div>
             </div>
-            <div className="md:mt-8 md:grid md:grid-cols-2 md:gap-4 md:border-t md:border-gray-200">
-              <div className="mt-8 mb-4 border-t border-gray-200 pt-8 md:mt-0 md:border-0 lg:flex">
-                {data?.links?.map((item: any) => (
-                  <div key={item.id} className="inline-block">
-                    <Link
-                      href={resolveLink({ ...item, locale })}
-                      title={`Link to ${item.title}`}
-                      className="text-gray-dark mr-4 text-xs lg:mr-0 xl:text-center"
-                    >
-                      {item.title}
-                    </Link>
-                  </div>
-                ))}
+            <div className="md:mt-8 md:grid md:grid-cols-2 md:gap-4 md:border-t md:border-gray-200 pt-8 pb-4">
+              <div className="border-t border-gray-200 md:border-0 lg:flex pt-8 pb-4 md:p-0">
+                {data?.links?.map((item: any) => {
+                  return (
+                    <div key={item.id} className="inline-block">
+                      <Link
+                        href={resolveLink({ ...item, locale })}
+                        title={`Link to ${item.title}`}
+                        className="text-gray-dark mr-4 text-xs lg:mr-0 "
+                      >
+                        {item.title}
+                      </Link>
+                    </div>
+                  );
+                })}
+              </div>
+              <div className="text-left md:text-right">
+                <Link
+                  href={resolveLink({
+                    slug: translate("accessibility-report-slug", locale),
+                    _modelApiKey: "page",
+                    locale,
+                  })}
+                  title={`Link to ${translate("accessibility-report", locale)}`}
+                  className="text-gray-dark mr-4 text-xs lg:mr-0 "
+                >
+                  {translate("accessibility-report", locale)}
+                </Link>
               </div>
             </div>
           </div>
