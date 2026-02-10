@@ -24,7 +24,7 @@ export default function Newsletter({ locale, data }: NewsletterProps) {
               >
                 <div id="mc_embed_signup_scroll">
                   <div>
-                    <label className="sr-only" htmlFor="mce-EMAIL">
+                    <label className="" htmlFor="mce-EMAIL">
                       {translate("insertEmail", locale)}
                     </label>
                     <input
@@ -39,11 +39,22 @@ export default function Newsletter({ locale, data }: NewsletterProps) {
                     />
                   </div>
                   <div id="mce-responses">
-                    <div className="hidden" id="mce-error-response" role="alert"></div>
-                    <div className="hidden" id="mce-success-response" role="status"></div>
+                    <div
+                      className="hidden"
+                      id="mce-error-response"
+                      role="alert"
+                    ></div>
+                    <div
+                      className="hidden"
+                      id="mce-success-response"
+                      role="status"
+                    ></div>
                   </div>
                   {/* Honeypot field - hidden from assistive technologies */}
-                  <div aria-hidden="true" style={{position: 'absolute', left: '-5000px'}}>
+                  <div
+                    aria-hidden="true"
+                    style={{ position: "absolute", left: "-5000px" }}
+                  >
                     <input
                       type="text"
                       name="b_58396ba31c40d0c1a6e058a82_c261770ce1"
@@ -59,7 +70,9 @@ export default function Newsletter({ locale, data }: NewsletterProps) {
                       aria-label={translate("subscribe", locale)}
                       className="pointer absolute top-4 right-4 flex h-6 w-6 items-center justify-center bg-arrow-small-right focus-visible:ring-2 focus-visible:ring-black focus-visible:ring-offset-2"
                     >
-                      <span className="sr-only">{translate("subscribe", locale)}</span>
+                      <span className="sr-only">
+                        {translate("subscribe", locale)}
+                      </span>
                     </button>
                   </div>
                 </div>
