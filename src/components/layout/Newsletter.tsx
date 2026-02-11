@@ -11,7 +11,7 @@ export default function Newsletter({ locale, data }: NewsletterProps) {
           <div className="mt-4 mb-6 text-xs">
             {data.newsletterSubscriptionMessage}
           </div>
-          <div className="relative">
+          <div>
             <div id="mc_embed_signup">
               <form
                 action={NEWSLETTER_LIST_URL}
@@ -23,8 +23,11 @@ export default function Newsletter({ locale, data }: NewsletterProps) {
                 // noValidate
               >
                 <div id="mc_embed_signup_scroll">
-                  <div>
-                    <label className="" htmlFor="mce-EMAIL">
+                  <div className="relative">
+                    <label
+                      className="block text-xs font-semibold mb-2"
+                      htmlFor="mce-EMAIL"
+                    >
                       {translate("insertEmail", locale)}
                     </label>
                     <input
@@ -32,11 +35,22 @@ export default function Newsletter({ locale, data }: NewsletterProps) {
                       type="email"
                       name="EMAIL"
                       id="mce-EMAIL"
-                      className="block w-full rounded-md border border-gray px-3 py-4 text-xs text-black-light placeholder:text-black-light"
+                      className="block w-full rounded-md border border-gray px-3 py-4 pr-12 text-xs text-black-light placeholder:text-black-light"
                       placeholder={`${translate("email", locale)}`}
                       required
                       aria-required="true"
                     />
+                    <button
+                      type="submit"
+                      name="subscribe"
+                      id="mc-embedded-subscribe"
+                      aria-label={translate("subscribe", locale)}
+                      className="pointer absolute bottom-3 right-4 flex h-6 w-6 items-center justify-center bg-arrow-small-right focus-visible:ring-2 focus-visible:ring-black focus-visible:ring-offset-2"
+                    >
+                      <span className="sr-only">
+                        {translate("subscribe", locale)}
+                      </span>
+                    </button>
                   </div>
                   <div id="mce-responses">
                     <div
@@ -55,25 +69,16 @@ export default function Newsletter({ locale, data }: NewsletterProps) {
                     aria-hidden="true"
                     style={{ position: "absolute", left: "-5000px" }}
                   >
+                    <label htmlFor="b_hp_field" className="sr-only">
+                      Non compilare questo campo
+                    </label>
                     <input
                       type="text"
+                      id="b_hp_field"
                       name="b_58396ba31c40d0c1a6e058a82_c261770ce1"
                       tabIndex={-1}
                       defaultValue=""
                     />
-                  </div>
-                  <div>
-                    <button
-                      type="submit"
-                      name="subscribe"
-                      id="mc-embedded-subscribe"
-                      aria-label={translate("subscribe", locale)}
-                      className="pointer absolute top-4 right-4 flex h-6 w-6 items-center justify-center bg-arrow-small-right focus-visible:ring-2 focus-visible:ring-black focus-visible:ring-offset-2"
-                    >
-                      <span className="sr-only">
-                        {translate("subscribe", locale)}
-                      </span>
-                    </button>
                   </div>
                 </div>
               </form>

@@ -45,9 +45,7 @@
 
   /* Focus visibile su sfondo scuro */
   .bg-black a:focus-visible,
-  .bg-black button:focus-visible,
-  footer a:focus-visible,
-  footer button:focus-visible {
+  .bg-black button:focus-visible {
     @apply outline-white;
   }
 

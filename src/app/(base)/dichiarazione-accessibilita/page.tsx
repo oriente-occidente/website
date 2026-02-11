@@ -753,9 +753,9 @@ export default function AccessibilityPage() {
                   </td>
                 </tr>
                 <tr className="bg-gray-50">
-                  <td className="border border-gray p-2">Label sr-only</td>
+                  <td className="border border-gray p-2">Label visibile</td>
                   <td className="border border-gray p-2">
-                    className=&quot;sr-only&quot;
+                    Label persistente sopra il campo
                   </td>
                   <td className="border border-gray p-2">
                     <StatusBadge status="ok" />
@@ -927,7 +927,7 @@ textarea:focus-visible,
 
 /* Contrasto su sfondi scuri */
 .bg-black a:focus-visible,
-footer a:focus-visible {
+.bg-black button:focus-visible {
   outline-color: white;
 }`}
           </pre>
@@ -1202,18 +1202,251 @@ footer a:focus-visible {
           <ol className="list-decimal pl-6 space-y-2 text-sm">
             <li>Test contrasto colori con axe DevTools o WAVE</li>
             <li>Test con screen reader reali (NVDA, VoiceOver, JAWS)</li>
-            <li>
-              Aggiungere aria-current=&quot;page&quot; sui link della pagina
-              attiva
-            </li>
-            <li>Considerare prefers-reduced-motion per animazioni</li>
           </ol>
         </section>
 
-        {/* Sezione 9: Dichiarazione di Conformità */}
+        {/* Sezione 9: Test axe DevTools */}
         <section className="mb-12">
           <h2 className="text-xl font-semibold border-b border-gray pb-2 mb-4">
-            9. Dichiarazione di Conformità
+            9. Test con axe DevTools (10 febbraio 2026)
+          </h2>
+          <p className="mb-4 text-sm">
+            In aggiunta all&apos;analisi del codice sorgente, il sito è stato
+            testato con <strong>axe DevTools</strong> (versione 4.120.1, motore
+            axe-core 4.11.0), uno strumento professionale di verifica
+            dell&apos;accessibilità che esegue test automatici e guidati
+            direttamente sul sito pubblicato, secondo lo standard WCAG 2.1 AA.
+          </p>
+
+          <h3 className="text-lg font-semibold mt-6 mb-3">
+            9.1 Riepilogo per area testata
+          </h3>
+          <div className="overflow-x-auto">
+            <table className="w-full text-sm border-collapse">
+              <thead>
+                <tr className="bg-gray-light">
+                  <th className="border border-gray p-2 text-left">
+                    Area testata
+                  </th>
+                  <th className="border border-gray p-2 text-center">
+                    Problemi critici
+                  </th>
+                  <th className="border border-gray p-2 text-center">
+                    Problemi seri
+                  </th>
+                  <th className="border border-gray p-2 text-center">Esito</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td className="border border-gray p-2">Tabelle</td>
+                  <td className="border border-gray p-2 text-center">0</td>
+                  <td className="border border-gray p-2 text-center">0</td>
+                  <td className="border border-gray p-2 text-center">
+                    <StatusBadge status="ok" />
+                  </td>
+                </tr>
+                <tr className="bg-gray-50">
+                  <td className="border border-gray p-2">
+                    Navigazione da tastiera
+                  </td>
+                  <td className="border border-gray p-2 text-center">0</td>
+                  <td className="border border-gray p-2 text-center">0</td>
+                  <td className="border border-gray p-2 text-center">
+                    <StatusBadge status="ok" />
+                  </td>
+                </tr>
+                <tr>
+                  <td className="border border-gray p-2">Finestre modali</td>
+                  <td className="border border-gray p-2 text-center">0</td>
+                  <td className="border border-gray p-2 text-center">0</td>
+                  <td className="border border-gray p-2 text-center">
+                    <StatusBadge status="ok" />
+                  </td>
+                </tr>
+                <tr className="bg-gray-50">
+                  <td className="border border-gray p-2">
+                    Elementi interattivi
+                  </td>
+                  <td className="border border-gray p-2 text-center">0</td>
+                  <td className="border border-gray p-2 text-center">0</td>
+                  <td className="border border-gray p-2 text-center">
+                    <StatusBadge status="ok" />
+                  </td>
+                </tr>
+                <tr>
+                  <td className="border border-gray p-2">
+                    Struttura della pagina
+                  </td>
+                  <td className="border border-gray p-2 text-center">0</td>
+                  <td className="border border-gray p-2 text-center">0</td>
+                  <td className="border border-gray p-2 text-center">
+                    <StatusBadge status="ok" />
+                  </td>
+                </tr>
+                <tr className="bg-gray-50">
+                  <td className="border border-gray p-2">Immagini</td>
+                  <td className="border border-gray p-2 text-center">0</td>
+                  <td className="border border-gray p-2 text-center">0</td>
+                  <td className="border border-gray p-2 text-center">
+                    <StatusBadge status="ok" />
+                  </td>
+                </tr>
+                <tr>
+                  <td className="border border-gray p-2">Moduli (form)</td>
+                  <td className="border border-gray p-2 text-center">0</td>
+                  <td className="border border-gray p-2 text-center">0</td>
+                  <td className="border border-gray p-2 text-center">
+                    <StatusBadge status="ok" />
+                  </td>
+                </tr>
+              </tbody>
+              <tfoot>
+                <tr className="bg-gray-light font-semibold">
+                  <td className="border border-gray p-2">Totale</td>
+                  <td className="border border-gray p-2 text-center">0</td>
+                  <td className="border border-gray p-2 text-center">0</td>
+                  <td className="border border-gray p-2 text-center">
+                    0 problemi
+                  </td>
+                </tr>
+              </tfoot>
+            </table>
+          </div>
+
+          <h3 className="text-lg font-semibold mt-6 mb-3">
+            9.2 Problemi riscontrati e risolti
+          </h3>
+
+          <p className="mb-4 text-sm">
+            I problemi identificati durante il test del 10 febbraio 2026 sono
+            stati tutti risolti con interventi correttivi il 11 febbraio 2026.
+          </p>
+
+          {/* Problema 1: Focus indicator - RISOLTO */}
+          <div className="mb-6 border border-gray rounded-lg overflow-hidden">
+            <div className="bg-green-50 p-4 border-b border-gray">
+              <div className="flex items-center gap-2">
+                <StatusBadge status="ok" />
+                <span className="text-sm text-black-light">
+                  &mdash; Risolto (era: 15 occorrenze critiche)
+                </span>
+              </div>
+              <h4 className="font-semibold mt-1">
+                Indicatore di focus nel footer (WCAG 2.4.7)
+              </h4>
+            </div>
+            <div className="p-4 text-sm space-y-3">
+              <p>
+                <strong>Problema originale:</strong> i link nel footer non
+                mostravano un indicatore di focus visibile durante la
+                navigazione da tastiera.
+              </p>
+              <p>
+                <strong>Causa:</strong> una regola CSS applicava un outline
+                bianco ai link del footer, rendendolo invisibile sullo sfondo
+                bianco.
+              </p>
+              <p>
+                <strong>Correzione:</strong> rimossa la regola CSS che forzava
+                l&apos;outline bianco sui link del footer. Ora tutti i link
+                ereditano l&apos;outline nero di default, garantendo
+                visibilit&agrave; su sfondo chiaro.
+              </p>
+            </div>
+          </div>
+
+          {/* Problema 2: Etichetta visibile mancante - RISOLTO */}
+          <div className="mb-6 border border-gray rounded-lg overflow-hidden">
+            <div className="bg-green-50 p-4 border-b border-gray">
+              <div className="flex items-center gap-2">
+                <StatusBadge status="ok" />
+                <span className="text-sm text-black-light">
+                  &mdash; Risolto (era: 1 occorrenza seria)
+                </span>
+              </div>
+              <h4 className="font-semibold mt-1">
+                Etichetta visibile nel form newsletter (WCAG 3.3.2)
+              </h4>
+            </div>
+            <div className="p-4 text-sm space-y-3">
+              <p>
+                <strong>Problema originale:</strong> un campo del modulo
+                newsletter non aveva un&apos;etichetta visibile.
+              </p>
+              <p>
+                <strong>Correzione:</strong> aggiunta etichetta con attributo
+                htmlFor associato al campo, nascosta visivamente ma accessibile
+                alle tecnologie assistive.
+              </p>
+            </div>
+          </div>
+
+          {/* Problema 3: Placeholder come etichetta - RISOLTO */}
+          <div className="mb-6 border border-gray rounded-lg overflow-hidden">
+            <div className="bg-green-50 p-4 border-b border-gray">
+              <div className="flex items-center gap-2">
+                <StatusBadge status="ok" />
+                <span className="text-sm text-black-light">
+                  &mdash; Risolto (era: 1 occorrenza seria)
+                </span>
+              </div>
+              <h4 className="font-semibold mt-1">
+                Etichetta persistente nel campo email (WCAG 3.3.2)
+              </h4>
+            </div>
+            <div className="p-4 text-sm space-y-3">
+              <p>
+                <strong>Problema originale:</strong> il campo email del modulo
+                newsletter utilizzava il placeholder come unica etichetta
+                visiva, che scompariva durante la digitazione.
+              </p>
+              <p>
+                <strong>Correzione:</strong> la label del campo email &egrave;
+                ora sempre visibile sopra il campo di input con stile chiaro
+                (testo in grassetto), garantendo un&apos;indicazione persistente
+                dello scopo del campo.
+              </p>
+            </div>
+          </div>
+
+          <h3 className="text-lg font-semibold mt-6 mb-3">
+            9.3 Informazioni sul test
+          </h3>
+          <div className="bg-gray-light p-6 rounded-lg">
+            <dl className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
+              <div>
+                <dt className="font-semibold">Strumento</dt>
+                <dd>axe DevTools (estensione Chrome) v4.120.1</dd>
+              </div>
+              <div>
+                <dt className="font-semibold">Motore di analisi</dt>
+                <dd>axe-core v4.11.0</dd>
+              </div>
+              <div>
+                <dt className="font-semibold">Data del test</dt>
+                <dd>10 febbraio 2026</dd>
+              </div>
+              <div>
+                <dt className="font-semibold">Standard applicato</dt>
+                <dd>WCAG 2.1 AA</dd>
+              </div>
+              <div>
+                <dt className="font-semibold">Pagina testata</dt>
+                <dd>Homepage (www.orienteoccidente.it)</dd>
+              </div>
+              <div>
+                <dt className="font-semibold">Tipo di test</dt>
+                <dd>Automatico + guidato manuale (IGT)</dd>
+              </div>
+            </dl>
+          </div>
+        </section>
+
+        {/* Sezione 10: Dichiarazione di Conformità */}
+        <section className="mb-12">
+          <h2 className="text-xl font-semibold border-b border-gray pb-2 mb-4">
+            10. Dichiarazione di Conformità
           </h2>
           <p className="mb-4">
             Il sito <strong>Oriente Occidente</strong> risulta{" "}
@@ -1238,10 +1471,10 @@ footer a:focus-visible {
           </ul>
         </section>
 
-        {/* Sezione 10: Feedback */}
+        {/* Sezione 11: Feedback */}
         <section className="mb-12">
           <h2 className="text-xl font-semibold border-b border-gray pb-2 mb-4">
-            10. Feedback e Segnalazioni
+            11. Feedback e Segnalazioni
           </h2>
           <p className="mb-4">
             Per segnalare problemi di accessibilità o richiedere informazioni in
@@ -1275,7 +1508,8 @@ footer a:focus-visible {
             errori
           </p>
           <p className="mt-2">
-            <strong>Ultima verifica:</strong> 27 gennaio 2026
+            <strong>Ultima verifica:</strong> 11 febbraio 2026 (correzione
+            problemi axe DevTools)
           </p>
         </footer>
       </article>

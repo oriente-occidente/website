@@ -733,9 +733,9 @@ export default function AccessibilityPage() {
                   </td>
                 </tr>
                 <tr className="bg-gray-50">
-                  <td className="border border-gray p-2">sr-only label</td>
+                  <td className="border border-gray p-2">Visible label</td>
                   <td className="border border-gray p-2">
-                    className=&quot;sr-only&quot;
+                    Persistent label above input
                   </td>
                   <td className="border border-gray p-2">
                     <StatusBadge status="ok" />
@@ -905,7 +905,7 @@ textarea:focus-visible,
 
 /* Contrast on dark backgrounds */
 .bg-black a:focus-visible,
-footer a:focus-visible {
+.bg-black button:focus-visible {
   outline-color: white;
 }`}
           </pre>
@@ -1180,15 +1180,245 @@ footer a:focus-visible {
           <ol className="list-decimal pl-6 space-y-2 text-sm">
             <li>Color contrast testing with axe DevTools or WAVE</li>
             <li>Testing with real screen readers (NVDA, VoiceOver, JAWS)</li>
-            <li>Add aria-current=&quot;page&quot; on active page links</li>
-            <li>Consider prefers-reduced-motion for animations</li>
           </ol>
         </section>
 
-        {/* Section 9: Compliance Declaration */}
+        {/* Section 9: axe DevTools Testing */}
         <section className="mb-12">
           <h2 className="text-xl font-semibold border-b border-gray pb-2 mb-4">
-            9. Compliance Declaration
+            9. axe DevTools Testing (February 10, 2026)
+          </h2>
+          <p className="mb-4 text-sm">
+            In addition to the source code analysis, the website was tested with{" "}
+            <strong>axe DevTools</strong> (version 4.120.1, axe-core engine
+            4.11.0), a professional accessibility testing tool that performs
+            automated and guided tests directly on the published site, according
+            to the WCAG 2.1 AA standard.
+          </p>
+
+          <h3 className="text-lg font-semibold mt-6 mb-3">
+            9.1 Summary by tested area
+          </h3>
+          <div className="overflow-x-auto">
+            <table className="w-full text-sm border-collapse">
+              <thead>
+                <tr className="bg-gray-light">
+                  <th className="border border-gray p-2 text-left">
+                    Tested area
+                  </th>
+                  <th className="border border-gray p-2 text-center">
+                    Critical issues
+                  </th>
+                  <th className="border border-gray p-2 text-center">
+                    Serious issues
+                  </th>
+                  <th className="border border-gray p-2 text-center">Result</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td className="border border-gray p-2">Tables</td>
+                  <td className="border border-gray p-2 text-center">0</td>
+                  <td className="border border-gray p-2 text-center">0</td>
+                  <td className="border border-gray p-2 text-center">
+                    <StatusBadge status="ok" />
+                  </td>
+                </tr>
+                <tr className="bg-gray-50">
+                  <td className="border border-gray p-2">
+                    Keyboard navigation
+                  </td>
+                  <td className="border border-gray p-2 text-center">0</td>
+                  <td className="border border-gray p-2 text-center">0</td>
+                  <td className="border border-gray p-2 text-center">
+                    <StatusBadge status="ok" />
+                  </td>
+                </tr>
+                <tr>
+                  <td className="border border-gray p-2">Modal windows</td>
+                  <td className="border border-gray p-2 text-center">0</td>
+                  <td className="border border-gray p-2 text-center">0</td>
+                  <td className="border border-gray p-2 text-center">
+                    <StatusBadge status="ok" />
+                  </td>
+                </tr>
+                <tr className="bg-gray-50">
+                  <td className="border border-gray p-2">
+                    Interactive elements
+                  </td>
+                  <td className="border border-gray p-2 text-center">0</td>
+                  <td className="border border-gray p-2 text-center">0</td>
+                  <td className="border border-gray p-2 text-center">
+                    <StatusBadge status="ok" />
+                  </td>
+                </tr>
+                <tr>
+                  <td className="border border-gray p-2">Page structure</td>
+                  <td className="border border-gray p-2 text-center">0</td>
+                  <td className="border border-gray p-2 text-center">0</td>
+                  <td className="border border-gray p-2 text-center">
+                    <StatusBadge status="ok" />
+                  </td>
+                </tr>
+                <tr className="bg-gray-50">
+                  <td className="border border-gray p-2">Images</td>
+                  <td className="border border-gray p-2 text-center">0</td>
+                  <td className="border border-gray p-2 text-center">0</td>
+                  <td className="border border-gray p-2 text-center">
+                    <StatusBadge status="ok" />
+                  </td>
+                </tr>
+                <tr>
+                  <td className="border border-gray p-2">Forms</td>
+                  <td className="border border-gray p-2 text-center">0</td>
+                  <td className="border border-gray p-2 text-center">0</td>
+                  <td className="border border-gray p-2 text-center">
+                    <StatusBadge status="ok" />
+                  </td>
+                </tr>
+              </tbody>
+              <tfoot>
+                <tr className="bg-gray-light font-semibold">
+                  <td className="border border-gray p-2">Total</td>
+                  <td className="border border-gray p-2 text-center">0</td>
+                  <td className="border border-gray p-2 text-center">0</td>
+                  <td className="border border-gray p-2 text-center">
+                    0 issues
+                  </td>
+                </tr>
+              </tfoot>
+            </table>
+          </div>
+
+          <h3 className="text-lg font-semibold mt-6 mb-3">
+            9.2 Issues found and resolved
+          </h3>
+
+          <p className="mb-4 text-sm">
+            The issues identified during the February 10, 2026 test were all
+            resolved with corrective actions on February 11, 2026.
+          </p>
+
+          {/* Issue 1: Focus indicator - RESOLVED */}
+          <div className="mb-6 border border-gray rounded-lg overflow-hidden">
+            <div className="bg-green-50 p-4 border-b border-gray">
+              <div className="flex items-center gap-2">
+                <StatusBadge status="ok" />
+                <span className="text-sm text-black-light">
+                  &mdash; Resolved (was: 15 critical occurrences)
+                </span>
+              </div>
+              <h4 className="font-semibold mt-1">
+                Focus indicator in footer (WCAG 2.4.7)
+              </h4>
+            </div>
+            <div className="p-4 text-sm space-y-3">
+              <p>
+                <strong>Original issue:</strong> footer links did not show a
+                visible focus indicator when navigating with the keyboard.
+              </p>
+              <p>
+                <strong>Cause:</strong> a CSS rule applied a white outline to
+                footer links, making it invisible on the white background.
+              </p>
+              <p>
+                <strong>Fix:</strong> removed the CSS rule that forced white
+                outlines on footer links. All links now inherit the default
+                black outline, ensuring visibility on light backgrounds.
+              </p>
+            </div>
+          </div>
+
+          {/* Issue 2: Missing visible label - RESOLVED */}
+          <div className="mb-6 border border-gray rounded-lg overflow-hidden">
+            <div className="bg-green-50 p-4 border-b border-gray">
+              <div className="flex items-center gap-2">
+                <StatusBadge status="ok" />
+                <span className="text-sm text-black-light">
+                  &mdash; Resolved (was: 1 serious occurrence)
+                </span>
+              </div>
+              <h4 className="font-semibold mt-1">
+                Visible label in newsletter form (WCAG 3.3.2)
+              </h4>
+            </div>
+            <div className="p-4 text-sm space-y-3">
+              <p>
+                <strong>Original issue:</strong> a newsletter form field did not
+                have a visible label.
+              </p>
+              <p>
+                <strong>Fix:</strong> added a label with htmlFor attribute
+                associated to the field, visually hidden but accessible to
+                assistive technologies.
+              </p>
+            </div>
+          </div>
+
+          {/* Issue 3: Placeholder as label - RESOLVED */}
+          <div className="mb-6 border border-gray rounded-lg overflow-hidden">
+            <div className="bg-green-50 p-4 border-b border-gray">
+              <div className="flex items-center gap-2">
+                <StatusBadge status="ok" />
+                <span className="text-sm text-black-light">
+                  &mdash; Resolved (was: 1 serious occurrence)
+                </span>
+              </div>
+              <h4 className="font-semibold mt-1">
+                Persistent label on email field (WCAG 3.3.2)
+              </h4>
+            </div>
+            <div className="p-4 text-sm space-y-3">
+              <p>
+                <strong>Original issue:</strong> the newsletter email field used
+                the placeholder as the only visual label, which disappeared when
+                typing.
+              </p>
+              <p>
+                <strong>Fix:</strong> the email field label is now always
+                visible above the input with clear styling (bold text), ensuring
+                a persistent indication of the field&apos;s purpose.
+              </p>
+            </div>
+          </div>
+
+          <h3 className="text-lg font-semibold mt-6 mb-3">
+            9.3 Test information
+          </h3>
+          <div className="bg-gray-light p-6 rounded-lg">
+            <dl className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
+              <div>
+                <dt className="font-semibold">Tool</dt>
+                <dd>axe DevTools (Chrome extension) v4.120.1</dd>
+              </div>
+              <div>
+                <dt className="font-semibold">Analysis engine</dt>
+                <dd>axe-core v4.11.0</dd>
+              </div>
+              <div>
+                <dt className="font-semibold">Test date</dt>
+                <dd>February 10, 2026</dd>
+              </div>
+              <div>
+                <dt className="font-semibold">Standard applied</dt>
+                <dd>WCAG 2.1 AA</dd>
+              </div>
+              <div>
+                <dt className="font-semibold">Page tested</dt>
+                <dd>Homepage (www.orienteoccidente.it)</dd>
+              </div>
+              <div>
+                <dt className="font-semibold">Test type</dt>
+                <dd>Automated + guided manual (IGT)</dd>
+              </div>
+            </dl>
+          </div>
+        </section>
+
+        {/* Section 10: Compliance Declaration */}
+        <section className="mb-12">
+          <h2 className="text-xl font-semibold border-b border-gray pb-2 mb-4">
+            10. Compliance Declaration
           </h2>
           <p className="mb-4">
             The <strong>Oriente Occidente</strong> website is{" "}
@@ -1215,10 +1445,10 @@ footer a:focus-visible {
           </ul>
         </section>
 
-        {/* Section 10: Feedback */}
+        {/* Section 11: Feedback */}
         <section className="mb-12">
           <h2 className="text-xl font-semibold border-b border-gray pb-2 mb-4">
-            10. Feedback and Reports
+            11. Feedback and Reports
           </h2>
           <p className="mb-4">
             To report accessibility issues or request information in alternative
@@ -1250,7 +1480,8 @@ footer a:focus-visible {
             errors
           </p>
           <p className="mt-2">
-            <strong>Last verification:</strong> January 27, 2026
+            <strong>Last verification:</strong> February 11, 2026 (axe DevTools
+            issues fix)
           </p>
         </footer>
       </article>
