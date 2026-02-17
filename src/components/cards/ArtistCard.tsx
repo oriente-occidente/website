@@ -62,7 +62,7 @@ export default function CategoryCard({
     }
   }
   const categoryClasses = categoryColorClasses(
-    categoryTitle ? categoryTitle : ""
+    categoryTitle ? categoryTitle : "",
   );
   const link = resolveLink({ ...data, locale });
   return (
@@ -83,13 +83,13 @@ export default function CategoryCard({
               </h3>
             )}
           </div>
-          {data.imageHero.responsiveImage && (
+          {data.imageHero?.responsiveImage && (
             <DatoImage
               className="duration-300 group-hover:scale-105 "
               data={data.imageHero.responsiveImage}
             />
           )}
-          {!data.imageHero.responsiveImage && (
+          {!data.imageHero?.responsiveImage && (
             <div className="relative overflow-hidden aspect-video">
               <Image
                 width={600}
@@ -109,7 +109,7 @@ export default function CategoryCard({
               data.artisticResidence
                 ?.sort(
                   (a: ArtisticResidenceYear, b: ArtisticResidenceYear) =>
-                    b.year - a.year
+                    b.year - a.year,
                 )
                 .map((yearObj: ArtisticResidenceYear, index: number) => {
                   const { year } = yearObj;
@@ -124,8 +124,8 @@ export default function CategoryCard({
                 ?.sort(
                   (
                     { year: a }: { year: number },
-                    { year: b }: { year: number }
-                  ) => b - a
+                    { year: b }: { year: number },
+                  ) => b - a,
                 )
                 .map((yearObj: ArtisticResidenceYear, index: number) => {
                   const { year } = yearObj;
