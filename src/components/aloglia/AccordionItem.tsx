@@ -32,8 +32,11 @@ export default function AccordionItem({ filter, locale }: any) {
     }
   }, [screenWidth]);
 
+  const [hasItems, setHasItems] = useState(true);
+
   const transformedItems = useMemo(() => {
     return (items: any) => {
+      setHasItems(items.length > 0);
       items.forEach((item: any) => {
         item.label = translate(item.label.toLowerCase(), locale) || item.label;
       });
@@ -44,7 +47,7 @@ export default function AccordionItem({ filter, locale }: any) {
   const panelId = `accordion-panel-${filter.name}`;
 
   return (
-    <div className="my-5 lg:my-10" key={filter.name}>
+    <div className={`my-5 lg:my-10 ${!hasItems ? "hidden" : ""}`} key={filter.name}>
       <button
         className="w-full text-[21px] uppercase border-b pb-4 flex justify-between items-center cursor-pointer"
         onClick={() => handleToggle()}
