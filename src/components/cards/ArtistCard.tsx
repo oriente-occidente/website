@@ -41,7 +41,7 @@ export default function CategoryCard({
         return "card-title-artisti";
       case "company":
         return "card-title-compagnie";
-      case "artistic_residecy":
+      case "artistic_residencies_index":
         return "card-title-residenze";
       case "project":
         return "card-title-progetto";
@@ -62,7 +62,7 @@ export default function CategoryCard({
     }
   }
   const categoryClasses = categoryColorClasses(
-    categoryTitle ? categoryTitle : "",
+    model ? model : categoryTitle ? categoryTitle : "",
   );
   const link = resolveLink({ ...data, locale });
   return (

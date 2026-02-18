@@ -17,7 +17,7 @@ export async function generateMetadata() {
   const data = await fetchDato(
     ArtisticResidenciesIndexDocument,
     { locale: siteLocale },
-    false
+    false,
   );
   const page: any = data?.artisticResidenciesIndex || null;
   const meta = getSeoMeta(page);
@@ -30,13 +30,13 @@ export default async function Page() {
   const data = await fetchDato(
     ArtisticResidenciesIndexDocument,
     { locale: siteLocale },
-    isEnabled
+    isEnabled,
   );
   const page = data.artisticResidenciesIndex;
   const res = await fetchDato(
     AllArtisticResidenciesQueryDocument,
     { locale: siteLocale },
-    isEnabled
+    isEnabled,
   );
   let list: any = [];
 

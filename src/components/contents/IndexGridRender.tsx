@@ -1,7 +1,11 @@
 import { Fragment } from "react";
 import translate from "@/lib/locales";
 import GenericCard from "../cards/GenericCard";
-import { getUpcomingEvents, getPastEvents, sortArtistByYear } from "@/lib/utils";
+import {
+  getUpcomingEvents,
+  getPastEvents,
+  sortArtistByYear,
+} from "@/lib/utils";
 
 export default function IndexGridRender({
   list,
