@@ -49,6 +49,8 @@ export default function Search({ locale }: SearchPropsType) {
       operator: true,
       limit: 5,
       showMore: true,
+      showMoreLimit: 100,
+      sortBy: (a: any, b: any) => parseInt(b.name) - parseInt(a.name),
     },
   ];
 

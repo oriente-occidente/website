@@ -79,6 +79,8 @@ export default function AccordionItem({ filter, locale }: any) {
             operator={filter.operator ? "or" : "and"}
             limit={filter.limit}
             showMore={filter.showMore}
+            showMoreLimit={filter.showMoreLimit}
+            sortBy={filter.sortBy}
             transformItems={transformedItems}
             translations={{
               showMoreButtonText({ isShowingMore }) {

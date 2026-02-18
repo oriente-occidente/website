@@ -22,7 +22,7 @@ import { SearchPropsType } from "@/types";
 
 const searchClient = algoliasearch(
   process.env.NEXT_PUBLIC_ALGOLIA_APP_ID || "",
-  process.env.NEXT_PUBLIC_ALGOLIA_SEARCH_KEY || ""
+  process.env.NEXT_PUBLIC_ALGOLIA_SEARCH_KEY || "",
 );
 
 export default function Search({ locale }: SearchPropsType) {
@@ -58,6 +58,8 @@ export default function Search({ locale }: SearchPropsType) {
       operator: true,
       limit: 5,
       showMore: true,
+      showMoreLimit: 100,
+      sortBy: (a: any, b: any) => parseInt(b.name) - parseInt(a.name),
     },
     {
       name: "festival",
@@ -65,6 +67,7 @@ export default function Search({ locale }: SearchPropsType) {
       operator: true,
       limit: 5,
       showMore: true,
+      showMoreLimit: 100,
     },
   ];
 
@@ -134,7 +137,7 @@ export default function Search({ locale }: SearchPropsType) {
                       rootElementText({ nbHits }) {
                         return `${nbHits} ${translate(
                           "search.results",
-                          locale
+                          locale,
                         )} `;
                       },
                     }}
