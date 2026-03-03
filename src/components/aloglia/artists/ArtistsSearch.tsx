@@ -23,6 +23,33 @@ const searchClient = algoliasearch(
   process.env.NEXT_PUBLIC_ALGOLIA_SEARCH_KEY || "",
 );
 
+const filtersOptions = [
+  {
+    name: "contentType",
+    searchable: false,
+    operator: true,
+    limit: 5,
+    showMore: false,
+  },
+  {
+    name: "years",
+    searchable: false,
+    operator: true,
+    limit: 5,
+    showMore: true,
+    showMoreLimit: 100,
+    sortBy: (a: any, b: any) => parseInt(b.name) - parseInt(a.name),
+  },
+  {
+    name: "country",
+    searchable: false,
+    operator: true,
+    limit: 5,
+    showMore: true,
+    showMoreLimit: 100,
+  },
+];
+
 export default function Search({ locale }: SearchPropsType) {
   const indexName = `artists`;
   const isDefaultLocale = locale === config.defaultLocale;
@@ -34,33 +61,6 @@ export default function Search({ locale }: SearchPropsType) {
     searchState &&
     Object.keys(searchState).length > 0 &&
     Object.keys(searchState[indexName]).length > 0;
-
-  const filtersOptions = [
-    {
-      name: "contentType",
-      searchable: false,
-      operator: true,
-      limit: 5,
-      showMore: false,
-    },
-    {
-      name: "years",
-      searchable: false,
-      operator: true,
-      limit: 5,
-      showMore: true,
-      showMoreLimit: 100,
-      sortBy: (a: any, b: any) => parseInt(b.name) - parseInt(a.name),
-    },
-    {
-      name: "country",
-      searchable: false,
-      operator: true,
-      limit: 5,
-      showMore: true,
-      showMoreLimit: 100,
-    },
-  ];
 
   const onStateChange: InstantSearchProps["onStateChange"] = ({
     uiState,
